@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Launch the Browser</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>8c0dd1e8-fd75-4da4-8289-04c071a16743</testCaseGuid>
+   <variable>
+      <defaultValue>GlobalVariable.URL</defaultValue>
+      <description></description>
+      <id>c8ee6b56-9f2f-4825-81b3-dc7d3a4041f2</id>
+      <masked>false</masked>
+      <name>PageURL</name>
+   </variable>
+</TestCaseEntity>
