@@ -23,6 +23,7 @@ import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
 import internal.GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import io.cucumber.datatable.DataTable;
 
 public class LoginPageSteps {
 	public static String username, password
@@ -46,7 +47,7 @@ public class LoginPageSteps {
 
 		'Verify Username field watermark'
 		WebUI.waitForElementAttributeValue(findTestObject('Page_Merch Collaboration Platform/LoginPage/input_Login_username'), 'placeholder',
-				'Username', 0)
+				'Username', 0,FailureHandling.STOP_ON_FAILURE)
 	}
 	@Then("Verify the visibility of Password field with watermark '(.*)'")
 	def Verify_the_visibility_of_Password_field_with_watermark(String watermark) {
@@ -55,11 +56,12 @@ public class LoginPageSteps {
 
 		'Verify Password field watermark'
 		WebUI.waitForElementAttributeValue(findTestObject('Page_Merch Collaboration Platform/LoginPage/input_Login_password'), 'placeholder',
-				'Password', 0)
+				'Password', 0,FailureHandling.STOP_ON_FAILURE)
 	}
 	@Then("Verify the visibility of Login button")
 	def Verify_the_visibility_of_Login_button() {
 		'Verify Login button '
+		//WebUI.verifyElementNotPresent(findTestObject('Page_Merch Collaboration Platform/LoginPage/button_Login'), 0)
 		WebUI.verifyElementPresent(findTestObject('Page_Merch Collaboration Platform/LoginPage/button_Login'), 0)
 	}
 
@@ -113,5 +115,44 @@ public class LoginPageSteps {
 			WebUI.verifyElementText(findTestObject('Page_Merch Collaboration Platform/LoginPage/errorText_PasswordField_This field is required'),
 					GlobalVariable.Field_Required_Error)
 		}
+	}
+
+	@Then("User enters invalid Username and no password")
+	def User_enters_invalid_Username_and_no_password(DataTable username) {
+		List<Map<String, String>> data =username.asMaps(String.class, String.class);
+		'Set Username'
+		WebUI.sendKeys(findTestObject('Page_Merch Collaboration Platform/LoginPage/input_Login_username'),
+				Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
+		WebUI.setText(findTestObject('Page_Merch Collaboration Platform/LoginPage/input_Login_username'), data[0].UserName)
+
+		'Set Password'
+		WebUI.sendKeys(findTestObject('Page_Merch Collaboration Platform/LoginPage/input_Login_password'),
+				Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
+		'Verify Error Text - Password'
+		WebUI.verifyElementText(findTestObject('Page_Merch Collaboration Platform/LoginPage/errorText_PasswordField_This field is required'),
+				GlobalVariable.Field_Required_Error)
+	}
+
+	@Then("Validate invalid username error message and field error password field")
+	def Username_Invalid_Error(){
+		'Verify Error Text - Username'
+		WebUI.verifyElementText(findTestObject('Page_Merch Collaboration Platform/LoginPage/errorText_UsernameField_This field is required'),GlobalVariable.Username_Invalid_Error)
+	}
+
+	@Then("User enters valid username and invalid password")
+	def valid_username_invalid_password(DataTable data) {
+		List<Map<String, String>> dataMap =data.asMaps(String.class, String.class);
+		'Set Username'
+		WebUI.sendKeys(findTestObject('Page_Merch Collaboration Platform/LoginPage/input_Login_username'),
+				Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
+		WebUI.setText(findTestObject('Page_Merch Collaboration Platform/LoginPage/input_Login_username'), dataMap[0].UserName)
+
+		'Set Password'
+		WebUI.sendKeys(findTestObject('Page_Merch Collaboration Platform/LoginPage/input_Login_password'),
+				Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
+		WebUI.setText(findTestObject('Page_Merch Collaboration Platform/LoginPage/input_Login_password'), dataMap[0].Password)
+		'Verify Error Text - Password'
+		WebUI.verifyElementText(findTestObject('Page_Merch Collaboration Platform/LoginPage/errorText_PasswordField_This field is required'),
+				GlobalVariable.Field_Required_Error)
 	}
 }

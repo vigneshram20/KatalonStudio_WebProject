@@ -6,15 +6,15 @@
    <elementGuidId>db718c95-49db-4817-841c-5f31b658597d</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='modalWindow']/div/div/div/div[2]/p[2]</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>//div[@class=&quot;modal-dialog&quot;]//p[(text() = 'PB Dec Acc Summer 2024' or . = 'PB Dec Acc Summer 2024')]</value>
       </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@class=&quot;modal-dialog&quot;]//p</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

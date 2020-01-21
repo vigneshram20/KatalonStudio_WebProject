@@ -6,7 +6,7 @@
    <comment></comment>
    <testCaseGuid>df917083-32ea-4351-a28a-ccb57f44b266</testCaseGuid>
    <variable>
-      <defaultValue>'Merch Collaboration Platform'</defaultValue>
+      <defaultValue>GlobalVariable.PageTITLE</defaultValue>
       <description></description>
       <id>06b38bb7-4565-47b6-9b81-0799c1d4a7cc</id>
       <masked>false</masked>

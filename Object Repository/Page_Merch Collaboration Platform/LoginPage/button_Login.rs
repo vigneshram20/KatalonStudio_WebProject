@@ -6,6 +6,10 @@
    <elementGuidId>1cef52ba-6e74-4a38-a549-30a176ff3b6e</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
          <key>XPATH</key>
          <value>//button[@type='submit']</value>
       </entry>

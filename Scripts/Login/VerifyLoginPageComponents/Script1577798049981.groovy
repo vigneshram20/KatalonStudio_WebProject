@@ -20,10 +20,10 @@ WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [:], FailureHandli
 
 WebUI.delay(2)
 
-WebUI.verifyMatch(WebUI.getWindowTitle(), 'Merch Collaboration Platform', false, FailureHandling.STOP_ON_FAILURE)
+WebUI.verifyMatch(WebUI.getWindowTitle(), PageTitle, false, FailureHandling.STOP_ON_FAILURE)
 
 'Verify Main Logo 1'
-WebUI.verifyElementPresent(findTestObject('Object Repository/Common Objects/img_LogoMain'), 0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Common Objects/img_LogoMain'), 10)
 
 'Verify Logo 2'
 WebUI.verifyElementPresent(findTestObject('Page_Merch Collaboration Platform/LoginPage/img_Logo_divLogin'), 0)

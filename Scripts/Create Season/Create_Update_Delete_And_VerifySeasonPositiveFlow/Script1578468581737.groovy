@@ -29,7 +29,9 @@ if (!(Brand.equals('PB'))) {
 
 List<String> FullSeasonNameList = Full_Season_Names
 
-WebUI.callTestCase(findTestCase('Common/NavigateToManageSeasonPage'), [:], FailureHandling.STOP_ON_FAILURE)
+not_run: WebUI.callTestCase(findTestCase('Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
+
+not_run: WebUI.callTestCase(findTestCase('Common/NavigateToManageSeasonPage'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.enableSmartWait()
 

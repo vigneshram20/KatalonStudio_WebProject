@@ -143,7 +143,7 @@ WebUI.verifyElementText(findTestObject('Page_Merch Collaboration Platform/Create
 WebUI.verifyElementVisible(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/button_Create'))
 
 'Verify Cancel button'
-WebUI.verifyElementVisible(findTestObject('Object Repository/Common Objects/a_Cancel'))
+WebUI.click(findTestObject('Object Repository/Common Objects/a_Cancel'))
 
-WebUI.callTestCase(findTestCase('Common/CloseBrowser'), [:], FailureHandling.STOP_ON_FAILURE)
+not_run: WebUI.callTestCase(findTestCase('Common/CloseBrowser'), [:], FailureHandling.STOP_ON_FAILURE)
 

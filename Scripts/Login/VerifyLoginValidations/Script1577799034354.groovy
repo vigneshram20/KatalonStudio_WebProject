@@ -23,6 +23,9 @@ WebUI.click(findTestObject('Page_Merch Collaboration Platform/LoginPage/button_L
 
 WebUI.delay(1)
 
+'Verify Page Title'
+WebUI.verifyMatch(WebUI.getWindowTitle(), 'Merch Collaboration Platform', false, FailureHandling.STOP_ON_FAILURE)
+
 'Verify Error Text - Username'
 WebUI.verifyElementText(findTestObject('Page_Merch Collaboration Platform/LoginPage/errorText_UsernameField_This field is required'), 
     Field_Required_Error)
@@ -49,8 +52,8 @@ WebUI.verifyElementText(findTestObject('Page_Merch Collaboration Platform/LoginP
 WebUI.setText(findTestObject('Page_Merch Collaboration Platform/LoginPage/input_This field is required_password'), Password)
 
 'Verify Error Text Not Present - Password'
-WebUI.verifyElementNotPresent(findTestObject('Page_Merch Collaboration Platform/LoginPage/errorText_PasswordField_This field is required'),
-	0)
+WebUI.verifyElementNotPresent(findTestObject('Page_Merch Collaboration Platform/LoginPage/errorText_PasswordField_This field is required'), 
+    0)
 
 'Click Login button'
 WebUI.click(findTestObject('Page_Merch Collaboration Platform/LoginPage/button_Login'))

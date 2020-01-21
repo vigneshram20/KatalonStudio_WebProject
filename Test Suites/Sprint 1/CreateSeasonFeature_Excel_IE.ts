@@ -11,6 +11,18 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>1d9f8082-b3b4-4831-b7cb-c2b4607baab2</testSuiteGuid>
    <testCaseLink>
+      <guid>fb643820-8d10-42da-a9e4-8abd7a43be81</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Login/VerifyLoginSuccessfully</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>b321fd16-ed3e-4c36-b854-91da2cc31621</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/NavigateToManageSeasonPage</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>ec46be81-fbe6-4ba9-a2f4-da18e7cd5086</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

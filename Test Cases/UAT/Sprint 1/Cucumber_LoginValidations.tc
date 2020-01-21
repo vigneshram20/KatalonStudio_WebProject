@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Sprint_1_UAT_Tests</name>
+   <name>Cucumber_LoginValidations</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>49c65f84-38cb-4c2e-b08d-ce223e620a4d</testCaseGuid>

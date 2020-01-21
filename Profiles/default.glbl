@@ -49,4 +49,14 @@
       <initValue>['ACTIONS', 'Name', 'Brand', 'Created By', 'Created On', 'Division', 'In Store Launch End Date', 'In Store Launch Start Date', 'Internet Launch End Date', 'Internet Launch Start Date', 'Season', 'Type', 'Updated By', 'Updated On', 'Year']</initValue>
       <name>ColumnsList</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Please enter a valid username.'</initValue>
+      <name>Username_Invalid_Error</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Merch Collaboration Platform'</initValue>
+      <name>PageTITLE</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

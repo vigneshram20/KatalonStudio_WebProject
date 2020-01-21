@@ -62,9 +62,10 @@ class CommonSteps {
 		WebUI.navigateToUrl(name)
 	}
 
-	@Then("Verify User should get navigated to WSI MCP login page titled '(.*)'")
+	@Then("Verify User should got navigated to WSI MCP login page titled '(.*)'")
 	def User_should_get_navigated_to_WSI_MCP_login_page_titled(String value) {
-		WebUI.verifyMatch(WebUI.getWindowTitle(), value, false, FailureHandling.STOP_ON_FAILURE)
+		WebUI.callTestCase(findTestCase('Common/Verify the Page Title'), ['pageTitleExpected':value], FailureHandling.STOP_ON_FAILURE)
+		//WebUI.verifyMatch(WebUI.getWindowTitle(), value, false, FailureHandling.STOP_ON_FAILURE)
 	}
 
 	@Then("Quit the browser")

@@ -14,13 +14,9 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import runner.JunitRunner as JunitRunner
 
-'Launch the Browser'
-WebUI.openBrowser(PageURL)
+not_run: CucumberKW.runFeatureFolder('Include/features/Sprint 1/Login')
 
-'Maximize the Browser'
-WebUI.maximizeWindow()
-
-'Launch the URL'
-not_run: WebUI.navigateToUrl(PageURL)
+CucumberKW.runWithCucumberRunner(JunitRunner)
 
