@@ -231,6 +231,9 @@ class customKeywords {
 			WebUI.click(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__internet_launch_start_date'),
 					FailureHandling.STOP_ON_FAILURE)
 
+			'Clear Text'
+			WebUI.clearText(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__internet_launch_start_date'))
+
 			'Type Internet Launch Start Date'
 			WebUI.sendKeys(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__internet_launch_start_date'),
 					Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
@@ -258,6 +261,9 @@ class customKeywords {
 			WebUI.click(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__internet_launch_end_date'),
 					FailureHandling.STOP_ON_FAILURE)
 
+			'Clear Text'
+			WebUI.clearText(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__internet_launch_end_date'))
+
 			'Type Internet Launch End Date'
 			WebUI.sendKeys(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__internet_launch_end_date'),
 					Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
@@ -282,6 +288,9 @@ class customKeywords {
 
 			'Type Internet Launch End Date'
 			WebUI.click(findTestObject('Page_Merch Collaboration Platform/Create Season/input__in_store_launch_start_date'), FailureHandling.STOP_ON_FAILURE)
+
+			'Clear Text'
+			WebUI.clearText(findTestObject('Page_Merch Collaboration Platform/Create Season/input__in_store_launch_start_date'))
 
 			'Type Internet Launch End Date'
 			WebUI.sendKeys(findTestObject('Page_Merch Collaboration Platform/Create Season/input__in_store_launch_start_date'),
@@ -313,6 +322,9 @@ class customKeywords {
 
 			'Type Internet Launch End Date'
 			WebUI.click(findTestObject('Page_Merch Collaboration Platform/Create Season/input__in_store_launch_end_date'), FailureHandling.STOP_ON_FAILURE)
+
+			'Clear Text'
+			WebUI.clearText(findTestObject('Page_Merch Collaboration Platform/Create Season/input__in_store_launch_end_date'))
 
 			'Type Internet Launch End Date'
 			WebUI.sendKeys(findTestObject('Page_Merch Collaboration Platform/Create Season/input__in_store_launch_end_date'), Keys.chord(
@@ -514,6 +526,9 @@ class customKeywords {
 
 		'Current Date Java Code'
 		SimpleDateFormat formatter = new SimpleDateFormat('MM/dd/yyyy')
+		
+		TimeZone timeZone = TimeZone.getTimeZone("US/Pacific");
+		formatter.setTimeZone(timeZone);
 
 		Date date = new Date()
 

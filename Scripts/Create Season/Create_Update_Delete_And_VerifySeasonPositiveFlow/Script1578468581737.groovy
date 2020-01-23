@@ -44,15 +44,15 @@ WebUI.delay(1)
 
 'Select Brand'
 WebUI.selectOptionByLabel(findTestObject('Page_Merch Collaboration Platform/Create Season/Brand Select dropdown'), Brand, 
-    true)
+    false)
 
 'Select Season'
 WebUI.selectOptionByLabel(findTestObject('Page_Merch Collaboration Platform/Create Season/Season Select dropdown'), Season, 
-    true)
+    false)
 
 'Select Year'
 WebUI.selectOptionByLabel(findTestObject('Page_Merch Collaboration Platform/Create Season/Year Select dropdown'), Year, 
-    true)
+    false)
 
 'Verify Type Value'
 WebUI.click(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input_Type_type'))

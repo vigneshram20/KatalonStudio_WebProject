@@ -34,11 +34,11 @@ WebUI.verifyElementVisible(findTestObject('Object Repository/Page_Merch Collabor
 'Click Brand dropdown'
 WebUI.click(findTestObject('Page_Merch Collaboration Platform/Create Season/Brand Select dropdown'))
 
-'Click Brand dropdown'
-WebUI.sendKeys(findTestObject('Page_Merch Collaboration Platform/Create Season/Brand Select dropdown'), Keys.chord(Keys.TAB))
-
 'Click Brand Label'
 WebUI.click(findTestObject('Page_Merch Collaboration Platform/Create Season/label_Brand'), FailureHandling.STOP_ON_FAILURE)
+
+'Click Brand dropdown'
+WebUI.sendKeys(findTestObject('Page_Merch Collaboration Platform/Create Season/Brand Select dropdown'), Keys.chord(Keys.TAB))
 
 'Verify Brand field error message'
 WebUI.verifyElementText(findTestObject('Page_Merch Collaboration Platform/Create Season/errorText_BrandField'), Field_Required_Error)

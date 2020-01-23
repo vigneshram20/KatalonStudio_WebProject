@@ -6,12 +6,12 @@
    <elementGuidId>73503a36-59bd-4fe5-b5f6-608b2ea122ca</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//small[(text() = 'This field is required.' or . = 'This field is required.')]</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//label[text()='Brand']//parent::div//small</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//small[(text() = 'This field is required.' or . = 'This field is required.')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
