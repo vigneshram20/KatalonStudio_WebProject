@@ -526,7 +526,7 @@ class customKeywords {
 
 		'Current Date Java Code'
 		SimpleDateFormat formatter = new SimpleDateFormat('MM/dd/yyyy')
-		
+
 		TimeZone timeZone = TimeZone.getTimeZone("US/Pacific");
 		formatter.setTimeZone(timeZone);
 
