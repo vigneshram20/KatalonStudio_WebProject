@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//span[(text() = 'JDA Hierarchy View - On the Fly - Copy' or . = 'JDA Hierarchy View - On the Fly - Copy')]</value>
+         <value>//span[(text() = 'JDA Hierarchy View - On the Fly' or . = 'JDA Hierarchy View - On the Fly')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -24,7 +24,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>JDA Hierarchy View - On the Fly - Copy</value>
+      <value>JDA Hierarchy View - On the Fly</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

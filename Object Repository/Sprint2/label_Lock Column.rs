@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//label[@class = 'checkbox_label' and (text() = 'Lock Column' or . = 'Lock Column')]</value>
+         <value>//label[@class = 'checkbox_label' and (text() = 'Lock Column(s)' or . = 'Lock Column(s)')]</value>
       </entry>
       <entry>
          <key>XPATH</key>
@@ -42,7 +42,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Lock Column</value>
+      <value>Lock Column(s)</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

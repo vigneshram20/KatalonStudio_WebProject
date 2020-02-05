@@ -40,6 +40,8 @@ WebUI.click(findTestObject('Sprint2/input__name'), FailureHandling.STOP_ON_FAILU
 
 WebUI.sendKeys(findTestObject('Object Repository/Sprint2/input__name'), Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
 
+WebUI.delay(1)
+
 'Enter System View Name'
 WebUI.sendKeys(findTestObject('Object Repository/Sprint2/input__name'), 'System View')
 
@@ -319,6 +321,8 @@ WebUI.clearText(findTestObject('Sprint2/input__name'), FailureHandling.STOP_ON_F
 WebUI.click(findTestObject('Object Repository/Sprint2/input__name'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.sendKeys(findTestObject('Object Repository/Sprint2/input__name'), Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
+
+WebUI.delay(1)
 
 WebUI.setText(findTestObject('Sprint2/input__name'), 'System View - On the Fly')
 

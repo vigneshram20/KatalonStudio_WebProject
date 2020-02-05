@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//a[(text() = 'Merch Hierarchies' or . = 'Merch Hierarchies')]</value>
+         <value>//a[(text() = 'Merch Hierarchy' or . = 'Merch Hierarchy')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -31,7 +31,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Merch Hierarchies</value>
+      <value>Merch Hierarchy</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

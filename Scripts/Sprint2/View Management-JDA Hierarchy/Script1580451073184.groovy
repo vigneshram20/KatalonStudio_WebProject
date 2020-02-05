@@ -50,7 +50,9 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/label_System
 'Click Continue button'
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Continue'))
 
-WebUI.setText(findTestObject('Object Repository/Sprint2/JDA Hierarchy/input__name'), 'JDA Hierarchy View')
+WebUI.delay(1)
+
+WebUI.sendKeys(findTestObject('Object Repository/Sprint2/JDA Hierarchy/input__name'), 'JDA Hierarchy View')
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/label_Name (Number - Desc)'))
 
@@ -163,7 +165,9 @@ WebUI.click(findTestObject('Sprint2/input__name'))
 
 WebUI.sendKeys(findTestObject('Object Repository/Sprint2/input__name'), Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
 
-WebUI.setText(findTestObject('Object Repository/Sprint2/JDA Hierarchy/input__name'), 'JDA Hierarchy View - Edited')
+WebUI.delay(1)
+
+WebUI.sendKeys(findTestObject('Object Repository/Sprint2/JDA Hierarchy/input__name'), 'JDA Hierarchy View - Edited')
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/label_Created By'))
 
@@ -217,7 +221,9 @@ WebUI.click(findTestObject('Sprint2/input__name'))
 
 WebUI.sendKeys(findTestObject('Object Repository/Sprint2/input__name'), Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
 
-WebUI.setText(findTestObject('Object Repository/Sprint2/JDA Hierarchy/input__name'), 'JDA Hierarchy View - On the Fly')
+WebUI.delay(1)
+
+WebUI.sendKeys(findTestObject('Object Repository/Sprint2/JDA Hierarchy/input__name'), 'JDA Hierarchy View - On the Fly')
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Save View'))
 
@@ -226,6 +232,11 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/p_JDA Hierar
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/a_OK'))
 
 WebUI.delay(3)
+
+'Open View Selector'
+WebUI.click(findTestObject('Sprint2/button_PDM view 4'))
+
+WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/span_JDA Hierarchy View - On the Fly - Copy'))
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Sort By'))
 

@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//select[@id = 'columnsList' and @name = 'lockPosition' and (text() = 'Select column positionColumn 1Column 2Column 3' or . = 'Select column positionColumn 1Column 2Column 3')]</value>
+         <value>//select[@id = 'columnsList' and @name = 'lockPosition']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -41,7 +41,7 @@
       <value>form-control</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>

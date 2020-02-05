@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//a[(text() = 'JDA Hierarchies' or . = 'JDA Hierarchies')]</value>
+         <value>//a[(text() = 'JDA Hierarchy' or . = 'JDA Hierarchy')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -31,7 +31,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>JDA Hierarchies</value>
+      <value>JDA Hierarchy</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
