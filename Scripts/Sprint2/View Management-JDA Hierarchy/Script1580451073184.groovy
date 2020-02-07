@@ -52,24 +52,34 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Conti
 
 WebUI.delay(1)
 
+'Provide System View Name'
 WebUI.sendKeys(findTestObject('Object Repository/Sprint2/JDA Hierarchy/input__name'), 'JDA Hierarchy View')
 
+'Select Name label'
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/label_Name (Number - Desc)'))
 
+'Select Dept Number'
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/label_Dept Number'))
 
+'Select Dept'
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/label_Dept Desc'))
 
+'Select Sub-Dept Number'
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/label_Sub-Dept Number'))
 
+'Select Sub-Dept Desc'
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/label_Sub-Dept Desc'))
 
+'Select Class Number'
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/label_Class Number'))
 
+'Select Class Desc'
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/label_Class Desc'))
 
+'Select Sub Class Number'
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/label_Sub-Class Number'))
 
+'Click Add button'
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/img_1'))
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/label_Lock Column'))
@@ -236,7 +246,7 @@ WebUI.delay(3)
 'Open View Selector'
 WebUI.click(findTestObject('Sprint2/button_PDM view 4'))
 
-WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/span_JDA Hierarchy View - On the Fly - Copy'))
+WebUI.click(findTestObject('Sprint2/JDA Hierarchy/button_JDA Hierarchy View - On the Fly'))
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Sort By'))
 
@@ -257,11 +267,6 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/p_JDA Hierar
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/a_OK'))
 
 WebUI.delay(3)
-
-'Open View Selector'
-WebUI.click(findTestObject('Sprint2/button_PDM view 4'))
-
-WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_JDA Hierarchy View - On the Fly - Copy'))
 
 'Open View Selector'
 WebUI.click(findTestObject('Sprint2/button_PDM view 4'))

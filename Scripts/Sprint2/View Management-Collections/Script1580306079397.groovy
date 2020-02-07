@@ -144,9 +144,15 @@ WebUI.click(findTestObject('Object Repository/Sprint2/img_Selected Fields_remove
 'Select Column Position -3'
 WebUI.selectOptionByValue(findTestObject('Sprint2/select_Select column positionColumn 1Column_363a83'), '3', true)
 
+WebUI.delay(2)
+
 'Select Group By'
-WebUI.selectOptionByValue(findTestObject('Object Repository/Sprint2/select_Collection IDCollectionCreated OnUpd_9fb2a5'), 
-    'created_on', true)
+WebUI.scrollToElement(findTestObject('Object Repository/Sprint2/select_Collection IDCollectionCreated OnUpd_9fb2a5'), 0, 
+    FailureHandling.STOP_ON_FAILURE)
+
+'Select Group By'
+WebUI.selectOptionByLabel(findTestObject('Object Repository/Sprint2/select_Collection IDCollectionCreated OnUpd_9fb2a5'), 
+    'Created On', true)
 
 'Click Save View'
 WebUI.click(findTestObject('Sprint2/button_Save View'))
@@ -250,6 +256,9 @@ WebUI.click(findTestObject('Object Repository/Sprint2/label_Collection ID'))
 
 'Select COllection'
 WebUI.click(findTestObject('Object Repository/Sprint2/label_Collection'))
+
+'Select Lock Column'
+WebUI.scrollToElement(findTestObject('Sprint2/select_Select column positionColumn 1Column_363a83'), 0, FailureHandling.STOP_ON_FAILURE)
 
 'Select Lock Column'
 WebUI.selectOptionByValue(findTestObject('Sprint2/select_Select column positionColumn 1Column_363a83'), '3', true)

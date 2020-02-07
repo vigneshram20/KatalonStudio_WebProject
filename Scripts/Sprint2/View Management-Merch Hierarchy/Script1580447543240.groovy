@@ -416,15 +416,19 @@ WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/img_1_2'))
 'Click Merch View '
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/span_Merch View - On the fly Save - New'))
 
-'Click '
+'Click Delete View'
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/img_1_2'))
 
+'Click Merch View - On the Fly'
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/span_Merch View - On the fly Save'))
 
+'Click Delete View'
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/img_1_2'))
 
+'Click Save Changes'
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/button_Save Changes'))
 
+'Click Ok button'
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/a_OK'))
 
 WebUI.closeBrowser()

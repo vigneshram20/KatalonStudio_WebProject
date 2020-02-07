@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>span_JDA Hierarchy View - On the Fly - Copy</name>
+   <name>button_JDA Hierarchy View - On the Fly</name>
    <tag></tag>
-   <elementGuidId>4670a30d-b984-4aa4-b040-04235ed72d55</elementGuidId>
+   <elementGuidId>faf369ae-10ac-46dc-ab4d-40b800e369b2</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//span[(text() = 'JDA Hierarchy View - On the Fly - Copy' or . = 'JDA Hierarchy View - On the Fly - Copy')]</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//li[@id='m0']/span/span</value>
+         <value>//button[(text() = 'JDA Hierarchy View - On the Fly' or . = 'JDA Hierarchy View - On the Fly')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -21,62 +17,69 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>span</value>
+      <value>button</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>viewControl_dropbtn__3Szc9</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>JDA Hierarchy View - On the Fly - Copy</value>
+      <value>JDA Hierarchy View - On the Fly</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;m0&quot;)/span[@class=&quot;&quot;]/span[1]</value>
+      <value>id(&quot;sortBar&quot;)/div[@class=&quot;row&quot;]/div[@class=&quot;col-12&quot;]/div[@class=&quot;viewControl_item__2CsEw&quot;]/div[1]/div[@class=&quot;viewControl_dropdown__3P1f8&quot;]/button[@class=&quot;viewControl_dropbtn__3Szc9&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//li[@id='m0']/span/span</value>
+      <value>//div[@id='sortBar']/div/div/div/div/div/button</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Share'])[1]/following::span[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='JDA Hierarchies'])[1]/following::button[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Hide/Unhide'])[1]/following::span[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Group By'])[1]/preceding::button[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='JDA Hierarchy View - On the Fly'])[1]/preceding::span[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Sort By'])[1]/preceding::button[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='JDA Hierarchy View'])[1]/preceding::span[5]</value>
+      <value>//*/text()[normalize-space(.)='JDA Hierarchy View - On the Fly - Copy']/parent::*</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//span/span</value>
+      <value>//div/div/div/div/div/button</value>
    </webElementXpaths>
 </WebElementEntity>
