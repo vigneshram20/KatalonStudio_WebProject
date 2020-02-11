@@ -61,10 +61,6 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/h2_Type-Sea
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/caption_Available Attributes'), 0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/span_General Attributes'), 0)
-
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/img_General Attributes_img-icon'), 0)
-
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/img_General Attributes_img-icon_1'), 0)
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/span_Column 1'), 0)
@@ -109,7 +105,14 @@ WebUI.click(findTestObject('Sprint3/button_Add Group'))
 
 WebUI.doubleClick(findTestObject('Sprint3/span_1'))
 
+WebUI.clickOffset(findTestObject('Sprint3/input'), 0, 2)
+
+WebUI.sendKeys(findTestObject('Sprint3/input'), Keys.chord(Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, 
+        Keys.BACK_SPACE))
+
 WebUI.sendKeys(findTestObject('Sprint3/input'), Keys.chord(Keys.CONTROL, Keys.chord('a')))
+
+WebUI.delay(1)
 
 WebUI.sendKeys(findTestObject('Sprint3/input'), 'Calendar QA Automation')
 
