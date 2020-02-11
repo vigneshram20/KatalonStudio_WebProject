@@ -79,12 +79,14 @@ WebUI.delay(2)
 
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
+WebUI.delay(2)
+
 WebDriver driver = DriverFactory.getWebDriver()
 
 List<WebElement> listOfgroups = WebUI.findWebElements(findTestObject('Sprint3/img_Trash'), 0)
 
 for (WebElement element : listOfgroups) {
-    Thread.sleep(100)
+    Thread.sleep(250)
 
     element.click()
 }
