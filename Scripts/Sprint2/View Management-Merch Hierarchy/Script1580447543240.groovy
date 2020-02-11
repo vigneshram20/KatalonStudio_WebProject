@@ -116,7 +116,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/h5_View Su
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/p_Merch View has been successfully created'))
 
 'Click Ok'
-WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/a_OK'))
+			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 WebUI.delay(3)
 
@@ -199,7 +199,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/button_Sav
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/p_Merch View - Copy has been successfully created'))
 
 'Click Ok button'
-WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/a_OK'))
+			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 WebUI.delay(3)
 
@@ -285,7 +285,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/button_Sav
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/p_Merch View - Edited has been modified suc_08bdd2'))
 
 'Click Ok button'
-WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/a_OK'))
+			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 WebUI.delay(3)
 
@@ -333,7 +333,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/button_Sav
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/p_Merch View - On the fly Save has been mod_dfb009'))
 
 'Click OK button'
-WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/a_OK'))
+			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 WebUI.delay(3)
 
@@ -385,7 +385,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/button_Sav
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/p_Merch View - On the fly Save - New has be_d6074e'))
 
 'Click OK button'
-WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/a_OK'))
+			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 WebUI.delay(3)
 
@@ -429,7 +429,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/img_1_2'))
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/button_Save Changes'))
 
 'Click Ok button'
-WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/a_OK'))
+			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 WebUI.closeBrowser()
 

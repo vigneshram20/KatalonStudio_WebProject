@@ -95,7 +95,7 @@ WebUI.click(findTestObject('Sprint2/span_Add additional field to sort by'))
 WebUI.click(findTestObject('Sprint2/button_Save View'))
 
 'Click Ok button'
-WebUI.click(findTestObject('Sprint2/a_OK'))
+			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 'Open View Selector'
 WebUI.click(findTestObject('Object Repository/Sprint2/button_PDM view 4'))
@@ -158,7 +158,7 @@ WebUI.selectOptionByLabel(findTestObject('Object Repository/Sprint2/select_Colle
 WebUI.click(findTestObject('Sprint2/button_Save View'))
 
 'Click Ok'
-WebUI.click(findTestObject('Sprint2/a_OK'))
+			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 'Open View Selector'
 WebUI.click(findTestObject('Object Repository/Sprint2/button_PDM view 4'))
@@ -203,7 +203,7 @@ WebUI.click(findTestObject('Sprint2/button_Z-A'))
 WebUI.click(findTestObject('Sprint2/button_Save View'))
 
 'Click Ok button'
-WebUI.click(findTestObject('Sprint2/a_OK'))
+			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 WebUI.delay(3)
 
@@ -267,7 +267,7 @@ WebUI.selectOptionByValue(findTestObject('Sprint2/select_Select column positionC
 WebUI.click(findTestObject('Sprint2/button_Save View'))
 
 'Click Ok'
-WebUI.click(findTestObject('Sprint2/a_OK'))
+			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 'Open View Selector'
 WebUI.click(findTestObject('Object Repository/Sprint2/button_PDM view 4'))
@@ -291,7 +291,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/img_1_2'))
 WebUI.click(findTestObject('Sprint2/button_Save Changes'))
 
 'Click Ok'
-WebUI.click(findTestObject('Sprint2/a_OK'))
+			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 WebUI.closeBrowser()
 

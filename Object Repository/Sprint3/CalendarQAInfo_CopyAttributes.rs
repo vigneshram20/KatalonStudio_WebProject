@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>CalendarQAInfo_CopyAttributes</name>
+   <tag></tag>
+   <elementGuidId>eda75af4-2451-4f9e-9b22-d03eb96a8dfd</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//button[@class = 'layoutForm_btn_right_arrow__3CuUO']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//button[@class = 'layoutForm_btn_right_arrow__3CuUO'])[2]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>layoutForm_btn_right_arrow__3CuUO</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[1]/div[@class=&quot;manageLibrary_manage_library_container__wTwBZ&quot;]/div[@class=&quot;manageLibrary_content_section__3Wmoy&quot;]/div[@class=&quot;layoutForm_attribute_group_container__2YfxQ&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col-9&quot;]/div[1]/div[@class=&quot;general_atribute&quot;]/table[@class=&quot;table&quot;]/tbody[1]/tr[1]/td[@class=&quot;layoutForm_group_column_container__35DwT&quot;]/div[@class=&quot;layoutForm_arrow_button__3HkJu&quot;]/button[@class=&quot;layoutForm_btn_right_arrow__3CuUO&quot;]</value>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='root']/div/div/div[4]/div/div/div[2]/div/div/table/tbody/tr/td[2]/div/button</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//td[2]/div/button</value>
+   </webElementXpaths>
+</WebElementEntity>

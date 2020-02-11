@@ -101,7 +101,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/h5_View Succ
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/div_JDA Hierarchy View has been successfull_e53973'))
 
-WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/a_OK'))
+			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 'Open View Selector'
 WebUI.click(findTestObject('Sprint2/button_PDM view 4'))
@@ -150,7 +150,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Save 
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/p_JDA Hierarchy View - Copy has been succes_590e27'))
 
-WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/a_OK'))
+			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 WebUI.delay(3)
 
@@ -199,7 +199,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Save 
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/p_JDA Hierarchy View - Edited has been modi_d87deb'))
 
-WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/a_OK'))
+			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 'Open View Selector'
 WebUI.click(findTestObject('Sprint2/button_PDM view 4'))
@@ -239,7 +239,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Save 
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/p_JDA Hierarchy View - On the Fly has been _12f672'))
 
-WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/a_OK'))
+			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 WebUI.delay(3)
 
@@ -264,7 +264,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Save 
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/p_JDA Hierarchy View - On the Fly - Copy ha_6f8f91'))
 
-WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/a_OK'))
+			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 WebUI.delay(3)
 
@@ -287,7 +287,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/img_1_2'))
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Save Changes'))
 
-WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/a_OK'))
+			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 WebUI.closeBrowser()
 

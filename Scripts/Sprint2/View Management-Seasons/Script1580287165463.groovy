@@ -24,6 +24,42 @@ WebUI.enableSmartWait()
 
 WebUI.delay(3)
 
+'Open View Selector'
+WebUI.click(findTestObject('Sprint2/button_PDM view 4'))
+
+'Click Manage Views'
+WebUI.click(findTestObject('Sprint2/button_Manage Views'))
+
+List<WebElement> listOfSystemView = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/li_System View - On the Fly'), 0)
+
+for (WebElement element : listOfSystemView) {
+	Thread.sleep(100)
+	
+	element.click()
+	
+	'Click Delete button'
+	WebUI.click(findTestObject('Sprint2/img_1'))
+}
+
+
+'Click System View modified'
+WebUI.click(findTestObject('Object Repository/Sprint2/li_System View - On the Fly - Copy'))
+
+'Click Delete button'
+WebUI.click(findTestObject('Sprint2/img_1'))
+
+'Click System View Modified'
+WebUI.click(findTestObject('Object Repository/Sprint2/li_System View_1'))
+
+'Click Delete button'
+WebUI.click(findTestObject('Sprint2/img_1'))
+
+'Click Save Changes button'
+WebUI.click(findTestObject('Object Repository/Sprint2/button_Save Changes'))
+
+'Click Ok button'
+WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
+
 'Click View Selector'
 WebUI.click(findTestObject('Object Repository/Sprint2/button_PDM view 4'))
 
@@ -89,7 +125,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/span_Add additional field 
 WebUI.click(findTestObject('Object Repository/Sprint2/button_Save View'))
 
 'Click Ok button'
-WebUI.click(findTestObject('Object Repository/Sprint2/a_OK'))
+WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 'Click View Selector'
 WebUI.click(findTestObject('Sprint2/button_PDM view 4'))
@@ -191,7 +227,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/button_Z-A'))
 WebUI.click(findTestObject('Object Repository/Sprint2/button_Save View'))
 
 'Click Ok button'
-WebUI.click(findTestObject('Object Repository/Sprint2/a_OK'))
+WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 'Open View Selector'
 WebUI.click(findTestObject('Object Repository/Sprint2/button_PDM view 4'))
@@ -278,7 +314,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/img_Sort By_remove_list'))
 WebUI.click(findTestObject('Sprint2/button_Save View'))
 
 'Click Ok button'
-WebUI.click(findTestObject('Sprint2/a_OK'))
+WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 'Open View Selector'
 WebUI.click(findTestObject('Sprint2/button_PDM view 4'))
@@ -341,7 +377,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/img_Group By_remove_list')
 WebUI.click(findTestObject('Sprint2/button_Save View'))
 
 'Click Ok button'
-WebUI.click(findTestObject('Sprint2/a_OK'))
+WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 'Open View Selector'
 WebUI.click(findTestObject('Sprint2/button_PDM view 4'))
@@ -374,7 +410,7 @@ WebUI.click(findTestObject('Sprint2/button_Continue'))
 WebUI.click(findTestObject('Sprint2/button_Save View'))
 
 'Click Ok button'
-WebUI.click(findTestObject('Sprint2/a_OK'))
+WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 'Open View Selector'
 WebUI.click(findTestObject('Sprint2/button_PDM view 4'))
@@ -404,5 +440,5 @@ WebUI.click(findTestObject('Sprint2/img_1'))
 WebUI.click(findTestObject('Object Repository/Sprint2/button_Save Changes'))
 
 'Click Ok button'
-WebUI.click(findTestObject('Sprint2/a_OK'))
+WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 

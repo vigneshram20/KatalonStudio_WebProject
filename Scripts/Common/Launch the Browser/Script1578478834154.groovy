@@ -20,11 +20,15 @@ import com.kms.katalon.core.webui.driver.DriverFactory
 'Launch the Browser'
 WebUI.openBrowser(PageURL)
 
+WebUI.maximizeWindow()
+/*if(MobileDriverFactory.devicePlatform == null)
+{
+	WebUI.maximizeWindow()
 if(!MobileDriverFactory.devicePlatform == "iOS") {
 	'Maximize the Browser'
 	WebUI.maximizeWindow()
 }
-
+}*/
 'Launch the URL'
 not_run: WebUI.navigateToUrl(PageURL)
 
