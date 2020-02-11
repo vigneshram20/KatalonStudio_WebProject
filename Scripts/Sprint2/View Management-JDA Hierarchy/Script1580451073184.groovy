@@ -76,6 +76,17 @@ for (WebElement element : listOfJDAView_2) {
 	WebUI.click(findTestObject('Sprint2/img_1'))
 }
 
+List<WebElement> listOfJDAView_3 = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/JDA Hierarchy/span_JDA Hierarchy View - Copy'), 1)
+
+for (WebElement element : listOfJDAView_3) {
+	Thread.sleep(100)
+	
+	element.click()
+	
+	'Click Delete button'
+	WebUI.click(findTestObject('Sprint2/img_1'))
+}
+
 List<WebElement> SaveChangesButton = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/button_Save Changes'), 1)
 
 for (WebElement element : SaveChangesButton) {
