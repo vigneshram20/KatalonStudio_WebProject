@@ -64,6 +64,17 @@ for (WebElement element : listOfSystemViewModified) {
 	WebUI.click(findTestObject('Sprint2/img_1'))
 }
 
+List<WebElement> listOfSystemViewEdited = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/li_System View_1_Edited'), 1)
+
+for (WebElement element : listOfSystemViewEdited) {
+	Thread.sleep(100)
+	
+	element.click()
+	
+	'Click Delete button'
+	WebUI.click(findTestObject('Sprint2/img_1'))
+}
+
 List<WebElement> SaveChangesButton = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/button_Save Changes'), 1)
 
 for (WebElement element : SaveChangesButton) {

@@ -65,7 +65,7 @@ for (WebElement element : listOfJDAView_1) {
 	WebUI.click(findTestObject('Sprint2/img_1'))
 }
 
-List<WebElement> listOfJDAView_2 = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/JDA Hierarchy/li_JDA Hierarchy View_1'), 1)
+List<WebElement> listOfJDAView_2 = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/JDA Hierarchy/li_JDA Hierarchy View'), 1)
 
 for (WebElement element : listOfJDAView_2) {
 	Thread.sleep(100)
@@ -79,6 +79,17 @@ for (WebElement element : listOfJDAView_2) {
 List<WebElement> listOfJDAView_3 = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/JDA Hierarchy/span_JDA Hierarchy View - Copy'), 1)
 
 for (WebElement element : listOfJDAView_3) {
+	Thread.sleep(100)
+	
+	element.click()
+	
+	'Click Delete button'
+	WebUI.click(findTestObject('Sprint2/img_1'))
+}
+
+List<WebElement> listOfJDAView_4 = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/JDA Hierarchy/li_JDA Hierarchy View_Edited'), 1)
+
+for (WebElement element : listOfJDAView_4) {
 	Thread.sleep(100)
 	
 	element.click()
@@ -358,7 +369,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/li_JDA Hiera
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/img_1_2'))
 
-WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/li_JDA Hierarchy View_1'))
+WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/li_JDA Hierarchy View'))
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/img_1_2'))
 

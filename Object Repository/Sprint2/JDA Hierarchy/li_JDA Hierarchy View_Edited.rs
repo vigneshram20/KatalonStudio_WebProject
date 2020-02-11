@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>li_JDA Hierarchy View_1</name>
+   <name>li_JDA Hierarchy View_Edited</name>
    <tag></tag>
    <elementGuidId>b3130630-05ee-4a9f-9432-5438d7a9c785</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//li[(text() = 'JDA Hierarchy View' or . = 'JDA Hierarchy View')]</value>
+         <value>//li[(text() = 'JDA Hierarchy View - Edited' or . = 'JDA Hierarchy View - Edited')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -38,7 +38,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>JDA Hierarchy View</value>
+      <value>JDA Hierarchy View - Edited</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
