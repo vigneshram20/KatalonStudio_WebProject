@@ -15,6 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.WebElement as WebElement
 
 WebUI.openBrowser('')
 
@@ -47,8 +48,83 @@ WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/h5_Manage 
 'Verify text Note'
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/p_Select a view to make changes to its defi_80fece'))
 
-'Click New View button'
-WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/button_New View'))
+List<WebElement> listOfMerchView = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/Merch Hierarchy/span_Merch View'), 1)
+
+for (WebElement element : listOfMerchView) {
+	Thread.sleep(100)
+	
+	element.click()
+	
+	'Click Delete button'
+	WebUI.click(findTestObject('Sprint2/img_1'))
+}
+
+List<WebElement> listOfMerchView_1 = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/Merch Hierarchy/span_Merch View - On the fly Save - New'), 1)
+
+for (WebElement element : listOfMerchView_1) {
+	Thread.sleep(100)
+	
+	element.click()
+	
+	'Click Delete button'
+	WebUI.click(findTestObject('Sprint2/img_1'))
+}
+
+List<WebElement> listOfMerchView_2 = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/Merch Hierarchy/span_Merch View - On the fly Save'), 1)
+
+for (WebElement element : listOfMerchView_2) {
+	Thread.sleep(100)
+	
+	element.click()
+	
+	'Click Delete button'
+	WebUI.click(findTestObject('Sprint2/img_1'))
+}
+
+List<WebElement> listOfMerchView_3 = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/Merch Hierarchy/li_Merch View - Copy'), 1)
+
+for (WebElement element : listOfMerchView_3) {
+	Thread.sleep(100)
+	
+	element.click()
+	
+	'Click Delete button'
+	WebUI.click(findTestObject('Sprint2/img_1'))
+}
+
+
+List<WebElement> SaveChangesButton = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/button_Save Changes'), 1)
+
+for (WebElement element : SaveChangesButton) {
+	Thread.sleep(100)
+	
+	element.click()
+	
+	'Click Ok button'
+	WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
+
+}
+
+List<WebElement> NewViewButton = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/button_New View'), 1)
+
+if(NewViewButton.size()==0)
+{
+	
+	'Click View Selector'
+	WebUI.click(findTestObject('Object Repository/Sprint2/button_PDM view 4'))
+	
+	'Click Manage View button'
+	WebUI.click(findTestObject('Object Repository/Sprint2/button_Manage Views'))
+	
+	'Click New View button'
+	WebUI.click(findTestObject('Object Repository/Sprint2/button_New View'))
+}
+
+else
+{
+	'Click New View button'
+	WebUI.click(findTestObject('Object Repository/Sprint2/button_New View'))
+}
 
 'Click System View'
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/label_System View'))
@@ -108,7 +184,7 @@ WebUI.click(findTestObject('Sprint2/span_Add additional field to sort by'))
 WebUI.click(findTestObject('Sprint2/span_Add additional field to sort by'))
 
 'Click Save View '
-WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/button_Save View'))
+WebUI.click(findTestObject('Sprint2/button_Save View'))
 
 'Verify Success popup'
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/h5_View Successfully Created'))
@@ -193,7 +269,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/img_Group 
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/img_Group By_remove_list'))
 
 'Click Save View'
-WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/button_Save View'))
+WebUI.click(findTestObject('Sprint2/button_Save View'))
 
 'Verify Success popup'
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/p_Merch View - Copy has been successfully created'))
@@ -279,7 +355,7 @@ not_run: WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/i
 not_run: WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/img_Group By_remove_list'))
 
 'Click Save View'
-WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/button_Save View'))
+WebUI.click(findTestObject('Sprint2/button_Save View'))
 
 'Verify Success popup'
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/p_Merch View - Edited has been modified suc_08bdd2'))
@@ -308,7 +384,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/span_Add a
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/button_Apply Sort'))
 
 'Click Save Changes to View'
-WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/button_Save Changes to View'))
+WebUI.click(findTestObject('Sprint2/button_Save Changes to View'))
 
 'Provide New System View Name'
 WebUI.clearText(findTestObject('Sprint2/input__name'), FailureHandling.STOP_ON_FAILURE)
@@ -327,7 +403,7 @@ not_run: WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/l
 not_run: WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/img_1'))
 
 'Click Save view button'
-WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/button_Save View'))
+WebUI.click(findTestObject('Sprint2/button_Save View'))
 
 'Verify Success popup'
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/p_Merch View - On the fly Save has been mod_dfb009'))
@@ -353,7 +429,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/span_Add a
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/button_Apply Sort'))
 
 'Click Save as New button'
-WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/button_Save as New View'))
+WebUI.click(findTestObject('Object Repository/Sprint2/button_Save as New View'))
 
 'Click System View'
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/label_System View'))
@@ -379,7 +455,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/label_Upda
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/img_1'))
 
 'Click Save view'
-WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/button_Save View'))
+WebUI.click(findTestObject('Sprint2/button_Save View'))
 
 'Verify Success Popup'
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/p_Merch View - On the fly Save - New has be_d6074e'))
@@ -426,7 +502,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/span_Merch
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/img_1_2'))
 
 'Click Save Changes'
-WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/button_Save Changes'))
+WebUI.click(findTestObject('Sprint2/button_Save Changes'))
 
 'Click Ok button'
 			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))

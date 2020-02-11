@@ -15,6 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.WebElement as WebElement
 
 WebUI.openBrowser('')
 
@@ -41,8 +42,73 @@ WebUI.click(findTestObject('Sprint2/button_PDM view 4'))
 'Click Manage View'
 WebUI.click(findTestObject('Sprint2/button_Manage Views'))
 
-'Click New View button'
-WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_New View'))
+
+List<WebElement> listOfJDAView = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/JDA Hierarchy/span_JDA Hierarchy View - On the Fly - Copy'), 1)
+
+for (WebElement element : listOfJDAView) {
+	Thread.sleep(100)
+	
+	element.click()
+	
+	'Click Delete button'
+	WebUI.click(findTestObject('Sprint2/img_1'))
+}
+
+List<WebElement> listOfJDAView_1 = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/JDA Hierarchy/li_JDA Hierarchy View - On the Fly'), 1)
+
+for (WebElement element : listOfJDAView_1) {
+	Thread.sleep(100)
+	
+	element.click()
+	
+	'Click Delete button'
+	WebUI.click(findTestObject('Sprint2/img_1'))
+}
+
+List<WebElement> listOfJDAView_2 = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/JDA Hierarchy/li_JDA Hierarchy View_1'), 1)
+
+for (WebElement element : listOfJDAView_2) {
+	Thread.sleep(100)
+	
+	element.click()
+	
+	'Click Delete button'
+	WebUI.click(findTestObject('Sprint2/img_1'))
+}
+
+List<WebElement> SaveChangesButton = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/button_Save Changes'), 1)
+
+for (WebElement element : SaveChangesButton) {
+	Thread.sleep(100)
+	
+	element.click()
+	
+	'Click Ok button'
+	WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
+
+}
+
+List<WebElement> NewViewButton = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/button_New View'), 1)
+
+if(NewViewButton.size()==0)
+{
+	
+	'Click View Selector'
+	WebUI.click(findTestObject('Object Repository/Sprint2/button_PDM view 4'))
+	
+	'Click Manage View button'
+	WebUI.click(findTestObject('Object Repository/Sprint2/button_Manage Views'))
+	
+	'Click New View button'
+	WebUI.click(findTestObject('Object Repository/Sprint2/button_New View'))
+}
+
+else
+{
+	'Click New View button'
+	WebUI.click(findTestObject('Object Repository/Sprint2/button_New View'))
+}
+
 
 'Click System View radio button'
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/label_System View'))
@@ -95,7 +161,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/span_Add add
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Z-A'))
 
-WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Save View'))
+WebUI.click(findTestObject('Sprint2/button_Save View'))
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/h5_View Successfully Created'))
 
@@ -146,7 +212,7 @@ WebUI.selectOptionByValue(findTestObject('Object Repository/Sprint2/JDA Hierarch
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/img_Group By_remove_list'))
 
-WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Save View'))
+WebUI.click(findTestObject('Sprint2/button_Save View'))
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/p_JDA Hierarchy View - Copy has been succes_590e27'))
 
@@ -195,7 +261,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/label_Update
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/img_1'))
 
-WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Save View'))
+WebUI.click(findTestObject('Sprint2/button_Save View'))
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/p_JDA Hierarchy View - Edited has been modi_d87deb'))
 
@@ -222,7 +288,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_A-Z')
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Apply Sort'))
 
-WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Save Changes to View'))
+WebUI.click(findTestObject('Sprint2/button_Save Changes to View'))
 
 'Provide New System View Name'
 WebUI.clearText(findTestObject('Sprint2/input__name'), FailureHandling.STOP_ON_FAILURE)
@@ -235,7 +301,7 @@ WebUI.delay(1)
 
 WebUI.sendKeys(findTestObject('Object Repository/Sprint2/JDA Hierarchy/input__name'), 'JDA Hierarchy View - On the Fly')
 
-WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Save View'))
+WebUI.click(findTestObject('Sprint2/button_Save View'))
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/p_JDA Hierarchy View - On the Fly has been _12f672'))
 
@@ -254,13 +320,13 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/img_Group By
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Apply Sort'))
 
-WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Save as New View'))
+WebUI.click(findTestObject('Object Repository/Sprint2/button_Save as New View'))
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/label_System View'))
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Continue'))
 
-WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Save View'))
+WebUI.click(findTestObject('Sprint2/button_Save View'))
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/p_JDA Hierarchy View - On the Fly - Copy ha_6f8f91'))
 
@@ -285,7 +351,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/li_JDA Hiera
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/img_1_2'))
 
-WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Save Changes'))
+WebUI.click(findTestObject('Object Repository/Sprint2/button_Save Changes'))
 
 			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 

@@ -9,8 +9,12 @@
          <key>BASIC</key>
          <value>//button[@type = 'submit' and (text() = 'Save Changes' or . = 'Save Changes')]</value>
       </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//button[@type = 'submit' and (text() = 'Save Changes' or . = 'Save Changes') and not(@disabled) ]</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

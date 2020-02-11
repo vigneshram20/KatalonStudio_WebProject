@@ -15,6 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.WebElement as WebElement
 
 WebUI.callTestCase(findTestCase('Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
 
@@ -30,7 +31,7 @@ WebUI.click(findTestObject('Sprint2/button_PDM view 4'))
 'Click Manage Views'
 WebUI.click(findTestObject('Sprint2/button_Manage Views'))
 
-List<WebElement> listOfSystemView = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/li_System View - On the Fly'), 0)
+List<WebElement> listOfSystemView = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/li_System View - On the Fly'), 1)
 
 for (WebElement element : listOfSystemView) {
 	Thread.sleep(100)
@@ -41,33 +42,60 @@ for (WebElement element : listOfSystemView) {
 	WebUI.click(findTestObject('Sprint2/img_1'))
 }
 
+List<WebElement> listOfSystemViewCopy = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/li_System View - On the Fly - Copy'), 1)
 
-'Click System View modified'
-WebUI.click(findTestObject('Object Repository/Sprint2/li_System View - On the Fly - Copy'))
+for (WebElement element : listOfSystemViewCopy) {
+	Thread.sleep(100)
+	
+	element.click()
+	
+	'Click Delete button'
+	WebUI.click(findTestObject('Sprint2/img_1'))
+}
 
-'Click Delete button'
-WebUI.click(findTestObject('Sprint2/img_1'))
+List<WebElement> listOfSystemViewModified = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/li_System View_1'), 1)
 
-'Click System View Modified'
-WebUI.click(findTestObject('Object Repository/Sprint2/li_System View_1'))
+for (WebElement element : listOfSystemViewModified) {
+	Thread.sleep(100)
+	
+	element.click()
+	
+	'Click Delete button'
+	WebUI.click(findTestObject('Sprint2/img_1'))
+}
 
-'Click Delete button'
-WebUI.click(findTestObject('Sprint2/img_1'))
+List<WebElement> SaveChangesButton = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/button_Save Changes'), 1)
 
-'Click Save Changes button'
-WebUI.click(findTestObject('Object Repository/Sprint2/button_Save Changes'))
+for (WebElement element : SaveChangesButton) {
+	Thread.sleep(100)
+	
+	element.click()
+	
+	'Click Ok button'
+	WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
-'Click Ok button'
-WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
+}
 
-'Click View Selector'
-WebUI.click(findTestObject('Object Repository/Sprint2/button_PDM view 4'))
+List<WebElement> NewViewButton = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/button_New View'), 1)
 
-'Click Manage View button'
-WebUI.click(findTestObject('Object Repository/Sprint2/button_Manage Views'))
+if(NewViewButton.size()==0)
+{
+	
+	'Click View Selector'
+	WebUI.click(findTestObject('Object Repository/Sprint2/button_PDM view 4'))
+	
+	'Click Manage View button'
+	WebUI.click(findTestObject('Object Repository/Sprint2/button_Manage Views'))
+	
+	'Click New View button'
+	WebUI.click(findTestObject('Object Repository/Sprint2/button_New View'))
+}
 
-'Click New View button'
-WebUI.click(findTestObject('Object Repository/Sprint2/button_New View'))
+else
+{
+	'Click New View button'
+	WebUI.click(findTestObject('Object Repository/Sprint2/button_New View'))
+}
 
 'Click Continue button'
 WebUI.click(findTestObject('Object Repository/Sprint2/button_Continue'))
