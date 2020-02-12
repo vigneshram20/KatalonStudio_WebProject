@@ -6,12 +6,12 @@
    <elementGuidId>676dd9bc-7c49-45fc-9a6c-e2437849965a</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//*[@src = '/static/media/plus.6ea051be.svg']</value>
+         <key>XPATH</key>
+         <value>//span[contains(text(),'Calendar QA Automation')]//..//img[@src='/static/media/plus.6ea051be.svg']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//span[text()='Calendar QA Automation']//..//img[@src='/static/media/plus.6ea051be.svg']</value>
+         <key>BASIC</key>
+         <value>//*[@src = '/static/media/plus.6ea051be.svg']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

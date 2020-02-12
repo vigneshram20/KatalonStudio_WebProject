@@ -93,9 +93,17 @@ for (WebElement element : listOfgroups) {
 
 WebUI.click(findTestObject('Object Repository/Sprint3/button_Save'))
 
+WebUI.delay(1)
+
 WebUI.click(findTestObject('Object Repository/Sprint3/button_Yes'))
 
+WebUI.delay(1)
+
 WebUI.click(findTestObject('Object Repository/Sprint3/button_OK'))
+
+WebUI.delay(3)
+
+WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_UP))
 
 WebUI.click(findTestObject('Sprint3/button_Manage Layout'))
 
@@ -113,6 +121,8 @@ WebUI.sendKeys(findTestObject('Sprint3/input'), Keys.chord(Keys.BACK_SPACE, Keys
         Keys.BACK_SPACE))
 
 WebUI.sendKeys(findTestObject('Sprint3/input'), Keys.chord(Keys.CONTROL, Keys.chord('a')))
+
+WebUI.sendKeys(findTestObject('Sprint3/input'), Keys.chord(Keys.DELETE, Keys.DELETE, Keys.DELETE))
 
 WebUI.delay(1)
 

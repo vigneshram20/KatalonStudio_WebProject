@@ -6,12 +6,12 @@
    <elementGuidId>2b651f0d-8c5e-4044-8414-d34b8c8a9328</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//*[@type = 'text' and @placeholder = 'MM/DD/YYYY']</value>
+         <key>XPATH</key>
+         <value>(//div[@class='form-field-row']//label[text()='Internet Launch End Date']/../..//label[text()='In Store Launch End Date']/../../../p[2])/strong[contains(text(),'Calendar QA Automation')]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//div[@class='form-field-row']//label[text()='Internet Launch End Date']/../..//label[text()='In Store Launch End Date']/../../../p[2])/strong[text()='Calendar QA Automation']</value>
+         <key>BASIC</key>
+         <value>//*[@type = 'text' and @placeholder = 'MM/DD/YYYY']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
