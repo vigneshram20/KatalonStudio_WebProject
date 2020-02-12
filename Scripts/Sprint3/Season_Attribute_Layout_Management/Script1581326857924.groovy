@@ -43,7 +43,7 @@ WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/button_Add Types'), 0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/button_Add Attribute'), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint3/button_Manage Attributes'), 0)
 
 WebUI.waitForElementPresent(findTestObject('Sprint3/button_Manage Layout'), 0)
 
@@ -164,21 +164,6 @@ WebUI.click(findTestObject('Object Repository/Sprint3/button_Save'))
 WebUI.click(findTestObject('Object Repository/Sprint3/button_Yes'))
 
 WebUI.click(findTestObject('Object Repository/Sprint3/button_OK'))
-
-WebUI.delay(1)
-
-'Click Hamburger menu'
-WebUI.click(findTestObject('Common Objects/img_HamburgerMenu'))
-
-WebUI.delay(1)
-
-'Click Library menu'
-WebUI.click(findTestObject('Page_Merch Collaboration Platform/LandingPage/a_Library'))
-
-WebUI.delay(1)
-
-'Click Seasons sub menu'
-WebUI.click(findTestObject('Page_Merch Collaboration Platform/LandingPage/a_Seasons'))
 
 WebUI.delay(1)
 

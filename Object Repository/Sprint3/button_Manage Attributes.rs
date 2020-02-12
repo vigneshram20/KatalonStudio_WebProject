@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_Add Attribute</name>
+   <name>button_Manage Attributes</name>
    <tag></tag>
    <elementGuidId>2a1fe769-94a3-48b0-9eb0-b8c957e8de3c</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//button[(text() = 'Add Attribute' or . = 'Add Attribute')]</value>
+         <value>//button[(text() = 'Manage Attributes' or . = 'Manage Attributes')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -31,7 +31,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Add Attribute</value>
+      <value>Manage Attributes</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
