@@ -182,7 +182,7 @@ WebUI.callTestCase(findTestCase('Common/NavigateToManageSeasonPage'), [:], Failu
 WebUI.enableSmartWait()
 
 'Click Create New Season button'
-WebUI.click(findTestObject('Page_Merch Collaboration Platform/Manage Season Page/button_CreateNewSeason'))
+WebUI.click(findTestObject('Sprint1/Manage Season Page/button_CreateNewSeason'))
 
 WebUI.enableSmartWait()
 
@@ -197,7 +197,7 @@ WebUI.verifyElementPresent(findTestObject('Sprint3/thirdRowColumnVerify_CreateSe
 WebUI.verifyElementPresent(findTestObject('Sprint3/fourthRowColumnVerify_CreateSeason'), 0)
 
 'Click Create button'
-WebUI.verifyElementVisible(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/button_Create'))
+WebUI.verifyElementVisible(findTestObject('Sprint1/Create Season/button_Create'))
 
 'Verify Cancel button'
 WebUI.click(findTestObject('Object Repository/Common Objects/a_Cancel'))

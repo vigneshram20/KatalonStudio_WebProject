@@ -27,21 +27,21 @@ WebUI.click(findTestObject('Common Objects/img_HamburgerMenu'))
 WebUI.delay(1)
 
 'Click Libraries'
-WebUI.click(findTestObject('Sprint2/a_Libraries'))
+WebUI.click(findTestObject('Sprint2/Collections/a_Libraries'))
 
 'Click Collections'
-WebUI.click(findTestObject('Object Repository/Sprint2/a_Collections'))
+WebUI.click(findTestObject('Sprint2/Collections/a_Collections'))
 
 WebUI.delay(3)
 
 'Open View Selector'
-WebUI.click(findTestObject('Sprint2/button_PDM view 4'))
+WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 
 'Click Manage View'
-WebUI.click(findTestObject('Sprint2/button_Manage Views'))
+WebUI.click(findTestObject('Common Objects/button_Manage Views'))
 
 
-List<WebElement> listOfCollectionView = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/li_Collection View - On the Fly'), 1)
+List<WebElement> listOfCollectionView = WebUI.findWebElements(findTestObject('Sprint2/Collections/li_Collection View - On the Fly'), 1)
 
 for (WebElement element : listOfCollectionView) {
 	Thread.sleep(100)
@@ -49,10 +49,10 @@ for (WebElement element : listOfCollectionView) {
 	element.click()
 	
 	'Click Delete button'
-	WebUI.click(findTestObject('Sprint2/img_1'))
+	WebUI.click(findTestObject('Common Objects/img_Delete'))
 }
 
-List<WebElement> listOfCollectionView_1 = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/li_Collection View_1'), 1)
+List<WebElement> listOfCollectionView_1 = WebUI.findWebElements(findTestObject('Sprint2/Collections/li_Collection View_1'), 1)
 
 for (WebElement element : listOfCollectionView_1) {
 	Thread.sleep(100)
@@ -60,10 +60,10 @@ for (WebElement element : listOfCollectionView_1) {
 	element.click()
 	
 	'Click Delete button'
-	WebUI.click(findTestObject('Sprint2/img_1'))
+	WebUI.click(findTestObject('Common Objects/img_Delete'))
 }
 
-List<WebElement> listOfCollectionView_2 = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/li_Collection View'), 1)
+List<WebElement> listOfCollectionView_2 = WebUI.findWebElements(findTestObject('Sprint2/Collections/li_Collection View'), 1)
 
 for (WebElement element : listOfCollectionView_2) {
 	Thread.sleep(100)
@@ -71,10 +71,10 @@ for (WebElement element : listOfCollectionView_2) {
 	element.click()
 	
 	'Click Delete button'
-	WebUI.click(findTestObject('Sprint2/img_1'))
+	WebUI.click(findTestObject('Common Objects/img_Delete'))
 }
 
-List<WebElement> listOfCollectionView_3 = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/span_Collection View - Copy'), 1)
+List<WebElement> listOfCollectionView_3 = WebUI.findWebElements(findTestObject('Sprint2/Collections/span_Collection View - Copy'), 1)
 
 for (WebElement element : listOfCollectionView_3) {
 	Thread.sleep(100)
@@ -82,11 +82,11 @@ for (WebElement element : listOfCollectionView_3) {
 	element.click()
 	
 	'Click Delete button'
-	WebUI.click(findTestObject('Sprint2/img_1'))
+	WebUI.click(findTestObject('Common Objects/img_Delete'))
 }
 
 
-List<WebElement> SaveChangesButton = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/button_Save Changes'), 1)
+List<WebElement> SaveChangesButton = WebUI.findWebElements(findTestObject('Common Objects/button_Save Changes'), 1)
 
 for (WebElement element : SaveChangesButton) {
 	Thread.sleep(100)
@@ -98,186 +98,186 @@ for (WebElement element : SaveChangesButton) {
 
 }
 
-List<WebElement> NewViewButton = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/button_New View'), 1)
+List<WebElement> NewViewButton = WebUI.findWebElements(findTestObject('Common Objects/button_New View'), 1)
 
 if(NewViewButton.size()==0)
 {
 	
 	'Click View Selector'
-	WebUI.click(findTestObject('Object Repository/Sprint2/button_PDM view 4'))
+	WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 	
 	'Click Manage View button'
-	WebUI.click(findTestObject('Object Repository/Sprint2/button_Manage Views'))
+	WebUI.click(findTestObject('Common Objects/button_Manage Views'))
 	
 	'Click New View button'
-	WebUI.click(findTestObject('Object Repository/Sprint2/button_New View'))
+	WebUI.click(findTestObject('Common Objects/button_New View'))
 }
 
 else
 {
 	'Click New View button'
-	WebUI.click(findTestObject('Object Repository/Sprint2/button_New View'))
+	WebUI.click(findTestObject('Common Objects/button_New View'))
 }
 
 'Click Continue'
-WebUI.click(findTestObject('Sprint2/button_Continue'))
+WebUI.click(findTestObject('Common Objects/button_Continue'))
 
-WebUI.click(findTestObject('Sprint2/input__name'), FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Common Objects/input__name'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.sendKeys(findTestObject('Object Repository/Sprint2/input__name'), Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
+WebUI.sendKeys(findTestObject('Common Objects/input__name'), Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
 
 WebUI.delay(1)
 
 'Enter System View Name'
-WebUI.sendKeys(findTestObject('Sprint2/input__name'), 'Collection View')
+WebUI.sendKeys(findTestObject('Common Objects/input__name'), 'Collection View')
 
 'Select Collection ID'
-WebUI.click(findTestObject('Object Repository/Sprint2/label_Collection ID'))
+WebUI.click(findTestObject('Sprint2/Seasons/label_Collection ID'))
 
 'Select Collection'
-WebUI.click(findTestObject('Object Repository/Sprint2/label_Collection'))
+WebUI.click(findTestObject('Sprint2/Seasons/label_Collection'))
 
 'Select Created By'
-WebUI.click(findTestObject('Sprint2/label_Created By'))
+WebUI.click(findTestObject('Common Objects/label_Created By'))
 
 'Select Created On'
-WebUI.click(findTestObject('Sprint2/label_Created On'))
+WebUI.click(findTestObject('Common Objects/label_Created On'))
 
 'Select Updated By'
-WebUI.click(findTestObject('Sprint2/label_Updated By'))
+WebUI.click(findTestObject('Common Objects/label_Updated By'))
 
 'Select Updated On'
-WebUI.click(findTestObject('Object Repository/Sprint2/label_Updated On'))
+WebUI.click(findTestObject('Sprint2/Seasons/label_Updated On'))
 
 'Click Add button'
-WebUI.click(findTestObject('Sprint2/img'))
+WebUI.click(findTestObject('Common Objects/img_PlusICon'))
 
 'Select Lock Column'
-WebUI.click(findTestObject('Sprint2/label_Lock Column'))
+WebUI.click(findTestObject('Common Objects/label_Lock Column'))
 
 'Select Lock Column Position - 1'
-WebUI.selectOptionByValue(findTestObject('Sprint2/select_Select column positionColumn 1Column_363a83'), '1', true)
+WebUI.selectOptionByValue(findTestObject('Common Objects/select_Select column position'), '1', true)
 
 'Click Group By'
-WebUI.click(findTestObject('Object Repository/Sprint2/button_Add additional field to group by'))
+WebUI.click(findTestObject('Common Objects/button_Add additional field to group by'))
 
-WebUI.click(findTestObject('Sprint2/span_Add additional field to group by'))
+WebUI.click(findTestObject('Common Objects/span_Add additional field to group by'))
 
 'Add Sort By'
-WebUI.click(findTestObject('Sprint2/span_Add additional field to sort by'))
+WebUI.click(findTestObject('Common Objects/span_Add additional field to sort by'))
 
-WebUI.click(findTestObject('Sprint2/span_Add additional field to sort by'))
+WebUI.click(findTestObject('Common Objects/span_Add additional field to sort by'))
 
 'Click Save view'
-WebUI.click(findTestObject('Sprint2/button_Save View'))
+WebUI.click(findTestObject('Common Objects/button_Save View'))
 
 'Click Ok button'
 			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 'Open View Selector'
-WebUI.click(findTestObject('Object Repository/Sprint2/button_PDM view 4'))
+WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 
 'Open View Selector'
-WebUI.click(findTestObject('Sprint2/button_Collection View'))
+WebUI.click(findTestObject('Sprint2/Collections/button_Collection View'))
 
 'Verify Collection ID column'
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint2/div_Collection ID'), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint2/Collections/div_Collection ID'), 0)
 
 'Verify Collection column'
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint2/div_Collection'), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint2/Collections/div_Collection'), 0)
 
 'Verify Created By column'
-WebUI.verifyElementPresent(findTestObject('Sprint2/div_Created By'), 0)
+WebUI.verifyElementPresent(findTestObject('Common Objects/div_Created By'), 0)
 
 'Verify Created On column'
-WebUI.verifyElementPresent(findTestObject('Sprint2/div_Created On'), 0)
+WebUI.verifyElementPresent(findTestObject('Common Objects/div_Created On'), 0)
 
 'Verify Updated By column'
-WebUI.verifyElementPresent(findTestObject('Sprint2/div_Updated By'), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint2/Collections/div_Updated By'), 0)
 
 'Verify Updated on column'
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint2/div_Updated On'), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint2/Collections/div_Updated On'), 0)
 
 'Open View Selector'
-WebUI.click(findTestObject('Object Repository/Sprint2/button_PDM view 4'))
+WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 
 'Click Manage Views'
-WebUI.click(findTestObject('Sprint2/button_Manage Views'))
+WebUI.click(findTestObject('Common Objects/button_Manage Views'))
 
 'Select the System View'
-WebUI.click(findTestObject('Object Repository/Sprint2/li_Collection View'))
+WebUI.click(findTestObject('Sprint2/Collections/li_Collection View'))
 
 'Click Copy View'
-WebUI.click(findTestObject('Sprint2/button_Copy View'))
+WebUI.click(findTestObject('Common Objects/button_Copy View'))
 
 'Click Continue'
-WebUI.click(findTestObject('Sprint2/button_Continue'))
+WebUI.click(findTestObject('Common Objects/button_Continue'))
 
 'Remove Fields'
-WebUI.click(findTestObject('Object Repository/Sprint2/img_Selected Fields_remove_list'))
+WebUI.click(findTestObject('Sprint2/Collections/img_Selected Fields_remove_list'))
 
-WebUI.click(findTestObject('Object Repository/Sprint2/img_Selected Fields_remove_list'))
+WebUI.click(findTestObject('Sprint2/Collections/img_Selected Fields_remove_list'))
 
 'Select Column Position -3'
-WebUI.selectOptionByValue(findTestObject('Sprint2/select_Select column positionColumn 1Column_363a83'), '3', true)
+WebUI.selectOptionByValue(findTestObject('Common Objects/select_Select column position'), '3', true)
 
 WebUI.delay(2)
 
 'Select Group By'
-WebUI.scrollToElement(findTestObject('Object Repository/Sprint2/select_Collection IDCollectionCreated OnUpd_9fb2a5'), 0, 
+WebUI.scrollToElement(findTestObject('Sprint2/Collections/select_Collection IDCollectionCreated On'), 0, 
     FailureHandling.STOP_ON_FAILURE)
 
 'Select Group By'
-WebUI.selectOptionByLabel(findTestObject('Object Repository/Sprint2/select_Collection IDCollectionCreated OnUpd_9fb2a5'), 
+WebUI.selectOptionByLabel(findTestObject('Sprint2/Collections/select_Collection IDCollectionCreated On'), 
     'Created On', true)
 
 'Click Save View'
-WebUI.click(findTestObject('Sprint2/button_Save View'))
+WebUI.click(findTestObject('Common Objects/button_Save View'))
 
 'Click Ok'
 			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 'Open View Selector'
-WebUI.click(findTestObject('Object Repository/Sprint2/button_PDM view 4'))
+WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 
 'Click Manage Views'
-WebUI.click(findTestObject('Sprint2/button_Manage Views'))
+WebUI.click(findTestObject('Common Objects/button_Manage Views'))
 
 'Select the System View'
-WebUI.click(findTestObject('Object Repository/Sprint2/span_Collection View - Copy'))
+WebUI.click(findTestObject('Sprint2/Collections/span_Collection View - Copy'))
 
 'Click Edit View'
-WebUI.click(findTestObject('Sprint2/button_Edit View'))
+WebUI.click(findTestObject('Common Objects/button_Edit View'))
 
 'Provide New System View Name'
-WebUI.clearText(findTestObject('Sprint2/input__name'), FailureHandling.STOP_ON_FAILURE)
+WebUI.clearText(findTestObject('Common Objects/input__name'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Sprint2/input__name'))
+WebUI.click(findTestObject('Common Objects/input__name'))
 
-WebUI.sendKeys(findTestObject('Object Repository/Sprint2/input__name'), Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
+WebUI.sendKeys(findTestObject('Common Objects/input__name'), Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
 
 WebUI.delay(1)
 
-WebUI.sendKeys(findTestObject('Sprint2/input__name'), 'Collection View - Edited')
+WebUI.sendKeys(findTestObject('Common Objects/input__name'), 'Collection View - Edited')
 
 'Remove the fields'
-WebUI.click(findTestObject('Object Repository/Sprint2/img_Selected Fields_remove_list'))
+WebUI.click(findTestObject('Sprint2/Collections/img_Selected Fields_remove_list'))
 
 'Add Lock Column Position'
-WebUI.selectOptionByValue(findTestObject('Sprint2/select_Select column positionColumn 1Column_363a83'), '1', true)
+WebUI.selectOptionByValue(findTestObject('Common Objects/select_Select column position'), '1', true)
 
 'Remove Selected Fields'
-WebUI.click(findTestObject('Object Repository/Sprint2/img_Selected Fields_remove_list'))
+WebUI.click(findTestObject('Sprint2/Collections/img_Selected Fields_remove_list'))
 
-WebUI.click(findTestObject('Object Repository/Sprint2/img_Selected Fields_remove_list'))
+WebUI.click(findTestObject('Sprint2/Collections/img_Selected Fields_remove_list'))
 
 'Change Sort order'
-WebUI.click(findTestObject('Sprint2/button_Z-A'))
+WebUI.click(findTestObject('Common Objects/button_Z-A'))
 
-WebUI.click(findTestObject('Sprint2/button_Z-A'))
+WebUI.click(findTestObject('Common Objects/button_Z-A'))
 
 'Click Save View'
-WebUI.click(findTestObject('Sprint2/button_Save View'))
+WebUI.click(findTestObject('Common Objects/button_Save View'))
 
 'Click Ok button'
 			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
@@ -285,87 +285,87 @@ WebUI.click(findTestObject('Sprint2/button_Save View'))
 WebUI.delay(3)
 
 'Open View Selector'
-WebUI.click(findTestObject('Object Repository/Sprint2/button_PDM view 4'))
+WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 
 'Open View Selector'
-WebUI.click(findTestObject('Sprint2/button_Collection View - Edited'))
+WebUI.click(findTestObject('Sprint2/Collections/button_Collection View - Edited'))
 
 'Click Group By'
-WebUI.click(findTestObject('Sprint2/button_Group By'))
+WebUI.click(findTestObject('Common Objects/button_Group By'))
 
 'Change Group by'
-WebUI.selectOptionByValue(findTestObject('Object Repository/Sprint2/select_Collection IDCollectionCreated BYCre_aba21a'), 
+WebUI.selectOptionByValue(findTestObject('Sprint2/Collections/select_Collection IDCollectionCreated BY'), 
     'updated_by', true)
 
 'Change the sorting order'
-WebUI.click(findTestObject('Sprint2/button_Z-A'))
+WebUI.click(findTestObject('Common Objects/button_Z-A'))
 
 'Click Apply Group'
-WebUI.click(findTestObject('Sprint2/button_Apply Group'))
+WebUI.click(findTestObject('Common Objects/button_Apply Group'))
 
 'Click Sort By'
-WebUI.click(findTestObject('Sprint2/button_Sort By'))
+WebUI.click(findTestObject('Common Objects/button_Sort By'))
 
 WebUI.delay(1)
 
 'Click Additional Sort By'
-WebUI.click(findTestObject('Sprint2/span_Add additional field to sort by'))
+WebUI.click(findTestObject('Common Objects/span_Add additional field to sort by'))
 
 'Click Apply Sort'
-WebUI.click(findTestObject('Sprint2/button_Apply Sort'))
+WebUI.click(findTestObject('Common Objects/button_Apply Sort'))
 
 'Click Save Changes to View'
-WebUI.click(findTestObject('Sprint2/button_Save Changes to View'))
+WebUI.click(findTestObject('Common Objects/button_Save Changes to View'))
 
 'Provide New System View'
-WebUI.clearText(findTestObject('Sprint2/input__name'), FailureHandling.STOP_ON_FAILURE)
+WebUI.clearText(findTestObject('Common Objects/input__name'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Sprint2/input__name'), FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Common Objects/input__name'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.sendKeys(findTestObject('Object Repository/Sprint2/input__name'), Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
+WebUI.sendKeys(findTestObject('Common Objects/input__name'), Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
 
 WebUI.delay(1)
 
-WebUI.sendKeys(findTestObject('Sprint2/input__name'), 'Collection View - On the Fly')
+WebUI.sendKeys(findTestObject('Common Objects/input__name'), 'Collection View - On the Fly')
 
 'Select Collection ID'
-WebUI.click(findTestObject('Object Repository/Sprint2/label_Collection ID'))
+WebUI.click(findTestObject('Sprint2/Seasons/label_Collection ID'))
 
 'Select COllection'
-WebUI.click(findTestObject('Object Repository/Sprint2/label_Collection'))
+WebUI.click(findTestObject('Sprint2/Seasons/label_Collection'))
 
 'Select Lock Column'
-WebUI.scrollToElement(findTestObject('Sprint2/select_Select column positionColumn 1Column_363a83'), 0, FailureHandling.STOP_ON_FAILURE)
+WebUI.scrollToElement(findTestObject('Common Objects/select_Select column position'), 0, FailureHandling.STOP_ON_FAILURE)
 
 'Select Lock Column'
-WebUI.selectOptionByValue(findTestObject('Sprint2/select_Select column positionColumn 1Column_363a83'), '3', true)
+WebUI.selectOptionByValue(findTestObject('Common Objects/select_Select column position'), '3', true)
 
 'CLick Save View'
-WebUI.click(findTestObject('Sprint2/button_Save View'))
+WebUI.click(findTestObject('Common Objects/button_Save View'))
 
 'Click Ok'
 			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 'Open View Selector'
-WebUI.click(findTestObject('Object Repository/Sprint2/button_PDM view 4'))
+WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 
 'Click Manage Views'
-WebUI.click(findTestObject('Sprint2/button_Manage Views'))
+WebUI.click(findTestObject('Common Objects/button_Manage Views'))
 
 'Click Modified Collection View'
-WebUI.click(findTestObject('Object Repository/Sprint2/li_Collection View - On the Fly'))
+WebUI.click(findTestObject('Sprint2/Collections/li_Collection View - On the Fly'))
 
 'Click Delete Button'
-WebUI.click(findTestObject('Object Repository/Sprint2/img_1_2'))
+WebUI.click(findTestObject('Sprint2/Collections/img_1_2'))
 
 'CLick Modified Collection View'
-WebUI.click(findTestObject('Object Repository/Sprint2/li_Collection View_1'))
+WebUI.click(findTestObject('Sprint2/Collections/li_Collection View_1'))
 
 'Click Delete Button'
-WebUI.click(findTestObject('Object Repository/Sprint2/img_1_2'))
+WebUI.click(findTestObject('Sprint2/Collections/img_1_2'))
 
 'Click Save Changes'
-WebUI.click(findTestObject('Sprint2/button_Save Changes'))
+WebUI.click(findTestObject('Common Objects/button_Save Changes'))
 
 'Click Ok'
 			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))

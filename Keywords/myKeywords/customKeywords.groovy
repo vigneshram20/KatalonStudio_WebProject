@@ -97,7 +97,7 @@ class customKeywords {
 	 */
 	@Keyword
 	def verifyAllSeasonsInSuccessPopup(String seasonName) {
-		def seasonObject = WebUI.modifyObjectProperty(findTestObject('Object Repository/Page_Merch Collaboration Platform/Delete Season/SeasonNameSuccessModal'),'xpath','equals','//div[@class="modal-dialog"]//p[(text() = "'+seasonName+'" or . = "'+seasonName+'")]',true);
+		def seasonObject = WebUI.modifyObjectProperty(findTestObject('Sprint1/Delete Season/SeasonNameSuccessModal'),'xpath','equals','//div[@class="modal-dialog"]//p[(text() = "'+seasonName+'" or . = "'+seasonName+'")]',true);
 		def originalXpaths = seasonObject.findPropertyValue('xpath');
 		System.out.println(originalXpaths)
 		WebUI.click(seasonObject)
@@ -109,7 +109,7 @@ class customKeywords {
 	def List<String> identifySeasonsListColumnIndices() {
 		Thread.sleep(1000)
 		WebDriver driver = DriverFactory.getWebDriver();
-		List<WebElement> listOfColumns = WebUI.findWebElements(findTestObject('Page_Merch Collaboration Platform/Manage Season Page/th_columnHeaderSeasonsList'),0)
+		List<WebElement> listOfColumns = WebUI.findWebElements(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'),0)
 		List<String> listOfColumnNames = new ArrayList<String>();
 		for (WebElement element : listOfColumns) {
 			String elementText = element.getText();
@@ -188,171 +188,171 @@ class customKeywords {
 
 			WebUI.click(findTestObject('Object Repository/Common Objects/a_Update'))
 
-			WebUI.verifyElementVisible(findTestObject('Page_Merch Collaboration Platform/Update Season/popupTitle_UpdateSeason'))
+			WebUI.verifyElementVisible(findTestObject('Sprint1/Update Season/popupTitle_UpdateSeason'))
 
 			WebUI.verifyElementVisible(findTestObject('Object Repository/Common Objects/img_Close'))
 
-			WebUI.verifyElementVisible(findTestObject('Page_Merch Collaboration Platform/Create Season/subSection_title_General Attributes'))
+			WebUI.verifyElementVisible(findTestObject('Sprint1/Create Season/subSection_title_General Attributes'))
 
-			WebUI.verifyElementVisible(findTestObject('Object Repository/Page_Merch Collaboration Platform/Update Season/label_Name'))
+			WebUI.verifyElementVisible(findTestObject('Sprint1/Update Season/label_Name'))
 
-			WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Page_Merch Collaboration Platform/Update Season/input_Name_name'),
+			WebUI.verifyElementAttributeValue(findTestObject('Sprint1/Update Season/input_Name_name'),
 					'value', seasonEntitiesMap.get('NAME'), 0)
 
-			WebUI.verifyElementVisible(findTestObject('Page_Merch Collaboration Platform/Update Season/label_Brand'))
+			WebUI.verifyElementVisible(findTestObject('Sprint1/Update Season/label_Brand'))
 
-			WebUI.verifyOptionSelectedByLabel(findTestObject('Page_Merch Collaboration Platform/Create Season/Brand Select dropdown'),
+			WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint1/Create Season/Brand Select dropdown'),
 					seasonEntitiesMap.get('BRAND'), true, 0)
 
-			WebUI.verifyElementVisible(findTestObject('Object Repository/Page_Merch Collaboration Platform/Update Season/label_Division'))
+			WebUI.verifyElementVisible(findTestObject('Sprint1/Update Season/label_Division'))
 
-			WebUI.verifyOptionSelectedByLabel(findTestObject('Page_Merch Collaboration Platform/Update Season/Division Select dropdown'),
+			WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint1/Update Season/Division Select dropdown'),
 					seasonEntitiesMap.get('DIVISION'), true, 0)
 
-			WebUI.verifyElementVisible(findTestObject('Page_Merch Collaboration Platform/Update Season/label_Season'))
+			WebUI.verifyElementVisible(findTestObject('Sprint1/Update Season/label_Season'))
 
-			WebUI.verifyOptionSelectedByLabel(findTestObject('Page_Merch Collaboration Platform/Create Season/Season Select dropdown'),
+			WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint1/Create Season/Season Select dropdown'),
 					seasonEntitiesMap.get('SEASON'), true, 0)
 
-			WebUI.verifyElementVisible(findTestObject('Page_Merch Collaboration Platform/Update Season/label_Year'))
+			WebUI.verifyElementVisible(findTestObject('Sprint1/Update Season/label_Year'))
 
-			WebUI.verifyOptionSelectedByLabel(findTestObject('Page_Merch Collaboration Platform/Create Season/Year Select dropdown'),
+			WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint1/Create Season/Year Select dropdown'),
 					seasonEntitiesMap.get('YEAR'), true, 0)
 
-			WebUI.verifyElementVisible(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/label_Type'))
+			WebUI.verifyElementVisible(findTestObject('Sprint1/Create Season/label_Type'))
 
-			WebUI.verifyElementAttributeValue(findTestObject('Page_Merch Collaboration Platform/Create Season/input_Type_type'),
+			WebUI.verifyElementAttributeValue(findTestObject('Sprint1/Create Season/input_Type_type'),
 					'value', seasonEntitiesMap.get('TYPE'), 0)
 
-			WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__internet_launch_start_date'),
+			WebUI.verifyElementAttributeValue(findTestObject('Sprint1/Create Season/input__internet_launch_start_date'),
 					'value', int_Start_date, 0)
 
 			'Type Internet Launch Start Date'
-			WebUI.click(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__internet_launch_start_date'),
+			WebUI.click(findTestObject('Sprint1/Create Season/input__internet_launch_start_date'),
 					FailureHandling.STOP_ON_FAILURE)
 
 			'Clear Text'
-			WebUI.clearText(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__internet_launch_start_date'))
+			WebUI.clearText(findTestObject('Sprint1/Create Season/input__internet_launch_start_date'))
 
 			'Type Internet Launch Start Date'
-			WebUI.sendKeys(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__internet_launch_start_date'),
+			WebUI.sendKeys(findTestObject('Sprint1/Create Season/input__internet_launch_start_date'),
 					Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
 
 			if(DriverFactory.getExecutedBrowser().getName() == "IE_DRIVER") {
-				typeKeysCharByChar(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__internet_launch_start_date'),update_int_Start_date)
+				typeKeysCharByChar(findTestObject('Sprint1/Create Season/input__internet_launch_start_date'),update_int_Start_date)
 			}
 			else {
 				'Type Internet Launch Start Date'
-				WebUI.sendKeys(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__internet_launch_start_date'),
+				WebUI.sendKeys(findTestObject('Sprint1/Create Season/input__internet_launch_start_date'),
 						update_int_Start_date)
 			}
 
 			WebUI.delay(1)
 
 			'Click In Store Launch Start Date Label'
-			WebUI.click(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/label_In Store Launch Start Date'))
+			WebUI.click(findTestObject('Sprint1/Create Season/label_In Store Launch Start Date'))
 
 			WebUI.delay(1)
 
-			WebUI.verifyElementAttributeValue(findTestObject('Page_Merch Collaboration Platform/Create Season/input__internet_launch_end_date'),
+			WebUI.verifyElementAttributeValue(findTestObject('Sprint1/Create Season/input__internet_launch_end_date'),
 					'value', int_End_date, 0)
 
 			'Type Internet Launch End Date'
-			WebUI.click(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__internet_launch_end_date'),
+			WebUI.click(findTestObject('Sprint1/Create Season/input__internet_launch_end_date'),
 					FailureHandling.STOP_ON_FAILURE)
 
 			'Clear Text'
-			WebUI.clearText(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__internet_launch_end_date'))
+			WebUI.clearText(findTestObject('Sprint1/Create Season/input__internet_launch_end_date'))
 
 			'Type Internet Launch End Date'
-			WebUI.sendKeys(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__internet_launch_end_date'),
+			WebUI.sendKeys(findTestObject('Sprint1/Create Season/input__internet_launch_end_date'),
 					Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
 
 			if(DriverFactory.getExecutedBrowser().getName() == "IE_DRIVER") {
-				typeKeysCharByChar(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__internet_launch_end_date'),
+				typeKeysCharByChar(findTestObject('Sprint1/Create Season/input__internet_launch_end_date'),
 						update_int_End_date)
 			}
 			else {
 				'Type Internet Launch End Date'
-				WebUI.setText(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__internet_launch_end_date'),
+				WebUI.setText(findTestObject('Sprint1/Create Season/input__internet_launch_end_date'),
 						update_int_End_date)
 			}
 
 			WebUI.delay(1)
 
 			'Click In Store Launch Start Date Label'
-			WebUI.click(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/label_In Store Launch Start Date'))
+			WebUI.click(findTestObject('Sprint1/Create Season/label_In Store Launch Start Date'))
 
-			WebUI.verifyElementAttributeValue(findTestObject('Page_Merch Collaboration Platform/Create Season/input__in_store_launch_start_date'),
+			WebUI.verifyElementAttributeValue(findTestObject('Sprint1/Create Season/input__in_store_launch_start_date'),
 					'value', inStore_start_date, 0)
 
 			'Type Internet Launch End Date'
-			WebUI.click(findTestObject('Page_Merch Collaboration Platform/Create Season/input__in_store_launch_start_date'), FailureHandling.STOP_ON_FAILURE)
+			WebUI.click(findTestObject('Sprint1/Create Season/input__in_store_launch_start_date'), FailureHandling.STOP_ON_FAILURE)
 
 			'Clear Text'
-			WebUI.clearText(findTestObject('Page_Merch Collaboration Platform/Create Season/input__in_store_launch_start_date'))
+			WebUI.clearText(findTestObject('Sprint1/Create Season/input__in_store_launch_start_date'))
 
 			'Type Internet Launch End Date'
-			WebUI.sendKeys(findTestObject('Page_Merch Collaboration Platform/Create Season/input__in_store_launch_start_date'),
+			WebUI.sendKeys(findTestObject('Sprint1/Create Season/input__in_store_launch_start_date'),
 					Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
 
 			'Type In Store Launch Start Date'
-			WebUI.setText(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__in_store_launch_start_date'),
+			WebUI.setText(findTestObject('Sprint1/Create Season/input__in_store_launch_start_date'),
 					'')
 
 			if(DriverFactory.getExecutedBrowser().getName() == "IE_DRIVER") {
-				typeKeysCharByChar(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__in_store_launch_start_date'),
+				typeKeysCharByChar(findTestObject('Sprint1/Create Season/input__in_store_launch_start_date'),
 						update_inStore_start_date)
 			}
 			else {
 				'Type In Store Launch Start Date'
-				WebUI.setText(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__in_store_launch_start_date'),
+				WebUI.setText(findTestObject('Sprint1/Create Season/input__in_store_launch_start_date'),
 						update_inStore_start_date)
 			}
 
 			WebUI.delay(1)
 
 			'Click In Store Launch Start Date Label'
-			WebUI.click(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/label_In Store Launch Start Date'))
+			WebUI.click(findTestObject('Sprint1/Create Season/label_In Store Launch Start Date'))
 
 			WebUI.delay(1)
 
-			WebUI.verifyElementAttributeValue(findTestObject('Page_Merch Collaboration Platform/Create Season/input__in_store_launch_end_date'),
+			WebUI.verifyElementAttributeValue(findTestObject('Sprint1/Create Season/input__in_store_launch_end_date'),
 					'value', inStore_end_date, 0)
 
 			'Type Internet Launch End Date'
-			WebUI.click(findTestObject('Page_Merch Collaboration Platform/Create Season/input__in_store_launch_end_date'), FailureHandling.STOP_ON_FAILURE)
+			WebUI.click(findTestObject('Sprint1/Create Season/input__in_store_launch_end_date'), FailureHandling.STOP_ON_FAILURE)
 
 			'Clear Text'
-			WebUI.clearText(findTestObject('Page_Merch Collaboration Platform/Create Season/input__in_store_launch_end_date'))
+			WebUI.clearText(findTestObject('Sprint1/Create Season/input__in_store_launch_end_date'))
 
 			'Type Internet Launch End Date'
-			WebUI.sendKeys(findTestObject('Page_Merch Collaboration Platform/Create Season/input__in_store_launch_end_date'), Keys.chord(
+			WebUI.sendKeys(findTestObject('Sprint1/Create Season/input__in_store_launch_end_date'), Keys.chord(
 					Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
 
 			'Type In Store Launch End Date'
-			WebUI.setText(findTestObject('Page_Merch Collaboration Platform/Create Season/input__in_store_launch_end_date'), '')
+			WebUI.setText(findTestObject('Sprint1/Create Season/input__in_store_launch_end_date'), '')
 
 			if(DriverFactory.getExecutedBrowser().getName() == "IE_DRIVER") {
-				typeKeysCharByChar(findTestObject('Page_Merch Collaboration Platform/Create Season/input__in_store_launch_end_date'), update_inStore_end_date)
+				typeKeysCharByChar(findTestObject('Sprint1/Create Season/input__in_store_launch_end_date'), update_inStore_end_date)
 			}
 			else {
 				'Type In Store Launch End Date'
-				WebUI.setText(findTestObject('Page_Merch Collaboration Platform/Create Season/input__in_store_launch_end_date'), update_inStore_end_date)
+				WebUI.setText(findTestObject('Sprint1/Create Season/input__in_store_launch_end_date'), update_inStore_end_date)
 			}
 
 			WebUI.delay(1)
 
 			'Click General Attributes div'
-			WebUI.click(findTestObject('Page_Merch Collaboration Platform/Create Season/subSection_title_General Attributes'))
+			WebUI.click(findTestObject('Sprint1/Create Season/subSection_title_General Attributes'))
 
 			WebUI.verifyElementVisible(findTestObject('Common Objects/a_Cancel'))
 
-			WebUI.click(findTestObject('Object Repository/Page_Merch Collaboration Platform/Update Season/button_Update'))
+			WebUI.click(findTestObject('Sprint1/Update Season/button_Update'))
 
 			WebUI.enableSmartWait()
 
-			WebUI.click(findTestObject('Object Repository/Page_Merch Collaboration Platform/Update Season/h5_Successfully Updated'))
+			WebUI.click(findTestObject('Sprint1/Update Season/h5_Successfully Updated'))
 
 			WebUI.verifyElementVisible(findTestObject('Object Repository/Common Objects/img_Close'))
 
@@ -362,9 +362,9 @@ class customKeywords {
 
 			System.out.println(elementXpathU)
 
-			def SeasonNameModalObjectAU =WebUI.removeObjectProperty(findTestObject('Page_Merch Collaboration Platform/Update Season/p_Season_FullName has been updated'),'xpath')
+			def SeasonNameModalObjectAU =WebUI.removeObjectProperty(findTestObject('Sprint1/Update Season/p_Season_FullName has been updated'),'xpath')
 
-			SeasonNameModalObjectAU = WebUI.modifyObjectProperty(findTestObject('Page_Merch Collaboration Platform/Update Season/p_Season_FullName has been updated'),
+			SeasonNameModalObjectAU = WebUI.modifyObjectProperty(findTestObject('Sprint1/Update Season/p_Season_FullName has been updated'),
 					'xpath', 'equals', elementXpathU, true)
 
 			WebUI.verifyElementVisible(SeasonNameModalObjectAU)
@@ -385,10 +385,10 @@ class customKeywords {
 
 		WebUI.waitForPageLoad(60)
 
-		def gridHeaderA = WebUI.removeObjectProperty(findTestObject('Page_Merch Collaboration Platform/Manage Season Page/th_columnHeaderSeasonsList'),
+		def gridHeaderA = WebUI.removeObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'),
 				'xpath')
 
-		gridHeaderA = WebUI.modifyObjectProperty(findTestObject('Page_Merch Collaboration Platform/Manage Season Page/th_columnHeaderSeasonsList'),
+		gridHeaderA = WebUI.modifyObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'),
 				'xpath', 'equals', '//table/thead/tr/th', true)
 
 		WebUI.waitForPageLoad(60)
@@ -458,33 +458,33 @@ class customKeywords {
 
 			WebUI.click(ActionsObject, FailureHandling.STOP_ON_FAILURE)
 
-			WebUI.scrollToElement(findTestObject('Page_Merch Collaboration Platform/Manage Season Page/a_Delete'), 0)
+			WebUI.scrollToElement(findTestObject('Sprint1/Manage Season Page/a_Delete'), 0)
 
-			WebUI.click(findTestObject('Page_Merch Collaboration Platform/Manage Season Page/a_Delete'))
+			WebUI.click(findTestObject('Sprint1/Manage Season Page/a_Delete'))
 
-			WebUI.click(findTestObject('Page_Merch Collaboration Platform/Delete Season/h5_Delete'))
+			WebUI.click(findTestObject('Sprint1/Delete Season/h5_Delete'))
 
-			WebUI.click(findTestObject('Page_Merch Collaboration Platform/Delete Season/p_Confirm deletion of the following season'))
+			WebUI.click(findTestObject('Sprint1/Delete Season/p_Confirm deletion of the following season'))
 
 			String Full_Season_Name = seasonEntitiesMap.get('NAME')
 
-			def SeasonNameObjectA = WebUI.removeObjectProperty(findTestObject('Page_Merch Collaboration Platform/Delete Season/p_PB Dec Acc Summer 2024'),
+			def SeasonNameObjectA = WebUI.removeObjectProperty(findTestObject('Sprint1/Delete Season/p_PB Dec Acc Summer 2024'),
 					'xpath')
 
-			SeasonNameObjectA = WebUI.modifyObjectProperty(findTestObject('Page_Merch Collaboration Platform/Delete Season/p_PB Dec Acc Summer 2024'),
+			SeasonNameObjectA = WebUI.modifyObjectProperty(findTestObject('Sprint1/Delete Season/p_PB Dec Acc Summer 2024'),
 					'xpath', 'equals', ((('//p[(text() = ' + Full_Season_Name) + ' or . = ') + Full_Season_Name) + ')]', true)
 
 			WebUI.click(SeasonNameObjectA)
 
-			WebUI.click(findTestObject('Page_Merch Collaboration Platform/Delete Season/p_This action cannot be undone'))
+			WebUI.click(findTestObject('Sprint1/Delete Season/p_This action cannot be undone'))
 
 			WebUI.verifyElementVisible(findTestObject('Common Objects/img_Close'))
 
-			WebUI.verifyElementVisible(findTestObject('Page_Merch Collaboration Platform/Delete Season/a_No'))
+			WebUI.verifyElementVisible(findTestObject('Sprint1/Delete Season/a_No'))
 
-			WebUI.click(findTestObject('Page_Merch Collaboration Platform/Delete Season/a_Yes'))
+			WebUI.click(findTestObject('Sprint1/Delete Season/a_Yes'))
 
-			WebUI.verifyElementVisible(findTestObject('Page_Merch Collaboration Platform/Delete Season/h5_Successfully Deleted'))
+			WebUI.verifyElementVisible(findTestObject('Sprint1/Delete Season/h5_Successfully Deleted'))
 
 			WebUI.verifyElementVisible(findTestObject('Common Objects/img_Close'))
 
@@ -494,10 +494,10 @@ class customKeywords {
 
 			System.out.println(elementXpath)
 
-			def SeasonNameModalObjectA = WebUI.removeObjectProperty(findTestObject('Page_Merch Collaboration Platform/Delete Season/p_PB Dec Acc Summer 2024 has been deleted'),
+			def SeasonNameModalObjectA = WebUI.removeObjectProperty(findTestObject('Sprint1/Delete Season/p_PB Dec Acc Summer 2024 has been deleted'),
 					'xpath')
 
-			SeasonNameModalObjectA = WebUI.modifyObjectProperty(findTestObject('Page_Merch Collaboration Platform/Delete Season/p_PB Dec Acc Summer 2024 has been deleted'),
+			SeasonNameModalObjectA = WebUI.modifyObjectProperty(findTestObject('Sprint1/Delete Season/p_PB Dec Acc Summer 2024 has been deleted'),
 					'xpath', 'equals', elementXpath, true)
 
 			WebUI.click(SeasonNameModalObjectA)

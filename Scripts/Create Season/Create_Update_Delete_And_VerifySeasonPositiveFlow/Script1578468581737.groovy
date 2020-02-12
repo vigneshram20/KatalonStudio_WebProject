@@ -36,95 +36,95 @@ not_run: WebUI.callTestCase(findTestCase('Common/NavigateToManageSeasonPage'), [
 WebUI.enableSmartWait()
 
 'Click Create New Season button'
-WebUI.click(findTestObject('Page_Merch Collaboration Platform/Manage Season Page/button_CreateNewSeason'))
+WebUI.click(findTestObject('Sprint1/Manage Season Page/button_CreateNewSeason'))
 
 WebUI.enableSmartWait()
 
 WebUI.delay(1)
 
 'Select Brand'
-WebUI.selectOptionByLabel(findTestObject('Page_Merch Collaboration Platform/Create Season/Brand Select dropdown'), Brand, 
+WebUI.selectOptionByLabel(findTestObject('Sprint1/Create Season/Brand Select dropdown'), Brand, 
     false)
 
 'Select Season'
-WebUI.selectOptionByLabel(findTestObject('Page_Merch Collaboration Platform/Create Season/Season Select dropdown'), Season, 
+WebUI.selectOptionByLabel(findTestObject('Sprint1/Create Season/Season Select dropdown'), Season, 
     false)
 
 'Select Year'
-WebUI.selectOptionByLabel(findTestObject('Page_Merch Collaboration Platform/Create Season/Year Select dropdown'), Year, 
+WebUI.selectOptionByLabel(findTestObject('Sprint1/Create Season/Year Select dropdown'), Year, 
     false)
 
 'Verify Type Value'
-WebUI.click(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input_Type_type'))
+WebUI.click(findTestObject('Sprint1/Create Season/input_Type_type'))
 
 if (DriverFactory.getExecutedBrowser().getName() == 'IE_DRIVER') {
-    CustomKeywords.'myKeywords.customKeywords.typeKeysCharByChar'(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__internet_launch_start_date'), 
+    CustomKeywords.'myKeywords.customKeywords.typeKeysCharByChar'(findTestObject('Sprint1/Create Season/input__internet_launch_start_date'), 
         Internet_Start_Date)
 } else {
     'Type Internet Launch Start Date'
-    WebUI.sendKeys(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__internet_launch_start_date'), 
+    WebUI.sendKeys(findTestObject('Sprint1/Create Season/input__internet_launch_start_date'), 
         Internet_Start_Date)
 }
 
 WebUI.delay(1)
 
 'Click In Store Launch Start Date Label'
-WebUI.click(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/label_In Store Launch Start Date'))
+WebUI.click(findTestObject('Sprint1/Create Season/label_In Store Launch Start Date'))
 
 WebUI.delay(1)
 
 if (DriverFactory.getExecutedBrowser().getName() == 'IE_DRIVER') {
-    CustomKeywords.'myKeywords.customKeywords.typeKeysCharByChar'(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__internet_launch_end_date'), 
+    CustomKeywords.'myKeywords.customKeywords.typeKeysCharByChar'(findTestObject('Sprint1/Create Season/input__internet_launch_end_date'), 
         Internet_End_Date)
 } else {
     'Type Internet Launch End Date'
-    WebUI.setText(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__internet_launch_end_date'), 
+    WebUI.setText(findTestObject('Sprint1/Create Season/input__internet_launch_end_date'), 
         Internet_End_Date)
 }
 
 WebUI.delay(1)
 
 'Click In Store Launch Start Date Label'
-WebUI.click(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/label_In Store Launch Start Date'))
+WebUI.click(findTestObject('Sprint1/Create Season/label_In Store Launch Start Date'))
 
 if (DriverFactory.getExecutedBrowser().getName() == 'IE_DRIVER') {
-    CustomKeywords.'myKeywords.customKeywords.typeKeysCharByChar'(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__in_store_launch_start_date'), 
+    CustomKeywords.'myKeywords.customKeywords.typeKeysCharByChar'(findTestObject('Sprint1/Create Season/input__in_store_launch_start_date'), 
         Store_Start_Date)
 } else {
     'Type In Store Launch Start Date'
-    WebUI.setText(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__in_store_launch_start_date'), 
+    WebUI.setText(findTestObject('Sprint1/Create Season/input__in_store_launch_start_date'), 
         Store_Start_Date)
 }
 
 WebUI.delay(1)
 
 'Click In Store Launch Start Date Label'
-WebUI.click(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/label_In Store Launch Start Date'))
+WebUI.click(findTestObject('Sprint1/Create Season/label_In Store Launch Start Date'))
 
 WebUI.delay(1)
 
 if (DriverFactory.getExecutedBrowser().getName() == 'IE_DRIVER') {
-    CustomKeywords.'myKeywords.customKeywords.typeKeysCharByChar'(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__in_store_launch_end_date'), 
+    CustomKeywords.'myKeywords.customKeywords.typeKeysCharByChar'(findTestObject('Sprint1/Create Season/input__in_store_launch_end_date'), 
         Store_End_Date)
 } else {
     'Type In Store Launch End Date'
-    WebUI.setText(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/input__in_store_launch_end_date'), 
+    WebUI.setText(findTestObject('Sprint1/Create Season/input__in_store_launch_end_date'), 
         Store_End_Date)
 }
 
 WebUI.delay(1)
 
 'Click General Attributes div'
-WebUI.click(findTestObject('Page_Merch Collaboration Platform/Create Season/subSection_title_General Attributes'))
+WebUI.click(findTestObject('Sprint1/Create Season/subSection_title_General Attributes'))
 
 'Click Create Button'
-WebUI.click(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/button_Create'))
+WebUI.click(findTestObject('Sprint1/Create Season/button_Create'))
 
 'Verify Seasons Created success message header'
-WebUI.click(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/h5_Seasons Created Successfully'))
+WebUI.click(findTestObject('Sprint1/Create Season/h5_Seasons Created Successfully'))
 
 'Verify Seasons Created inpopup message'
-WebUI.click(findTestObject('Object Repository/Page_Merch Collaboration Platform/Create Season/p_The following new seasons have been created'))
+WebUI.click(findTestObject('Sprint1/Create Season/p_The following new seasons have been created'))
 
 for (String currentDivision : DivisionsList) {
     FullSeasonNameList.add((((((Brand + ' ') + currentDivision) + ' ') + Season) + ' ') + Year)
@@ -151,13 +151,13 @@ WebUI.waitForPageLoad(60)
 WebUI.waitForPageLoad(60)
 
 'Verify Seasonslist Column'
-WebUI.waitForElementPresent(findTestObject('Page_Merch Collaboration Platform/Manage Season Page/th_columnHeaderSeasonsList'), 
+WebUI.waitForElementPresent(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 
     60)
 
-WebUI.waitForElementVisible(findTestObject('Page_Merch Collaboration Platform/Manage Season Page/th_columnHeaderSeasonsList'), 
+WebUI.waitForElementVisible(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 
     60)
 
-WebUI.waitForElementClickable(findTestObject('Page_Merch Collaboration Platform/Manage Season Page/th_columnHeaderSeasonsList'), 
+WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 
     60)
 
 'Custom Method - identifySeasonsListColumnIndices'

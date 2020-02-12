@@ -24,22 +24,22 @@ WebUI.callTestCase(findTestCase('Login/VerifyLoginSuccessfully'), [:], FailureHa
 WebUI.callTestCase(findTestCase('Common/NavigateToManageSeasonPage'), [:], FailureHandling.STOP_ON_FAILURE)
 
 'Verify Create New Season button'
-WebUI.verifyElementPresent(findTestObject('Page_Merch Collaboration Platform/Manage Season Page/button_CreateNewSeason'), 
+WebUI.verifyElementPresent(findTestObject('Sprint1/Manage Season Page/button_CreateNewSeason'), 
     0)
 
 for (int i = 0; i < columnsList.size(); i++) {
     'Verify Columns List'
-    WebUI.verifyElementText(findTestObject('Page_Merch Collaboration Platform/Manage Season Page/th_columnHeaderSeasonsList'), 
+    WebUI.verifyElementText(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 
         columnsList.get(i))
 }
 
 'Click Actions Span'
-WebUI.click(findTestObject('Object Repository/Page_Merch Collaboration Platform/Manage Season Page/span_Actions'))
+WebUI.click(findTestObject('Sprint1/Manage Season Page/span_Actions'))
 
 'Veriy Update button'
 WebUI.verifyElementPresent(findTestObject('Common Objects/a_Update'), 
     0)
 
 'Verfiy Delete button'
-WebUI.verifyElementPresent(findTestObject('Page_Merch Collaboration Platform/Manage Season Page/a_Delete'), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint1/Manage Season Page/a_Delete'), 0)
 

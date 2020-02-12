@@ -37,10 +37,10 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/div_JDA Hier
 WebUI.delay(3)
 
 'Open View Selector'
-WebUI.click(findTestObject('Sprint2/button_PDM view 4'))
+WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 
 'Click Manage View'
-WebUI.click(findTestObject('Sprint2/button_Manage Views'))
+WebUI.click(findTestObject('Common Objects/button_Manage Views'))
 
 
 List<WebElement> listOfJDAView = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/JDA Hierarchy/span_JDA Hierarchy View - On the Fly - Copy'), 1)
@@ -51,7 +51,7 @@ for (WebElement element : listOfJDAView) {
 	element.click()
 	
 	'Click Delete button'
-	WebUI.click(findTestObject('Sprint2/img_1'))
+	WebUI.click(findTestObject('Common Objects/img_Delete'))
 }
 
 List<WebElement> listOfJDAView_1 = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/JDA Hierarchy/li_JDA Hierarchy View - On the Fly'), 1)
@@ -62,7 +62,7 @@ for (WebElement element : listOfJDAView_1) {
 	element.click()
 	
 	'Click Delete button'
-	WebUI.click(findTestObject('Sprint2/img_1'))
+	WebUI.click(findTestObject('Common Objects/img_Delete'))
 }
 
 List<WebElement> listOfJDAView_2 = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/JDA Hierarchy/li_JDA Hierarchy View'), 1)
@@ -73,7 +73,7 @@ for (WebElement element : listOfJDAView_2) {
 	element.click()
 	
 	'Click Delete button'
-	WebUI.click(findTestObject('Sprint2/img_1'))
+	WebUI.click(findTestObject('Common Objects/img_Delete'))
 }
 
 List<WebElement> listOfJDAView_3 = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/JDA Hierarchy/span_JDA Hierarchy View - Copy'), 1)
@@ -84,7 +84,7 @@ for (WebElement element : listOfJDAView_3) {
 	element.click()
 	
 	'Click Delete button'
-	WebUI.click(findTestObject('Sprint2/img_1'))
+	WebUI.click(findTestObject('Common Objects/img_Delete'))
 }
 
 List<WebElement> listOfJDAView_4 = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/JDA Hierarchy/li_JDA Hierarchy View_Edited'), 1)
@@ -95,10 +95,10 @@ for (WebElement element : listOfJDAView_4) {
 	element.click()
 	
 	'Click Delete button'
-	WebUI.click(findTestObject('Sprint2/img_1'))
+	WebUI.click(findTestObject('Common Objects/img_Delete'))
 }
 
-List<WebElement> SaveChangesButton = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/button_Save Changes'), 1)
+List<WebElement> SaveChangesButton = WebUI.findWebElements(findTestObject('Common Objects/button_Save Changes'), 1)
 
 for (WebElement element : SaveChangesButton) {
 	Thread.sleep(100)
@@ -110,25 +110,25 @@ for (WebElement element : SaveChangesButton) {
 
 }
 
-List<WebElement> NewViewButton = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/button_New View'), 1)
+List<WebElement> NewViewButton = WebUI.findWebElements(findTestObject('Common Objects/button_New View'), 1)
 
 if(NewViewButton.size()==0)
 {
 	
 	'Click View Selector'
-	WebUI.click(findTestObject('Object Repository/Sprint2/button_PDM view 4'))
+	WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 	
 	'Click Manage View button'
-	WebUI.click(findTestObject('Object Repository/Sprint2/button_Manage Views'))
+	WebUI.click(findTestObject('Common Objects/button_Manage Views'))
 	
 	'Click New View button'
-	WebUI.click(findTestObject('Object Repository/Sprint2/button_New View'))
+	WebUI.click(findTestObject('Common Objects/button_New View'))
 }
 
 else
 {
 	'Click New View button'
-	WebUI.click(findTestObject('Object Repository/Sprint2/button_New View'))
+	WebUI.click(findTestObject('Common Objects/button_New View'))
 }
 
 
@@ -183,7 +183,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/span_Add add
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Z-A'))
 
-WebUI.click(findTestObject('Sprint2/button_Save View'))
+WebUI.click(findTestObject('Common Objects/button_Save View'))
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/h5_View Successfully Created'))
 
@@ -192,7 +192,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/div_JDA Hier
 			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 'Open View Selector'
-WebUI.click(findTestObject('Sprint2/button_PDM view 4'))
+WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_JDA Hierarchy View'))
 
@@ -213,7 +213,7 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint2/JDA Hierarc
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint2/JDA Hierarchy/div_Sub-Class Number'), 0)
 
 'Open View Selector'
-WebUI.click(findTestObject('Sprint2/button_PDM view 4'))
+WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Manage Views'))
 
@@ -234,7 +234,7 @@ WebUI.selectOptionByValue(findTestObject('Object Repository/Sprint2/JDA Hierarch
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/img_Group By_remove_list'))
 
-WebUI.click(findTestObject('Sprint2/button_Save View'))
+WebUI.click(findTestObject('Common Objects/button_Save View'))
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/p_JDA Hierarchy View - Copy has been succes_590e27'))
 
@@ -243,12 +243,12 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/p_JDA Hierar
 WebUI.delay(3)
 
 'Open View Selector'
-WebUI.click(findTestObject('Sprint2/button_PDM view 4'))
+WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_JDA Hierarchy View - Copy'))
 
 'Open View Selector'
-WebUI.click(findTestObject('Sprint2/button_PDM view 4'))
+WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Manage Views'))
 
@@ -257,11 +257,11 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/span_JDA Hie
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Edit View'))
 
 'Provide New System View Name'
-WebUI.clearText(findTestObject('Sprint2/input__name'), FailureHandling.STOP_ON_FAILURE)
+WebUI.clearText(findTestObject('Common Objects/input__name'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Sprint2/input__name'))
+WebUI.click(findTestObject('Common Objects/input__name'))
 
-WebUI.sendKeys(findTestObject('Object Repository/Sprint2/input__name'), Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
+WebUI.sendKeys(findTestObject('Common Objects/input__name'), Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
 
 WebUI.delay(1)
 
@@ -283,14 +283,14 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/label_Update
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/img_1'))
 
-WebUI.click(findTestObject('Sprint2/button_Save View'))
+WebUI.click(findTestObject('Common Objects/button_Save View'))
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/p_JDA Hierarchy View - Edited has been modi_d87deb'))
 
 			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 'Open View Selector'
-WebUI.click(findTestObject('Sprint2/button_PDM view 4'))
+WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 
 WebUI.click(findTestObject('Sprint2/JDA Hierarchy/button_JDA Hierarchy View - Edited'))
 
@@ -310,20 +310,20 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_A-Z')
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Apply Sort'))
 
-WebUI.click(findTestObject('Sprint2/button_Save Changes to View'))
+WebUI.click(findTestObject('Common Objects/button_Save Changes to View'))
 
 'Provide New System View Name'
-WebUI.clearText(findTestObject('Sprint2/input__name'), FailureHandling.STOP_ON_FAILURE)
+WebUI.clearText(findTestObject('Common Objects/input__name'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Sprint2/input__name'))
+WebUI.click(findTestObject('Common Objects/input__name'))
 
-WebUI.sendKeys(findTestObject('Object Repository/Sprint2/input__name'), Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
+WebUI.sendKeys(findTestObject('Common Objects/input__name'), Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
 
 WebUI.delay(1)
 
 WebUI.sendKeys(findTestObject('Object Repository/Sprint2/JDA Hierarchy/input__name'), 'JDA Hierarchy View - On the Fly')
 
-WebUI.click(findTestObject('Sprint2/button_Save View'))
+WebUI.click(findTestObject('Common Objects/button_Save View'))
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/p_JDA Hierarchy View - On the Fly has been _12f672'))
 
@@ -332,7 +332,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/p_JDA Hierar
 WebUI.delay(3)
 
 'Open View Selector'
-WebUI.click(findTestObject('Sprint2/button_PDM view 4'))
+WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 
 WebUI.click(findTestObject('Sprint2/JDA Hierarchy/button_JDA Hierarchy View - On the Fly'))
 
@@ -342,13 +342,13 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/img_Group By
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Apply Sort'))
 
-WebUI.click(findTestObject('Object Repository/Sprint2/button_Save as New View'))
+WebUI.click(findTestObject('Common Objects/button_Save as New View'))
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/label_System View'))
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Continue'))
 
-WebUI.click(findTestObject('Sprint2/button_Save View'))
+WebUI.click(findTestObject('Common Objects/button_Save View'))
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/p_JDA Hierarchy View - On the Fly - Copy ha_6f8f91'))
 
@@ -357,7 +357,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/p_JDA Hierar
 WebUI.delay(3)
 
 'Open View Selector'
-WebUI.click(findTestObject('Sprint2/button_PDM view 4'))
+WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/button_Manage Views'))
 
@@ -373,7 +373,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/li_JDA Hiera
 
 WebUI.click(findTestObject('Object Repository/Sprint2/JDA Hierarchy/img_1_2'))
 
-WebUI.click(findTestObject('Object Repository/Sprint2/button_Save Changes'))
+WebUI.click(findTestObject('Common Objects/button_Save Changes'))
 
 			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 

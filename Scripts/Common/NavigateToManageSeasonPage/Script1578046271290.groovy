@@ -28,16 +28,16 @@ WebUI.click(findTestObject('Common Objects/img_HamburgerMenu'))
 WebUI.delay(1)
 
 'Click Library menu'
-WebUI.click(findTestObject('Page_Merch Collaboration Platform/LandingPage/a_Library'))
+WebUI.click(findTestObject('Sprint1/LandingPage/a_Library'))
 
 WebUI.delay(1)
 
 'Click Seasons sub menu'
-WebUI.click(findTestObject('Page_Merch Collaboration Platform/LandingPage/a_Seasons'))
+WebUI.click(findTestObject('Sprint1/LandingPage/a_Seasons'))
 
 WebUI.delay(1)
 
 'Verify Manage Seasons Page Title'
-WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Merch Collaboration Platform/Manage Season Page/div_Manage Seasons'), 
+WebUI.verifyElementPresent(findTestObject('Sprint1/Manage Season Page/div_Manage Seasons'), 
     0)
 

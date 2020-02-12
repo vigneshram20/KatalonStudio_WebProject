@@ -24,10 +24,10 @@ WebUI.enableSmartWait()
 WebUI.click(findTestObject('Common Objects/img_LogoMain'))
 
 'Verify Manage List Title'
-WebUI.click(findTestObject('Page_Merch Collaboration Platform/LandingPage/div_Manage List'))
+WebUI.click(findTestObject('Sprint1/LandingPage/div_Manage List'))
 
 'Verify Page Under Construction message'
-WebUI.click(findTestObject('Page_Merch Collaboration Platform/LandingPage/div_Page Under Construction'))
+WebUI.click(findTestObject('Sprint1/LandingPage/div_Page Under Construction'))
 
 'Verify Hamburger menu'
 WebUI.click(findTestObject('Common Objects/img_HamburgerMenu'))

@@ -16,16 +16,16 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 'Set Username'
-WebUI.setText(findTestObject('Page_Merch Collaboration Platform/LoginPage/input_Login_username'), Username)
+WebUI.setText(findTestObject('Sprint1/LoginPage/input_Login_username'), Username)
 
 'Set Password'
-WebUI.setText(findTestObject('Page_Merch Collaboration Platform/LoginPage/input_Login_password'), Password)
+WebUI.setText(findTestObject('Sprint1/LoginPage/input_Login_password'), Password)
 
 'Click Login'
-WebUI.click(findTestObject('Page_Merch Collaboration Platform/LoginPage/button_Login'))
+WebUI.click(findTestObject('Sprint1/LoginPage/button_Login'))
 
 WebUI.enableSmartWait()
 
 'Verify Page Under Construction Message'
-WebUI.click(findTestObject('Page_Merch Collaboration Platform/LandingPage/div_Page Under Construction'))
+WebUI.click(findTestObject('Sprint1/LandingPage/div_Page Under Construction'))
 

@@ -26,7 +26,7 @@ WebUI.click(findTestObject('Common Objects/img_HamburgerMenu'))
 WebUI.delay(1)
 
 'Click Home menu'
-WebUI.click(findTestObject('Page_Merch Collaboration Platform/LandingPage/a_Home'))
+WebUI.click(findTestObject('Sprint1/LandingPage/a_Home'))
 
 WebUI.delay(1)
 
@@ -41,12 +41,12 @@ WebUI.click(findTestObject('Common Objects/img_HamburgerMenu'))
 WebUI.delay(1)
 
 'Click Manage List menu item'
-WebUI.click(findTestObject('Page_Merch Collaboration Platform/LandingPage/a_Manage List'))
+WebUI.click(findTestObject('Sprint1/LandingPage/a_Manage List'))
 
 WebUI.delay(1)
 
 'Verify Manage List Page Title'
-WebUI.verifyElementVisible(findTestObject('Page_Merch Collaboration Platform/LandingPage/div_Manage List'))
+WebUI.verifyElementVisible(findTestObject('Sprint1/LandingPage/div_Manage List'))
 
 WebUI.callTestCase(findTestCase('Common/NavigateToManageSeasonPage'), [:], FailureHandling.STOP_ON_FAILURE)
 
@@ -58,12 +58,12 @@ WebUI.click(findTestObject('Common Objects/img_HamburgerMenu'))
 WebUI.delay(1)
 
 'Click Logout menu'
-WebUI.click(findTestObject('Page_Merch Collaboration Platform/LandingPage/a_Logout'))
+WebUI.click(findTestObject('Sprint1/LandingPage/a_Logout'))
 
 WebUI.delay(1)
 
 'Verify Login Page'
-WebUI.verifyElementVisible(findTestObject('Object Repository/Page_Merch Collaboration Platform/LoginPage/button_Login'))
+WebUI.verifyElementVisible(findTestObject('Sprint1/LoginPage/button_Login'))
 
 WebUI.closeBrowser()
 

@@ -26,24 +26,24 @@ WebUI.verifyMatch(WebUI.getWindowTitle(), PageTitle, false, FailureHandling.STOP
 WebUI.verifyElementPresent(findTestObject('Object Repository/Common Objects/img_LogoMain'), 10)
 
 'Verify Logo 2'
-WebUI.verifyElementPresent(findTestObject('Page_Merch Collaboration Platform/LoginPage/img_Logo_divLogin'), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint1/LoginPage/img_Logo_divLogin'), 0)
 
 'Verify Username field'
-WebUI.verifyElementPresent(findTestObject('Page_Merch Collaboration Platform/LoginPage/input_Login_username'), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint1/LoginPage/input_Login_username'), 0)
 
 'Verify Username field watermark'
-WebUI.waitForElementAttributeValue(findTestObject('Page_Merch Collaboration Platform/LoginPage/input_Login_username'), 'placeholder', 
+WebUI.waitForElementAttributeValue(findTestObject('Sprint1/LoginPage/input_Login_username'), 'placeholder', 
     'Username', 0)
 
 'Verify Password field'
-WebUI.verifyElementPresent(findTestObject('Page_Merch Collaboration Platform/LoginPage/input_Login_password'), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint1/LoginPage/input_Login_password'), 0)
 
 'Verify Password field watermark'
-WebUI.waitForElementAttributeValue(findTestObject('Page_Merch Collaboration Platform/LoginPage/input_Login_password'), 'placeholder', 
+WebUI.waitForElementAttributeValue(findTestObject('Sprint1/LoginPage/input_Login_password'), 'placeholder', 
     'Password', 0)
 
 'Verify Login button '
-WebUI.verifyElementPresent(findTestObject('Page_Merch Collaboration Platform/LoginPage/button_Login'), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint1/LoginPage/button_Login'), 0)
 
 WebUI.closeBrowser()
 

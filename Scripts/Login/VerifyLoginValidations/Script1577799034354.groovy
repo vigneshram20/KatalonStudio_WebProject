@@ -19,7 +19,7 @@ import org.openqa.selenium.Keys as Keys
 WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [:], FailureHandling.STOP_ON_FAILURE)
 
 'Click Login button'
-WebUI.click(findTestObject('Page_Merch Collaboration Platform/LoginPage/button_Login'))
+WebUI.click(findTestObject('Sprint1/LoginPage/button_Login'))
 
 WebUI.delay(1)
 
@@ -27,79 +27,79 @@ WebUI.delay(1)
 WebUI.verifyMatch(WebUI.getWindowTitle(), 'Merch Collaboration Platform', false, FailureHandling.STOP_ON_FAILURE)
 
 'Verify Error Text - Username'
-WebUI.verifyElementText(findTestObject('Page_Merch Collaboration Platform/LoginPage/errorText_UsernameField_This field is required'), 
+WebUI.verifyElementText(findTestObject('Sprint1/LoginPage/errorText_UsernameField_This field is required'), 
     Field_Required_Error)
 
 'Verify Error Text - Password'
-WebUI.verifyElementText(findTestObject('Page_Merch Collaboration Platform/LoginPage/errorText_PasswordField_This field is required'), 
+WebUI.verifyElementText(findTestObject('Sprint1/LoginPage/errorText_PasswordField_This field is required'), 
     Field_Required_Error)
 
 'Enter Invalid username'
-WebUI.setText(findTestObject('Page_Merch Collaboration Platform/LoginPage/input_Login_username'), 'fsdfxcc')
+WebUI.setText(findTestObject('Sprint1/LoginPage/input_Login_username'), 'fsdfxcc')
 
 'Click Login button'
-WebUI.click(findTestObject('Page_Merch Collaboration Platform/LoginPage/button_Login'))
+WebUI.click(findTestObject('Sprint1/LoginPage/button_Login'))
 
 'Verify Error Text Not Present - Username'
-WebUI.verifyElementNotPresent(findTestObject('Page_Merch Collaboration Platform/LoginPage/errorText_UsernameField_This field is required'), 
+WebUI.verifyElementNotPresent(findTestObject('Sprint1/LoginPage/errorText_UsernameField_This field is required'), 
     0)
 
 'Verify Error Text - Password'
-WebUI.verifyElementText(findTestObject('Page_Merch Collaboration Platform/LoginPage/errorText_PasswordField_This field is required'), 
+WebUI.verifyElementText(findTestObject('Sprint1/LoginPage/errorText_PasswordField_This field is required'), 
     Field_Required_Error)
 
 'Enter Valid password'
-WebUI.setText(findTestObject('Page_Merch Collaboration Platform/LoginPage/input_This field is required_password'), Password)
+WebUI.setText(findTestObject('Sprint1/LoginPage/input_This field is required_password'), Password)
 
 'Verify Error Text Not Present - Password'
-WebUI.verifyElementNotPresent(findTestObject('Page_Merch Collaboration Platform/LoginPage/errorText_PasswordField_This field is required'), 
+WebUI.verifyElementNotPresent(findTestObject('Sprint1/LoginPage/errorText_PasswordField_This field is required'), 
     0)
 
 'Click Login button'
-WebUI.click(findTestObject('Page_Merch Collaboration Platform/LoginPage/button_Login'))
+WebUI.click(findTestObject('Sprint1/LoginPage/button_Login'))
 
 'Verify the Login page global error note'
-WebUI.verifyElementText(findTestObject('Page_Merch Collaboration Platform/LoginPage/small_Please enter a valid username password'), 
+WebUI.verifyElementText(findTestObject('Sprint1/LoginPage/small_Please enter a valid username password'), 
     Login_Error_Top_Note)
 
 'Clear Username field'
-WebUI.clearText(findTestObject('Page_Merch Collaboration Platform/LoginPage/input_Login_username'), FailureHandling.STOP_ON_FAILURE)
+WebUI.clearText(findTestObject('Sprint1/LoginPage/input_Login_username'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Page_Merch Collaboration Platform/LoginPage/input_Login_username'), ' ')
+WebUI.setText(findTestObject('Sprint1/LoginPage/input_Login_username'), ' ')
 
 'Click Login button'
-WebUI.click(findTestObject('Page_Merch Collaboration Platform/LoginPage/button_Login'))
+WebUI.click(findTestObject('Sprint1/LoginPage/button_Login'))
 
 WebUI.delay(2)
 
 'Verify Error Text - Username'
-WebUI.verifyElementText(findTestObject('Page_Merch Collaboration Platform/LoginPage/errorText_UsernameField_This field is required'), 
+WebUI.verifyElementText(findTestObject('Sprint1/LoginPage/errorText_UsernameField_This field is required'), 
     Field_Required_Error)
 
 'Enter Valid password'
-WebUI.setText(findTestObject('Page_Merch Collaboration Platform/LoginPage/input_This field is required_password'), Password)
+WebUI.setText(findTestObject('Sprint1/LoginPage/input_This field is required_password'), Password)
 
 'Click Login button'
-WebUI.click(findTestObject('Page_Merch Collaboration Platform/LoginPage/button_Login'))
+WebUI.click(findTestObject('Sprint1/LoginPage/button_Login'))
 
 'Verify Error Text - Username'
-WebUI.verifyElementText(findTestObject('Page_Merch Collaboration Platform/LoginPage/errorText_UsernameField_This field is required'), 
+WebUI.verifyElementText(findTestObject('Sprint1/LoginPage/errorText_UsernameField_This field is required'), 
     Field_Required_Error)
 
 'Provide Non Existing Username'
-WebUI.setText(findTestObject('Page_Merch Collaboration Platform/LoginPage/input_Login_username'), 'safdsdf@gmail.com')
+WebUI.setText(findTestObject('Sprint1/LoginPage/input_Login_username'), 'safdsdf@gmail.com')
 
 'Click Login Button'
-WebUI.click(findTestObject('Page_Merch Collaboration Platform/LoginPage/button_Login'))
+WebUI.click(findTestObject('Sprint1/LoginPage/button_Login'))
 
 'Enter Valid Password'
-WebUI.setText(findTestObject('Page_Merch Collaboration Platform/LoginPage/input_This field is required_password'), Password)
+WebUI.setText(findTestObject('Sprint1/LoginPage/input_This field is required_password'), Password)
 
 'Click Login button'
-WebUI.click(findTestObject('Page_Merch Collaboration Platform/LoginPage/button_Login'))
+WebUI.click(findTestObject('Sprint1/LoginPage/button_Login'))
 
 'Verify the Login page global error note'
-WebUI.verifyElementText(findTestObject('Page_Merch Collaboration Platform/LoginPage/small_Please enter a valid username password'), 
+WebUI.verifyElementText(findTestObject('Sprint1/LoginPage/small_Please enter a valid username password'), 
     Login_Error_Top_Note)
 
 WebUI.callTestCase(findTestCase('Common/ProvideValidCredentialsAndVerifyLandingPage'), [:], FailureHandling.STOP_ON_FAILURE)
