@@ -11,28 +11,28 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>7172cf30-9494-46f9-8926-c6068bb30c95</testSuiteGuid>
    <testCaseLink>
-      <guid>50d9ed09-f834-48a8-9be4-cb5608de5b8e</guid>
+      <guid>e0419b40-0fc6-4210-a84a-a343ff9f4598</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Create Season/VerifyCreateSeasonValidations</testCaseId>
+      <testCaseId>Test Cases/Common/Launch the Browser</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>3f82cff0-9cc4-4676-be8d-2d79e3e397d3</variableId>
+         <variableId>c8ee6b56-9f2f-4825-81b3-dc7d3a4041f2</variableId>
       </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>7a1efe79-333f-4e69-9fca-07f1b1f2fcc4</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>a8f14bfc-0c7b-472d-b90d-65028db8e281</variableId>
-      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>87e83533-ef25-4f14-8d84-23381be250bf</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Login/VerifyLoginSuccessfully</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>47c86de1-781d-4a18-b5b5-04863dd9ee31</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/NavigateToManageSeasonPage</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>05b3b8ac-240f-4c45-901a-c658ebaf88da</guid>

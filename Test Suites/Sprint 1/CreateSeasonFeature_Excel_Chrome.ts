@@ -11,6 +11,18 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>dd0cad8c-f135-40aa-9a25-abf44d8ce843</testSuiteGuid>
    <testCaseLink>
+      <guid>4610465f-fb65-418d-b984-279814d179a6</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/Launch the Browser</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>c8ee6b56-9f2f-4825-81b3-dc7d3a4041f2</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
       <guid>93881f89-3632-4f9c-865b-da242fed5ca9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -21,30 +33,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Common/NavigateToManageSeasonPage</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>ec46be81-fbe6-4ba9-a2f4-da18e7cd5086</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Create Season/VerifyCreateSeasonValidations</testCaseId>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>3f82cff0-9cc4-4676-be8d-2d79e3e397d3</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>7a1efe79-333f-4e69-9fca-07f1b1f2fcc4</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>a8f14bfc-0c7b-472d-b90d-65028db8e281</variableId>
-      </variableLink>
    </testCaseLink>
    <testCaseLink>
       <guid>162cbe57-ff17-485b-8acb-41ecf36f4b17</guid>

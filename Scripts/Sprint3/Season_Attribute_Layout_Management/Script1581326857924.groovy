@@ -20,6 +20,8 @@ import org.openqa.selenium.WebElement as WebElement
 import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 
+WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
+
 WebUI.callTestCase(findTestCase('Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.enableSmartWait()
@@ -29,54 +31,76 @@ WebUI.click(findTestObject('Common Objects/img_HamburgerMenu'))
 
 WebUI.delay(1)
 
+'Click Administration menu'
 WebUI.click(findTestObject('Object Repository/Sprint3/a_Administration'))
 
+'CLick Attribute Management menu'
 WebUI.click(findTestObject('Object Repository/Sprint3/a_Type  Attribute Management'))
 
 WebUI.delay(1)
 
-WebUI.click(findTestObject('Object Repository/Sprint3/div_Administration'))
+'Verify Page Header Administration'
+not_run: WebUI.click(findTestObject('Object Repository/Sprint3/div_Administration'))
 
+'Open the left Toggle'
 WebUI.click(findTestObject('Object Repository/Sprint3/img_Manage Types_sidePanel_toggleClose__1w40f'))
 
+'Click Season sub menu'
 WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/button_Add Types'), 0)
+'Verify Manage Types button'
+WebUI.verifyElementPresent(findTestObject('Sprint3/button_Manage Types'), 0)
 
+'Verify Manage Attributes button'
 WebUI.verifyElementPresent(findTestObject('Sprint3/button_Manage Attributes'), 0)
 
+'Verify Manage Layout button'
 WebUI.waitForElementPresent(findTestObject('Sprint3/button_Manage Layout'), 0)
 
 WebUI.verifyElementPresent(findTestObject('Sprint3/button_Manage Layout'), 0)
 
+'Verify Edit Mode button'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/small_Edit Mode'), 0)
 
+'Verify Edit Mode Toggle label'
 WebUI.verifyElementPresent(findTestObject('Sprint3/span_Edit Mode_toggle_btn-label'), 0)
 
+'Verify Manage Types Header'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/h3_Manage Types'), 0)
 
+'Click Manage Layout button'
 WebUI.click(findTestObject('Sprint3/button_Manage Layout'))
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/h2_Type-Season'), 0)
+'Verify Seasons page Header'
+not_run: WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/h2_Type-Season'), 0)
 
+'Verify Available Attributes caption header'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/caption_Available Attributes'), 0)
 
+'Verify Add button'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/img_General Attributes_img-icon_1'), 0)
 
+'Verify Column 1'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/span_Column 1'), 0)
 
+'Verify Column2'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/span_Column 2'), 0)
 
+'Verify Add Group button'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/div_Add Group'), 0)
 
+'Verify Save button'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/div_Save'), 0)
 
+'Verify Cancenl button'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/div_Cancel'), 0)
 
+'Click Manage Layout button'
 WebUI.click(findTestObject('Sprint3/button_Manage Layout'))
 
 WebUI.delay(2)
 
+'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 WebUI.delay(2)
@@ -87,32 +111,40 @@ List<WebElement> listOfgroups = WebUI.findWebElements(findTestObject('Sprint3/im
 
 for (WebElement element : listOfgroups) {
     Thread.sleep(250)
-
+'Click Transh Button'
     element.click()
 }
 
+'Click Save Button'
 WebUI.click(findTestObject('Object Repository/Sprint3/button_Save'))
 
 WebUI.delay(1)
 
+'Click Yes Button'
 WebUI.click(findTestObject('Object Repository/Sprint3/button_Yes'))
 
 WebUI.delay(1)
 
+'Clikc Ok button'
 WebUI.click(findTestObject('Object Repository/Sprint3/button_OK'))
 
 WebUI.delay(3)
 
+
 WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_UP))
 
+'Click Manage Layout button'
 WebUI.click(findTestObject('Sprint3/button_Manage Layout'))
 
+'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 WebUI.delay(1)
 
+'Click Add Group'
 WebUI.click(findTestObject('Sprint3/button_Add Group'))
 
+'Provide Group Name'
 WebUI.doubleClick(findTestObject('Sprint3/span_1'))
 
 WebUI.clickOffset(findTestObject('Sprint3/input'), 0, 2)
@@ -128,36 +160,53 @@ WebUI.delay(1)
 
 WebUI.sendKeys(findTestObject('Sprint3/input'), 'Calendar QA Automation')
 
+
+'Select Brand Label'
 WebUI.click(findTestObject('Object Repository/Sprint3/label_Brand'))
 
+'Select Season Label'
 WebUI.click(findTestObject('Object Repository/Sprint3/label_Season'))
 
+'Select Type Label'
 WebUI.click(findTestObject('Object Repository/Sprint3/label_Type'))
 
+'Select Year Label'
 WebUI.click(findTestObject('Object Repository/Sprint3/label_Year'))
 
+'Click Add button'
 WebUI.click(findTestObject('Sprint3/img_General Attributes_img-icon'))
 
+'Select Season Checkbox '
 WebUI.clickOffset(findTestObject('Sprint3/label_Season_checkbox_label'), 0, 2)
 
+'Select Type Checkbox'
 WebUI.clickOffset(findTestObject('Sprint3/label_Type_checkbox_label'), 0, 2)
 
+'Click Copy Attributes button'
 WebUI.click(findTestObject('Sprint3/GeneralAttributes_CopyAttributes'))
 
+'Select In Store Launch End Date checkbox'
 WebUI.click(findTestObject('Object Repository/Sprint3/label_In Store Launch End Date'))
 
+'Select In Store Launch Start Date checkbox'
 WebUI.click(findTestObject('Object Repository/Sprint3/label_In Store Launch Start Date'))
 
+'Select Internet Launch End Date checkbox'
 WebUI.click(findTestObject('Object Repository/Sprint3/label_Internet Launch End Date'))
 
+'Select Internet Launch Start Date'
 WebUI.click(findTestObject('Object Repository/Sprint3/label_Internet Launch Start Date'))
 
+'Click Add button'
 WebUI.click(findTestObject('Sprint3/img_Calendar QA Automation_img-icon'))
 
+'Select Instore Launch checkbox'
 WebUI.clickOffset(findTestObject('Sprint3/label_InStoreLaunch_checkbox_label'), 0, 2)
 
+'Select InStore Launch End Checkbox'
 WebUI.clickOffset(findTestObject('Sprint3/label_InStoreLaunchEnd_checkbox_label'), 0, 2)
 
+''
 WebUI.click(findTestObject('Sprint3/CalendarQAInfo_CopyAttributes'))
 
 /*List<WebElement> listOfaddattr = WebUI.findWebElements(findTestObject('Sprint3/img-AddAttrIcon'), 0)

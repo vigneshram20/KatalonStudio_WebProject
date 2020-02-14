@@ -17,6 +17,8 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.WebElement as WebElement
 
+WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
+
 WebUI.callTestCase(findTestCase('Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('Common/NavigateToManageSeasonPage'), [:], FailureHandling.STOP_ON_FAILURE)
@@ -31,81 +33,78 @@ WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 'Click Manage Views'
 WebUI.click(findTestObject('Common Objects/button_Manage Views'))
 
-List<WebElement> listOfSystemView = WebUI.findWebElements(findTestObject('Sprint2/Seasons/li_System View - On the Fly'), 1)
+List<WebElement> listOfSystemView = WebUI.findWebElements(findTestObject('Sprint2/Seasons/li_System View - On the Fly'), 
+    1)
 
 for (WebElement element : listOfSystemView) {
-	Thread.sleep(100)
-	
-	element.click()
-	
-	'Click Delete button'
-	WebUI.click(findTestObject('Common Objects/img_Delete'))
+    Thread.sleep(100)
+
+    element.click()
+
+    'Click Delete button'
+    WebUI.click(findTestObject('Common Objects/img_Delete'))
 }
 
-List<WebElement> listOfSystemViewCopy = WebUI.findWebElements(findTestObject('Sprint2/Seasons/li_System View - On the Fly - Copy'), 1)
+List<WebElement> listOfSystemViewCopy = WebUI.findWebElements(findTestObject('Sprint2/Seasons/li_System View - On the Fly - Copy'), 
+    1)
 
 for (WebElement element : listOfSystemViewCopy) {
-	Thread.sleep(100)
-	
-	element.click()
-	
-	'Click Delete button'
-	WebUI.click(findTestObject('Common Objects/img_Delete'))
+    Thread.sleep(100)
+
+    element.click()
+
+    'Click Delete button'
+    WebUI.click(findTestObject('Common Objects/img_Delete'))
 }
 
 List<WebElement> listOfSystemViewModified = WebUI.findWebElements(findTestObject('Sprint2/Seasons/li_System View_1'), 1)
 
 for (WebElement element : listOfSystemViewModified) {
-	Thread.sleep(100)
-	
-	element.click()
-	
-	'Click Delete button'
-	WebUI.click(findTestObject('Common Objects/img_Delete'))
+    Thread.sleep(100)
+
+    element.click()
+
+    'Click Delete button'
+    WebUI.click(findTestObject('Common Objects/img_Delete'))
 }
 
-List<WebElement> listOfSystemViewEdited = WebUI.findWebElements(findTestObject('Sprint2/Seasons/li_System View_1_Edited'), 1)
+List<WebElement> listOfSystemViewEdited = WebUI.findWebElements(findTestObject('Sprint2/Seasons/li_System View_1_Edited'), 
+    1)
 
 for (WebElement element : listOfSystemViewEdited) {
-	Thread.sleep(100)
-	
-	element.click()
-	
-	'Click Delete button'
-	WebUI.click(findTestObject('Common Objects/img_Delete'))
+    Thread.sleep(100)
+
+    element.click()
+
+    'Click Delete button'
+    WebUI.click(findTestObject('Common Objects/img_Delete'))
 }
 
 List<WebElement> SaveChangesButton = WebUI.findWebElements(findTestObject('Common Objects/button_Save Changes'), 1)
 
 for (WebElement element : SaveChangesButton) {
-	Thread.sleep(100)
-	
-	element.click()
-	
-	'Click Ok button'
-	WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
+    Thread.sleep(100)
 
+    element.click()
+
+    'Click Ok button'
+    WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 }
 
 List<WebElement> NewViewButton = WebUI.findWebElements(findTestObject('Common Objects/button_New View'), 1)
 
-if(NewViewButton.size()==0)
-{
-	
-	'Click View Selector'
-	WebUI.click(findTestObject('Common Objects/button_viewSelector'))
-	
-	'Click Manage View button'
-	WebUI.click(findTestObject('Common Objects/button_Manage Views'))
-	
-	'Click New View button'
-	WebUI.click(findTestObject('Common Objects/button_New View'))
-}
+if (NewViewButton.size() == 0) {
+    'Click View Selector'
+    WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 
-else
-{
-	'Click New View button'
-	WebUI.click(findTestObject('Common Objects/button_New View'))
+    'Click Manage View button'
+    WebUI.click(findTestObject('Common Objects/button_Manage Views'))
+
+    'Click New View button'
+    WebUI.click(findTestObject('Common Objects/button_New View'))
+} else {
+    'Click New View button'
+    WebUI.click(findTestObject('Common Objects/button_New View'))
 }
 
 'Click Continue button'
@@ -148,8 +147,7 @@ WebUI.click(findTestObject('Common Objects/img_PlusICon'))
 WebUI.click(findTestObject('Common Objects/label_Lock Column'))
 
 'Select Position 1'
-WebUI.selectOptionByValue(findTestObject('Common Objects/select_Select column position'), 
-    '1', true)
+WebUI.selectOptionByValue(findTestObject('Common Objects/select_Select column position'), '1', true)
 
 'Add Group By'
 WebUI.click(findTestObject('Common Objects/span_Add additional field to group by'))
@@ -248,12 +246,10 @@ WebUI.click(findTestObject('Common Objects/label_Created On'))
 WebUI.click(findTestObject('Common Objects/img_PlusICon'))
 
 'Select Lock Column -3'
-WebUI.selectOptionByValue(findTestObject('Common Objects/select_Select column position'), 
-    '3', true)
+WebUI.selectOptionByValue(findTestObject('Common Objects/select_Select column position'), '3', true)
 
 'Select the Division'
-WebUI.selectOptionByValue(findTestObject('Sprint2/Collections/select_NameDivisionSeasonYearTypeInternet'), 
-    'division', true)
+WebUI.selectOptionByValue(findTestObject('Sprint2/Collections/select_NameDivisionSeasonYearTypeInternet'), 'division', true)
 
 'Click Descending order'
 WebUI.click(findTestObject('Common Objects/button_Z-A'))

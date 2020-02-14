@@ -160,6 +160,8 @@ WebUI.waitForElementVisible(findTestObject('Sprint1/Manage Season Page/th_column
 WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 
     60)
 
+WebUI.delay(10)
+
 'Custom Method - identifySeasonsListColumnIndices'
 List<String> listOfColumnsOrdered = CustomKeywords.'myKeywords.customKeywords.identifySeasonsListColumnIndices'()
 

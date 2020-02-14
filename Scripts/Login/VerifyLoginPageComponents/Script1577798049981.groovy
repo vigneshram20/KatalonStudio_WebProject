@@ -16,7 +16,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [:], FailureHandling.STOP_ON_FAILURE)
+not_run: WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.delay(2)
 
@@ -32,18 +32,18 @@ WebUI.verifyElementPresent(findTestObject('Sprint1/LoginPage/img_Logo_divLogin')
 WebUI.verifyElementPresent(findTestObject('Sprint1/LoginPage/input_Login_username'), 0)
 
 'Verify Username field watermark'
-WebUI.waitForElementAttributeValue(findTestObject('Sprint1/LoginPage/input_Login_username'), 'placeholder', 
-    'Username', 0)
+WebUI.waitForElementAttributeValue(findTestObject('Sprint1/LoginPage/input_Login_username'), 'placeholder', 'Username', 
+    0)
 
 'Verify Password field'
 WebUI.verifyElementPresent(findTestObject('Sprint1/LoginPage/input_Login_password'), 0)
 
 'Verify Password field watermark'
-WebUI.waitForElementAttributeValue(findTestObject('Sprint1/LoginPage/input_Login_password'), 'placeholder', 
-    'Password', 0)
+WebUI.waitForElementAttributeValue(findTestObject('Sprint1/LoginPage/input_Login_password'), 'placeholder', 'Password', 
+    0)
 
 'Verify Login button '
 WebUI.verifyElementPresent(findTestObject('Sprint1/LoginPage/button_Login'), 0)
 
-WebUI.closeBrowser()
+not_run: WebUI.closeBrowser()
 

@@ -77,12 +77,10 @@ WebUI.verifyElementText(findTestObject('Sprint1/Create Season/errorText_YearFiel
 WebUI.click(findTestObject('Sprint1/Create Season/label_Type'))
 
 'Verify Type Field Text'
-WebUI.verifyElementAttributeValue(findTestObject('Sprint1/Create Season/input_Type_type'), 
-    'value', '', 0)
+WebUI.verifyElementAttributeValue(findTestObject('Sprint1/Create Season/input_Type_type'), 'value', '', 0)
 
 'Verify subsection Calendar Information'
-WebUI.verifyElementVisible(findTestObject('Sprint1/Create Season/subSection_title_Calendar Information'), 
-    FailureHandling.STOP_ON_FAILURE)
+WebUI.verifyElementVisible(findTestObject('Sprint1/Create Season/subSection_title_Calendar Information'), FailureHandling.STOP_ON_FAILURE)
 
 'Verify label Internet Launch Start Date'
 WebUI.click(findTestObject('Sprint1/Create Season/label_Internet Launch Start Date'))
@@ -94,8 +92,7 @@ WebUI.click(findTestObject('Sprint1/Create Season/input__internet_launch_start_d
 WebUI.click(findTestObject('Sprint1/Create Season/label_Internet Launch Start Date'))
 
 'Verify errorText Internet_Launch_Start_Date'
-WebUI.verifyElementText(findTestObject('Sprint1/Create Season/errorText_Int_Launch_Start_Date'), 
-    Field_Required_Error)
+WebUI.verifyElementText(findTestObject('Sprint1/Create Season/errorText_Int_Launch_Start_Date'), Field_Required_Error)
 
 'Click label Internet Launch End Date'
 WebUI.click(findTestObject('Sprint1/Create Season/label_Internet Launch End Date'))
@@ -107,8 +104,7 @@ WebUI.click(findTestObject('Sprint1/Create Season/input__internet_launch_end_dat
 WebUI.click(findTestObject('Sprint1/Create Season/label_Internet Launch End Date'))
 
 'Verify errorText Internet_Launch_End_Date'
-WebUI.verifyElementText(findTestObject('Sprint1/Create Season/errorText_Int_Launch_End_Date'), 
-    Field_Required_Error)
+WebUI.verifyElementText(findTestObject('Sprint1/Create Season/errorText_Int_Launch_End_Date'), Field_Required_Error)
 
 'Click Brand Field error'
 WebUI.click(findTestObject('Sprint1/Create Season/errorText_BrandField'))
@@ -123,8 +119,7 @@ WebUI.click(findTestObject('Sprint1/Create Season/input__in_store_launch_start_d
 WebUI.click(findTestObject('Sprint1/Create Season/subSection_title_General Attributes'))
 
 'Verify Error Text InStore Launch Start Date'
-WebUI.verifyElementText(findTestObject('Sprint1/Create Season/errorText_InStore_Launch_Start_Date'), 
-    Field_Required_Error)
+WebUI.verifyElementText(findTestObject('Sprint1/Create Season/errorText_InStore_Launch_Start_Date'), Field_Required_Error)
 
 'Click label In Store Launch End Date'
 WebUI.click(findTestObject('Sprint1/Create Season/label_In Store Launch End Date'))
@@ -136,8 +131,7 @@ WebUI.click(findTestObject('Sprint1/Create Season/input__in_store_launch_end_dat
 WebUI.click(findTestObject('Sprint1/Create Season/subSection_title_General Attributes'))
 
 'Verify Error Text InStore Launch End Date'
-WebUI.verifyElementText(findTestObject('Sprint1/Create Season/errorText_InStore_Launch_End_Date'), 
-    Field_Required_Error)
+WebUI.verifyElementText(findTestObject('Sprint1/Create Season/errorText_InStore_Launch_End_Date'), Field_Required_Error)
 
 'Click Create button'
 WebUI.verifyElementVisible(findTestObject('Sprint1/Create Season/button_Create'))

@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@class = 'modal-title' and (text() = 'Seasons Created Successfully' or . = 'Seasons Created Successfully')]</value>
+         <value>//*[@class = 'modal-title' and (text() = 'Successfully Created' or . = 'Successfully Created')]</value>
       </entry>
       <entry>
          <key>XPATH</key>
@@ -35,7 +35,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Seasons Created Successfully</value>
+      <value>Successfully Created</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

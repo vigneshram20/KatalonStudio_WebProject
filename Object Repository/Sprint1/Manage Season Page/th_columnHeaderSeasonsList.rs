@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//table/thead/tr/th</value>
+         <value>//div[@id='table_header']/div/div[@title]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

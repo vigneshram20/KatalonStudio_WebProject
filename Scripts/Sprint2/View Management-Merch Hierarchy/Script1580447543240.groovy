@@ -17,7 +17,7 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.WebElement as WebElement
 
-WebUI.openBrowser('')
+WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
 
@@ -48,82 +48,79 @@ WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/h5_Manage 
 'Verify text Note'
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/p_Select a view to make changes to its defi_80fece'))
 
-List<WebElement> listOfMerchView = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/Merch Hierarchy/span_Merch View'), 1)
+List<WebElement> listOfMerchView = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/Merch Hierarchy/span_Merch View'), 
+    1)
 
 for (WebElement element : listOfMerchView) {
-	Thread.sleep(100)
-	
-	element.click()
-	
-	'Click Delete button'
-	WebUI.click(findTestObject('Common Objects/img_Delete'))
+    Thread.sleep(100)
+
+    element.click()
+
+    'Click Delete button'
+    WebUI.click(findTestObject('Common Objects/img_Delete'))
 }
 
-List<WebElement> listOfMerchView_1 = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/Merch Hierarchy/span_Merch View - On the fly Save - New'), 1)
+List<WebElement> listOfMerchView_1 = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/Merch Hierarchy/span_Merch View - On the fly Save - New'), 
+    1)
 
 for (WebElement element : listOfMerchView_1) {
-	Thread.sleep(100)
-	
-	element.click()
-	
-	'Click Delete button'
-	WebUI.click(findTestObject('Common Objects/img_Delete'))
+    Thread.sleep(100)
+
+    element.click()
+
+    'Click Delete button'
+    WebUI.click(findTestObject('Common Objects/img_Delete'))
 }
 
-List<WebElement> listOfMerchView_2 = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/Merch Hierarchy/span_Merch View - On the fly Save'), 1)
+List<WebElement> listOfMerchView_2 = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/Merch Hierarchy/span_Merch View - On the fly Save'), 
+    1)
 
 for (WebElement element : listOfMerchView_2) {
-	Thread.sleep(100)
-	
-	element.click()
-	
-	'Click Delete button'
-	WebUI.click(findTestObject('Common Objects/img_Delete'))
+    Thread.sleep(100)
+
+    element.click()
+
+    'Click Delete button'
+    WebUI.click(findTestObject('Common Objects/img_Delete'))
 }
 
-List<WebElement> listOfMerchView_3 = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/Merch Hierarchy/li_Merch View - Copy'), 1)
+List<WebElement> listOfMerchView_3 = WebUI.findWebElements(findTestObject('Object Repository/Sprint2/Merch Hierarchy/li_Merch View - Copy'), 
+    1)
 
 for (WebElement element : listOfMerchView_3) {
-	Thread.sleep(100)
-	
-	element.click()
-	
-	'Click Delete button'
-	WebUI.click(findTestObject('Common Objects/img_Delete'))
-}
+    Thread.sleep(100)
 
+    element.click()
+
+    'Click Delete button'
+    WebUI.click(findTestObject('Common Objects/img_Delete'))
+}
 
 List<WebElement> SaveChangesButton = WebUI.findWebElements(findTestObject('Common Objects/button_Save Changes'), 1)
 
 for (WebElement element : SaveChangesButton) {
-	Thread.sleep(100)
-	
-	element.click()
-	
-	'Click Ok button'
-	WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
+    Thread.sleep(100)
 
+    element.click()
+
+    'Click Ok button'
+    WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 }
 
 List<WebElement> NewViewButton = WebUI.findWebElements(findTestObject('Common Objects/button_New View'), 1)
 
-if(NewViewButton.size()==0)
-{
-	
-	'Click View Selector'
-	WebUI.click(findTestObject('Common Objects/button_viewSelector'))
-	
-	'Click Manage View button'
-	WebUI.click(findTestObject('Common Objects/button_Manage Views'))
-	
-	'Click New View button'
-	WebUI.click(findTestObject('Common Objects/button_New View'))
-}
+if (NewViewButton.size() == 0) {
+    'Click View Selector'
+    WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 
-else
-{
-	'Click New View button'
-	WebUI.click(findTestObject('Common Objects/button_New View'))
+    'Click Manage View button'
+    WebUI.click(findTestObject('Common Objects/button_Manage Views'))
+
+    'Click New View button'
+    WebUI.click(findTestObject('Common Objects/button_New View'))
+} else {
+    'Click New View button'
+    WebUI.click(findTestObject('Common Objects/button_New View'))
 }
 
 'Click System View'
@@ -192,7 +189,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/h5_View Su
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/p_Merch View has been successfully created'))
 
 'Click Ok'
-			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
+WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 WebUI.delay(3)
 
@@ -275,7 +272,7 @@ WebUI.click(findTestObject('Common Objects/button_Save View'))
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/p_Merch View - Copy has been successfully created'))
 
 'Click Ok button'
-			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
+WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 WebUI.delay(3)
 
@@ -361,7 +358,7 @@ WebUI.click(findTestObject('Common Objects/button_Save View'))
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/p_Merch View - Edited has been modified suc_08bdd2'))
 
 'Click Ok button'
-			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
+WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 WebUI.delay(3)
 
@@ -409,7 +406,7 @@ WebUI.click(findTestObject('Common Objects/button_Save View'))
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/p_Merch View - On the fly Save has been mod_dfb009'))
 
 'Click OK button'
-			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
+WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 WebUI.delay(3)
 
@@ -461,7 +458,7 @@ WebUI.click(findTestObject('Common Objects/button_Save View'))
 WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/p_Merch View - On the fly Save - New has be_d6074e'))
 
 'Click OK button'
-			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
+WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 WebUI.delay(3)
 
@@ -505,7 +502,7 @@ WebUI.click(findTestObject('Object Repository/Sprint2/Merch Hierarchy/img_1_2'))
 WebUI.click(findTestObject('Common Objects/button_Save Changes'))
 
 'Click Ok button'
-			WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
+WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
 
 WebUI.closeBrowser()
 

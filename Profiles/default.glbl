@@ -41,7 +41,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Please enter a valid username/ password.'</initValue>
+      <initValue>'Please enter a valid username / password.'</initValue>
       <name>LOGIN_ERROR_TOP_NOTE</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

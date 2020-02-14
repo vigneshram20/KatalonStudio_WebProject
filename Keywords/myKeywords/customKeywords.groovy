@@ -44,10 +44,11 @@ import org.openqa.selenium.Keys as Keys
 import java.text.DateFormat as DateFormat
 import java.text.SimpleDateFormat as SimpleDateFormat
 import java.util.Date as Date
+import org.openqa.selenium.JavascriptExecutor;
 
 
 class customKeywords {
-	public static String actionsXpathSuffix ='/td[1]//span';
+	public static String actionsXpathSuffix ='//div[1]//span';
 	public static HashMap<String, String> seasonEntitiesMap;
 
 	/**
@@ -107,14 +108,21 @@ class customKeywords {
 	 */
 	@Keyword
 	def List<String> identifySeasonsListColumnIndices() {
-		Thread.sleep(1000)
+		Thread.sleep(10000)
 		WebDriver driver = DriverFactory.getWebDriver();
 		List<WebElement> listOfColumns = WebUI.findWebElements(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'),0)
+		System.out.println(listOfColumns.size())
+		System.out.println(listOfColumns.size())
 		List<String> listOfColumnNames = new ArrayList<String>();
 		for (WebElement element : listOfColumns) {
-			String elementText = element.getText();
+			JavascriptExecutor js = (JavascriptExecutor)driver;
+			js.executeScript("arguments[0].scrollIntoView()",
+					element);
+			//String elementText = element.getText();
+			String elementText = element.getAttribute("title");
+			System.out.println(elementText)
 			if(!elementText.equals("ACTIONS")) {
-				listOfColumnNames.add(element.getText());
+				listOfColumnNames.add(elementText);
 			}
 		}
 		return listOfColumnNames;
@@ -135,40 +143,50 @@ class customKeywords {
 		seasonEntitiesMap = new HashMap<String, String>()
 
 		for (String currentDivision : divisions) {
-			seasonEntitiesMap.put('NAME', (((((brand + ' ') + currentDivision) + ' ') + season) +
+			seasonEntitiesMap.put('Name', (((((brand + ' ') + currentDivision) + ' ') + season) +
 					' ') + year)
 
-			seasonEntitiesMap.put('BRAND', brand)
+			seasonEntitiesMap.put('Brand', brand)
 
-			seasonEntitiesMap.put('DIVISION', currentDivision)
+			seasonEntitiesMap.put('Division', currentDivision)
 
-			seasonEntitiesMap.put('SEASON', season)
+			seasonEntitiesMap.put('Season', season)
 
-			seasonEntitiesMap.put('YEAR', year)
+			seasonEntitiesMap.put('Year', year)
 
-			seasonEntitiesMap.put('TYPE', type)
+			seasonEntitiesMap.put('Type', type)
 
-			seasonEntitiesMap.put('INTERNET LAUNCH START DATE', int_Start_date)
+			seasonEntitiesMap.put('Internet Launch Start Date', int_Start_date)
 
-			seasonEntitiesMap.put('INTERNET LAUNCH END DATE', int_End_date)
+			seasonEntitiesMap.put('Internet Launch End Date', int_End_date)
 
-			seasonEntitiesMap.put('IN STORE LAUNCH START DATE', inStore_start_date)
+			seasonEntitiesMap.put('In Store Launch Start Date', inStore_start_date)
 
-			seasonEntitiesMap.put('IN STORE LAUNCH END DATE', inStore_end_date)
+			seasonEntitiesMap.put('In Store Launch End Date', inStore_end_date)
 
-			seasonEntitiesMap.put('CREATED BY', createdBy)
+			seasonEntitiesMap.put('Created By', createdBy)
 
-			seasonEntitiesMap.put('CREATED ON', currentDate)
+			seasonEntitiesMap.put('Created On', currentDate)
 
-			seasonEntitiesMap.put('UPDATED BY', updatedBy)
+			seasonEntitiesMap.put('Updated By', updatedBy)
 
-			seasonEntitiesMap.put('UPDATED ON', updatedOn)
+			seasonEntitiesMap.put('Updated On', updatedOn)
 
-			String columnXpathSuffix = '//tr'
+			String columnXpathSuffix = '//div'
+
+			System.out.println(seasonEntitiesMap.get("Name"));
+			System.out.println(seasonEntitiesMap.get("NAME"));
+			System.out.println("***************")
+			System.out.println();
 
 			for (int i = 0; i < seasonEntitiesMap.size(); i++) {
-				columnXpathSuffix = (((((columnXpathSuffix + '/td[') + (i + 2)) + '][.=\'') + seasonEntitiesMap.get(listOfCols.get(
-						i))) + '\']/parent::tr')
+				System.out.println(listOfCols.get(
+						i))
+				System.out.println(seasonEntitiesMap.get(listOfCols.get(
+						i)))
+				columnXpathSuffix = (((((columnXpathSuffix + '//div[') + (i + 2)) + '][.=\'') + seasonEntitiesMap.get(listOfCols.get(
+						i))) + '\']/parent::div')
+				System.out.println(columnXpathSuffix)
 			}
 
 			columnXpathSuffix = (columnXpathSuffix + actionsXpathSuffix)

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_Add Types</name>
+   <name>button_Manage Types</name>
    <tag></tag>
    <elementGuidId>207ff673-bd38-424a-b0a7-7c71853b9773</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//button[contains(@class, 'actionHeader') and (text() = 'Add Types' or . = 'Add Types')]</value>
+         <value>//button[contains(@class, 'actionHeader') and (text() = 'Manage Types' or . = 'Manage Types')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -31,7 +31,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Add Types</value>
+      <value>Manage Types</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

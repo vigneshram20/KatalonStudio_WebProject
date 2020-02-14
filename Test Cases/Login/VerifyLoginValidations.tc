@@ -26,4 +26,11 @@
       <masked>false</masked>
       <name>Password</name>
    </variable>
+   <variable>
+      <defaultValue>GlobalVariable.Username_Invalid_Error</defaultValue>
+      <description></description>
+      <id>d10359be-5bed-46c5-94f2-f4120188088d</id>
+      <masked>false</masked>
+      <name>Invalid_UN_Note</name>
+   </variable>
 </TestCaseEntity>

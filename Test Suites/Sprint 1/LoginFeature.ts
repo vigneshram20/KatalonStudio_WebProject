@@ -11,6 +11,18 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>72bf5786-c230-4cdb-b03b-3a489c3913ef</testSuiteGuid>
    <testCaseLink>
+      <guid>d66adf85-5a92-45d6-ac9d-b0026f4bc87b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/Launch the Browser</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>c8ee6b56-9f2f-4825-81b3-dc7d3a4041f2</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
       <guid>47cf2c95-e354-418f-b7a1-65aebd2e5718</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -21,12 +33,6 @@
          <value></value>
          <variableId>06b38bb7-4565-47b6-9b81-0799c1d4a7cc</variableId>
       </variableLink>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>00eadacb-bec1-4c28-8b3b-db3eec491d26</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Login/VerifyLoginSuccessfully</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>6a7f6a5d-e81e-49aa-99a3-5963e8d96d15</guid>
@@ -51,5 +57,17 @@
          <value></value>
          <variableId>9e370c50-f68d-4465-a8ad-735720bf58e4</variableId>
       </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>d10359be-5bed-46c5-94f2-f4120188088d</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>00eadacb-bec1-4c28-8b3b-db3eec491d26</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Login/VerifyLoginSuccessfully</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

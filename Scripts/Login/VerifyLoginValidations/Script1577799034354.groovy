@@ -16,7 +16,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [:], FailureHandling.STOP_ON_FAILURE)
+not_run: WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [:], FailureHandling.STOP_ON_FAILURE)
 
 'Click Login button'
 WebUI.click(findTestObject('Sprint1/LoginPage/button_Login'))
@@ -27,12 +27,10 @@ WebUI.delay(1)
 WebUI.verifyMatch(WebUI.getWindowTitle(), 'Merch Collaboration Platform', false, FailureHandling.STOP_ON_FAILURE)
 
 'Verify Error Text - Username'
-WebUI.verifyElementText(findTestObject('Sprint1/LoginPage/errorText_UsernameField_This field is required'), 
-    Field_Required_Error)
+WebUI.verifyElementText(findTestObject('Sprint1/LoginPage/errorText_UsernameField_This field is required'), Field_Required_Error)
 
 'Verify Error Text - Password'
-WebUI.verifyElementText(findTestObject('Sprint1/LoginPage/errorText_PasswordField_This field is required'), 
-    Field_Required_Error)
+WebUI.verifyElementText(findTestObject('Sprint1/LoginPage/errorText_PasswordField_This field is required'), Field_Required_Error)
 
 'Enter Invalid username'
 WebUI.setText(findTestObject('Sprint1/LoginPage/input_Login_username'), 'fsdfxcc')
@@ -41,26 +39,22 @@ WebUI.setText(findTestObject('Sprint1/LoginPage/input_Login_username'), 'fsdfxcc
 WebUI.click(findTestObject('Sprint1/LoginPage/button_Login'))
 
 'Verify Error Text Not Present - Username'
-WebUI.verifyElementNotPresent(findTestObject('Sprint1/LoginPage/errorText_UsernameField_This field is required'), 
-    0)
+WebUI.verifyElementNotPresent(findTestObject('Sprint1/LoginPage/errorText_UsernameField_This field is required'), 0)
 
 'Verify Error Text - Password'
-WebUI.verifyElementText(findTestObject('Sprint1/LoginPage/errorText_PasswordField_This field is required'), 
-    Field_Required_Error)
+WebUI.verifyElementText(findTestObject('Sprint1/LoginPage/errorText_PasswordField_This field is required'), Field_Required_Error)
 
 'Enter Valid password'
 WebUI.setText(findTestObject('Sprint1/LoginPage/input_This field is required_password'), Password)
 
-'Verify Error Text Not Present - Password'
-WebUI.verifyElementNotPresent(findTestObject('Sprint1/LoginPage/errorText_PasswordField_This field is required'), 
-    0)
-
 'Click Login button'
 WebUI.click(findTestObject('Sprint1/LoginPage/button_Login'))
 
+'Verify Error Text Not Present - Password'
+WebUI.verifyElementNotPresent(findTestObject('Sprint1/LoginPage/errorText_PasswordField_This field is required'), 0)
+
 'Verify the Login page global error note'
-WebUI.verifyElementText(findTestObject('Sprint1/LoginPage/small_Please enter a valid username password'), 
-    Login_Error_Top_Note)
+WebUI.verifyElementText(findTestObject('Sprint1/LoginPage/small_Please enter a valid username password'), Login_Error_Top_Note)
 
 'Clear Username field'
 WebUI.clearText(findTestObject('Sprint1/LoginPage/input_Login_username'), FailureHandling.STOP_ON_FAILURE)
@@ -73,8 +67,7 @@ WebUI.click(findTestObject('Sprint1/LoginPage/button_Login'))
 WebUI.delay(2)
 
 'Verify Error Text - Username'
-WebUI.verifyElementText(findTestObject('Sprint1/LoginPage/errorText_UsernameField_This field is required'), 
-    Field_Required_Error)
+WebUI.verifyElementText(findTestObject('Sprint1/LoginPage/errorText_UsernameField_This field is required'), Field_Required_Error)
 
 'Enter Valid password'
 WebUI.setText(findTestObject('Sprint1/LoginPage/input_This field is required_password'), Password)
@@ -83,8 +76,7 @@ WebUI.setText(findTestObject('Sprint1/LoginPage/input_This field is required_pas
 WebUI.click(findTestObject('Sprint1/LoginPage/button_Login'))
 
 'Verify Error Text - Username'
-WebUI.verifyElementText(findTestObject('Sprint1/LoginPage/errorText_UsernameField_This field is required'), 
-    Field_Required_Error)
+WebUI.verifyElementText(findTestObject('Sprint1/LoginPage/errorText_UsernameField_This field is required'), Field_Required_Error)
 
 'Provide Non Existing Username'
 WebUI.setText(findTestObject('Sprint1/LoginPage/input_Login_username'), 'safdsdf@gmail.com')
@@ -98,11 +90,10 @@ WebUI.setText(findTestObject('Sprint1/LoginPage/input_This field is required_pas
 'Click Login button'
 WebUI.click(findTestObject('Sprint1/LoginPage/button_Login'))
 
-'Verify the Login page global error note'
-WebUI.verifyElementText(findTestObject('Sprint1/LoginPage/small_Please enter a valid username password'), 
-    Login_Error_Top_Note)
+'Verify Error Text - Username'
+WebUI.verifyElementText(findTestObject('Sprint1/LoginPage/errorText_UsernameField_This field is required'), Invalid_UN_Note)
 
-WebUI.callTestCase(findTestCase('Common/ProvideValidCredentialsAndVerifyLandingPage'), [:], FailureHandling.STOP_ON_FAILURE)
+not_run: WebUI.callTestCase(findTestCase('Common/ProvideValidCredentialsAndVerifyLandingPage'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.closeBrowser()
+not_run: WebUI.closeBrowser()
 
