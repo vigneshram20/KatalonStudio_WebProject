@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//a[(text() = 'Collection' or . = 'Collection')]</value>
+         <value>//a[(text() = 'Collections' or . = 'Collections')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -31,7 +31,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Collection</value>
+      <value>Collections</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

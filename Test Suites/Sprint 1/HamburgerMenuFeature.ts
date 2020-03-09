@@ -14,6 +14,6 @@
       <guid>b32c5a40-c231-48cc-a8ad-e71bd432b845</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Hamburger Menu/VerifyMenuFunctionalities</testCaseId>
+      <testCaseId>Test Cases/Sprint1/Hamburger Menu/VerifyMenuFunctionalities</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

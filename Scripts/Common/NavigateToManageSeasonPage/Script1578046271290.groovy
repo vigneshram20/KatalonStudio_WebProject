@@ -33,7 +33,7 @@ WebUI.click(findTestObject('Sprint1/LandingPage/a_Library'))
 WebUI.delay(1)
 
 'Click Seasons sub menu'
-WebUI.click(findTestObject('Sprint1/LandingPage/a_Seasons'))
+WebUI.click(findTestObject('Sprint1/LandingPage/a_Season'))
 
 WebUI.delay(1)
 

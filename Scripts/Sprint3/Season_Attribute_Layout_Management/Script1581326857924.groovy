@@ -22,7 +22,7 @@ import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 
 WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.enableSmartWait()
 
@@ -40,16 +40,13 @@ WebUI.click(findTestObject('Object Repository/Sprint3/a_Type  Attribute Manageme
 WebUI.delay(1)
 
 'Verify Page Header Administration'
-not_run: WebUI.click(findTestObject('Object Repository/Sprint3/div_Administration'))
-
-'Open the left Toggle'
-WebUI.click(findTestObject('Object Repository/Sprint3/img_Manage Types_sidePanel_toggleClose__1w40f'))
+WebUI.click(findTestObject('Object Repository/Sprint3/div_Administration'))
 
 'Click Season sub menu'
 WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
 
 'Verify Manage Types button'
-WebUI.verifyElementPresent(findTestObject('Sprint3/button_Manage Types'), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint3/button_Add Subtype'), 0)
 
 'Verify Manage Attributes button'
 WebUI.verifyElementPresent(findTestObject('Sprint3/button_Manage Attributes'), 0)
@@ -65,14 +62,11 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/small_Edit 
 'Verify Edit Mode Toggle label'
 WebUI.verifyElementPresent(findTestObject('Sprint3/span_Edit Mode_toggle_btn-label'), 0)
 
-'Verify Manage Types Header'
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/h3_Manage Types'), 0)
-
 'Click Manage Layout button'
 WebUI.click(findTestObject('Sprint3/button_Manage Layout'))
 
 'Verify Seasons page Header'
-not_run: WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/h2_Type-Season'), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint3/h2-Season'), 0)
 
 'Verify Available Attributes caption header'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/caption_Available Attributes'), 0)
@@ -88,12 +82,6 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/span_Column
 
 'Verify Add Group button'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/div_Add Group'), 0)
-
-'Verify Save button'
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/div_Save'), 0)
-
-'Verify Cancenl button'
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/div_Cancel'), 0)
 
 'Click Manage Layout button'
 WebUI.click(findTestObject('Sprint3/button_Manage Layout'))
@@ -111,9 +99,16 @@ List<WebElement> listOfgroups = WebUI.findWebElements(findTestObject('Sprint3/im
 
 for (WebElement element : listOfgroups) {
     Thread.sleep(250)
-'Click Transh Button'
+
+    'Click Transh Button'
     element.click()
 }
+
+'Verify Save button'
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/div_Save'), 0)
+
+'Verify Cancenl button'
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/div_Cancel'), 0)
 
 'Click Save Button'
 WebUI.click(findTestObject('Object Repository/Sprint3/button_Save'))
@@ -129,7 +124,6 @@ WebUI.delay(1)
 WebUI.click(findTestObject('Object Repository/Sprint3/button_OK'))
 
 WebUI.delay(3)
-
 
 WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_UP))
 
@@ -159,7 +153,6 @@ WebUI.sendKeys(findTestObject('Sprint3/input'), Keys.chord(Keys.DELETE, Keys.DEL
 WebUI.delay(1)
 
 WebUI.sendKeys(findTestObject('Sprint3/input'), 'Calendar QA Automation')
-
 
 'Select Brand Label'
 WebUI.click(findTestObject('Object Repository/Sprint3/label_Brand'))
@@ -206,7 +199,6 @@ WebUI.clickOffset(findTestObject('Sprint3/label_InStoreLaunch_checkbox_label'), 
 'Select InStore Launch End Checkbox'
 WebUI.clickOffset(findTestObject('Sprint3/label_InStoreLaunchEnd_checkbox_label'), 0, 2)
 
-''
 WebUI.click(findTestObject('Sprint3/CalendarQAInfo_CopyAttributes'))
 
 /*List<WebElement> listOfaddattr = WebUI.findWebElements(findTestObject('Sprint3/img-AddAttrIcon'), 0)

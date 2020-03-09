@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://ecommercetahoe-mcp-user-interface-mcpphotonqa.services.west.nonprod.wsgc.com/'</initValue>
+      <initValue>'https://supchainplanmerch-mcp-user-interface-photonqa.services.west.nonprod.wsgc.com/'</initValue>
       <name>URL</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

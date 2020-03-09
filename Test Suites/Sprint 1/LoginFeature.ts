@@ -26,7 +26,7 @@
       <guid>47cf2c95-e354-418f-b7a1-65aebd2e5718</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Login/VerifyLoginPageComponents</testCaseId>
+      <testCaseId>Test Cases/Sprint1/Login/VerifyLoginPageComponents</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
@@ -38,7 +38,7 @@
       <guid>6a7f6a5d-e81e-49aa-99a3-5963e8d96d15</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Login/VerifyLoginValidations</testCaseId>
+      <testCaseId>Test Cases/Sprint1/Login/VerifyLoginValidations</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
@@ -68,6 +68,6 @@
       <guid>00eadacb-bec1-4c28-8b3b-db3eec491d26</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Login/VerifyLoginSuccessfully</testCaseId>
+      <testCaseId>Test Cases/Sprint1/Login/VerifyLoginSuccessfully</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

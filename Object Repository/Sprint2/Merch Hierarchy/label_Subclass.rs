@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//label[@class = 'checkbox_label' and (text() = 'Subclass' or . = 'Subclass')]</value>
+         <value>//label[@class = 'checkbox_label' and (text() = 'SubClass' or . = 'SubClass')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -38,7 +38,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Subclass</value>
+      <value>SubClass</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

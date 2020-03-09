@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>VerifyCreateSeasonValidations</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>33422afc-650f-468a-a377-e57b0c5556f4</testCaseGuid>
+   <variable>
+      <defaultValue>GlobalVariable.CREATE_SEASON_MODAL_TITLE</defaultValue>
+      <description></description>
+      <id>3f82cff0-9cc4-4676-be8d-2d79e3e397d3</id>
+      <masked>false</masked>
+      <name>Create_Season_Modal_Title</name>
+   </variable>
+   <variable>
+      <defaultValue>GlobalVariable.CREATE_SEASON_TITLE_NOTE</defaultValue>
+      <description></description>
+      <id>7a1efe79-333f-4e69-9fca-07f1b1f2fcc4</id>
+      <masked>false</masked>
+      <name>Create_Season_Title_Note</name>
+   </variable>
+   <variable>
+      <defaultValue>GlobalVariable.Field_Required_Error</defaultValue>
+      <description></description>
+      <id>a8f14bfc-0c7b-472d-b90d-65028db8e281</id>
+      <masked>false</masked>
+      <name>Field_Required_Error</name>
+   </variable>
+</TestCaseEntity>

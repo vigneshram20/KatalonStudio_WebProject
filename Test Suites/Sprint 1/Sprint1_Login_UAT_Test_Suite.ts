@@ -14,7 +14,7 @@
       <guid>faa3b73b-8696-4992-9439-b5f8a5e79841</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Login/VerifyLoginPageComponents</testCaseId>
+      <testCaseId>Test Cases/Sprint1/Login/VerifyLoginPageComponents</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
@@ -26,12 +26,12 @@
       <guid>e8cb2048-35a4-45aa-89fa-f9cefe1dd6fe</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/UAT/Sprint 1/Cucumber_LoginValidations</testCaseId>
+      <testCaseId>Test Cases/Sprint1/UAT/Sprint 1/Cucumber_LoginValidations</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>21fe994b-eec6-48ca-baee-405adcf431e5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Login/VerifyLoginSuccessfully</testCaseId>
+      <testCaseId>Test Cases/Sprint1/Login/VerifyLoginSuccessfully</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

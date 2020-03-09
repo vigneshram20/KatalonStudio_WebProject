@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//span[@class = 'group-title' and (text() = '...1' or . = '...1')]</value>
+         <value>//span[@class = 'group-title' and (text() = 'Enter name...' or . = 'Enter name...')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -31,7 +31,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>...1</value>
+      <value>Enter name...</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

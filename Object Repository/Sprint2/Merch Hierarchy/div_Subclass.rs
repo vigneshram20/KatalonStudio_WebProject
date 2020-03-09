@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//div[@title = 'Subclass']</value>
+         <value>//div[@title = 'SubClass']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -31,7 +31,7 @@
       <matchCondition>equals</matchCondition>
       <name>title</name>
       <type>Main</type>
-      <value>Subclass</value>
+      <value>SubClass</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

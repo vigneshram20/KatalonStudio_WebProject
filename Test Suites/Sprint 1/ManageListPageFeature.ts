@@ -14,6 +14,6 @@
       <guid>2fedc87f-1a76-4846-914e-958f43729592</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Manage List/VerifyLandingPageComponents</testCaseId>
+      <testCaseId>Test Cases/Sprint1/Manage List/VerifyLandingPageComponents</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

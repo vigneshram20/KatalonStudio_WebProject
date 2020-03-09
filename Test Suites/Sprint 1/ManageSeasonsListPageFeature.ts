@@ -14,7 +14,7 @@
       <guid>90fdcb1a-7da3-4268-9af3-28dfde22f9e1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Seasons List/VerifySeasonsListComponents</testCaseId>
+      <testCaseId>Test Cases/Sprint1/Seasons List/VerifySeasonsListComponents</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>

@@ -26,7 +26,7 @@
       <guid>87e83533-ef25-4f14-8d84-23381be250bf</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Login/VerifyLoginSuccessfully</testCaseId>
+      <testCaseId>Test Cases/Sprint1/Login/VerifyLoginSuccessfully</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>47c86de1-781d-4a18-b5b5-04863dd9ee31</guid>
@@ -38,7 +38,7 @@
       <guid>05b3b8ac-240f-4c45-901a-c658ebaf88da</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Create Season/Create_Update_Delete_And_VerifySeasonPositiveFlow</testCaseId>
+      <testCaseId>Test Cases/Sprint1/Create Season/Create_Update_Delete_And_VerifySeasonPositiveFlow</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
