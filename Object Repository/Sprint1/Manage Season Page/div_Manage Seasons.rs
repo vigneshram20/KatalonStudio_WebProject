@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//div[(text() = 'Manage Seasons' or . = 'Manage Seasons')]</value>
+         <value>//span[(text() = 'Manage Seasons' or . = 'Manage Seasons')]</value>
       </entry>
       <entry>
          <key>XPATH</key>
@@ -21,7 +21,7 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>div</value>
+      <value>span</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

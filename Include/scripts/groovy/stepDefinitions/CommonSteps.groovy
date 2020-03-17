@@ -56,13 +56,13 @@ class CommonSteps {
 		WebUI.maximizeWindow()
 	}
 
-	@Given("Navigate to the WSI MCP Application URL '(.*)'")
-	def Navigate_to_the_WSI_MCP_Application_URL(String name) {
+	@Given("Navigate to the WSI MCP Application")
+	def Navigate_to_the_WSI_MCP_Application_URL() {
 		'Launch the URL'
-		WebUI.navigateToUrl(name)
+		WebUI.navigateToUrl(GlobalVariable.URL)
 	}
 
-	@Then("Verify User should got navigated to WSI MCP login page titled '(.*)'")
+	@Then("Verify user got navigated to WSI MCP login page titled '(.*)'")
 	def User_should_get_navigated_to_WSI_MCP_login_page_titled(String value) {
 		WebUI.callTestCase(findTestCase('Common/Verify the Page Title'), ['pageTitleExpected':value], FailureHandling.STOP_ON_FAILURE)
 		//WebUI.verifyMatch(WebUI.getWindowTitle(), value, false, FailureHandling.STOP_ON_FAILURE)

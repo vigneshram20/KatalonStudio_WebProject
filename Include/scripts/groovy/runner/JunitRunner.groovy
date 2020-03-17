@@ -25,5 +25,4 @@ import internal.GlobalVariable
 @RunWith(Cucumber.class)
 @CucumberOptions(features="Include/features/Sprint 1/Login",glue="", plugin=["pretty","html:ReportFolder"])
 public class JunitRunner {
-	
 }

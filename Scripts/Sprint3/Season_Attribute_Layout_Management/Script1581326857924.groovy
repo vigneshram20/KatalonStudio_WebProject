@@ -42,6 +42,10 @@ WebUI.delay(1)
 'Verify Page Header Administration'
 WebUI.click(findTestObject('Object Repository/Sprint3/div_Administration'))
 
+WebUI.delay(1)
+
+WebUI.click(findTestObject('Sprint3/h3_Manage Types'))
+
 'Click Season sub menu'
 WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
 
@@ -155,7 +159,7 @@ WebUI.delay(1)
 WebUI.sendKeys(findTestObject('Sprint3/input'), 'Calendar QA Automation')
 
 'Select Brand Label'
-WebUI.click(findTestObject('Object Repository/Sprint3/label_Brand'))
+WebUI.click(findTestObject('Sprint3/label_GlobalParameterized'))
 
 'Select Season Label'
 WebUI.click(findTestObject('Object Repository/Sprint3/label_Season'))
@@ -170,7 +174,7 @@ WebUI.click(findTestObject('Object Repository/Sprint3/label_Year'))
 WebUI.click(findTestObject('Sprint3/img_General Attributes_img-icon'))
 
 'Select Season Checkbox '
-WebUI.clickOffset(findTestObject('Sprint3/label_Season_checkbox_label'), 0, 2)
+WebUI.clickOffset(findTestObject('Sprint3/label_GlobalParameterized_checkbox_label'), 0, 2)
 
 'Select Type Checkbox'
 WebUI.clickOffset(findTestObject('Sprint3/label_Type_checkbox_label'), 0, 2)

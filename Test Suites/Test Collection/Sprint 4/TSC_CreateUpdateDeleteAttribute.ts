@@ -13,7 +13,7 @@
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
-         <testSuiteEntity>Test Suites/Sprint 4/TS_CreateUpdateDeleteAttribute</testSuiteEntity>
+         <testSuiteEntity>Test Suites/Sprint 4/TS_CreateUpdateDeleteAttribute_STRING</testSuiteEntity>
       </TestSuiteRunConfiguration>
    </testSuiteRunConfigurations>
 </TestSuiteCollectionEntity>

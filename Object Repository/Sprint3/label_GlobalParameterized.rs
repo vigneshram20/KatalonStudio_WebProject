@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>label_Brand</name>
+   <name>label_GlobalParameterized</name>
    <tag></tag>
    <elementGuidId>62b2a0b1-865b-414b-aa42-586a1ee11bc1</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//label[@class = 'checkbox_label  ' and (text() = 'Brand' or . = 'Brand')]</value>
+         <value>//label[@class = 'checkbox_label  ' and (text() = '${labelName}' or . = '${labelName}')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -38,7 +38,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Brand</value>
+      <value>${labelName}</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

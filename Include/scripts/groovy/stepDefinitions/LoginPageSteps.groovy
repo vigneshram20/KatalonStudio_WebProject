@@ -80,10 +80,24 @@ public class LoginPageSteps {
 				Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
 		WebUI.setText(findTestObject('Page_Merch Collaboration Platform/LoginPage/input_Login_password'), Password)
 	}
+
+	@When("User enters Username and Password")
+	def User_Enters_UserNameAndPassword() {
+
+		System.out.println(GlobalVariable.USERNAME+"UN")
+
+		WebUI.delay(2)
+		'Set Username'
+		WebUI.setText(findTestObject('Object Repository/Sprint1/LoginPage/input_Login_username'), GlobalVariable.USERNAME)
+
+		'Set Password'
+		WebUI.setText(findTestObject('Object Repository/Sprint1/LoginPage/input_Login_password'), GlobalVariable.PASSWORD)
+	}
+
 	@And("Click Login button")
 	def Click_Login_button() {
 		'Click Login'
-		WebUI.click(findTestObject('Page_Merch Collaboration Platform/LoginPage/button_Login'))
+		WebUI.click(findTestObject('Object Repository/Sprint1/LoginPage/button_Login'))
 	}
 	@Then("Validate the invalid login error message")
 	def	Validate_the_invalid_login_error_message() {

@@ -6,12 +6,12 @@
    <elementGuidId>b3967bee-de7a-4c6f-8a86-967bd842bc24</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='root']/div/header/div/div[2]/ul/li[3]/div/ul/li/a</value>
+         <key>BASIC</key>
+         <value>//a[(text() = 'Seasons' or . = 'Seasons')]</value>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value>//a[(text() = 'Season' or . = 'Season')]</value>
+         <key>XPATH</key>
+         <value>//div[@id='root']/div/header/div/div[2]/ul/li[3]/div/ul/li/a</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -35,7 +35,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Season</value>
+      <value>Seasons</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

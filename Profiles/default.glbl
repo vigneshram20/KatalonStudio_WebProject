@@ -11,12 +11,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'admin'</initValue>
+      <initValue>'rt'</initValue>
       <name>USERNAME</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'wsi123'</initValue>
+      <initValue>'s3kar@PHo2n'</initValue>
       <name>PASSWORD</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//h3[contains(@class, 'sidePanel') and (text() = 'Manage Types' or . = 'Manage Types')]</value>
+         <value>//h3[(text() = 'Manage Types' or . = 'Manage Types')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -20,7 +20,7 @@
       <value>h3</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>contains</matchCondition>
       <name>class</name>
       <type>Main</type>

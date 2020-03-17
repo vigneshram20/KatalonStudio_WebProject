@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>label_Season_checkbox_label</name>
+   <name>label_GlobalParameterized_checkbox_label</name>
    <tag></tag>
    <elementGuidId>e451e6aa-ee06-4ee6-aae7-64aaa40b30f4</elementGuidId>
    <selectorCollection>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[text()='Season']/..//label</value>
+         <value>//div[text()='${input}']/..//label</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
