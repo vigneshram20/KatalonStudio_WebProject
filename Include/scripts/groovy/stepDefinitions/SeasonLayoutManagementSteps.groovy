@@ -152,15 +152,14 @@ public class SeasonLayoutManagementSteps {
 	def Move_attributes_existing_group(DataTable attr) {
 		List<String> list = attr.asList(String.class);
 		for(String value :list ) {
-			
+
 			if (DriverFactory.getExecutedBrowser().getName() == 'IE_DRIVER') {
 				WebUI.delay(1)
 				'Select Checkbox '
-			WebUI.scrollToElement(findTestObject('Object Repository/Sprint3/label_GlobalParameterized_checkbox_label',[('input') : value]), 0)
-			WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized_checkbox_label',[('input') : value]))
+				WebUI.scrollToElement(findTestObject('Object Repository/Sprint3/label_GlobalParameterized_checkbox_label',[('input') : value]), 0)
+				WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized_checkbox_label',[('input') : value]))
 			}
-			else
-			{
+			else {
 				'Select Checkbox '
 				WebUI.clickOffset(findTestObject('Object Repository/Sprint3/label_GlobalParameterized_checkbox_label',[('input') : value]),2,2)
 			}

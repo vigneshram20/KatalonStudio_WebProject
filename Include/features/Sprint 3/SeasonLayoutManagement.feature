@@ -9,7 +9,6 @@
 #Scenario Outline: List of steps for data-driven as an Examples and <placeholder>
 #Examples: Container for s table
 #Background: List of steps run before each of the scenarios
-
 Feature: SeasonLayoutManagement
 
   Background: Login to the WSI MCP application
@@ -44,5 +43,3 @@ Feature: SeasonLayoutManagement
       | In Store Launch Start Date |
       | In Store Launch End Date   |
     Then Save the Layout
-
-
