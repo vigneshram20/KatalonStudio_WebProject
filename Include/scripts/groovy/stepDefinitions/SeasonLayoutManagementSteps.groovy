@@ -31,6 +31,8 @@ import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 
 public class SeasonLayoutManagementSteps {
 
+	ArrayList<String> variableAsAdded;
+
 	@Then("Navigate to Manage Types hamburger menu")
 	def Navigate_to_Manage_Types_hamburger_menu() {
 		WebUI.enableSmartWait()
@@ -70,7 +72,7 @@ public class SeasonLayoutManagementSteps {
 
 	@Then("Toggle Edit Mode")
 	def Toggle_Edit_Mode() {
-		WebUI.delay(2)
+		WebUI.delay(1)
 
 		'Click Edit Mode Toggle button'
 		WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
@@ -103,8 +105,7 @@ public class SeasonLayoutManagementSteps {
 
 		'Clikc Ok button'
 		WebUI.click(findTestObject('Object Repository/Sprint3/button_OK'))
-
-		WebUI.delay(3)
+		
 
 		WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_UP))
 	}
@@ -151,8 +152,9 @@ public class SeasonLayoutManagementSteps {
 	@Then("Move attributes from Column 1 to Column 2 in existing group")
 	def Move_attributes_existing_group(DataTable attr) {
 		List<String> list = attr.asList(String.class);
+		variableAsAdded = new ArrayList<String>()
 		for(String value :list ) {
-
+			variableAsAdded.add(value)
 			if (DriverFactory.getExecutedBrowser().getName() == 'IE_DRIVER') {
 				WebUI.delay(1)
 				'Select Checkbox '
@@ -178,6 +180,7 @@ public class SeasonLayoutManagementSteps {
 	def Move_attributes_newlycreated_group(DataTable attr) {
 		List<String> list = attr.asList(String.class);
 		for(String value :list ) {
+			variableAsAdded.add(value)
 			'Select Season Checkbox '
 			WebUI.clickOffset(findTestObject('Object Repository/Sprint3/label_GlobalParameterized_checkbox_label',[('input') : value]),0,2)
 		}
@@ -187,7 +190,6 @@ public class SeasonLayoutManagementSteps {
 
 	@Then("Navigate to Manage Seasons page")
 	def Navigate_to_Manage_Seasons_page() {
-		WebUI.delay(1)
 
 		WebUI.callTestCase(findTestCase('Common/NavigateToManageSeasonPage'), [:], FailureHandling.STOP_ON_FAILURE)
 
@@ -206,12 +208,12 @@ public class SeasonLayoutManagementSteps {
 
 	@Then("Verify the attributes displayed as per the created layout")
 	def Verify_the_attributes_displayed() {
-		WebUI.verifyElementPresent(findTestObject('Sprint3/firstRowColumnVerify_CreateSeason'), 0)
+		WebUI.verifyElementPresent(findTestObject('Sprint3/firstRowColumnVerify_CreateSeason',[('input1') : 'Brand',('input2') : variableAsAdded.get(0),('header') : 'General Attributes']), 0)
 
-		WebUI.verifyElementPresent(findTestObject('Sprint3/secondRowColumnVerify_CreateSeason'), 0)
+		WebUI.verifyElementPresent(findTestObject('Sprint3/firstRowColumnVerify_CreateSeason',[('input1') : 'Year',('input2') : variableAsAdded.get(1),('header') : 'General Attributes']), 0)
 
-		WebUI.verifyElementPresent(findTestObject('Sprint3/thirdRowColumnVerify_CreateSeason'), 0)
+		WebUI.verifyElementPresent(findTestObject('Sprint3/thirdRowColumnVerify_CreateSeason',[('input1') : 'Internet Launch Start Date',('input2') : variableAsAdded.get(2),('header') : 'Calendar QA Automation']), 0)
 
-		WebUI.verifyElementPresent(findTestObject('Sprint3/fourthRowColumnVerify_CreateSeason'), 0)
+		WebUI.verifyElementPresent(findTestObject('Sprint3/thirdRowColumnVerify_CreateSeason',[('input1') : 'Internet Launch End Date',('input2') : variableAsAdded.get(3),('header') : 'Calendar QA Automation']), 0)
 	}
 }

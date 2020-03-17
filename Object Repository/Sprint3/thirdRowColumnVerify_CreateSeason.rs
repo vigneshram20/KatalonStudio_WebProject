@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//div[@class='form-field-row']//label[text()='Internet Launch Start Date']/../..//label[text()='In Store Launch Start Date']/../../../p[2])/strong[contains(text(),'Calendar QA Automation')]</value>
+         <value>(//div[@class='form-field-row']//label[text()='${input1}']/../..//label[text()='${input2}']/../../../p[2])/strong[contains(text(),'${header}')]</value>
       </entry>
       <entry>
          <key>BASIC</key>

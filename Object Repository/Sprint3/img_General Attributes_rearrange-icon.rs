@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>img_General Attributes_img-icon_1</name>
+   <name>img_General Attributes_rearrange-icon</name>
    <tag></tag>
    <elementGuidId>a400daae-4771-4db9-af7a-b5312f82ebe5</elementGuidId>
    <selectorCollection>

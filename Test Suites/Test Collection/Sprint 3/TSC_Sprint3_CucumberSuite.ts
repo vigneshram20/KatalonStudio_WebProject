@@ -33,14 +33,5 @@
          <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/Sprint 3/TS_Sprint3_Attribute_Layout Management_CucumberSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
-      <TestSuiteRunConfiguration>
-         <configuration>
-            <groupName>Web Desktop</groupName>
-            <profileName>default</profileName>
-            <runConfigurationId>IE</runConfigurationId>
-         </configuration>
-         <runEnabled>true</runEnabled>
-         <testSuiteEntity>Test Suites/Sprint 3/TS_Sprint3_Attribute_Layout Management_CucumberSuite</testSuiteEntity>
-      </TestSuiteRunConfiguration>
    </testSuiteRunConfigurations>
 </TestSuiteCollectionEntity>

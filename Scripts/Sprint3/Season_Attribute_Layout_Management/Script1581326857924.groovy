@@ -76,7 +76,7 @@ WebUI.verifyElementPresent(findTestObject('Sprint3/h2-Season'), 0)
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/caption_Available Attributes'), 0)
 
 'Verify Add button'
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/img_General Attributes_img-icon_1'), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint3/img_General Attributes_rearrange-icon'), 0)
 
 'Verify Column 1'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/span_Column 1'), 0)
@@ -233,13 +233,14 @@ WebUI.enableSmartWait()
 
 WebUI.delay(1)
 
-WebUI.verifyElementPresent(findTestObject('Sprint3/firstRowColumnVerify_CreateSeason'), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint3/firstRowColumnVerify_CreateSeason',[('input1') : 'Brand',('input2') : 'Season',('header') : 'General Attributes']), 0)
 
-WebUI.verifyElementPresent(findTestObject('Sprint3/secondRowColumnVerify_CreateSeason'), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint3/firstRowColumnVerify_CreateSeason',[('input1') : 'Year',('input2') : 'Type',('header') : 'General Attributes']), 0)
 
-WebUI.verifyElementPresent(findTestObject('Sprint3/thirdRowColumnVerify_CreateSeason'), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint3/thirdRowColumnVerify_CreateSeason',[('input1') : 'Internet Launch Start Date',('input2') : 'In Store Launch Start Date',('header') : 'Calendar QA Automation']), 0)
 
-WebUI.verifyElementPresent(findTestObject('Sprint3/fourthRowColumnVerify_CreateSeason'), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint3/thirdRowColumnVerify_CreateSeason',[('input1') : 'Internet Launch End Date',('input2') : 'In Store Launch End Date',('header') : 'Calendar QA Automation']), 0)
+
 
 'Click Create button'
 WebUI.verifyElementVisible(findTestObject('Sprint1/Create Season/button_Create'))

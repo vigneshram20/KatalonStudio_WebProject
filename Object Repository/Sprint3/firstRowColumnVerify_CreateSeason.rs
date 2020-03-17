@@ -6,12 +6,12 @@
    <elementGuidId>be172600-c0a3-488e-b292-9a9a4702bb00</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//*[@type = 'text' and @placeholder = 'MM/DD/YYYY']</value>
+         <key>XPATH</key>
+         <value>(//div[@class='form-field-row']//label[text()='${input1}']/../..//label[text()='${input2}']/../../../p[1])/strong[text()='${header}']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//div[@class='form-field-row']//label[text()='Brand']/../..//label[text()='Season']/../../../p[1])/strong[text()='General Attributes']</value>
+         <key>BASIC</key>
+         <value>//*[@type = 'text' and @placeholder = 'MM/DD/YYYY']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -11,13 +11,14 @@
 #Background: List of steps run before each of the scenarios
 Feature: SeasonLayoutManagement
 
-  Background: Login to the WSI MCP application
+@Login
+  Scenario: Login to the WSI MCP application
     Given Launch the Browser
     Then Navigate to the WSI MCP Application
     Then Verify user got navigated to WSI MCP login page titled 'Merch Collaboration Platform'
     When User enters Username and Password
     And Click Login button
-
+@Delete
   Scenario: Delete already existing layout configurations
     Then Navigate to Manage Types hamburger menu
     Then Click Season submenu item
@@ -25,11 +26,8 @@ Feature: SeasonLayoutManagement
     Then Toggle Edit Mode
     Then Remove all existing attribute groups
     Then Save the Layout
-
-  Scenario: Create a new Layout for Season
-    Then Navigate to Manage Types hamburger menu
-    Then Click Season submenu item
-    Then Click Manage Layout button
+@Create @Verify
+  Scenario: Create and verify new Layout for Season
     Then Toggle Edit Mode
     Then Add a new group
     Then Select available attributes
@@ -51,8 +49,6 @@ Feature: SeasonLayoutManagement
       | In Store Launch Start Date |
       | In Store Launch End Date   |
     Then Save the Layout
-
-  Scenario: Verify the created layout in Season page
     Then Navigate to Manage Seasons page
     Then Click Create New Season button
     Then Verify the attributes displayed as per the created layout
