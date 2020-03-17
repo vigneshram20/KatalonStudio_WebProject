@@ -18,6 +18,14 @@ Feature: SeasonLayoutManagement
     When User enters Username and Password
     And Click Login button
 
+  Scenario: Delete already existing layout configurations
+    Then Navigate to Manage Types hamburger menu
+    Then Click Season submenu item
+    Then Click Manage Layout button
+    Then Toggle Edit Mode
+    Then Remove all existing attribute groups
+    Then Save the Layout
+
   Scenario: Create a new Layout for Season
     Then Navigate to Manage Types hamburger menu
     Then Click Season submenu item
@@ -43,3 +51,10 @@ Feature: SeasonLayoutManagement
       | In Store Launch Start Date |
       | In Store Launch End Date   |
     Then Save the Layout
+
+
+  Scenario: Verify the created layout in Season page
+    Then Navigate to Manage Seasons page
+    Then Click Create New Season button
+    Then Verify the attributes displayed as per the created layout
+    Then Quit the browser
