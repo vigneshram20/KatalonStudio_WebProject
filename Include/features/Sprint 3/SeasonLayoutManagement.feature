@@ -52,7 +52,6 @@ Feature: SeasonLayoutManagement
       | In Store Launch End Date   |
     Then Save the Layout
 
-
   Scenario: Verify the created layout in Season page
     Then Navigate to Manage Seasons page
     Then Click Create New Season button
