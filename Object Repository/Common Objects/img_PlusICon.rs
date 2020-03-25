@@ -6,12 +6,12 @@
    <elementGuidId>78ac62d0-9624-4102-ae95-92366e37b6c6</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//img[starts-with(@src, 'data:image/png')]</value>
+         <key>XPATH</key>
+         <value>(//button[@title='Move to Right'])[2]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//img[@src=&quot;/static/media/group.0adc34d2.svg&quot;]</value>
+         <key>BASIC</key>
+         <value>//img[starts-with(@src, 'data:image/png')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

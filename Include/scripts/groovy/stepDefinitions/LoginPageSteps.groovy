@@ -94,11 +94,33 @@ public class LoginPageSteps {
 		WebUI.setText(findTestObject('Object Repository/Sprint1/LoginPage/input_Login_password'), GlobalVariable.PASSWORD)
 	}
 
-	@And("Click Login button")
+	@And("Clicks login button")
 	def Click_Login_button() {
+		WebUI.delay(1)
 		'Click Login'
 		WebUI.click(findTestObject('Object Repository/Sprint1/LoginPage/button_Login'))
+		WebUI.delay(1)
 	}
+	
+	@And("Verifies user navigation to the homepage")
+	def User_navigates_to_the_homepage()
+	{
+		WebUI.enableSmartWait()
+		
+		'Verify Page Under Construction Message'
+		WebUI.click(findTestObject('Sprint1/LandingPage/div_Page Under Construction'))
+		
+	}
+	
+	@And("WSI MCP application is launched and logged in")
+	def app_Launched_or_not()
+	{
+		WebUI.enableSmartWait()
+		
+		'Verify Page Under Construction Message'
+		WebUI.click(findTestObject('Sprint1/LandingPage/div_Page Under Construction'))
+	}
+	
 	@Then("Validate the invalid login error message")
 	def	Validate_the_invalid_login_error_message() {
 		if( username.isEmpty() && password.isEmpty()) {

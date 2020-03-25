@@ -28,11 +28,13 @@ WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
 'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
+WebUI.delay(1)
+
 'Click Add icon -Attributes'
 WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
 
 'Verify Page Header'
-not_run: WebUI.click(findTestObject('Object Repository/Sprint4/h2_Season - Create New Attribute'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/h2_Season - Create New Attribute'), 0)
 
 'Verify Label Data Type'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_Data Type'), 10)
@@ -279,15 +281,15 @@ if (DataType.equals('STRING')) {
                 , ('input') : EditableOnUpdate]), 0)
 
     'Verify Mass Changeable radio'
-    not_run: WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'massChangeable'
+    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'massChangeable'
                 , ('input') : MassChangeable]), 0)
 
     'Verify Table Editable radio'
-    not_run: WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'tableEditable'
+    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'tableEditable'
                 , ('input') : TableEditable]), 0)
 
     'Verify Table Wrappable radio'
-    not_run: WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'tableWrappable'
+    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'tableWrappable'
                 , ('input') : TableWrappable]), 0)
 
     'Verify Table Min Wrap Width'
@@ -299,14 +301,14 @@ if (DataType.equals('STRING')) {
         0)
 
     'Verify Required radio'
-    not_run: WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'required'
+    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'required'
                 , ('input') : Required]), 0)
 
     'Verify Default Value '
     WebUI.verifyElementAttributeValue(findTestObject('Sprint4/input_Default Value'), 'value', DefaultValue, 0)
 
     'Verify Unique radio'
-    not_run: WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'unique'
+    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'unique'
                 , ('input') : Unique]), 0)
 
     'Verify Text Box Width'
@@ -427,3 +429,4 @@ if (DataType.equals('STRING')) {
     'Click OK button'
     WebUI.click(findTestObject('Object Repository/Sprint4/button_OK'))
 }
+

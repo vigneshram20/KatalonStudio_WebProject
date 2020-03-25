@@ -11,45 +11,53 @@
 #Background: List of steps run before each of the scenarios
 Feature: SeasonLayoutManagement
 
-@Login
-  Scenario: Login to the WSI MCP application
-    Given Launch the Browser
-    Then Navigate to the WSI MCP Application
-    Then Verify user got navigated to WSI MCP login page titled 'Merch Collaboration Platform'
+  Background: User logs in to the WSI MCP application
+    Given Browser is launched
+    When User navigates to the WSI MCP Application
+    Then Verifies the WSI MCP login page titled 'Merch Collaboration Platform'
     When User enters Username and Password
-    And Click Login button
+    And Clicks login button
+    Then Verifies user navigation to the homepage
 @Delete
-  Scenario: Delete already existing layout configurations
-    Then Navigate to Manage Types hamburger menu
-    Then Click Season submenu item
-    Then Click Manage Layout button
-    Then Toggle Edit Mode
-    Then Remove all existing attribute groups
-    Then Save the Layout
+  Scenario: UAT_TC_009_User deletes already existing layout configurations
+  	Given WSI MCP application is launched and logged in
+    When User navigates to Manage Types hamburger menu
+    And Click Season submenu item
+    And Click Manage Layout button
+    And Toggle Edit Mode
+    Then Verify all the attributes are enabled for edit
+    When User removes all existing attribute groups
+    Then Verifies all attribute groups are removed or not
+    And Save the Layout
 @Create @Verify
-  Scenario: Create and verify new Layout for Season
-    Then Toggle Edit Mode
-    Then Add a new group
-    Then Select available attributes
+  Scenario: UAT_TC_001-020_User creates and verify new layout for Season
+    Given WSI MCP application is launched and logged in
+    When User navigates to Manage Types hamburger menu
+    And Click Season submenu item
+    And Click Manage Layout button
+    And Toggle Edit Mode
+    Then Verify all the attributes are enabled for edit
+    Then User adds a new group
+    When Selects available attributes
       | Brand  |
       | Season |
       | Type   |
       | Year   |
-    Then Click Add button from existing group
-    Then Move attributes from Column 1 to Column 2 in existing group
+    And Click Add button from existing group
+    And Moves attributes from Column 1 to Column 2 in existing group
       | Season |
       | Type   |
-    Then Select available attributes
+    And Selects available attributes
       | In Store Launch Start Date |
       | In Store Launch End Date   |
       | Internet Launch Start Date |
       | Internet Launch End Date   |
-    Then Click Add button from newly created group
-    Then Move attributes from Column 1 to Column 2 in newly created group
+    And Click Add button from newly created group
+    And Move attributes from Column 1 to Column 2 in newly created group
       | In Store Launch Start Date |
       | In Store Launch End Date   |
     Then Save the Layout
-    Then Navigate to Manage Seasons page
-    Then Click Create New Season button
+    And Navigate to Manage Seasons page
+    And Click Create New Season button
     Then Verify the attributes displayed as per the created layout
-    Then Quit the browser
+    And Logs out the application

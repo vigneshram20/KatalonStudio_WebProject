@@ -159,49 +159,51 @@ WebUI.delay(1)
 WebUI.sendKeys(findTestObject('Sprint3/input'), 'Calendar QA Automation')
 
 'Select Brand Label'
-WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized',[('labelName') : 'Brand']))
+WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Brand']))
 
 'Select Season Label'
-WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized',[('labelName') : 'Season']))
+WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Season']))
 
 'Select Type Label'
-WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized',[('labelName') : 'Type']))
+WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Type']))
 
 'Select Year Label'
-WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized',[('labelName') : 'Year']))
+WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Year']))
 
 'Click Add button'
 WebUI.click(findTestObject('Sprint3/img_General Attributes_img-icon'))
 
 'Select Season Checkbox '
-WebUI.clickOffset(findTestObject('Sprint3/label_GlobalParameterized_checkbox_label',[('input') : 'Season']),0,2)
+WebUI.clickOffset(findTestObject('Sprint3/label_GlobalParameterized_checkbox_label', [('input') : 'Season']), 0, 2)
 
 'Select Type Checkbox'
-WebUI.clickOffset(findTestObject('Sprint3/label_GlobalParameterized_checkbox_label',[('input') : 'Type']),0,2)
+WebUI.clickOffset(findTestObject('Sprint3/label_GlobalParameterized_checkbox_label', [('input') : 'Type']), 0, 2)
 
 'Click Copy Attributes button'
 WebUI.click(findTestObject('Sprint3/GeneralAttributes_CopyAttributes'))
 
 'Select In Store Launch End Date checkbox'
-WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized',[('labelName') : 'In Store Launch Start Date']))
+WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'In Store Launch Start Date']))
 
 'Select In Store Launch Start Date checkbox'
-WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized',[('labelName') : 'In Store Launch End Date']))
+WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'In Store Launch End Date']))
 
 'Select Internet Launch End Date checkbox'
-WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized',[('labelName') : 'Internet Launch Start Date']))
+WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Internet Launch Start Date']))
 
 'Select Internet Launch Start Date'
-WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized',[('labelName') : 'Internet Launch End Date']))
+WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Internet Launch End Date']))
 
 'Click Add button'
 WebUI.click(findTestObject('Sprint3/img_Calendar QA Automation_img-icon'))
 
 'Select Instore Launch checkbox'
-WebUI.clickOffset(findTestObject('Sprint3/label_GlobalParameterized_checkbox_label',[('input') : 'In Store Launch Start Date']),0,2)
+WebUI.clickOffset(findTestObject('Sprint3/label_GlobalParameterized_checkbox_label', [('input') : 'In Store Launch Start Date']), 
+    0, 2)
 
 'Select InStore Launch End Checkbox'
-WebUI.clickOffset(findTestObject('Sprint3/label_GlobalParameterized_checkbox_label',[('input') : 'In Store Launch End Date']),0,2)
+WebUI.clickOffset(findTestObject('Sprint3/label_GlobalParameterized_checkbox_label', [('input') : 'In Store Launch End Date']), 
+    0, 2)
 
 WebUI.click(findTestObject('Sprint3/CalendarQAInfo_CopyAttributes'))
 
@@ -233,14 +235,17 @@ WebUI.enableSmartWait()
 
 WebUI.delay(1)
 
-WebUI.verifyElementPresent(findTestObject('Sprint3/firstRowColumnVerify_CreateSeason',[('input1') : 'Brand',('input2') : 'Season',('header') : 'General Attributes']), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint3/firstRowColumnVerify_CreateSeason', [('input1') : 'Brand', ('input2') : 'Season'
+            , ('header') : 'General Attributes']), 0)
 
-WebUI.verifyElementPresent(findTestObject('Sprint3/firstRowColumnVerify_CreateSeason',[('input1') : 'Year',('input2') : 'Type',('header') : 'General Attributes']), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint3/firstRowColumnVerify_CreateSeason', [('input1') : 'Year', ('input2') : 'Type'
+            , ('header') : 'General Attributes']), 0)
 
-WebUI.verifyElementPresent(findTestObject('Sprint3/thirdRowColumnVerify_CreateSeason',[('input1') : 'Internet Launch Start Date',('input2') : 'In Store Launch Start Date',('header') : 'Calendar QA Automation']), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint3/thirdRowColumnVerify_CreateSeason', [('input1') : 'Internet Launch Start Date'
+            , ('input2') : 'In Store Launch Start Date', ('header') : 'Calendar QA Automation']), 0)
 
-WebUI.verifyElementPresent(findTestObject('Sprint3/thirdRowColumnVerify_CreateSeason',[('input1') : 'Internet Launch End Date',('input2') : 'In Store Launch End Date',('header') : 'Calendar QA Automation']), 0)
-
+WebUI.verifyElementPresent(findTestObject('Sprint3/thirdRowColumnVerify_CreateSeason', [('input1') : 'Internet Launch End Date'
+            , ('input2') : 'In Store Launch End Date', ('header') : 'Calendar QA Automation']), 0)
 
 'Click Create button'
 WebUI.verifyElementVisible(findTestObject('Sprint1/Create Season/button_Create'))
@@ -248,5 +253,4 @@ WebUI.verifyElementVisible(findTestObject('Sprint1/Create Season/button_Create')
 'Verify Cancel button'
 WebUI.click(findTestObject('Object Repository/Common Objects/a_Cancel'))
 
-WebUI.closeBrowser()
 

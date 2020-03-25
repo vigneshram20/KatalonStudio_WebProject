@@ -33,7 +33,7 @@ public class SeasonLayoutManagementSteps {
 
 	ArrayList<String> variableAsAdded;
 
-	@Then("Navigate to Manage Types hamburger menu")
+	@Then("User navigates to Manage Types hamburger menu")
 	def Navigate_to_Manage_Types_hamburger_menu() {
 		WebUI.enableSmartWait()
 
@@ -78,7 +78,7 @@ public class SeasonLayoutManagementSteps {
 		WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 	}
 
-	@Then("Remove all existing attribute groups")
+	@Then("User removes all existing attribute groups")
 	def Remove_all_existing_attribute_groups() {
 		WebDriver driver = DriverFactory.getWebDriver()
 
@@ -87,10 +87,17 @@ public class SeasonLayoutManagementSteps {
 		for (WebElement element : listOfgroups) {
 			Thread.sleep(250)
 
-			'Click Transh Button'
+			'Click Trash Button'
 			element.click()
 		}
 	}
+	
+	@And("Verifies all attribute groups are removed or not")
+	def verify_all_are_removed_or_not()
+	{
+		WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/div_Season_error_message'), 0)
+	}
+	
 	@Then("Save the Layout")
 	def Save_the_Layout() {
 		'Click Save Button'
@@ -105,12 +112,12 @@ public class SeasonLayoutManagementSteps {
 
 		'Clikc Ok button'
 		WebUI.click(findTestObject('Object Repository/Sprint3/button_OK'))
-		
+
 
 		WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_UP))
 	}
 
-	@Then("Add a new group")
+	@Then("User adds a new group")
 	def Add_a_new_group() {
 		'Click Add Group'
 		WebUI.click(findTestObject('Sprint3/button_Add Group'))
@@ -132,7 +139,7 @@ public class SeasonLayoutManagementSteps {
 		WebUI.sendKeys(findTestObject('Sprint3/input'), 'Calendar QA Automation')
 	}
 
-	@Then("Select available attributes")
+	@Then("Selects available attributes")
 	def Select_available_attributes(DataTable attr) {
 		List<String> list = attr.asList(String.class);
 		for(String value :list ) {
@@ -140,6 +147,13 @@ public class SeasonLayoutManagementSteps {
 			'Select Brand Label'
 			WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized',[('labelName') : value]))
 		}
+	}
+	
+	@Then("Verify all the attributes are enabled for edit")
+	def verify_all_attributes_are_enabled()
+	{
+		WebDriver driver = DriverFactory.getWebDriver()
+		WebUI.verifyElementNotPresent(findTestObject('Object Repository/Sprint3/label_GlobalParameterized_allLabelsList'), 0)
 	}
 
 	@Then("Click Add button from existing group")
@@ -149,7 +163,7 @@ public class SeasonLayoutManagementSteps {
 	}
 
 
-	@Then("Move attributes from Column 1 to Column 2 in existing group")
+	@Then("Moves attributes from Column 1 to Column 2 in existing group")
 	def Move_attributes_existing_group(DataTable attr) {
 		List<String> list = attr.asList(String.class);
 		variableAsAdded = new ArrayList<String>()

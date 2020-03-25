@@ -32,7 +32,7 @@ WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-
 WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
 
 'Verify Page Header'
-not_run: WebUI.click(findTestObject('Object Repository/Sprint4/h2_Season - Create New Attribute'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/h2_Season - Create New Attribute'), 0)
 
 'Verify Label Data Type'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_Data Type'), 10)
@@ -45,7 +45,6 @@ WebUI.selectOptionByValue(findTestObject('Sprint4/select_DataType'), DataType, t
 
 'Select AttributeType'
 WebUI.selectOptionByValue(findTestObject('Sprint4/select_AttributeType'), AttributeType, false)
-
 
 if (((DataType.equals('DATE_TIME') || DataType.equals('INTEGER_NUMBER')) || DataType.equals('REAL_NUMBER')) || DataType.equals(
     'BOOLEAN')) {
@@ -245,7 +244,7 @@ if (((DataType.equals('DATE_TIME') || DataType.equals('INTEGER_NUMBER')) || Data
 
     WebUI.verifyOptionSelectedByValue(findTestObject('Sprint4/select_AttributeType'), AttributeType, false, 0)
 
-     /*'Verify Internal Name Text'
+    'Verify Internal Name Text'
     WebUI.verifyElementAttributeValue(findTestObject('Sprint4/input_InternalName'), 'value', InternalName, 0)
 
     'Verify Display Name Text'
@@ -275,15 +274,15 @@ if (((DataType.equals('DATE_TIME') || DataType.equals('INTEGER_NUMBER')) || Data
                 , ('input') : EditableOnUpdate]), 0)
 
     'Verify Mass Changeable radio'
-    not_run: WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'massChangeable'
+    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'massChangeable'
                 , ('input') : MassChangeable]), 0)
 
     'Verify Table Editable radio'
-    not_run: WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'tableEditable'
+    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'tableEditable'
                 , ('input') : TableEditable]), 0)
 
     'Verify Table Wrappable radio'
-    not_run: WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'tableWrappable'
+    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'tableWrappable'
                 , ('input') : TableWrappable]), 0)
 
     'Verify Table Min Wrap Width'
@@ -295,7 +294,7 @@ if (((DataType.equals('DATE_TIME') || DataType.equals('INTEGER_NUMBER')) || Data
         0)
 
     'Verify Required radio'
-    not_run: WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'required'
+    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'required'
                 , ('input') : Required]), 0)
 
     if (AttributeType.equals('DATE')) {
@@ -343,11 +342,10 @@ if (((DataType.equals('DATE_TIME') || DataType.equals('INTEGER_NUMBER')) || Data
 
         if (AttributeType.equals('CURRENCY')) {
             'Verify Selected Currency Symbol'
-            WebUI.verifyElementPresent(findTestObject('Sprint4/li_ItemSelected', [('Symbol') : CurrencySymbol]), 
-                0)
+            WebUI.verifyElementPresent(findTestObject('Sprint4/li_ItemSelected', [('Symbol') : CurrencySymbol]), 0)
         }
     }
-    */
+    
     'Verify Label Database Column'
     System.out.println('The Database Column is ' + WebUI.getAttribute(findTestObject('Sprint4/input_Database Column'), 'value'))
 
@@ -445,6 +443,5 @@ if (((DataType.equals('DATE_TIME') || DataType.equals('INTEGER_NUMBER')) || Data
 
     'Click OK button'
     WebUI.click(findTestObject('Object Repository/Sprint4/button_OK'))
-	
-	
 }
+

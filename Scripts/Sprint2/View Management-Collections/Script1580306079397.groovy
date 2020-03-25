@@ -117,6 +117,9 @@ if (NewViewButton.size() == 0) {
     WebUI.click(findTestObject('Common Objects/button_New View'))
 }
 
+'Click SystemView'
+WebUI.click(findTestObject('Sprint2/Seasons/span_System View_radio'))
+
 'Click Continue'
 WebUI.click(findTestObject('Common Objects/button_Continue'))
 

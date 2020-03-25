@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>h2_Season - Create New Attribute</name>
+   <name>div_Season_error_message</name>
    <tag></tag>
-   <elementGuidId>2ddf274f-603c-43aa-8bfa-c41ca30ec7ca</elementGuidId>
+   <elementGuidId>3153bf4c-f2e3-44a3-b35b-9bfd124ec68a</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//h2[(text()= '- ' and text() = 'Create New Attribute')]//span[text()='Season']</value>
+         <key>BASIC</key>
+         <value>//h3[(text() = 'Manage Types' or . = 'Manage Types')]</value>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value>//h2[(text() = 'Season- Create New Attribute ' or . = 'Season- Create New Attribute ')]</value>
+         <key>XPATH</key>
+         <value>//div[@class='admin_season_error']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,62 +21,69 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>h2</value>
+      <value>h3</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
+      <matchCondition>contains</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>&quot;mt-4&quot; + manageLibrary_create_season_heading__3LNaU</value>
+      <value>sidePanel</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Season- Create New Attribute </value>
+      <value>Manage Types</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;root&quot;)/div[1]/div[@class=&quot;manageLibrary_manage_library_container__wTwBZ mt-50&quot;]/div[@class=&quot;manageLibrary_content_section__3Wmoy&quot;]/h2[@class=&quot;&quot;mt-4&quot; + manageLibrary_create_season_heading__3LNaU&quot;]</value>
+      <value>id(&quot;root&quot;)/div[1]/div[@class=&quot;manageLibrary_manage_library_container__wTwBZ&quot;]/div[@class=&quot;sidePanel_side_panel__XaMFA&quot;]/div[@class=&quot;sidePanel_side_panel_header__1WlIF&quot;]/h3[@class=&quot;sidePanel_title__1k87r&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='root']/div/div/div[4]/h2</value>
+      <value>//div[@id='root']/div/div/div/div/h3</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Edit Mode'])[1]/following::h2[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Administration'])[1]/following::h3[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Manage Layout'])[1]/following::h2[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Trading Partner'])[1]/preceding::h3[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>//*/text()[normalize-space(.)='-']/parent::*</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Agent'])[1]/preceding::h3[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Manage Types']/parent::*</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//h2</value>
+      <value>//h3</value>
    </webElementXpaths>
 </WebElementEntity>

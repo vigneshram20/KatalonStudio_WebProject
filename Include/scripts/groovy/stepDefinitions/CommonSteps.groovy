@@ -48,7 +48,7 @@ class CommonSteps {
 	/**
 	 * 
 	 */
-	@Given("Launch the Browser")
+	@Given("Browser is launched")
 	def Launch_the_Browser() {
 		'Launch the Browser'
 		WebUI.openBrowser('')
@@ -56,19 +56,19 @@ class CommonSteps {
 		WebUI.maximizeWindow()
 	}
 
-	@Given("Navigate to the WSI MCP Application")
+	@Given("User navigates to the WSI MCP Application")
 	def Navigate_to_the_WSI_MCP_Application_URL() {
 		'Launch the URL'
 		WebUI.navigateToUrl(GlobalVariable.URL)
 	}
 
-	@Then("Verify user got navigated to WSI MCP login page titled '(.*)'")
+	@Then("Verifies the WSI MCP login page titled '(.*)'")
 	def User_should_get_navigated_to_WSI_MCP_login_page_titled(String value) {
 		WebUI.callTestCase(findTestCase('Common/Verify the Page Title'), ['pageTitleExpected':value], FailureHandling.STOP_ON_FAILURE)
 		//WebUI.verifyMatch(WebUI.getWindowTitle(), value, false, FailureHandling.STOP_ON_FAILURE)
 	}
 
-	@Then("Quit the browser")
+	@Then("Logs out the application")
 	def Quit_the_browser() {
 		WebUI.callTestCase(findTestCase('Common/CloseBrowser'), [:], FailureHandling.STOP_ON_FAILURE)
 	}

@@ -32,7 +32,7 @@ WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-
 WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
 
 'Verify Page Header'
-not_run: WebUI.click(findTestObject('Object Repository/Sprint4/h2_Season - Create New Attribute'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/h2_Season - Create New Attribute'), 0)
 
 'Verify Label Data Type'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_Data Type'), 10)
@@ -45,7 +45,6 @@ WebUI.selectOptionByValue(findTestObject('Sprint4/select_DataType'), DataType, t
 
 'Select AttributeType'
 WebUI.selectOptionByValue(findTestObject('Sprint4/select_AttributeType'), AttributeType, false)
-
 
 if (AttributeType.equals('REFERENCE')) {
     //Verification
@@ -100,7 +99,14 @@ if (AttributeType.equals('REFERENCE')) {
 
     'Provide Other Side Entity'
     WebUI.setText(findTestObject('Object Repository/Sprint4/input_Other Side Entity'), OtherSideEntity)
-
+	
+	'Provide Reference Entity'
+	/////////////////////////////////////////
+	
+	
+	'Provide Reference Attribute'
+///////////////////////////
+	
     'Click Create Button'
     WebUI.click(findTestObject('Object Repository/Sprint4/button_Create'))
 
@@ -197,15 +203,15 @@ if (AttributeType.equals('REFERENCE')) {
                 , ('input') : EditableOnUpdate]), 0)
 
     'Verify Mass Changeable radio'
-    not_run: WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'massChangeable'
+    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'massChangeable'
                 , ('input') : MassChangeable]), 0)
 
     'Verify Table Editable radio'
-    not_run: WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'tableEditable'
+    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'tableEditable'
                 , ('input') : TableEditable]), 0)
 
     'Verify Table Wrappable radio'
-    not_run: WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'tableWrappable'
+    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'tableWrappable'
                 , ('input') : TableWrappable]), 0)
 
     'Verify Table Min Wrap Width'
@@ -213,7 +219,7 @@ if (AttributeType.equals('REFERENCE')) {
         'value', TableMinWrapWidth, 0)
 
     'Verify Required radio'
-    not_run: WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'required'
+    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'required'
                 , ('input') : Required]), 0)
 
     'Verify Other Side Attribute'
