@@ -15,6 +15,11 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords
+import org.openqa.selenium.JavascriptExecutor;
+import com.kms.katalon.core.webui.driver.DriverFactory
+import org.openqa.selenium.WebElement
+import org.openqa.selenium.WebDriver
 
 WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
 
@@ -28,8 +33,12 @@ WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
 'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
+WebUI.delay(1)
+
 'Click Add icon -Attributes'
 WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
+
+WebUI.delay(1)
 
 'Verify Page Header'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/h2_Season - Create New Attribute'), 0)
@@ -41,20 +50,20 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_Data 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_Attribute Type'), 10)
 
 'Select DataType\t'
-WebUI.selectOptionByValue(findTestObject('Sprint4/select_DataType'), DataType, true)
+WebUI.selectOptionByLabel(findTestObject('Sprint4/select_DataType'), DataType, true)
 
 'Select AttributeType'
-WebUI.selectOptionByValue(findTestObject('Sprint4/select_AttributeType'), AttributeType, false)
+WebUI.selectOptionByLabel(findTestObject('Sprint4/select_AttributeType'), AttributeType, false)
 
-if (((DataType.equals('DATE_TIME') || DataType.equals('INTEGER_NUMBER')) || DataType.equals('REAL_NUMBER')) || DataType.equals(
-    'BOOLEAN')) {
+if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || DataType.equals('Real Number')) || DataType.equals(
+    'Boolean')) {
     //Verification
-    if (AttributeType.equals('DATE')) {
+    if (AttributeType.equals('Date')) {
         'Verify Label DefaultToCurrentDate'
         WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_DefaultToCurrentDate'), 10)
     }
     
-    if ((AttributeType.equals('INTEGER') || AttributeType.equals('FLOAT')) || AttributeType.equals('CURRENCY')) {
+    if ((AttributeType.equals('Integer') || AttributeType.equals('Float')) || AttributeType.equals('Currency')) {
         'Verify Label Valid Range'
         WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_ValidRange'), 10)
 
@@ -64,7 +73,7 @@ if (((DataType.equals('DATE_TIME') || DataType.equals('INTEGER_NUMBER')) || Data
         'Verify Label Decimal Digits Displayed'
         WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_DecimalDigitsDisplayed'), 10)
 
-        if (AttributeType.equals('CURRENCY')) {
+        if (AttributeType.equals('Currency')) {
             'Verify Label Currency Symbol'
             WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_ValidRange'), 10)
         }
@@ -113,7 +122,7 @@ if (((DataType.equals('DATE_TIME') || DataType.equals('INTEGER_NUMBER')) || Data
     'Required radio button'
     WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : Required, ('AttributeLabel') : 'required']))
 
-    if (AttributeType.equals('DATE')) {
+    if (AttributeType.equals('Date')) {
         WebUI.click(findTestObject('Object Repository/Sprint4/input_DefaultValue_Calendar'))
 
         'Provide Default Value '
@@ -123,13 +132,13 @@ if (((DataType.equals('DATE_TIME') || DataType.equals('INTEGER_NUMBER')) || Data
         WebUI.setText(findTestObject('Sprint4/input_Default Value'), DefaultValue)
     }
     
-    if (AttributeType.equals('DATE')) {
+    if (AttributeType.equals('Date')) {
         'Default to Current Date radio button'
         WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : DefaultToCurrentDate, ('AttributeLabel') : 'defaultToCurrentDate']))
     }
     
-    if ((AttributeType.equals('INTEGER') || AttributeType.equals('FLOAT')) || AttributeType.equals('CURRENCY')) {
-        if (!(AttributeType.equals('CURRENCY'))) {
+    if ((AttributeType.equals('Integer') || AttributeType.equals('Float')) || AttributeType.equals('Currency')) {
+        if (!(AttributeType.equals('Currency'))) {
             'Provide Element Width'
             WebUI.setText(findTestObject('Object Repository/Sprint4/input_Text Box Width_elementWidth'), ElementWidth)
         }
@@ -146,7 +155,7 @@ if (((DataType.equals('DATE_TIME') || DataType.equals('INTEGER_NUMBER')) || Data
         'Provide Decimal Digits Displayed'
         WebUI.setText(findTestObject('Object Repository/Sprint4/input_DecimalDigitsDisplayed'), DecimalDigitsDisplayed)
 
-        if (AttributeType.equals('CURRENCY')) {
+        if (AttributeType.equals('Currency')) {
             'Click Search icon'
             WebUI.click(findTestObject('Sprint4/img_Search_Symbol'))
 
@@ -199,7 +208,7 @@ if (((DataType.equals('DATE_TIME') || DataType.equals('INTEGER_NUMBER')) || Data
         DefaultToCurrentDateNumbered = 0
     }
     
-    if (AttributeType.equals('DATE') || AttributeType.equals('BOOLEAN')) {
+    if (AttributeType.equals('Date') || AttributeType.equals('Boolean')) {
         td23Text = ''
     } else {
         td23Text = (((('From : ' + ValidRangeFrom) + ' And To: ') + ValidRangeTo) + '')
@@ -219,8 +228,8 @@ if (((DataType.equals('DATE_TIME') || DataType.equals('INTEGER_NUMBER')) || Data
     CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][.="') + OtherSideEntity) + '"]/..//td[29][.="') + OtherSideAttribute) + 
     '"]/..//td[30][.=\'\']')
 
-    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][text()]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
-    DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
+    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.=""]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + DataType) + 
+    '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
 
@@ -231,18 +240,41 @@ if (((DataType.equals('DATE_TIME') || DataType.equals('INTEGER_NUMBER')) || Data
     WebUI.delay(2)
 
     WebUI.click(ActionsObject)
+	
+
+		WebUI.delay(1)
+		
+		/* addElement = WebUiBuiltInKeywords.findWebElement(findTestObject('Sprint4/img_Attributes_add-icon'))
+		
+		//WebUI.scrollToPosition(1100, 7)
+		WebDriver driver = DriverFactory.getWebDriver();
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[0].scrollIntoView()",
+				addElement);
+			*/
+		
+		'Verify Manage Layout button'
+		WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
+	
+		WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
+	
+		WebUI.delay(1)
+			//WebUI.sendKeys(findTestObject('Sprint4/img_Attributes_add-icon'), Keys.chord(Keys.PAGE_UP))
+
+	//WebUI.scrollToElement(findTestObject('Sprint4/img_Attributes_add-icon'), 0)	
+		//WebUI.scrol
 
     WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
 
     'Verify Data Type'
     WebUI.verifyElementHasAttribute(findTestObject('Sprint4/select_DataType'), 'disabled', 0)
 
-    WebUI.verifyOptionSelectedByValue(findTestObject('Sprint4/select_DataType'), DataType, false, 0)
+    WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint4/select_DataType'), DataType, false, 0)
 
     'Verify AttributeType'
     WebUI.verifyElementHasAttribute(findTestObject('Sprint4/select_AttributeType'), 'disabled', 0)
 
-    WebUI.verifyOptionSelectedByValue(findTestObject('Sprint4/select_AttributeType'), AttributeType, false, 0)
+    WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint4/select_AttributeType'), AttributeType, false, 0)
 
     'Verify Internal Name Text'
     WebUI.verifyElementAttributeValue(findTestObject('Sprint4/input_InternalName'), 'value', InternalName, 0)
@@ -297,28 +329,28 @@ if (((DataType.equals('DATE_TIME') || DataType.equals('INTEGER_NUMBER')) || Data
     WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'required'
                 , ('input') : Required]), 0)
 
-    if (AttributeType.equals('DATE')) {
+    if (AttributeType.equals('Date')) {
         'Verify Default to Current date radio'
-        not_run: WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', 
-                [('attribute') : 'defaultToCurrentDate', ('input') : DefaultToCurrentDate]), 0)
+        WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'defaultToCurrentDate'
+                    , ('input') : DefaultToCurrentDate]), 0)
     }
     
-    if (AttributeType.equals('DATE')) {
+    if (AttributeType.equals('Date')) {
         'Verify Default Value '
         WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Sprint4/input_DefaultValue_Calendar'), 'value', 
-            DefaultValue, 0)
+          DefaultValue, 0)
     } else {
         'Verify Default Value '
         WebUI.verifyElementAttributeValue(findTestObject('Sprint4/input_Default Value'), 'value', DefaultValue, 0)
     }
     
-    if (AttributeType.equals('DATE')) {
+    if (AttributeType.equals('Date')) {
         WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'defaultToCurrentDate'
                     , ('input') : DefaultToCurrentDate]), 0)
     }
     
-    if ((AttributeType.equals('INTEGER') || AttributeType.equals('FLOAT')) || AttributeType.equals('CURRENCY')) {
-        if (!(AttributeType.equals('CURRENCY'))) {
+    if ((AttributeType.equals('Integer') || AttributeType.equals('Float')) || AttributeType.equals('Currency')) {
+        if (!(AttributeType.equals('Currency'))) {
             'Verify Element Width'
             WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Sprint4/input_Text Box Width_elementWidth'), 
                 'value', ElementWidth, 0)
@@ -340,7 +372,7 @@ if (((DataType.equals('DATE_TIME') || DataType.equals('INTEGER_NUMBER')) || Data
         WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Sprint4/input_DecimalDigitsDisplayed'), 'value', 
             DecimalDigitsDisplayed, 0)
 
-        if (AttributeType.equals('CURRENCY')) {
+        if (AttributeType.equals('Currency')) {
             'Verify Selected Currency Symbol'
             WebUI.verifyElementPresent(findTestObject('Sprint4/li_ItemSelected', [('Symbol') : CurrencySymbol]), 0)
         }
@@ -398,6 +430,20 @@ if (((DataType.equals('DATE_TIME') || DataType.equals('INTEGER_NUMBER')) || Data
     'Click Edit Mode Toggle button'
     WebUI.clickOffset(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 2, 4)
 
+   if (DefaultToCurrentDate.equals('Yes')) {
+        DefaultToCurrentDateNumbered = 1
+    } else if (DefaultToCurrentDate.equals('No')) {
+        DefaultToCurrentDateNumbered = 0
+    } else {
+        DefaultToCurrentDateNumbered = 0
+    }
+    
+    if (AttributeType.equals('Date') || AttributeType.equals('Boolean')) {
+        td23Text = ''
+    } else {
+        td23Text = (((('From : ' + ValidRangeFrom) + ' And To: ') + ValidRangeTo) + '')
+    }
+    
     columnXpath1 = (((((((((((((('//td[2][.="' + InternalName) + '"]/..//td[3][.="') + DisplayNameEdited) + '"]/..//td[4][.="') + 
     Description) + '"]/..//td[5][.="') + Enabled) + '"]/..//td[6][.="') + UseTooltip) + '"]/..//td[7][.=\'\']/..//td[8][.="') + 
     Tooltip) + '"]/..//td[9][.=\'No\']/..//td[10][.="') + EditableOnCreate) + '"]')
@@ -407,13 +453,13 @@ if (((DataType.equals('DATE_TIME') || DataType.equals('INTEGER_NUMBER')) || Data
     '"]/..//td[16][.="') + Formula) + '"]/..//td[17][.="') + Required) + '"]/..//td[18][.="') + DefaultValue) + '"]/..//td[19][.="') + 
     DefaultToCurrentDateNumbered) + '"]/..//td[20][.="') + Unique) + '"]')
 
-    columnXpath3 = (((((((((((((((((('/..//td[21][.="' + ElementWidth) + '"]/..//td[22][.="') + ElementHeight) + '"]/..//td[23][.=\'From : ') + 
-    ValidRangeFrom) + ' And To: ') + ValidRangeTo) + '\']/..//td[24][.="') + DisplayedDigits) + '"]/..//td[25][.="') + DecimalDigitsDisplayed) + 
-    '"]/..//td[26][.="') + CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][.="') + OtherSideEntity) + '"]/..//td[29][.="') + 
-    OtherSideAttribute) + '"]/..//td[30][.=\'\']')
+    columnXpath3 = (((((((((((((((('/..//td[21][.="' + ElementWidth) + '"]/..//td[22][.="') + ElementHeight) + '"]/..//td[23][.="') + 
+    td23Text) + '"]/..//td[24][.="') + DisplayedDigits) + '"]/..//td[25][.="') + DecimalDigitsDisplayed) + '"]/..//td[26][.="') + 
+    CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][.="') + OtherSideEntity) + '"]/..//td[29][.="') + OtherSideAttribute) + 
+    '"]/..//td[30][.=\'\']')
 
-    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][text()]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
-    DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
+    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.=""]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + DataType) + 
+    '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
 
@@ -425,6 +471,14 @@ if (((DataType.equals('DATE_TIME') || DataType.equals('INTEGER_NUMBER')) || Data
     'Select the Attribute from the grid'
     WebUI.click(ActionsObject)
 
+	
+	'Verify Manage Layout button'
+	WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
+
+	WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
+
+	WebUI.delay(1)
+	
     'Click Remove icon'
     WebUI.click(findTestObject('Sprint4/img_Attributes_remove-icon'))
 

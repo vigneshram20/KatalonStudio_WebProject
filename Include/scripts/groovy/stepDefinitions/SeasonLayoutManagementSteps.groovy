@@ -91,13 +91,12 @@ public class SeasonLayoutManagementSteps {
 			element.click()
 		}
 	}
-	
+
 	@And("Verifies all attribute groups are removed or not")
-	def verify_all_are_removed_or_not()
-	{
+	def verify_all_are_removed_or_not() {
 		WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/div_Season_error_message'), 0)
 	}
-	
+
 	@Then("Save the Layout")
 	def Save_the_Layout() {
 		'Click Save Button'
@@ -145,13 +144,14 @@ public class SeasonLayoutManagementSteps {
 		for(String value :list ) {
 
 			'Select Brand Label'
+			WebUI.scrollToElement(findTestObject('Object Repository/Sprint3/label_GlobalParameterized',[('labelName') : value]), 0)
+			//WebUI.delay(1)
 			WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized',[('labelName') : value]))
 		}
 	}
-	
+
 	@Then("Verify all the attributes are enabled for edit")
-	def verify_all_attributes_are_enabled()
-	{
+	def verify_all_attributes_are_enabled() {
 		WebDriver driver = DriverFactory.getWebDriver()
 		WebUI.verifyElementNotPresent(findTestObject('Object Repository/Sprint3/label_GlobalParameterized_allLabelsList'), 0)
 	}
@@ -159,6 +159,8 @@ public class SeasonLayoutManagementSteps {
 	@Then("Click Add button from existing group")
 	def Click_Add_button_from_existing_group() {
 		'Click Add button'
+		WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_UP))
+		//WebUI.scrollToElement(findTestObject('Sprint3/img_General Attributes_img-icon'), 0)
 		WebUI.click(findTestObject('Sprint3/img_General Attributes_img-icon'))
 	}
 
@@ -172,10 +174,11 @@ public class SeasonLayoutManagementSteps {
 			if (DriverFactory.getExecutedBrowser().getName() == 'IE_DRIVER') {
 				WebUI.delay(1)
 				'Select Checkbox '
-				WebUI.scrollToElement(findTestObject('Object Repository/Sprint3/label_GlobalParameterized_checkbox_label',[('input') : value]), 0)
+				//WebUI.scrollToElement(findTestObject('Object Repository/Sprint3/label_GlobalParameterized_checkbox_label',[('input') : value]), 0)
 				WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized_checkbox_label',[('input') : value]))
 			}
 			else {
+				WebUI.delay(1)
 				'Select Checkbox '
 				WebUI.clickOffset(findTestObject('Object Repository/Sprint3/label_GlobalParameterized_checkbox_label',[('input') : value]),2,2)
 			}
@@ -187,6 +190,7 @@ public class SeasonLayoutManagementSteps {
 	@Then("Click Add button from newly created group")
 	def Click_Add_button_from_newly_created_group() {
 		'Click Add button'
+		WebUI.scrollToElement(findTestObject('Sprint3/img_Calendar QA Automation_img-icon'), 0)
 		WebUI.click(findTestObject('Sprint3/img_Calendar QA Automation_img-icon'))
 	}
 
@@ -196,6 +200,8 @@ public class SeasonLayoutManagementSteps {
 		for(String value :list ) {
 			variableAsAdded.add(value)
 			'Select Season Checkbox '
+			WebUI.scrollToElement(findTestObject('Object Repository/Sprint3/label_GlobalParameterized_checkbox_label',[('input') : value]), 0)
+			WebUI.delay(1)
 			WebUI.clickOffset(findTestObject('Object Repository/Sprint3/label_GlobalParameterized_checkbox_label',[('input') : value]),0,2)
 		}
 		'Click Copy Attributes button'

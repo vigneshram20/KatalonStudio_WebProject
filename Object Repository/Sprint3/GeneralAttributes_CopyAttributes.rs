@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//button[@class = 'directionButton_btn_right_arrow__3FKAU'])[1]</value>
+         <value>(//button[contains(@class,'directionButton_btn_right_arrow')])[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

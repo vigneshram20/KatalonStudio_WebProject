@@ -19,8 +19,8 @@
          <combinationType>ONE</combinationType>
          <id>46431622-7ecd-4f16-93b9-2c06b2e87d0a</id>
          <iterationEntity>
-            <iterationType>RANGE</iterationType>
-            <value>1-7</value>
+            <iterationType>SPECIFIC</iterationType>
+            <value>1-3,5-7</value>
          </iterationEntity>
          <testDataId>Data Files/CreateAttribute</testDataId>
       </testDataLink>
@@ -215,6 +215,12 @@
          <type>DATA_COLUMN</type>
          <value>DBSequences</value>
          <variableId>a10bf1dc-4653-4d5a-995e-98878e04e450</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>46431622-7ecd-4f16-93b9-2c06b2e87d0a</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>MasterList</value>
+         <variableId>5a57caae-1328-4e8d-bfcd-1bd8d21b934e</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

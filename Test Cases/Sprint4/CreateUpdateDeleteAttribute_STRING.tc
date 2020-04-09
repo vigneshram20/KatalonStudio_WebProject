@@ -229,4 +229,11 @@
       <masked>false</masked>
       <name>DBSequences</name>
    </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>5a57caae-1328-4e8d-bfcd-1bd8d21b934e</id>
+      <masked>false</masked>
+      <name>MasterList</name>
+   </variable>
 </TestCaseEntity>

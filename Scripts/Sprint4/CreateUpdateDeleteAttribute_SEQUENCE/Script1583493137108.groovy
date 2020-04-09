@@ -41,12 +41,12 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_Data 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_Attribute Type'), 10)
 
 'Select DataType\t'
-WebUI.selectOptionByValue(findTestObject('Sprint4/select_DataType'), DataType, true)
+WebUI.selectOptionByLabel(findTestObject('Sprint4/select_DataType'), DataType, true)
 
 'Select AttributeType'
-WebUI.selectOptionByValue(findTestObject('Sprint4/select_AttributeType'), AttributeType, false)
+WebUI.selectOptionByLabel(findTestObject('Sprint4/select_AttributeType'), AttributeType, false)
 
-if (AttributeType.equals('SEQUENCE_NAME')) {
+if (AttributeType.equals('Sequence Name')) {
     //Verify
     'Verify DB Sequences Label'
     WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_DB Sequences'), 10)
@@ -137,7 +137,7 @@ if (AttributeType.equals('SEQUENCE_NAME')) {
     CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][.="') + OtherSideEntity) + '"]/..//td[29][.="') + OtherSideAttribute) + 
     '"]/..//td[30][.=\'\']')
 
-    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][text()]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
+    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.=""]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
     DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
@@ -156,12 +156,12 @@ if (AttributeType.equals('SEQUENCE_NAME')) {
     'Verify Data Type'
     WebUI.verifyElementHasAttribute(findTestObject('Sprint4/select_DataType'), 'disabled', 0)
 
-    WebUI.verifyOptionSelectedByValue(findTestObject('Sprint4/select_DataType'), DataType, false, 0)
+    WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint4/select_DataType'), DataType, false, 0)
 
     'Verify AttributeType'
     WebUI.verifyElementHasAttribute(findTestObject('Sprint4/select_AttributeType'), 'disabled', 0)
 
-    WebUI.verifyOptionSelectedByValue(findTestObject('Sprint4/select_AttributeType'), AttributeType, false, 0)
+    WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint4/select_AttributeType'), AttributeType, false, 0)
 
     'Verify Internal Name Text'
     WebUI.verifyElementAttributeValue(findTestObject('Sprint4/input_InternalName'), 'value', InternalName, 0)
@@ -265,7 +265,7 @@ if (AttributeType.equals('SEQUENCE_NAME')) {
     CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][.="') + OtherSideEntity) + '"]/..//td[29][.="') + OtherSideAttribute) + 
     '"]/..//td[30][.=\'\']')
 
-    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][text()]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
+    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.=""]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
     DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)

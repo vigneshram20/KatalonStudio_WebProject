@@ -43,12 +43,12 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_Data 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_Attribute Type'), 10)
 
 'Select DataType\t'
-WebUI.selectOptionByValue(findTestObject('Sprint4/select_DataType'), DataType, true)
+WebUI.selectOptionByLabel(findTestObject('Sprint4/select_DataType'), DataType, true)
 
 'Select AttributeType'
-WebUI.selectOptionByValue(findTestObject('Sprint4/select_AttributeType'), AttributeType, false)
+WebUI.selectOptionByLabel(findTestObject('Sprint4/select_AttributeType'), AttributeType, false)
 
-if (DataType.equals('STRING')) {
+if (DataType.equals('String')) {
     //Verification
     'Verify Label Internal Name'
     WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_Internal Name'), 10)
@@ -107,10 +107,15 @@ if (DataType.equals('STRING')) {
     'Verify Label String Length'
     WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_String Length'), 10)
 
-    if (AttributeType.equals('TEXT_AREA')) {
+    if (AttributeType.equals('Text Area')) {
         'Verify Label Input Field Type'
         WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_Input Field Type'), 10)
     }
+	if(AttributeType.equals('Multi List') || AttributeType.equals('Single List') || AttributeType.equals('Driven'))
+	{
+		'Verify Master List label'
+		WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_MasterList'), 10)
+	}
     
     'Verify Label Database Column'
     WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_Database Column'), 10)
@@ -182,10 +187,29 @@ if (DataType.equals('STRING')) {
     'Provide String Length To'
     WebUI.setText(findTestObject('Object Repository/Sprint4/input_String Length_rangeLength_to'), StringLengthTo)
 
-    if (AttributeType.equals('TEXT_AREA')) {
+    if (AttributeType.equals('Text Area')) {
         'Input field Type radio button'
         WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : InputFieldType, ('AttributeLabel') : 'inputFieldType']))
     }
+	
+	if(AttributeType.equals('Multi List') || AttributeType.equals('Single List') || AttributeType.equals('Driven'))
+	{
+		'Click Search icon'
+		WebUI.click(findTestObject('Sprint4/img_Search_Symbol'))
+
+		'Provide Currency Symbol text'
+		WebUI.setText(findTestObject('Sprint4/input_SearchField'), MasterList)
+
+		'Select Checkbox'
+		WebUI.click(findTestObject('Object Repository/Sprint4/label_CheckboxPopup -URef', [('Symbol') : MasterList]))
+
+		'Click Save button'
+		WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
+
+		'Verify Selected Currency Symbol'
+		WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/li_ItemSelected - URef', [('Symbol') : MasterList]),0)
+
+	}
     
     'Click Create Button'
     WebUI.click(findTestObject('Object Repository/Sprint4/button_Create'))
@@ -226,30 +250,37 @@ if (DataType.equals('STRING')) {
     columnXpath3 = (((((((('/..//td[21][.="' + ElementWidth) + '"]/..//td[22][.="') + ElementHeight) + '"]/..//td[23][.=\'From : ') + 
     StringLengthFrom) + ' And To: ') + StringLengthTo) + '\']/..//td[24][.=\'0\']/..//td[25][.=\'0\']/..//td[26][.=\'\']/..//td[27][text()]/..//td[28][.=\'\']/..//td[29][.=\'\']/..//td[30][.=\'\']')
 
-    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][text()]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
+    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.=""]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
     DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
 
-    //columnXpath = '//td[2][.=\'Automation_String_TextArea\']/..//td[3][.=\'Automation_String_TextArea\']/..//td[4][.=\'Automation_String_TextArea\']/..//td[5][.=\'Yes\']/..//td[6][.=\'Yes\']/..//td[7][.=\'\']/..//td[8][.=\'Automation_String_TextArea\']/..//td[9][.=\'No\']/..//td[10][.=\'Yes\']/..//td[11][.=\'Yes\']/..//td[12][.=\'No\']/..//td[13][.=\'No\']/..//td[14][.=\'No\']/..//td[15][.=\'50\']/..//td[16][.=\'Automation_String_TextArea\']/..//td[17][.=\'No\']/..//td[18][.=\'Automation_String_TextArea\']/..//td[19][.=\'\']/..//td[20][.=\'No\']/..//td[21][.=\'55\']/..//td[22][.=\'60\']/..//td[23][.=\'From : 50 And To: 60\']/..//td[24][.=\'\']/..//td[25][.=\'\']/..//td[26][.=\'\']/..//td[27][.]/..//td[28][.=\'\']/..//td[29][.=\'\']/..//td[30][.=\'\']/..//td[31][.=\'\']/..//td[32][.=\'1\']/..//td[33][.=\'TEXT_AREA\']/..//td[34][.=\'STRING\']/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]//div'
+    //columnXpath = '//td[2][.=\'Automation_String_TextArea\']/..//td[3][.=\'Automation_String_TextArea\']/..//td[4][.=\'Automation_String_TextArea\']/..//td[5][.=\'Yes\']/..//td[6][.=\'Yes\']/..//td[7][.=\'\']/..//td[8][.=\'Automation_String_TextArea\']/..//td[9][.=\'No\']/..//td[10][.=\'Yes\']/..//td[11][.=\'Yes\']/..//td[12][.=\'No\']/..//td[13][.=\'No\']/..//td[14][.=\'No\']/..//td[15][.=\'50\']/..//td[16][.=\'Automation_String_TextArea\']/..//td[17][.=\'No\']/..//td[18][.=\'Automation_String_TextArea\']/..//td[19][.=\'\']/..//td[20][.=\'No\']/..//td[21][.=\'55\']/..//td[22][.=\'60\']/..//td[23][.=\'From : 50 And To: 60\']/..//td[24][.=\'\']/..//td[25][.=\'\']/..//td[26][.=\'\']/..//td[27][.]/..//td[28][.=\'\']/..//td[29][.=\'\']/..//td[30][.=\'\']/..//td[31][.=\'\']/..//td[32][.=\'1\']/..//td[33][.=\'Text Area\']/..//td[34][.=\'String\']/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]//div'
     ActionsObject = WebUI.modifyObjectProperty(findTestObject('Object Repository/Sprint4/td_CreatedAttributeDynamicCheck'), 
         'xpath', 'equals', columnXpath, true)
 
     WebUI.delay(2)
 
     WebUI.click(ActionsObject)
+	
+	'Verify Manage Layout button'
+	WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
+
+	WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
+
+	WebUI.delay(1)
 
     WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
 
     'Verify Data Type'
     WebUI.verifyElementHasAttribute(findTestObject('Sprint4/select_DataType'), 'disabled', 0)
 
-    WebUI.verifyOptionSelectedByValue(findTestObject('Sprint4/select_DataType'), DataType, false, 0)
+    WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint4/select_DataType'), DataType, false, 0)
 
     'Verify AttributeType'
     WebUI.verifyElementHasAttribute(findTestObject('Sprint4/select_AttributeType'), 'disabled', 0)
 
-    WebUI.verifyOptionSelectedByValue(findTestObject('Sprint4/select_AttributeType'), AttributeType, false, 0)
+    WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint4/select_AttributeType'), AttributeType, false, 0)
 
     'Verify Internal Name Text'
     WebUI.verifyElementAttributeValue(findTestObject('Sprint4/input_InternalName'), 'value', InternalName, 0)
@@ -327,12 +358,17 @@ if (DataType.equals('STRING')) {
     WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Sprint4/input_String Length_rangeLength_to'), 'value', 
         StringLengthTo, 0)
 
-    if (AttributeType.equals('TEXT_AREA')) {
+    if (AttributeType.equals('Text Area')) {
         'Verify Input Field Type radio'
         WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'inputFieldType'
                     , ('input') : InputFieldType]), 0)
     }
-    
+	
+	if(AttributeType.equals('Multi List') || AttributeType.equals('Single List') || AttributeType.equals('Driven'))
+	{
+	'Verify Selected Currency Symbol'
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/li_ItemSelected - URef', [('Symbol') : MasterList]),0)
+	}
     'Verify Label Database Column'
     System.out.println('The Database Column is ' + WebUI.getAttribute(findTestObject('Sprint4/input_Database Column'), 'value'))
 
@@ -385,21 +421,21 @@ if (DataType.equals('STRING')) {
     'Click Edit Mode Toggle button'
     WebUI.clickOffset(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 2, 4)
 
-    columnXpath1 = (((((((((((((('//td[2][.=' + InternalName) + ']/..//td[3][.=') + DisplayNameEdited) + ']/..//td[4][.=') + 
-    Description) + ']/..//td[5][.=') + Enabled) + ']/..//td[6][.=') + UseTooltip) + ']/..//td[7][.=\'\']/..//td[8][.=') + 
-    Tooltip) + ']/..//td[9][.=\'No\']/..//td[10][.=') + EditableOnCreate) + ']')
+    columnXpath1 = (((((((((((((('//td[2][.="' + InternalName) + '"]/..//td[3][.="') + DisplayNameEdited) + '"]/..//td[4][.="') + 
+    Description) + '"]/..//td[5][.="') + Enabled) + '"]/..//td[6][.="') + UseTooltip) + '"]/..//td[7][.=\'\']/..//td[8][.="') + 
+    Tooltip) + '"]/..//td[9][.=\'No\']/..//td[10][.="') + EditableOnCreate) + '"]')
 
-    columnXpath2 = (((((((((((((((((('/..//td[11][.=' + EditableOnUpdate) + ']/..//td[12][.=') + MassChangeable) + ']/..//td[13][.=') + 
-    TableEditable) + ']/..//td[14][.=') + TableWrappable) + ']/..//td[15][.=') + TableMinWrapWidth) + ']/..//td[16][.=') + 
-    Formula) + ']/..//td[17][.=') + Required) + ']/..//td[18][.=') + DefaultValue) + ']/..//td[19][.=\'0\']/..//td[20][.=') + 
-    Unique) + ']')
+    columnXpath2 = (((((((((((((((((('/..//td[11][.="' + EditableOnUpdate) + '"]/..//td[12][.="') + MassChangeable) + '"]/..//td[13][.="') + 
+    TableEditable) + '"]/..//td[14][.="') + TableWrappable) + '"]/..//td[15][.="') + TableMinWrapWidth) + '"]/..//td[16][.="') + 
+    Formula) + '"]/..//td[17][.="') + Required) + '"]/..//td[18][.="') + DefaultValue) + '"]/..//td[19][.=\'0\']/..//td[20][.="') + 
+    Unique) + '"]')
 
-    columnXpath3 = (((((((('/..//td[21][.=' + ElementWidth) + ']/..//td[22][.=') + ElementHeight) + ']/..//td[23][.=\'From : ') + 
+    columnXpath3 = (((((((('/..//td[21][.="' + ElementWidth) + '"]/..//td[22][.="') + ElementHeight) + '"]/..//td[23][.=\'From : ') + 
     StringLengthFrom) + ' And To: ') + StringLengthTo) + '\']/..//td[24][.=\'0\']/..//td[25][.=\'0\']/..//td[26][.=\'\']/..//td[27][text()]/..//td[28][.=\'\']/..//td[29][.=\'\']/..//td[30][.=\'\']')
 
-    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.=\'\']/..//td[33][.=' + AttributeType) + ']/..//td[34][.=') + DataType) + 
-    ']/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
-
+    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.=""]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
+    DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
+	
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
 
     ActionsObject = WebUI.modifyObjectProperty(findTestObject('Object Repository/Sprint4/td_CreatedAttributeDynamicCheck'), 
@@ -410,6 +446,13 @@ if (DataType.equals('STRING')) {
     'Select the Attribute from the grid'
     WebUI.click(ActionsObject)
 
+	'Verify Manage Layout button'
+	WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
+
+	WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
+
+	WebUI.delay(1)
+	
     'Click Remove icon'
     WebUI.click(findTestObject('Sprint4/img_Attributes_remove-icon'))
 

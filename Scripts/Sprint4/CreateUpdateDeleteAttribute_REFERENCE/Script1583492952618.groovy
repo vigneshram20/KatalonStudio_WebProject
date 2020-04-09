@@ -41,18 +41,24 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_Data 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_Attribute Type'), 10)
 
 'Select DataType\t'
-WebUI.selectOptionByValue(findTestObject('Sprint4/select_DataType'), DataType, true)
+WebUI.selectOptionByLabel(findTestObject('Sprint4/select_DataType'), DataType, true)
 
 'Select AttributeType'
-WebUI.selectOptionByValue(findTestObject('Sprint4/select_AttributeType'), AttributeType, false)
+WebUI.selectOptionByLabel(findTestObject('Sprint4/select_AttributeType'), AttributeType, false)
 
-if (AttributeType.equals('REFERENCE')) {
+if (AttributeType.equals('Reference')) {
     //Verification
     'Verify Label Other Side Entity'
     WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_Other Side Entity'), 10)
 
     'Verify Label Other Side Attribute'
     WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_Other Side Attribute'), 10)
+	
+	'Verify Reference Entity'
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_Reference Entity'), 10)
+	
+	'Verify Reference Attribute'
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_Reference Attribute'), 10)
 
     //Provide Data
     'Enter Internal Name'
@@ -102,10 +108,41 @@ if (AttributeType.equals('REFERENCE')) {
 	
 	'Provide Reference Entity'
 	/////////////////////////////////////////
-	
+	'Click Search icon'
+	WebUI.click(findTestObject('Object Repository/Sprint4/img_Search_Symbol - Ref Entity'))
+
+	'Provide Reference Entity text'
+	WebUI.setText(findTestObject('Sprint4/input_SearchField'), 'collection')
+
+	'Select Checkbox'
+	WebUI.click(findTestObject('Sprint4/label_CheckboxPopup', [('Symbol') : 'collection']))
+
+	'Click Save button'
+	WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
+
+	'Verify Supported Type Symbol'
+	WebUI.click(findTestObject('Sprint4/li_ItemSelected', [('Symbol') : 'collection']))
+
 	
 	'Provide Reference Attribute'
 ///////////////////////////
+	WebUI.delay(2)
+	
+	'Click Search icon'
+	WebUI.click(findTestObject('Object Repository/Sprint4/img_Search_Symbol - Ref Attribute'))
+
+	'Provide Reference Entity text'
+	WebUI.setText(findTestObject('Sprint4/input_SearchField'), 'collection')
+
+	'Select Checkbox'
+	WebUI.click(findTestObject('Sprint4/label_CheckboxPopup', [('Symbol') : 'collection']))
+
+	'Click Save button'
+	WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
+
+	'Verify Supported Type Symbol'
+	WebUI.click(findTestObject('Sprint4/li_ItemSelected', [('Symbol') : 'collection']))
+
 	
     'Click Create Button'
     WebUI.click(findTestObject('Object Repository/Sprint4/button_Create'))
@@ -147,7 +184,7 @@ if (AttributeType.equals('REFERENCE')) {
     DisplayedDigits) + '"]/..//td[25][.="') + DecimalDigitsDisplayed) + '"]/..//td[26][.="') + CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][.="') + 
     OtherSideEntity) + '"]/..//td[29][.="') + OtherSideAttribute) + '"]/..//td[30][.=\'\']')
 
-    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][text()]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
+        columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.=""]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
     DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
@@ -159,19 +196,26 @@ if (AttributeType.equals('REFERENCE')) {
     WebUI.delay(2)
 
     WebUI.click(ActionsObject)
+	
+	'Verify Manage Layout button'
+	WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
 
+	WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
+
+	WebUI.delay(1)
+	
     WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
 
     //Verify the data
     'Verify Data Type'
     WebUI.verifyElementHasAttribute(findTestObject('Sprint4/select_DataType'), 'disabled', 0)
 
-    WebUI.verifyOptionSelectedByValue(findTestObject('Sprint4/select_DataType'), DataType, false, 0)
+    WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint4/select_DataType'), DataType, false, 0)
 
     'Verify AttributeType'
     WebUI.verifyElementHasAttribute(findTestObject('Sprint4/select_AttributeType'), 'disabled', 0)
 
-    WebUI.verifyOptionSelectedByValue(findTestObject('Sprint4/select_AttributeType'), AttributeType, false, 0)
+    WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint4/select_AttributeType'), AttributeType, false, 0)
 
     'Verify Internal Name Text'
     WebUI.verifyElementAttributeValue(findTestObject('Sprint4/input_InternalName'), 'value', InternalName, 0)
@@ -295,7 +339,7 @@ if (AttributeType.equals('REFERENCE')) {
     DisplayedDigits) + '"]/..//td[25][.="') + DecimalDigitsDisplayed) + '"]/..//td[26][.="') + CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][.="') + 
     OtherSideEntity) + '"]/..//td[29][.="') + OtherSideAttribute) + '"]/..//td[30][.=\'\']')
 
-    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][text()]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
+    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.=""]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
     DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
@@ -307,6 +351,13 @@ if (AttributeType.equals('REFERENCE')) {
 
     'Select the Attribute from the grid'
     WebUI.click(ActionsObject)
+	
+	'Verify Manage Layout button'
+	WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
+
+	WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
+
+	WebUI.delay(1)
 
     'Click Remove icon'
     WebUI.click(findTestObject('Sprint4/img_Attributes_remove-icon'))

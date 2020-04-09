@@ -6,7 +6,7 @@
    <containsHeaders>true</containsHeaders>
    <csvSeperator></csvSeperator>
    <dataFileGUID>d8fd959f-d80f-4e73-a88c-35795af977e9</dataFileGUID>
-   <dataSourceUrl>CreateAttribute.xlsx</dataSourceUrl>
+   <dataSourceUrl>WSI_MCP_TestData.xlsx</dataSourceUrl>
    <driver>ExcelFile</driver>
    <isInternalPath>true</isInternalPath>
    <query></query>
