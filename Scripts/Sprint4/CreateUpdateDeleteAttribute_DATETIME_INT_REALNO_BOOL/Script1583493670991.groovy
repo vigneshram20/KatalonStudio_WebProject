@@ -15,17 +15,25 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords
-import org.openqa.selenium.JavascriptExecutor;
-import com.kms.katalon.core.webui.driver.DriverFactory
-import org.openqa.selenium.WebElement
-import org.openqa.selenium.WebDriver
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
+import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import org.openqa.selenium.WebElement as WebElement
+import org.openqa.selenium.WebDriver as WebDriver
 
+'Launch the Browser'
 WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
 
+'Login the application and verify the homepage'
 WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
 
+'Navigate to Type and Attribute Management'
 WebUI.callTestCase(findTestCase('Common/NavigateToTypeAndAttributeManagement'), [:], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.delay(1)
+
+'CLick Attribute Management menu'
+WebUI.click(findTestObject('Sprint4/a_Manage Types'))
 
 'Click Season sub menu'
 WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
@@ -123,6 +131,7 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
     WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : Required, ('AttributeLabel') : 'required']))
 
     if (AttributeType.equals('Date')) {
+        'Click Default Value field'
         WebUI.click(findTestObject('Object Repository/Sprint4/input_DefaultValue_Calendar'))
 
         'Provide Default Value '
@@ -159,7 +168,7 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
             'Click Search icon'
             WebUI.click(findTestObject('Sprint4/img_Search_Symbol'))
 
-            'Provide Currency Symbol text'
+            'Provide Search text'
             WebUI.setText(findTestObject('Sprint4/input_SearchField'), CurrencySymbol)
 
             'Select Checkbox'
@@ -168,7 +177,7 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
             'Click Save button'
             WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
 
-            'Verify Selected Currency Symbol'
+            'Verify Selected Item'
             WebUI.click(findTestObject('Sprint4/li_ItemSelected', [('Symbol') : CurrencySymbol]))
         }
     }
@@ -178,17 +187,8 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
 
     WebUI.delay(2)
 
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
-
-    WebUI.delay(2)
-
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Yes'))
-
-    WebUI.click(findTestObject('Object Repository/Sprint4/h5_Type has been modified successfully'))
-
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_OK'))
-
-    WebUI.delay(2)
+    'Click Save and Verify Success Popup'
+    WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
 
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
@@ -228,42 +228,29 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
     CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][.="') + OtherSideEntity) + '"]/..//td[29][.="') + OtherSideAttribute) + 
     '"]/..//td[30][.=\'\']')
 
-    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.=""]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + DataType) + 
+    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.="0"]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + DataType) + 
     '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
 
-    //columnXpath = '//td[2][.=\'Automation_String_TextArea\']/..//td[3][.=\'Automation_String_TextArea\']/..//td[4][.=\'Automation_String_TextArea\']/..//td[5][.=\'Yes\']/..//td[6][.=\'Yes\']/..//td[7][.=\'\']/..//td[8][.=\'Automation_String_TextArea\']/..//td[9][.=\'No\']/..//td[10][.=\'Yes\']/..//td[11][.=\'Yes\']/..//td[12][.=\'No\']/..//td[13][.=\'No\']/..//td[14][.=\'No\']/..//td[15][.=\'50\']/..//td[16][.=\'Automation_String_TextArea\']/..//td[17][.=\'No\']/..//td[18][.=\'Automation_String_TextArea\']/..//td[19][.=\'\']/..//td[20][.=\'No\']/..//td[21][.=\'55\']/..//td[22][.=\'60\']/..//td[23][.=\'From : 50 And To: 60\']/..//td[24][.=\'\']/..//td[25][.=\'\']/..//td[26][.=\'\']/..//td[27][.]/..//td[28][.=\'\']/..//td[29][.=\'\']/..//td[30][.=\'\']/..//td[31][.=\'\']/..//td[32][.=\'1\']/..//td[33][.=\'TEXT_AREA\']/..//td[34][.=\'STRING\']/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]//div'
     ActionsObject = WebUI.modifyObjectProperty(findTestObject('Object Repository/Sprint4/td_CreatedAttributeDynamicCheck'), 
         'xpath', 'equals', columnXpath, true)
 
     WebUI.delay(2)
 
+    'Select the record from the grid'
     WebUI.click(ActionsObject)
-	
 
-		WebUI.delay(1)
-		
-		/* addElement = WebUiBuiltInKeywords.findWebElement(findTestObject('Sprint4/img_Attributes_add-icon'))
-		
-		//WebUI.scrollToPosition(1100, 7)
-		WebDriver driver = DriverFactory.getWebDriver();
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("arguments[0].scrollIntoView()",
-				addElement);
-			*/
-		
-		'Verify Manage Layout button'
-		WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
-	
-		WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
-	
-		WebUI.delay(1)
-			//WebUI.sendKeys(findTestObject('Sprint4/img_Attributes_add-icon'), Keys.chord(Keys.PAGE_UP))
+    WebUI.delay(1)
 
-	//WebUI.scrollToElement(findTestObject('Sprint4/img_Attributes_add-icon'), 0)	
-		//WebUI.scrol
+    'Verify Manage Layout button'
+    WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
 
+    WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
+
+    WebUI.delay(1)
+	
+	'Click Add Attribute button'
     WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
 
     'Verify Data Type'
@@ -338,7 +325,7 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
     if (AttributeType.equals('Date')) {
         'Verify Default Value '
         WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Sprint4/input_DefaultValue_Calendar'), 'value', 
-          DefaultValue, 0)
+            DefaultValue, 0)
     } else {
         'Verify Default Value '
         WebUI.verifyElementAttributeValue(findTestObject('Sprint4/input_Default Value'), 'value', DefaultValue, 0)
@@ -402,23 +389,8 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
     'Click Save button'
     WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
 
-    WebUI.delay(2)
-
-    'Click Save button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
-
-    WebUI.delay(2)
-
-    'Click Yes button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Yes'))
-
-    'Verify popup header message'
-    WebUI.click(findTestObject('Object Repository/Sprint4/h5_Type has been modified successfully'))
-
-    'Click OK button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_OK'))
-
-    WebUI.delay(2)
+	'Click Save and Verify Success Popup'
+	WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
 
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
@@ -430,7 +402,7 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
     'Click Edit Mode Toggle button'
     WebUI.clickOffset(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 2, 4)
 
-   if (DefaultToCurrentDate.equals('Yes')) {
+    if (DefaultToCurrentDate.equals('Yes')) {
         DefaultToCurrentDateNumbered = 1
     } else if (DefaultToCurrentDate.equals('No')) {
         DefaultToCurrentDateNumbered = 0
@@ -458,7 +430,7 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
     CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][.="') + OtherSideEntity) + '"]/..//td[29][.="') + OtherSideAttribute) + 
     '"]/..//td[30][.=\'\']')
 
-    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.=""]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + DataType) + 
+    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.="0"]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + DataType) + 
     '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
@@ -471,14 +443,13 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
     'Select the Attribute from the grid'
     WebUI.click(ActionsObject)
 
-	
-	'Verify Manage Layout button'
-	WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
+    'Verify Manage Layout button'
+    WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
 
-	WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
+    WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
 
-	WebUI.delay(1)
-	
+    WebUI.delay(1)
+
     'Click Remove icon'
     WebUI.click(findTestObject('Sprint4/img_Attributes_remove-icon'))
 
@@ -487,15 +458,7 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
     'Verify Header'
     WebUI.verifyElementPresent(findTestObject('Sprint4/div_DeleteNote'), 10)
 
-    'Click Save button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
+	'Click Save and Verify Success Popup'
+	WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
 
-    WebUI.delay(2)
-
-    'Click Yes button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Yes'))
-
-    'Click OK button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_OK'))
 }
-

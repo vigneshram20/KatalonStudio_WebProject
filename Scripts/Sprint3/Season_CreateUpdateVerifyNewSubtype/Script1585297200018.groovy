@@ -68,15 +68,19 @@ String internalName = WebUI.getAttribute(findTestObject('Object Repository/Sprin
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/label_Display Name'), 0)
 
-SimpleDateFormat formatter = new SimpleDateFormat('ddMMMyyyyHHmm')
+SimpleDateFormat formatter = new SimpleDateFormat('ddMMMyyHHmmss')
 
 Date date = new Date()
 
 String expectedDate = formatter.format(date)
 
-typeName = ('QA_SubType_' + expectedDate)
+InternaltypeName = ('QAIN' + expectedDate)
 
-WebUI.setText(findTestObject('Object Repository/Sprint3/input__form-control'), typeName)
+DisplaytypeName = ('QADN' + expectedDate)
+
+WebUI.setText(findTestObject('Sprint3/input_InternalName'), InternaltypeName)
+
+WebUI.setText(findTestObject('Object Repository/Sprint4/input_DisplayName'), DisplaytypeName)
 
 WebUI.click(findTestObject('Object Repository/Sprint3/radio_Instantiable', [('YesOrNo') : 'Yes']))
 
@@ -90,17 +94,84 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/a_Cancel'),
 
 WebUI.click(findTestObject('Object Repository/Sprint3/button_Create'))
 
+WebUI.delay(3)
+
+WebUI.refresh()
+
+WebUI.delay(2)
+
+WebUI.selectOptionByLabel(findTestObject('Sprint3/select_parentDropDown'), DisplaytypeName, true)
+
+WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint3/select_parentDropDown'), DisplaytypeName, false, 0)
+
+String headerTextfull = 'Season \\ ' + DisplaytypeName
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/h2_Season_subtype', [('header') : headerTextfull]), 
+    0)
+
+WebUI.verifyElementPresent(findTestObject('Sprint3/input_Internal Name_form-control_1', [('textContains') : InternaltypeName]), 
+    0)
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/input_Display Name_form-control', [('textContains') : DisplaytypeName]), 
+    0)
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/radio_Instantiable - Copy', [('YesOrNo') : 'Yes']), 
+    0)
+
+List<WebElement> listOfInheritedAttributes = WebUI.findWebElements(findTestObject('Object Repository/Sprint3/td_InheritedAttributes_InternalNames'), 
+    0)
+
+attributeavailable = new ArrayList<String>()
+
+for (WebElement element : listOfInheritedAttributes) {
+    Thread.sleep(250)
+
+    attributeavailable.add(element.getText())
+}
+
+if (attributeavailable.equals(attributeAsAdded)) {
+    System.out.println('Attributes are displayed properly in Inherited Attributes')
+} else {
+    throw new Exception('Attributes available in the Type are not matched with the attributes in the Inherited attributes')
+}
+
+'Click Edit Mode Toggle button'
+WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+
+displayNameEdited = (DisplaytypeName + 'Edited')
+
+Description = 'QA'
+
+WebUI.clearText(findTestObject('Object Repository/Sprint3/input_Display Name_form-control - Copy'))
+
+
+WebUI.sendKeys(findTestObject('Object Repository/Sprint3/input_Display Name_form-control - Copy'), Keys.chord(Keys.CONTROL, Keys.chord('a')))
+
+WebUI.sendKeys(findTestObject('Object Repository/Sprint3/input_Display Name_form-control - Copy'), Keys.chord(Keys.DELETE, Keys.DELETE, Keys.DELETE))
+
+
+WebUI.setText(findTestObject('Object Repository/Sprint3/input_Display Name_form-control - Copy'), displayNameEdited)
+
+WebUI.setText(findTestObject('Object Repository/Sprint3/input_Description'), Description)
+
+'Click Save button'
+WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
+
+WebUI.delay(2)
+
+'Click the Yes button'
+WebUI.click(findTestObject('Object Repository/Sprint4/button_Yes'))
+
 WebUI.delay(2)
 
 WebUI.refresh()
 
-WebUI.selectOptionByLabel(findTestObject('Sprint3/select_parentDropDown'), typeName, true)
+WebUI.delay(2)
 
-//WebUI.verifyOptionSelectedByValue(findTestObject('Sprint3/select_parentDropDown'),typeName , false, 0)
+WebUI.selectOptionByLabel(findTestObject('Sprint3/select_parentDropDown'), displayNameEdited, true)
 
-String headerTextfull = "Season \\ "+typeName;
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/input_Display Name_form-control', [('textContains') : displayNameEdited]), 
+    0)
 
-//WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/h2_Season_subtype', [('header') : headerTextfull]),0)
-
-
+WebUI.verifyElementText(findTestObject('Object Repository/Sprint3/input_Description'), Description)
 

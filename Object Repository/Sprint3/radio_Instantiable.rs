@@ -6,12 +6,12 @@
    <elementGuidId>2ceb7e5f-92a1-4c92-ae63-92c6d6993071</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//input[contains(@id,'Instaiable')]/following-sibling::span[.='${YesOrNo}']/..</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>//*[(text() = 'Yes' or . = 'Yes')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//input[contains(@name,'instantiable')]/following-sibling::span[.='${YesOrNo}']/..</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -4,10 +4,20 @@
    <name>input_Internal Name_form-control_1</name>
    <tag></tag>
    <elementGuidId>d6f4ab66-e480-4e5d-b6df-82fbe7d436bd</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//input[@type = 'text' and contains(@placeholder, '${textContains}')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//label[text()='Internal Name']/..//input[@type = 'text' and contains(@placeholder, '${textContains}')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
@@ -29,10 +39,10 @@
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
+      <matchCondition>contains</matchCondition>
       <name>placeholder</name>
       <type>Main</type>
-      <value>testbyqa_season</value>
+      <value>${textContains}</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

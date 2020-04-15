@@ -16,11 +16,19 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+'Launch the Browser'
 WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
 
+'Login the application and verify the homepage'
 WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
 
+'Navigate to Type and Attribute Management'
 WebUI.callTestCase(findTestCase('Common/NavigateToTypeAndAttributeManagement'), [:], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.delay(1)
+
+'CLick Attribute Management menu'
+WebUI.click(findTestObject('Sprint4/a_Manage Types'))
 
 'Click Season sub menu'
 WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
@@ -111,11 +119,11 @@ if (DataType.equals('String')) {
         'Verify Label Input Field Type'
         WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_Input Field Type'), 10)
     }
-	if(AttributeType.equals('Multi List') || AttributeType.equals('Single List') || AttributeType.equals('Driven'))
-	{
-		'Verify Master List label'
-		WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_MasterList'), 10)
-	}
+    
+    if ((AttributeType.equals('Multi List') || AttributeType.equals('Single List')) || AttributeType.equals('Driven')) {
+        'Verify Master List label'
+        WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_MasterList'), 10)
+    }
     
     'Verify Label Database Column'
     WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_Database Column'), 10)
@@ -191,42 +199,32 @@ if (DataType.equals('String')) {
         'Input field Type radio button'
         WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : InputFieldType, ('AttributeLabel') : 'inputFieldType']))
     }
-	
-	if(AttributeType.equals('Multi List') || AttributeType.equals('Single List') || AttributeType.equals('Driven'))
-	{
-		'Click Search icon'
-		WebUI.click(findTestObject('Sprint4/img_Search_Symbol'))
+    
+    if ((AttributeType.equals('Multi List') || AttributeType.equals('Single List')) || AttributeType.equals('Driven')) {
+        'Click Search icon'
+        WebUI.click(findTestObject('Sprint4/img_Search_Symbol'))
 
-		'Provide Currency Symbol text'
-		WebUI.setText(findTestObject('Sprint4/input_SearchField'), MasterList)
+        'Enter Search Text'
+        WebUI.setText(findTestObject('Sprint4/input_SearchField'), MasterList)
 
-		'Select Checkbox'
-		WebUI.click(findTestObject('Object Repository/Sprint4/label_CheckboxPopup -URef', [('Symbol') : MasterList]))
+        'Select the record'
+        WebUI.click(findTestObject('Object Repository/Sprint4/label_CheckboxPopup -URef', [('Symbol') : MasterList]))
 
-		'Click Save button'
-		WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
+        'Click Save button'
+        WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
 
-		'Verify Selected Currency Symbol'
-		WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/li_ItemSelected - URef', [('Symbol') : MasterList]),0)
-
-	}
+        'Verify Selected Currency Symbol'
+        WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/li_ItemSelected - URef', [('Symbol') : MasterList]), 
+            0)
+    }
     
     'Click Create Button'
     WebUI.click(findTestObject('Object Repository/Sprint4/button_Create'))
 
     WebUI.delay(2)
 
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
-
-    WebUI.delay(2)
-
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Yes'))
-
-    WebUI.click(findTestObject('Object Repository/Sprint4/h5_Type has been modified successfully'))
-
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_OK'))
-
-    WebUI.delay(2)
+    'Click Save and Verify Success Popup'
+    WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
 
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
@@ -250,36 +248,39 @@ if (DataType.equals('String')) {
     columnXpath3 = (((((((('/..//td[21][.="' + ElementWidth) + '"]/..//td[22][.="') + ElementHeight) + '"]/..//td[23][.=\'From : ') + 
     StringLengthFrom) + ' And To: ') + StringLengthTo) + '\']/..//td[24][.=\'0\']/..//td[25][.=\'0\']/..//td[26][.=\'\']/..//td[27][text()]/..//td[28][.=\'\']/..//td[29][.=\'\']/..//td[30][.=\'\']')
 
-    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.=""]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
-    DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
+    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.=""]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + DataType) + 
+    '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
 
-    //columnXpath = '//td[2][.=\'Automation_String_TextArea\']/..//td[3][.=\'Automation_String_TextArea\']/..//td[4][.=\'Automation_String_TextArea\']/..//td[5][.=\'Yes\']/..//td[6][.=\'Yes\']/..//td[7][.=\'\']/..//td[8][.=\'Automation_String_TextArea\']/..//td[9][.=\'No\']/..//td[10][.=\'Yes\']/..//td[11][.=\'Yes\']/..//td[12][.=\'No\']/..//td[13][.=\'No\']/..//td[14][.=\'No\']/..//td[15][.=\'50\']/..//td[16][.=\'Automation_String_TextArea\']/..//td[17][.=\'No\']/..//td[18][.=\'Automation_String_TextArea\']/..//td[19][.=\'\']/..//td[20][.=\'No\']/..//td[21][.=\'55\']/..//td[22][.=\'60\']/..//td[23][.=\'From : 50 And To: 60\']/..//td[24][.=\'\']/..//td[25][.=\'\']/..//td[26][.=\'\']/..//td[27][.]/..//td[28][.=\'\']/..//td[29][.=\'\']/..//td[30][.=\'\']/..//td[31][.=\'\']/..//td[32][.=\'1\']/..//td[33][.=\'Text Area\']/..//td[34][.=\'String\']/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]//div'
     ActionsObject = WebUI.modifyObjectProperty(findTestObject('Object Repository/Sprint4/td_CreatedAttributeDynamicCheck'), 
         'xpath', 'equals', columnXpath, true)
 
     WebUI.delay(2)
 
+    'Select the record from the grid'
     WebUI.click(ActionsObject)
-	
-	'Verify Manage Layout button'
-	WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
 
-	WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
+    'Verify Manage Layout button'
+    WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
 
-	WebUI.delay(1)
+    WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
 
+    WebUI.delay(1)
+
+    'Click Add icon -Attributes'
     WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
 
-    'Verify Data Type'
+    'Verify Data Type disabled'
     WebUI.verifyElementHasAttribute(findTestObject('Sprint4/select_DataType'), 'disabled', 0)
 
+    'Verify Data Type selected'
     WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint4/select_DataType'), DataType, false, 0)
 
-    'Verify AttributeType'
+    'Verify AttributeType disabled'
     WebUI.verifyElementHasAttribute(findTestObject('Sprint4/select_AttributeType'), 'disabled', 0)
 
+    'Verify AttributeType selected'
     WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint4/select_AttributeType'), AttributeType, false, 0)
 
     'Verify Internal Name Text'
@@ -363,12 +364,13 @@ if (DataType.equals('String')) {
         WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'inputFieldType'
                     , ('input') : InputFieldType]), 0)
     }
-	
-	if(AttributeType.equals('Multi List') || AttributeType.equals('Single List') || AttributeType.equals('Driven'))
-	{
-	'Verify Selected Currency Symbol'
-	WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/li_ItemSelected - URef', [('Symbol') : MasterList]),0)
-	}
+    
+    if ((AttributeType.equals('Multi List') || AttributeType.equals('Single List')) || AttributeType.equals('Driven')) {
+        'Verify Item Selected'
+        WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/li_ItemSelected - URef', [('Symbol') : MasterList]), 
+            0)
+    }
+    
     'Verify Label Database Column'
     System.out.println('The Database Column is ' + WebUI.getAttribute(findTestObject('Sprint4/input_Database Column'), 'value'))
 
@@ -395,21 +397,8 @@ if (DataType.equals('String')) {
 
     WebUI.delay(2)
 
-    'Click Save button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
-
-    WebUI.delay(2)
-
-    'Click Yes button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Yes'))
-
-    'Verify popup header message'
-    WebUI.click(findTestObject('Object Repository/Sprint4/h5_Type has been modified successfully'))
-
-    'Click OK button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_OK'))
-
-    WebUI.delay(2)
+    'Click Save and Verify Success Popup'
+    WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
 
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
@@ -433,9 +422,9 @@ if (DataType.equals('String')) {
     columnXpath3 = (((((((('/..//td[21][.="' + ElementWidth) + '"]/..//td[22][.="') + ElementHeight) + '"]/..//td[23][.=\'From : ') + 
     StringLengthFrom) + ' And To: ') + StringLengthTo) + '\']/..//td[24][.=\'0\']/..//td[25][.=\'0\']/..//td[26][.=\'\']/..//td[27][text()]/..//td[28][.=\'\']/..//td[29][.=\'\']/..//td[30][.=\'\']')
 
-    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.=""]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
-    DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
-	
+    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.=""]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + DataType) + 
+    '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
+
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
 
     ActionsObject = WebUI.modifyObjectProperty(findTestObject('Object Repository/Sprint4/td_CreatedAttributeDynamicCheck'), 
@@ -446,13 +435,13 @@ if (DataType.equals('String')) {
     'Select the Attribute from the grid'
     WebUI.click(ActionsObject)
 
-	'Verify Manage Layout button'
-	WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
+    'Verify Manage Layout button'
+    WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
 
-	WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
+    WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
 
-	WebUI.delay(1)
-	
+    WebUI.delay(1)
+
     'Click Remove icon'
     WebUI.click(findTestObject('Sprint4/img_Attributes_remove-icon'))
 
@@ -461,15 +450,6 @@ if (DataType.equals('String')) {
     'Verify Header'
     WebUI.verifyElementPresent(findTestObject('Sprint4/div_DeleteNote'), 10)
 
-    'Click Save button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
-
-    WebUI.delay(2)
-
-    'Click Yes button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Yes'))
-
-    'Click OK button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_OK'))
+    'Click Save and Verify Success Popup'
+    WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
 }
-

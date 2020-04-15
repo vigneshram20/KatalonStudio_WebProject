@@ -22,6 +22,11 @@ WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], F
 
 WebUI.callTestCase(findTestCase('Common/NavigateToTypeAndAttributeManagement'), [:], FailureHandling.STOP_ON_FAILURE)
 
+WebUI.delay(1)
+
+'CLick Attribute Management menu'
+WebUI.click(findTestObject('Sprint4/a_Manage Types'))
+
 'Click Season sub menu'
 WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
 
@@ -94,20 +99,8 @@ if (AttributeType.equals('Sequence Name')) {
     'Click Create Button'
     WebUI.click(findTestObject('Object Repository/Sprint4/button_Create'))
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    WebUI.delay(2)
-
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
-
-    WebUI.delay(2)
-
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Yes'))
-
-    WebUI.click(findTestObject('Object Repository/Sprint4/h5_Type has been modified successfully'))
-
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_OK'))
-
-    WebUI.delay(2)
+	'Click Save and Verify Success Popup'
+	WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
 
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
@@ -142,8 +135,7 @@ if (AttributeType.equals('Sequence Name')) {
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
 
-    //columnXpath = '//td[2][.=\'Automation_String_TextArea\']/..//td[3][.=\'Automation_String_TextArea\']/..//td[4][.=\'Automation_String_TextArea\']/..//td[5][.=\'Yes\']/..//td[6][.=\'Yes\']/..//td[7][.=\'\']/..//td[8][.=\'Automation_String_TextArea\']/..//td[9][.=\'No\']/..//td[10][.=\'Yes\']/..//td[11][.=\'Yes\']/..//td[12][.=\'No\']/..//td[13][.=\'No\']/..//td[14][.=\'No\']/..//td[15][.=\'50\']/..//td[16][.=\'Automation_String_TextArea\']/..//td[17][.=\'No\']/..//td[18][.=\'Automation_String_TextArea\']/..//td[19][.=\'\']/..//td[20][.=\'No\']/..//td[21][.=\'55\']/..//td[22][.=\'60\']/..//td[23][.=\'From : 50 And To: 60\']/..//td[24][.=\'\']/..//td[25][.=\'\']/..//td[26][.=\'\']/..//td[27][.]/..//td[28][.=\'\']/..//td[29][.=\'\']/..//td[30][.=\'\']/..//td[31][.=\'\']/..//td[32][.=\'1\']/..//td[33][.=\'TEXT_AREA\']/..//td[34][.=\'STRING\']/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]//div'
-    ActionsObject = WebUI.modifyObjectProperty(findTestObject('Object Repository/Sprint4/td_CreatedAttributeDynamicCheck'), 
+	   ActionsObject = WebUI.modifyObjectProperty(findTestObject('Object Repository/Sprint4/td_CreatedAttributeDynamicCheck'), 
         'xpath', 'equals', columnXpath, true)
 
     WebUI.delay(2)
@@ -219,23 +211,8 @@ if (AttributeType.equals('Sequence Name')) {
     'Click Save button'
     WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
 
-    WebUI.delay(2)
-
-    'Click Save button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
-
-    WebUI.delay(2)
-
-    'Click Yes button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Yes'))
-
-    'Verify popup header message'
-    WebUI.click(findTestObject('Object Repository/Sprint4/h5_Type has been modified successfully'))
-
-    'Click OK button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_OK'))
-
-    WebUI.delay(2)
+   'Click Save and Verify Success Popup'
+	WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
 
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
@@ -286,15 +263,8 @@ if (AttributeType.equals('Sequence Name')) {
     'Verify Header'
     WebUI.verifyElementPresent(findTestObject('Sprint4/div_DeleteNote'), 10)
 
-    'Click Save button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
+   'Click Save and Verify Success Popup'
+	WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
 
-    WebUI.delay(2)
-
-    'Click Yes button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Yes'))
-
-    'Click OK button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_OK'))
 }
 

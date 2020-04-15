@@ -4,6 +4,12 @@
    <name>label_Display Name</name>
    <tag></tag>
    <elementGuidId>e3ef4dba-7fcc-48ff-a04b-c1b43636b0d2</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[(text() = 'Display Name *' or . = 'Display Name *')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -25,7 +31,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Display Name*</value>
+      <value>Display Name *</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

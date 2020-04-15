@@ -20,7 +20,7 @@
          <id>de0abe8f-0202-4d64-9682-18e44bded503</id>
          <iterationEntity>
             <iterationType>RANGE</iterationType>
-            <value>10-14</value>
+            <value>11-14</value>
          </iterationEntity>
          <testDataId>Data Files/CreateAttribute</testDataId>
       </testDataLink>

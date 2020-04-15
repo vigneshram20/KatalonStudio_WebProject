@@ -31,8 +31,3 @@ WebUI.click(findTestObject('Object Repository/Sprint3/a_Type  Attribute Manageme
 'Verify Page Header Administration'
 WebUI.click(findTestObject('Object Repository/Sprint3/div_Administration'))
 
-WebUI.delay(1)
-
-'CLick Attribute Management menu'
-WebUI.click(findTestObject('Sprint4/a_Manage Types'))
-

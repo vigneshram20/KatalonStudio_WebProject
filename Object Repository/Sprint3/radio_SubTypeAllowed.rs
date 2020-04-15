@@ -6,12 +6,12 @@
    <elementGuidId>ea90336e-b8f1-4efc-a94f-10ac1d64ab2f</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//input[@name='sub_type']/following-sibling::span[.='${YesOrNo}']/..</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>//*[(text() = 'Yes' or . = 'Yes')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//input[@name='subTypeAllowed']/following-sibling::span[.='${YesOrNo}']/..</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

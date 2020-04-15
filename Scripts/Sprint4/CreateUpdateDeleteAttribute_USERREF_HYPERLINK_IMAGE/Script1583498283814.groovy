@@ -22,6 +22,11 @@ WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], F
 
 WebUI.callTestCase(findTestCase('Common/NavigateToTypeAndAttributeManagement'), [:], FailureHandling.STOP_ON_FAILURE)
 
+WebUI.delay(1)
+
+'CLick Attribute Management menu'
+WebUI.click(findTestObject('Sprint4/a_Manage Types'))
+
 'Click Season sub menu'
 WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
 
@@ -169,19 +174,8 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
     'Click Create Button'
     WebUI.click(findTestObject('Object Repository/Sprint4/button_Create'))
 
-    WebUI.delay(2)
-
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
-
-    WebUI.delay(2)
-
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Yes'))
-
-    WebUI.click(findTestObject('Object Repository/Sprint4/h5_Type has been modified successfully'))
-
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_OK'))
-
-    WebUI.delay(2)
+	'Click Save and Verify Success Popup'
+	WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
 
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
@@ -356,23 +350,9 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
     'Click Save button'
     WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
 
-    WebUI.delay(2)
+  'Click Save and Verify Success Popup'
+	WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
 
-    'Click Save button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
-
-    WebUI.delay(2)
-
-    'Click Yes button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Yes'))
-
-    'Verify popup header message'
-    WebUI.click(findTestObject('Object Repository/Sprint4/h5_Type has been modified successfully'))
-
-    'Click OK button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_OK'))
-
-    WebUI.delay(2)
 
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
@@ -430,15 +410,8 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
     'Verify Header'
     WebUI.verifyElementPresent(findTestObject('Sprint4/div_DeleteNote'), 10)
 
-    'Click Save button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
+   'Click Save and Verify Success Popup'
+	WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
 
-    WebUI.delay(2)
-
-    'Click Yes button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Yes'))
-
-    'Click OK button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_OK'))
 }
 

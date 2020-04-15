@@ -4,7 +4,17 @@
    <name>input_Display Name_form-control</name>
    <tag></tag>
    <elementGuidId>397f1df0-4c7f-4264-8b0c-cbffd503f509</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@type = 'text' and @placeholder = 'Singular']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//label[text()='Display Name']/..//input[@type = 'text' and contains(@value, '${textContains}')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
