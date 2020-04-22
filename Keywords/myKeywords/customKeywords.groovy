@@ -52,6 +52,20 @@ class customKeywords {
 	public static HashMap<String, String> seasonEntitiesMap;
 
 	/**
+	 * 
+	 */
+	@Keyword
+	def String timeStampWithStringGen(String inputName, String dateFormat ) {
+		SimpleDateFormat formatter = new SimpleDateFormat(dateFormat)
+
+		Date date = new Date()
+
+		String dateFormatted = formatter.format(date)
+
+		return dateFormat+inputName
+	}
+
+	/**
 	 * Refresh browser
 	 */
 	@Keyword

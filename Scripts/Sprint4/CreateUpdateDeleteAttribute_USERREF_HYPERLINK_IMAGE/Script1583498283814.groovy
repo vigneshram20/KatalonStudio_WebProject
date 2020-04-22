@@ -15,6 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.WebElement as WebElement
 
 WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
 
@@ -33,7 +34,42 @@ WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
 'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
-WebUI.delay(1)
+WebUI.delay(2)
+
+List<WebElement> listOfExistingElements = WebUI.findWebElements(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized',[('internalName'):InternalName]),
+	1)
+
+for (WebElement checkbox : listOfExistingElements) {
+	Thread.sleep(100)
+
+	checkbox.click()
+
+	 'Scroll To Manage Layout button'
+    WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
+
+    WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
+
+    WebUI.delay(1)
+
+    'Click Remove icon'
+    WebUI.click(findTestObject('Sprint4/img_Attributes_remove-icon'))
+
+    WebUI.delay(2)
+
+    'Verify Header'
+    WebUI.verifyElementPresent(findTestObject('Sprint4/div_DeleteNote'), 10)
+
+    'Click Save and Verify Success Popup'
+    WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
+	
+	WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_UP))
+	
+		WebUI.delay(1)
+		
+	'Click Edit Mode Toggle button'
+	WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+}
+
 
 'Click Add icon -Attributes'
 WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
@@ -205,7 +241,7 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
     CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][.="') + OtherSideEntity) + '"]/..//td[29][.="') + OtherSideAttribute) + 
     '"]/..//td[30][.=\'\']')
 
-    columnXpath4 = (((('/..//td[31][.="'+UserRoles+'"]/..//td[32][.=""]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
+    columnXpath4 = (((('/..//td[31][.="'+UserRoles+'"]/..//td[32][.="0"]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
     DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
@@ -319,7 +355,7 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
                     , ('input') : FitToSize]), 0)
 
         'Verify Max File Size'
-        not_run:WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Sprint4/input_MaxFileSize'), 'value', MaxFileSize, 
+        WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Sprint4/input_MaxFileSize'), 'value', MaxFileSize, 
             0)
 		
 		'Verify Supported Type Symbol'
@@ -382,7 +418,7 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
     CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][.="') + OtherSideEntity) + '"]/..//td[29][.="') + OtherSideAttribute) + 
     '"]/..//td[30][.=\'\']')
 
-    columnXpath4 = (((('/..//td[31][.="'+UserRoles+'"]/..//td[32][.=""]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
+    columnXpath4 = (((('/..//td[31][.="'+UserRoles+'"]/..//td[32][.="0"]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
     DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)

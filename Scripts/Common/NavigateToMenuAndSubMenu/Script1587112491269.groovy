@@ -27,16 +27,12 @@ WebUI.click(findTestObject('Common Objects/img_HamburgerMenu'))
 
 WebUI.delay(1)
 
-'Click Library menu'
-WebUI.click(findTestObject('Sprint1/LandingPage/a_Library'))
+'Click menu'
+WebUI.click(findTestObject('Sprint1/LandingPage/a_Parameterized',[('menu'):MenuItem]))
 
 WebUI.delay(1)
 
-'Click Lading Port sub menu'
-WebUI.click(findTestObject('Sprint1/LandingPage/a_LadingPort'))
+'Click sub menu'
+WebUI.click(findTestObject('Sprint1/LandingPage/a_Parameterized',[('menu'):SubMenuItem]))
 
-WebUI.delay(1)
-
-'Verify Lading Port Page Title'
-WebUI.verifyElementPresent(findTestObject('Sprint5/divPageHeader_LadingPort'), 0)
-
+WebUI.delay(2)

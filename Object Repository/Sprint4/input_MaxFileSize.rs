@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//input[@type = 'text' and @name = 'maxSize']</value>
+         <value>//input[@type = 'text' and @name = 'maxFileSize']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -31,7 +31,7 @@
       <matchCondition>equals</matchCondition>
       <name>name</name>
       <type>Main</type>
-      <value>maxSize</value>
+      <value>maxFileSize</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

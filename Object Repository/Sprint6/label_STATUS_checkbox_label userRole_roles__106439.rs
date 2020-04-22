@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>label_STATUS_checkbox_label userRole_roles__106439</name>
+   <tag></tag>
+   <elementGuidId>3f8cd251-3942-41f1-9321-87f08394cc7f</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>label</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>checkbox_label userRole_roles_checkbox_label__piej3 </value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>for</name>
+      <type>Main</type>
+      <value>qa1</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;react-tabs-5&quot;)/div[@class=&quot;userRole_user_list_wrapper__1A58E&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col-12 user_table&quot;]/div[@class=&quot;table_body_scroll&quot;]/table[@class=&quot;userRole_permission_table__z2XS4&quot;]/tbody[1]/tr[1]/td[@class=&quot;text-center&quot;]/div[@class=&quot;checkbox&quot;]/label[@class=&quot;checkbox_label userRole_roles_checkbox_label__piej3&quot;]</value>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='react-tabs-5']/div/div/div[2]/div/table/tbody/tr/td/div/label</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//td/div/label</value>
+   </webElementXpaths>
+</WebElementEntity>

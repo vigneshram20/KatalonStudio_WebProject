@@ -32,21 +32,21 @@ WebUI.click(findTestObject('Object Repository/Sprint5/span_Master Lists'))
 
 WebUI.click(findTestObject('Object Repository/Sprint5/a_Root'))
 
-WebUI.click(findTestObject('Sprint5/div_li_parameterized_ExpandCollapseIcon',[('text') :'Root' ]))
+WebUI.click(findTestObject('Sprint5/div_li_parameterized_ExpandCollapseIcon', [('text') : 'Root']))
 
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-handle'))
 
 WebUI.click(findTestObject('Sprint5/button_New Folder_List'))
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/h5_Add New Folder  List'),0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/h5_Add New Folder  List'), 0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Common Objects/img_Close'),0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Common Objects/img_Close'), 0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/button_Cancel'),0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/button_Cancel'), 0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/label_Internal Name'),0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/label_Internal Name'), 0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/label_Display Name'),0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/label_Display Name'), 0)
 
 WebUI.click(findTestObject('Object Repository/Sprint5/span_Folder'))
 
@@ -57,129 +57,148 @@ Date date = new Date()
 String expectedDate = formatter.format(date)
 
 InternalNameFolder = ('QAINFolder' + expectedDate)
+
 DisplayNameFolder = ('QADNFolder' + expectedDate)
 
 WebUI.setText(findTestObject('Sprint5/input_Internalname'), InternalNameFolder)
 
 WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input__displayName'), Keys.chord(Keys.CONTROL, Keys.chord('a')))
 
-WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input__displayName'), Keys.chord(Keys.DELETE, Keys.DELETE, Keys.DELETE))
+//WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input__displayName'), Keys.chord(Keys.DELETE, Keys.DELETE, Keys.DELETE))
 
-WebUI.setText(findTestObject('Object Repository/Sprint5/input__displayName'), DisplayNameFolder)
+WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input__displayName'), DisplayNameFolder)
 
 WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/h5_New Folder Has Been Added Successfully'),0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/h5_New Folder Has Been Added Successfully'), 0)
 
-WebUI.verifyElementPresent(findTestObject('Sprint5/p_VerifySuccessPopupText',[('text') :DisplayNameFolder ]),0)
+WebUI.verifyElementPresent(findTestObject('Sprint5/p_VerifySuccessPopupText', [('text') : DisplayNameFolder]), 0)
 
 WebUI.click(findTestObject('Object Repository/Sprint4/button_OK'))
 
-WebUI.click(findTestObject('Sprint5/a_VerifyHamburgerMenuItem',[('text') :DisplayNameFolder ]))
+WebUI.click(findTestObject('Sprint5/a_VerifyHamburgerMenuItem', [('text') : DisplayNameFolder]))
 
-WebUI.verifyElementPresent(findTestObject('Sprint5/ul_PageTopHamburgerMenu',[('text') :"Master Lists\\"+DisplayNameFolder ]),0)
+WebUI.verifyElementPresent(findTestObject('Sprint5/ul_PageTopHamburgerMenu', [('text') : 'Master Lists\\' + DisplayNameFolder]), 
+    0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/input_InternalnameVerification',[('text') : InternalNameFolder]),0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/input_InternalnameVerification', [('text') : InternalNameFolder]), 
+    0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/input__displayNameVerification',[('text') : DisplayNameFolder]),0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/input__displayNameVerification', [('text') : DisplayNameFolder]), 
+    0)
 
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-handle'))
 
-displayNameFolderEdited = DisplayNameFolder+"Edited";
-description = "QA";
+displayNameFolderEdited = (DisplayNameFolder + 'Edited')
 
-WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input__displayNameVerification',[('text') : DisplayNameFolder]), Keys.chord(Keys.CONTROL, Keys.chord('a')))
+description = 'QA'
 
-WebUI.setText(findTestObject('Object Repository/Sprint5/input__displayNameVerification',[('text') : DisplayNameFolder]), displayNameFolderEdited)
+WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input__displayNameVerification', [('text') : DisplayNameFolder]), 
+    Keys.chord(Keys.CONTROL, Keys.chord('a')))
 
-WebUI.setText(findTestObject('Sprint5/textarea_Description'),description )
+WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input__displayNameVerification', [('text') : DisplayNameFolder]), 
+    displayNameFolderEdited)
+
+WebUI.sendKeys(findTestObject('Sprint5/textarea_Description'), description)
 
 WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
 
 WebUI.click(findTestObject('Object Repository/Sprint4/button_Yes'))
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/h5_Folder Has Been Updated Successfully'),0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/h5_Folder Has Been Updated Successfully'), 0)
 
-WebUI.verifyElementPresent(findTestObject('Sprint5/p_VerifySuccessPopupText',[('text') :displayNameFolderEdited ]),0)
+WebUI.verifyElementPresent(findTestObject('Sprint5/p_VerifySuccessPopupText', [('text') : displayNameFolderEdited]), 0)
 
 WebUI.click(findTestObject('Object Repository/Sprint4/button_OK'))
 
-WebUI.click(findTestObject('Sprint5/a_VerifyHamburgerMenuItem',[('text') :displayNameFolderEdited ]))
+WebUI.click(findTestObject('Sprint5/a_VerifyHamburgerMenuItem', [('text') : displayNameFolderEdited]))
 
-WebUI.verifyElementPresent(findTestObject('Sprint5/ul_PageTopHamburgerMenu',[('text') :"Master Lists\\"+displayNameFolderEdited ]),0)
+WebUI.verifyElementPresent(findTestObject('Sprint5/ul_PageTopHamburgerMenu', [('text') : 'Master Lists\\' + displayNameFolderEdited]), 
+    0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/input_InternalnameVerification',[('text') : InternalNameFolder]),0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/input_InternalnameVerification', [('text') : InternalNameFolder]), 
+    0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/input__displayNameVerification',[('text') : displayNameFolderEdited]),0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/input__displayNameVerification', [('text') : displayNameFolderEdited]), 
+    0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/textarea_DescriptionVerification',[('text') : description]),0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/textarea_DescriptionVerification', [('text') : description]), 
+    0)
 
-WebUI.click(findTestObject('Object Repository/Sprint5/span_Edit Mode_toggle_btn-label'))
+WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 WebUI.click(findTestObject('Sprint5/button_New Folder_List'))
 
 WebUI.click(findTestObject('Object Repository/Sprint5/span_List'))
 
 InternalNameList = ('QAINList' + expectedDate)
+
 DisplayNameList = ('QADNList' + expectedDate)
 
-WebUI.setText(findTestObject('Sprint5/input_Internalname'), InternalNameList)
+WebUI.sendKeys(findTestObject('Sprint5/input_Internalname'), InternalNameList)
 
 WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input__displayName'), Keys.chord(Keys.CONTROL, Keys.chord('a')))
 
-WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input__displayName'), Keys.chord(Keys.DELETE, Keys.DELETE, Keys.DELETE))
+//WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input__displayName'), Keys.chord(Keys.DELETE, Keys.DELETE, Keys.DELETE))
 
-WebUI.setText(findTestObject('Object Repository/Sprint5/input__displayName'), DisplayNameList)
+WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input__displayName'), DisplayNameList)
 
-WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
+WebUI.click(findTestObject('Object Repository/Sprint5/button_Popup_Save'))
 
 WebUI.click(findTestObject('Object Repository/Sprint5/h5_New List Has Been Added Successfully'))
 
-WebUI.verifyElementPresent(findTestObject('Sprint5/p_VerifySuccessPopupText',[('text') :DisplayNameList ]),0)
+WebUI.verifyElementPresent(findTestObject('Sprint5/p_VerifySuccessPopupText', [('text') : DisplayNameList]), 0)
 
 WebUI.click(findTestObject('Object Repository/Sprint4/button_OK'))
 
-WebUI.click(findTestObject('Sprint5/a_VerifyHamburgerMenuItem',[('text') :displayNameFolderEdited ]))
+WebUI.click(findTestObject('Sprint5/a_VerifyHamburgerMenuItem', [('text') : displayNameFolderEdited]))
 
-WebUI.click(findTestObject('Sprint5/div_li_parameterized_ExpandCollapseIcon',[('text') :displayNameFolderEdited ]))
+WebUI.click(findTestObject('Sprint5/div_li_parameterized_ExpandCollapseIcon', [('text') : displayNameFolderEdited]))
 
-WebUI.click(findTestObject('Sprint5/a_VerifyHamburgerMenuItem',[('text') :DisplayNameList ]))
+WebUI.click(findTestObject('Sprint5/a_VerifyHamburgerMenuItem', [('text') : DisplayNameList]))
 
-WebUI.verifyElementPresent(findTestObject('Sprint5/ul_PageTopHamburgerMenu',[('text') :"Master Lists\\"+displayNameFolderEdited +"\\"+DisplayNameList]),0)
+WebUI.verifyElementPresent(findTestObject('Sprint5/ul_PageTopHamburgerMenu', [('text') : (('Master Lists\\' + displayNameFolderEdited) + 
+            '\\') + DisplayNameList]), 0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/input_InternalnameVerification',[('text') : InternalNameList]),0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/input_InternalnameVerification', [('text') : InternalNameList]), 
+    0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/input__displayNameVerification',[('text') : DisplayNameList]),0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/input__displayNameVerification', [('text') : DisplayNameList]), 
+    0)
 
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-handle'))
 
-displayNameListEdited = DisplayNameList+"Edited";
-list1= 'Test 1';
-list2= 'Test 2';
+displayNameListEdited = (DisplayNameList + 'Edited')
 
-WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input__displayNameVerification',[('text') : DisplayNameList]), Keys.chord(Keys.CONTROL, Keys.chord('a')))
+list1 = 'Test 1'
 
-WebUI.setText(findTestObject('Object Repository/Sprint5/input__displayNameVerification',[('text') : DisplayNameList]), displayNameListEdited)
+list2 = 'Test 2'
 
-WebUI.setText(findTestObject('Sprint5/textarea_Description'),description )
+WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input__displayNameVerification', [('text') : DisplayNameList]), 
+    Keys.chord(Keys.CONTROL, Keys.chord('a')))
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/p_Entries'),0)
+WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input__displayNameVerification', [('text') : DisplayNameList]), 
+    displayNameListEdited)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/th_Available for Selection'),0)
+WebUI.sendKeys(findTestObject('Sprint5/textarea_Description'), description)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/th_Removed from selection list'),0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/p_Entries'), 0)
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/th_Available for Selection'), 0)
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/th_Removed from selection list'), 0)
 
 WebUI.click(findTestObject('Object Repository/Sprint5/div_Add to Selection'))
 
-WebUI.setText(findTestObject('Object Repository/Sprint5/input'), list1)
+WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input'), list1)
 
-WebUI.click(findTestObject('Sprint5/checkbox_selection list_checkbox_label'))
+WebUI.clickOffset(findTestObject('Sprint5/checkbox_selection list_checkbox_label'), 0, 4)
 
 WebUI.click(findTestObject('Sprint5/button_MoveToRight'))
 
 WebUI.click(findTestObject('Object Repository/Sprint5/div_Add to Selection'))
 
-WebUI.setText(findTestObject('Object Repository/Sprint5/input'), list2)
+WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input'), list2)
 
 WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
 
@@ -187,19 +206,24 @@ WebUI.click(findTestObject('Object Repository/Sprint4/button_Yes'))
 
 WebUI.click(findTestObject('Object Repository/Sprint5/h5_Master List Has Been Updated Successfully'))
 
-WebUI.verifyElementPresent(findTestObject('Sprint5/p_VerifySuccessPopupText',[('text') :displayNameListEdited ]),0)
+WebUI.verifyElementPresent(findTestObject('Sprint5/p_VerifySuccessPopupText', [('text') : displayNameListEdited]), 0)
 
 WebUI.click(findTestObject('Object Repository/Sprint4/button_OK'))
 
-WebUI.click(findTestObject('Sprint5/a_VerifyHamburgerMenuItem',[('text') :displayNameListEdited ]))
+WebUI.click(findTestObject('Sprint5/a_VerifyHamburgerMenuItem', [('text') : displayNameListEdited]))
 
-WebUI.verifyElementPresent(findTestObject('Sprint5/ul_PageTopHamburgerMenu',[('text') :"Master Lists\\"+displayNameFolderEdited +"\\"+displayNameListEdited]),0)
+WebUI.verifyElementPresent(findTestObject('Sprint5/ul_PageTopHamburgerMenu', [('text') : (('Master Lists\\' + displayNameFolderEdited) + 
+            '\\') + displayNameListEdited]), 0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/input_InternalnameVerification',[('text') : InternalNameList]),0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/input_InternalnameVerification', [('text') : InternalNameList]), 
+    0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/input__displayNameVerification',[('text') : displayNameListEdited]),0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/input__displayNameVerification', [('text') : displayNameListEdited]), 
+    0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/textarea_DescriptionVerification',[('text') : description]),0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/textarea_DescriptionVerification', [('text') : description]), 
+    0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/div_td_parameterized_table_verification',[('param1') : list2 , ('param2') : list1]),0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/div_td_parameterized_table_verification', [('param1') : list2
+            , ('param2') : list1]), 0)
 

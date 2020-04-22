@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//th[(text() = 'Removed from selection list' or . = 'Removed from selection list')]</value>
+         <value>//th[(text() = 'Removed from Selection List' or . = 'Removed from Selection List')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -24,7 +24,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Removed from selection list</value>
+      <value>Removed from Selection List</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

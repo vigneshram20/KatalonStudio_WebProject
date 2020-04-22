@@ -9,6 +9,10 @@
          <key>BASIC</key>
          <value>//button[(text() = 'Save' or . = 'Save')]</value>
       </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//button[@type='submit']</value>
+      </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>

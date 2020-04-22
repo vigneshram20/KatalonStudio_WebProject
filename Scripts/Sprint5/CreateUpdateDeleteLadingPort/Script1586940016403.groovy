@@ -25,13 +25,15 @@ WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : Glo
 'Login the application and verify the homepage'
 WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Common/NavigateToLadingPortPage'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : 'Lading Port'], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Object Repository/Sprint5/a_Create New Lading Port'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/h5_Create New Lading Port'), 0)
 
 WebUI.verifyElementPresent(findTestObject('Sprint5/strong_General Attributes'), 0)
+
+
 
 SimpleDateFormat formatter = new SimpleDateFormat('ddMMMyyHHmmss')
 
@@ -86,7 +88,7 @@ ladingPortNameEdited = (ladingPortName + 'Edited')
 
 ladingPortDescEdited = (ladingPortDesc + 'Edited')
 
-transitTimeEdited = "13"
+transitTimeEdited = '13'
 
 WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input__ladingportdescription'), Keys.chord(Keys.CONTROL, Keys.chord(
             'a')))
@@ -135,7 +137,12 @@ WebUI.click(findTestObject('Sprint5/button_Yes'))
 
 WebUI.click(findTestObject('Sprint5/h5_Successfully Deleted'))
 
-WebUI.verifyElementPresent(findTestObject('Sprint5/p_Parameterized has been deleted',[('text'):ladingPortNameEdited]), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint5/p_Parameterized has been deleted', [('text') : ladingPortNameEdited]), 
+    0)
 
 WebUI.click(findTestObject('Sprint5/button_OK'))
+
+WebUI.verifyElementNotPresent(findTestObject('Sprint5/div_ActionsParam_LadingPort', [('index1') : countryIDEdited, ('index2') : ladingPortDescEdited
+            , ('index3') : ladingPortIDEdited, ('index4') : launchDate, ('index5') : ladingPortNameEdited, ('index6') : price
+            , ('index7') : transitTimeEdited]), 0)
 

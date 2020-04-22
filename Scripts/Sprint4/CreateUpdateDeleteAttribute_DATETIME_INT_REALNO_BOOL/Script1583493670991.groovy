@@ -41,7 +41,42 @@ WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
 'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
-WebUI.delay(1)
+WebUI.delay(2)
+
+List<WebElement> listOfExistingElements = WebUI.findWebElements(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized',[('internalName'):InternalName]),
+	1)
+
+for (WebElement checkbox : listOfExistingElements) {
+	Thread.sleep(100)
+
+	checkbox.click()
+
+	 'Scroll To Manage Layout button'
+    WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
+
+    WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
+
+    WebUI.delay(1)
+
+    'Click Remove icon'
+    WebUI.click(findTestObject('Sprint4/img_Attributes_remove-icon'))
+
+    WebUI.delay(2)
+
+    'Verify Header'
+    WebUI.verifyElementPresent(findTestObject('Sprint4/div_DeleteNote'), 10)
+
+    'Click Save and Verify Success Popup'
+    WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
+	
+	WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_UP))
+	
+		WebUI.delay(1)
+		
+	'Click Edit Mode Toggle button'
+	WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+}
+
 
 'Click Add icon -Attributes'
 WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))

@@ -15,27 +15,9 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.enableSmartWait()
 
-'Verify Logo'
-WebUI.verifyElementVisible(findTestObject('Common Objects/img_LogoMain'))
-
-WebUI.delay(1)
-
-'Click Hamburger menu'
-WebUI.click(findTestObject('Common Objects/img_HamburgerMenu'))
-
-WebUI.delay(1)
-
-'Click Library menu'
-WebUI.click(findTestObject('Sprint1/LandingPage/a_Library'))
-
-WebUI.delay(1)
-
-'Click Seasons sub menu'
-WebUI.click(findTestObject('Sprint1/LandingPage/a_Season'))
-
-WebUI.delay(1)
+WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : 'Seasons'],
+	FailureHandling.STOP_ON_FAILURE)
 
 'Verify Manage Seasons Page Title'
 WebUI.verifyElementPresent(findTestObject('Sprint1/Manage Season Page/div_Manage Seasons'), 

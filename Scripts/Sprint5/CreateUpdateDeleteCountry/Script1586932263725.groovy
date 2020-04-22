@@ -23,17 +23,17 @@ WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : Glo
 
 WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Common/NavigateToCountriesPage'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : 'Countries'], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Object Repository/Sprint5/a_Create New Country'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/h5_Create New Country'), 0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/strong_General Attributes'), 0)
+not_run:WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/strong_General Attributes'), 0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/label_Country ID'), 0)
+not_run:WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/label_Country ID'), 0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/label_Countryname'), 0)
+not_run:WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/label_Countryname'), 0)
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/a_Cancel'), 0)
 
@@ -93,7 +93,7 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/h5_Delete')
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/p_Confirm deletion of the following Country'), 0)
 
-not_run:WebUI.verifyElementPresent(findTestObject('Sprint5/p_parameterized',[('text'):countryNameEdited]), 0)
+not_run: WebUI.verifyElementPresent(findTestObject('Sprint5/p_parameterized', [('text') : countryNameEdited]), 0)
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/p_This action cannot be undone'), 0)
 

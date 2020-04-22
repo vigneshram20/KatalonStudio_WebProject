@@ -6,12 +6,12 @@
    <elementGuidId>88a2a157-65b7-468d-89e5-f5777fee8e56</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//button[@data-dismiss = 'modal' and (text() = 'Cancel' or . = 'Cancel')]</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//div[@id='createNewSeason']/div/div/div[3]/a</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[(text() = 'Cancel' or . = 'Cancel')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -21,10 +21,10 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>button</value>
+      <value>a</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>data-dismiss</name>
       <type>Main</type>

@@ -15,18 +15,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.enableSmartWait()
-
-'Click Hamburger Menu'
-WebUI.click(findTestObject('Common Objects/img_HamburgerMenu'))
-
-WebUI.delay(1)
-
-'Click Administration menu'
-WebUI.click(findTestObject('Object Repository/Sprint3/a_Administration'))
-
-'CLick Attribute Management menu'
-WebUI.click(findTestObject('Object Repository/Sprint3/a_Type  Attribute Management'))
+WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Administration', ('SubMenuItem') : 'Type & Attribute Management'], 
+    FailureHandling.STOP_ON_FAILURE)
 
 'Verify Page Header Administration'
 WebUI.click(findTestObject('Object Repository/Sprint3/div_Administration'))
