@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>img_USERS_img-icon_1</name>
+   <name>img_1 (1)</name>
    <tag></tag>
-   <elementGuidId>e4795698-431f-4cf6-ab29-74f44c0a458f</elementGuidId>
+   <elementGuidId>d82c5386-f49c-4ecf-9b05-ad6fed8d98b0</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -18,48 +18,41 @@
       <matchCondition>equals</matchCondition>
       <name>src</name>
       <type>Main</type>
-      <value>/static/media/trash.fc7f80fb.svg</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>class</name>
-      <type>Main</type>
-      <value>img-icon</value>
+      <value>/static/media/arrow_down.9967c09b.svg</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>title</name>
       <type>Main</type>
-      <value>Delete User</value>
+      <value>down</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;react-tabs-5&quot;)/div[@class=&quot;userRole_user_list_wrapper__1A58E&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col-12&quot;]/div[@class=&quot;table-responsive table_generic&quot;]/caption[@class=&quot;table-responsive&quot;]/span[@class=&quot;symbolButton_link_controls_signs__2kgMB&quot;]/ul[1]/li[2]/img[@class=&quot;img-icon&quot;]</value>
+      <value>id(&quot;react-tabs-3&quot;)/div[@class=&quot;userRole_permission_list_wrapper__b6xvz&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;userRole_table_Scroll__nYmSj col-12 table-responsive&quot;]/table[@class=&quot;userRole_expend_table__20HeJ&quot;]/tbody[1]/tr[2]/td[4]/div[@class=&quot;checkbox&quot;]/div[@class=&quot;userRole_dropdown__3ATxD&quot;]/img[1]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='react-tabs-5']/div/div/div/div/caption/span[2]/ul/li[2]/img</value>
+      <value>//div[@id='react-tabs-3']/div/div/div[2]/table/tbody/tr[2]/td[4]/div/div/img</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:img</name>
       <type>Main</type>
-      <value>//img[@title='Delete User']</value>
+      <value>//img[@title='down']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//li[2]/img</value>
+      <value>//td[4]/div/div/img</value>
    </webElementXpaths>
 </WebElementEntity>

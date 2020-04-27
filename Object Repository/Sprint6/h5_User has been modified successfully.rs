@@ -4,10 +4,16 @@
    <name>h5_User has been modified successfully</name>
    <tag></tag>
    <elementGuidId>76981916-fff6-4d6d-aab4-7c5d0c95bc07</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//h5[(text() = 'User(s) has been modified successfully.' or . = 'User(s) has been modified successfully.')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
@@ -25,7 +31,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>User has been modified successfully.</value>
+      <value>User(s) has been modified successfully.</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

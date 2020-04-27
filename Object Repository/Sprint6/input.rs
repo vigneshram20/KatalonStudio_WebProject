@@ -1,71 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>img_USERS_img-icon</name>
+   <name>input</name>
    <tag></tag>
-   <elementGuidId>3e6fcf8d-8764-427a-813b-792e1410249b</elementGuidId>
-   <selectorCollection>
-      <entry>
-         <key>BASIC</key>
-         <value>//img[@title = 'Add/Edit User']</value>
-      </entry>
-   </selectorCollection>
+   <elementGuidId>9d6ca76e-d959-4e45-8f97-c5b1f808f1ea</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>img</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>src</name>
-      <type>Main</type>
-      <value>/static/media/plus.6ea051be.svg</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>class</name>
-      <type>Main</type>
-      <value>img-icon</value>
+      <value>input</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>title</name>
+      <name>type</name>
       <type>Main</type>
-      <value>Add/Edit User</value>
+      <value>text</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>placeholder</name>
+      <type>Main</type>
+      <value>Looking for a role</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;react-tabs-5&quot;)/div[@class=&quot;userRole_user_list_wrapper__1A58E&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col-12&quot;]/div[@class=&quot;table-responsive table_generic&quot;]/caption[@class=&quot;table-responsive&quot;]/span[@class=&quot;symbolButton_link_controls_signs__2kgMB&quot;]/ul[1]/li[1]/img[@class=&quot;img-icon&quot;]</value>
+      <value>id(&quot;react-tabs-1&quot;)/div[@class=&quot;userRole_rolesList__Mpwex&quot;]/div[@class=&quot;userRole_userRole_wrapper__2razL&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col-12&quot;]/div[@class=&quot;table-responsive table_generic&quot;]/caption[@class=&quot;table-responsive&quot;]/span[@class=&quot;symbolButton_link_controls_signs__2kgMB&quot;]/div[@class=&quot;searchInput_search__3xCVw userRole_search_box__3dXLp&quot;]/input[1]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:idRelative</name>
+      <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//div[@id='react-tabs-5']/div/div/div/div/caption/span[2]/ul/li/img</value>
+      <value>//input[@value='']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:img</name>
+      <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//img[@title='Add/Edit User']</value>
+      <value>//div[@id='react-tabs-1']/div/div/div/div/div/caption/span[2]/div/input</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//li/img</value>
+      <value>//div/input</value>
    </webElementXpaths>
 </WebElementEntity>

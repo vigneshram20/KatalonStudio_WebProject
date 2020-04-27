@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_USERS_searchInput_search__3xCVw</name>
+   <name>label_PT Business Administrator_checkbox_la_edbee9</name>
    <tag></tag>
-   <elementGuidId>dad8d6c5-3970-4982-83e9-627744e084ab</elementGuidId>
+   <elementGuidId>1841842b-8260-4f32-b95f-84ee865a0a1e</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -11,55 +11,41 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>input</value>
+      <value>label</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>type</name>
+      <name>for</name>
       <type>Main</type>
-      <value>text</value>
+      <value>QATEST</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>searchInput_search__3xCVw</value>
+      <value>checkbox_label userRole_roles_checkbox_label__piej3 </value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>placeholder</name>
-      <type>Main</type>
-      <value>Looking for a user</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;react-tabs-5&quot;)/div[@class=&quot;userRole_user_list_wrapper__1A58E&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col-12&quot;]/div[@class=&quot;table-responsive table_generic&quot;]/caption[@class=&quot;table-responsive&quot;]/span[@class=&quot;symbolButton_link_controls_signs__2kgMB&quot;]/input[@class=&quot;searchInput_search__3xCVw&quot;]</value>
+      <value>id(&quot;react-tabs-1&quot;)/div[@class=&quot;userRole_rolesList__Mpwex&quot;]/div[@class=&quot;userRole_userRole_wrapper__2razL&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col-12&quot;]/div[@class=&quot;table_body_scroll&quot;]/table[@class=&quot;userRole_permission_table__z2XS4&quot;]/tbody[1]/tr[6]/td[@class=&quot;text-center&quot;]/div[@class=&quot;checkbox&quot;]/label[@class=&quot;checkbox_label userRole_roles_checkbox_label__piej3&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:attributes</name>
-      <type>Main</type>
-      <value>//input[@value='']</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='react-tabs-5']/div/div/div/div/caption/span[2]/input</value>
+      <value>//div[@id='react-tabs-1']/div/div/div/div[2]/div/table/tbody/tr[6]/td/div/label</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//span[2]/input</value>
+      <value>//tr[6]/td/div/label</value>
    </webElementXpaths>
 </WebElementEntity>

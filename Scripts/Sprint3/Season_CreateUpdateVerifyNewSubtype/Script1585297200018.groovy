@@ -29,6 +29,11 @@ WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], F
 
 WebUI.callTestCase(findTestCase('Common/NavigateToTypeAndAttributeManagement'), [:], FailureHandling.STOP_ON_FAILURE)
 
+WebUI.delay(1)
+
+'CLick Attribute Management menu'
+WebUI.click(findTestObject('Sprint4/a_Manage Types'))
+
 'Click Season sub menu'
 WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
 

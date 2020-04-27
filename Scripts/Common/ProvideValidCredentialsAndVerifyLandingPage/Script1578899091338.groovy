@@ -27,5 +27,5 @@ WebUI.click(findTestObject('Sprint1/LoginPage/button_Login'))
 WebUI.enableSmartWait()
 
 'Verify Page Under Construction Message'
-WebUI.click(findTestObject('Sprint1/LandingPage/div_Page Under Construction'))
+not_run: WebUI.click(findTestObject('Sprint1/LandingPage/div_Page Under Construction'))
 

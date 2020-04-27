@@ -62,7 +62,7 @@ class customKeywords {
 
 		String dateFormatted = formatter.format(date)
 
-		return dateFormat+inputName
+		return inputName+dateFormatted
 	}
 
 	/**

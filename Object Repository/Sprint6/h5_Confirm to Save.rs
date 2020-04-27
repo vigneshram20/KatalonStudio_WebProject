@@ -4,10 +4,16 @@
    <name>h5_Confirm to Save</name>
    <tag></tag>
    <elementGuidId>29de762c-b351-43c3-976f-837ea58b560e</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//h5[(text() = 'Confirm to Save' or . = 'Confirm to Save')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>

@@ -49,7 +49,7 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/th_ROLE(s) 
 
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
-WebUI.click(findTestObject('Object Repository/Sprint6/img_USERS_img-icon'))
+WebUI.click(findTestObject('Sprint6/img_USERS_img-icon_Add'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_Create New User'), 0)
 
@@ -75,19 +75,31 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/label_Statu
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/a_Retrieve active directory'), 0)
 
-String userID = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA', '')
+String userID = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA', 'ss')
 
-WebUI.setText(findTestObject('Object Repository/Sprint6/input__userId'), 'qa1')
+String userIDEdited = userID + 'Edited'
 
-WebUI.setText(findTestObject('Object Repository/Sprint6/input_Display Name_displayName'), 'QA TEST PHTN')
+String displayName = 'QA Automation' + userID
 
-WebUI.setText(findTestObject('Object Repository/Sprint6/input__firstName'), 'QA TEST PHTN')
+String displayNameEdited = displayName + 'Edited'
 
-WebUI.setText(findTestObject('Object Repository/Sprint6/input__lastName'), 'QA TEST PHTN')
+String firstName = 'QA'
 
-WebUI.setText(findTestObject('Object Repository/Sprint6/input__email'), 'QA2@WSGC.COM')
+String lastName = 'Automation'
 
-WebUI.setText(findTestObject('Object Repository/Sprint6/input_Contact Number_phone'), '987')
+String emailID = 'qatest@photoninfotech.net'
+
+String contactNo = '987'
+
+WebUI.setText(findTestObject('Object Repository/Sprint6/input__userId'), userID)
+
+WebUI.setText(findTestObject('Object Repository/Sprint6/input__firstName'), firstName)
+
+WebUI.setText(findTestObject('Object Repository/Sprint6/input__lastName'), lastName)
+
+WebUI.setText(findTestObject('Object Repository/Sprint6/input__email'), emailID)
+
+WebUI.setText(findTestObject('Object Repository/Sprint6/input_Contact Number_phone'), contactNo)
 
 WebUI.click(findTestObject('Object Repository/Sprint6/span_Active'))
 
@@ -95,29 +107,42 @@ WebUI.click(findTestObject('Object Repository/Sprint6/button_Create'))
 
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Save'))
 
-WebUI.click(findTestObject('Object Repository/Sprint6/h5_Confirm to Save'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_Confirm to Save'), 0)
 
-WebUI.rightClick(findTestObject('Object Repository/Sprint6/button_No'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/button_No'), 0)
 
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Yes'))
 
-WebUI.rightClick(findTestObject('Object Repository/Sprint6/h5_User has been modified successfully'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_User has been modified successfully'), 0)
 
 WebUI.click(findTestObject('Object Repository/Sprint6/button_OK'))
 
-WebUI.click(findTestObject('Object Repository/Sprint6/span_Edit Mode_toggle_btn-label'))
+WebUI.scrollToElement(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-handle'), 0)
 
-WebUI.setText(findTestObject('Object Repository/Sprint6/input_USERS_searchInput_search__3xCVw'), 'QA2')
+WebUI.sendKeys(findTestObject('Object Repository/Sprint6/li_Users'), Keys.chord(Keys.PAGE_UP))
 
-WebUI.click(findTestObject('Object Repository/Sprint6/label_STATUS_checkbox_label userRole_roles__106439'))
+WebUI.delay(1)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/img_USERS_img-icon'))
+WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-handle'))
 
-WebUI.rightClick(findTestObject('Object Repository/Sprint6/h5_Update User'))
+WebUI.setText(findTestObject('Sprint6/input_USERS_searchInput'), userID)
 
-WebUI.setText(findTestObject('Object Repository/Sprint6/input__userId'), 'qa2')
+//td[2][.='vs1']/..//td[3][.='Vigneshram S']/..//td[4][.='Vigneshram']/..//td[5][.='S']/..//td[6][.='vs1@wsgc.com']/..//td[7][.='']/..//td[8][.]/..//td[9][.='Active']/..//td[1]
+WebUI.click(findTestObject('Object Repository/Sprint6/div_td_user_table_verification', [('userID') : userID, ('fullName') : (firstName + 
+            ' ') + lastName, ('firstName') : firstName, ('lastName') : lastName, ('emailID') : emailID, ('contactNo') : contactNo
+            , ('status') : 'Active']))
 
-WebUI.click(findTestObject('Object Repository/Sprint6/input_Display Name_displayName'))
+WebUI.click(findTestObject('Sprint6/img_USERS_img-icon_Add'))
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_Update User'), 0)
+
+WebUI.sendKeys(findTestObject('Object Repository/Sprint6/input__userId'), Keys.chord(Keys.CONTROL, Keys.chord('a')))
+
+WebUI.setText(findTestObject('Object Repository/Sprint6/input__userId'), userIDEdited)
+
+WebUI.setText(findTestObject('Object Repository/Sprint6/input_Display Name_displayName'), displayName)
+
+/*WebUI.click(findTestObject('Object Repository/Sprint6/input_Display Name_displayName'))
 
 WebUI.click(findTestObject('Object Repository/Sprint6/input__firstName'))
 
@@ -125,39 +150,46 @@ WebUI.click(findTestObject('Object Repository/Sprint6/input__lastName'))
 
 WebUI.click(findTestObject('Object Repository/Sprint6/input__email'))
 
-WebUI.click(findTestObject('Object Repository/Sprint6/input_Contact Number_phone'))
-
+WebUI.click(findTestObject('Object Repository/Sprint6/input_Contact Number_phone'))*/
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Save'))
 
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Save'))
 
-WebUI.rightClick(findTestObject('Object Repository/Sprint6/h5_Confirm to Save'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_Confirm to Save'), 0)
 
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Yes'))
 
-WebUI.rightClick(findTestObject('Object Repository/Sprint6/h5_User has been modified successfully'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_User has been modified successfully'), 0)
 
 WebUI.click(findTestObject('Object Repository/Sprint6/button_OK'))
 
-WebUI.click(findTestObject('Object Repository/Sprint6/span_Edit Mode_toggle_btn-handle'))
+WebUI.refresh()
 
-WebUI.click(findTestObject('Object Repository/Sprint6/label_Active_checkbox_label userRole_roles__5fe63f'))
+WebUI.delay(2)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/img_USERS_img-icon_1'))
+WebUI.click(findTestObject('Object Repository/Sprint6/li_Users'))
 
-WebUI.rightClick(findTestObject('Object Repository/Sprint6/div_One or more users have been marked for _b68117'))
+WebUI.click(findTestObject('Sprint3/span_Edit Mode_toggle_btn-handle'))
+
+WebUI.click(findTestObject('Object Repository/Sprint6/div_td_user_table_verification', [('userID') : userIDEdited, ('fullName') : displayName
+            , ('firstName') : firstName, ('lastName') : lastName, ('emailID') : emailID, ('contactNo') : contactNo, ('status') : 'Active']))
+
+WebUI.click(findTestObject('Sprint6/img_USERS_img-icon_Delete'))
+
+WebUI.verifyElementPresent(findTestObject('Sprint6/div_One or more users have been marked'), 0)
 
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Save'))
 
-WebUI.rightClick(findTestObject('Object Repository/Sprint6/h5_Confirm to Save'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_Confirm to Save'), 0)
 
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Yes'))
 
-WebUI.rightClick(findTestObject('Object Repository/Sprint6/h5_User has been modified successfully'))
-
-WebUI.click(findTestObject('Object Repository/Sprint6/div_OK'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_User has been modified successfully'), 0)
 
 WebUI.click(findTestObject('Object Repository/Sprint6/button_OK'))
 
-WebUI.closeBrowser()
+WebUI.verifyElementNotPresent(findTestObject('Object Repository/Sprint6/div_td_user_table_verification', [('userID') : userIDEdited
+            , ('fullName') : displayName, ('firstName') : firstName, ('lastName') : lastName, ('emailID') : emailID, ('contactNo') : contactNo
+            , ('status') : 'Active']), 0)
+
 
