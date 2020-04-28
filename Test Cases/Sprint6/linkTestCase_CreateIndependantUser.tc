@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>linkTestCase_CreateIndependantUser</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>87545021-d1b9-4f6a-844d-cba3d18d1044</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>49b79436-16fe-46eb-ad6c-7540d33e4452</id>
+      <masked>false</masked>
+      <name>userID</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>bd4929b6-b8a3-476d-8692-6acc4d6799c9</id>
+      <masked>false</masked>
+      <name>firstName</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>aec97a80-eaad-423d-a1f3-d1b3bcb3544c</id>
+      <masked>false</masked>
+      <name>lastName</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>83d7bbb3-3aa9-452e-9e85-1ed918af402e</id>
+      <masked>false</masked>
+      <name>emailID</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>276253fa-f1bd-468d-adaa-78721a2e4903</id>
+      <masked>false</masked>
+      <name>contactNo</name>
+   </variable>
+</TestCaseEntity>
