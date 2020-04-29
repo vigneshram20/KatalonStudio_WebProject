@@ -19,8 +19,8 @@
          <combinationType>ONE</combinationType>
          <id>46431622-7ecd-4f16-93b9-2c06b2e87d0a</id>
          <iterationEntity>
-            <iterationType>RANGE</iterationType>
-            <value>1-7</value>
+            <iterationType>SPECIFIC</iterationType>
+            <value>7</value>
          </iterationEntity>
          <testDataId>Data Files/CreateAttribute</testDataId>
       </testDataLink>

@@ -37,7 +37,7 @@ WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
 'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
-WebUI.delay(2)
+WebUI.delay(10)
 
 List<WebElement> listOfExistingElements = WebUI.findWebElements(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized',[('internalName'):InternalName]),
 	1)
@@ -294,11 +294,11 @@ if (DataType.equals('String')) {
 
     columnXpath2 = (((((((((((((((((('/..//td[11][.="' + EditableOnUpdate) + '"]/..//td[12][.="') + MassChangeable) + '"]/..//td[13][.="') + 
     TableEditable) + '"]/..//td[14][.="') + TableWrappable) + '"]/..//td[15][.="') + TableMinWrapWidth) + '"]/..//td[16][.="') + 
-    Formula) + '"]/..//td[17][.="') + Required) + '"]/..//td[18][.="') + DefaultValue) + '"]/..//td[19][.=\'0\']/..//td[20][.="') + 
+    Formula) + '"]/..//td[17][.="') + Required) + '"]/..//td[18][.="') + DefaultValue) + '"]/..//td[19][.="No"]/..//td[20][.="') + 
     Unique) + '"]')
 
     columnXpath3 = (((((((('/..//td[21][.="' + ElementWidth) + '"]/..//td[22][.="') + ElementHeight) + '"]/..//td[23][.=\'From : ') + 
-    StringLengthFrom) + ' And To: ') + StringLengthTo) + '\']/..//td[24][.=\'0\']/..//td[25][.=\'0\']/..//td[26][.=\'\']/..//td[27][text()]/..//td[28][.=\'\']/..//td[29][.=\'\']/..//td[30][.=\'\']')
+    StringLengthFrom) + ' And To: ') + StringLengthTo) + '\']/..//td[24][.=""]/..//td[25][.=""]/..//td[26][.=""]/..//td[27][text()]/..//td[28][.=\'\']/..//td[29][.=\'\']/..//td[30][.=\'\']')
 
     columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.="'+inputfieldtypeXpath+'"]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + DataType) + 
     '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
@@ -468,11 +468,11 @@ if (DataType.equals('String')) {
 
     columnXpath2 = (((((((((((((((((('/..//td[11][.="' + EditableOnUpdate) + '"]/..//td[12][.="') + MassChangeable) + '"]/..//td[13][.="') + 
     TableEditable) + '"]/..//td[14][.="') + TableWrappable) + '"]/..//td[15][.="') + TableMinWrapWidth) + '"]/..//td[16][.="') + 
-    Formula) + '"]/..//td[17][.="') + Required) + '"]/..//td[18][.="') + DefaultValue) + '"]/..//td[19][.=\'0\']/..//td[20][.="') + 
+    Formula) + '"]/..//td[17][.="') + Required) + '"]/..//td[18][.="') + DefaultValue) + '"]/..//td[19][.="No"]/..//td[20][.="') + 
     Unique) + '"]')
 
     columnXpath3 = (((((((('/..//td[21][.="' + ElementWidth) + '"]/..//td[22][.="') + ElementHeight) + '"]/..//td[23][.=\'From : ') + 
-    StringLengthFrom) + ' And To: ') + StringLengthTo) + '\']/..//td[24][.=\'0\']/..//td[25][.=\'0\']/..//td[26][.=\'\']/..//td[27][text()]/..//td[28][.=\'\']/..//td[29][.=\'\']/..//td[30][.=\'\']')
+    StringLengthFrom) + ' And To: ') + StringLengthTo) + '\']/..//td[24][.=""]/..//td[25][.=""]/..//td[26][.=""]/..//td[27][text()]/..//td[28][.=\'\']/..//td[29][.=\'\']/..//td[30][.=\'\']')
 
     columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.="'+inputfieldtypeXpath+'"]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + DataType) + 
     '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
