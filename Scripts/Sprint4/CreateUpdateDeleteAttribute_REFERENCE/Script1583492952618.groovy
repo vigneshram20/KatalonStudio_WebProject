@@ -34,7 +34,7 @@ WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
 'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
-WebUI.delay(2)
+WebUI.delay(5)
 
 List<WebElement> listOfExistingElements = WebUI.findWebElements(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized',[('internalName'):InternalName]),
 	1)

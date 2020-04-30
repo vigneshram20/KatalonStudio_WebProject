@@ -32,8 +32,8 @@ String emailID = 'qatest@photoninfotech.net'
 
 String contactNo = '987'
 
-WebUI.callTestCase(findTestCase('Sprint6/linkTestCase_CreateIndependantUser'), [('userID') : userID, ('firstName') : firstName, ('lastName') : lastName
-        , ('emailID') : emailID, ('contactNo') : contactNo], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Sprint6/linkTestCase_CreateIndependantUser'), [('userID') : userID, ('firstName') : firstName
+        , ('lastName') : lastName, ('emailID') : emailID, ('contactNo') : contactNo], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Save'))
 
@@ -55,12 +55,14 @@ WebUI.delay(1)
 
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-handle'))
 
-WebUI.setText(findTestObject('Sprint6/input_USERS_searchInput'), userID)
+not_run: WebUI.setText(findTestObject('Sprint6/input_USERS_searchInput'), userID)
 
 //td[2][.='vs1']/..//td[3][.='Vigneshram S']/..//td[4][.='Vigneshram']/..//td[5][.='S']/..//td[6][.='vs1@wsgc.com']/..//td[7][.='']/..//td[8][.]/..//td[9][.='Active']/..//td[1]
 WebUI.click(findTestObject('Object Repository/Sprint6/div_td_user_table_verification', [('userID') : userID, ('fullName') : (firstName + 
             ' ') + lastName, ('firstName') : firstName, ('lastName') : lastName, ('emailID') : emailID, ('contactNo') : contactNo
             , ('status') : 'Active']))
+
+WebUI.scrollToElement(findTestObject('Object Repository/Sprint6/li_Users'), 0)
 
 WebUI.click(findTestObject('Sprint6/img_USERS_img-icon_Add'))
 
@@ -103,6 +105,8 @@ WebUI.click(findTestObject('Sprint3/span_Edit Mode_toggle_btn-handle'))
 
 WebUI.click(findTestObject('Object Repository/Sprint6/div_td_user_table_verification', [('userID') : userIDEdited, ('fullName') : displayName
             , ('firstName') : firstName, ('lastName') : lastName, ('emailID') : emailID, ('contactNo') : contactNo, ('status') : 'Active']))
+
+WebUI.scrollToElement(findTestObject('Object Repository/Sprint6/li_Users'), 0)
 
 WebUI.click(findTestObject('Sprint6/img_USERS_img-icon_Delete'))
 

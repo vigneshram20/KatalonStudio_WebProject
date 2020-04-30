@@ -65,7 +65,7 @@ WebUI.click(findTestObject('Object Repository/Sprint6/button_Continue'))
 
 WebUI.verifyElementVisible(findTestObject('Object Repository/Sprint6/h5_Manage Views  Create new Custom View'))
 
-String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QACustomView', 'ddMMMyyHHmmss')
+String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QACV', 'ddMMMyyHHmmss')
 
 WebUI.setText(findTestObject('Sprint6/input__ViewName'), viewName)
 

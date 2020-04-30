@@ -41,7 +41,7 @@ WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
 'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
-WebUI.delay(2)
+WebUI.delay(5)
 
 List<WebElement> listOfExistingElements = WebUI.findWebElements(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized',[('internalName'):InternalName]),
 	1)
@@ -236,11 +236,11 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
     WebUI.clickOffset(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 2, 4)
 
     if (DefaultToCurrentDate.equals('Yes')) {
-        DefaultToCurrentDateNumbered = 1
+        DefaultToCurrentDateNumbered = "Yes"
     } else if (DefaultToCurrentDate.equals('No')) {
-        DefaultToCurrentDateNumbered = 0
+        DefaultToCurrentDateNumbered = "No"
     } else {
-        DefaultToCurrentDateNumbered = 0
+        DefaultToCurrentDateNumbered = "No"
     }
     
     if (AttributeType.equals('Date') || AttributeType.equals('Boolean')) {
@@ -438,11 +438,11 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
     WebUI.clickOffset(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 2, 4)
 
     if (DefaultToCurrentDate.equals('Yes')) {
-        DefaultToCurrentDateNumbered = 1
+        DefaultToCurrentDateNumbered = "Yes"
     } else if (DefaultToCurrentDate.equals('No')) {
-        DefaultToCurrentDateNumbered = 0
+        DefaultToCurrentDateNumbered = "No"
     } else {
-        DefaultToCurrentDateNumbered = 0
+        DefaultToCurrentDateNumbered = "No"
     }
     
     if (AttributeType.equals('Date') || AttributeType.equals('Boolean')) {

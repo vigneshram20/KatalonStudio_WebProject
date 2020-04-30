@@ -34,7 +34,7 @@ WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
 'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
-WebUI.delay(2)
+WebUI.delay(5)
 
 List<WebElement> listOfExistingElements = WebUI.findWebElements(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized',[('internalName'):InternalName]),
 	1)
@@ -223,7 +223,7 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
     'Click Edit Mode Toggle button'
     WebUI.clickOffset(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 2, 4)
 
-    DefaultToCurrentDateNumbered = 0
+    //DefaultToCurrentDateNumbered = 0
 
     td23Text = ''
 
@@ -234,7 +234,7 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
     columnXpath2 = (((((((((((((((((((('/..//td[11][.="' + EditableOnUpdate) + '"]/..//td[12][.="') + MassChangeable) + 
     '"]/..//td[13][.="') + TableEditable) + '"]/..//td[14][.="') + TableWrappable) + '"]/..//td[15][.="') + TableMinWrapWidth) + 
     '"]/..//td[16][.="') + Formula) + '"]/..//td[17][.="') + Required) + '"]/..//td[18][.="') + DefaultValue) + '"]/..//td[19][.="') + 
-    DefaultToCurrentDateNumbered) + '"]/..//td[20][.="') + Unique) + '"]')
+    DefaultToCurrentDate) + '"]/..//td[20][.="') + Unique) + '"]')
 
     columnXpath3 = (((((((((((((((('/..//td[21][.="' + ElementWidth) + '"]/..//td[22][.="') + ElementHeight) + '"]/..//td[23][.="') + 
     td23Text) + '"]/..//td[24][.="') + DisplayedDigits) + '"]/..//td[25][.="') + DecimalDigitsDisplayed) + '"]/..//td[26][.="') + 
@@ -400,7 +400,7 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
     'Click Edit Mode Toggle button'
     WebUI.clickOffset(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 2, 4)
 	
-	DefaultToCurrentDateNumbered = 0
+	//DefaultToCurrentDateNumbered = 0
 	
 		td23Text = ''
 
@@ -411,7 +411,7 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
     columnXpath2 = (((((((((((((((((((('/..//td[11][.="' + EditableOnUpdate) + '"]/..//td[12][.="') + MassChangeable) + 
     '"]/..//td[13][.="') + TableEditable) + '"]/..//td[14][.="') + TableWrappable) + '"]/..//td[15][.="') + TableMinWrapWidth) + 
     '"]/..//td[16][.="') + Formula) + '"]/..//td[17][.="') + Required) + '"]/..//td[18][.="') + DefaultValue) + '"]/..//td[19][.="') + 
-    DefaultToCurrentDateNumbered) + '"]/..//td[20][.="') + Unique) + '"]')
+    DefaultToCurrentDate) + '"]/..//td[20][.="') + Unique) + '"]')
 
     columnXpath3 = (((((((((((((((('/..//td[21][.="' + ElementWidth) + '"]/..//td[22][.="') + ElementHeight) + '"]/..//td[23][.="') + 
     td23Text) + '"]/..//td[24][.="') + DisplayedDigits) + '"]/..//td[25][.="') + DecimalDigitsDisplayed) + '"]/..//td[26][.="') + 

@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//input[@name = 'role_search']</value>
+         <value>//input[@name = 'roles_search']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -31,7 +31,7 @@
       <matchCondition>equals</matchCondition>
       <name>name</name>
       <type>Main</type>
-      <value>role_search</value>
+      <value>roles_search</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
