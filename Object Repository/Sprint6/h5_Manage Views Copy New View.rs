@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_Division</name>
+   <name>h5_Manage Views Copy New View</name>
    <tag></tag>
-   <elementGuidId>fc86cb04-da16-43c2-9720-c52f88a22a17</elementGuidId>
+   <elementGuidId>1ea5ed81-de9a-436c-80d0-1d8a52b14655</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//div[@class = 'rTableHead freeze' and (text() = 'Division' or . = 'Division')]</value>
+         <value>//h5[(text() = 'Manage Views : Copy New View' or . = 'Manage Views : Copy New View')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,76 +17,76 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>div</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>class</name>
-      <type>Main</type>
-      <value>rTableHead freeze</value>
+      <value>h5</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>title</name>
+      <name>class</name>
       <type>Main</type>
-      <value>Division</value>
+      <value>modal-title</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Division</value>
+      <value>Manage Views : Copy New View</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;table_header&quot;)/div[@class=&quot;rTableRow&quot;]/div[@class=&quot;rTableHead freeze&quot;]</value>
+      <value>id(&quot;createViewSettings&quot;)/div[@class=&quot;modal-dialog&quot;]/div[@class=&quot;modal-content viewsettings_modal&quot;]/div[@class=&quot;modal-header&quot;]/h5[@class=&quot;modal-title&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='table_header']/div/div[3]</value>
+      <value>//div[@id='createViewSettings']/div/div/div/h5</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Brand'])[2]/following::div[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Lighting'])[18]/following::h5[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='ACTIONS'])[2]/following::div[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='PK'])[17]/following::h5[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='In Store Launch End Date'])[2]/preceding::div[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Which type of view are you creating ?'])[1]/preceding::h5[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='In Store Launch Start Date'])[2]/preceding::div[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Custom View (for personal use)'])[1]/preceding::h5[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Manage Views : Create new view']/parent::*</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[3]/div[3]/div/div/div/div[3]</value>
+      <value>//h5</value>
    </webElementXpaths>
 </WebElementEntity>

@@ -6,6 +6,10 @@
    <elementGuidId>dcdda8f9-7ce9-493c-8f32-ff4a57e5457e</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value>//button[normalize-space() = '${viewName}']</value>
+      </entry>
+      <entry>
          <key>BASIC</key>
          <value>//button[(text() = '${viewName}' or . = '${viewName}')]</value>
       </entry>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>linkTestCase_CreateCustomView</name>
+   <name>linkTestCase_DeleteCustomView</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>a50b2a38-89c3-41ac-a19b-82fc78a1160d</testCaseGuid>
+   <testCaseGuid>7b7031f1-c1c9-40d5-b417-cac7053fe11a</testCaseGuid>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>aaad4341-2d1c-4ea0-8e8d-f4b1a4425637</id>
+      <id>d97629b5-5d96-487f-95c5-a2b6a675f59e</id>
       <masked>false</masked>
       <name>viewName</name>
    </variable>

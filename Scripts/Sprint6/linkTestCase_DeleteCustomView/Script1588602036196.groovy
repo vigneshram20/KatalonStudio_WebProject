@@ -15,3 +15,26 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
+'Open View Selector'
+WebUI.click(findTestObject('Common Objects/button_viewSelector'))
+
+'Click Manage View'
+WebUI.click(findTestObject('Common Objects/button_Manage Views'))
+
+WebUI.click(findTestObject('Sprint6/span_ViewName_parameterized', [('viewName') : viewName]))
+
+WebUI.click(findTestObject('Sprint6/img_DeleteViewIcon'))
+
+WebUI.verifyElementPresent(findTestObject('Sprint6/div_One or more views have been marked for deletion'), 0)
+
+'Click Save Changes'
+WebUI.click(findTestObject('Common Objects/button_Save Changes'))
+
+'Click Ok'
+WebUI.click(findTestObject('Sprint6/button_OK'))
+
+'Open View Selector'
+WebUI.click(findTestObject('Common Objects/button_viewSelector'))
+
+WebUI.verifyElementNotPresent(findTestObject('Sprint6/button_paremeterized_ViewName', [('viewName') : viewName]), 0)
+

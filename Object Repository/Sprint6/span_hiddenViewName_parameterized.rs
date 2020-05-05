@@ -1,92 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_Division</name>
+   <name>span_hiddenViewName_parameterized</name>
    <tag></tag>
-   <elementGuidId>fc86cb04-da16-43c2-9720-c52f88a22a17</elementGuidId>
+   <elementGuidId>6be72a9e-4a21-41c3-bbf8-65f6c808d701</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value>//span[contains(@class,'hidden')]/img[@alt='hiddenView']/following-sibling::span[.='${viewName}']</value>
+      </entry>
+      <entry>
          <key>BASIC</key>
-         <value>//div[@class = 'rTableHead freeze' and (text() = 'Division' or . = 'Division')]</value>
+         <value>//span[(text() = '${viewName}' or . = '${viewName}')]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>div</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>class</name>
-      <type>Main</type>
-      <value>rTableHead freeze</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>title</name>
-      <type>Main</type>
-      <value>Division</value>
+      <value>span</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Division</value>
+      <value>${viewName}</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;table_header&quot;)/div[@class=&quot;rTableRow&quot;]/div[@class=&quot;rTableHead freeze&quot;]</value>
+      <value>id(&quot;m0&quot;)/span[@class=&quot;&quot;]/span[1]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='table_header']/div/div[3]</value>
+      <value>//li[@id='m0']/span/span</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Brand'])[2]/following::div[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Share'])[1]/following::span[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='ACTIONS'])[2]/following::div[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Hide/Unhide'])[1]/following::span[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='In Store Launch End Date'])[2]/preceding::div[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Save Changes'])[1]/preceding::span[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='In Store Launch Start Date'])[2]/preceding::div[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Cancel'])[1]/preceding::span[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[3]/div[3]/div/div/div/div[3]</value>
+      <value>//span/span</value>
    </webElementXpaths>
 </WebElementEntity>
