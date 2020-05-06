@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>linkTestCase_AssignPermission_Attribute</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>df3142bf-52f1-4a30-a1de-c5ff6ae1ce58</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>e1fd5b17-4e0b-4094-9dce-671cf5b2bb86</id>
+      <masked>false</masked>
+      <name>attributeName</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>4eec60ce-e07e-4a21-825d-ad6ac73ccb24</id>
+      <masked>false</masked>
+      <name>paramName</name>
+   </variable>
+</TestCaseEntity>

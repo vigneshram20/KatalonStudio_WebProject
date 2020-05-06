@@ -30,7 +30,7 @@ WebUI.delay(1)
 
 WebUI.click(findTestObject('Object Repository/Sprint5/span_Master Lists'))
 
-WebUI.click(findTestObject('Object Repository/Sprint5/a_Root'))
+WebUI.click(findTestObject('Sprint5/a_folder_MasterList',[('folderName'):'Root']))
 
 WebUI.click(findTestObject('Sprint5/div_li_parameterized_ExpandCollapseIcon', [('text') : 'Root']))
 
@@ -58,7 +58,7 @@ String expectedDate = formatter.format(date)
 
 InternalNameFolder = ('QAINFolder' + expectedDate)
 
-DisplayNameFolder = ('QADNFolder' + expectedDate)
+DisplayNameFolder = ('QA DN Folder ' + expectedDate)
 
 WebUI.setText(findTestObject('Sprint5/input_Internalname'), InternalNameFolder)
 

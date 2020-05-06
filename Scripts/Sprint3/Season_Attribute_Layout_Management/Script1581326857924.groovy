@@ -70,7 +70,7 @@ WebUI.verifyElementPresent(findTestObject('Sprint3/span_Edit Mode_toggle_btn-lab
 WebUI.click(findTestObject('Sprint3/button_Manage Layout'))
 
 'Verify Seasons page Header'
-WebUI.verifyElementPresent(findTestObject('Sprint3/h2-Season'), 0)
+not_run:WebUI.verifyElementPresent(findTestObject('Sprint3/h2-Season'), 0)
 
 'Verify Available Attributes caption header'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/caption_Available Attributes'), 0)

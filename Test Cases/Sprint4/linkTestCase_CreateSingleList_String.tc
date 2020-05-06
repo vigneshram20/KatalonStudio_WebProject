@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>linkTestCase_CreateSingleList_String</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>129bd3c8-66f2-46dd-a3af-6b5092811c9b</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>0d39abdc-4149-4d8a-ab03-a260eeaa12e0</id>
+      <masked>false</masked>
+      <name>DataType</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>cf6a7816-1afe-4aea-a948-3d65adce0d9f</id>
+      <masked>false</masked>
+      <name>AttributeType</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>e186b3ab-03b8-4a2c-aa00-3b55b0b76eb0</id>
+      <masked>false</masked>
+      <name>InternalName</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>b5d2eed2-fdb9-4505-9ed8-957e8a6b778f</id>
+      <masked>false</masked>
+      <name>DisplayName</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>459565ad-aeeb-4bb7-8828-193859263123</id>
+      <masked>false</masked>
+      <name>MasterList</name>
+   </variable>
+</TestCaseEntity>

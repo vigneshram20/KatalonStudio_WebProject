@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>linkTesCase_CreateMasterList</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>79dc7860-cbb8-45d5-9d41-a987ebeadcc4</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>a8db79c9-b63c-448a-9e7d-5e0349e41919</id>
+      <masked>false</masked>
+      <name>folderName</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>e11ce501-1504-45d2-ad59-93809a9beef0</id>
+      <masked>false</masked>
+      <name>InternalName</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>e0d3e72e-653c-4cad-987d-de6252b87ebc</id>
+      <masked>false</masked>
+      <name>DisplayName</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>a3e2df4a-54ab-4608-8c9c-9677c0010ecc</id>
+      <masked>false</masked>
+      <name>listItem</name>
+   </variable>
+</TestCaseEntity>
