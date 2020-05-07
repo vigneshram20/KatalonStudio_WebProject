@@ -21,7 +21,7 @@ WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : Glo
 
 WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Common/NavigateToManageSeasonPage'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('null'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.enableSmartWait()
 

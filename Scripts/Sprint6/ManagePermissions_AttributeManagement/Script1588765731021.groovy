@@ -15,6 +15,13 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
+
+'Navigate to Type and Attribute Management'
+WebUI.callTestCase(findTestCase('Common/NavigateToTypeAndAttributeManagement'), [:], FailureHandling.STOP_ON_FAILURE)
+
 String dateFormat = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('', 'mmss')
 
 String libraryName = 'Season'
@@ -30,7 +37,7 @@ String singleListName = 'QASL' + dateFormat
 
 String Master_List_Full_Name = (libraryName + ' | ') + listName
 
-WebUI.callTestCase(findTestCase('Sprint4/linkTestCase_CreateSingleList_String'), [('DataType') : 'String', ('AttributeType') : 'Single List'
+WebUI.callTestCase(findTestCase('Sprint4/linkTestCase_CreateAttribute_ForMasterList'), [('DataType') : 'String', ('AttributeType') : 'Single List'
         , ('InternalName') : singleListName, ('DisplayName') : singleListName, ('MasterList') : Master_List_Full_Name], 
     FailureHandling.STOP_ON_FAILURE)
 

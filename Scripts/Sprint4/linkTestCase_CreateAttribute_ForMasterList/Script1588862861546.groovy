@@ -14,6 +14,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
 
 WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Administration', ('SubMenuItem') : 'Type & Attribute Management'], 
     FailureHandling.STOP_ON_FAILURE)
@@ -26,6 +27,15 @@ WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
 
 'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+
+WebUI.delay(1)
+
+WebUI.enableSmartWait()
+
+WebUI.waitForPageLoad(0)
+
+'Click Add icon -Attributes'
+not_run: WebUI.scrollToElement(findTestObject('Sprint4/img_Attributes_add-icon'), 0)
 
 'Click Add icon -Attributes'
 WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
@@ -67,4 +77,9 @@ WebUI.delay(2)
 
 'Click Save and Verify Success Popup'
 WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+
+'CLick Attribute Management menu'
+WebUI.click(findTestObject('Sprint4/a_Manage Types'))
 

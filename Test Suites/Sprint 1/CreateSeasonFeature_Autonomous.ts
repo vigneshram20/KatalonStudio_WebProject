@@ -29,12 +29,6 @@
       <testCaseId>Test Cases/Sprint1/Login/VerifyLoginSuccessfully</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>47c86de1-781d-4a18-b5b5-04863dd9ee31</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/NavigateToManageSeasonPage</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>05b3b8ac-240f-4c45-901a-c658ebaf88da</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

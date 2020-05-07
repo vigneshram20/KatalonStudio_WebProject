@@ -70,7 +70,7 @@ WebUI.verifyElementPresent(findTestObject('Sprint3/span_Edit Mode_toggle_btn-lab
 WebUI.click(findTestObject('Sprint3/button_Manage Layout'))
 
 'Verify Seasons page Header'
-not_run:WebUI.verifyElementPresent(findTestObject('Sprint3/h2-Season'), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint3/h2-Season'), 0)
 
 'Verify Available Attributes caption header'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/caption_Available Attributes'), 0)
@@ -224,7 +224,11 @@ WebUI.click(findTestObject('Object Repository/Sprint3/button_OK'))
 
 WebUI.delay(1)
 
-WebUI.callTestCase(findTestCase('Common/NavigateToManageSeasonPage'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : 'Season'], 
+    FailureHandling.STOP_ON_FAILURE)
+
+'Verify Manage Seasons Page Title'
+WebUI.verifyElementPresent(findTestObject('Sprint1/Manage Season Page/div_Manage Seasons'), 0)
 
 WebUI.enableSmartWait()
 
@@ -252,5 +256,4 @@ WebUI.verifyElementVisible(findTestObject('Sprint1/Create Season/button_Create')
 
 'Verify Cancel button'
 WebUI.click(findTestObject('Object Repository/Common Objects/a_Cancel'))
-
 

@@ -21,7 +21,7 @@ List<String> columnsList = ColumnsList
 
 WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Common/NavigateToManageSeasonPage'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('null'), [:], FailureHandling.STOP_ON_FAILURE)
 
 'Verify Create New Season button'
 WebUI.verifyElementPresent(findTestObject('Sprint1/Manage Season Page/button_CreateNewSeason'), 

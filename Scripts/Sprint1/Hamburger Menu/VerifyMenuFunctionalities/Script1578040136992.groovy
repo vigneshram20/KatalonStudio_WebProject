@@ -48,7 +48,7 @@ WebUI.delay(1)
 'Verify Manage List Page Title'
 WebUI.verifyElementVisible(findTestObject('Sprint1/LandingPage/div_Manage List'))
 
-WebUI.callTestCase(findTestCase('Common/NavigateToManageSeasonPage'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('null'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.delay(1)
 

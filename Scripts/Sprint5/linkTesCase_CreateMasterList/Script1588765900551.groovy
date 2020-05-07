@@ -16,13 +16,6 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
-
-'Navigate to Type and Attribute Management'
-WebUI.callTestCase(findTestCase('Common/NavigateToTypeAndAttributeManagement'), [:], FailureHandling.STOP_ON_FAILURE)
-
 WebUI.delay(1)
 
 WebUI.click(findTestObject('Object Repository/Sprint5/span_Master Lists'))
@@ -55,11 +48,13 @@ WebUI.click(findTestObject('Sprint5/a_folder_MasterList', [('folderName') : Disp
 
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-handle'))
 
-not_run: WebUI.sendKeys(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-handle'), Keys.chord(Keys.END))
-
 WebUI.scrollToElement(findTestObject('Object Repository/Sprint5/div_Add to Selection'), 0)
 
-WebUI.delay(1)
+WebUI.delay(2)
+
+WebUI.enableSmartWait()
+
+WebUI.waitForPageLoad(0)
 
 WebUI.click(findTestObject('Object Repository/Sprint5/div_Add to Selection'))
 
@@ -76,4 +71,8 @@ WebUI.click(findTestObject('Object Repository/Sprint4/button_Yes'))
 WebUI.click(findTestObject('Object Repository/Sprint5/h5_Master List Has Been Updated Successfully'))
 
 WebUI.click(findTestObject('Object Repository/Sprint4/button_OK'))
+
+WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+
+WebUI.click(findTestObject('Object Repository/Sprint5/span_Master Lists'))
 

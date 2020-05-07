@@ -81,7 +81,7 @@ String expectedDate = formatter.format(date)
 
 InternaltypeName = ('QAIN' + expectedDate)
 
-DisplaytypeName = ('QADN' + expectedDate)
+DisplaytypeName = ('QA DN ' + expectedDate)
 
 WebUI.setText(findTestObject('Sprint3/input_InternalName'), InternaltypeName)
 
@@ -101,9 +101,9 @@ WebUI.click(findTestObject('Object Repository/Sprint3/button_Create'))
 
 WebUI.delay(3)
 
-WebUI.refresh()
+not_run: WebUI.refresh()
 
-WebUI.delay(2)
+not_run: WebUI.delay(2)
 
 WebUI.selectOptionByLabel(findTestObject('Sprint3/select_parentDropDown'), DisplaytypeName, true)
 
@@ -143,17 +143,17 @@ if (attributeavailable.equals(attributeAsAdded)) {
 'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
-displayNameEdited = (DisplaytypeName + 'Edited')
+displayNameEdited = (DisplaytypeName + ' Edited')
 
 Description = 'QA'
 
 WebUI.clearText(findTestObject('Object Repository/Sprint3/input_Display Name_form-control - Copy'))
 
+WebUI.sendKeys(findTestObject('Object Repository/Sprint3/input_Display Name_form-control - Copy'), Keys.chord(Keys.CONTROL, 
+        Keys.chord('a')))
 
-WebUI.sendKeys(findTestObject('Object Repository/Sprint3/input_Display Name_form-control - Copy'), Keys.chord(Keys.CONTROL, Keys.chord('a')))
-
-WebUI.sendKeys(findTestObject('Object Repository/Sprint3/input_Display Name_form-control - Copy'), Keys.chord(Keys.DELETE, Keys.DELETE, Keys.DELETE))
-
+WebUI.sendKeys(findTestObject('Object Repository/Sprint3/input_Display Name_form-control - Copy'), Keys.chord(Keys.DELETE, 
+        Keys.DELETE, Keys.DELETE))
 
 WebUI.setText(findTestObject('Object Repository/Sprint3/input_Display Name_form-control - Copy'), displayNameEdited)
 
