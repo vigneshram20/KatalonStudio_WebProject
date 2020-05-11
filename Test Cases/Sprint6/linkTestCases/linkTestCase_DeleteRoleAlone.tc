@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>linkTestCase_DeleteRoleAlone</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f34399f5-effb-4d7c-98d6-ed6694e24a76</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>68d406fd-ec9a-4534-bb63-512cc5a78f85</id>
+      <masked>false</masked>
+      <name>roleName</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>42b7a4df-00f6-4205-b5d7-ddb16b90f30b</id>
+      <masked>false</masked>
+      <name>roleDescription</name>
+   </variable>
+</TestCaseEntity>

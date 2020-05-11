@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CustomView_CreateEditDelete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c9e58c6a-0b5b-4d9f-a0ea-ed599bd22051</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>affc65e8-f58e-45f3-847f-1353b8e384a7</id>
+      <masked>false</masked>
+      <name>viewName</name>
+   </variable>
+</TestCaseEntity>

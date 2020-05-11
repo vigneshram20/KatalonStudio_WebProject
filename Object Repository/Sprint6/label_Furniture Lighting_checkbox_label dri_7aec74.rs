@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>label_Furniture Lighting_checkbox_label dri_7aec74</name>
+   <tag></tag>
+   <elementGuidId>22182fce-96a6-4617-b935-a9524c7ba657</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>label</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>checkbox_label driven_driven_table_checkbox_label__3vLQt </value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>for</name>
+      <type>Main</type>
+      <value>driven_id3</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[1]/div[@class=&quot;manageLibrary_manage_library_container__RdgCO mt-50&quot;]/div[@class=&quot;manageLibrary_content_section__3u3ow&quot;]/div[@class=&quot;row driven_rules_wrapper driven_driven_rules__1Ritu&quot;]/div[@class=&quot;col-12&quot;]/div[@class=&quot;table_body_scroll&quot;]/table[@class=&quot;tableFixed&quot;]/tbody[1]/tr[2]/td[@class=&quot;text-center&quot;]/div[@class=&quot;checkbox&quot;]/label[@class=&quot;checkbox_label driven_driven_table_checkbox_label__3vLQt&quot;]</value>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='root']/div/div/div[4]/div/div[2]/div/table/tbody/tr[2]/td/div/label</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//tr[2]/td/div/label</value>
+   </webElementXpaths>
+</WebElementEntity>

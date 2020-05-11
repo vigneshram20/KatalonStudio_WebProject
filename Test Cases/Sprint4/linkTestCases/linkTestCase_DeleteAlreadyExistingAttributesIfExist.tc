@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>linkTestCase_DeleteAlreadyExistingAttributesIfExist</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f5928a10-4a34-43d7-81da-061da8ad2256</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>ffbb8ced-01ab-4afb-84a8-1703d0daf416</id>
+      <masked>false</masked>
+      <name>InternalName</name>
+   </variable>
+</TestCaseEntity>

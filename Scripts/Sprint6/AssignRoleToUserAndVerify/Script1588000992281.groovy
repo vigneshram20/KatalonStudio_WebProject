@@ -32,7 +32,7 @@ String emailID = 'qatest@photoninfotech.net'
 
 String contactNo = '987'
 
-WebUI.callTestCase(findTestCase('Sprint6/linkTestCase_CreateIndependantUser'), [('userID') : userID, ('firstName') : firstName, ('lastName') : lastName
+WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CreateIndependantUser'), [('userID') : userID, ('firstName') : firstName, ('lastName') : lastName
         , ('emailID') : emailID, ('contactNo') : contactNo], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.scrollToElement(findTestObject('Sprint6/span_AddRoles_param', [('userID') : userID]), 0)
@@ -58,7 +58,7 @@ WebUI.click(findTestObject('Object Repository/Sprint6/button_Yes'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_User has been modified successfully'), 0)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/button_OK'))
+WebUI.click(findTestObject('Common Objects/button_OK'))
 
 WebUI.refresh()
 
@@ -87,7 +87,7 @@ WebUI.click(findTestObject('Object Repository/Sprint6/button_Yes'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_User has been modified successfully'), 0)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/button_OK'))
+WebUI.click(findTestObject('Common Objects/button_OK'))
 
 WebUI.closeBrowser()
 

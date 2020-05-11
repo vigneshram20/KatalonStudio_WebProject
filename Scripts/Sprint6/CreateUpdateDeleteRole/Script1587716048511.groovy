@@ -79,7 +79,7 @@ WebUI.click(findTestObject('Object Repository/Sprint6/button_Yes'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_Role(s) has been modified successfully'), 0)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/button_OK'))
+WebUI.click(findTestObject('Common Objects/button_OK'))
 
 WebUI.scrollToElement(findTestObject('Sprint6/div_User and Role Management'), 0)
 
@@ -121,7 +121,7 @@ WebUI.click(findTestObject('Object Repository/Sprint6/button_Yes'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_Role(s) has been modified successfully'), 0)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/button_OK'))
+WebUI.click(findTestObject('Common Objects/button_OK'))
 
 not_run: WebUI.refresh()
 
@@ -147,7 +147,7 @@ WebUI.click(findTestObject('Object Repository/Sprint6/button_Yes'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_Role(s) has been modified successfully'), 0)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/button_OK'))
+WebUI.click(findTestObject('Common Objects/button_OK'))
 
 WebUI.verifyElementNotPresent(findTestObject('Sprint6/div_td_role_table_verification', [('roleName') : roleNameEdited, ('roleDescription') : roleDescriptionEdited]), 
     0)

@@ -20,10 +20,13 @@ import org.openqa.selenium.WebElement as WebElement
 import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 
+'Launch the Browser'
 WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
 
+'Login and Verify the Homepage'
 WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
 
+'Wait for Page to Load'
 WebUI.enableSmartWait()
 
 'Click Hamburger Menu'
@@ -39,11 +42,12 @@ WebUI.click(findTestObject('Object Repository/Sprint3/a_Type  Attribute Manageme
 
 WebUI.delay(1)
 
-'Verify Page Header Administration'
-WebUI.click(findTestObject('Object Repository/Sprint3/div_Administration'))
+'Verify Page Header - Administration'
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/div_Administration'), 0)
 
 WebUI.delay(1)
 
+'Click Manage Types button'
 WebUI.click(findTestObject('Sprint3/h3_Manage Types'))
 
 'Click Season sub menu'
@@ -55,9 +59,10 @@ WebUI.verifyElementPresent(findTestObject('Sprint3/button_Add Subtype'), 0)
 'Verify Manage Attributes button'
 WebUI.verifyElementPresent(findTestObject('Sprint3/button_Manage Attributes'), 0)
 
-'Verify Manage Layout button'
+'Wait for Manage Layout button'
 WebUI.waitForElementPresent(findTestObject('Sprint3/button_Manage Layout'), 0)
 
+'Verify Manage Layout button'
 WebUI.verifyElementPresent(findTestObject('Sprint3/button_Manage Layout'), 0)
 
 'Verify Edit Mode button'
@@ -104,14 +109,14 @@ List<WebElement> listOfgroups = WebUI.findWebElements(findTestObject('Sprint3/im
 for (WebElement element : listOfgroups) {
     Thread.sleep(250)
 
-    'Click Transh Button'
+    'Click Trash Button'
     element.click()
 }
 
 'Verify Save button'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/div_Save'), 0)
 
-'Verify Cancenl button'
+'Verify Cancel button'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/div_Cancel'), 0)
 
 'Click Save Button'
@@ -120,15 +125,16 @@ WebUI.click(findTestObject('Object Repository/Sprint3/button_Save'))
 WebUI.delay(1)
 
 'Click Yes Button'
-WebUI.click(findTestObject('Object Repository/Sprint3/button_Yes'))
+WebUI.click(findTestObject('Common Objects/button_Yes'))
 
 WebUI.delay(1)
 
 'Clikc Ok button'
-WebUI.click(findTestObject('Object Repository/Sprint3/button_OK'))
+WebUI.click(findTestObject('Common Objects/button_OK'))
 
 WebUI.delay(3)
 
+'Scroll to Top'
 WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_UP))
 
 'Click Manage Layout button'
@@ -142,20 +148,25 @@ WebUI.delay(1)
 'Click Add Group'
 WebUI.click(findTestObject('Sprint3/button_Add Group'))
 
-'Provide Group Name'
+'Double Click Input field'
 WebUI.doubleClick(findTestObject('Sprint3/span_1'))
 
+'Click input field'
 WebUI.clickOffset(findTestObject('Sprint3/input'), 0, 2)
 
+'Remove the existing text'
 WebUI.sendKeys(findTestObject('Sprint3/input'), Keys.chord(Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, 
         Keys.BACK_SPACE))
 
+'Select the existing text'
 WebUI.sendKeys(findTestObject('Sprint3/input'), Keys.chord(Keys.CONTROL, Keys.chord('a')))
 
+'Delete the existing text'
 WebUI.sendKeys(findTestObject('Sprint3/input'), Keys.chord(Keys.DELETE, Keys.DELETE, Keys.DELETE))
 
 WebUI.delay(1)
 
+'Provide Group Name'
 WebUI.sendKeys(findTestObject('Sprint3/input'), 'Calendar QA Automation')
 
 'Select Brand Label'
@@ -170,6 +181,12 @@ WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized'
 'Select Year Label'
 WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Year']))
 
+'Select Name Label'
+WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Name']))
+
+'Select Division Label'
+WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Division']))
+
 'Click Add button'
 WebUI.click(findTestObject('Sprint3/img_General Attributes_img-icon'))
 
@@ -178,6 +195,9 @@ WebUI.clickOffset(findTestObject('Sprint3/label_GlobalParameterized_checkbox_lab
 
 'Select Type Checkbox'
 WebUI.clickOffset(findTestObject('Sprint3/label_GlobalParameterized_checkbox_label', [('input') : 'Type']), 0, 2)
+
+'Select Year Checkbox'
+WebUI.clickOffset(findTestObject('Sprint3/label_GlobalParameterized_checkbox_label', [('input') : 'Year']), 0, 2)
 
 'Click Copy Attributes button'
 WebUI.click(findTestObject('Sprint3/GeneralAttributes_CopyAttributes'))
@@ -205,25 +225,21 @@ WebUI.clickOffset(findTestObject('Sprint3/label_GlobalParameterized_checkbox_lab
 WebUI.clickOffset(findTestObject('Sprint3/label_GlobalParameterized_checkbox_label', [('input') : 'In Store Launch End Date']), 
     0, 2)
 
+'Click Copy Attributes button'
 WebUI.click(findTestObject('Sprint3/CalendarQAInfo_CopyAttributes'))
 
-/*List<WebElement> listOfaddattr = WebUI.findWebElements(findTestObject('Sprint3/img-AddAttrIcon'), 0)
-
-JavascriptExecutor js = ((driver) as JavascriptExecutor)
-
-for (WebElement element : listOfaddattr) {
-    js.executeScript('arguments[0].scrollIntoView()', element)
-
-    element.click()
-}*/
+'Click Save button'
 WebUI.click(findTestObject('Object Repository/Sprint3/button_Save'))
 
-WebUI.click(findTestObject('Object Repository/Sprint3/button_Yes'))
+'Click Yes button'
+WebUI.click(findTestObject('Common Objects/button_Yes'))
 
-WebUI.click(findTestObject('Object Repository/Sprint3/button_OK'))
+'Click Ok button'
+WebUI.click(findTestObject('Common Objects/button_OK'))
 
 WebUI.delay(1)
 
+'Navigate To Menu'
 WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : 'Season'], 
     FailureHandling.STOP_ON_FAILURE)
 
@@ -239,21 +255,29 @@ WebUI.enableSmartWait()
 
 WebUI.delay(1)
 
+'Verify the Attributes'
 WebUI.verifyElementPresent(findTestObject('Sprint3/firstRowColumnVerify_CreateSeason', [('input1') : 'Brand', ('input2') : 'Season'
             , ('header') : 'General Attributes']), 0)
 
-WebUI.verifyElementPresent(findTestObject('Sprint3/firstRowColumnVerify_CreateSeason', [('input1') : 'Year', ('input2') : 'Type'
+'Verify the attributes'
+WebUI.verifyElementPresent(findTestObject('Sprint3/firstRowColumnVerify_CreateSeason', [('input1') : 'Division', ('input2') : 'Type'
             , ('header') : 'General Attributes']), 0)
 
+'Verify the attributes'
+WebUI.verifyElementPresent(findTestObject('Sprint3/firstRowColumnVerify_CreateSeason', [('input1') : 'Name', ('input2') : 'Year'
+            , ('header') : 'General Attributes']), 0)
+
+'Verify the attributes'
 WebUI.verifyElementPresent(findTestObject('Sprint3/thirdRowColumnVerify_CreateSeason', [('input1') : 'Internet Launch Start Date'
             , ('input2') : 'In Store Launch Start Date', ('header') : 'Calendar QA Automation']), 0)
 
+'Verify the attributes'
 WebUI.verifyElementPresent(findTestObject('Sprint3/thirdRowColumnVerify_CreateSeason', [('input1') : 'Internet Launch End Date'
             , ('input2') : 'In Store Launch End Date', ('header') : 'Calendar QA Automation']), 0)
 
-'Click Create button'
+'Verify Create button'
 WebUI.verifyElementVisible(findTestObject('Sprint1/Create Season/button_Create'))
 
-'Verify Cancel button'
+'Click Cancel button'
 WebUI.click(findTestObject('Object Repository/Common Objects/a_Cancel'))
 

@@ -6,12 +6,12 @@
    <elementGuidId>1dca0813-c0c2-462d-b403-adb4b5356987</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//div[2]/div/div/select)[2]</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>//*[(text() = 'AttributesBrandcufsDivisionMultiListQA28QASL2500SeasonTypeYear' or . = 'AttributesBrandcufsDivisionMultiListQA28QASL2500SeasonTypeYear')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;createNewSeason&quot;]/div/div/div[2]/div[3]/div/select</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

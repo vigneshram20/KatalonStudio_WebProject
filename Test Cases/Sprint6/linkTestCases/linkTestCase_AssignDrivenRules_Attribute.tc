@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>linkTestCase_AssignDrivenRules_Attribute</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>118183b4-6441-4d6a-beb2-aac656fddc75</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>cc263d15-bbb4-4db8-815d-119a71065fe6</id>
+      <masked>false</masked>
+      <name>level1Attribute</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>d5458455-7b55-40ec-b8e3-81ec03215180</id>
+      <masked>false</masked>
+      <name>level1ListValue</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>adc459f8-651d-4cdc-ba50-bb5fd5785df9</id>
+      <masked>false</masked>
+      <name>level2Attribute</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>09ce1788-57d2-4836-b42a-a90a99a30e96</id>
+      <masked>false</masked>
+      <name>level2ListValue</name>
+   </variable>
+</TestCaseEntity>

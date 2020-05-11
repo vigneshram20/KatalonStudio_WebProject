@@ -23,17 +23,18 @@ WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : Glo
 
 WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : 'Countries'], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : 'Country'], 
+    FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Object Repository/Sprint5/a_Create New Country'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/h5_Create New Country'), 0)
 
-not_run:WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/strong_General Attributes'), 0)
+not_run: WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/strong_General Attributes'), 0)
 
-not_run:WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/label_Country ID'), 0)
+not_run: WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/label_Country ID'), 0)
 
-not_run:WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/label_Countryname'), 0)
+not_run: WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/label_Countryname'), 0)
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/a_Cancel'), 0)
 
@@ -59,7 +60,7 @@ WebUI.click(findTestObject('Object Repository/Sprint5/button_Create'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/h5_Successfully Created'), 0)
 
-WebUI.click(findTestObject('Sprint5/button_OK'))
+WebUI.click(findTestObject('Common Objects/button_OK'))
 
 WebUI.click(findTestObject('Sprint5/div_ActionsButtonOfParameterizedEntity', [('column1') : countryID, ('column2') : countryName]))
 
@@ -83,7 +84,7 @@ WebUI.click(findTestObject('Object Repository/Sprint5/button_Update'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/h5_Successfully Updated'), 0)
 
-WebUI.click(findTestObject('Sprint5/button_OK'))
+WebUI.click(findTestObject('Common Objects/button_OK'))
 
 WebUI.click(findTestObject('Sprint5/div_ActionsButtonOfParameterizedEntity', [('column1') : countryIDEdited, ('column2') : countryNameEdited]))
 
@@ -103,7 +104,7 @@ WebUI.click(findTestObject('Sprint5/button_Yes'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/h5_Successfully Deleted'), 0)
 
-WebUI.click(findTestObject('Sprint5/button_OK'))
+WebUI.click(findTestObject('Common Objects/button_OK'))
 
 WebUI.verifyElementNotPresent(findTestObject('Sprint5/div_ActionsButtonOfParameterizedEntity', [('column1') : countryIDEdited
             , ('column2') : countryNameEdited]), 0)

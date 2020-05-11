@@ -17,10 +17,13 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.WebElement as WebElement
 
+'Launch the Browser'
 WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
 
+'Login the application and verify the homepage'
 WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
 
+'Navigate to Type and Attribute Management'
 WebUI.callTestCase(findTestCase('Common/NavigateToTypeAndAttributeManagement'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.delay(1)
@@ -36,40 +39,8 @@ WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-
 
 WebUI.delay(5)
 
-List<WebElement> listOfExistingElements = WebUI.findWebElements(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized',[('internalName'):InternalName]),
-	1)
-
-for (WebElement checkbox : listOfExistingElements) {
-	Thread.sleep(100)
-
-	checkbox.click()
-
-	 'Scroll To Manage Layout button'
-	WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
-
-	WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
-
-	WebUI.delay(1)
-
-	'Click Remove icon'
-	WebUI.click(findTestObject('Sprint4/img_Attributes_remove-icon'))
-
-	WebUI.delay(2)
-
-	'Verify Header'
-	WebUI.verifyElementPresent(findTestObject('Sprint4/div_DeleteNote'), 10)
-
-	'Click Save and Verify Success Popup'
-	WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
-	
-	WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_UP))
-	
-		WebUI.delay(1)
-		
-	'Click Edit Mode Toggle button'
-	WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
-}
-
+'Delete already exising attribute'
+WebUI.callTestCase(findTestCase('Sprint4/linkTestCases/linkTestCase_DeleteAlreadyExistingAttributesIfExist'), [('InternalName') : InternalName], FailureHandling.STOP_ON_FAILURE)
 
 'Click Add icon -Attributes'
 WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
@@ -143,6 +114,7 @@ if (AttributeType.equals('Sequence Name')) {
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
 
+	'Page UP'
     WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_UP))
 
     WebUI.delay(1)
@@ -178,19 +150,23 @@ if (AttributeType.equals('Sequence Name')) {
 
     WebUI.delay(2)
 
+	'Click Attributes Checkbox'
     WebUI.click(ActionsObject)
 
+	'Click Attributes Add icon'
     WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
 
     //Verify the data
     'Verify Data Type'
     WebUI.verifyElementHasAttribute(findTestObject('Sprint4/select_DataType'), 'disabled', 0)
 
+	'Verify Data Type selected or not'
     WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint4/select_DataType'), DataType, false, 0)
 
     'Verify AttributeType'
     WebUI.verifyElementHasAttribute(findTestObject('Sprint4/select_AttributeType'), 'disabled', 0)
 
+	'Verif Attribute Type selected or not'
     WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint4/select_AttributeType'), AttributeType, false, 0)
 
     'Verify Internal Name Text'
@@ -229,10 +205,10 @@ if (AttributeType.equals('Sequence Name')) {
     System.out.println('The Database Column is ' + WebUI.getAttribute(findTestObject('Sprint4/input_Database Column'), 'value'))
 
     //Modify
-    DisplayNameEdited = (DisplayName + '_Edited')
+    DisplayName = (DisplayName + '_Edited')
 
     'Enter Display Name'
-    WebUI.setText(findTestObject('Object Repository/Sprint4/input__displayName'), DisplayNameEdited)
+    WebUI.setText(findTestObject('Object Repository/Sprint4/input__displayName'), DisplayName)
 
     if (TableWrappable.equals('Yes')) {
         TableWrappable = 'No'
@@ -255,6 +231,7 @@ if (AttributeType.equals('Sequence Name')) {
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
 
+	'Page UP'
     WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_UP))
 
     WebUI.delay(1)
@@ -266,7 +243,7 @@ if (AttributeType.equals('Sequence Name')) {
 
     td23Text = ''
 
-    columnXpath1 = (((((((((((((('//td[2][.="' + InternalName) + '"]/..//td[3][.="') + DisplayNameEdited) + '"]/..//td[4][.="') + 
+    columnXpath1 = (((((((((((((('//td[2][.="' + InternalName) + '"]/..//td[3][.="') + DisplayName) + '"]/..//td[4][.="') + 
     Description) + '"]/..//td[5][.="') + Enabled) + '"]/..//td[6][.="') + UseTooltip) + '"]/..//td[7][.=\'\']/..//td[8][.="') + 
     Tooltip) + '"]/..//td[9][.=\'No\']/..//td[10][.="') + EditableOnCreate) + '"]')
 

@@ -14,47 +14,85 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 
 WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
 
-String dateFormat = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('', 'mmss')
-
-String libraryName = 'Season'
-
-String listNameInternal1 = 'QAL1' + dateFormat
-
-String listNameDisplay1 = 'QA L1 ' + dateFormat
-
-String listValue1 = 'QA Test L1'
-
 'Navigate to Type and Attribute Management'
 WebUI.callTestCase(findTestCase('Common/NavigateToTypeAndAttributeManagement'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Sprint5/linkTesCase_CreateMasterList'), [('folderName') : libraryName, ('InternalName') : listNameInternal1
-		, ('DisplayName') : listNameDisplay1, ('listItem') : listValue1], FailureHandling.STOP_ON_FAILURE)
+String dateFormat = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('', 'mmss')
 
-String listNameInternal2 = 'QAL2' + dateFormat
-String listNameDisplay2 = 'QA L2 ' + dateFormat
+String libraryName = 'Root'
 
-String listValue2 = 'QA Test L2'
+String Level1AttributeInternalName = 'QAL1' + dateFormat
 
-WebUI.callTestCase(findTestCase('Sprint5/linkTesCase_CreateMasterList'), [('folderName') : libraryName, ('InternalName') : listNameInternal2
-	, ('DisplayName') : listNameDisplay2, ('listItem') : listValue2], FailureHandling.STOP_ON_FAILURE)
+String Level1AttributeDisplayName = 'QA L1 ' + dateFormat
 
-String singleListName1 = 'QADrivenLevel1' + dateFormat
+String Level1ListValue = 'QA Test L1'
 
-String Master_List_Full_Name1 = (libraryName + ' | ') + listNameDisplay1
+String Level2AttributeInternalName = 'QAL2' + dateFormat
 
-WebUI.callTestCase(findTestCase('Sprint4/linkTestCase_CreateAttribute_ForMasterList'), [('DataType') : 'String', ('AttributeType') : 'Driven'
-		, ('InternalName') : singleListName1, ('DisplayName') : singleListName1, ('MasterList') : Master_List_Full_Name1],
-	FailureHandling.STOP_ON_FAILURE)
+String Level2AttributeDisplayName = 'QA L2 ' + dateFormat
 
-String singleListName2 = 'QADrivenLevel2' + dateFormat
+String Level2ListValue = 'QA Test L2'
 
-String Master_List_Full_Name2 = (libraryName + ' | ') + listNameDisplay2
+ArrayList<HashMap> masterListArray = new ArrayList<HashMap>()
 
-WebUI.callTestCase(findTestCase('Sprint4/linkTestCase_CreateAttribute_ForMasterList'), [('DataType') : 'String', ('AttributeType') : 'Driven'
-		, ('InternalName') : singleListName2, ('DisplayName') : singleListName2, ('MasterList') : Master_List_Full_Name2],
-	FailureHandling.STOP_ON_FAILURE)
+ArrayList<HashMap> AttributeArray = new ArrayList<HashMap>()
+
+HashMap<String, String> masterList1 = new HashMap<String, String>()
+
+masterList1.put('internalName', Level1AttributeInternalName)
+
+masterList1.put('displayName', Level1AttributeDisplayName)
+
+masterList1.put('listValue', Level1ListValue)
+
+masterListArray.add(masterList1)
+
+HashMap<String, String> masterList2 = new HashMap<String, String>()
+
+masterList2.put('internalName', Level2AttributeInternalName)
+
+masterList2.put('displayName', Level2AttributeDisplayName)
+
+masterList2.put('listValue', Level2ListValue)
+
+masterListArray.add(masterList2)
+
+for (HashMap<String, String> insideHash : masterListArray) {
+    WebUI.callTestCase(findTestCase('Sprint5/linkTestCases/linkTesCase_CreateMasterList'), [('folderName') : libraryName
+            , ('InternalName') : insideHash.get('internalName'), ('DisplayName') : insideHash.get('displayName'), ('listItem') : insideHash.get(
+                'listValue')], FailureHandling.STOP_ON_FAILURE)
+
+    if (!(libraryName.equals('Root'))) {
+        AttributeArray.add(new script1589200894904$1())
+    } else {
+        AttributeArray.add(new script1589200894904$2())
+    }
+}
+
+int levelVal = 0
+
+ArrayList<HashMap> drivenAttribute = new ArrayList<HashMap>()
+
+for (HashMap<String, String> insideHash : AttributeArray) {
+    String drivenStringName = ((('QADrivenLevel' + '') + levelVal++) + '') + dateFormat
+
+    drivenAttribute.add(drivenStringName)
+
+    WebUI.callTestCase(findTestCase('Sprint4/linkTestCases/linkTestCase_CreateAttributeAlone'), [('DataType') : 'String'
+            , ('AttributeType') : 'Driven', ('InternalName') : drivenStringName, ('DisplayName') : drivenStringName, ('MasterList') : insideHash.get(
+                'masterListFullName')], FailureHandling.STOP_ON_FAILURE)
+}
+
+WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_AssignDrivenRules_Attribute'), [('level1Attribute') : drivenAttribute.get(
+            0), ('level1ListValue') : Level1ListValue, ('level2Attribute') : drivenAttribute.get(1), ('level2ListValue') : Level2ListValue], 
+    FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('Sprint4/linkTestCases/linkTestCase_DeleteAttributeByInternalName'), [('InternalNames') :drivenAttribute ], 
+    FailureHandling.STOP_ON_FAILURE)
+

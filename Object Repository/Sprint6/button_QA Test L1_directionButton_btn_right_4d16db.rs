@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_QA Test L1_directionButton_btn_right_4d16db</name>
+   <tag></tag>
+   <elementGuidId>3bdb6141-c4da-41c1-8d49-270ebd874b3d</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>button</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>directionButton_btn_right_arrow__Qt8-H</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>title</name>
+      <type>Main</type>
+      <value>Move to Right</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[1]/div[@class=&quot;manageLibrary_manage_library_container__RdgCO mt-50&quot;]/div[@class=&quot;manageLibrary_content_section__3u3ow&quot;]/div[@class=&quot;row driven_rules_wrapper driven_driven_rules__1Ritu&quot;]/div[@class=&quot;modal_popup__3KlH6&quot;]/div[@class=&quot;modal_popup_inner__3-Gr4&quot;]/div[@class=&quot;modal-dialog driven_driven_form__20xTr&quot;]/div[@class=&quot;modal-content&quot;]/div[@class=&quot;modal-body driven_modal_body__3BhUF&quot;]/div[@class=&quot;driven_driven_rules_block__5ZFgw&quot;]/div[2]/div[@class=&quot;manage_view_block&quot;]/div[@class=&quot;listSelector_list_box_group__2MEG0&quot;]/div[@class=&quot;directionButton_arrow_Btn_bordered__AWa0R&quot;]/button[@class=&quot;directionButton_btn_right_arrow__Qt8-H&quot;]</value>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>(//button[@type='button'])[2]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='root']/div/div/div[4]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div[2]/div[2]/button</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/button</value>
+   </webElementXpaths>
+</WebElementEntity>

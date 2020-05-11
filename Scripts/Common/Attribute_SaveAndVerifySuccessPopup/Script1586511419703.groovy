@@ -20,14 +20,14 @@ WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
 
 WebUI.delay(2)
 
-'Click the Yes button'
-WebUI.click(findTestObject('Object Repository/Sprint4/button_Yes'))
+'Click Yes Button'
+WebUI.click(findTestObject('Common Objects/button_Yes'))
 
 'Verify the Success popup text'
-WebUI.click(findTestObject('Object Repository/Sprint4/h5_Type has been modified successfully'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/h5_Type has been modified successfully'), 0)
 
 'Click Ok Button'
-WebUI.click(findTestObject('Object Repository/Sprint4/button_OK'))
+WebUI.click(findTestObject('Common Objects/button_OK'))
 
 WebUI.delay(2)
 

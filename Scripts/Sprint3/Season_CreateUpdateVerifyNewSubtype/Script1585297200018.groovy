@@ -101,9 +101,9 @@ WebUI.click(findTestObject('Object Repository/Sprint3/button_Create'))
 
 WebUI.delay(3)
 
-not_run: WebUI.refresh()
+WebUI.refresh()
 
-not_run: WebUI.delay(2)
+WebUI.delay(2)
 
 WebUI.selectOptionByLabel(findTestObject('Sprint3/select_parentDropDown'), DisplaytypeName, true)
 
@@ -164,8 +164,8 @@ WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
 
 WebUI.delay(2)
 
-'Click the Yes button'
-WebUI.click(findTestObject('Object Repository/Sprint4/button_Yes'))
+'Click Yes Button'
+WebUI.click(findTestObject('Common Objects/button_Yes'))
 
 WebUI.delay(2)
 

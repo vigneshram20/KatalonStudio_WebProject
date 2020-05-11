@@ -32,7 +32,7 @@ String emailID = 'qatest@photoninfotech.net'
 
 String contactNo = '987'
 
-WebUI.callTestCase(findTestCase('Sprint6/linkTestCase_CreateIndependantUser'), [('userID') : userID, ('firstName') : firstName
+WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CreateIndependantUser'), [('userID') : userID, ('firstName') : firstName
         , ('lastName') : lastName, ('emailID') : emailID, ('contactNo') : contactNo], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Save'))
@@ -45,7 +45,7 @@ WebUI.click(findTestObject('Object Repository/Sprint6/button_Yes'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_User has been modified successfully'), 0)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/button_OK'))
+WebUI.click(findTestObject('Common Objects/button_OK'))
 
 WebUI.scrollToElement(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-handle'), 0)
 
@@ -93,7 +93,7 @@ WebUI.click(findTestObject('Object Repository/Sprint6/button_Yes'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_User has been modified successfully'), 0)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/button_OK'))
+WebUI.click(findTestObject('Common Objects/button_OK'))
 
 WebUI.refresh()
 
@@ -120,7 +120,7 @@ WebUI.click(findTestObject('Object Repository/Sprint6/button_Yes'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_User has been modified successfully'), 0)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/button_OK'))
+WebUI.click(findTestObject('Common Objects/button_OK'))
 
 WebUI.verifyElementNotPresent(findTestObject('Object Repository/Sprint6/div_td_user_table_verification', [('userID') : userIDEdited
             , ('fullName') : displayName, ('firstName') : firstName, ('lastName') : lastName, ('emailID') : emailID, ('contactNo') : contactNo

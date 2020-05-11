@@ -71,7 +71,7 @@ WebUI.click(findTestObject('Sprint5/button_Create'))
 
 WebUI.verifyElementPresent(findTestObject('Sprint5/h5_Successfully Created'), 0)
 
-WebUI.click(findTestObject('Sprint5/button_OK'))
+WebUI.click(findTestObject('Common Objects/button_OK'))
 
 WebUI.click(findTestObject('Sprint5/div_ActionsParam_LadingPort', [('index1') : countryID, ('index2') : ladingPortDesc, ('index3') : ladingPortID
             , ('index4') : launchDate, ('index5') : ladingPortName, ('index6') : price, ('index7') : transitTime]))
@@ -117,7 +117,7 @@ WebUI.click(findTestObject('Sprint5/h5_Successfully Updated'))
 
 WebUI.click(findTestObject('Sprint5/p_parameterized has been updated', [('text') : ladingPortName]))
 
-WebUI.click(findTestObject('Sprint5/button_OK'))
+WebUI.click(findTestObject('Common Objects/button_OK'))
 
 WebUI.click(findTestObject('Sprint5/div_ActionsParam_LadingPort', [('index1') : countryIDEdited, ('index2') : ladingPortDescEdited
             , ('index3') : ladingPortIDEdited, ('index4') : launchDate, ('index5') : ladingPortNameEdited, ('index6') : price
@@ -140,7 +140,7 @@ WebUI.click(findTestObject('Sprint5/h5_Successfully Deleted'))
 WebUI.verifyElementPresent(findTestObject('Sprint5/p_Parameterized has been deleted', [('text') : ladingPortNameEdited]), 
     0)
 
-WebUI.click(findTestObject('Sprint5/button_OK'))
+WebUI.click(findTestObject('Common Objects/button_OK'))
 
 WebUI.verifyElementNotPresent(findTestObject('Sprint5/div_ActionsParam_LadingPort', [('index1') : countryIDEdited, ('index2') : ladingPortDescEdited
             , ('index3') : ladingPortIDEdited, ('index4') : launchDate, ('index5') : ladingPortNameEdited, ('index6') : price

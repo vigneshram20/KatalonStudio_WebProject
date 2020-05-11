@@ -4,6 +4,12 @@
    <name>div_In Store Launch End Date</name>
    <tag></tag>
    <elementGuidId>50351330-864f-4bd3-b236-e98a1af76a67</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@title = 'In Store Launch End Date' and (text() = 'In Store Launch End Date' or . = 'In Store Launch End Date')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -15,7 +21,7 @@
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
+      <matchCondition>contains</matchCondition>
       <name>class</name>
       <type>Main</type>
       <value>rTableHead freeze</value>

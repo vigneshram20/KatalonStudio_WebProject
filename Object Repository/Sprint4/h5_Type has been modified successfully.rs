@@ -4,10 +4,16 @@
    <name>h5_Type has been modified successfully</name>
    <tag></tag>
    <elementGuidId>ae72afd0-d173-4401-9e7c-9e751c785b12</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//h5[(text() = 'Type has been modified successfully.' or . = 'Type has been modified successfully.')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>

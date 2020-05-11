@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>linkTestCase_DeleteAttributeByInternalName</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>8c009f7b-f5ac-474a-b5c4-43b7c2cdc54a</testCaseGuid>
+   <variable>
+      <defaultValue>[]</defaultValue>
+      <description></description>
+      <id>aea432c6-aa63-43fc-9b7a-a04722469421</id>
+      <masked>false</masked>
+      <name>InternalNames</name>
+   </variable>
+</TestCaseEntity>

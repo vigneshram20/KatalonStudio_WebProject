@@ -49,7 +49,7 @@
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
-         <testSuiteEntity>Test Suites/Sprint 5/TS_CreateVerifyUpdateMasterListFolderAndList</testSuiteEntity>
+         <testSuiteEntity>Test Suites/Sprint 5/TS_CreateVerifyUpdate_MasterList_Folder_And_List</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>

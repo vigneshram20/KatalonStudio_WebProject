@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>linkTestCase_CreateRoleAlone</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>1f5ad706-6d35-4f04-99b2-18a73c201c19</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>b17cc052-4dc5-4c6d-96a0-14bf15836dc3</id>
+      <masked>false</masked>
+      <name>roleDescription</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>f42faed6-e7dc-4bbd-ab8f-f7273cbaf017</id>
+      <masked>false</masked>
+      <name>roleName</name>
+   </variable>
+</TestCaseEntity>

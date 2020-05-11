@@ -20,6 +20,7 @@ import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.WebElement as WebElement
 import org.openqa.selenium.WebDriver as WebDriver
+import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 
 'Launch the Browser'
 WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
@@ -43,42 +44,10 @@ WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-
 
 WebUI.delay(5)
 
-List<WebElement> listOfExistingElements = WebUI.findWebElements(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized',[('internalName'):InternalName]),
-	1)
+'Delete already exising attribute'
+WebUI.callTestCase(findTestCase('Sprint4/linkTestCases/linkTestCase_DeleteAlreadyExistingAttributesIfExist'), [('InternalName') : InternalName], FailureHandling.STOP_ON_FAILURE)
 
-for (WebElement checkbox : listOfExistingElements) {
-	Thread.sleep(100)
-
-	checkbox.click()
-
-	 'Scroll To Manage Layout button'
-    WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
-
-    WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
-
-    WebUI.delay(1)
-
-    'Click Remove icon'
-    WebUI.click(findTestObject('Sprint4/img_Attributes_remove-icon'))
-
-    WebUI.delay(2)
-
-    'Verify Header'
-    WebUI.verifyElementPresent(findTestObject('Sprint4/div_DeleteNote'), 10)
-
-    'Click Save and Verify Success Popup'
-    WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
-	
-	WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_UP))
-	
-		WebUI.delay(1)
-		
-	'Click Edit Mode Toggle button'
-	WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
-}
-
-
-'Click Add icon -Attributes'
+'Click Add icon - Attributes'
 WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
 
 WebUI.delay(1)
@@ -228,6 +197,7 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
 
+    'Scroll Page up'
     WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_UP))
 
     WebUI.delay(1)
@@ -236,11 +206,11 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
     WebUI.clickOffset(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 2, 4)
 
     if (DefaultToCurrentDate.equals('Yes')) {
-        DefaultToCurrentDateNumbered = "Yes"
+        DefaultToCurrentDateNumbered = 'Yes'
     } else if (DefaultToCurrentDate.equals('No')) {
-        DefaultToCurrentDateNumbered = "No"
+        DefaultToCurrentDateNumbered = 'No'
     } else {
-        DefaultToCurrentDateNumbered = "No"
+        DefaultToCurrentDateNumbered = 'No'
     }
     
     if (AttributeType.equals('Date') || AttributeType.equals('Boolean')) {
@@ -263,8 +233,8 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
     CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][.="') + OtherSideEntity) + '"]/..//td[29][.="') + OtherSideAttribute) + 
     '"]/..//td[30][.=\'\']')
 
-    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.="0"]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + DataType) + 
-    '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
+    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.="0"]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
+    DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
 
@@ -281,21 +251,24 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
 
+    'Scroll Page Down'
     WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
 
     WebUI.delay(1)
-	
-	'Click Add Attribute button'
+
+    'Click Add Attribute button'
     WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
 
     'Verify Data Type'
     WebUI.verifyElementHasAttribute(findTestObject('Sprint4/select_DataType'), 'disabled', 0)
 
+    'Verify the Data Type selected'
     WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint4/select_DataType'), DataType, false, 0)
 
     'Verify AttributeType'
     WebUI.verifyElementHasAttribute(findTestObject('Sprint4/select_AttributeType'), 'disabled', 0)
 
+    'Verift the Attribute type selected'
     WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint4/select_AttributeType'), AttributeType, false, 0)
 
     'Verify Internal Name Text'
@@ -367,6 +340,7 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
     }
     
     if (AttributeType.equals('Date')) {
+        'Verify the Element Present'
         WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/radio_VerifyGlobalParameterized', [('attribute') : 'defaultToCurrentDate'
                     , ('input') : DefaultToCurrentDate]), 0)
     }
@@ -404,10 +378,10 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
     System.out.println('The Database Column is ' + WebUI.getAttribute(findTestObject('Sprint4/input_Database Column'), 'value'))
 
     //Modify
-    String DisplayNameEdited = DisplayName + '_Edited'
+    String DisplayName = DisplayName + '_Edited'
 
     'Enter Display Name'
-    WebUI.setText(findTestObject('Object Repository/Sprint4/input__displayName'), DisplayNameEdited)
+    WebUI.setText(findTestObject('Object Repository/Sprint4/input__displayName'), DisplayName)
 
     if (MassChangeable.equals('Yes')) {
         MassChangeable = 'No'
@@ -424,12 +398,13 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
     'Click Save button'
     WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
 
-	'Click Save and Verify Success Popup'
-	WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
+    'Click Save and Verify Success Popup'
+    WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
 
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
 
+    'Scrol Page Up'
     WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_UP))
 
     WebUI.delay(1)
@@ -438,11 +413,11 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
     WebUI.clickOffset(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 2, 4)
 
     if (DefaultToCurrentDate.equals('Yes')) {
-        DefaultToCurrentDateNumbered = "Yes"
+        DefaultToCurrentDateNumbered = 'Yes'
     } else if (DefaultToCurrentDate.equals('No')) {
-        DefaultToCurrentDateNumbered = "No"
+        DefaultToCurrentDateNumbered = 'No'
     } else {
-        DefaultToCurrentDateNumbered = "No"
+        DefaultToCurrentDateNumbered = 'No'
     }
     
     if (AttributeType.equals('Date') || AttributeType.equals('Boolean')) {
@@ -451,7 +426,7 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
         td23Text = (((('From : ' + ValidRangeFrom) + ' And To: ') + ValidRangeTo) + '')
     }
     
-    columnXpath1 = (((((((((((((('//td[2][.="' + InternalName) + '"]/..//td[3][.="') + DisplayNameEdited) + '"]/..//td[4][.="') + 
+    columnXpath1 = (((((((((((((('//td[2][.="' + InternalName) + '"]/..//td[3][.="') + DisplayName) + '"]/..//td[4][.="') + 
     Description) + '"]/..//td[5][.="') + Enabled) + '"]/..//td[6][.="') + UseTooltip) + '"]/..//td[7][.=\'\']/..//td[8][.="') + 
     Tooltip) + '"]/..//td[9][.=\'No\']/..//td[10][.="') + EditableOnCreate) + '"]')
 
@@ -465,8 +440,8 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
     CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][.="') + OtherSideEntity) + '"]/..//td[29][.="') + OtherSideAttribute) + 
     '"]/..//td[30][.=\'\']')
 
-    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.="0"]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + DataType) + 
-    '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
+    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.="0"]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
+    DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
 
@@ -481,6 +456,7 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
 
+    'Scroll Page Down'
     WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
 
     WebUI.delay(1)
@@ -493,7 +469,7 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
     'Verify Header'
     WebUI.verifyElementPresent(findTestObject('Sprint4/div_DeleteNote'), 10)
 
-	'Click Save and Verify Success Popup'
-	WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
-
+    'Click Save and Verify Success Popup'
+    WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
 }
+

@@ -16,11 +16,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
+String roleName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QARole', 'ss')
 
-WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
+String roleDescription = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QADescription', 'ss')
 
-WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Administration', ('SubMenuItem') : 'User & Role Management'], 
+WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CreateRoleAlone'), [('roleDescription') : roleDescription, ('roleName') : roleName], 
     FailureHandling.STOP_ON_FAILURE)
 
 WebUI.verifyElementPresent(findTestObject('Sprint6/div_User and Role Management'), 0)
@@ -33,9 +33,9 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_PERMISS
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/span_Show Only Granted Role'), 0)
 
-WebUI.sendKeys(findTestObject('Sprint6/input_roleSearch'), 'PB MERCH OPS')
+WebUI.sendKeys(findTestObject('Sprint6/input_roleSearch'), roleName)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/th_PB MERCH OPS'), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint6/th_parameterized', [('param') : roleName]), 0)
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_Collection'), 0)
 
@@ -62,7 +62,7 @@ WebUI.click(findTestObject('Object Repository/Sprint6/button_Yes'))
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_Permission(s) has been modified successfully'), 
     0)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/button_OK'))
+WebUI.click(findTestObject('Common Objects/button_OK'))
 
 WebUI.refresh()
 
@@ -74,9 +74,9 @@ WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-
 
 WebUI.click(findTestObject('Object Repository/Sprint6/label_Show Only Granted Role'))
 
-WebUI.sendKeys(findTestObject('Sprint6/input_roleSearch'), 'PB MERCH OPS')
+WebUI.sendKeys(findTestObject('Sprint6/input_roleSearch'), roleName)
 
-WebUI.waitForElementPresent(findTestObject('Sprint6/th_VerticalHeader_param', [('headerText') : 'PB MERCH OPS']), 0)
+WebUI.waitForElementPresent(findTestObject('Sprint6/th_VerticalHeader_param', [('headerText') : roleName]), 0)
 
 WebUI.clickOffset(findTestObject('Sprint6/img_FilterMenu'), 10, 4)
 
@@ -84,11 +84,18 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/label_Edit 
 
 WebUI.setText(findTestObject('Sprint6/input_searchInputFilterMenu'), 'Collection')
 
-WebUI.click(findTestObject('Object Repository/Sprint6/span_Collection'))
+WebUI.click(findTestObject('Sprint6/span_Collection_popover'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/button_Clear All'), 0)
 
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Apply'))
 
 WebUI.verifyElementText(findTestObject('Sprint6/div_Collectiondropdowntext'), verifyCRUD)
+
+WebUI.click(findTestObject('Sprint6/button_Cancel'))
+
+WebUI.click(findTestObject('Sprint6/button_Yes'))
+
+WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_DeleteRoleAlone'), [('roleName') : roleName, ('roleDescription') : roleDescription], 
+    FailureHandling.STOP_ON_FAILURE)
 
