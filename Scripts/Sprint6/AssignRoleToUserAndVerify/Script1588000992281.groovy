@@ -32,8 +32,10 @@ String emailID = 'qatest@photoninfotech.net'
 
 String contactNo = '987'
 
-WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CreateIndependantUser'), [('userID') : userID, ('firstName') : firstName, ('lastName') : lastName
-        , ('emailID') : emailID, ('contactNo') : contactNo], FailureHandling.STOP_ON_FAILURE)
+String RoleName = 'SYSTEM ADMINISTRATOR'
+
+WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CreateIndependantUser'), [('userID') : userID, ('firstName') : firstName
+        , ('lastName') : lastName, ('emailID') : emailID, ('contactNo') : contactNo], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.scrollToElement(findTestObject('Sprint6/span_AddRoles_param', [('userID') : userID]), 0)
 
@@ -41,13 +43,13 @@ WebUI.click(findTestObject('Sprint6/span_AddRoles_param', [('userID') : userID])
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_Assign User Role(s)'), 0)
 
-WebUI.setText(findTestObject('Object Repository/Sprint6/input_Assign User Role(s)_role_search'), 'PB MERCH OPS')
+WebUI.setText(findTestObject('Object Repository/Sprint6/input_Assign User Role(s)_role_search'), RoleName)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/label_PB MERCH OPS'))
+WebUI.click(findTestObject('Sprint6/label_parameterized',[('param'):RoleName]))
 
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Assign'))
 
-WebUI.verifyElementPresent(findTestObject('Sprint6/span_VerifyAssignedRole_param', [('userID') : userID, ('role') : 'PB MERCH OPS']), 
+WebUI.verifyElementPresent(findTestObject('Sprint6/span_VerifyAssignedRole_param', [('userID') : userID, ('role') : RoleName]), 
     0)
 
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Save'))
@@ -68,7 +70,7 @@ WebUI.click(findTestObject('Object Repository/Sprint6/li_Users'))
 
 WebUI.click(findTestObject('Sprint3/span_Edit Mode_toggle_btn-handle'))
 
-WebUI.verifyElementPresent(findTestObject('Sprint6/span_VerifyAssignedRole_param', [('userID') : userID, ('role') : 'PB MERCH OPS']), 
+WebUI.verifyElementPresent(findTestObject('Sprint6/span_VerifyAssignedRole_param', [('userID') : userID, ('role') : RoleName]), 
     0)
 
 WebUI.click(findTestObject('Object Repository/Sprint6/div_td_user_table_verification', [('userID') : userID, ('fullName') : (firstName + 

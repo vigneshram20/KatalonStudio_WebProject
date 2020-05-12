@@ -229,4 +229,18 @@
       <masked>false</masked>
       <name>DBSequences</name>
    </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>1c7d2213-38e2-4425-929b-3126172d626a</id>
+      <masked>false</masked>
+      <name>ReferenceEntity</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>2a7b7702-ea6a-4f0e-a820-ed518ab4062e</id>
+      <masked>false</masked>
+      <name>ReferenceAttribute</name>
+   </variable>
 </TestCaseEntity>

@@ -34,13 +34,21 @@ WebUI.click(findTestObject('Sprint4/a_Manage Types'))
 'Click Season sub menu'
 WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
 
+WebUI.delay(1)
+
+WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+
+'Click Edit Mode Toggle button'
+WebUI.waitForElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 0)
+
 'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 WebUI.delay(5)
 
 'Delete already exising attribute'
-WebUI.callTestCase(findTestCase('Sprint4/linkTestCases/linkTestCase_DeleteAlreadyExistingAttributesIfExist'), [('InternalName') : InternalName], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Sprint4/linkTestCases/linkTestCase_DeleteAlreadyExistingAttributesIfExist'), [('InternalName') : InternalName], 
+    FailureHandling.STOP_ON_FAILURE)
 
 'Click Add icon -Attributes'
 WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
@@ -125,35 +133,40 @@ if (AttributeType.equals('Reference')) {
     WebUI.click(findTestObject('Object Repository/Sprint4/img_Search_Symbol - Ref Entity'))
 
     'Provide Reference Entity text'
-    WebUI.setText(findTestObject('Sprint4/input_SearchField'), 'collection')
+    WebUI.setText(findTestObject('Sprint4/input_SearchField'), ReferenceEntity)
 
     'Select Checkbox'
-    WebUI.click(findTestObject('Sprint4/label_CheckboxPopup', [('Symbol') : 'collection']))
+    WebUI.click(findTestObject('Object Repository/Sprint4/label_CheckboxPopup -URef', [('Symbol') : ReferenceEntity]))
 
     'Click Save button'
     WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
 
     'Verify Supported Type Symbol'
-    WebUI.click(findTestObject('Sprint4/li_ItemSelected', [('Symbol') : 'collection']))
+    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/li_ItemSelected - URef', [('Symbol') : ReferenceEntity]), 
+        0)
 
     ///////////////////////////
     'Provide Reference Attribute'
     WebUI.delay(2)
 
     'Click Search icon'
+    WebUI.scrollToElement(findTestObject('Object Repository/Sprint4/img_Search_Symbol - Ref Attribute'), 0)
+
+    'Click Search icon'
     WebUI.click(findTestObject('Object Repository/Sprint4/img_Search_Symbol - Ref Attribute'))
 
     'Provide Reference Entity text'
-    WebUI.setText(findTestObject('Sprint4/input_SearchField'), 'collection')
+    WebUI.setText(findTestObject('Sprint4/input_SearchField'), ReferenceAttribute)
 
     'Select Checkbox'
-    WebUI.click(findTestObject('Sprint4/label_CheckboxPopup', [('Symbol') : 'collection']))
+    WebUI.click(findTestObject('Object Repository/Sprint4/label_CheckboxPopup -URef', [('Symbol') : ReferenceAttribute]))
 
     'Click Save button'
     WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
 
     'Verify Supported Type Symbol'
-    WebUI.click(findTestObject('Sprint4/li_ItemSelected', [('Symbol') : 'collection']))
+    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/li_ItemSelected - URef', [('Symbol') : ReferenceAttribute]), 
+        0)
 
     'Click Create Button'
     WebUI.click(findTestObject('Object Repository/Sprint4/button_Create'))
@@ -164,7 +177,7 @@ if (AttributeType.equals('Reference')) {
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
 
-	'Page Up'
+    'Page Up'
     WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_UP))
 
     WebUI.delay(1)
@@ -185,8 +198,8 @@ if (AttributeType.equals('Reference')) {
     DisplayedDigits) + '"]/..//td[25][.="') + DecimalDigitsDisplayed) + '"]/..//td[26][.="') + CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][.="') + 
     OtherSideEntity) + '"]/..//td[29][.="') + OtherSideAttribute) + '"]/..//td[30][.=\'\']')
 
-    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.="0"]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + DataType) + 
-    '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
+    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.="0"]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
+    DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
 
@@ -195,31 +208,31 @@ if (AttributeType.equals('Reference')) {
 
     WebUI.delay(2)
 
-	'Select the Attribute Checkbox'
+    'Select the Attribute Checkbox'
     WebUI.click(ActionsObject)
 
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
 
-	'Page Down'
+    'Page Down'
     WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
 
     WebUI.delay(1)
 
-	'Click Add Attribute button'
+    'Click Add Attribute button'
     WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
 
     //Verify the data
     'Verify Data Type disabled'
     WebUI.verifyElementHasAttribute(findTestObject('Sprint4/select_DataType'), 'disabled', 0)
 
-	'Verify Data Type Selected'
+    'Verify Data Type Selected'
     WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint4/select_DataType'), DataType, false, 0)
 
     'Verify AttributeType'
     WebUI.verifyElementHasAttribute(findTestObject('Sprint4/select_AttributeType'), 'disabled', 0)
 
-	'Verify AttributeType Selected'
+    'Verify AttributeType Selected'
     WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint4/select_AttributeType'), AttributeType, false, 0)
 
     'Verify Internal Name Text'
@@ -279,6 +292,14 @@ if (AttributeType.equals('Reference')) {
     WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Sprint4/input_Other Side Entity'), 'value', OtherSideEntity, 
         0)
 
+    'Verify Supported Type Symbol'
+    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/li_ItemSelected - URef', [('Symbol') : ReferenceAttribute]), 
+        0)
+
+    'Verify Supported Type Symbol'
+    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/li_ItemSelected - URef', [('Symbol') : ReferenceEntity]), 
+        0)
+
     'Verify Label Database Column'
     System.out.println('The Database Column is ' + WebUI.getAttribute(findTestObject('Sprint4/input_Database Column'), 'value'))
 
@@ -331,8 +352,8 @@ if (AttributeType.equals('Reference')) {
     DisplayedDigits) + '"]/..//td[25][.="') + DecimalDigitsDisplayed) + '"]/..//td[26][.="') + CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][.="') + 
     OtherSideEntity) + '"]/..//td[29][.="') + OtherSideAttribute) + '"]/..//td[30][.=\'\']')
 
-    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.="0"]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + DataType) + 
-    '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
+    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.="0"]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
+    DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
 
@@ -347,7 +368,7 @@ if (AttributeType.equals('Reference')) {
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
 
-	'Page Down'
+    'Page Down'
     WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
 
     WebUI.delay(1)

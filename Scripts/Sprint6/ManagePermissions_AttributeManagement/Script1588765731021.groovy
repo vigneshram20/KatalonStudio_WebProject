@@ -26,38 +26,46 @@ String dateFormat = CustomKeywords.'myKeywords.customKeywords.timeStampWithStrin
 
 String libraryName = 'Root'
 
-String listName = 'QAML' + dateFormat
+String listNameInternal = 'QAML' + dateFormat
+
+String listNameDisplay = 'QAML' + dateFormat
 
 String listValue = 'QA Test'
 
-WebUI.callTestCase(findTestCase('Sprint5/linkTestCases/linkTesCase_CreateMasterList'), [('folderName') : libraryName, ('InternalName') : listName
-        , ('DisplayName') : listName, ('listItem') : listValue], FailureHandling.STOP_ON_FAILURE)
+String RoleName = "SYSTEM ADMINISTRATOR"
+
+String RoleAccess = "Create"
+
+WebUI.callTestCase(findTestCase('Sprint5/linkTestCases/linkTesCase_CreateMasterList'), [('folderName') : libraryName, ('InternalName') : listNameInternal
+        , ('DisplayName') : listNameDisplay, ('listItem') : listValue], FailureHandling.STOP_ON_FAILURE)
 
 String singleListName = 'QASL' + dateFormat
 
-if(!libraryName.equals("Root"))
-{
-String Master_List_Full_Name = (libraryName + ' | ') + listName
-}
-else
-{
-	Master_List_Full_Name = listName
+if (!(libraryName.equals('Root'))) {
+    String Master_List_Full_Name = (libraryName + ' | ') + listNameDisplay
+} else {
+    Master_List_Full_Name = listNameDisplay
 }
 
 WebUI.callTestCase(findTestCase('Sprint4/linkTestCases/linkTestCase_CreateAttributeAlone'), [('DataType') : 'String', ('AttributeType') : 'Single List'
         , ('InternalName') : singleListName, ('DisplayName') : singleListName, ('MasterList') : Master_List_Full_Name], 
     FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_AssignPermission_Attribute'), [('attributeName') : singleListName, ('paramName') : listValue], 
-    FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_AssignPermission_Attribute'), [('attributeName') : singleListName
+        , ('paramName') : listValue], FailureHandling.STOP_ON_FAILURE)
 
-List<String> attrValues = new ArrayList<String>();
+WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_AssignPermission_Attribute'), [('attributeName') : singleListName
+        , ('paramName') : listValue, ('RoleName') : RoleName, ('RoleAccess') : RoleAccess], FailureHandling.STOP_ON_FAILURE)
+
+List<String> attrValues = new ArrayList<String>()
+
 attrValues.add(singleListName)
 
-WebUI.callTestCase(findTestCase('Sprint4/linkTestCases/linkTestCase_DeleteAttributeByInternalName'), [('InternalNames') : attrValues], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Sprint4/linkTestCases/linkTestCase_DeleteAttributeByInternalName'), [('InternalNames') : attrValues], 
+    FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Manage Permissions'))
 
 WebUI.verifyElementNotPresent(findTestObject('Sprint6/div_td_permission_table_verification', [('attributeName') : singleListName
-            , ('paramName') : listValue, ('permission') : 'Create', ('roleName') : 'SYSTEM ADMINISTRATOR']), 0)
+            , ('paramName') : listValue, ('permission') : RoleAccess, ('roleName') : RoleName]), 0)
 

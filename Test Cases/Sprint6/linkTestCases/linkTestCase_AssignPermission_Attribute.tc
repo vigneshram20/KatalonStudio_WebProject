@@ -19,4 +19,18 @@
       <masked>false</masked>
       <name>paramName</name>
    </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>cb820cb4-462a-4d1e-9140-706de11c46cb</id>
+      <masked>false</masked>
+      <name>RoleName</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>138d51ad-0bda-486b-b725-bcf2b6e97a49</id>
+      <masked>false</masked>
+      <name>RoleAccess</name>
+   </variable>
 </TestCaseEntity>

@@ -14,7 +14,6 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 
 WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
 
@@ -39,11 +38,9 @@ String Level2AttributeDisplayName = 'QA L2 ' + dateFormat
 
 String Level2ListValue = 'QA Test L2'
 
-ArrayList<HashMap> masterListArray = new ArrayList<HashMap>()
+ArrayList<LinkedHashMap<String,String>> masterListArray = new ArrayList<LinkedHashMap<String,String>>()
 
-ArrayList<HashMap> AttributeArray = new ArrayList<HashMap>()
-
-HashMap<String, String> masterList1 = new HashMap<String, String>()
+LinkedHashMap<String, String> masterList1 = new LinkedHashMap<String, String>()
 
 masterList1.put('internalName', Level1AttributeInternalName)
 
@@ -53,7 +50,7 @@ masterList1.put('listValue', Level1ListValue)
 
 masterListArray.add(masterList1)
 
-HashMap<String, String> masterList2 = new HashMap<String, String>()
+LinkedHashMap<String, String> masterList2 = new LinkedHashMap<String, String>()
 
 masterList2.put('internalName', Level2AttributeInternalName)
 
@@ -63,24 +60,35 @@ masterList2.put('listValue', Level2ListValue)
 
 masterListArray.add(masterList2)
 
-for (HashMap<String, String> insideHash : masterListArray) {
+ArrayList<LinkedHashMap<String,String>> AttributeArray = new ArrayList<LinkedHashMap<String,String>>()
+
+LinkedHashMap<String, String> insideHashAttributeArray ;
+
+for (LinkedHashMap<String, String> insideHash : masterListArray) {
     WebUI.callTestCase(findTestCase('Sprint5/linkTestCases/linkTesCase_CreateMasterList'), [('folderName') : libraryName
             , ('InternalName') : insideHash.get('internalName'), ('DisplayName') : insideHash.get('displayName'), ('listItem') : insideHash.get(
                 'listValue')], FailureHandling.STOP_ON_FAILURE)
 
     if (!(libraryName.equals('Root'))) {
-        AttributeArray.add(new script1589200894904$1())
+		insideHashAttributeArray = new LinkedHashMap<String, String>()
+        insideHashAttributeArray.put('masterListFullName',libraryName+" "+insideHash.get('displayName'))
+		AttributeArray.add(insideHashAttributeArray)
+		
     } else {
-        AttributeArray.add(new script1589200894904$2())
+	insideHashAttributeArray = new LinkedHashMap<String, String>()
+        insideHashAttributeArray.put('masterListFullName',insideHash.get('displayName'))
+		AttributeArray.add(insideHashAttributeArray)
     }
 }
 
 int levelVal = 0
 
-ArrayList<HashMap> drivenAttribute = new ArrayList<HashMap>()
+ArrayList<String> drivenAttribute = new ArrayList<String>()
 
 for (HashMap<String, String> insideHash : AttributeArray) {
-    String drivenStringName = ((('QADrivenLevel' + '') + levelVal++) + '') + dateFormat
+	
+	levelVal = levelVal +1
+    String drivenStringName = ((('QADrivenLevel' + '') + levelVal) + '') + dateFormat
 
     drivenAttribute.add(drivenStringName)
 

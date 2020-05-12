@@ -34,13 +34,20 @@ WebUI.click(findTestObject('Sprint4/a_Manage Types'))
 'Click Season sub menu'
 WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
 
+WebUI.delay(1)
+
+WebUI.scrollToElement(findTestObject('Sprint3/span_Attributes'), 0)
+
+WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+
 'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 WebUI.delay(5)
 
 'Delete already exising attribute'
-WebUI.callTestCase(findTestCase('Sprint4/linkTestCases/linkTestCase_DeleteAlreadyExistingAttributesIfExist'), [('InternalName') : InternalName], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Sprint4/linkTestCases/linkTestCase_DeleteAlreadyExistingAttributesIfExist'), [('InternalName') : InternalName], 
+    FailureHandling.STOP_ON_FAILURE)
 
 'Click Add icon -Attributes'
 WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
@@ -134,9 +141,10 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
         'Click Search icon'
         WebUI.click(findTestObject('Sprint4/img_Search_Symbol'))
 
-        'Provide Currency Symbol text'
-        WebUI.setText(findTestObject('Sprint4/input_SearchField'), UserRoles)
+        WebUI.delay(2)
 
+        /*  'Provide Currency Symbol text'
+        WebUI.sendKeys(findTestObject('Sprint4/input_SearchField'), UserRoles)*/
         'Select Checkbox'
         WebUI.click(findTestObject('Object Repository/Sprint4/label_CheckboxPopup -URef', [('Symbol') : UserRoles]))
 
@@ -144,7 +152,8 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
         WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
 
         'Verify Selected Currency Symbol'
-        WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/li_ItemSelected - URef', [('Symbol') : UserRoles]),0)
+        WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/li_ItemSelected - URef', [('Symbol') : UserRoles]), 
+            0)
     }
     
     if (AttributeType.equals('Image')) {
@@ -181,8 +190,8 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
     'Click Create Button'
     WebUI.click(findTestObject('Object Repository/Sprint4/button_Create'))
 
-	'Click Save and Verify Success Popup'
-	WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
+    'Click Save and Verify Success Popup'
+    WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
 
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
@@ -195,7 +204,6 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
     WebUI.clickOffset(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 2, 4)
 
     //DefaultToCurrentDateNumbered = 0
-
     td23Text = ''
 
     columnXpath1 = (((((((((((((('//td[2][.="' + InternalName) + '"]/..//td[3][.="') + DisplayName) + '"]/..//td[4][.="') + 
@@ -212,7 +220,7 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
     CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][.="') + OtherSideEntity) + '"]/..//td[29][.="') + OtherSideAttribute) + 
     '"]/..//td[30][.=\'\']')
 
-    columnXpath4 = (((('/..//td[31][.="'+UserRoles+'"]/..//td[32][.="0"]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
+    columnXpath4 = (((((('/..//td[31][.="' + UserRoles) + '"]/..//td[32][.="0"]/..//td[33][.="') + AttributeType) + '"]/..//td[34][.="') + 
     DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
@@ -224,13 +232,13 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
     WebUI.delay(2)
 
     WebUI.click(ActionsObject)
-	
-	'Verify Manage Layout button'
-	WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
 
-	WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
+    'Verify Manage Layout button'
+    WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
 
-	WebUI.delay(1)
+    WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
+
+    WebUI.delay(1)
 
     WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
 
@@ -305,8 +313,9 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
     }
     
     if (AttributeType.equals('User Ref')) {
-               'Verify Selected Currency Symbol'
-        WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/li_ItemSelected - URef', [('Symbol') : UserRoles]),0)
+        'Verify Selected Currency Symbol'
+        WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/li_ItemSelected - URef', [('Symbol') : UserRoles]), 
+            0)
     }
     
     if (AttributeType.equals('Image')) {
@@ -328,9 +337,9 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
         'Verify Max File Size'
         WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Sprint4/input_MaxFileSize'), 'value', MaxFileSize, 
             0)
-		
-		'Verify Supported Type Symbol'
-		WebUI.verifyElementPresent(findTestObject('Sprint4/li_ItemSelected', [('Symbol') : SupportedType]), 0)
+
+        'Verify Supported Type Symbol'
+        WebUI.verifyElementPresent(findTestObject('Sprint4/li_ItemSelected', [('Symbol') : SupportedType]), 0)
     }
     
     'Verify Label Database Column'
@@ -357,9 +366,8 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
     'Click Save button'
     WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
 
-  'Click Save and Verify Success Popup'
-	WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
-
+    'Click Save and Verify Success Popup'
+    WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
 
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
@@ -370,10 +378,9 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
 
     'Click Edit Mode Toggle button'
     WebUI.clickOffset(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 2, 4)
-	
-	//DefaultToCurrentDateNumbered = 0
-	
-		td23Text = ''
+
+    //DefaultToCurrentDateNumbered = 0
+    td23Text = ''
 
     columnXpath1 = (((((((((((((('//td[2][.="' + InternalName) + '"]/..//td[3][.="') + DisplayName) + '"]/..//td[4][.="') + 
     Description) + '"]/..//td[5][.="') + Enabled) + '"]/..//td[6][.="') + UseTooltip) + '"]/..//td[7][.=\'\']/..//td[8][.="') + 
@@ -389,7 +396,7 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
     CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][.="') + OtherSideEntity) + '"]/..//td[29][.="') + OtherSideAttribute) + 
     '"]/..//td[30][.=\'\']')
 
-    columnXpath4 = (((('/..//td[31][.="'+UserRoles+'"]/..//td[32][.="0"]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
+    columnXpath4 = (((((('/..//td[31][.="' + UserRoles) + '"]/..//td[32][.="0"]/..//td[33][.="') + AttributeType) + '"]/..//td[34][.="') + 
     DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
@@ -401,13 +408,13 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
 
     'Select the Attribute from the grid'
     WebUI.click(ActionsObject)
-	
-	'Verify Manage Layout button'
-	WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
 
-	WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
+    'Verify Manage Layout button'
+    WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
 
-	WebUI.delay(1)
+    WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
+
+    WebUI.delay(1)
 
     'Click Remove icon'
     WebUI.click(findTestObject('Sprint4/img_Attributes_remove-icon'))
@@ -417,8 +424,7 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
     'Verify Header'
     WebUI.verifyElementPresent(findTestObject('Sprint4/div_DeleteNote'), 10)
 
-   'Click Save and Verify Success Popup'
-	WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
-
+    'Click Save and Verify Success Popup'
+    WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
 }
 

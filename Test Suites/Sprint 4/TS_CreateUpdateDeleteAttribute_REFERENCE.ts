@@ -5,10 +5,10 @@
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
-   <numberOfRerun>1</numberOfRerun>
+   <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
-   <rerunFailedTestCasesOnly>true</rerunFailedTestCasesOnly>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>e9b59745-2543-4c5f-a30e-aad332f7492a</testSuiteGuid>
    <testCaseLink>
       <guid>17281c6f-a6e0-48cb-a8b6-33451049082b</guid>
@@ -215,6 +215,18 @@
          <type>DATA_COLUMN</type>
          <value>DBSequences</value>
          <variableId>8b051172-c23c-49a7-8495-b112fc0fe3ee</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>a28b95e9-0d45-4d01-96d7-fea790aa9597</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>ReferenceEntity</value>
+         <variableId>1c7d2213-38e2-4425-929b-3126172d626a</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>a28b95e9-0d45-4d01-96d7-fea790aa9597</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>ReferenceAttribute</value>
+         <variableId>2a7b7702-ea6a-4f0e-a820-ed518ab4062e</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>
