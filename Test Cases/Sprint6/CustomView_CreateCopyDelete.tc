@@ -4,5 +4,12 @@
    <name>CustomView_CreateCopyDelete</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>52f85ff5-b91d-4da3-a9c1-6e588bf03078</testCaseGuid>
+   <testCaseGuid>25fa897a-d230-4585-a9cd-01c1806c1454</testCaseGuid>
+   <variable>
+      <defaultValue>'Custom'</defaultValue>
+      <description></description>
+      <id>724694ef-fe35-4c14-b108-fd1e171cac80</id>
+      <masked>false</masked>
+      <name>viewType</name>
+   </variable>
 </TestCaseEntity>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SystemView_Create_HideUnHide_Delete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>01f70029-ab0d-461c-8725-3c7cd2562990</testCaseGuid>
+   <variable>
+      <defaultValue>'System'</defaultValue>
+      <description></description>
+      <id>dc2ef6ba-ccdd-43c8-a695-2a265860b60b</id>
+      <masked>false</masked>
+      <name>viewType</name>
+   </variable>
+</TestCaseEntity>

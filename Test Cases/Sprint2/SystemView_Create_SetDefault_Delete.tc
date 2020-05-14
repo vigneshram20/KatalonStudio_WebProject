@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SystemView_Create_SetDefault_Delete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>24997dc7-9e9a-4d24-a67c-9369ae2968e4</testCaseGuid>
+   <variable>
+      <defaultValue>'System'</defaultValue>
+      <description></description>
+      <id>8283ccc8-bc74-45bc-abf0-9dc5f7d938fc</id>
+      <masked>false</masked>
+      <name>viewType</name>
+   </variable>
+</TestCaseEntity>

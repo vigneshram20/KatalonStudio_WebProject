@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>linkTestCase_CopyView</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>38db21db-e50d-4c7c-8674-f14cd155535b</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>820abbff-1a4a-404e-a38a-7108d155d3f7</id>
+      <masked>false</masked>
+      <name>viewName</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>127df06d-ba0f-41ee-81d6-bf3fe1e47eec</id>
+      <masked>false</masked>
+      <name>viewType</name>
+   </variable>
+</TestCaseEntity>

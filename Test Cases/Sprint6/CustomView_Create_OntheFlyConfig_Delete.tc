@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CustomView_Create_OntheFlyConfig_Delete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>869bc8ca-84fc-4d84-9063-2608cb88a602</testCaseGuid>
+   <variable>
+      <defaultValue>'Custom'</defaultValue>
+      <description></description>
+      <id>39c6c3d4-bfda-4b9f-9a5c-5ce738b1236d</id>
+      <masked>false</masked>
+      <name>viewType</name>
+   </variable>
+</TestCaseEntity>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SystemView_CreateEditDelete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e206fadd-2483-464a-b465-557da58b5414</testCaseGuid>
+   <variable>
+      <defaultValue>'System'</defaultValue>
+      <description></description>
+      <id>c3518911-dc2d-4f1a-88f8-a1d750d26a91</id>
+      <masked>false</masked>
+      <name>viewType</name>
+   </variable>
+</TestCaseEntity>

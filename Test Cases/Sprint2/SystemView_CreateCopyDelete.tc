@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SystemView_CreateCopyDelete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>30826d1b-ffd0-4bf5-bae0-0e32225ed94a</testCaseGuid>
+   <variable>
+      <defaultValue>'System'</defaultValue>
+      <description></description>
+      <id>b433ae84-59ac-4dbe-80d4-8ccadda0bed4</id>
+      <masked>false</masked>
+      <name>viewType</name>
+   </variable>
+</TestCaseEntity>

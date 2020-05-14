@@ -143,8 +143,9 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
 
         WebUI.delay(2)
 
-        /*  'Provide Currency Symbol text'
-        WebUI.sendKeys(findTestObject('Sprint4/input_SearchField'), UserRoles)*/
+          'Provide Currency Symbol text'
+        WebUI.sendKeys(findTestObject('Sprint4/input_SearchField'), UserRoles)
+		
         'Select Checkbox'
         WebUI.click(findTestObject('Object Repository/Sprint4/label_CheckboxPopup -URef', [('Symbol') : UserRoles]))
 

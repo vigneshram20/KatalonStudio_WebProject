@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SystemView_Create_OntheFlyConfig_Delete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e0a54190-0d9f-459c-bc6f-843f52cc7b46</testCaseGuid>
+   <variable>
+      <defaultValue>'System'</defaultValue>
+      <description></description>
+      <id>cadfdb2f-fa66-44f9-b57d-f86a30509833</id>
+      <masked>false</masked>
+      <name>viewType</name>
+   </variable>
+</TestCaseEntity>

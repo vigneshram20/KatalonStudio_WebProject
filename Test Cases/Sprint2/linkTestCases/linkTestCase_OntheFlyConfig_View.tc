@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>linkTestCase_OntheFlyConfig_View</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ec6e1ba6-08f6-446e-a507-0d1cb43f5f97</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>32b98ae1-aad5-4a3b-8e44-690fe68d2a68</id>
+      <masked>false</masked>
+      <name>viewName</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>9a0d0ef5-4443-4f4b-be8a-3cadb193f7d4</id>
+      <masked>false</masked>
+      <name>viewType</name>
+   </variable>
+</TestCaseEntity>

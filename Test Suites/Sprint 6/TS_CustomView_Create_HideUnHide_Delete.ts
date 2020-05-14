@@ -15,5 +15,11 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Sprint6/CustomView_Create_HideUnHide_Delete</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>079eafcc-9887-4297-ae39-212d3d1f86c5</variableId>
+      </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

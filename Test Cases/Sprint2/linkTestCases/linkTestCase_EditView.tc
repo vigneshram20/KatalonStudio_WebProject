@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>linkTestCase_EditView</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>de4670ab-1738-4469-a29b-fc8271e621c3</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>408308cc-6861-48cb-baaa-ec8a3de2981f</id>
+      <masked>false</masked>
+      <name>viewName</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>78ee79d1-0f5f-40ee-8d61-969fbf9d919c</id>
+      <masked>false</masked>
+      <name>viewType</name>
+   </variable>
+</TestCaseEntity>

@@ -4,10 +4,16 @@
    <name>div_Name</name>
    <tag></tag>
    <elementGuidId>c2c9f87c-dfc4-454c-8f68-07624a53206b</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//div[@title = 'Name' and (text() = 'Name' or . = 'Name')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
