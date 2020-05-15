@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//h5[(text() = 'Permissions has been modified successfully.' or . = 'Permissions has been modified successfully.')]</value>
+         <value>//h5[(text() = 'Permission(s) has been modified successfully.' or . = 'Permission(s) has been modified successfully.')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -31,7 +31,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Permissions has been modified successfully.</value>
+      <value>Permission(s) has been modified successfully.</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

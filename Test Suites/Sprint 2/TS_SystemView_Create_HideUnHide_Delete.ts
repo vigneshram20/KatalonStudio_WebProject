@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TS_CustomView_Create_SetDefault_Delete</name>
+   <name>TS_SystemView_Create_HideUnHide_Delete</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,17 +9,17 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <testSuiteGuid>ca070553-32e9-4835-9658-f9c8dbe5fbb8</testSuiteGuid>
+   <testSuiteGuid>ff47b761-28c7-43d9-868a-785b500a8c1f</testSuiteGuid>
    <testCaseLink>
-      <guid>7146b855-0174-441e-a569-e50eb6d21f6e</guid>
+      <guid>65d063ec-40dd-4f61-a173-97d61f441f1e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Sprint6/CustomView_Create_SetDefault_Delete</testCaseId>
+      <testCaseId>Test Cases/Sprint2/SystemView_Create_HideUnHide_Delete</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>53e300b9-27df-42f7-9ec7-a384886d20df</variableId>
+         <variableId>dc2ef6ba-ccdd-43c8-a695-2a265860b60b</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TS_CustomView_Create_SetDefault_Delete</name>
+   <name>TS_SystemView_CreateCopyDelete</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,17 +9,17 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <testSuiteGuid>ca070553-32e9-4835-9658-f9c8dbe5fbb8</testSuiteGuid>
+   <testSuiteGuid>ba2e5786-6245-484c-a9b0-4e20ad8ef8e8</testSuiteGuid>
    <testCaseLink>
-      <guid>7146b855-0174-441e-a569-e50eb6d21f6e</guid>
+      <guid>3a62564a-46f3-4ed2-bc39-92d63e4fe8a3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Sprint6/CustomView_Create_SetDefault_Delete</testCaseId>
+      <testCaseId>Test Cases/Sprint2/SystemView_CreateCopyDelete</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>53e300b9-27df-42f7-9ec7-a384886d20df</variableId>
+         <variableId>b433ae84-59ac-4dbe-80d4-8ccadda0bed4</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>
