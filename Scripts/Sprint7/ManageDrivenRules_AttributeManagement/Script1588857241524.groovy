@@ -97,7 +97,7 @@ for (HashMap<String, String> insideHash : AttributeArray) {
                 'masterListFullName')], FailureHandling.STOP_ON_FAILURE)
 }
 
-WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_AssignDrivenRules_Attribute'), [('level1Attribute') : drivenAttribute.get(
+WebUI.callTestCase(findTestCase('Sprint7/linkTestCases/linkTestCase_AssignDrivenRules_Attribute'), [('level1Attribute') : drivenAttribute.get(
             0), ('level1ListValue') : Level1ListValue, ('level2Attribute') : drivenAttribute.get(1), ('level2ListValue') : Level2ListValue], 
     FailureHandling.STOP_ON_FAILURE)
 

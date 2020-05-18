@@ -21,10 +21,13 @@ WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 'Click Manage View'
 WebUI.click(findTestObject('Common Objects/button_Manage Views'))
 
+'Click View Name'
 WebUI.click(findTestObject('Sprint6/span_ViewName_parameterized', [('viewName') : viewName]))
 
+'Click Hide/UnHide button'
 WebUI.click(findTestObject('Sprint6/button_HideUnhide'))
 
+'Verify the view is hidden'
 WebUI.verifyElementPresent(findTestObject('Sprint6/span_hiddenViewName_parameterized', [('viewName') : viewName]), 0)
 
 'Click Save Changes'
@@ -36,15 +39,19 @@ WebUI.click(findTestObject('Common Objects/button_OK'))
 'Open View Selector'
 WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 
+'Verify the View is not shown in the selector'
 WebUI.verifyElementNotPresent(findTestObject('Sprint6/button_paremeterized_ViewName', [('viewName') : viewName]), 0)
 
 'Click Manage View'
 WebUI.click(findTestObject('Common Objects/button_Manage Views'))
 
+'Click hidden view '
 WebUI.click(findTestObject('Sprint6/span_hiddenViewName_parameterized', [('viewName') : viewName]), FailureHandling.STOP_ON_FAILURE)
 
+'Click UnHide button'
 WebUI.click(findTestObject('Sprint6/button_HideUnhide'))
 
+'Verify the element is un hidden'
 WebUI.verifyElementPresent(findTestObject('Sprint6/span_ViewName_parameterized', [('viewName') : viewName]), 0)
 
 'Click Save Changes'
@@ -56,7 +63,8 @@ WebUI.click(findTestObject('Common Objects/button_OK'))
 'Open View Selector'
 WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 
+'Verify the view is present'
 WebUI.verifyElementPresent(findTestObject('Sprint6/button_paremeterized_ViewName', [('viewName') : viewName]), 0)
 
-'Open View Selector'
+'Close View Selector'
 WebUI.click(findTestObject('Common Objects/button_viewSelector'))

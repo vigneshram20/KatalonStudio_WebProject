@@ -93,13 +93,24 @@ WebUI.verifyElementPresent(findTestObject('Sprint6/div_One or more Driven Rule(s
 
 WebUI.click(findTestObject('Sprint6/button_Save'))
 
-WebUI.rightClick(findTestObject('Sprint6/h5_Confirm to Save'))
+WebUI.verifyElementPresent(findTestObject('Sprint6/h5_Confirm to Save'), 0)
 
 WebUI.click(findTestObject('Sprint6/button_Yes'))
 
-WebUI.verifyElementNotPresent(findTestObject('Sprint6/button_Save'), 30)
+not_run: WebUI.verifyElementNotPresent(findTestObject('Sprint6/button_Save'), 30)
 
 WebUI.verifyElementNotPresent(findTestObject('Sprint6/td_drivenRules_parameterized', [('param1') : level1Attribute, ('param2') : level2Attribute
             , ('value1') : level1ListValue, ('value2') : level2ListValue]), 0)
 
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+
+WebUI.delay(1)
+
+WebUI.refresh()
+
+WebUI.delay(3)
+
+WebUI.waitForPageLoad(0)
+
+WebUI.enableSmartWait()
+

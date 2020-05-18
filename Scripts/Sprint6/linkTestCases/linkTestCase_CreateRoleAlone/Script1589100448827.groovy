@@ -39,10 +39,10 @@ WebUI.click(findTestObject('Object Repository/Sprint6/button_Yes'))
 
 WebUI.click(findTestObject('Common Objects/button_OK'))
 
-WebUI.sendKeys(findTestObject('Sprint6/li_Roles'), Keys.chord(Keys.CONTROL, Keys.HOME))
-
 WebUI.delay(1)
 
 WebUI.verifyElementPresent(findTestObject('Sprint6/div_td_role_table_verification', [('roleName') : roleName, ('roleDescription') : roleDescription]), 
     2, FailureHandling.STOP_ON_FAILURE)
+
+WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 

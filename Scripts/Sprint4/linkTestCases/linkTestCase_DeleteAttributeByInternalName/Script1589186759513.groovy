@@ -16,7 +16,12 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.WebElement as WebElement
-import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
+
+WebUI.delay(2)
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/button_Manage Attributes'), 0)
+
+WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint6/button_Manage Attributes'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Manage Attributes'))
 
@@ -26,7 +31,12 @@ WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-
 for (String InternalName : InternalNames) {
     WebUI.delay(1)
 
-    WebUI.click(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized', [('internalName') : InternalName]))
+    not_run: WebUI.scrollToElement(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized', [('internalName') : InternalName]), 
+        0)
+
+    WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized', [('internalName') : InternalName]))
+
+    WebUI.delay(1)
 }
 
 'Scroll To Manage Layout button'

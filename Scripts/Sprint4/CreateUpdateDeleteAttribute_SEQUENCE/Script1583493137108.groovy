@@ -34,13 +34,25 @@ WebUI.click(findTestObject('Sprint4/a_Manage Types'))
 'Click Season sub menu'
 WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
 
+WebUI.delay(1)
+
+WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+
+WebUI.delay(5)
+
 'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 WebUI.delay(5)
 
 'Delete already exising attribute'
-WebUI.callTestCase(findTestCase('Sprint4/linkTestCases/linkTestCase_DeleteAlreadyExistingAttributesIfExist'), [('InternalName') : InternalName], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Sprint4/linkTestCases/linkTestCase_DeleteAlreadyExistingAttributesIfExist'), [('InternalName') : InternalName], 
+    FailureHandling.STOP_ON_FAILURE)
+
+WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+
+'Scroll Page Down'
+WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
 
 'Click Add icon -Attributes'
 WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
@@ -108,21 +120,19 @@ if (AttributeType.equals('Sequence Name')) {
     'Click Create Button'
     WebUI.click(findTestObject('Object Repository/Sprint4/button_Create'))
 
-	'Click Save and Verify Success Popup'
-	WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
+    'Click Save and Verify Success Popup'
+    WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
 
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
 
-	'Page UP'
+    'Page UP'
     WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_UP))
 
     WebUI.delay(1)
 
     'Click Edit Mode Toggle button'
     WebUI.clickOffset(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 2, 4)
-
-    DefaultToCurrentDateNumbered = 0
 
     td23Text = ''
 
@@ -133,40 +143,45 @@ if (AttributeType.equals('Sequence Name')) {
     columnXpath2 = (((((((((((((((((((('/..//td[11][.="' + EditableOnUpdate) + '"]/..//td[12][.="') + MassChangeable) + 
     '"]/..//td[13][.="') + TableEditable) + '"]/..//td[14][.="') + TableWrappable) + '"]/..//td[15][.="') + TableMinWrapWidth) + 
     '"]/..//td[16][.="') + Formula) + '"]/..//td[17][.="') + Required) + '"]/..//td[18][.="') + DefaultValue) + '"]/..//td[19][.="') + 
-    DefaultToCurrentDateNumbered) + '"]/..//td[20][.="') + Unique) + '"]')
+    DefaultToCurrentDate) + '"]/..//td[20][.="') + Unique) + '"]')
 
-    columnXpath3 = (((((((((((((((('/..//td[21][.="' + ElementWidth) + '"]/..//td[22][.="') + ElementHeight) + '"]/..//td[23][.="') + 
+    columnXpath3 = (((((((((((((((((('/..//td[21][.="' + ElementWidth) + '"]/..//td[22][.="') + ElementHeight) + '"]/..//td[23][.="') + 
     td23Text) + '"]/..//td[24][.="') + DisplayedDigits) + '"]/..//td[25][.="') + DecimalDigitsDisplayed) + '"]/..//td[26][.="') + 
     CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][.="') + OtherSideEntity) + '"]/..//td[29][.="') + OtherSideAttribute) + 
-    '"]/..//td[30][.=\'\']')
+    '"]/..//td[30][.="') + DBSequences) + '"]')
 
-    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.=""]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
+    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.="0"]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
     DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
 
-	   ActionsObject = WebUI.modifyObjectProperty(findTestObject('Object Repository/Sprint4/td_CreatedAttributeDynamicCheck'), 
+    ActionsObject = WebUI.modifyObjectProperty(findTestObject('Object Repository/Sprint4/td_CreatedAttributeDynamicCheck'), 
         'xpath', 'equals', columnXpath, true)
 
     WebUI.delay(2)
 
-	'Click Attributes Checkbox'
+    'Click Attributes Checkbox'
     WebUI.click(ActionsObject)
+	
+	WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+	
+	'Scroll Page Down'
+	WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
 
-	'Click Attributes Add icon'
+    'Click Attributes Add icon'
     WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
 
     //Verify the data
     'Verify Data Type'
     WebUI.verifyElementHasAttribute(findTestObject('Sprint4/select_DataType'), 'disabled', 0)
 
-	'Verify Data Type selected or not'
+    'Verify Data Type selected or not'
     WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint4/select_DataType'), DataType, false, 0)
 
     'Verify AttributeType'
     WebUI.verifyElementHasAttribute(findTestObject('Sprint4/select_AttributeType'), 'disabled', 0)
 
-	'Verif Attribute Type selected or not'
+    'Verif Attribute Type selected or not'
     WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint4/select_AttributeType'), AttributeType, false, 0)
 
     'Verify Internal Name Text'
@@ -225,23 +240,19 @@ if (AttributeType.equals('Sequence Name')) {
     'Click Save button'
     WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
 
-   'Click Save and Verify Success Popup'
-	WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
+    'Click Save and Verify Success Popup'
+    WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
 
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
 
-	'Page UP'
+    'Page UP'
     WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_UP))
 
     WebUI.delay(1)
 
     'Click Edit Mode Toggle button'
     WebUI.clickOffset(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 2, 4)
-
-    DefaultToCurrentDateNumbered = 0
-
-    td23Text = ''
 
     columnXpath1 = (((((((((((((('//td[2][.="' + InternalName) + '"]/..//td[3][.="') + DisplayName) + '"]/..//td[4][.="') + 
     Description) + '"]/..//td[5][.="') + Enabled) + '"]/..//td[6][.="') + UseTooltip) + '"]/..//td[7][.=\'\']/..//td[8][.="') + 
@@ -250,14 +261,14 @@ if (AttributeType.equals('Sequence Name')) {
     columnXpath2 = (((((((((((((((((((('/..//td[11][.="' + EditableOnUpdate) + '"]/..//td[12][.="') + MassChangeable) + 
     '"]/..//td[13][.="') + TableEditable) + '"]/..//td[14][.="') + TableWrappable) + '"]/..//td[15][.="') + TableMinWrapWidth) + 
     '"]/..//td[16][.="') + Formula) + '"]/..//td[17][.="') + Required) + '"]/..//td[18][.="') + DefaultValue) + '"]/..//td[19][.="') + 
-    DefaultToCurrentDateNumbered) + '"]/..//td[20][.="') + Unique) + '"]')
+    DefaultToCurrentDate) + '"]/..//td[20][.="') + Unique) + '"]')
 
-    columnXpath3 = (((((((((((((((('/..//td[21][.="' + ElementWidth) + '"]/..//td[22][.="') + ElementHeight) + '"]/..//td[23][.="') + 
+    columnXpath3 = (((((((((((((((((('/..//td[21][.="' + ElementWidth) + '"]/..//td[22][.="') + ElementHeight) + '"]/..//td[23][.="') + 
     td23Text) + '"]/..//td[24][.="') + DisplayedDigits) + '"]/..//td[25][.="') + DecimalDigitsDisplayed) + '"]/..//td[26][.="') + 
     CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][.="') + OtherSideEntity) + '"]/..//td[29][.="') + OtherSideAttribute) + 
-    '"]/..//td[30][.=\'\']')
+    '"]/..//td[30][.="') + DBSequences) + '"]')
 
-    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.=""]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
+    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.="0"]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
     DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
@@ -269,6 +280,11 @@ if (AttributeType.equals('Sequence Name')) {
 
     'Select the Attribute from the grid'
     WebUI.click(ActionsObject)
+	
+	WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+	
+	'Scroll Page Down'
+	WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
 
     'Click Remove icon'
     WebUI.click(findTestObject('Sprint4/img_Attributes_remove-icon'))
@@ -278,8 +294,10 @@ if (AttributeType.equals('Sequence Name')) {
     'Verify Header'
     WebUI.verifyElementPresent(findTestObject('Sprint4/div_DeleteNote'), 10)
 
-   'Click Save and Verify Success Popup'
-	WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
-
+    'Click Save and Verify Success Popup'
+    WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
+	
+	WebUI.verifyElementNotPresent(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized', [('internalName') : InternalName]),
+		0)
 }
 

@@ -15,12 +15,16 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
+'Generate random View Name'
 String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA' + viewType, 'ddMMMyyHHmmss')
 
+'Create System View'
 WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_CreateView'), [('viewName') : viewName, ('viewType') : viewType], 
     FailureHandling.STOP_ON_FAILURE)
 
+'Verify Hide and Un Hide View operation'
 WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_HideUnHideView'), [('viewName') : viewName], FailureHandling.STOP_ON_FAILURE)
 
+'Delete the View'
 WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_DeleteView'), [('viewName') : viewName], FailureHandling.STOP_ON_FAILURE)
 

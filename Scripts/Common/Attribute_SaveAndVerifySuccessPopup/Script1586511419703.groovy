@@ -18,15 +18,11 @@ import internal.GlobalVariable as GlobalVariable
 'Click Save button'
 WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
 
-WebUI.delay(2)
-
 'Click Yes Button'
 WebUI.click(findTestObject('Common Objects/button_Yes'))
 
 'Verify the Success popup text'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/h5_Type has been modified successfully'), 0)
-
-WebUI.delay(2)
 
 'Click Ok Button'
 WebUI.clickOffset(findTestObject('Common Objects/button_OK'), 5, 0)
@@ -34,11 +30,7 @@ WebUI.clickOffset(findTestObject('Common Objects/button_OK'), 5, 0)
 'Click Ok Button'
 Boolean okbutton = WebUI.waitForElementNotPresent(findTestObject('Common Objects/button_OK'), 5, FailureHandling.STOP_ON_FAILURE)
 
-if(!okbutton)
-{
-	'Click Ok Button'
-	WebUI.clickOffset(findTestObject('Common Objects/button_OK'), 5, 0)
+if (!(okbutton)) {
+    'Click Ok Button'
+    WebUI.clickOffset(findTestObject('Common Objects/button_OK'), 5, 0)
 }
-
-WebUI.delay(2)
-

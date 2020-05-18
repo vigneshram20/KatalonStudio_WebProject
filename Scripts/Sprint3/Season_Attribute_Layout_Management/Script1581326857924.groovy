@@ -129,8 +129,16 @@ WebUI.click(findTestObject('Common Objects/button_Yes'))
 
 WebUI.delay(1)
 
-'Clikc Ok button'
-WebUI.click(findTestObject('Common Objects/button_OK'))
+'Click Ok Button'
+WebUI.clickOffset(findTestObject('Common Objects/button_OK'), 5, 0)
+
+'Click Ok Button'
+Boolean okbutton = WebUI.waitForElementNotPresent(findTestObject('Common Objects/button_OK'), 5, FailureHandling.STOP_ON_FAILURE)
+
+if (!(okbutton)) {
+    'Click Ok Button'
+    WebUI.clickOffset(findTestObject('Common Objects/button_OK'), 5, 0)
+}
 
 WebUI.delay(3)
 
@@ -234,8 +242,17 @@ WebUI.click(findTestObject('Object Repository/Sprint3/button_Save'))
 'Click Yes button'
 WebUI.click(findTestObject('Common Objects/button_Yes'))
 
-'Click Ok button'
-WebUI.click(findTestObject('Common Objects/button_OK'))
+'Click Ok Button'
+WebUI.clickOffset(findTestObject('Common Objects/button_OK'), 5, 0)
+
+'Click Ok Button'
+Boolean okbutton1 = WebUI.waitForElementNotPresent(findTestObject('Common Objects/button_OK'), 5, FailureHandling.STOP_ON_FAILURE)
+
+if (!(okbutton1)) {
+    'Click Ok Button'
+    WebUI.clickOffset(findTestObject('Common Objects/button_OK'), 5, 0)
+}
+
 
 WebUI.delay(1)
 

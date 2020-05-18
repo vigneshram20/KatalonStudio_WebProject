@@ -48,9 +48,9 @@ String expectedID = formatter2.format(date)
 
 String expectedCountry = formatter.format(date)
 
-countryID = ('ID' + expectedID)
+countryID = ('aID' + expectedID)
 
-countryName = ('QACountry' + expectedCountry)
+countryName = ('aQACountry' + expectedCountry)
 
 WebUI.setText(findTestObject('Object Repository/Sprint5/input__countryid'), countryID)
 

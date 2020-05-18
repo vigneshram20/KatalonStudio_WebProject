@@ -13,7 +13,7 @@
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
-         <testSuiteEntity>Test Suites/Sprint 6/TS_AssignCRUDPermissions</testSuiteEntity>
+         <testSuiteEntity>Test Suites/Sprint 7/TS_AssignCRUDPermissions</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
@@ -22,7 +22,7 @@
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
-         <testSuiteEntity>Test Suites/Sprint 6/TS_AssignCRUDPermissions</testSuiteEntity>
+         <testSuiteEntity>Test Suites/Sprint 7/TS_AssignCRUDPermissions</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
@@ -31,7 +31,7 @@
             <runConfigurationId>Edge</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
-         <testSuiteEntity>Test Suites/Sprint 6/TS_AssignCRUDPermissions</testSuiteEntity>
+         <testSuiteEntity>Test Suites/Sprint 7/TS_AssignCRUDPermissions</testSuiteEntity>
       </TestSuiteRunConfiguration>
    </testSuiteRunConfigurations>
 </TestSuiteCollectionEntity>

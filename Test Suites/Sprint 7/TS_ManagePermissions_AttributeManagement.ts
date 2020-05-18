@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TS_ManageDrivenRules_AttributeManagement</name>
+   <name>TS_ManagePermissions_AttributeManagement</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,11 +9,11 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <testSuiteGuid>8a0a8205-cf96-446e-9128-3ddf6b6df2a7</testSuiteGuid>
+   <testSuiteGuid>fb2e088f-b92a-4b7b-9812-0ab904c8ac3f</testSuiteGuid>
    <testCaseLink>
-      <guid>8d11d088-1b90-4357-8fb2-b723b91b1698</guid>
+      <guid>b8880451-3310-4805-8460-f4665cfdc826</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Sprint6/ManageDrivenRules_AttributeManagement</testCaseId>
+      <testCaseId>Test Cases/Sprint7/ManagePermissions_AttributeManagement</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

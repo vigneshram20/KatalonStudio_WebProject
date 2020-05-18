@@ -51,10 +51,7 @@ WebUI.callTestCase(findTestCase('Sprint4/linkTestCases/linkTestCase_CreateAttrib
         , ('InternalName') : singleListName, ('DisplayName') : singleListName, ('MasterList') : Master_List_Full_Name], 
     FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_AssignPermission_Attribute'), [('attributeName') : singleListName
-        , ('paramName') : listValue], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_AssignPermission_Attribute'), [('attributeName') : singleListName
+WebUI.callTestCase(findTestCase('Sprint7/linkTestCases/linkTestCase_AssignPermission_Attribute'), [('attributeName') : singleListName
         , ('paramName') : listValue, ('RoleName') : RoleName, ('RoleAccess') : RoleAccess], FailureHandling.STOP_ON_FAILURE)
 
 List<String> attrValues = new ArrayList<String>()

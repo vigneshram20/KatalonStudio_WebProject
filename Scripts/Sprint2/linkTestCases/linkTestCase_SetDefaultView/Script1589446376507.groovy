@@ -21,12 +21,15 @@ WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 'Click Manage View'
 WebUI.click(findTestObject('Common Objects/button_Manage Views'))
 
+'Click View Name'
 WebUI.click(findTestObject('Sprint6/span_ViewName_parameterized', [('viewName') : viewName]))
 
+'Click SetDefault button'
 WebUI.click(findTestObject('Sprint6/button_SetDefault'))
 
 String viewNameVerify = (viewName + ' – Default')
 
+'Verify Default view is displayed or not'
 WebUI.verifyElementPresent(findTestObject('Sprint6/span_ViewName_parameterized', [('viewName') : viewNameVerify]), 0)
 
 'Click Save Changes'
@@ -39,5 +42,6 @@ WebUI.delay(2)
 
 viewName = (viewName + ' - Default')
 
+'Verify the default view is displayed in the view selector or not'
 WebUI.verifyElementPresent(findTestObject('Sprint6/button_paremeterized_ViewName', [('viewName') : viewName]),
 	0)

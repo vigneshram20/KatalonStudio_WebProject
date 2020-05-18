@@ -427,5 +427,8 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
 
     'Click Save and Verify Success Popup'
     WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
+	
+	WebUI.verifyElementNotPresent(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized', [('internalName') : InternalName]),
+		0)
 }
 

@@ -26,9 +26,8 @@ WebUI.click(findTestObject('Sprint5/div_li_parameterized_ExpandCollapseIcon', [(
 
 WebUI.click(findTestObject('Sprint5/a_folder_MasterList', [('folderName') : folderName]))
 
-if(!folderName.equals("Root"))
-{
-WebUI.click(findTestObject('Sprint5/div_li_parameterized_ExpandCollapseIcon', [('text') : folderName]))
+if (!(folderName.equals('Root'))) {
+    WebUI.click(findTestObject('Sprint5/div_li_parameterized_ExpandCollapseIcon', [('text') : folderName]))
 }
 
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
@@ -43,13 +42,10 @@ WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input__displayName'), K
 
 WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input__displayName'), DisplayName)
 
-if(!folderName.equals("Root"))
-{
-WebUI.click(findTestObject('Object Repository/Sprint5/button_Popup_Save'))
-}
-else
-{
-	WebUI.click(findTestObject('Object Repository/Sprint6/button_Save'))
+if (!(folderName.equals('Root'))) {
+    WebUI.click(findTestObject('Object Repository/Sprint5/button_Popup_Save'))
+} else {
+    WebUI.click(findTestObject('Object Repository/Sprint6/button_Save'))
 }
 
 WebUI.click(findTestObject('Common Objects/button_OK'))
@@ -70,6 +66,15 @@ WebUI.click(findTestObject('Object Repository/Sprint5/div_Add to Selection'))
 
 WebUI.delay(1)
 
+Boolean inputField = WebUI.waitForElementClickable(findTestObject('Object Repository/Sprint5/input'), 0)
+
+if(!inputField)
+{
+	WebUI.delay(1)
+	WebUI.click(findTestObject('Object Repository/Sprint5/div_Add to Selection'))
+	WebUI.delay(1)
+}
+
 WebUI.click(findTestObject('Object Repository/Sprint5/input'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input'), listItem)
@@ -82,6 +87,10 @@ WebUI.click(findTestObject('Common Objects/button_Yes'))
 WebUI.click(findTestObject('Object Repository/Sprint5/h5_Master List Has Been Updated Successfully'))
 
 WebUI.click(findTestObject('Common Objects/button_OK'))
+
+'Verify Added List from the table'
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/div_td_parameterized_table_verification', [('param1') : listItem
+			, ('param2') : ""]), 0)
 
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 

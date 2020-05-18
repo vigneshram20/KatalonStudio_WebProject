@@ -55,7 +55,7 @@ WebUI.delay(1)
 
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-handle'))
 
-not_run: WebUI.setText(findTestObject('Sprint6/input_USERS_searchInput'), userID)
+WebUI.setText(findTestObject('Sprint6/input_USERS_searchInput'), userID)
 
 //td[2][.='vs1']/..//td[3][.='Vigneshram S']/..//td[4][.='Vigneshram']/..//td[5][.='S']/..//td[6][.='vs1@wsgc.com']/..//td[7][.='']/..//td[8][.]/..//td[9][.='Active']/..//td[1]
 WebUI.click(findTestObject('Object Repository/Sprint6/div_td_user_table_verification', [('userID') : userID, ('fullName') : (firstName + 
@@ -95,11 +95,11 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_User has
 
 WebUI.click(findTestObject('Common Objects/button_OK'))
 
-WebUI.refresh()
-
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/li_Users'))
+WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+
+WebUI.delay(1)
 
 WebUI.click(findTestObject('Sprint3/span_Edit Mode_toggle_btn-handle'))
 

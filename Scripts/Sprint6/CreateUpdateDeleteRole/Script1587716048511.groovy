@@ -53,7 +53,7 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/label_Role 
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/label_Description'), 0)
 
-String roleName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QARole', 'ss')
+String roleName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QARole', 'ddMMMyyHHmmss')
 
 String roleNameEdited = roleName + 'Edited'
 

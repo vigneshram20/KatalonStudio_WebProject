@@ -30,7 +30,9 @@ WebUI.delay(1)
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 
 'Click Edit Mode Toggle button'
-not_run:WebUI.scrollToElement(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 0)
+not_run: WebUI.scrollToElement(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 0)
+
+WebUI.delay(1)
 
 'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
@@ -57,6 +59,8 @@ WebUI.setText(findTestObject('Sprint4/input_InternalName'), InternalName)
 'Enter Display Name'
 WebUI.setText(findTestObject('Object Repository/Sprint4/input__displayName'), DisplayName)
 
+WebUI.delay(1)
+
 'Click Search icon'
 WebUI.scrollToElement(findTestObject('Sprint4/img_Search_Symbol'), 0)
 
@@ -64,6 +68,8 @@ WebUI.delay(1)
 
 'Click Search icon'
 WebUI.click(findTestObject('Sprint4/img_Search_Symbol'))
+
+WebUI.delay(1)
 
 'Enter Search Text'
 WebUI.setText(findTestObject('Sprint4/input_SearchField'), MasterList)
