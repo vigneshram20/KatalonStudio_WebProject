@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>img_Trash</name>
+   <name>span_Enter the name</name>
    <tag></tag>
-   <elementGuidId>c08cb3bf-aaab-4ded-b075-92b3e2eecee8</elementGuidId>
+   <elementGuidId>89805fd2-df99-40cb-9902-0220d49669ca</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//li[@class='delete-icon ']//img[contains(@src, 'trash') and @class = 'img-icon']</value>
+         <value>//span[@class='group-title' and text()='Enter the Name']</value>
       </entry>
       <entry>
          <key>BASIC</key>

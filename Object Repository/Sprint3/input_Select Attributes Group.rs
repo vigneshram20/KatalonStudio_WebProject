@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>img_Trash</name>
+   <name>input_Select Attributes Group</name>
    <tag></tag>
-   <elementGuidId>c08cb3bf-aaab-4ded-b075-92b3e2eecee8</elementGuidId>
+   <elementGuidId>5e821691-3ae1-461f-9173-c348f6dbb794</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//li[@class='delete-icon ']//img[contains(@src, 'trash') and @class = 'img-icon']</value>
+         <value>//input[@placeholder='Select Attributes Groups']</value>
       </entry>
       <entry>
          <key>BASIC</key>

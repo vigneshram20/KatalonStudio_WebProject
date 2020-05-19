@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>img_Trash</name>
+   <name>div_SelectGroupDropdownVerify</name>
    <tag></tag>
-   <elementGuidId>c08cb3bf-aaab-4ded-b075-92b3e2eecee8</elementGuidId>
+   <elementGuidId>31178e74-03de-46db-acbd-de6b7fffa67c</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//li[@class='delete-icon ']//img[contains(@src, 'trash') and @class = 'img-icon']</value>
+         <value>//div[contains(@class,'layoutForm_group_dropdown') and .='${groupName}']</value>
       </entry>
       <entry>
          <key>BASIC</key>

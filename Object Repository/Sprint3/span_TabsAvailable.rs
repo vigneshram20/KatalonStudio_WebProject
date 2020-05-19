@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>img_Trash</name>
+   <name>span_TabsAvailable</name>
    <tag></tag>
-   <elementGuidId>c08cb3bf-aaab-4ded-b075-92b3e2eecee8</elementGuidId>
+   <elementGuidId>9e3273c3-0202-4409-9726-7b312a710e7f</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//li[@class='delete-icon ']//img[contains(@src, 'trash') and @class = 'img-icon']</value>
+         <value>//span[contains(@class,'layoutForm_tab_header_title')]/span[@class='group-title']</value>
       </entry>
       <entry>
          <key>BASIC</key>

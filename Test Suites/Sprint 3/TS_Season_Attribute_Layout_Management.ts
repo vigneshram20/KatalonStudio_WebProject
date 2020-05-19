@@ -15,5 +15,29 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Sprint3/Season_Attribute_Layout_Management</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>ea48a9be-66a0-4720-90de-36031fc3045f</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>276393e8-c40b-46f5-9772-2ec50cea9411</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>e91806fa-2bdc-44fb-b3fd-79fc8bea069f</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>500b47c2-efe7-4fd8-aef7-522a64fb967f</variableId>
+      </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

@@ -5,4 +5,32 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>1ef2d271-f869-470a-9477-beb8dcab3d89</testCaseGuid>
+   <variable>
+      <defaultValue>'General Attributes'</defaultValue>
+      <description></description>
+      <id>ea48a9be-66a0-4720-90de-36031fc3045f</id>
+      <masked>false</masked>
+      <name>FirstGroup</name>
+   </variable>
+   <variable>
+      <defaultValue>'Calendar Information'</defaultValue>
+      <description></description>
+      <id>276393e8-c40b-46f5-9772-2ec50cea9411</id>
+      <masked>false</masked>
+      <name>SecondGroup</name>
+   </variable>
+   <variable>
+      <defaultValue>'Header Items'</defaultValue>
+      <description></description>
+      <id>e91806fa-2bdc-44fb-b3fd-79fc8bea069f</id>
+      <masked>false</masked>
+      <name>FirstTab</name>
+   </variable>
+   <variable>
+      <defaultValue>'Miscellaneous'</defaultValue>
+      <description></description>
+      <id>500b47c2-efe7-4fd8-aef7-522a64fb967f</id>
+      <masked>false</masked>
+      <name>SecondTab</name>
+   </variable>
 </TestCaseEntity>
