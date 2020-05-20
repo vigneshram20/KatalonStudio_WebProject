@@ -71,13 +71,8 @@ WebUI.click(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : '
 'Select the Field'
 WebUI.click(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : 'Season']), FailureHandling.STOP_ON_FAILURE)
 
-if (viewType.equals('System')) {
-    'Click Move to Left button'
-    WebUI.click(findTestObject('Sprint6/button_MoveToLeftSecond'))
-} else if (viewType.equals('Custom')) {
-    'Click Move to Left button'
-    WebUI.click(findTestObject('Object Repository/Sprint6/button_MoveToLeft'))
-}
+'Click Move to Left button'
+WebUI.click(findTestObject('Object Repository/Sprint6/button_MoveToLeft'))
 
 'Verify element not present'
 WebUI.verifyElementNotPresent(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : 'Name']), 0)

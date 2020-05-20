@@ -4,7 +4,17 @@
    <name>select_LockColumnDropDown</name>
    <tag></tag>
    <elementGuidId>554b875b-c3dc-48e9-ba75-aad7180b2a0d</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@id='columnsList']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id = 'columnsList' and @name = 'lockPosition' and (text() = 'Select column(s)Column 1,Column 2,Column 3' or . = 'Select column(s)Column 1,Column 2,Column 3')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

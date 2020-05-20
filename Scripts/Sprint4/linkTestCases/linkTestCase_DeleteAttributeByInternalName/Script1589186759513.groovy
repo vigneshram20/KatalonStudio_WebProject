@@ -19,10 +19,13 @@ import org.openqa.selenium.WebElement as WebElement
 
 WebUI.delay(2)
 
+'Verify Manage Attributes button present'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/button_Manage Attributes'), 0)
 
+'Verify Manage Attributes button clickable'
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint6/button_Manage Attributes'), FailureHandling.STOP_ON_FAILURE)
 
+'Click Manage Attributes button'
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Manage Attributes'))
 
 'Click Edit Mode Toggle button'
@@ -34,6 +37,7 @@ for (String InternalName : InternalNames) {
     not_run: WebUI.scrollToElement(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized', [('internalName') : InternalName]), 
         0)
 
+	'Select the attribute from the grid'
     WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized', [('internalName') : InternalName]))
 
     WebUI.delay(1)
@@ -57,6 +61,7 @@ WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySucces
 for (String InternalName : InternalNames) {
     WebUI.delay(1)
 
+	'Verify deleted attributes not present in the grid'
     WebUI.verifyElementNotPresent(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized', [('internalName') : InternalName]), 
         0)
 }

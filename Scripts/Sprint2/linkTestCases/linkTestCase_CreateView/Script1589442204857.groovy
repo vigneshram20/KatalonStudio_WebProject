@@ -114,38 +114,6 @@ WebUI.verifyElementVisible(findTestObject('Object Repository/Sprint6/div_Type  s
 'Click Save Views at Highest level label'
 WebUI.click(findTestObject('Object Repository/Sprint6/label_Save views at Highest Type Level'))
 
-if (viewType.equals('System')) {
-    'Verify Assign User Groups section'
-    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint2/Seasons/Page_Merch Collaboration Platform/strong_Assign User Groups'), 
-        0)
-
-    'Verify Available Groups section'
-    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint2/Seasons/Page_Merch Collaboration Platform/strong_Available Groups'), 
-        0)
-
-    'Verify Assigned groups section'
-    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint2/Seasons/Page_Merch Collaboration Platform/strong_Assigned Groups'), 
-        0)
-
-    'Verify Search input field'
-    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint2/Seasons/Page_Merch Collaboration Platform/input_Available Groups_search-flelds'), 
-        0)
-
-    'Verify Roles section'
-    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint2/Seasons/Page_Merch Collaboration Platform/div_ROLES'), 
-        0)
-
-    'Click System Administrator label'
-    WebUI.click(findTestObject('Object Repository/Sprint2/Seasons/Page_Merch Collaboration Platform/label_SYSTEM ADMINISTRATOR'))
-
-    'Click Move to Right button'
-    WebUI.click(findTestObject('Sprint6/button_moveToRightAttributes'))
-
-    'Verify Element Present'
-    WebUI.verifyElementPresent(findTestObject('Sprint6/label_Verify_AssignedGroups', [('label') : 'SYSTEM ADMINISTRATOR']), 
-        0)
-}
-
 'Verify Configure View Settings section'
 WebUI.verifyElementVisible(findTestObject('Object Repository/Sprint6/strong_Configure View Settings'))
 
@@ -182,13 +150,8 @@ WebUI.click(findTestObject('Object Repository/Sprint6/label_Type'))
 'Click Year'
 WebUI.click(findTestObject('Object Repository/Sprint6/label_Year'))
 
-if (viewType.equals('System')) {
-    'Click Move to Right button'
-    WebUI.click(findTestObject('Sprint6/button_moveToRightRoles'))
-} else if (viewType.equals('Custom')) {
-    'Click Move to Right button'
-    WebUI.click(findTestObject('Sprint6/button_moveToRightAttributes'))
-}
+'Click Move to Right button'
+WebUI.click(findTestObject('Sprint6/button_moveToRightAttributes'))
 
 'Verify the Seleted Label - Brand'
 WebUI.verifyElementPresent(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : 'Brand']), 0)
@@ -224,6 +187,38 @@ WebUI.verifyElementPresent(findTestObject('Sprint6/label_Verify_SelectedFields',
 'Verify the Seleted Label - Year'
 WebUI.verifyElementPresent(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : 'Year']), 0)
 
+if (viewType.equals('System')) {
+    'Verify Assign User Groups section'
+    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint2/Seasons/Page_Merch Collaboration Platform/strong_Assign User Groups'), 
+        0)
+
+    'Verify Available Groups section'
+    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint2/Seasons/Page_Merch Collaboration Platform/strong_Available Groups'), 
+        0)
+
+    'Verify Assigned groups section'
+    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint2/Seasons/Page_Merch Collaboration Platform/strong_Assigned Groups'), 
+        0)
+
+    'Verify Search input field'
+    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint2/Seasons/Page_Merch Collaboration Platform/input_Available Groups_search-flelds'), 
+        0)
+
+    'Verify Roles section'
+    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint2/Seasons/Page_Merch Collaboration Platform/div_ROLES'), 
+        0)
+
+    'Click System Administrator label'
+    WebUI.click(findTestObject('Object Repository/Sprint2/Seasons/Page_Merch Collaboration Platform/label_SYSTEM ADMINISTRATOR'))
+
+    'Click Move to Right button'
+    WebUI.click(findTestObject('Object Repository/Sprint6/button_moveToRightRoles'))
+
+    'Verify Element Present'
+    WebUI.verifyElementPresent(findTestObject('Sprint6/label_Verify_AssignedGroups', [('label') : 'SYSTEM ADMINISTRATOR']), 
+        0)
+}
+
 'Verify the Lock Columns text'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/strong_Lock Columns'), 0)
 
@@ -233,6 +228,9 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/p_Locking c
 
 'Verify Lock Column Label'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/label_Lock Column(s)'), 0)
+
+'Verify Lock Column Label'
+WebUI.click(findTestObject('Object Repository/Sprint6/label_Lock Column(s)'), FailureHandling.STOP_ON_FAILURE)
 
 'Select the Lock Column  - 3'
 WebUI.selectOptionByLabel(findTestObject('Sprint6/select_LockColumnDropDown'), 'Column 3', true)
@@ -323,3 +321,4 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_Type'),
 
 'Verify table header - Year'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_Year'), 0)
+

@@ -28,7 +28,7 @@ String libraryName = 'Root'
 
 String listNameInternal = 'QAML' + dateFormat
 
-String listNameDisplay = 'QAML' + dateFormat
+String listNameDisplay = 'QA ML ' + dateFormat
 
 String listValue = 'QA Test'
 

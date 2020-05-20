@@ -15,14 +15,18 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
+'Generate System View Name'
 String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA'+viewType, 'ddMMMyyHHmmss')
 
+'Create New System View'
 WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_CreateView'), [('viewName') : viewName, ('viewType') : viewType], 
     FailureHandling.STOP_ON_FAILURE)
 
+'Verify Copy Functionality'
 WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_CopyView'), [('viewName') : viewName, ('viewType') : viewType], FailureHandling.STOP_ON_FAILURE)
 
 viewName = (viewName + ' - Copy')
 
+'Delete the System View generated'
 WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_DeleteView'), [('viewName') : viewName], FailureHandling.STOP_ON_FAILURE)
 
