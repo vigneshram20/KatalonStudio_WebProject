@@ -24,13 +24,10 @@ WebUI.click(findTestObject('Common Objects/button_Yes'))
 'Verify the Success popup text'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/h5_Type has been modified successfully'), 0)
 
-'Click Ok Button'
-WebUI.clickOffset(findTestObject('Common Objects/button_OK'), 5, 0)
-
-'Click Ok Button'
-Boolean okbutton = WebUI.waitForElementNotPresent(findTestObject('Common Objects/button_OK'), 5, FailureHandling.STOP_ON_FAILURE)
-
-if (!(okbutton)) {
+while (!WebUI.waitForElementNotPresent(findTestObject('Common Objects/button_OK'), 3)) {
     'Click Ok Button'
     WebUI.clickOffset(findTestObject('Common Objects/button_OK'), 5, 0)
+
+    WebUI.delay(1)
 }
+

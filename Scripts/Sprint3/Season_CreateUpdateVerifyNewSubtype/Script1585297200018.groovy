@@ -44,6 +44,9 @@ WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
 WebUI.verifyElementPresent(findTestObject('Sprint3/h2_Season'), 10)
 
 'Click Edit Mode Toggle button'
+WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+
+'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 'Verify Attributes heading'
@@ -164,6 +167,9 @@ if (attributeavailable.equals(attributeAsAdded)) {
 } else {
     throw new Exception('Attributes available in the Type are not matched with the attributes in the Inherited attributes')
 }
+
+'Click Edit Mode Toggle button'
+WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))

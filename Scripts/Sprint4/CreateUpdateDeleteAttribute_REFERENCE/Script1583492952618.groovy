@@ -185,6 +185,9 @@ if (AttributeType.equals('Reference')) {
 
     WebUI.delay(1)
 
+	'Click Edit Mode Toggle button'
+	WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+	
     'Click Edit Mode Toggle button'
     WebUI.clickOffset(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 2, 4)
 
@@ -338,6 +341,9 @@ if (AttributeType.equals('Reference')) {
     WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_UP))
 
     WebUI.delay(1)
+	
+	'Click Edit Mode Toggle button'
+	WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
     'Click Edit Mode Toggle button'
     WebUI.clickOffset(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 2, 4)

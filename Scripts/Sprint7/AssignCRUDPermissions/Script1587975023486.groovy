@@ -27,6 +27,9 @@ WebUI.verifyElementPresent(findTestObject('Sprint6/div_User and Role Management'
 
 WebUI.click(findTestObject('Object Repository/Sprint6/li_Permissions'), FailureHandling.STOP_ON_FAILURE)
 
+'Click Edit Mode Toggle button'
+WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_PERMISSIONS Filter'), 0)
@@ -69,6 +72,9 @@ WebUI.refresh()
 WebUI.delay(2)
 
 WebUI.click(findTestObject('Object Repository/Sprint6/li_Permissions'), FailureHandling.STOP_ON_FAILURE)
+
+'Click Edit Mode Toggle button'
+WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 

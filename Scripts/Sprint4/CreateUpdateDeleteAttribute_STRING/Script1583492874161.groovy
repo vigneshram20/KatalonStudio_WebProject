@@ -38,13 +38,19 @@ WebUI.delay(1)
 
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 
+WebUI.delay(1)
+
+'Click Edit Mode Toggle button'
+WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+
 'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 WebUI.delay(10)
 
 'Delete already exising attribute'
-WebUI.callTestCase(findTestCase('Sprint4/linkTestCases/linkTestCase_DeleteAlreadyExistingAttributesIfExist'), [('InternalName') : InternalName], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Sprint4/linkTestCases/linkTestCase_DeleteAlreadyExistingAttributesIfExist'), [('InternalName') : InternalName], 
+    FailureHandling.STOP_ON_FAILURE)
 
 'Scroll Page Down'
 WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
@@ -240,30 +246,27 @@ if (DataType.equals('String')) {
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
 
-	'Page UP'
+    'Page UP'
     WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_UP))
 
     WebUI.delay(1)
 
+	'Click Edit Mode Toggle button'
+	WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+	
     'Click Edit Mode Toggle button'
     WebUI.clickOffset(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 2, 4)
-	
-	if (AttributeType.equals('Text Area')) {
-	
-		if(InputFieldType.equals("Single Line"))
-		{
-			inputfieldtypeXpath = "1";
-		}
-		else
-		{
-			inputfieldtypeXpath = "2";
-		}
-	}
-	else
-	{
-		inputfieldtypeXpath="0"
-	}
 
+    if (AttributeType.equals('Text Area')) {
+        if (InputFieldType.equals('Single Line')) {
+            inputfieldtypeXpath = '1'
+        } else {
+            inputfieldtypeXpath = '2'
+        }
+    } else {
+        inputfieldtypeXpath = '0'
+    }
+    
     columnXpath1 = (((((((((((((('//td[2][.="' + InternalName) + '"]/..//td[3][.="') + DisplayName) + '"]/..//td[4][.="') + 
     Description) + '"]/..//td[5][.="') + Enabled) + '"]/..//td[6][.="') + UseTooltip) + '"]/..//td[7][.=\'\']/..//td[8][.="') + 
     Tooltip) + '"]/..//td[9][.=\'No\']/..//td[10][.="') + EditableOnCreate) + '"]')
@@ -276,8 +279,8 @@ if (DataType.equals('String')) {
     columnXpath3 = (((((((('/..//td[21][.="' + ElementWidth) + '"]/..//td[22][.="') + ElementHeight) + '"]/..//td[23][.=\'From : ') + 
     StringLengthFrom) + ' And To: ') + StringLengthTo) + '\']/..//td[24][.=""]/..//td[25][.=""]/..//td[26][.=""]/..//td[27][text()]/..//td[28][.=\'\']/..//td[29][.=\'\']/..//td[30][.=\'\']')
 
-    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.="'+inputfieldtypeXpath+'"]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + DataType) + 
-    '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
+    columnXpath4 = (((((('/..//td[31][.=\'\']/..//td[32][.="' + inputfieldtypeXpath) + '"]/..//td[33][.="') + AttributeType) + 
+    '"]/..//td[34][.="') + DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
 
@@ -292,7 +295,7 @@ if (DataType.equals('String')) {
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
 
-	'Page Down'
+    'Page Down'
     WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
 
     WebUI.delay(1)
@@ -432,11 +435,14 @@ if (DataType.equals('String')) {
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
 
-	'Page UP'
+    'Page UP'
     WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_UP))
 
     WebUI.delay(1)
 
+	'Click Edit Mode Toggle button'
+	WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+	
     'Click Edit Mode Toggle button'
     WebUI.clickOffset(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 2, 4)
 
@@ -452,8 +458,8 @@ if (DataType.equals('String')) {
     columnXpath3 = (((((((('/..//td[21][.="' + ElementWidth) + '"]/..//td[22][.="') + ElementHeight) + '"]/..//td[23][.=\'From : ') + 
     StringLengthFrom) + ' And To: ') + StringLengthTo) + '\']/..//td[24][.=""]/..//td[25][.=""]/..//td[26][.=""]/..//td[27][text()]/..//td[28][.=\'\']/..//td[29][.=\'\']/..//td[30][.=\'\']')
 
-    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.="'+inputfieldtypeXpath+'"]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + DataType) + 
-    '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
+    columnXpath4 = (((((('/..//td[31][.=\'\']/..//td[32][.="' + inputfieldtypeXpath) + '"]/..//td[33][.="') + AttributeType) + 
+    '"]/..//td[34][.="') + DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
 
@@ -482,8 +488,9 @@ if (DataType.equals('String')) {
 
     'Click Save and Verify Success Popup'
     WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
-	
-	'Verify the attribute not present in the grid'
-	WebUI.verifyElementNotPresent(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized', [('internalName') : InternalName]),
-		0)
+
+    'Verify the attribute not present in the grid'
+    WebUI.verifyElementNotPresent(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized', [('internalName') : InternalName]), 
+        0)
 }
+

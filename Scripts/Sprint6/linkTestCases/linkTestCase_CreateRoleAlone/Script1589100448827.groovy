@@ -23,6 +23,9 @@ WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], F
 WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Administration', ('SubMenuItem') : 'User & Role Management'], 
     FailureHandling.STOP_ON_FAILURE)
 
+'Click Edit Mode Toggle button'
+WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 WebUI.click(findTestObject('Sprint6/img_ROLES_img-add'))

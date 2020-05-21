@@ -46,6 +46,9 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_CONTACT
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/th_ROLE(s) ASSIGNED'), 0)
 
+'Click Edit Mode Toggle button'
+WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 WebUI.click(findTestObject('Sprint6/img_USERS_img-icon_Add'))

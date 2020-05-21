@@ -42,6 +42,11 @@ WebUI.delay(1)
 
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 
+WebUI.delay(1)
+
+'Click Edit Mode Toggle button'
+WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+
 'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
@@ -208,6 +213,9 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
 
     WebUI.delay(1)
 
+	'Click Edit Mode Toggle button'
+	WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+	
     'Click Edit Mode Toggle button'
     WebUI.clickOffset(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 2, 4)
 
@@ -415,6 +423,9 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
 
     WebUI.delay(1)
 
+	'Click Edit Mode Toggle button'
+	WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+	
     'Click Edit Mode Toggle button'
     WebUI.clickOffset(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 2, 4)
 

@@ -43,15 +43,18 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/button_No')
 
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Yes'))
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_User has been modified successfully'), 0)
+WebUI.verifyElementVisible(findTestObject('Object Repository/Sprint6/h5_User has been modified successfully'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Common Objects/button_OK'))
 
-WebUI.scrollToElement(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-handle'), 0)
+WebUI.delay(1)
 
-WebUI.sendKeys(findTestObject('Object Repository/Sprint6/li_Users'), Keys.chord(Keys.PAGE_UP))
+'Scroll to Top'
+WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 
 WebUI.delay(1)
+
+WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-handle'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-handle'))
 

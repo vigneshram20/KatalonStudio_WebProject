@@ -37,6 +37,9 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/span_NAME')
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/span_DESCRIPTION'), 0)
 
+'Click Edit Mode Toggle button'
+WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 WebUI.click(findTestObject('Sprint6/img_ROLES_img-add'))
@@ -97,7 +100,7 @@ not_run: WebUI.scrollToElement(findTestObject('Sprint6/div_td_role_table_verific
     0)
 
 WebUI.clickOffset(findTestObject('Sprint6/div_td_role_table_verification', [('roleName') : roleName, ('roleDescription') : roleDescription]), 
-    2, 4)
+    1, 1)
 
 WebUI.click(findTestObject('Sprint6/img_ROLES_img-add'))
 

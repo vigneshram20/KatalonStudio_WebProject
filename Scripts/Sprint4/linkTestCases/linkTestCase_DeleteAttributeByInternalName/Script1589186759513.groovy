@@ -29,6 +29,9 @@ WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint6/button_Ma
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Manage Attributes'))
 
 'Click Edit Mode Toggle button'
+WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+
+'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 for (String InternalName : InternalNames) {

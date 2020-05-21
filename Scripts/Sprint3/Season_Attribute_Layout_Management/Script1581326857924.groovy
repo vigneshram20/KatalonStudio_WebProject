@@ -98,6 +98,9 @@ WebUI.click(findTestObject('Sprint3/button_Manage Layout'))
 WebUI.delay(2)
 
 'Click Edit Mode Toggle button'
+WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+
+'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 WebUI.delay(2)
@@ -124,6 +127,9 @@ WebUI.callTestCase(findTestCase('Common/SaveLayout'), [:], FailureHandling.STOP_
 WebUI.click(findTestObject('Sprint3/button_Manage Layout'))
 
 'Click Edit Mode Toggle button'
+WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+
+'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 WebUI.delay(1)
@@ -148,6 +154,9 @@ WebUI.callTestCase(findTestCase('Common/SaveLayout'), [:], FailureHandling.STOP_
 
 'Click Manage Layout button'
 WebUI.click(findTestObject('Sprint3/button_Manage Layout'))
+
+'Click Edit Mode Toggle button'
+WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))

@@ -70,7 +70,9 @@ InternalNameFolder = ('QAINFolder' + dateFormat)
 DisplayNameFolder = ('QA DN Folder ' + dateFormat)
 
 'Enter Internal Name'
-WebUI.setText(findTestObject('Sprint5/input_Internalname'), InternalNameFolder)
+WebUI.sendKeys(findTestObject('Sprint5/input_Internalname'), InternalNameFolder)
+
+WebUI.delay(1)
 
 'Select all text'
 WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input__displayName'), Keys.chord(Keys.CONTROL, Keys.chord('a')))
@@ -157,6 +159,9 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/input__disp
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/textarea_DescriptionVerification', [('text') : description]), 
     0)
 
+'Click Edit Mode Toggle button'
+WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+
 'Click Edit Toggle'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
@@ -172,6 +177,8 @@ DisplayNameList = ('QA DN List ' + dateFormat)
 
 'Provide Internal Name'
 WebUI.sendKeys(findTestObject('Sprint5/input_Internalname'), InternalNameList)
+
+WebUI.delay(1)
 
 'Select all text'
 WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input__displayName'), Keys.chord(Keys.CONTROL, Keys.chord('a')))

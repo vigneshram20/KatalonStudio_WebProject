@@ -52,6 +52,9 @@ WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOM
 		WebUI.delay(1)
 		
 		'Click Edit Mode Toggle button'
+		WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+		
+		'Click Edit Mode Toggle button'
 		WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 		
 }
