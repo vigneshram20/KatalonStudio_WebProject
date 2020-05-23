@@ -27,6 +27,12 @@ if(!RunConfiguration.getExecutionSource().contains("Test Suites"))
 	
 }
 
+else
+{
+	'Navigate to Homepage'
+	WebUI.navigateToUrl(GlobalVariable.URL)
+}
+
 
 'Navigate through Hamburger menu'
 WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : 'Season'], 

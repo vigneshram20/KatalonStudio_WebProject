@@ -28,6 +28,12 @@ if(!RunConfiguration.getExecutionSource().contains("Test Suites"))
 	WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
 	
 }
+else
+{
+	'Navigate to Homepage'
+	WebUI.navigateToUrl(GlobalVariable.URL)
+}
+
 
 'Navigate to Type and Attribute Management'
 WebUI.callTestCase(findTestCase('Common/NavigateToTypeAndAttributeManagement'), [:], FailureHandling.STOP_ON_FAILURE)

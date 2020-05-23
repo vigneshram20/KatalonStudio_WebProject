@@ -29,6 +29,13 @@ if(!RunConfiguration.getExecutionSource().contains("Test Suites"))
 	
 }
 
+else
+{
+	'Navigate to Homepage'
+	WebUI.navigateToUrl(GlobalVariable.URL)
+}
+
+
 'Navigate to Type and Attribute Management'
 WebUI.callTestCase(findTestCase('Common/NavigateToTypeAndAttributeManagement'), [:], FailureHandling.STOP_ON_FAILURE)
 

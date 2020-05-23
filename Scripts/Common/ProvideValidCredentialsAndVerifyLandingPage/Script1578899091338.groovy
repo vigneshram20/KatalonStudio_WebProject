@@ -26,6 +26,6 @@ WebUI.click(findTestObject('Sprint1/LoginPage/button_Login'))
 
 WebUI.enableSmartWait()
 
-'Verify Page Under Construction Message'
-not_run: WebUI.click(findTestObject('Sprint1/LandingPage/div_Page Under Construction'))
+'Verify Hamburger menu displayed'
+WebUI.verifyElementPresent(findTestObject('Common Objects/img_HamburgerMenu'), 0)
 
