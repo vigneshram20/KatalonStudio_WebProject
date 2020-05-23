@@ -27,12 +27,25 @@ WebUI.click(findTestObject('Common Objects/img_HamburgerMenu'))
 
 WebUI.delay(1)
 
+if(WebUI.waitForElementPresent(findTestObject('Sprint1/LandingPage/a_Parameterized', [('menu') : SubMenuItem]), 2))
+{
+	'Click sub menu'
+	WebUI.click(findTestObject('Sprint1/LandingPage/a_Parameterized', [('menu') : SubMenuItem]))
+	
+	WebUI.delay(2)
+}
+
+else
+{
+
 'Click menu'
-WebUI.click(findTestObject('Sprint1/LandingPage/a_Parameterized',[('menu'):MenuItem]))
+WebUI.click(findTestObject('Sprint1/LandingPage/a_Parameterized', [('menu') : MenuItem]))
 
 WebUI.delay(1)
 
 'Click sub menu'
-WebUI.click(findTestObject('Sprint1/LandingPage/a_Parameterized',[('menu'):SubMenuItem]))
+WebUI.click(findTestObject('Sprint1/LandingPage/a_Parameterized', [('menu') : SubMenuItem]))
 
 WebUI.delay(2)
+
+}

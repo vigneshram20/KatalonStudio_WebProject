@@ -22,12 +22,17 @@ import java.util.Date as Date
 import org.openqa.selenium.WebDriver as WebDriver
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.configuration.RunConfiguration
 
-'Launch the Browser with application'
-WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
-
-'Login to the application and verify homepage'
-WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
+if(!RunConfiguration.getExecutionSource().contains("Test Suites"))
+{
+	'Launch the Browser'
+	WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
+	
+	'Verify Login Successfully'
+	WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
+	
+}
 
 'Navigate through hamburger menu'
 WebUI.callTestCase(findTestCase('Common/NavigateToTypeAndAttributeManagement'), [:], FailureHandling.STOP_ON_FAILURE)
@@ -120,12 +125,23 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/a_Cancel'),
 'Click Create button'
 WebUI.click(findTestObject('Object Repository/Sprint3/button_Create'))
 
-WebUI.delay(3)
+WebUI.delay(2)
 
-'Refresh the page'
-WebUI.refresh()
+'Click Cancel button'
+WebUI.click(findTestObject('Sprint4/button_Cancel'))
+
+'Verify Cancel popup header text'
+WebUI.verifyElementPresent(findTestObject('Sprint3/h5_Confirm to Cancel without saving'), 0)
+
+'Click Yes button'
+WebUI.click(findTestObject('Common Objects/button_Yes'))
 
 WebUI.delay(2)
+
+'Scroll to Top'
+WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+
+WebUI.delay(1)
 
 'Select the parent dropdown'
 WebUI.selectOptionByLabel(findTestObject('Sprint3/select_parentDropDown'), DisplaytypeName, true)
@@ -178,32 +194,26 @@ displayNameEdited = (DisplaytypeName + ' Edited')
 
 Description = 'QA'
 
-'Clear the already existing text'
-WebUI.clearText(findTestObject('Object Repository/Sprint3/input_Display Name_form-control - Copy'))
-
+'Clear already existing text'
 WebUI.sendKeys(findTestObject('Object Repository/Sprint3/input_Display Name_form-control - Copy'), Keys.chord(Keys.CONTROL, 
         Keys.chord('a')))
 
 'Modify Display Name'
-WebUI.setText(findTestObject('Object Repository/Sprint3/input_Display Name_form-control - Copy'), displayNameEdited)
+WebUI.sendKeys(findTestObject('Object Repository/Sprint3/input_Display Name_form-control - Copy'), displayNameEdited)
 
 'Provide Description'
-WebUI.setText(findTestObject('Object Repository/Sprint3/input_Description'), Description)
+WebUI.sendKeys(findTestObject('Object Repository/Sprint3/input_Description'), Description)
 
 'Click Save button'
 WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
-
-WebUI.delay(2)
 
 'Click Yes Button'
 WebUI.click(findTestObject('Common Objects/button_Yes'))
 
 WebUI.delay(2)
 
-'Refresh the page'
-WebUI.refresh()
-
-WebUI.delay(2)
+'Scroll to Top'
+WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 
 'Select the parent dropdown'
 WebUI.selectOptionByLabel(findTestObject('Sprint3/select_parentDropDown'), displayNameEdited, true)
