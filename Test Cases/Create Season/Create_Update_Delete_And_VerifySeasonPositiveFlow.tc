@@ -6,7 +6,7 @@
    <comment></comment>
    <testCaseGuid>0aae153d-3124-4b18-9028-f56051a3791c</testCaseGuid>
    <variable>
-      <defaultValue>'PB'</defaultValue>
+      <defaultValue>'PK'</defaultValue>
       <description></description>
       <id>2b71729f-8621-499b-b80f-edf76f42dc72</id>
       <masked>false</masked>
@@ -83,7 +83,7 @@
       <name>Full_Season_Names</name>
    </variable>
    <variable>
-      <defaultValue>['Dec Acc', 'Furniture', 'Lighting', 'Tabletop', 'Textiles']</defaultValue>
+      <defaultValue>['Furniture', 'Lighting', 'Tabletop', 'Textiles']</defaultValue>
       <description></description>
       <id>b7fcfe3c-9603-4f9c-b889-d2f7bb998a80</id>
       <masked>false</masked>

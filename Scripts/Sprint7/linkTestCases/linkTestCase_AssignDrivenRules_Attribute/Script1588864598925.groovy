@@ -51,14 +51,28 @@ WebUI.verifyElementPresent(findTestObject('Sprint6/input_Manage Driven Rules'), 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/label_Level 2 Attribute'), 0)
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_Add Next LevelRemove Last Level'), 0)
-
-WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Attributes_FirstLevel'), (' ' + level1Attribute) + ' ', true)
+try
+{
+	WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Attributes_FirstLevel'), (' ' + level1Attribute) + ' ', true)
+}
+catch(Exception ex)
+{
+	WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Attributes_FirstLevel'), (level1Attribute), true)
+}
 
 WebUI.click(findTestObject('Sprint6/label_parameterized', [('param') : level1ListValue]))
 
 WebUI.click(findTestObject('Sprint6/button_moveToRightAttributes'))
 
-WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Attributes_SecondLevel'), (' ' + level2Attribute) + ' ', true)
+try
+{
+	WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Attributes_SecondLevel'), (' ' + level2Attribute) + ' ', true)
+}
+catch(Exception ex)
+{
+	WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Attributes_SecondLevel'), (level2Attribute), true)
+}
+
 
 WebUI.click(findTestObject('Sprint6/label_parameterized', [('param') : level2ListValue]))
 
@@ -97,16 +111,11 @@ WebUI.verifyElementPresent(findTestObject('Sprint6/h5_Confirm to Save'), 0)
 
 WebUI.click(findTestObject('Sprint6/button_Yes'))
 
-not_run: WebUI.verifyElementNotPresent(findTestObject('Sprint6/button_Save'), 30)
+not_run:WebUI.verifyElementNotPresent(findTestObject('Sprint6/button_Save'), 30)
 
-WebUI.verifyElementNotPresent(findTestObject('Sprint6/td_drivenRules_parameterized', [('param1') : level1Attribute, ('param2') : level2Attribute
-            , ('value1') : level1ListValue, ('value2') : level2ListValue]), 0)
+WebUI.delay(3)
 
-WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
-
-WebUI.delay(1)
-
-WebUI.refresh()
+WebUI.refresh();
 
 WebUI.delay(3)
 
@@ -114,3 +123,7 @@ WebUI.waitForPageLoad(0)
 
 WebUI.enableSmartWait()
 
+WebUI.verifyElementNotPresent(findTestObject('Sprint6/td_drivenRules_parameterized', [('param1') : level1Attribute, ('param2') : level2Attribute
+            , ('value1') : level1ListValue, ('value2') : level2ListValue]), 0)
+
+WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))

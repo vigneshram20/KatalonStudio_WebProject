@@ -54,6 +54,8 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/th_Grant Ac
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/th_Do Not Grant Access'), 0)
 
+WebUI.delay(3)
+
 WebUI.selectOptionByLabel(findTestObject('Sprint6/select_AttributesDropdown'), attributeName, true)
 
 WebUI.click(findTestObject('Sprint6/label_parameterized', [('param') : paramName]))

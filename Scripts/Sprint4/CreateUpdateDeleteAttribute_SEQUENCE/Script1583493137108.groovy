@@ -318,5 +318,10 @@ if (AttributeType.equals('Sequence Name')) {
 	'Verify the attribute not present in the grid'
 	WebUI.verifyElementNotPresent(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized', [('internalName') : InternalName]),
 		0)
+	
+	WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+	
+	'Collapse Manage Types left panel'
+	WebUI.click(findTestObject('Sprint4/a_Manage Types'))
 }
 

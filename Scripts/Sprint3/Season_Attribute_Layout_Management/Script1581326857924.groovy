@@ -19,16 +19,14 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.WebElement as WebElement
 import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
-import com.kms.katalon.core.configuration.RunConfiguration
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
-if(!RunConfiguration.getExecutionSource().contains("Test Suites"))
-{
-	'Launch the Browser'
-	WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
-	
-	'Verify Login Successfully'
-	WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
-	
+if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {
+    'Launch the Browser'
+    WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
+
+    'Verify Login Successfully'
+    WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
 }
 
 'Wait for Page to Load'
@@ -113,7 +111,7 @@ WebUI.delay(2)
 'Move to Page Bottom'
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.END))
 
-List<WebElement> listOfTabs = WebUI.findWebElements(findTestObject('Object Repository/Sprint3/span_TabsAvailable'), 2)
+List<String> listOfTabs = WebUI.findWebElements(findTestObject('Object Repository/Sprint3/span_TabsAvailable'), 2)
 
 for (WebElement element : listOfTabs) {
     Thread.sleep(250)
@@ -139,7 +137,7 @@ WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-
 
 WebUI.delay(1)
 
-List<WebElement> listOfgroups = WebUI.findWebElements(findTestObject('Sprint3/img_Trash'), 2)
+List<String> listOfgroups = WebUI.findWebElements(findTestObject('Sprint3/img_Trash'), 2)
 
 for (WebElement element : listOfgroups) {
     Thread.sleep(250)
@@ -210,15 +208,8 @@ WebUI.doubleClick(findTestObject('Sprint3/span_1'))
 'Click input field'
 WebUI.clickOffset(findTestObject('Sprint3/input'), 0, 2)
 
-'Remove the existing text'
-not_run: WebUI.sendKeys(findTestObject('Sprint3/input'), Keys.chord(Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, 
-        Keys.BACK_SPACE))
-
 'Select the existing text'
 WebUI.sendKeys(findTestObject('Sprint3/input'), Keys.chord(Keys.CONTROL, Keys.chord('a')))
-
-'Delete the existing text'
-not_run: WebUI.sendKeys(findTestObject('Sprint3/input'), Keys.chord(Keys.DELETE, Keys.DELETE, Keys.DELETE))
 
 WebUI.delay(1)
 
@@ -273,7 +264,7 @@ WebUI.click(findTestObject('Object Repository/Sprint3/input_Select Attributes Gr
 WebUI.click(findTestObject('Object Repository/Sprint3/div_SelectGroupDropdown', [('groupName') : FirstGroup]))
 
 'Verify the selected Group displayed '
-WebUI.verifyElementPresent(findTestObject('Sprint3/div_SelectGroupDropdownVerify',[('groupName'):FirstGroup]),0)
+WebUI.verifyElementPresent(findTestObject('Sprint3/div_SelectGroupDropdownVerify', [('groupName') : FirstGroup]), 0)
 
 'Click Add icon'
 WebUI.click(findTestObject('Object Repository/Common Objects/img_AddANewTab'))
@@ -297,7 +288,7 @@ WebUI.click(findTestObject('Object Repository/Sprint3/input_Select Attributes Gr
 WebUI.click(findTestObject('Object Repository/Sprint3/div_SelectGroupDropdown', [('groupName') : SecondGroup]))
 
 'Verify the selected Group displayed '
-WebUI.verifyElementPresent(findTestObject('Sprint3/div_SelectGroupDropdownVerify',[('groupName'):SecondGroup]),0)
+WebUI.verifyElementPresent(findTestObject('Sprint3/div_SelectGroupDropdownVerify', [('groupName') : SecondGroup]), 0)
 
 'Save the Layout'
 WebUI.callTestCase(findTestCase('Common/SaveLayout'), [:], FailureHandling.STOP_ON_FAILURE)
@@ -307,7 +298,7 @@ WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem'
     FailureHandling.STOP_ON_FAILURE)
 
 'Verify Manage Seasons Page Title'
-WebUI.verifyElementPresent(findTestObject('Sprint1/Manage Season Page/div_Manage Seasons'), 0)
+not_run: WebUI.verifyElementPresent(findTestObject('Sprint1/Manage Season Page/div_Manage Seasons'), 0)
 
 WebUI.enableSmartWait()
 

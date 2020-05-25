@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//label[(text() = 'In Store Launch End Date*' or . = 'In Store Launch End Date*')]</value>
+         <value>//label[(text() = 'In Store Launch End Date' or . = 'In Store Launch End Date')]</value>
       </entry>
       <entry>
          <key>XPATH</key>
@@ -35,7 +35,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>In Store Launch End Date*</value>
+      <value>In Store Launch End Date</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

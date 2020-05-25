@@ -25,7 +25,7 @@ WebUI.click(findTestObject('Sprint4/a_Manage Types'))
 'Click Season sub menu'
 WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
 
-WebUI.delay(1)
+WebUI.delay(5)
 
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 

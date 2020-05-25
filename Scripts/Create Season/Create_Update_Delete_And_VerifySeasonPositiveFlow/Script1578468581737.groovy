@@ -21,6 +21,13 @@ import java.util.Date as Date
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
 //Variables
+WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : 'Season'], 
+    FailureHandling.STOP_ON_FAILURE)
+
 List<String> DivisionsList = Divisions
 
 if (!(Brand.equals('PB'))) {
@@ -29,71 +36,62 @@ if (!(Brand.equals('PB'))) {
 
 List<String> FullSeasonNameList = Full_Season_Names
 
-not_run: WebUI.callTestCase(findTestCase('Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
-
-not_run: WebUI.callTestCase(findTestCase('null'), [:], FailureHandling.STOP_ON_FAILURE)
-
 WebUI.enableSmartWait()
 
 'Click Create New Season button'
-WebUI.click(findTestObject('Sprint1/Manage Season Page/button_CreateNewSeason'))
+WebUI.click(findTestObject('Object Repository/Sprint3/a_Create New Season'))
 
 WebUI.enableSmartWait()
 
 WebUI.delay(1)
 
 'Select Brand'
-WebUI.selectOptionByLabel(findTestObject('Sprint1/Create Season/Brand Select dropdown'), Brand, 
-    false)
+WebUI.selectOptionByLabel(findTestObject('Sprint1/Create Season/Brand Select dropdown'), Brand, false)
 
 'Select Season'
-WebUI.selectOptionByLabel(findTestObject('Sprint1/Create Season/Season Select dropdown'), Season, 
-    false)
+WebUI.selectOptionByLabel(findTestObject('Sprint1/Create Season/Season Select dropdown'), Season, false)
 
 'Select Year'
-WebUI.selectOptionByLabel(findTestObject('Sprint1/Create Season/Year Select dropdown'), Year, 
-    false)
+WebUI.selectOptionByLabel(findTestObject('Sprint1/Create Season/Year Select dropdown'), Year, false)
 
 'Verify Type Value'
-WebUI.click(findTestObject('Sprint1/Create Season/input_Type_type'))
+WebUI.verifyElementPresent(findTestObject('Sprint1/Create Season/input_Type_type'), 0)
 
 if (DriverFactory.getExecutedBrowser().getName() == 'IE_DRIVER') {
-    CustomKeywords.'myKeywords.customKeywords.typeKeysCharByChar'(findTestObject('Sprint1/Create Season/input__internet_launch_start_date'), 
-        Internet_Start_Date)
+    CustomKeywords.'myKeywords.customKeywords.typeKeysCharByChar'(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', 
+            [('labelName') : 'Internet Launch Start Date']), Internet_Start_Date + Keys.ESCAPE)
 } else {
     'Type Internet Launch Start Date'
-    WebUI.sendKeys(findTestObject('Sprint1/Create Season/input__internet_launch_start_date'), 
-        Internet_Start_Date)
+    WebUI.sendKeys(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch Start Date']), 
+        Internet_Start_Date + Keys.ESCAPE)
 }
 
 WebUI.delay(1)
 
+//WebUI.click(findTestObject('Sprint1/Create Season/label_In Store Launch Start Date'))
 'Click In Store Launch Start Date Label'
-WebUI.click(findTestObject('Sprint1/Create Season/label_In Store Launch Start Date'))
-
 WebUI.delay(1)
 
 if (DriverFactory.getExecutedBrowser().getName() == 'IE_DRIVER') {
-    CustomKeywords.'myKeywords.customKeywords.typeKeysCharByChar'(findTestObject('Sprint1/Create Season/input__internet_launch_end_date'), 
-        Internet_End_Date)
+    CustomKeywords.'myKeywords.customKeywords.typeKeysCharByChar'(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', 
+            [('labelName') : 'Internet Launch End Date']), Internet_End_Date + Keys.ESCAPE)
 } else {
     'Type Internet Launch End Date'
-    WebUI.setText(findTestObject('Sprint1/Create Season/input__internet_launch_end_date'), 
-        Internet_End_Date)
+    WebUI.setText(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch End Date']), 
+        Internet_End_Date + Keys.ESCAPE)
 }
 
 WebUI.delay(1)
 
+//WebUI.click(findTestObject('Sprint1/Create Season/label_In Store Launch Start Date'))
 'Click In Store Launch Start Date Label'
-WebUI.click(findTestObject('Sprint1/Create Season/label_In Store Launch Start Date'))
-
 if (DriverFactory.getExecutedBrowser().getName() == 'IE_DRIVER') {
-    CustomKeywords.'myKeywords.customKeywords.typeKeysCharByChar'(findTestObject('Sprint1/Create Season/input__in_store_launch_start_date'), 
-        Store_Start_Date)
+    CustomKeywords.'myKeywords.customKeywords.typeKeysCharByChar'(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', 
+            [('labelName') : 'In Store Launch Start Date']), Store_Start_Date + Keys.ESCAPE)
 } else {
     'Type In Store Launch Start Date'
-    WebUI.setText(findTestObject('Sprint1/Create Season/input__in_store_launch_start_date'), 
-        Store_Start_Date)
+    WebUI.setText(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch Start Date']), 
+        Store_Start_Date + Keys.ESCAPE)
 }
 
 WebUI.delay(1)
@@ -104,27 +102,27 @@ WebUI.click(findTestObject('Sprint1/Create Season/label_In Store Launch Start Da
 WebUI.delay(1)
 
 if (DriverFactory.getExecutedBrowser().getName() == 'IE_DRIVER') {
-    CustomKeywords.'myKeywords.customKeywords.typeKeysCharByChar'(findTestObject('Sprint1/Create Season/input__in_store_launch_end_date'), 
-        Store_End_Date)
+    CustomKeywords.'myKeywords.customKeywords.typeKeysCharByChar'(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', 
+            [('labelName') : 'In Store Launch End Date']), Store_End_Date + Keys.ESCAPE)
 } else {
     'Type In Store Launch End Date'
-    WebUI.setText(findTestObject('Sprint1/Create Season/input__in_store_launch_end_date'), 
-        Store_End_Date)
+    WebUI.setText(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch End Date']), 
+        Store_End_Date + Keys.ESCAPE)
 }
 
 WebUI.delay(1)
 
 'Click General Attributes div'
-WebUI.click(findTestObject('Sprint1/Create Season/subSection_title_General Attributes'))
 
+//WebUI.click(findTestObject('Sprint1/Create Season/subSection_title_General Attributes'))
 'Click Create Button'
-WebUI.click(findTestObject('Sprint1/Create Season/button_Create'))
+WebUI.click(findTestObject('Object Repository/Sprint4/button_Create'))
 
 'Verify Seasons Created success message header'
-WebUI.click(findTestObject('Sprint1/Create Season/h5_Seasons Created Successfully'))
+WebUI.verifyElementPresent(findTestObject('Sprint1/Create Season/h5_Seasons Created Successfully'), 0)
 
 'Verify Seasons Created inpopup message'
-WebUI.click(findTestObject('Sprint1/Create Season/p_The following new seasons have been created'))
+WebUI.verifyElementPresent(findTestObject('Sprint1/Create Season/p_The following new seasons have been created'), 0)
 
 for (String currentDivision : DivisionsList) {
     FullSeasonNameList.add((((((Brand + ' ') + currentDivision) + ' ') + Season) + ' ') + Year)
@@ -135,14 +133,15 @@ Full_Season_Name = FullSeasonNameList
 
 for (String currentSeasonName : FullSeasonNameList) {
     'Verify All Seasons in Success Popup'
-    CustomKeywords.'myKeywords.customKeywords.verifyAllSeasonsInSuccessPopup'(currentSeasonName)
+    WebUI.verifyElementPresent(findTestObject('Sprint1/Delete Season/SeasonNameSuccessModal', [('seasonName') : currentSeasonName]), 
+        0)
 }
 
 'Verify Close Icon'
-WebUI.verifyElementClickable(findTestObject('Object Repository/Common Objects/img_Close'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Common Objects/img_Close'), 0)
 
 'Click Ok button'
-WebUI.click(findTestObject('Common Objects/a_OK'))
+WebUI.click(findTestObject('Object Repository/Common Objects/button_OK'))
 
 WebUI.enableSmartWait()
 
@@ -151,22 +150,21 @@ WebUI.waitForPageLoad(60)
 WebUI.waitForPageLoad(60)
 
 'Verify Seasonslist Column'
-WebUI.waitForElementPresent(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 
-    60)
+WebUI.waitForElementPresent(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
 
-WebUI.waitForElementVisible(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 
-    60)
+WebUI.waitForElementVisible(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
 
-WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 
-    60)
+WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
 
 WebUI.delay(10)
 
-'Custom Method - identifySeasonsListColumnIndices'
-List<String> listOfColumnsOrdered = CustomKeywords.'myKeywords.customKeywords.identifySeasonsListColumnIndices'()
+'Search for the record'
+WebUI.sendKeys(findTestObject('Sprint1/Create Season/input_SearchField'), Year+Keys.ENTER)
 
 'Get Current Date'
 String Current_Date = CustomKeywords.'myKeywords.customKeywords.getCurrentDate'()
+
+'Update a Season and verify'
 
 'Custom Method - updateSeason'
 CustomKeywords.'myKeywords.customKeywords.updateSeason'(listOfColumnsOrdered, DivisionsList, Brand, Season, Year, Type, 

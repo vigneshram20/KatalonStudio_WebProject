@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class=&quot;modal-dialog&quot;]//p</value>
+         <value>//div[@class=&quot;modal-dialog&quot;]//p[.='${seasonName}']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

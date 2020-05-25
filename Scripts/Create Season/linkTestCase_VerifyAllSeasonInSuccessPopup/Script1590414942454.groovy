@@ -15,24 +15,3 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.enableSmartWait()
-
-'Verify Logo'
-WebUI.verifyElementVisible(findTestObject('Common Objects/img_LogoMain'))
-
-WebUI.delay(1)
-
-'Click Hamburger menu'
-WebUI.click(findTestObject('Common Objects/img_HamburgerMenu'))
-
-WebUI.delay(1)
-
-'Click menu'
-WebUI.click(findTestObject('Sprint1/LandingPage/a_Parameterized', [('menu') : MenuItem]))
-
-WebUI.delay(1)
-
-'Click sub menu'
-WebUI.click(findTestObject('Sprint1/LandingPage/a_Parameterized', [('menu') : SubMenuItem]))
-
-WebUI.delay(2)

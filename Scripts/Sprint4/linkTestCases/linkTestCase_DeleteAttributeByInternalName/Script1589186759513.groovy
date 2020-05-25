@@ -69,7 +69,12 @@ for (String InternalName : InternalNames) {
         0)
 }
 
-WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_UP))
+	WebUI.delay(1)
 
-WebUI.delay(1)
+	WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+	
+	'Collapse Manage Types left panel'
+	WebUI.click(findTestObject('Sprint4/a_Manage Types'))
+
+
 
