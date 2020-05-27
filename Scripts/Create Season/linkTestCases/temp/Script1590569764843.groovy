@@ -15,3 +15,14 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
+xpath = "//div[2][normalize-space(.)='PK'][not(contains(@id,'clone'))]/../div[3][normalize-space()='Furniture']/../div[4][normalize-space()='01/02/2024']/../div[5][normalize-space()='01/01/2024']/../div[6][normalize-space()='01/01/2024']/../div[7][normalize-space()='01/02/2024']/../div[8][normalize-space()='PK Furniture Holiday 2024']/../div[9][normalize-space()='Holiday']/../div[10][normalize-space()='Core']/../div[11][normalize-space()='2024']/../div[1]"
+
+def ActionsObject = WebUI.removeObjectProperty(findTestObject('Common Objects/GridXpath_SeasonsList'), 'xpath')
+
+ActionsObject = WebUI.modifyObjectProperty(findTestObject('Common Objects/GridXpath_SeasonsList'), 'xpath', 'equals', xpath, true)
+
+WebUI.verifyElementVisible(ActionsObject)
+
+not_run: WebUI.scrollToElement(ActionsObject, 0)
+
+WebUI.clickOffset(ActionsObject, 0, 4)

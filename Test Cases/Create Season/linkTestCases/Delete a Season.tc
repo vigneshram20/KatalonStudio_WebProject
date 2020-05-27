@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Update a Season</name>
+   <name>Delete a Season</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>69410c61-5b6d-4dba-b900-f0fbbce99430</testCaseGuid>
+   <testCaseGuid>92a6b2a2-2995-43c7-8aa3-d4dcc03bcdc8</testCaseGuid>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
@@ -74,33 +74,5 @@
       <id>7e327cd4-7638-4e81-8bbf-55228f57bd8e</id>
       <masked>false</masked>
       <name>Year</name>
-   </variable>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>b7868dcf-b825-4160-8a92-2063e806c315</id>
-      <masked>false</masked>
-      <name>Update_Store_End_Date</name>
-   </variable>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>1cd1b091-977c-4e95-b546-9b826e79036e</id>
-      <masked>false</masked>
-      <name>Update_Store_Start_Date</name>
-   </variable>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>b028d98e-a8b3-4dc2-938f-0554b67a4b25</id>
-      <masked>false</masked>
-      <name>Update_Internet_Start_Date</name>
-   </variable>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>03dfa332-ee2f-41e1-9054-31b5d8ca625e</id>
-      <masked>false</masked>
-      <name>Update_Internet_End_Date</name>
    </variable>
 </TestCaseEntity>

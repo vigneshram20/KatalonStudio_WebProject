@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TS_SystemView_All_20200525_113901</name>
+   <name>TS_CustomView_All_20200527_133531</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,18 +9,18 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>true</rerunFailedTestCasesOnly>
-   <testSuiteGuid>78f37ba4-ee3d-446f-9202-9b34fe8e325d</testSuiteGuid>
+   <testSuiteGuid>cee48479-126a-4616-a936-e76f7ac5c652</testSuiteGuid>
    
 <testCaseLink>
-      <guid>2e57224d-a4d3-4192-927e-31492cc5a1b6</guid>
+      <guid>e122c49c-42b3-4177-87de-167aaf6a4c2c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Sprint2/SystemView_Create_OntheFlyConfig_Delete</testCaseId>
+      <testCaseId>Test Cases/Sprint6/CustomView_Create_OntheFlyConfig_Delete</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>cadfdb2f-fa66-44f9-b57d-f86a30509833</variableId>
+         <variableId>39c6c3d4-bfda-4b9f-9a5c-5ce738b1236d</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

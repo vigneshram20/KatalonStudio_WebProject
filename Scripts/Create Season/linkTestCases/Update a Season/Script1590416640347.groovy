@@ -16,13 +16,39 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+def gridHeaderA = WebUI.removeObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 'xpath')
+
+gridHeaderA = WebUI.modifyObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 'xpath', 
+    'equals', '//table/thead/tr/th', true)
+
+WebUI.waitForPageLoad(60)
+
+WebUI.waitForElementPresent(gridHeaderA, 60)
+
+WebUI.waitForElementVisible(gridHeaderA, 60)
+
+WebUI.waitForElementClickable(gridHeaderA, 60)
+
+'Search for the record'
+WebUI.click(findTestObject('Sprint1/Create Season/input_SearchField'), FailureHandling.STOP_ON_FAILURE)
+
+'Search for the record'
+WebUI.sendKeys(findTestObject('Sprint1/Create Season/input_SearchField'), Keys.chord(Keys.CONTROL, 'a'))
+
+'Search for the record'
+WebUI.sendKeys(findTestObject('Sprint1/Create Season/input_SearchField'), Name + Keys.ENTER)
+
+WebUI.delay(10)
+
 xpath1 = (((((((((('//div[2][normalize-space(.)=\'' + Brand) + '\'][not(contains(@id,\'clone\'))]/../div[3][normalize-space()=\'') + 
 Division) + '\']/../div[4][normalize-space()=\'') + Store_End_Date) + '\']/../div[5][normalize-space()=\'') + Store_Start_Date) + 
 '\']/../div[6][normalize-space()=\'') + Internet_Start_Date) + '\']')
 
 xpath2 = (((((((((('/../div[7][normalize-space()=\'' + Internet_End_Date) + '\']/../div[8][normalize-space()=\'') + Name) + 
 '\']/../div[9][normalize-space()=\'') + Season) + '\']/../div[10][normalize-space()=\'') + Type) + '\']/../div[11][normalize-space()=\'') + 
-Year) + '\']/../div[1]//span')
+Year) + '\']/../div[1]//img')
+
+System.out.println(xpath1 + xpath2)
 
 def ActionsObject = WebUI.removeObjectProperty(findTestObject('Common Objects/GridXpath_SeasonsList'), 'xpath')
 
@@ -33,7 +59,7 @@ WebUI.verifyElementVisible(ActionsObject)
 
 WebUI.scrollToElement(ActionsObject, 0)
 
-WebUI.click(ActionsObject, FailureHandling.STOP_ON_FAILURE)
+WebUI.clickOffset(ActionsObject, 0, 4)
 
 WebUI.click(findTestObject('Object Repository/Common Objects/a_Update'))
 
@@ -68,6 +94,32 @@ WebUI.verifyElementAttributeValue(findTestObject('Sprint1/Create Season/input_Ty
 WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', 
         [('labelName') : 'Internet Launch Start Date']), 'value', Internet_Start_Date, 0)
 
+WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized',
+	[('labelName') : 'Internet Launch End Date']), 'value', Internet_End_Date, 0)
+
+WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized',
+	[('labelName') : 'In Store Launch Start Date']), 'value', Store_Start_Date, 0)
+
+WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized',
+	[('labelName') : 'In Store Launch End Date']), 'value', Store_End_Date, 0)
+
+'Click Internet Launch End Date'
+WebUI.click(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch End Date']),
+	FailureHandling.STOP_ON_FAILURE)
+
+'Clear Text'
+WebUI.clearText(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch End Date']))
+
+'Type Internet Launch End Date'
+WebUI.sendKeys(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch End Date']),
+	Keys.chord(Keys.CONTROL, Keys.chord('a'),Keys.BACK_SPACE))
+
+WebUI.delay(1)
+
+'Type Internet Launch End Date'
+WebUI.setText(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch End Date']),
+	Update_Internet_End_Date + Keys.ENTER)
+
 'Type Internet Launch Start Date'
 WebUI.click(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch Start Date']), 
     FailureHandling.STOP_ON_FAILURE)
@@ -77,73 +129,94 @@ WebUI.clearText(findTestObject('Object Repository/Sprint1/Create Season/input_da
 
 'Type Internet Launch Start Date'
 WebUI.sendKeys(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch Start Date']), 
-    Keys.chord(Keys.CONTROL, Keys.chord('a')))
-
-'Type Internet Launch Start Date'
-WebUI.sendKeys(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch Start Date']), 
-    Internet_Start_Date + Keys.ESCAPE)
+    Keys.chord(Keys.CONTROL, Keys.chord('a'),Keys.BACK_SPACE))
 
 WebUI.delay(1)
 
-WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', 
-        [('labelName') : 'Internet Launch End Date']), 'value', Internet_End_Date, 0)
-
-'Click Internet Launch End Date'
-WebUI.click(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch End Date']), 
-    FailureHandling.STOP_ON_FAILURE)
+'Type Internet Launch Start Date'
+WebUI.sendKeys(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch Start Date']), 
+    Update_Internet_Start_Date + Keys.ENTER)
 
 'Clear Text'
-WebUI.clearText(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch End Date']))
+WebUI.clearText(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch End Date']))
 
-'Type Internet Launch End Date'
-WebUI.sendKeys(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch End Date']), 
-    Keys.chord(Keys.CONTROL, Keys.chord('a')))
+'Type In Store Launch End Date'
+WebUI.sendKeys(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch End Date']),
+	Keys.chord(Keys.CONTROL, Keys.chord('a'),Keys.BACK_SPACE))
 
-'Type Internet Launch End Date'
-WebUI.setText(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch End Date']), 
-    Internet_End_Date)
+WebUI.delay(1)
+
+CustomKeywords.'myKeywords.customKeywords.typeKeysCharByChar'(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch End Date']), Update_Store_End_Date)
+
+
+WebUI.delay(1)
+
+/*'Click In Store Launch Start Date Label'
+//WebUI.click(findTestObject('Sprint1/Create Season/label_In Store Launch Start Date'))
+
+WebUI.delay(1)
+
+'Click In Store Launch Start Date Label'
+WebUI.click(findTestObject('Sprint1/Create Season/label_In Store Launch Start Date'))*/
+
+
+'Clear Text'
+WebUI.clearText(findTestObject('Sprint1/Create Season/input__in_store_launch_start_date'))
+
+'Type In Store Launch Start Date'
+WebUI.sendKeys(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch Start Date']), 
+    Keys.chord(Keys.CONTROL, Keys.chord('a'),Keys.BACK_SPACE))
+
+WebUI.delay(1)
+
+CustomKeywords.'myKeywords.customKeywords.typeKeysCharByChar'(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch Start Date']), Update_Store_Start_Date)
+
+
+/*
+'Type In Store Launch Start Date'
+WebUI.setText(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch Start Date']), 
+  //Keys.ENTER)
 
 WebUI.delay(1)
 
 'Click In Store Launch Start Date Label'
 WebUI.click(findTestObject('Sprint1/Create Season/label_In Store Launch Start Date'))
 
-WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', 
-        [('labelName') : 'In Store Launch Start Date']), 'value', Store_Start_Date, 0)
+'Type In Store Launch End Date'
+WebUI.setText(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch End Date']), 
+Keys.ENTER)
 
-'Clear Text'
-WebUI.clearText(findTestObject('Sprint1/Create Season/input__in_store_launch_start_date'))
+
+'Click In Store Launch Start Date Label'
+WebUI.click(findTestObject('Sprint1/Create Season/label_In Store Launch Start Date'))
+
+WebUI.click(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch Start Date']))
+
+'Type Internet Launch Start Date'
+WebUI.sendKeys(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch Start Date']), 
+    Keys.chord(Keys.CONTROL, Keys.chord('a')))
+
+WebUI.delay(1)
+
+CustomKeywords.'myKeywords.customKeywords.typeKeysCharByChar'(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch Start Date']), Update_Internet_Start_Date)
+
+'Type Internet Launch Start Date'
+WebUI.sendKeys(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch Start Date']), 
+Keys.ENTER)
+
+WebUI.click(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch Start Date']))
 
 'Type Internet Launch End Date'
 WebUI.sendKeys(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch Start Date']), 
     Keys.chord(Keys.CONTROL, Keys.chord('a')))
 
+
+CustomKeywords.'myKeywords.customKeywords.typeKeysCharByChar'(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch Start Date']), Update_Store_Start_Date)
+
 'Type In Store Launch Start Date'
-WebUI.setText(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch Start Date']), 
-    Store_Start_Date)
-
-WebUI.delay(1)
-
-WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', 
-        [('labelName') : 'In Store Launch End Date']), 'value', Store_End_Date, 0)
-
-'Type Internet Launch End Date'
-WebUI.click(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch End Date']), 
-    FailureHandling.STOP_ON_FAILURE)
-
-'Clear Text'
-WebUI.clearText(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch End Date']))
-
-'Type Internet Launch End Date'
-WebUI.sendKeys(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch End Date']), 
-    Keys.chord(Keys.CONTROL, Keys.chord('a')))
-
-    'Type In Store Launch End Date'
-    WebUI.setText(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch End Date']), Store_End_Date)
-
-
-WebUI.delay(1)
-
+WebUI.setText(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch Start Date']),
+Keys.ENTER)
+*/
 WebUI.verifyElementVisible(findTestObject('Common Objects/a_Cancel'))
 
 WebUI.click(findTestObject('Sprint1/Update Season/button_Update'))
@@ -154,7 +227,7 @@ WebUI.click(findTestObject('Sprint1/Update Season/h5_Successfully Updated'))
 
 WebUI.verifyElementVisible(findTestObject('Object Repository/Common Objects/img_Close'))
 
-String appendedTextU = seasonEntitiesMap.get('NAME') + ' has been updated'
+String appendedTextU = Name + ' has been updated'
 
 String elementXpathU = ((('//p[(text() = \'' + appendedTextU) + '\' or . = \'') + appendedTextU) + '\')]'
 
@@ -166,7 +239,17 @@ def SeasonNameModalObjectAU = WebUI.removeObjectProperty(findTestObject('Sprint1
 SeasonNameModalObjectAU = WebUI.modifyObjectProperty(findTestObject('Sprint1/Update Season/p_Season_FullName has been updated'), 
     'xpath', 'equals', elementXpathU, true)
 
-WebUI.verifyElementVisible(SeasonNameModalObjectAU)
+WebUI.verifyElementPresent(SeasonNameModalObjectAU, 0)
 
-WebUI.click(findTestObject('Object Repository/Common Objects/a_OK'))
+WebUI.click(findTestObject('Object Repository/Common Objects/button_OK'))
+
+WebUI.enableSmartWait()
+
+WebUI.waitForPageLoad(60)
+
+WebUI.waitForElementPresent(gridHeaderA, 60)
+
+WebUI.waitForElementVisible(gridHeaderA, 60)
+
+WebUI.waitForElementClickable(gridHeaderA, 60)
 

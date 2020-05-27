@@ -6,7 +6,7 @@
    <comment></comment>
    <testCaseGuid>5d2e141d-2bc7-46bf-b663-0f41142aedf6</testCaseGuid>
    <variable>
-      <defaultValue>'System'</defaultValue>
+      <defaultValue>'Custom'</defaultValue>
       <description></description>
       <id>53e300b9-27df-42f7-9ec7-a384886d20df</id>
       <masked>false</masked>

@@ -3,7 +3,8 @@
    <description></description>
    <name>Create_Update_Delete_And_VerifySeasonPositiveFlow</name>
    <tag></tag>
-   <comment></comment>
+   <comment>Click General Attributes div
+Update a Season and verify</comment>
    <testCaseGuid>0aae153d-3124-4b18-9028-f56051a3791c</testCaseGuid>
    <variable>
       <defaultValue>'PK'</defaultValue>

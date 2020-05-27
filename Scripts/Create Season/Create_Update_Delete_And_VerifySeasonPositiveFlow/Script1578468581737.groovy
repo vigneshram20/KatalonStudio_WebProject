@@ -30,10 +30,6 @@ WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem'
 
 List<String> DivisionsList = Divisions
 
-if (!(Brand.equals('PB'))) {
-    DivisionsList.remove('Tabletop')
-}
-
 List<String> FullSeasonNameList = Full_Season_Names
 
 WebUI.enableSmartWait()
@@ -63,7 +59,7 @@ if (DriverFactory.getExecutedBrowser().getName() == 'IE_DRIVER') {
 } else {
     'Type Internet Launch Start Date'
     WebUI.sendKeys(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch Start Date']), 
-        Internet_Start_Date + Keys.ESCAPE)
+        Internet_Start_Date + Keys.ENTER)
 }
 
 WebUI.delay(1)
@@ -78,7 +74,7 @@ if (DriverFactory.getExecutedBrowser().getName() == 'IE_DRIVER') {
 } else {
     'Type Internet Launch End Date'
     WebUI.setText(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch End Date']), 
-        Internet_End_Date + Keys.ESCAPE)
+        Internet_End_Date + Keys.ENTER)
 }
 
 WebUI.delay(1)
@@ -91,7 +87,7 @@ if (DriverFactory.getExecutedBrowser().getName() == 'IE_DRIVER') {
 } else {
     'Type In Store Launch Start Date'
     WebUI.setText(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch Start Date']), 
-        Store_Start_Date + Keys.ESCAPE)
+        Store_Start_Date + Keys.ENTER)
 }
 
 WebUI.delay(1)
@@ -103,11 +99,11 @@ WebUI.delay(1)
 
 if (DriverFactory.getExecutedBrowser().getName() == 'IE_DRIVER') {
     CustomKeywords.'myKeywords.customKeywords.typeKeysCharByChar'(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', 
-            [('labelName') : 'In Store Launch End Date']), Store_End_Date + Keys.ESCAPE)
+            [('labelName') : 'In Store Launch End Date']), Store_End_Date + Keys.ENTER)
 } else {
     'Type In Store Launch End Date'
     WebUI.setText(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch End Date']), 
-        Store_End_Date + Keys.ESCAPE)
+        Store_End_Date + Keys.ENTER)
 }
 
 WebUI.delay(1)
@@ -156,25 +152,26 @@ WebUI.waitForElementVisible(findTestObject('Sprint1/Manage Season Page/th_column
 
 WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
 
-WebUI.delay(10)
+WebUI.callTestCase(findTestCase('Create Season/linkTestCases/Update a Season'), [('Brand') : Brand, ('Division') : DivisionsList.get(
+            0), ('Store_End_Date') : Store_End_Date, ('Store_Start_Date') : Store_Start_Date, ('Internet_Start_Date') : Internet_Start_Date
+        , ('Internet_End_Date') : Internet_End_Date, ('Name') : FullSeasonNameList.get(0), ('Season') : Season, ('Type') : Type
+        , ('Year') : Year, ('Update_Store_End_Date') : Update_Store_End_Date, ('Update_Store_Start_Date') : Update_Store_Start_Date
+        , ('Update_Internet_Start_Date') : Update_Internet_Start_Date, ('Update_Internet_End_Date') : Update_Internet_End_Date], 
+    FailureHandling.STOP_ON_FAILURE)
 
-'Search for the record'
-WebUI.sendKeys(findTestObject('Sprint1/Create Season/input_SearchField'), Year+Keys.ENTER)
+WebUI.callTestCase(findTestCase('Create Season/linkTestCases/Delete a Season'), [('Brand') : Brand, ('Division') : DivisionsList.get(0), ('Store_End_Date') : Update_Store_End_Date
+	, ('Store_Start_Date') : Update_Store_Start_Date, ('Internet_Start_Date') : Update_Internet_Start_Date, ('Internet_End_Date') : Update_Internet_End_Date, ('Name') : FullSeasonNameList.get(0), ('Season') : Season
+	, ('Type') : Type, ('Year') : Year], FailureHandling.STOP_ON_FAILURE)
 
-'Get Current Date'
-String Current_Date = CustomKeywords.'myKeywords.customKeywords.getCurrentDate'()
+DivisionsList.remove(0);
+FullSeasonNameList.remove(0);
 
-'Update a Season and verify'
-
-'Custom Method - updateSeason'
-CustomKeywords.'myKeywords.customKeywords.updateSeason'(listOfColumnsOrdered, DivisionsList, Brand, Season, Year, Type, 
-    Internet_Start_Date, Internet_End_Date, Store_Start_Date, Store_End_Date, Created_By, Current_Date, '', '', Update_Internet_Start_Date, 
-    Update_Internet_End_Date, Update_Store_Start_Date, Update_Store_End_Date)
-
-'Custom Method - DeleteSeason'
-CustomKeywords.'myKeywords.customKeywords.DeleteSeason'(listOfColumnsOrdered, DivisionsList, Brand, Season, Year, Type, 
-    Internet_Start_Date, Internet_End_Date, Store_Start_Date, Store_End_Date, Created_By, Current_Date, Updated_By, Current_Date, 
-    Update_Internet_Start_Date, Update_Internet_End_Date, Update_Store_Start_Date, Update_Store_End_Date)
-
-WebUI.callTestCase(findTestCase('Common/CloseBrowser'), [:], FailureHandling.STOP_ON_FAILURE)
-
+tempInt = 0;
+for (String currentSeasonName : FullSeasonNameList) {
+	
+	WebUI.callTestCase(findTestCase('Create Season/linkTestCases/Delete a Season'), [('Brand') : Brand, ('Division') : DivisionsList.get(tempInt), ('Store_End_Date') : Store_End_Date
+		, ('Store_Start_Date') : Store_Start_Date, ('Internet_Start_Date') : Internet_Start_Date, ('Internet_End_Date') : Internet_End_Date, ('Name') : currentSeasonName, ('Season') : Season
+		, ('Type') : Type, ('Year') : Year], FailureHandling.STOP_ON_FAILURE)
+	
+	tempInt++;
+}
