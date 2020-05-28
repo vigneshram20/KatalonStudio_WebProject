@@ -75,6 +75,9 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/small_Edit 
 WebUI.verifyElementPresent(findTestObject('Sprint3/span_Edit Mode_toggle_btn-label'), 0)
 
 'Click Manage Layout button'
+WebUI.verifyElementClickable(findTestObject('Sprint3/button_Manage Layout'))
+
+'Click Manage Layout button'
 WebUI.click(findTestObject('Sprint3/button_Manage Layout'))
 
 'Verify Seasons page Header'

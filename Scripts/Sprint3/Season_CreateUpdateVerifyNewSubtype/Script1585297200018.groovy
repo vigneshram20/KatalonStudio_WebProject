@@ -22,16 +22,14 @@ import java.util.Date as Date
 import org.openqa.selenium.WebDriver as WebDriver
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.WebElement as WebElement
-import com.kms.katalon.core.configuration.RunConfiguration
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
-if(!RunConfiguration.getExecutionSource().contains("Test Suites"))
-{
-	'Launch the Browser'
-	WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
-	
-	'Verify Login Successfully'
-	WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
-	
+if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {
+    'Launch the Browser'
+    WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
+
+    'Verify Login Successfully'
+    WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
 }
 
 'Navigate through hamburger menu'
@@ -64,10 +62,10 @@ WebUI.delay(5)
 
 WebDriver driver = DriverFactory.getWebDriver()
 
-List<WebElement> listOfAttributes = WebUI.findWebElements(findTestObject('Object Repository/Sprint3/td_Attributes_InternalNames'), 
+List<String> listOfAttributes = WebUI.findWebElements(findTestObject('Object Repository/Sprint3/td_Attributes_InternalNames'), 
     0)
 
-attributeAsAdded = new ArrayList<String>()
+attributeAsAdded = new ArrayList<LinkedHashMap>()
 
 for (WebElement element : listOfAttributes) {
     Thread.sleep(250)
@@ -127,6 +125,15 @@ WebUI.click(findTestObject('Object Repository/Sprint3/button_Create'))
 
 WebUI.delay(2)
 
+'Move to Page Bottom'
+WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.END))
+
+'Click Cancel button'
+WebUI.scrollToElement(findTestObject('Sprint4/button_Cancel'), 0)
+
+'Click Cancel button'
+WebUI.verifyElementClickable(findTestObject('Sprint4/button_Cancel'))
+
 'Click Cancel button'
 WebUI.click(findTestObject('Sprint4/button_Cancel'))
 
@@ -167,10 +174,10 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/input_Displ
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/radio_Instantiable - Copy', [('YesOrNo') : 'Yes']), 
     0)
 
-List<WebElement> listOfInheritedAttributes = WebUI.findWebElements(findTestObject('Object Repository/Sprint3/td_InheritedAttributes_InternalNames'), 
+List<String> listOfInheritedAttributes = WebUI.findWebElements(findTestObject('Object Repository/Sprint3/td_InheritedAttributes_InternalNames'), 
     0)
 
-attributeavailable = new ArrayList<String>()
+attributeavailable = new ArrayList<LinkedHashMap>()
 
 for (WebElement element : listOfInheritedAttributes) {
     Thread.sleep(250)
@@ -214,6 +221,11 @@ WebUI.delay(2)
 
 'Scroll to Top'
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+
+WebUI.delay(2)
+
+'Select the parent dropdown'
+WebUI.verifyOptionPresentByLabel(findTestObject('Sprint3/select_parentDropDown'), displayNameEdited, true, 0)
 
 'Select the parent dropdown'
 WebUI.selectOptionByLabel(findTestObject('Sprint3/select_parentDropDown'), displayNameEdited, true)
