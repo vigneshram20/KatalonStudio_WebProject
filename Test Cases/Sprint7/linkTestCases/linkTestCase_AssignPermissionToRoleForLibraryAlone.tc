@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>linkTestCase_CreateView</name>
+   <name>linkTestCase_AssignPermissionToRoleForLibraryAlone</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>dff0eb8d-2a52-4f03-9be4-1608b5a408d5</testCaseGuid>
+   <testCaseGuid>f7d1c1a1-4a73-4dbc-ba57-6b19cc1457ca</testCaseGuid>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>069488a3-2bc6-455a-9fe2-6dac8be1eb46</id>
+      <id>c4770095-5015-4d3a-a0ff-027b6cd61a3b</id>
       <masked>false</masked>
-      <name>viewName</name>
+      <name>roleName</name>
    </variable>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>ba735e7e-eb54-4f21-814f-68ff006851ae</id>
+      <id>c1069e97-3698-4e64-b6b6-44c455482ced</id>
       <masked>false</masked>
-      <name>viewType</name>
+      <name>libraryName</name>
    </variable>
    <variable>
-      <defaultValue>''</defaultValue>
+      <defaultValue>[]</defaultValue>
       <description></description>
-      <id>08c5a3da-d136-489a-870f-7e67165ab94f</id>
+      <id>73b40b70-834c-4473-9720-ca24c3bbd07a</id>
       <masked>false</masked>
-      <name>roleToAssign</name>
+      <name>permissionValues</name>
    </variable>
 </TestCaseEntity>

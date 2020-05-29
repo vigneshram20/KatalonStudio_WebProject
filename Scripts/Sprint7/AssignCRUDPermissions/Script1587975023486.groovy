@@ -15,10 +15,21 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.configuration.RunConfiguration
 
 String roleName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QARole', 'ddMMMyyHHmmss')
 
 String roleDescription = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QADescription', 'ss')
+
+if(!RunConfiguration.getExecutionSource().contains("Test Suites"))
+{
+	'Launch the Browser'
+	WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
+	
+	'Verify Login Successfully'
+	WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
+	
+}
 
 WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CreateRoleAlone'), [('roleDescription') : roleDescription
         , ('roleName') : roleName], FailureHandling.STOP_ON_FAILURE)
@@ -66,8 +77,6 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_Permissi
     0)
 
 WebUI.click(findTestObject('Common Objects/button_OK'))
-
-WebUI.refresh()
 
 WebUI.delay(2)
 

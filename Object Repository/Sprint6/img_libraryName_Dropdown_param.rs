@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_Type  season</name>
+   <name>img_libraryName_Dropdown_param</name>
    <tag></tag>
-   <elementGuidId>ae523112-0664-407f-af82-dfde34624390</elementGuidId>
+   <elementGuidId>65c124ea-f555-4a14-a8c3-8655cda3ce31</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//div[(text() = 'Type : season' or . = 'Type : season')]</value>
+         <value>//img[@title = 'open']</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div//p[text()='Type']/following-sibling::p[contains(.,'season')]</value>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='${library}'])[1]/following::div[2]//img</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,62 +21,48 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>div</value>
+      <value>img</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>class</name>
+      <name>src</name>
       <type>Main</type>
-      <value>viewForm_type_Info__1MNDZ</value>
+      <value>/static/media/arrow_down.9967c09b.svg</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>text</name>
+      <name>title</name>
       <type>Main</type>
-      <value>Type : season</value>
+      <value>open</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;createNewSeason&quot;)/div[@class=&quot;modal-dialog&quot;]/div[@class=&quot;modal-content&quot;]/div[@class=&quot;modal-body pb-0&quot;]/div[@class=&quot;addl-padding&quot;]/div[@class=&quot;viewForm_type_Info__1MNDZ&quot;]</value>
+      <value>id(&quot;react-tabs-3&quot;)/div[@class=&quot;userRole_permission_list_wrapper__b6xvz&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;userRole_table_Scroll__nYmSj col-12 table-responsive&quot;]/table[@class=&quot;userRole_expend_table__20HeJ&quot;]/tbody[1]/tr[2]/td[4]/div[@class=&quot;checkbox&quot;]/div[@class=&quot;userRole_dropdown__3ATxD&quot;]/img[1]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='createNewSeason']/div/div/div[2]/div[2]/div</value>
+      <value>//div[@id='react-tabs-3']/div/div/div[2]/table/tbody/tr[2]/td[4]/div/div/img</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
+      <name>xpath:img</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='*'])[1]/following::div[4]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Save views at Highest Type Level'])[1]/preceding::div[1]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Configure View Settings'])[1]/preceding::div[3]</value>
+      <value>//img[@title='open']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[2]/div[2]/div</value>
+      <value>//td[4]/div/div/img</value>
    </webElementXpaths>
 </WebElementEntity>

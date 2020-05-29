@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TS_SystemView_All_20200528_121454</name>
+   <name>TS_SystemView_All_20200529_124614</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,20 +9,8 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>true</rerunFailedTestCasesOnly>
-   <testSuiteGuid>d5232c41-5078-4921-b03c-1276aaf93003</testSuiteGuid>
+   <testSuiteGuid>261c072c-2b47-4b4c-b756-a78d5fd08968</testSuiteGuid>
    
-<testCaseLink>
-      <guid>cb91c1b4-c60f-4805-8bd0-8ca74cae62fd</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Sprint2/SystemView_Create_SetDefault_Delete</testCaseId>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>8283ccc8-bc74-45bc-abf0-9dc5f7d938fc</variableId>
-      </variableLink>
-   </testCaseLink>
 <testCaseLink>
       <guid>2e57224d-a4d3-4192-927e-31492cc5a1b6</guid>
       <isReuseDriver>false</isReuseDriver>

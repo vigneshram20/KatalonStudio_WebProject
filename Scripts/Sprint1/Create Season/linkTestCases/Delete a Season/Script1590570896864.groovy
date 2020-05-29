@@ -63,7 +63,7 @@ def ActionsObject = WebUI.removeObjectProperty(findTestObject('Common Objects/Gr
 
 ActionsObject = WebUI.modifyObjectProperty(findTestObject('Common Objects/GridXpath_SeasonsList'), 'xpath', 'equals', xpath, true)
 
-List<WebElement> listOfElements = WebUI.findWebElements(ActionsObject,3)
+List<WebElement> listOfElements = WebUI.findWebElements(ActionsObject,2)
 
 if(listOfElements.size()!=0)
 
@@ -138,4 +138,12 @@ WebUI.click(findTestObject('Sprint1/Create Season/input_SearchField'), FailureHa
 'Search for the record'
 WebUI.sendKeys(findTestObject('Sprint1/Create Season/input_SearchField'), Keys.chord(Keys.CONTROL, 'a',Keys.BACK_SPACE,Keys.ENTER))
 
-WebUI.delay(1)
+WebUI.enableSmartWait()
+
+WebUI.waitForPageLoad(60)
+
+WebUI.waitForElementPresent(gridHeaderA, 60)
+
+WebUI.waitForElementVisible(gridHeaderA, 60)
+
+WebUI.waitForElementClickable(gridHeaderA, 60)

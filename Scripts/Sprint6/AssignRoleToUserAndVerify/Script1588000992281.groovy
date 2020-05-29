@@ -18,6 +18,8 @@ import org.openqa.selenium.Keys as Keys
 
 String userID = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA', 'ss')
 
+String emailIDRNo = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('', 'HHss')
+
 String userIDEdited = userID + 'Edited'
 
 String displayName = 'QA Automation' + userID
@@ -28,7 +30,7 @@ String firstName = 'QA'
 
 String lastName = 'Automation'
 
-String emailID = 'qatest@photoninfotech.net'
+String emailID = 'qatest'+ emailIDRNo +"@photoninfotech.net"
 
 String contactNo = '987'
 

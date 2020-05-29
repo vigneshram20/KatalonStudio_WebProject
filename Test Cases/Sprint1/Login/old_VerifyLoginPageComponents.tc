@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>VerifyLoginPageComponents</name>
+   <name>old_VerifyLoginPageComponents</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>df917083-32ea-4351-a28a-ccb57f44b266</testCaseGuid>

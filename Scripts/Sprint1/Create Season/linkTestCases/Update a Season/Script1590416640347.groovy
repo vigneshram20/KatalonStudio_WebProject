@@ -38,7 +38,13 @@ WebUI.sendKeys(findTestObject('Sprint1/Create Season/input_SearchField'), Keys.c
 'Search for the record'
 WebUI.sendKeys(findTestObject('Sprint1/Create Season/input_SearchField'), Name + Keys.ENTER)
 
-WebUI.delay(10)
+WebUI.waitForPageLoad(60)
+
+WebUI.waitForElementPresent(gridHeaderA, 60)
+
+WebUI.waitForElementVisible(gridHeaderA, 60)
+
+WebUI.waitForElementClickable(gridHeaderA, 60)
 
 xpath1 = (((((((((('//div[2][normalize-space(.)=\'' + Brand) + '\'][not(contains(@id,\'clone\'))]/../div[3][normalize-space()=\'') + 
 Division) + '\']/../div[4][normalize-space()=\'') + Store_End_Date) + '\']/../div[5][normalize-space()=\'') + Store_Start_Date) + 
@@ -148,17 +154,7 @@ WebUI.delay(1)
 
 CustomKeywords.'myKeywords.customKeywords.typeKeysCharByChar'(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch End Date']), Update_Store_End_Date)
 
-
 WebUI.delay(1)
-
-/*'Click In Store Launch Start Date Label'
-//WebUI.click(findTestObject('Sprint1/Create Season/label_In Store Launch Start Date'))
-
-WebUI.delay(1)
-
-'Click In Store Launch Start Date Label'
-WebUI.click(findTestObject('Sprint1/Create Season/label_In Store Launch Start Date'))*/
-
 
 'Clear Text'
 WebUI.clearText(findTestObject('Sprint1/Create Season/input__in_store_launch_start_date'))
@@ -171,52 +167,6 @@ WebUI.delay(1)
 
 CustomKeywords.'myKeywords.customKeywords.typeKeysCharByChar'(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch Start Date']), Update_Store_Start_Date)
 
-
-/*
-'Type In Store Launch Start Date'
-WebUI.setText(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch Start Date']), 
-  //Keys.ENTER)
-
-WebUI.delay(1)
-
-'Click In Store Launch Start Date Label'
-WebUI.click(findTestObject('Sprint1/Create Season/label_In Store Launch Start Date'))
-
-'Type In Store Launch End Date'
-WebUI.setText(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch End Date']), 
-Keys.ENTER)
-
-
-'Click In Store Launch Start Date Label'
-WebUI.click(findTestObject('Sprint1/Create Season/label_In Store Launch Start Date'))
-
-WebUI.click(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch Start Date']))
-
-'Type Internet Launch Start Date'
-WebUI.sendKeys(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch Start Date']), 
-    Keys.chord(Keys.CONTROL, Keys.chord('a')))
-
-WebUI.delay(1)
-
-CustomKeywords.'myKeywords.customKeywords.typeKeysCharByChar'(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch Start Date']), Update_Internet_Start_Date)
-
-'Type Internet Launch Start Date'
-WebUI.sendKeys(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch Start Date']), 
-Keys.ENTER)
-
-WebUI.click(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch Start Date']))
-
-'Type Internet Launch End Date'
-WebUI.sendKeys(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch Start Date']), 
-    Keys.chord(Keys.CONTROL, Keys.chord('a')))
-
-
-CustomKeywords.'myKeywords.customKeywords.typeKeysCharByChar'(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch Start Date']), Update_Store_Start_Date)
-
-'Type In Store Launch Start Date'
-WebUI.setText(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch Start Date']),
-Keys.ENTER)
-*/
 WebUI.verifyElementVisible(findTestObject('Common Objects/a_Cancel'))
 
 WebUI.click(findTestObject('Sprint1/Update Season/button_Update'))

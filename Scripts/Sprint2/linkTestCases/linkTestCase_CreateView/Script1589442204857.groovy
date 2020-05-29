@@ -17,23 +17,6 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.configuration.RunConfiguration
 
-if(!RunConfiguration.getExecutionSource().contains("Test Suites"))
-{
-	'Launch the Browser'
-	WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
-	
-	'Verify Login Successfully'
-	WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
-	
-}
-
-else
-{
-	'Navigate to Homepage'
-	WebUI.navigateToUrl(GlobalVariable.URL)
-}
-
-
 'Navigate through Hamburger menu'
 WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : 'Season'], 
     FailureHandling.STOP_ON_FAILURE)
@@ -233,15 +216,18 @@ if (viewType.equals('System')) {
     WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint2/Seasons/Page_Merch Collaboration Platform/div_ROLES'), 
         0)
 
+	if(!roleToAssign.equals(""))
+	{
     'Click System Administrator label'
-    WebUI.click(findTestObject('Object Repository/Sprint2/Seasons/Page_Merch Collaboration Platform/label_SYSTEM ADMINISTRATOR'))
+    WebUI.click(findTestObject('Object Repository/Sprint6/label_parameterized',[('param'):roleToAssign]))
 
     'Click Move to Right button'
     WebUI.click(findTestObject('Object Repository/Sprint6/button_moveToRightRoles'))
 
     'Verify Element Present'
-    WebUI.verifyElementPresent(findTestObject('Sprint6/label_Verify_AssignedGroups', [('label') : 'SYSTEM ADMINISTRATOR']), 
+    WebUI.verifyElementPresent(findTestObject('Sprint6/label_Verify_AssignedGroups', [('label') : roleToAssign]), 
         0)
+	}
 }
 
 'Verify the Lock Columns text'

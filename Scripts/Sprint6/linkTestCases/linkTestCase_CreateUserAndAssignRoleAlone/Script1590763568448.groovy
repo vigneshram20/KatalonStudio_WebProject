@@ -14,35 +14,34 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
 
+'Create User'
+WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CreateIndependantUser'), [('userID') : userID, ('firstName') : firstName
+		, ('lastName') : lastName, ('emailID') : emailID, ('contactNo') : contactNo], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Administration', ('SubMenuItem') : 'User & Role Management'], 
-    FailureHandling.STOP_ON_FAILURE)
+'Scroll to the user'
+WebUI.scrollToElement(findTestObject('Sprint6/span_AddRoles_param', [('userID') : userID]), 0)
 
-'Click Edit Mode Toggle button'
-WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+'Click Add roles button'
+WebUI.click(findTestObject('Sprint6/span_AddRoles_param', [('userID') : userID]))
 
-WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+'Enter Role'
+WebUI.setText(findTestObject('Object Repository/Sprint6/input_Assign User Role(s)_role_search'), RoleName)
 
-WebUI.click(findTestObject('Sprint6/img_ROLES_img-add'))
+'Select the Role'
+WebUI.click(findTestObject('Sprint6/label_parameterized',[('param'):RoleName]))
 
-WebUI.sendKeys(findTestObject('Object Repository/Sprint6/input__name'), roleName)
+'Click Assign button'
+WebUI.click(findTestObject('Object Repository/Sprint6/button_Assign'))
 
-WebUI.sendKeys(findTestObject('Sprint6/textarea_Description'), roleDescription)
+'Verify whether the assigned role exist'
+WebUI.verifyElementPresent(findTestObject('Sprint6/span_VerifyAssignedRole_param', [('userID') : userID, ('role') : RoleName]),
+	0)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/button_Create'))
-
+'Click Save button'
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Save'))
 
+'Click Yes button'
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Yes'))
 
 WebUI.click(findTestObject('Common Objects/button_OK'))
-
-WebUI.delay(1)
-
-WebUI.verifyElementPresent(findTestObject('Sprint6/div_td_role_table_verification', [('roleName') : roleName, ('roleDescription') : roleDescription]), 
-    2, FailureHandling.STOP_ON_FAILURE)
-
-WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
-

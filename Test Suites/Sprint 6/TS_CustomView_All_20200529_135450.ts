@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TS_CustomView_All_20200527_133531</name>
+   <name>TS_CustomView_All_20200529_135450</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,7 +9,7 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>true</rerunFailedTestCasesOnly>
-   <testSuiteGuid>cee48479-126a-4616-a936-e76f7ac5c652</testSuiteGuid>
+   <testSuiteGuid>06bbc429-0c1c-421d-999c-c9c1470e6c73</testSuiteGuid>
    
 <testCaseLink>
       <guid>e122c49c-42b3-4177-87de-167aaf6a4c2c</guid>
