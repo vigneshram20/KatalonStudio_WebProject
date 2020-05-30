@@ -40,6 +40,28 @@ String RoleName = 'SYSTEM ADMINISTRATOR'
 WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CreateIndependantUser'), [('userID') : userID, ('firstName') : firstName
         , ('lastName') : lastName, ('emailID') : emailID, ('contactNo') : contactNo], FailureHandling.STOP_ON_FAILURE)
 
+'Click Save button'
+WebUI.click(findTestObject('Object Repository/Sprint6/button_Save'))
+
+'Verify the confirmation popup'
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_Confirm to Save'), 0)
+
+'Click Yes button'
+WebUI.click(findTestObject('Object Repository/Sprint6/button_Yes'))
+
+''
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_User has been modified successfully'), 0)
+
+WebUI.click(findTestObject('Common Objects/button_OK'))
+
+WebUI.refresh()
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('Object Repository/Sprint6/li_Users'))
+
+WebUI.click(findTestObject('Sprint3/span_Edit Mode_toggle_btn-handle'))
+
 'Scroll to the user'
 WebUI.scrollToElement(findTestObject('Sprint6/span_AddRoles_param', [('userID') : userID]), 0)
 

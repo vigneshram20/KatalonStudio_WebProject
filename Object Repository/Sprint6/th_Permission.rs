@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//th[(text() = 'Permission' or . = 'Permission')]</value>
+         <value>//th[(text() = 'PERMISSION' or . = 'PERMISSION')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -24,7 +24,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Permission</value>
+      <value>PERMISSION</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

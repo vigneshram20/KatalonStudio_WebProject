@@ -32,6 +32,6 @@ WebUI.click(findTestObject('Object Repository/Sprint6/button_Yes'))
 
 WebUI.click(findTestObject('Common Objects/button_OK'))
 
-WebUI.verifyElementNotPresent(findTestObject('Sprint6/div_td_role_table_verification', [('roleName') : roleNameEdited, ('roleDescription') : roleDescriptionEdited]), 
+WebUI.verifyElementNotPresent(findTestObject('Sprint6/div_td_role_table_verification', [('roleName') : roleName, ('roleDescription') : roleDescription]), 
     0)
 

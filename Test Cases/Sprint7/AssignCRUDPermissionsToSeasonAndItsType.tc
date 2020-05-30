@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>AssignCRUDPermissions</name>
+   <name>AssignCRUDPermissionsToSeasonAndItsType</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>acd4430a-2a0e-4a90-9af3-93656838244d</testCaseGuid>

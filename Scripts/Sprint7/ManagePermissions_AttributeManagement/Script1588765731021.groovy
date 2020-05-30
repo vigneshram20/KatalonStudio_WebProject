@@ -14,18 +14,22 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
-import com.kms.katalon.core.configuration.RunConfiguration
+if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {
+    'Launch the Browser'
+    WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
 
-if(!RunConfiguration.getExecutionSource().contains("Test Suites"))
-{
-	'Launch the Browser'
-	WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
-	
-	'Verify Login Successfully'
-	WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
-	
+    'Verify Login Successfully'
+    WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
 }
+
+String roleName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QARole', 'ddMMMyyHHmmss')
+
+String roleDescription = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QADescription', 'ss')
+
+WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CreateRoleAlone'), [('roleDescription') : roleDescription, ('roleName') : roleName], 
+    FailureHandling.STOP_ON_FAILURE)
 
 'Navigate to Type and Attribute Management'
 WebUI.callTestCase(findTestCase('Common/NavigateToTypeAndAttributeManagement'), [:], FailureHandling.STOP_ON_FAILURE)
@@ -40,9 +44,7 @@ String listNameDisplay = 'QA ML ' + dateFormat
 
 String listValue = 'QA Test'
 
-String RoleName = "SYSTEM ADMINISTRATOR"
-
-String RoleAccess = "Create"
+String RoleAccess = 'Create'
 
 WebUI.callTestCase(findTestCase('Sprint5/linkTestCases/linkTesCase_CreateMasterList'), [('folderName') : libraryName, ('InternalName') : listNameInternal
         , ('DisplayName') : listNameDisplay, ('listItem') : listValue], FailureHandling.STOP_ON_FAILURE)
@@ -60,9 +62,9 @@ WebUI.callTestCase(findTestCase('Sprint4/linkTestCases/linkTestCase_CreateAttrib
     FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('Sprint7/linkTestCases/linkTestCase_AssignPermission_Attribute'), [('attributeName') : singleListName
-        , ('paramName') : listValue, ('RoleName') : RoleName, ('RoleAccess') : RoleAccess], FailureHandling.STOP_ON_FAILURE)
+        , ('paramName') : listValue, ('RoleName') : roleName, ('RoleAccess') : RoleAccess], FailureHandling.STOP_ON_FAILURE)
 
-List<String> attrValues = new ArrayList<String>()
+List<String> attrValues = new ArrayList<LinkedHashMap>()
 
 attrValues.add(singleListName)
 
@@ -72,5 +74,5 @@ WebUI.callTestCase(findTestCase('Sprint4/linkTestCases/linkTestCase_DeleteAttrib
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Manage Permissions'))
 
 WebUI.verifyElementNotPresent(findTestObject('Sprint6/div_td_permission_table_verification', [('attributeName') : singleListName
-            , ('paramName') : listValue, ('permission') : RoleAccess, ('roleName') : RoleName]), 0)
+            , ('paramName') : listValue, ('permission') : RoleAccess, ('roleName') : roleName]), 0)
 

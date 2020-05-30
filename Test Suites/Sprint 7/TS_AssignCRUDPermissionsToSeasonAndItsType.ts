@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TS_AssignCRUDPermissions</name>
+   <name>TS_AssignCRUDPermissionsToSeasonAndItsType</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -14,6 +14,6 @@
       <guid>12789898-3ad7-4232-84b4-d8205e74224c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Sprint7/AssignCRUDPermissions</testCaseId>
+      <testCaseId>Test Cases/Sprint7/AssignCRUDPermissionsToSeasonAndItsType</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

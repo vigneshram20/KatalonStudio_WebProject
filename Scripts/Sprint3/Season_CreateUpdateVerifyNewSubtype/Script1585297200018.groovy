@@ -89,15 +89,11 @@ String internalName = WebUI.getAttribute(findTestObject('Object Repository/Sprin
 'Verify Label Display Name'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/label_Display Name'), 0)
 
-SimpleDateFormat formatter = new SimpleDateFormat('ddMMMyyHHmmss')
+String dateFormat = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('', 'ddMMMyyHHmmss')
 
-Date date = new Date()
+InternaltypeName = ('QAINFolder' + dateFormat)
 
-String expectedDate = formatter.format(date)
-
-InternaltypeName = ('QAIN' + expectedDate)
-
-DisplaytypeName = ('QA DN ' + expectedDate)
+DisplaytypeName = ('QA DN Folder ' + dateFormat)
 
 'Provide Internal Name'
 WebUI.setText(findTestObject('Sprint3/input_InternalName'), InternaltypeName)

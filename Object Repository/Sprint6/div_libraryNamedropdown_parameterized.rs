@@ -1,85 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>th_Attribute</name>
+   <name>div_libraryNamedropdown_parameterized</name>
    <tag></tag>
-   <elementGuidId>0d128eb3-4087-450f-8e79-c0dd475b0b03</elementGuidId>
+   <elementGuidId>aab80e5b-5741-4760-9271-2c4657952514</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//th[(text() = 'ATTRIBUTE' or . = 'ATTRIBUTE')]</value>
+         <value>//*[(text() = 'C' or . = 'C')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='${libraryName}'])[1]/following::div[2]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>th</value>
+      <value>div</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>userRole_dropdown__3ATxD</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>ATTRIBUTE</value>
+      <value>C</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;root&quot;)/div[1]/div[@class=&quot;manageLibrary_manage_library_container__RdgCO mt-50&quot;]/div[@class=&quot;manageLibrary_content_section__3u3ow&quot;]/div[@class=&quot;table-responsive table_generic&quot;]/div[@class=&quot;entityForm_tableScroll_container__SVELj&quot;]/table[@class=&quot;table table-bordered attributePermissions_overide_table_attr__1u-c3&quot;]/thead[@class=&quot;entityForm_table_header_bg__1qy_b&quot;]/tr[1]/th[2]</value>
+      <value>id(&quot;react-tabs-3&quot;)/div[@class=&quot;userRole_permission_list_wrapper__b6xvz&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;userRole_table_Scroll__nYmSj col-12 table-responsive&quot;]/table[@class=&quot;userRole_expend_table__20HeJ&quot;]/tbody[1]/tr[2]/td[4]/div[@class=&quot;checkbox&quot;]/div[@class=&quot;userRole_dropdown__3ATxD&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='root']/div/div/div[4]/div/div/table/thead/tr/th[2]</value>
+      <value>//div[@id='react-tabs-3']/div/div/div[2]/table/tbody/tr[2]/td[4]/div/div</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Attribute Permissions'])[1]/following::th[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Collection'])[2]/following::div[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Season'])[2]/following::th[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Collection'])[1]/following::div[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Values'])[1]/preceding::th[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Country'])[1]/preceding::div[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Permission'])[1]/preceding::th[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Country'])[2]/preceding::div[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>//*/text()[normalize-space(.)='Attribute']/parent::*</value>
+      <value>//*/text()[normalize-space(.)='C']/parent::*</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//th[2]</value>
+      <value>//td[4]/div/div</value>
    </webElementXpaths>
 </WebElementEntity>

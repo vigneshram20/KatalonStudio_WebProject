@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>linkTestCase_CreateSubTypeAlone</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>16ffd5eb-930c-4213-a383-edb8bc163461</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>a15d524d-1557-437c-b28e-02237cdecbac</id>
+      <masked>false</masked>
+      <name>InternaltypeName</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>1d0f4ac7-18a0-4ba5-b110-aee4fa883608</id>
+      <masked>false</masked>
+      <name>DisplaytypeName</name>
+   </variable>
+</TestCaseEntity>

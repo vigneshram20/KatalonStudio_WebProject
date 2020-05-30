@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//th[(text() = 'Values' or . = 'Values')]</value>
+         <value>//th[(text() = 'VALUES' or . = 'VALUES')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -24,7 +24,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Values</value>
+      <value>VALUES</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//th[(text() = 'Access Not Granted' or . = 'Access Not Granted')]</value>
+         <value>//th[(text() = 'ACCESS NOT GRANTED' or . = 'ACCESS NOT GRANTED')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -24,7 +24,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Access Not Granted</value>
+      <value>ACCESS NOT GRANTED</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

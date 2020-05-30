@@ -62,9 +62,9 @@ WebUI.click(findTestObject('Sprint6/label_parameterized', [('param') : paramName
 
 WebUI.click(findTestObject('Sprint6/button_moveToRightAttributes'))
 
-WebUI.selectOptionByLabel(findTestObject('Sprint6/select_RolesDropdown'), 'Create', true)
+WebUI.selectOptionByLabel(findTestObject('Sprint6/select_RolesDropdown'), RoleAccess, true)
 
-WebUI.click(findTestObject('Sprint6/label_parameterized', [('param') : "SYSTEM ADMINISTRATOR"]))
+WebUI.click(findTestObject('Sprint6/label_parameterized', [('param') : RoleName]))
 
 WebUI.click(findTestObject('Sprint6/button_moveToRightRoles'))
 
@@ -79,7 +79,7 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_Permissi
 WebUI.click(findTestObject('Common Objects/button_OK'))
 
 WebUI.verifyElementPresent(findTestObject('Sprint6/div_td_permission_table_verification', [('attributeName') : attributeName
-            , ('paramName') : paramName, ('permission') : 'Create', ('roleName') : 'SYSTEM ADMINISTRATOR']), 0)
+            , ('paramName') : paramName, ('permission') : RoleAccess, ('roleName') : RoleName]), 0)
 
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 

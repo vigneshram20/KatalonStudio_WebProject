@@ -17,8 +17,8 @@ import internal.GlobalVariable as GlobalVariable
 
 def gridHeaderA = WebUI.removeObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 'xpath')
 
-gridHeaderA = WebUI.modifyObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 'xpath',
-	'equals', '//table/thead/tr/th', true)
+gridHeaderA = WebUI.modifyObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 'xpath', 
+    'equals', '//table/thead/tr/th', true)
 
 WebUI.waitForPageLoad(60)
 
@@ -40,7 +40,7 @@ WebUI.click(findTestObject('Sprint6/span_ViewName_parameterized', [('viewName') 
 'Click SetDefault button'
 WebUI.click(findTestObject('Sprint6/button_SetDefault'))
 
-String viewNameVerify = (viewName + ' – Default')
+String viewNameVerify = viewName + ' – Default'
 
 'Verify Default view is displayed or not'
 WebUI.verifyElementPresent(findTestObject('Sprint6/span_ViewName_parameterized', [('viewName') : viewNameVerify]), 0)
@@ -62,5 +62,5 @@ WebUI.waitForElementClickable(gridHeaderA, 60)
 viewName = (viewName + ' - Default')
 
 'Verify the default view is displayed in the view selector or not'
-WebUI.verifyElementPresent(findTestObject('Sprint6/button_paremeterized_ViewName', [('viewName') : viewName]),
-	0)
+WebUI.verifyElementPresent(findTestObject('Sprint6/button_paremeterized_ViewName', [('viewName') : viewName]), 0)
+

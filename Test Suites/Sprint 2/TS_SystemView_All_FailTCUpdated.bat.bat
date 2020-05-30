@@ -1,1 +1,1 @@
-katalon -noSplash  -runMode=console -projectPath="C:\Users\vigneshram_s\git\WSI_MerchTool\WSI_MerchTool.prj" -retry=0 -testSuitePath="Test Suites/Sprint 2/TS_SystemView_All_20200529_124614" -executionProfile="default" -browserType="Chrome"
+katalon -noSplash  -runMode=console -projectPath="C:\Users\vigneshram_s\git\WSI_MerchTool\WSI_MerchTool.prj" -retry=0 -testSuitePath="Test Suites/Sprint 2/TS_SystemView_All_20200530_121352" -executionProfile="default" -browserType="Chrome"
