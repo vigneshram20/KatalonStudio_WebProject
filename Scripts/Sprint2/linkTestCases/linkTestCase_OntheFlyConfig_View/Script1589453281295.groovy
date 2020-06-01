@@ -147,15 +147,15 @@ WebUI.click(findTestObject('Sprint6/button_Hide  Unhide'))
 WebUI.setText(findTestObject('Sprint6/input_Hide  Unhide_search-flelds'), 'Name')
 
 'Wait for the element to be displayed'
-WebUI.waitForElementVisible(findTestObject('Sprint6/img_viewControl_eye_icon', [('attribute') : 'Name']), 0)
+WebUI.waitForElementVisible(findTestObject('Sprint6/img_viewControl_eye_icon_viewColumn', [('attribute') : 'Name']), 0)
 
 'Wait for the element to be clicked'
-WebUI.waitForElementClickable(findTestObject('Sprint6/img_viewControl_eye_icon', [('attribute') : 'Name']), 0)
+WebUI.waitForElementClickable(findTestObject('Sprint6/img_viewControl_eye_icon_viewColumn', [('attribute') : 'Name']), 0)
 
 WebUI.delay(2)
 
 'Click the respective column'
-WebUI.click(findTestObject('Sprint6/img_viewControl_eye_icon', [('attribute') : 'Name']))
+WebUI.click(findTestObject('Sprint6/img_viewControl_eye_icon_viewColumn', [('attribute') : 'Name']))
 
 WebUI.delay(5)
 

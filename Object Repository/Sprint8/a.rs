@@ -1,81 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>td_ExisingAttributeParameterized</name>
+   <name>a</name>
    <tag></tag>
-   <elementGuidId>ca3f90d2-8811-4758-9fa3-33890f1cd4d1</elementGuidId>
-   <selectorCollection>
-      <entry>
-         <key>BASIC</key>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//td[2][text()='${internalName}']/..//td[1]</value>
-      </entry>
-   </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <elementGuidId>a1cacf6a-703b-4ced-bcbc-ff970b8e869d</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>td</value>
+      <value>a</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>#</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>text</name>
+      <name>aria-label</name>
       <type>Main</type>
-      <value>Yes</value>
+      <value>Go to previous page</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;root&quot;)/div[1]/div[@class=&quot;manageLibrary_manage_library_container__wTwBZ mt-50&quot;]/div[@class=&quot;manageLibrary_content_section__3Wmoy&quot;]/div[@class=&quot;entityForm_season_type_container__1QNRR&quot;]/div[@class=&quot;table-responsive mt-5 table_generic&quot;]/div[@class=&quot;entityForm_tableScroll_container__2C4Cj&quot;]/table[@class=&quot;table table-bordered&quot;]/tbody[1]/tr[1]/td[5]</value>
+      <value>id(&quot;managelist&quot;)/div[@class=&quot;paginationWithGoTo_pagination_wrapper__1-Ag-&quot;]/ul[@class=&quot;pagination&quot;]/li[@class=&quot;paginationWithGoTo_page_number__3Y96h paginationWithGoTo_arrow_left__2tQNc paginationWithGoTo_disabled__2RGus&quot;]/a[1]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='root']/div/div/div[4]/div/div/div/table/tbody/tr/td[5]</value>
+      <value>//div[@id='managelist']/div[4]/ul/li[2]/a</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Automation_String_TextArea'])[3]/following::td[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Romania'])[2]/following::a[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Automation_String_TextArea'])[2]/following::td[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='RO'])[2]/following::a[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Yes'])[4]/preceding::td[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Go'])[1]/preceding::a[7]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
+      <name>xpath:href</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Automation_String_TextArea'])[4]/preceding::td[3]</value>
+      <value>(//a[contains(@href, '#')])[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//td[5]</value>
+      <value>//div[4]/ul/li[2]/a</value>
    </webElementXpaths>
 </WebElementEntity>

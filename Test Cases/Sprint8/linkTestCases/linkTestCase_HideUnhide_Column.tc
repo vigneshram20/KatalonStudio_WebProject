@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>linkTestCase_HideUnhide_Column</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>372fc954-c462-4818-94c6-ae118f325e8b</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>98405860-3838-419c-a66b-ac30575afaa9</id>
+      <masked>false</masked>
+      <name>viewName</name>
+   </variable>
+</TestCaseEntity>

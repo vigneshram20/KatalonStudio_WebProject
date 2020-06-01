@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>img_viewControl_eye_icon</name>
+   <name>img_viewControl_eye_icon_hiddenColumn</name>
    <tag></tag>
-   <elementGuidId>c98c3a18-ed2b-4400-a4be-3c3f07be9a44</elementGuidId>
+   <elementGuidId>292df4fe-f523-46dc-9b0f-19e11140cfc9</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//li[.='${attribute}']/img[@alt='viewColumn']</value>
+         <value>//li[.='${attribute}']/img[@alt='hiddenColumn']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

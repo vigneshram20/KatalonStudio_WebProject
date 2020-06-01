@@ -16,26 +16,39 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+WebUI.click(findTestObject('Sprint8/a_First_enabled'))
 
-WebUI.click(findTestObject('Object Repository/Sprint6/li_Roles'), FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Object Repository/Sprint8/a'))
 
-WebUI.click(findTestObject('Sprint3/span_Edit Mode_toggle_btn-handle'))
+WebUI.click(findTestObject('Object Repository/Sprint8/a_1'))
 
-WebUI.scrollToElement(findTestObject('Sprint6/div_td_role_table_verification', [('roleName') : roleName, ('roleDescription') : roleDescription]), 
-    0)
+WebUI.rightClick(findTestObject('Object Repository/Sprint8/span'))
 
-WebUI.clickOffset(findTestObject('Sprint6/div_td_role_table_verification', [('roleName') : roleName, ('roleDescription') : roleDescription]), 
-    2, 4)
+WebUI.rightClick(findTestObject('Object Repository/Sprint8/span'))
 
-WebUI.click(findTestObject('Sprint6/img_ROLES_img-remove'))
+WebUI.rightClick(findTestObject('Object Repository/Sprint8/span'))
 
-WebUI.click(findTestObject('Object Repository/Sprint6/button_Save'))
+WebUI.click(findTestObject('Object Repository/Sprint8/a'))
 
-WebUI.click(findTestObject('Object Repository/Sprint6/button_Yes'))
+WebUI.click(findTestObject('Object Repository/Sprint8/a_Last'))
 
-WebUI.click(findTestObject('Common Objects/button_OK'))
+WebUI.setText(findTestObject('Object Repository/Sprint8/input'), '1')
 
-WebUI.verifyElementNotPresent(findTestObject('Sprint6/div_td_role_table_verification', [('roleName') : roleName, ('roleDescription') : roleDescription]), 
-    0)
+WebUI.sendKeys(findTestObject('Object Repository/Sprint8/input'), Keys.chord(Keys.ENTER))
+
+WebUI.click(findTestObject('Object Repository/Sprint8/button_Go'))
+
+WebUI.click(findTestObject('Object Repository/Sprint8/span_Results 1-50 of 258'))
+
+WebUI.click(findTestObject('Object Repository/Sprint8/span_1-50'))
+
+WebUI.click(findTestObject('Object Repository/Sprint8/span_258'))
+
+WebUI.click(findTestObject('Object Repository/Sprint8/a_Last'))
+
+WebUI.click(findTestObject('Object Repository/Sprint8/a_Last'))
+
+WebUI.click(findTestObject('Object Repository/Sprint8/span_1'))
+
+WebUI.closeBrowser()
 

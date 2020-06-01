@@ -14,28 +14,22 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
-WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {
+    'Launch the Browser'
+    WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/li_Roles'), FailureHandling.STOP_ON_FAILURE)
+    'Verify Login Successfully'
+    WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
+}
 
-WebUI.click(findTestObject('Sprint3/span_Edit Mode_toggle_btn-handle'))
+WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : 'Country'], 
+    FailureHandling.STOP_ON_FAILURE)
 
-WebUI.scrollToElement(findTestObject('Sprint6/div_td_role_table_verification', [('roleName') : roleName, ('roleDescription') : roleDescription]), 
-    0)
+'Verify the table header - ACTIONS'
+WebUI.verifyElementPresent(findTestObject('Sprint6/div_ACTIONS'), 0)
 
-WebUI.clickOffset(findTestObject('Sprint6/div_td_role_table_verification', [('roleName') : roleName, ('roleDescription') : roleDescription]), 
-    2, 4)
-
-WebUI.click(findTestObject('Sprint6/img_ROLES_img-remove'))
-
-WebUI.click(findTestObject('Object Repository/Sprint6/button_Save'))
-
-WebUI.click(findTestObject('Object Repository/Sprint6/button_Yes'))
-
-WebUI.click(findTestObject('Common Objects/button_OK'))
-
-WebUI.verifyElementNotPresent(findTestObject('Sprint6/div_td_role_table_verification', [('roleName') : roleName, ('roleDescription') : roleDescription]), 
-    0)
+'Verify the table header - ACTIONS'
+WebUI.verifyElementClickable(findTestObject('Sprint6/div_ACTIONS'), FailureHandling.STOP_ON_FAILURE)
 

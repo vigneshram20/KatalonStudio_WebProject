@@ -10,8 +10,7 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>ac80908e-74c9-43df-9260-d489e8f60591</testSuiteGuid>
-   
-<testCaseLink>
+   <testCaseLink>
       <guid>6b6b2695-4d2b-4ec0-8dc4-79b83009d93d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -224,7 +223,7 @@
          <variableId>5a57caae-1328-4e8d-bfcd-1bd8d21b934e</variableId>
       </variableLink>
    </testCaseLink>
-<testCaseLink>
+   <testCaseLink>
       <guid>c256edd6-6b4e-4edd-b3d6-b537714316c7</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

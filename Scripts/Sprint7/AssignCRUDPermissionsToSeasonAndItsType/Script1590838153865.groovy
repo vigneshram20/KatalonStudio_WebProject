@@ -16,6 +16,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
+import org.openqa.selenium.WebElement as WebElement
+import org.openqa.selenium.WebDriver as WebDriver
 
 String roleName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QARole', 'ddMMMyyHHmmss')
 
@@ -58,27 +63,31 @@ WebUI.sendKeys(findTestObject('Sprint6/input_roleSearch'), roleName)
 
 WebUI.verifyElementPresent(findTestObject('Sprint6/th_parameterized', [('param') : roleName]), 0)
 
-not_run: WebUI.scrollToElement(findTestObject('Object Repository/Sprint6/img_libraryName_Dropdown_param', [('library') : 'Season']), 
+WebUI.scrollToElement(findTestObject('Object Repository/Sprint6/img_libraryName_Dropdown_param', [('library') : 'Season']), 
     0)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/img_libraryName_Dropdown_param', [('library') : 'Season']))
+WebDriver driver = DriverFactory.getWebDriver()
+
+WebElement element = WebUiBuiltInKeywords.findWebElement(findTestObject('Object Repository/Sprint6/img_libraryName_Dropdown_param', 
+        [('library') : 'Season']))
+
+JavascriptExecutor js = ((driver) as JavascriptExecutor)
+
+js.executeScript('arguments[0].click();', element)
 
 WebUI.click(findTestObject('Object Repository/Sprint6/label_delete'))
 
 WebUI.click(findTestObject('Object Repository/Sprint6/label_create'))
 
-WebUI.scrollToElement(findTestObject('Object Repository/Sprint6/img_libraryName_Dropdown_param', [('library') : 'Season']), 
-    0)
-
-not_run: WebUI.click(findTestObject('Object Repository/Sprint6/img_libraryName_Dropdown_param', [('library') : 'Season']))
+js.executeScript('arguments[0].click();', element)
 
 String verifyCRUD = WebUI.getText(findTestObject('Object Repository/Sprint6/div_libraryNamedropdown_parameterized', [('libraryName') : 'Season']), 
     FailureHandling.STOP_ON_FAILURE)
 
-not_run: WebUI.click(findTestObject('Object Repository/Sprint6/img_libraryName_ExpandLibrary_parameterized', [('libraryName') : 'Season']))
+WebElement elementInherit = WebUiBuiltInKeywords.findWebElement(findTestObject('Object Repository/Sprint6/div_SubType_InheritAttributes_parameterized', 
+        [('subType') : ('Season' + ' / ') + DisplaytypeName]))
 
-WebUI.click(findTestObject('Object Repository/Sprint6/div_SubType_InheritAttributes_parameterized', [('subType') : ('Season' + 
-            ' / ') + DisplaytypeName]))
+js.executeScript('arguments[0].click();', elementInherit)
 
 boolean accessMatched = WebUI.verifyElementText(findTestObject('Object Repository/Sprint6/div_libraryNamedropdown_parameterized', 
         [('libraryName') : ('Season' + ' / ') + DisplaytypeName]), verifyCRUD)
@@ -129,8 +138,8 @@ WebUI.click(findTestObject('Object Repository/Sprint6/span_permission_popover_pa
 
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Apply'))
 
-WebUI.verifyElementText(findTestObject('Object Repository/Sprint6/div_libraryNamedropdown_parameterized', [('libraryName') : 'Season']),
-	verifyCRUD)
+WebUI.verifyElementText(findTestObject('Object Repository/Sprint6/div_libraryNamedropdown_parameterized', [('libraryName') : 'Season']), 
+    verifyCRUD)
 
 WebUI.clickOffset(findTestObject('Sprint6/img_FilterMenu'), 10, 4)
 

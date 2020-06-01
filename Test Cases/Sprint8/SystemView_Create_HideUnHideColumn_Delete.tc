@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SystemView_Create_HideUnHideColumn_Delete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>42e8191f-796b-4839-be06-613341451def</testCaseGuid>
+   <variable>
+      <defaultValue>'System'</defaultValue>
+      <description></description>
+      <id>016960c8-5ca7-440b-8b92-9afdabe2d8dd</id>
+      <masked>false</masked>
+      <name>viewType</name>
+   </variable>
+</TestCaseEntity>

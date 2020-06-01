@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CustomView_Create_HideUnHideColumn_Delete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c50862b7-20f5-4fdc-a1f7-6f1f0257e0f1</testCaseGuid>
+   <variable>
+      <defaultValue>'Custom'</defaultValue>
+      <description></description>
+      <id>7a5c8cb3-5298-4e3e-b63f-0ed11a529d7d</id>
+      <masked>false</masked>
+      <name>viewType</name>
+   </variable>
+</TestCaseEntity>
