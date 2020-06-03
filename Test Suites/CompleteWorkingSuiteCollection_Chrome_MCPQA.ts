@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteCollectionEntity>
    <description></description>
-   <name>CompleteWorkingSuiteCollection_Chrome_PHOTONQA</name>
+   <name>CompleteWorkingSuiteCollection_Chrome_MCPQA</name>
    <tag></tag>
    <executionMode>SEQUENTIAL</executionMode>
    <maxConcurrentInstances>8</maxConcurrentInstances>
@@ -9,7 +9,7 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>default</profileName>
+            <profileName>MCPQA</profileName>
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
@@ -18,7 +18,7 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>default</profileName>
+            <profileName>MCPQA</profileName>
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
@@ -27,7 +27,7 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>default</profileName>
+            <profileName>MCPQA</profileName>
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
@@ -36,7 +36,7 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>default</profileName>
+            <profileName>MCPQA</profileName>
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
@@ -45,7 +45,7 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>default</profileName>
+            <profileName>MCPQA</profileName>
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
@@ -54,7 +54,7 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>default</profileName>
+            <profileName>MCPQA</profileName>
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
@@ -63,7 +63,7 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>default</profileName>
+            <profileName>MCPQA</profileName>
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
@@ -72,7 +72,7 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>default</profileName>
+            <profileName>MCPQA</profileName>
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
@@ -81,7 +81,7 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>default</profileName>
+            <profileName>MCPQA</profileName>
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
@@ -90,7 +90,7 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>default</profileName>
+            <profileName>MCPQA</profileName>
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
@@ -99,16 +99,7 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>default</profileName>
-            <runConfigurationId>Chrome</runConfigurationId>
-         </configuration>
-         <runEnabled>true</runEnabled>
-         <testSuiteEntity>Test Suites/Sprint 7/TS_ManageDrivenRules_AttributeManagement</testSuiteEntity>
-      </TestSuiteRunConfiguration>
-      <TestSuiteRunConfiguration>
-         <configuration>
-            <groupName>Web Desktop</groupName>
-            <profileName>default</profileName>
+            <profileName>MCPQA</profileName>
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
@@ -117,7 +108,7 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>default</profileName>
+            <profileName>MCPQA</profileName>
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
@@ -126,7 +117,7 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>default</profileName>
+            <profileName>MCPQA</profileName>
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>

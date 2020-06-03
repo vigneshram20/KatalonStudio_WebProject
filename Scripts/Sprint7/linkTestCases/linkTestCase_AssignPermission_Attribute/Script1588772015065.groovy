@@ -36,6 +36,9 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/th_Access N
 
 WebUI.click(findTestObject('Sprint3/span_Edit Mode_toggle_btn-handle'))
 
+'Check Page Performance'
+CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Manage Permission - Season')
+
 WebUI.click(findTestObject('Object Repository/Sprint6/img_Attribute Permissions_img-icon'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_Attribute Permission'), 0)

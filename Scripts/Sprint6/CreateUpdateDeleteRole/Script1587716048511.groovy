@@ -47,6 +47,9 @@ WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit
 
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
+'Check Page Performance'
+CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Roles Page')
+
 WebUI.click(findTestObject('Sprint6/img_ROLES_img-add'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_Add Role'), 0)
@@ -61,7 +64,7 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/label_Role 
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/label_Description'), 0)
 
-String roleName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QARole', 'ddMMMyyHHmmss')
+String roleName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA_AUT_Role', 'ddMMMyyHHmmss')
 
 String roleDescription = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QADescription', 'ss')
 

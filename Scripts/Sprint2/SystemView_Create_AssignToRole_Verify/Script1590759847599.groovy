@@ -27,7 +27,7 @@ if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {
     WebUI.navigateToUrl(GlobalVariable.URL)
 }
 
-String roleName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QARole', 'ddMMMyyHHmmss')
+String roleName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA_AUT_Role_', 'ddMMMHHmmss')
 
 String roleDescription = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QADescription', 'ss')
 
@@ -56,7 +56,7 @@ WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CreateUserAn
         , ('displayName') : displayName, ('firstName') : firstName, ('lastName') : lastName, ('emailID') : emailID, ('contactNo') : ''], FailureHandling.STOP_ON_FAILURE)
 
 'Generate System View Name'
-String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA' + viewType, 'ddMMMyyHHmmss')
+String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA_AUT_' + viewType+"_", 'ddMMMyyHHmmss')
 
 'Create System View'
 WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_CreateView'), [('viewName') : viewName, ('viewType') : viewType

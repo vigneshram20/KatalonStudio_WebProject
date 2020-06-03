@@ -60,6 +60,9 @@ WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit
 'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
+'Check Page Performance'
+CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Manage Attributes - Season')
+
 WebUI.delay(5)
 
 'Delete already exising attribute'
@@ -230,26 +233,26 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
     //DefaultToCurrentDateNumbered = 0
     td23Text = ''
 
-    columnXpath1 = (((((((((((((('//td[2][.="' + InternalName) + '"]/..//td[3][.="') + DisplayName) + '"]/..//td[4][.="') + 
-    Description) + '"]/..//td[5][.="') + Enabled) + '"]/..//td[6][.="') + UseTooltip) + '"]/..//td[7][.=\'\']/..//td[8][.="') + 
-    Tooltip) + '"]/..//td[9][.=\'No\']/..//td[10][.="') + EditableOnCreate) + '"]')
+    columnXpath1 = (((((((((((((('//td[2][text()="' + InternalName) + '"]/..//td[3][text()="') + DisplayName) + '"]/..//td[4][text()="') + 
+    Description) + '"]/..//td[5][text()="') + Enabled) + '"]/..//td[6][text()="') + UseTooltip) + '"]/..//td[7][text()=\'\']/..//td[8][text()="') + 
+    Tooltip) + '"]/..//td[9][text()=\'No\']/..//td[10][text()="') + EditableOnCreate) + '"]')
 
-    columnXpath2 = (((((((((((((((((((('/..//td[11][.="' + EditableOnUpdate) + '"]/..//td[12][.="') + MassChangeable) + 
-    '"]/..//td[13][.="') + TableEditable) + '"]/..//td[14][.="') + TableWrappable) + '"]/..//td[15][.="') + TableMinWrapWidth) + 
-    '"]/..//td[16][.="') + Formula) + '"]/..//td[17][.="') + Required) + '"]/..//td[18][.="') + DefaultValue) + '"]/..//td[19][.="') + 
-    DefaultToCurrentDate) + '"]/..//td[20][.="') + Unique) + '"]')
+    columnXpath2 = (((((((((((((((((((('/..//td[11][text()="' + EditableOnUpdate) + '"]/..//td[12][text()="') + MassChangeable) + 
+    '"]/..//td[13][text()="') + TableEditable) + '"]/..//td[14][text()="') + TableWrappable) + '"]/..//td[15][text()="') + TableMinWrapWidth) + 
+    '"]/..//td[16][text()="') + Formula) + '"]/..//td[17][text()="') + Required) + '"]/..//td[18][text()="') + DefaultValue) + '"]/..//td[19][text()="') + 
+    DefaultToCurrentDate) + '"]/..//td[20][text()="') + Unique) + '"]')
 
-    columnXpath3 = (((((((((((((((('/..//td[21][.="' + ElementWidth) + '"]/..//td[22][.="') + ElementHeight) + '"]/..//td[23][.="') + 
-    td23Text) + '"]/..//td[24][.="') + DisplayedDigits) + '"]/..//td[25][.="') + DecimalDigitsDisplayed) + '"]/..//td[26][.="') + 
-    CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][.="') + OtherSideEntity) + '"]/..//td[29][.="') + OtherSideAttribute) + 
-    '"]/..//td[30][.=\'\']')
+    columnXpath3 = (((((((((((((((('/..//td[21][text()="' + ElementWidth) + '"]/..//td[22][text()="') + ElementHeight) + '"]/..//td[23][text()="') + 
+    td23Text) + '"]/..//td[24][text()="') + DisplayedDigits) + '"]/..//td[25][text()="') + DecimalDigitsDisplayed) + '"]/..//td[26][text()="') + 
+    CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][text()="') + OtherSideEntity) + '"]/..//td[29][text()="') + OtherSideAttribute) + 
+    '"]/..//td[30][text()=\'\']')
 
-    columnXpath4 = (((((('/..//td[31][.="' + UserRoles) + '"]/..//td[32][.="0"]/..//td[33][.="') + AttributeType) + '"]/..//td[34][.="') + 
-    DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
+    columnXpath4 = (((((('/..//td[31][text()="' + UserRoles) + '"]/..//td[32][text()=""]/..//td[33][text()="') + AttributeType) + '"]/..//td[34][text()="') + 
+    DataType) + '"]/..//td[35][text()=\'\']/..//td[36][text()=\'\']/..//td[37][text()=\'\']/..//td[1]')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
 
-    //columnXpath = '//td[2][.=\'Automation_String_TextArea\']/..//td[3][.=\'Automation_String_TextArea\']/..//td[4][.=\'Automation_String_TextArea\']/..//td[5][.=\'Yes\']/..//td[6][.=\'Yes\']/..//td[7][.=\'\']/..//td[8][.=\'Automation_String_TextArea\']/..//td[9][.=\'No\']/..//td[10][.=\'Yes\']/..//td[11][.=\'Yes\']/..//td[12][.=\'No\']/..//td[13][.=\'No\']/..//td[14][.=\'No\']/..//td[15][.=\'50\']/..//td[16][.=\'Automation_String_TextArea\']/..//td[17][.=\'No\']/..//td[18][.=\'Automation_String_TextArea\']/..//td[19][.=\'\']/..//td[20][.=\'No\']/..//td[21][.=\'55\']/..//td[22][.=\'60\']/..//td[23][.=\'From : 50 And To: 60\']/..//td[24][.=\'\']/..//td[25][.=\'\']/..//td[26][.=\'\']/..//td[27][.]/..//td[28][.=\'\']/..//td[29][.=\'\']/..//td[30][.=\'\']/..//td[31][.=\'\']/..//td[32][.=\'1\']/..//td[33][.=\'TEXT_AREA\']/..//td[34][.=\'STRING\']/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]//div'
+    //columnXpath = '//td[2][text()=\'Automation_String_TextArea\']/..//td[3][text()=\'Automation_String_TextArea\']/..//td[4][text()=\'Automation_String_TextArea\']/..//td[5][text()=\'Yes\']/..//td[6][text()=\'Yes\']/..//td[7][text()=\'\']/..//td[8][text()=\'Automation_String_TextArea\']/..//td[9][text()=\'No\']/..//td[10][text()=\'Yes\']/..//td[11][text()=\'Yes\']/..//td[12][text()=\'No\']/..//td[13][text()=\'No\']/..//td[14][text()=\'No\']/..//td[15][text()=\'50\']/..//td[16][text()=\'Automation_String_TextArea\']/..//td[17][text()=\'No\']/..//td[18][text()=\'Automation_String_TextArea\']/..//td[19][text()=\'\']/..//td[20][text()=\'No\']/..//td[21][text()=\'55\']/..//td[22][text()=\'60\']/..//td[23][text()=\'From : 50 And To: 60\']/..//td[24][text()=\'\']/..//td[25][text()=\'\']/..//td[26][text()=\'\']/..//td[27][.]/..//td[28][text()=\'\']/..//td[29][text()=\'\']/..//td[30][text()=\'\']/..//td[31][text()=\'\']/..//td[32][text()=\'1\']/..//td[33][text()=\'TEXT_AREA\']/..//td[34][text()=\'STRING\']/..//td[35][text()=\'\']/..//td[36][text()=\'\']/..//td[37][text()=\'\']/..//td[1]//div'
     ActionsObject = WebUI.modifyObjectProperty(findTestObject('Object Repository/Sprint4/td_CreatedAttributeDynamicCheck'), 
         'xpath', 'equals', columnXpath, true)
 
@@ -409,22 +412,22 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
     //DefaultToCurrentDateNumbered = 0
     td23Text = ''
 
-    columnXpath1 = (((((((((((((('//td[2][.="' + InternalName) + '"]/..//td[3][.="') + DisplayName) + '"]/..//td[4][.="') + 
-    Description) + '"]/..//td[5][.="') + Enabled) + '"]/..//td[6][.="') + UseTooltip) + '"]/..//td[7][.=\'\']/..//td[8][.="') + 
-    Tooltip) + '"]/..//td[9][.=\'No\']/..//td[10][.="') + EditableOnCreate) + '"]')
+    columnXpath1 = (((((((((((((('//td[2][text()="' + InternalName) + '"]/..//td[3][text()="') + DisplayName) + '"]/..//td[4][text()="') + 
+    Description) + '"]/..//td[5][text()="') + Enabled) + '"]/..//td[6][text()="') + UseTooltip) + '"]/..//td[7][text()=\'\']/..//td[8][text()="') + 
+    Tooltip) + '"]/..//td[9][text()=\'No\']/..//td[10][text()="') + EditableOnCreate) + '"]')
 
-    columnXpath2 = (((((((((((((((((((('/..//td[11][.="' + EditableOnUpdate) + '"]/..//td[12][.="') + MassChangeable) + 
-    '"]/..//td[13][.="') + TableEditable) + '"]/..//td[14][.="') + TableWrappable) + '"]/..//td[15][.="') + TableMinWrapWidth) + 
-    '"]/..//td[16][.="') + Formula) + '"]/..//td[17][.="') + Required) + '"]/..//td[18][.="') + DefaultValue) + '"]/..//td[19][.="') + 
-    DefaultToCurrentDate) + '"]/..//td[20][.="') + Unique) + '"]')
+    columnXpath2 = (((((((((((((((((((('/..//td[11][text()="' + EditableOnUpdate) + '"]/..//td[12][text()="') + MassChangeable) + 
+    '"]/..//td[13][text()="') + TableEditable) + '"]/..//td[14][text()="') + TableWrappable) + '"]/..//td[15][text()="') + TableMinWrapWidth) + 
+    '"]/..//td[16][text()="') + Formula) + '"]/..//td[17][text()="') + Required) + '"]/..//td[18][text()="') + DefaultValue) + '"]/..//td[19][text()="') + 
+    DefaultToCurrentDate) + '"]/..//td[20][text()="') + Unique) + '"]')
 
-    columnXpath3 = (((((((((((((((('/..//td[21][.="' + ElementWidth) + '"]/..//td[22][.="') + ElementHeight) + '"]/..//td[23][.="') + 
-    td23Text) + '"]/..//td[24][.="') + DisplayedDigits) + '"]/..//td[25][.="') + DecimalDigitsDisplayed) + '"]/..//td[26][.="') + 
-    CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][.="') + OtherSideEntity) + '"]/..//td[29][.="') + OtherSideAttribute) + 
-    '"]/..//td[30][.=\'\']')
+    columnXpath3 = (((((((((((((((('/..//td[21][text()="' + ElementWidth) + '"]/..//td[22][text()="') + ElementHeight) + '"]/..//td[23][text()="') + 
+    td23Text) + '"]/..//td[24][text()="') + DisplayedDigits) + '"]/..//td[25][text()="') + DecimalDigitsDisplayed) + '"]/..//td[26][text()="') + 
+    CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][text()="') + OtherSideEntity) + '"]/..//td[29][text()="') + OtherSideAttribute) + 
+    '"]/..//td[30][text()=\'\']')
 
-    columnXpath4 = (((((('/..//td[31][.="' + UserRoles) + '"]/..//td[32][.="0"]/..//td[33][.="') + AttributeType) + '"]/..//td[34][.="') + 
-    DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
+    columnXpath4 = (((((('/..//td[31][text()="' + UserRoles) + '"]/..//td[32][text()=""]/..//td[33][text()="') + AttributeType) + '"]/..//td[34][text()="') + 
+    DataType) + '"]/..//td[35][text()=\'\']/..//td[36][text()=\'\']/..//td[37][text()=\'\']/..//td[1]')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
 

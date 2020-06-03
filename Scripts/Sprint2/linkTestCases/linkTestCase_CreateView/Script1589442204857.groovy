@@ -36,6 +36,9 @@ WebUI.waitForElementVisible(gridHeaderA, 60)
 
 WebUI.waitForElementClickable(gridHeaderA, 60)
 
+'Check Page Performance'
+CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Manage Seasons')
+
 'Open View Selector'
 WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 

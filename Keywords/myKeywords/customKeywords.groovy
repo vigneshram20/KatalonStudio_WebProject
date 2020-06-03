@@ -64,7 +64,30 @@ class customKeywords {
 
 		return inputName+dateFormatted
 	}
-
+/**
+ * 
+ */
+	@Keyword
+	def checkPagePerformanceNow(String pageName)
+	{
+		WebDriver driver = DriverFactory.getWebDriver()
+		
+		JavascriptExecutor js = ((driver) as JavascriptExecutor)
+		
+		long navigationStart = js.executeScript('return window.performance.timing.navigationStart');
+		long responseStart = js.executeScript('return window.performance.timing.responseStart');
+		long domComplete = js.executeScript('return window.performance.timing.domComplete');
+		long loadEventEnd  = js.executeScript('return window.performance.timing.loadEventEnd');
+		
+		float backEndPerf = ((float)(responseStart - navigationStart)) / 1000;
+		float frontEndPerf = ((float)(domComplete - responseStart)) / 1000;
+		float loadingTime = ((float)(loadEventEnd-navigationStart))/1000;
+		WebUI.comment("**************"+pageName+"***************")
+		WebUI.comment("Page Load Time - "+loadingTime+" in seconds");
+		WebUI.comment("Back End Performance - "+backEndPerf+" in seconds");
+		WebUI.comment("Front End Performance - "+frontEndPerf+" in seconds");
+		WebUI.comment("*******************End********************")
+	}
 	/**
 	 * Refresh browser
 	 */

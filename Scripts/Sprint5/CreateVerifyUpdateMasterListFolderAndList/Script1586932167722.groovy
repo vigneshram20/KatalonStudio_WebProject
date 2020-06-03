@@ -48,6 +48,9 @@ WebUI.click(findTestObject('Sprint5/div_li_parameterized_ExpandCollapseIcon', [(
 'Click Edit toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-handle'))
 
+'Check Page Performance'
+CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Master List')
+
 'Click New Folder button'
 WebUI.click(findTestObject('Sprint5/button_New Folder_List'))
 
@@ -73,7 +76,7 @@ String dateFormat = CustomKeywords.'myKeywords.customKeywords.timeStampWithStrin
 
 InternalNameFolder = ('QAINFolder' + dateFormat)
 
-DisplayNameFolder = ('QA DN Folder ' + dateFormat)
+DisplayNameFolder = ('QA AUT Folder ' + dateFormat)
 
 'Enter Internal Name'
 WebUI.sendKeys(findTestObject('Sprint5/input_Internalname'), InternalNameFolder)
@@ -179,7 +182,7 @@ WebUI.click(findTestObject('Object Repository/Sprint5/span_List'))
 
 InternalNameList = ('QAINList' + dateFormat)
 
-DisplayNameList = ('QA DN List ' + dateFormat)
+DisplayNameList = ('QA AUT List ' + dateFormat)
 
 'Provide Internal Name'
 WebUI.sendKeys(findTestObject('Sprint5/input_Internalname'), InternalNameList)

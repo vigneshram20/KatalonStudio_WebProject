@@ -16,22 +16,22 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
+import org.openqa.selenium.WebElement as WebElement
+import org.openqa.selenium.WebDriver as WebDriver
 
-import com.kms.katalon.core.configuration.RunConfiguration
+if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {
+    'Launch the Browser'
+    WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
 
-if(!RunConfiguration.getExecutionSource().contains("Test Suites"))
-{
-	'Launch the Browser'
-	WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
-	
-	'Verify Login Successfully'
-	WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
-	
-}
-else
-{
-	'Navigate to Homepage'
-	WebUI.navigateToUrl(GlobalVariable.URL)
+    'Verify Login Successfully'
+    WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
+} else {
+    'Navigate to Homepage'
+    WebUI.navigateToUrl(GlobalVariable.URL)
 }
 
 'Navigate to Type and Attribute Management'
@@ -56,6 +56,9 @@ WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit
 
 'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+
+'Check Page Performance'
+CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Manage Attributes - Season')
 
 WebUI.delay(5)
 
@@ -143,45 +146,55 @@ if (AttributeType.equals('Sequence Name')) {
 
     WebUI.delay(1)
 
-	'Click Edit Mode Toggle button'
-	WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
-	
+    'Click Edit Mode Toggle button'
+    WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+
     'Click Edit Mode Toggle button'
     WebUI.clickOffset(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 2, 4)
 
     td23Text = ''
 
-    columnXpath1 = (((((((((((((('//td[2][.="' + InternalName) + '"]/..//td[3][.="') + DisplayName) + '"]/..//td[4][.="') + 
-    Description) + '"]/..//td[5][.="') + Enabled) + '"]/..//td[6][.="') + UseTooltip) + '"]/..//td[7][.=\'\']/..//td[8][.="') + 
-    Tooltip) + '"]/..//td[9][.=\'No\']/..//td[10][.="') + EditableOnCreate) + '"]')
+    columnXpath1 = (((((((((((((('//td[2][text()="' + InternalName) + '"]/..//td[3][text()="') + DisplayName) + '"]/..//td[4][text()="') + 
+    Description) + '"]/..//td[5][text()="') + Enabled) + '"]/..//td[6][text()="') + UseTooltip) + '"]/..//td[7][text()=\'\']/..//td[8][text()="') + 
+    Tooltip) + '"]/..//td[9][text()=\'No\']/..//td[10][text()="') + EditableOnCreate) + '"]')
 
-    columnXpath2 = (((((((((((((((((((('/..//td[11][.="' + EditableOnUpdate) + '"]/..//td[12][.="') + MassChangeable) + 
-    '"]/..//td[13][.="') + TableEditable) + '"]/..//td[14][.="') + TableWrappable) + '"]/..//td[15][.="') + TableMinWrapWidth) + 
-    '"]/..//td[16][.="') + Formula) + '"]/..//td[17][.="') + Required) + '"]/..//td[18][.="') + DefaultValue) + '"]/..//td[19][.="') + 
-    DefaultToCurrentDate) + '"]/..//td[20][.="') + Unique) + '"]')
+    columnXpath2 = (((((((((((((((((((('/..//td[11][text()="' + EditableOnUpdate) + '"]/..//td[12][text()="') + MassChangeable) + 
+    '"]/..//td[13][text()="') + TableEditable) + '"]/..//td[14][text()="') + TableWrappable) + '"]/..//td[15][text()="') + 
+    TableMinWrapWidth) + '"]/..//td[16][text()="') + Formula) + '"]/..//td[17][text()="') + Required) + '"]/..//td[18][text()="') + 
+    DefaultValue) + '"]/..//td[19][text()="') + DefaultToCurrentDate) + '"]/..//td[20][text()="') + Unique) + '"]')
 
-    columnXpath3 = (((((((((((((((((('/..//td[21][.="' + ElementWidth) + '"]/..//td[22][.="') + ElementHeight) + '"]/..//td[23][.="') + 
-    td23Text) + '"]/..//td[24][.="') + DisplayedDigits) + '"]/..//td[25][.="') + DecimalDigitsDisplayed) + '"]/..//td[26][.="') + 
-    CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][.="') + OtherSideEntity) + '"]/..//td[29][.="') + OtherSideAttribute) + 
-    '"]/..//td[30][.="') + DBSequences) + '"]')
+    columnXpath3 = (((((((((((((((((('/..//td[21][text()="' + ElementWidth) + '"]/..//td[22][text()="') + ElementHeight) + 
+    '"]/..//td[23][text()="') + td23Text) + '"]/..//td[24][text()="') + DisplayedDigits) + '"]/..//td[25][text()="') + DecimalDigitsDisplayed) + 
+    '"]/..//td[26][text()="') + CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][text()="') + OtherSideEntity) + '"]/..//td[29][text()="') + 
+    OtherSideAttribute) + '"]/..//td[30][text()="') + DBSequences) + '"]')
 
-    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.="0"]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
-    DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
+    columnXpath4 = (((('/..//td[31][text()=\'\']/..//td[32][text()=""]/..//td[33][text()="' + AttributeType) + '"]/..//td[34][text()="') + 
+    DataType) + '"]/..//td[35][text()=\'\']/..//td[36][text()=\'\']/..//td[37][text()=\'\']/..//td[1]')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
 
     ActionsObject = WebUI.modifyObjectProperty(findTestObject('Object Repository/Sprint4/td_CreatedAttributeDynamicCheck'), 
         'xpath', 'equals', columnXpath, true)
 
-    WebUI.delay(2)
+   /* WebUI.delay(2)
+
+	WebDriver driver = DriverFactory.getWebDriver()
+	
+	WebElement element = WebUiBuiltInKeywords.findWebElement(ActionsObject)
+	
+	JavascriptExecutor js = ((driver) as JavascriptExecutor)
+	
+	js.executeScript('arguments[0].scrollIntoView(true);', element)
+	
+	js.executeScript('arguments[0].click();', element)*/
 
     'Click Attributes Checkbox'
     WebUI.click(ActionsObject)
-	
-	WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
-	
-	'Scroll Page Down'
-	WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
+
+    WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+
+    'Scroll Page Down'
+    WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
 
     'Click Attributes Add icon'
     WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
@@ -266,28 +279,28 @@ if (AttributeType.equals('Sequence Name')) {
 
     WebUI.delay(1)
 
-	'Click Edit Mode Toggle button'
-	WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
-	
+    'Click Edit Mode Toggle button'
+    WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+
     'Click Edit Mode Toggle button'
     WebUI.clickOffset(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 2, 4)
 
-    columnXpath1 = (((((((((((((('//td[2][.="' + InternalName) + '"]/..//td[3][.="') + DisplayName) + '"]/..//td[4][.="') + 
-    Description) + '"]/..//td[5][.="') + Enabled) + '"]/..//td[6][.="') + UseTooltip) + '"]/..//td[7][.=\'\']/..//td[8][.="') + 
-    Tooltip) + '"]/..//td[9][.=\'No\']/..//td[10][.="') + EditableOnCreate) + '"]')
+    columnXpath1 = (((((((((((((('//td[2][text()="' + InternalName) + '"]/..//td[3][text()="') + DisplayName) + '"]/..//td[4][text()="') + 
+    Description) + '"]/..//td[5][text()="') + Enabled) + '"]/..//td[6][text()="') + UseTooltip) + '"]/..//td[7][text()=\'\']/..//td[8][text()="') + 
+    Tooltip) + '"]/..//td[9][text()=\'No\']/..//td[10][text()="') + EditableOnCreate) + '"]')
 
-    columnXpath2 = (((((((((((((((((((('/..//td[11][.="' + EditableOnUpdate) + '"]/..//td[12][.="') + MassChangeable) + 
-    '"]/..//td[13][.="') + TableEditable) + '"]/..//td[14][.="') + TableWrappable) + '"]/..//td[15][.="') + TableMinWrapWidth) + 
-    '"]/..//td[16][.="') + Formula) + '"]/..//td[17][.="') + Required) + '"]/..//td[18][.="') + DefaultValue) + '"]/..//td[19][.="') + 
-    DefaultToCurrentDate) + '"]/..//td[20][.="') + Unique) + '"]')
+    columnXpath2 = (((((((((((((((((((('/..//td[11][text()="' + EditableOnUpdate) + '"]/..//td[12][text()="') + MassChangeable) + 
+    '"]/..//td[13][text()="') + TableEditable) + '"]/..//td[14][text()="') + TableWrappable) + '"]/..//td[15][text()="') + 
+    TableMinWrapWidth) + '"]/..//td[16][text()="') + Formula) + '"]/..//td[17][text()="') + Required) + '"]/..//td[18][text()="') + 
+    DefaultValue) + '"]/..//td[19][text()="') + DefaultToCurrentDate) + '"]/..//td[20][text()="') + Unique) + '"]')
 
-    columnXpath3 = (((((((((((((((((('/..//td[21][.="' + ElementWidth) + '"]/..//td[22][.="') + ElementHeight) + '"]/..//td[23][.="') + 
-    td23Text) + '"]/..//td[24][.="') + DisplayedDigits) + '"]/..//td[25][.="') + DecimalDigitsDisplayed) + '"]/..//td[26][.="') + 
-    CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][.="') + OtherSideEntity) + '"]/..//td[29][.="') + OtherSideAttribute) + 
-    '"]/..//td[30][.="') + DBSequences) + '"]')
+    columnXpath3 = (((((((((((((((((('/..//td[21][text()="' + ElementWidth) + '"]/..//td[22][text()="') + ElementHeight) + 
+    '"]/..//td[23][text()="') + td23Text) + '"]/..//td[24][text()="') + DisplayedDigits) + '"]/..//td[25][text()="') + DecimalDigitsDisplayed) + 
+    '"]/..//td[26][text()="') + CurrencySymbol) + '"]/..//td[27][text()]/..//td[28][text()="') + OtherSideEntity) + '"]/..//td[29][text()="') + 
+    OtherSideAttribute) + '"]/..//td[30][text()="') + DBSequences) + '"]')
 
-    columnXpath4 = (((('/..//td[31][.=\'\']/..//td[32][.="0"]/..//td[33][.="' + AttributeType) + '"]/..//td[34][.="') + 
-    DataType) + '"]/..//td[35][.=\'\']/..//td[36][.=\'\']/..//td[37][.=\'\']/..//td[1]/div')
+    columnXpath4 = (((('/..//td[31][text()=\'\']/..//td[32][text()=""]/..//td[33][text()="' + AttributeType) + '"]/..//td[34][text()="') + 
+    DataType) + '"]/..//td[35][text()=\'\']/..//td[36][text()=\'\']/..//td[37][text()=\'\']/..//td[1]')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
 
@@ -298,11 +311,11 @@ if (AttributeType.equals('Sequence Name')) {
 
     'Select the Attribute from the grid'
     WebUI.click(ActionsObject)
-	
-	WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
-	
-	'Scroll Page Down'
-	WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
+
+    WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+
+    'Scroll Page Down'
+    WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
 
     'Click Remove icon'
     WebUI.click(findTestObject('Sprint4/img_Attributes_remove-icon'))
@@ -314,14 +327,14 @@ if (AttributeType.equals('Sequence Name')) {
 
     'Click Save and Verify Success Popup'
     WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
-	
-	'Verify the attribute not present in the grid'
-	WebUI.verifyElementNotPresent(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized', [('internalName') : InternalName]),
-		0)
-	
-	WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
-	
-	'Collapse Manage Types left panel'
-	WebUI.click(findTestObject('Sprint4/a_Manage Types'))
+
+    'Verify the attribute not present in the grid'
+    WebUI.verifyElementNotPresent(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized', [('internalName') : InternalName]), 
+        0)
+
+    WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+
+    'Collapse Manage Types left panel'
+    WebUI.click(findTestObject('Sprint4/a_Manage Types'))
 }
 

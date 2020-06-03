@@ -17,15 +17,6 @@ import internal.GlobalVariable as GlobalVariable
 
 import com.kms.katalon.core.configuration.RunConfiguration
 
-if(!RunConfiguration.getExecutionSource().contains("Test Suites"))
-{
-	'Launch the Browser'
-	WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
-	
-	'Verify Login Successfully'
-	WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
-	
-}
 
 WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Administration', ('SubMenuItem') : 'User & Role Management'],
 	FailureHandling.STOP_ON_FAILURE)
@@ -58,6 +49,9 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/th_ROLE(s) 
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+
+'Check Page Performance'
+CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Users Page')
 
 WebUI.click(findTestObject('Sprint6/img_USERS_img-icon_Add'))
 

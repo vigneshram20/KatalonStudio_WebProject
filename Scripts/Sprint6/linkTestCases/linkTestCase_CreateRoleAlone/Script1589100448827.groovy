@@ -25,6 +25,9 @@ WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit
 
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
+'Check Page Performance'
+CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Roles Page')
+
 WebUI.click(findTestObject('Sprint6/img_ROLES_img-add'))
 
 WebUI.sendKeys(findTestObject('Object Repository/Sprint6/input__name'), roleName)

@@ -14,6 +14,14 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
+import org.openqa.selenium.WebElement as WebElement
+import org.openqa.selenium.WebDriver as WebDriver
+
+'Check Page Performance'
+CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('LoginPage')
 
 'Set Username'
 WebUI.setText(findTestObject('Sprint1/LoginPage/input_Login_username'), Username)

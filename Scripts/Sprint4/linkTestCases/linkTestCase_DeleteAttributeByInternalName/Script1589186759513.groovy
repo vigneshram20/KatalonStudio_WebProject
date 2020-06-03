@@ -34,6 +34,9 @@ WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit
 'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
+'Check Page Performance'
+CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Manage Attributes - Season')
+
 for (String InternalName : InternalNames) {
     WebUI.delay(1)
 

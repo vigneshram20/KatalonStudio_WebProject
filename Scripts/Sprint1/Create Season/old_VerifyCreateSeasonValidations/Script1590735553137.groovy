@@ -83,25 +83,25 @@ WebUI.verifyElementAttributeValue(findTestObject('Sprint1/Create Season/input_Ty
 WebUI.verifyElementVisible(findTestObject('Sprint1/Create Season/subSection_title_Calendar Information'), FailureHandling.STOP_ON_FAILURE)
 
 'Verify label Internet Launch Start Date'
-WebUI.click(findTestObject('Sprint1/Create Season/label_Internet Launch Start Date'))
+WebUI.click(findTestObject('null'))
 
 'Click Internet Launch Start Date'
 WebUI.click(findTestObject('Sprint1/Create Season/input__internet_launch_start_date'))
 
 'Click Internet Launch Start Date'
-WebUI.click(findTestObject('Sprint1/Create Season/label_Internet Launch Start Date'))
+WebUI.click(findTestObject('null'))
 
 'Verify errorText Internet_Launch_Start_Date'
 WebUI.verifyElementText(findTestObject('Sprint1/Create Season/errorText_Int_Launch_Start_Date'), Field_Required_Error)
 
 'Click label Internet Launch End Date'
-WebUI.click(findTestObject('Sprint1/Create Season/label_Internet Launch End Date'))
+WebUI.click(findTestObject('null'))
 
 'Click input Internet Launch End Date'
 WebUI.click(findTestObject('Sprint1/Create Season/input__internet_launch_end_date'))
 
 'Click label Internet Launch End Date'
-WebUI.click(findTestObject('Sprint1/Create Season/label_Internet Launch End Date'))
+WebUI.click(findTestObject('null'))
 
 'Verify errorText Internet_Launch_End_Date'
 WebUI.verifyElementText(findTestObject('Sprint1/Create Season/errorText_Int_Launch_End_Date'), Field_Required_Error)

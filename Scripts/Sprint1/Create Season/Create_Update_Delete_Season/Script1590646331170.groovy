@@ -48,9 +48,12 @@ WebUI.waitForElementVisible(gridHeaderA, 60)
 
 WebUI.waitForElementClickable(gridHeaderA, 60)
 
-String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA' + "System", 'ddMMMyyHHmmss')
+'Check Page Performance'
+CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Manage Seasons')
 
-WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_CreateView'), [('viewName') : viewName, ('viewType') : "System"],
+String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA_' +"AUT_"+ "Custom_", 'ddMMMHHmmss')
+
+WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_CreateView'), [('viewName') : viewName, ('viewType') : "Custom"],
 	FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_SetDefaultView'), [('viewName') : viewName], FailureHandling.STOP_ON_FAILURE)

@@ -15,6 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.configuration.RunConfiguration
 
 String userID = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA', 'ss')
 
@@ -35,6 +36,16 @@ String emailID = 'qatest'+ emailIDRNo +"@photoninfotech.net"
 String contactNo = '987'
 
 String RoleName = 'SYSTEM ADMINISTRATOR'
+
+if(!RunConfiguration.getExecutionSource().contains("Test Suites"))
+{
+	'Launch the Browser'
+	WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
+	
+	'Verify Login Successfully'
+	WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
+	
+}
 
 'Create User'
 WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CreateIndependantUser'), [('userID') : userID, ('firstName') : firstName

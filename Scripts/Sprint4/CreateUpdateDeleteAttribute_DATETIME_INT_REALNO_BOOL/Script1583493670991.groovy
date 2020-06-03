@@ -56,6 +56,9 @@ WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit
 'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
+'Check Page Performance'
+CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Manage Attributes - Season')
+
 WebUI.delay(5)
 
 'Delete already exising attribute'
@@ -255,7 +258,7 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
     OtherSideAttribute) + '"]/..//td[30][text()=\'\']')
 
     columnXpath4 = (((('/..//td[31][text()=\'\']/..//td[32][text()=""]/..//td[33][text()="' + AttributeType) + '"]/..//td[34][text()="') + 
-    DataType) + '"]/..//td[35][text()=\'\']/..//td[36][text()=\'\']/..//td[37][text()=\'\']/..//td[1]/div')
+    DataType) + '"]/..//td[35][text()=\'\']/..//td[36][text()=\'\']/..//td[37][text()=\'\']/..//td[1]')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
 
@@ -465,7 +468,7 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
     OtherSideAttribute) + '"]/..//td[30][text()=\'\']')
 
     columnXpath4 = (((('/..//td[31][text()=\'\']/..//td[32][text()=""]/..//td[33][text()="' + AttributeType) + '"]/..//td[34][text()="') + 
-    DataType) + '"]/..//td[35][text()=\'\']/..//td[36][text()=\'\']/..//td[37][text()=\'\']/..//td[1]/div')
+    DataType) + '"]/..//td[35][text()=\'\']/..//td[36][text()=\'\']/..//td[37][text()=\'\']/..//td[1]')
 
     columnXpath = (((columnXpath1 + columnXpath2) + columnXpath3) + columnXpath4)
 

@@ -70,4 +70,22 @@
          <variableId>cadfdb2f-fa66-44f9-b57d-f86a30509833</variableId>
       </variableLink>
    </testCaseLink>
+   <testCaseLink>
+      <guid>dc8c0486-5d09-4098-9e40-0fa794d264ce</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Sprint2/SystemView_Create_AssignToRole_Verify</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>9aa05715-01c8-4117-b4d4-71b875213ca5</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>54373d51-923b-4b74-a2e7-8a908fd58804</variableId>
+      </variableLink>
+   </testCaseLink>
 </TestSuiteEntity>

@@ -20,6 +20,9 @@ WebUI.click(findTestObject('Object Repository/Sprint6/button_Manage Driven Rules
 
 WebUI.click(findTestObject('Sprint3/span_Edit Mode_toggle_btn-handle'))
 
+'Check Page Performance'
+CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Manage Driven Rules - Season')
+
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/span_Manage Driven Rules'), 0)
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/th_Level 1'), 0)

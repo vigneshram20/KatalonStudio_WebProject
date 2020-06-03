@@ -41,6 +41,9 @@ WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit
 'Click Edit Toggle'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
+'Check Page Performance'
+CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Master List')
+
 'Click New Folder/List button'
 WebUI.click(findTestObject('Sprint5/button_New Folder_List'))
 

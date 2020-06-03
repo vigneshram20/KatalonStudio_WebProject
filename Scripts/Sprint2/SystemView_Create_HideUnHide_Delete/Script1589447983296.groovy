@@ -34,7 +34,7 @@ else
 
 
 'Generate random View Name'
-String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA' + viewType, 'ddMMMyyHHmmss')
+String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA_AUT_' + viewType+"_", 'ddMMMHHmmss')
 
 'Create System View'
 WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_CreateView'), [('viewName') : viewName, ('viewType') : viewType], 

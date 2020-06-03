@@ -23,7 +23,6 @@ import com.kms.katalon.core.annotation.SetUp
 import com.kms.katalon.core.annotation.SetupTestCase
 import com.kms.katalon.core.annotation.TearDown
 import com.kms.katalon.core.annotation.TearDownTestCase
-import com.kms.katalon.core.annotation.TearDownIfFailed
 
 /**
  * Some methods below are samples for using SetUp/TearDown in a test suite.
@@ -32,18 +31,14 @@ import com.kms.katalon.core.annotation.TearDownIfFailed
 /**
  * Setup test suite environment.
  */
-@SetUp(skipped = false) // Please change skipped to be false to activate this method.
+@SetUp(skipped = false)
 def setUp() {
-	'Launch the Browser'
-	WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
 	
-	'Verify Login Successfully'
-	WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
-}
+    'Launch the Browser'
+    WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
 
-@TearDownIfFailed(skipped = false)
-def teardownIffFailed(){
-	
+    'Verify Login Successfully'
+    WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
 }
 
 /**

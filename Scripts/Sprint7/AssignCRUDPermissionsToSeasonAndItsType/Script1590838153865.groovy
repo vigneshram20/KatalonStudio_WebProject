@@ -22,15 +22,15 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKe
 import org.openqa.selenium.WebElement as WebElement
 import org.openqa.selenium.WebDriver as WebDriver
 
-String roleName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QARole', 'ddMMMyyHHmmss')
+String roleName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA_AUT_Role', 'ddMMMHHmmss')
 
 String roleDescription = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QADescription', 'ss')
 
-String dateFormat = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('', 'ddMMMyyHHmmss')
+String dateFormat = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('', 'ddMMMHHmmss')
 
-InternaltypeName = ('QAINFolder' + dateFormat)
+InternaltypeName = ('QAAUTINType' + dateFormat)
 
-DisplaytypeName = ('QA DN Folder ' + dateFormat)
+DisplaytypeName = ('QA AUT Type ' + dateFormat)
 
 if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {
     'Launch the Browser'
@@ -55,6 +55,9 @@ WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit
 
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
+'Check Page Performance'
+CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Permissions Page - User Management')
+
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_PERMISSIONS Filter'), 0)
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/span_Show Only Granted Role'), 0)
@@ -75,9 +78,17 @@ JavascriptExecutor js = ((driver) as JavascriptExecutor)
 
 js.executeScript('arguments[0].click();', element)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/label_delete'))
+WebElement deleteMenu = WebUiBuiltInKeywords.findWebElement(findTestObject('Object Repository/Sprint6/label_delete'))
 
-WebUI.click(findTestObject('Object Repository/Sprint6/label_create'))
+js.executeScript('arguments[0].click();', deleteMenu)
+
+WebElement createMenu = WebUiBuiltInKeywords.findWebElement(findTestObject('Object Repository/Sprint6/label_create'))
+
+js.executeScript('arguments[0].click();', createMenu)
+
+not_run:WebUI.click(findTestObject('Object Repository/Sprint6/label_delete'))
+
+not_run:WebUI.click(findTestObject('Object Repository/Sprint6/label_create'))
 
 js.executeScript('arguments[0].click();', element)
 

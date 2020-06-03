@@ -15,6 +15,11 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
+import org.openqa.selenium.WebElement as WebElement
+import org.openqa.selenium.WebDriver as WebDriver
 
 WebUI.click(findTestObject('Object Repository/Sprint6/li_Permissions'), FailureHandling.STOP_ON_FAILURE)
 
@@ -27,24 +32,23 @@ WebUI.sendKeys(findTestObject('Sprint6/input_roleSearch'), roleName)
 
 WebUI.verifyElementPresent(findTestObject('Sprint6/th_parameterized', [('param') : roleName]), 0)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/img_libraryName_Dropdown_param',[('library'):libraryName]))
+WebDriver driver = DriverFactory.getWebDriver()
+
+WebElement element = WebUiBuiltInKeywords.findWebElement(findTestObject('Object Repository/Sprint6/img_libraryName_Dropdown_param',
+		[('library') : libraryName]))
+
+JavascriptExecutor js = ((driver) as JavascriptExecutor)
+
+js.executeScript('arguments[0].click();', element)
 
 for(String permission : permissionValues)
 {
-WebUI.click(findTestObject('Object Repository/Sprint6/label_parameterized',[('param'):permission]))
+
+	WebElement Menu = WebUiBuiltInKeywords.findWebElement(findTestObject('Object Repository/Sprint6/label_parameterized',[('param'):permission]))
+	js.executeScript('arguments[0].click();', Menu)
 }
 
-/*WebUI.click(findTestObject('Object Repository/Sprint6/img_libraryName_Dropdown_param',[('library'):libraryName]))
-
-String verifyCRUD = WebUI.getText(findTestObject('Sprint6/div_Collectiondropdowntext'), FailureHandling.STOP_ON_FAILURE)
-
-for(String permission : permissionValues)
-{
-if(!verifyCRUD.contains(permission))
-{
-	throw new Exception("'"+permission+"' is not displayed in the grid after assigned");
-}
-}*/
+js.executeScript('arguments[0].click();', element)
 
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Save'))
 

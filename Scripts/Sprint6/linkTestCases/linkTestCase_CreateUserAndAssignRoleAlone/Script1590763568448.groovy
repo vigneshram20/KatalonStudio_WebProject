@@ -14,10 +14,31 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.configuration.RunConfiguration
+import org.openqa.selenium.Keys as Keys
 
 'Create User'
 WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CreateIndependantUser'), [('userID') : userID, ('firstName') : firstName
 		, ('lastName') : lastName, ('emailID') : emailID, ('contactNo') : contactNo], FailureHandling.STOP_ON_FAILURE)
+
+'Click Save button'
+WebUI.click(findTestObject('Object Repository/Sprint6/button_Save'))
+
+'Click Yes button'
+WebUI.click(findTestObject('Object Repository/Sprint6/button_Yes'))
+
+WebUI.click(findTestObject('Common Objects/button_OK'))
+
+'Scroll to Top'
+WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+
+WebUI.delay(1)
+
+WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-handle'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-handle'))
+
+WebUI.setText(findTestObject('Sprint6/input_USERS_searchInput'), userID)
 
 'Scroll to the user'
 WebUI.scrollToElement(findTestObject('Sprint6/span_AddRoles_param', [('userID') : userID]), 0)

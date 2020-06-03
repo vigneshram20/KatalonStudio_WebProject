@@ -32,7 +32,7 @@ else
 	WebUI.navigateToUrl(GlobalVariable.URL)
 }
 
-String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA' + viewType, 'ddMMMyyHHmmss')
+String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA_AUT_' + viewType+"_", 'ddMMMHHmmss')
 
 WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_CreateView'), [('viewName') : viewName, ('viewType') : viewType], 
     FailureHandling.STOP_ON_FAILURE)

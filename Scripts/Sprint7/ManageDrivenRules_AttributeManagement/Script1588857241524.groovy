@@ -34,13 +34,13 @@ String dateFormat = CustomKeywords.'myKeywords.customKeywords.timeStampWithStrin
 
 String libraryName = 'Root'
 
-String Level1AttributeInternalName = 'QAL1' + dateFormat
+String Level1AttributeInternalName = 'QA L1 ' + dateFormat
 
 String Level1AttributeDisplayName = 'QA L1 ' + dateFormat
 
 String Level1ListValue = 'QA Test L1'
 
-String Level2AttributeInternalName = 'QAL2' + dateFormat
+String Level2AttributeInternalName = 'QA L2 ' + dateFormat
 
 String Level2AttributeDisplayName = 'QA L2 ' + dateFormat
 
@@ -96,7 +96,7 @@ ArrayList<String> drivenAttribute = new ArrayList<String>()
 for (HashMap<String, String> insideHash : AttributeArray) {
 	
 	levelVal = levelVal +1
-    String drivenStringName = ((('QADrivenLevel' + '') + levelVal) + '') + dateFormat
+    String drivenStringName = ((('QA Driven L ' + '') + levelVal) + '') + dateFormat
 
     drivenAttribute.add(drivenStringName)
 

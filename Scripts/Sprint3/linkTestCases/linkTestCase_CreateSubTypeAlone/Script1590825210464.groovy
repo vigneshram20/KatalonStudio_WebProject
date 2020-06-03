@@ -36,6 +36,9 @@ WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit
 'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
+'Check Page Performance'
+CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Manage Type - Season')
+
 'Click Add Subtype button'
 WebUI.click(findTestObject('Sprint3/button_Add Subtype'))
 

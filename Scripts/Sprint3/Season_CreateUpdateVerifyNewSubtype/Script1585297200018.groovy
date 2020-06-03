@@ -52,6 +52,9 @@ WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit
 'Click Edit Mode Toggle button'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
+'Check Page Performance'
+CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Manage Type - Season Page')
+
 'Verify Attributes heading'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/span_Attributes'), 0)
 
@@ -89,11 +92,11 @@ String internalName = WebUI.getAttribute(findTestObject('Object Repository/Sprin
 'Verify Label Display Name'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/label_Display Name'), 0)
 
-String dateFormat = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('', 'ddMMMyyHHmmss')
+String dateFormat = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('', 'ddMMMHHmmss')
 
-InternaltypeName = ('QAINFolder' + dateFormat)
+InternaltypeName = ('QAINType' + dateFormat)
 
-DisplaytypeName = ('QA DN Folder ' + dateFormat)
+DisplaytypeName = ('QA AUT Type ' + dateFormat)
 
 'Provide Internal Name'
 WebUI.setText(findTestObject('Sprint3/input_InternalName'), InternaltypeName)

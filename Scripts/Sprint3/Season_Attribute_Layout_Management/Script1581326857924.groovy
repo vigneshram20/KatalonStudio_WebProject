@@ -83,6 +83,9 @@ WebUI.click(findTestObject('Sprint3/button_Manage Layout'))
 'Verify Seasons page Header'
 WebUI.verifyElementPresent(findTestObject('Sprint3/h2-Season'), 0)
 
+'Check Page Performance'
+CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Manage Layout - Season')
+
 'Verify Available Attributes caption header'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/caption_Available Attributes'), 0)
 
@@ -307,6 +310,9 @@ WebUI.enableSmartWait()
 
 'Wait for Detailed View side panel to be clickable'
 WebUI.waitForElementClickable(findTestObject('Sprint3/p_DetailedView'), 0)
+
+'Check Page Performance'
+CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Manage Seasons Page')
 
 'Click Detailed View Side Panel'
 WebUI.click(findTestObject('Sprint3/p_DetailedView'), FailureHandling.STOP_ON_FAILURE)
