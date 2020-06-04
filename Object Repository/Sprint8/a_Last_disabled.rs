@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>a_1</name>
+   <name>a_Last_disabled</name>
    <tag></tag>
-   <elementGuidId>aca7de82-c22c-4466-a038-cf8292536926</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <elementGuidId>9d8277ae-29e2-4590-b205-50f0957ccd00</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//li[contains(@class,'disabled')]//a[@aria-label = 'Go to last page' and (text() = 'Last' or . = 'Last')]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[@aria-label = 'Go to last page' and (text() = 'Last' or . = 'Last')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
@@ -16,85 +26,85 @@
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>class</name>
-      <type>Main</type>
-      <value>undefined</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
       <name>href</name>
       <type>Main</type>
       <value>#</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>aria-label</name>
       <type>Main</type>
-      <value>Go to page number 1</value>
+      <value>Go to last page</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>1</value>
+      <value>Last</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;managelist&quot;)/div[@class=&quot;paginationWithGoTo_pagination_wrapper__1-Ag-&quot;]/ul[@class=&quot;pagination&quot;]/li[@class=&quot;paginationWithGoTo_page_number__3Y96h paginationWithGoTo_disabled__2RGus&quot;]/a[@class=&quot;undefined&quot;]</value>
+      <value>id(&quot;managelist&quot;)/div[@class=&quot;paginationWithGoTo_pagination_wrapper__1-Ag-&quot;]/ul[@class=&quot;pagination&quot;]/li[@class=&quot;paginationWithGoTo_page_number__3Y96h paginationWithGoTo_last__1vfwa&quot;]/a[1]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='managelist']/div[4]/ul/li[3]/a</value>
+      <value>//div[@id='managelist']/div[4]/ul/li[8]/a</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:link</name>
       <type>Main</type>
-      <value>//a[contains(text(),'1')]</value>
+      <value>//a[contains(text(),'Last')]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Romania'])[2]/following::a[3]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Romania'])[2]/following::a[8]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='RO'])[2]/following::a[3]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='RO'])[2]/following::a[8]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Go'])[1]/preceding::a[6]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Go'])[1]/preceding::a[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Last']/parent::*</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:href</name>
       <type>Main</type>
-      <value>(//a[contains(@href, '#')])[3]</value>
+      <value>(//a[contains(@href, '#')])[8]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[4]/ul/li[3]/a</value>
+      <value>//div[4]/ul/li[8]/a</value>
    </webElementXpaths>
 </WebElementEntity>

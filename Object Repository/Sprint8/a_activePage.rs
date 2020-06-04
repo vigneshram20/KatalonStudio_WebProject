@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>a</name>
+   <name>a_activePage</name>
    <tag></tag>
-   <elementGuidId>a1cacf6a-703b-4ced-bcbc-ff970b8e869d</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <elementGuidId>aca7de82-c22c-4466-a038-cf8292536926</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//li[contains(@class,'active')]//a[.='${pageNo}']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@href = '#' and (text() = '1' or . = '1')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -12,6 +22,13 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>undefined</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -25,55 +42,69 @@
       <matchCondition>equals</matchCondition>
       <name>aria-label</name>
       <type>Main</type>
-      <value>Go to previous page</value>
+      <value>Go to page number 1</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>1</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;managelist&quot;)/div[@class=&quot;paginationWithGoTo_pagination_wrapper__1-Ag-&quot;]/ul[@class=&quot;pagination&quot;]/li[@class=&quot;paginationWithGoTo_page_number__3Y96h paginationWithGoTo_arrow_left__2tQNc paginationWithGoTo_disabled__2RGus&quot;]/a[1]</value>
+      <value>id(&quot;managelist&quot;)/div[@class=&quot;paginationWithGoTo_pagination_wrapper__1-Ag-&quot;]/ul[@class=&quot;pagination&quot;]/li[@class=&quot;paginationWithGoTo_page_number__3Y96h paginationWithGoTo_disabled__2RGus&quot;]/a[@class=&quot;undefined&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='managelist']/div[4]/ul/li[2]/a</value>
+      <value>//div[@id='managelist']/div[4]/ul/li[3]/a</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'1')]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Romania'])[2]/following::a[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Romania'])[2]/following::a[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='RO'])[2]/following::a[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='RO'])[2]/following::a[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Go'])[1]/preceding::a[7]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Go'])[1]/preceding::a[6]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:href</name>
       <type>Main</type>
-      <value>(//a[contains(@href, '#')])[2]</value>
+      <value>(//a[contains(@href, '#')])[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[4]/ul/li[2]/a</value>
+      <value>//div[4]/ul/li[3]/a</value>
    </webElementXpaths>
 </WebElementEntity>

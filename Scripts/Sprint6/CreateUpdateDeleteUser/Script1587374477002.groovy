@@ -17,7 +17,7 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.configuration.RunConfiguration
 
-String userID = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA', 'HHss')
+String userID = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA', 'HHmm')
 
 String userIDEdited = userID + 'Edited'
 
@@ -29,7 +29,8 @@ String firstName = 'QA'
 
 String lastName = 'Automation'
 
-String emailID = 'qatest@photoninfotech.net'
+String emailIDRNo = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('', 'HHmm')
+String emailID = 'qatest'+ emailIDRNo +"@photoninfotech.net"
 
 String contactNo = '987'
 
@@ -116,6 +117,8 @@ WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOM
 WebUI.delay(1)
 
 WebUI.click(findTestObject('Sprint3/span_Edit Mode_toggle_btn-handle'))
+
+WebUI.setText(findTestObject('Sprint6/input_USERS_searchInput'), userIDEdited)
 
 WebUI.click(findTestObject('Object Repository/Sprint6/div_td_user_table_verification', [('userID') : userIDEdited, ('fullName') : displayName
             , ('firstName') : firstName, ('lastName') : lastName, ('emailID') : emailID, ('contactNo') : contactNo, ('status') : 'Active']))

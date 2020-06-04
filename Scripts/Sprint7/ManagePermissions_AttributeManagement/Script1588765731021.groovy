@@ -26,7 +26,7 @@ if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {
 
 String roleName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA AUT Role', 'ddMMMHHmmss')
 
-String roleDescription = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QADescription', 'ss')
+String roleDescription = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA', 'ss')
 
 WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CreateRoleAlone'), [('roleDescription') : roleDescription, ('roleName') : roleName], 
     FailureHandling.STOP_ON_FAILURE)

@@ -18,35 +18,35 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.click(findTestObject('Sprint8/a_First_enabled'))
 
-WebUI.click(findTestObject('Object Repository/Sprint8/a'))
+WebUI.click(findTestObject('Sprint8/a_Go To Previous Page_disabled'))
 
-WebUI.click(findTestObject('Object Repository/Sprint8/a_1'))
-
-WebUI.rightClick(findTestObject('Object Repository/Sprint8/span'))
+WebUI.click(findTestObject('Sprint8/a_activePage'))
 
 WebUI.rightClick(findTestObject('Object Repository/Sprint8/span'))
 
 WebUI.rightClick(findTestObject('Object Repository/Sprint8/span'))
 
-WebUI.click(findTestObject('Object Repository/Sprint8/a'))
+WebUI.rightClick(findTestObject('Object Repository/Sprint8/span'))
 
-WebUI.click(findTestObject('Object Repository/Sprint8/a_Last'))
+WebUI.click(findTestObject('Sprint8/a_Go To Previous Page_disabled'))
 
-WebUI.setText(findTestObject('Object Repository/Sprint8/input'), '1')
+WebUI.click(findTestObject('Sprint8/a_Last_disabled'))
 
-WebUI.sendKeys(findTestObject('Object Repository/Sprint8/input'), Keys.chord(Keys.ENTER))
+WebUI.setText(findTestObject('Sprint8/input_PageNO'), '1')
+
+WebUI.sendKeys(findTestObject('Sprint8/input_PageNO'), Keys.chord(Keys.ENTER))
 
 WebUI.click(findTestObject('Object Repository/Sprint8/button_Go'))
 
 WebUI.click(findTestObject('Object Repository/Sprint8/span_Results 1-50 of 258'))
 
-WebUI.click(findTestObject('Object Repository/Sprint8/span_1-50'))
+WebUI.click(findTestObject('Sprint8/span_X-X_records'))
 
-WebUI.click(findTestObject('Object Repository/Sprint8/span_258'))
+WebUI.click(findTestObject('Sprint8/span_Total_Records'))
 
-WebUI.click(findTestObject('Object Repository/Sprint8/a_Last'))
+WebUI.click(findTestObject('Sprint8/a_Last_disabled'))
 
-WebUI.click(findTestObject('Object Repository/Sprint8/a_Last'))
+WebUI.click(findTestObject('Sprint8/a_Last_disabled'))
 
 WebUI.click(findTestObject('Object Repository/Sprint8/span_1'))
 

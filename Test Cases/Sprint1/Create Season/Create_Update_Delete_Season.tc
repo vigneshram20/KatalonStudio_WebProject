@@ -83,7 +83,7 @@
       <name>Full_Season_Names</name>
    </variable>
    <variable>
-      <defaultValue>['Furniture', 'Lighting', 'Tabletop', 'Textiles', 'Dec Acc']</defaultValue>
+      <defaultValue>['Furniture', 'Lighting', 'Textiles', 'Dec Acc']</defaultValue>
       <description></description>
       <id>b7fcfe3c-9603-4f9c-b889-d2f7bb998a80</id>
       <masked>false</masked>

@@ -266,6 +266,9 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
         'xpath', 'equals', columnXpath, true)
 
     WebUI.delay(2)
+	
+	'Search for the record'
+	WebUI.setText(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), DisplayName)
 
     'Select the record from the grid'
     WebUI.click(ActionsObject)
@@ -476,6 +479,12 @@ if (((DataType.equals('Date Time') || DataType.equals('Integer Number')) || Data
         'xpath', 'equals', columnXpath, true)
 
     WebUI.delay(2)
+	
+	'Search for the record'
+	WebUI.setText(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), Keys.chord(Keys.CONTROL, 'a'))
+	
+	'Search for the record'
+	WebUI.setText(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), DisplayName)
 
     'Select the Attribute from the grid'
     WebUI.click(ActionsObject)

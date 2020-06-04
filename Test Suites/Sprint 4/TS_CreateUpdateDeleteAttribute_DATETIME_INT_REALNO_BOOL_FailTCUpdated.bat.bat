@@ -1,1 +1,1 @@
-katalon -noSplash  -runMode=console -projectPath="C:\Users\vigneshram_s\git\WSI_MerchTool\WSI_MerchTool.prj" -retry=0 -testSuitePath="Test Suites/Sprint 4/TS_CreateUpdateDeleteAttribute_DATETIME_INT_REALNO_BOOL_20200522_161103_20200522_165343" -executionProfile="default" -browserType="Firefox"
+katalon -noSplash  -runMode=console -projectPath="C:\Users\vigneshram_s\git\WSI_MerchTool\WSI_MerchTool.prj" -retry=0 -testSuitePath="Test Suites/Sprint 4/TS_CreateUpdateDeleteAttribute_DATETIME_INT_REALNO_BOOL_20200604_160101" -executionProfile="MCPQA" -browserType="Chrome"

@@ -20,6 +20,7 @@ import com.kms.katalon.core.configuration.RunConfiguration
 String userID = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA', 'ss')
 
 String emailIDRNo = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('', 'HHss')
+String emailID = 'qatest'+ emailIDRNo +"@photoninfotech.net"
 
 String userIDEdited = userID + 'Edited'
 
@@ -30,8 +31,6 @@ String displayNameEdited = displayName + 'Edited'
 String firstName = 'QA'
 
 String lastName = 'Automation'
-
-String emailID = 'qatest'+ emailIDRNo +"@photoninfotech.net"
 
 String contactNo = '987'
 
