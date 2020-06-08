@@ -1,0 +1,1 @@
+katalon -noSplash  -runMode=console -projectPath="C:\Users\vigneshram_s\git\WSI_MerchTool\WSI_MerchTool.prj" -retry=0 -testSuitePath="Test Suites/Sprint 8/TS_ViewManagement_HideUnHideColumn_20200608_183526" -executionProfile="MCPUAT" -browserType="Chrome"

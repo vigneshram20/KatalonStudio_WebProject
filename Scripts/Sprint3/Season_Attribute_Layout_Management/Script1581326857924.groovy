@@ -21,6 +21,8 @@ import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
+
 if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {
     'Launch the Browser'
     WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
@@ -33,15 +35,15 @@ if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {
 WebUI.enableSmartWait()
 
 'Click Hamburger Menu'
-WebUI.click(findTestObject('Common Objects/img_HamburgerMenu'))
+WebUI.enhancedClick(findTestObject('Common Objects/img_HamburgerMenu'))
 
 WebUI.delay(1)
 
 'Click Administration menu'
-WebUI.click(findTestObject('Object Repository/Sprint3/a_Administration'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/a_Administration'))
 
 'CLick Attribute Management menu'
-WebUI.click(findTestObject('Object Repository/Sprint3/a_Type  Attribute Management'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/a_Type  Attribute Management'))
 
 WebUI.delay(1)
 
@@ -51,10 +53,10 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/div_Adminis
 WebUI.delay(1)
 
 'Click Manage Types button'
-WebUI.click(findTestObject('Sprint3/h3_Manage Types'))
+WebUI.enhancedClick(findTestObject('Sprint3/h3_Manage Types'))
 
 'Click Season sub menu'
-WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/a_Season'))
 
 'Verify Manage Types button'
 WebUI.verifyElementPresent(findTestObject('Sprint3/button_Add Subtype'), 0)
@@ -78,7 +80,7 @@ WebUI.verifyElementPresent(findTestObject('Sprint3/span_Edit Mode_toggle_btn-lab
 WebUI.verifyElementClickable(findTestObject('Sprint3/button_Manage Layout'))
 
 'Click Manage Layout button'
-WebUI.click(findTestObject('Sprint3/button_Manage Layout'))
+WebUI.enhancedClick(findTestObject('Sprint3/button_Manage Layout'))
 
 'Verify Seasons page Header'
 WebUI.verifyElementPresent(findTestObject('Sprint3/h2-Season'), 0)
@@ -102,7 +104,7 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/span_Column
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/div_Add Group'), 0)
 
 'Click Manage Layout button'
-WebUI.click(findTestObject('Sprint3/button_Manage Layout'))
+WebUI.enhancedClick(findTestObject('Sprint3/button_Manage Layout'))
 
 WebUI.delay(2)
 
@@ -110,7 +112,7 @@ WebUI.delay(2)
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 'Click Edit Mode Toggle button'
-WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 WebUI.delay(2)
 
@@ -119,27 +121,34 @@ WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.END
 
 List<String> listOfTabs = WebUI.findWebElements(findTestObject('Object Repository/Sprint3/span_TabsAvailable'), 2)
 
+WebDriver driver = DriverFactory.getWebDriver()
+JavascriptExecutor js = ((driver) as JavascriptExecutor)
+
+WebElement img_Trash_Tabs = WebUiBuiltInKeywords.findWebElement(findTestObject('Object Repository/Sprint3/img_Trash_Tabs'))
+
 for (WebElement element : listOfTabs) {
     Thread.sleep(250)
 
     'Click Tab'
-    element.click()
+    //element.click()
+	js.executeScript('arguments[0].click();', element)
 
     'Click Delete Tab button'
-    WebUI.click(findTestObject('Object Repository/Sprint3/img_Trash_Tabs'))
+    //WebUI.click(findTestObject('Object Repository/Sprint3/img_Trash_Tabs'))
+	js.executeScript('arguments[0].click();', img_Trash_Tabs)
 }
 
 'Save the Layout'
 WebUI.callTestCase(findTestCase('Common/SaveLayout'), [:], FailureHandling.STOP_ON_FAILURE)
 
 'Click Manage Layout button'
-WebUI.click(findTestObject('Sprint3/button_Manage Layout'))
+WebUI.enhancedClick(findTestObject('Sprint3/button_Manage Layout'))
 
 'Click Edit Mode Toggle button'
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 'Click Edit Mode Toggle button'
-WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 WebUI.delay(1)
 
@@ -149,7 +158,8 @@ for (WebElement element : listOfgroups) {
     Thread.sleep(250)
 
     'Click Trash Button'
-    element.click()
+    //element.click()
+	js.executeScript('arguments[0].click();', element)
 }
 
 'Verify Save button'
@@ -162,51 +172,51 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/div_Cancel'
 WebUI.callTestCase(findTestCase('Common/SaveLayout'), [:], FailureHandling.STOP_ON_FAILURE)
 
 'Click Manage Layout button'
-WebUI.click(findTestObject('Sprint3/button_Manage Layout'))
+WebUI.enhancedClick(findTestObject('Sprint3/button_Manage Layout'))
 
 'Click Edit Mode Toggle button'
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 'Click Edit Mode Toggle button'
-WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 WebUI.delay(1)
 
 'Select Brand Label'
-WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Brand']))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Brand']))
 
 'Select Season Label'
-WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Season']))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Season']))
 
 'Select Type Label'
-WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Type']))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Type']))
 
 'Select Year Label'
-WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Year']))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Year']))
 
 'Select Name Label'
-WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Name']))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Name']))
 
 'Select Division Label'
-WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Division']))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Division']))
 
 'Click Add button'
-WebUI.click(findTestObject('Sprint3/img_parameterized_Group_img-Add', [('groupName') : FirstGroup]))
+WebUI.enhancedClick(findTestObject('Sprint3/img_parameterized_Group_img-Add', [('groupName') : FirstGroup]))
 
 'Select Season Checkbox '
-WebUI.clickOffset(findTestObject('Sprint3/label_GlobalParameterized_checkbox_label', [('input') : 'Season']), 0, 2)
+WebUI.enhancedClick(findTestObject('Sprint3/label_GlobalParameterized_checkbox_label', [('input') : 'Season']))
 
 'Select Type Checkbox'
-WebUI.clickOffset(findTestObject('Sprint3/label_GlobalParameterized_checkbox_label', [('input') : 'Type']), 0, 2)
+WebUI.enhancedClick(findTestObject('Sprint3/label_GlobalParameterized_checkbox_label', [('input') : 'Type']))
 
 'Select Year Checkbox'
-WebUI.clickOffset(findTestObject('Sprint3/label_GlobalParameterized_checkbox_label', [('input') : 'Year']), 0, 2)
+WebUI.enhancedClick(findTestObject('Sprint3/label_GlobalParameterized_checkbox_label', [('input') : 'Year']))
 
 'Click Copy Attributes button'
-WebUI.click(findTestObject('Sprint3/GeneralAttributes_CopyAttributes'))
+WebUI.enhancedClick(findTestObject('Sprint3/GeneralAttributes_CopyAttributes'))
 
 'Click Add Group'
-WebUI.click(findTestObject('Sprint3/button_Add Group'))
+WebUI.enhancedClick(findTestObject('Sprint3/button_Add Group'))
 
 'Double Click Input field'
 WebUI.doubleClick(findTestObject('Sprint3/span_1'))
@@ -223,19 +233,19 @@ WebUI.delay(1)
 WebUI.sendKeys(findTestObject('Sprint3/input'), SecondGroup)
 
 'Select In Store Launch End Date checkbox'
-WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'In Store Launch Start Date']))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'In Store Launch Start Date']))
 
 'Select In Store Launch Start Date checkbox'
-WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'In Store Launch End Date']))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'In Store Launch End Date']))
 
 'Select Internet Launch End Date checkbox'
-WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Internet Launch Start Date']))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Internet Launch Start Date']))
 
 'Select Internet Launch Start Date'
-WebUI.click(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Internet Launch End Date']))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Internet Launch End Date']))
 
 'Click Add button'
-WebUI.click(findTestObject('Sprint3/img_parameterized_Group_img-Add', [('groupName') : SecondGroup]))
+WebUI.enhancedClick(findTestObject('Sprint3/img_parameterized_Group_img-Add', [('groupName') : SecondGroup]))
 
 'Select Instore Launch checkbox'
 WebUI.clickOffset(findTestObject('Sprint3/label_GlobalParameterized_checkbox_label', [('input') : 'In Store Launch Start Date']), 
@@ -246,7 +256,7 @@ WebUI.clickOffset(findTestObject('Sprint3/label_GlobalParameterized_checkbox_lab
     0, 2)
 
 'Click Copy Attributes button'
-WebUI.click(findTestObject('Sprint3/CalendarQAInfo_CopyAttributes'))
+WebUI.enhancedClick(findTestObject('Sprint3/CalendarQAInfo_CopyAttributes'))
 
 'Move to Page Bottom'
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.END))
@@ -255,7 +265,7 @@ WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.END
 WebUI.doubleClick(findTestObject('Object Repository/Sprint3/span_Enter the name'))
 
 'Click the Input'
-WebUI.click(findTestObject('Object Repository/Sprint3/input_Enter the name'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/input_Enter the name'))
 
 'Select the existing text'
 WebUI.sendKeys(findTestObject('Object Repository/Sprint3/input_Enter the name'), Keys.chord(Keys.CONTROL, Keys.chord('a')))
@@ -264,22 +274,22 @@ WebUI.sendKeys(findTestObject('Object Repository/Sprint3/input_Enter the name'),
 WebUI.sendKeys(findTestObject('Object Repository/Sprint3/input_Enter the name'), FirstTab)
 
 'Click Select Attributes Group'
-WebUI.click(findTestObject('Object Repository/Sprint3/input_Select Attributes Group'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/input_Select Attributes Group'))
 
 'Select the Group from dropdown'
-WebUI.click(findTestObject('Object Repository/Sprint3/div_SelectGroupDropdown', [('groupName') : FirstGroup]))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/div_SelectGroupDropdown', [('groupName') : FirstGroup]))
 
 'Verify the selected Group displayed '
 WebUI.verifyElementPresent(findTestObject('Sprint3/div_SelectGroupDropdownVerify', [('groupName') : FirstGroup]), 0)
 
 'Click Add icon'
-WebUI.click(findTestObject('Object Repository/Common Objects/img_AddANewTab'))
+WebUI.enhancedClick(findTestObject('Object Repository/Common Objects/img_AddANewTab'))
 
 'Double click the group Name editor'
 WebUI.doubleClick(findTestObject('Object Repository/Sprint3/span_Enter the name'))
 
 'Click the Input'
-WebUI.click(findTestObject('Object Repository/Sprint3/input_Enter the name'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/input_Enter the name'))
 
 'Select the existing text'
 WebUI.sendKeys(findTestObject('Object Repository/Sprint3/input_Enter the name'), Keys.chord(Keys.CONTROL, Keys.chord('a')))
@@ -288,10 +298,10 @@ WebUI.sendKeys(findTestObject('Object Repository/Sprint3/input_Enter the name'),
 WebUI.sendKeys(findTestObject('Object Repository/Sprint3/input_Enter the name'), SecondTab)
 
 'Click Select Attributes Group'
-WebUI.click(findTestObject('Object Repository/Sprint3/input_Select Attributes Group'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/input_Select Attributes Group'))
 
 'Select the Group from dropdown'
-WebUI.click(findTestObject('Object Repository/Sprint3/div_SelectGroupDropdown', [('groupName') : SecondGroup]))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/div_SelectGroupDropdown', [('groupName') : SecondGroup]))
 
 'Verify the selected Group displayed '
 WebUI.verifyElementPresent(findTestObject('Sprint3/div_SelectGroupDropdownVerify', [('groupName') : SecondGroup]), 0)
