@@ -21,12 +21,12 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKe
 import org.openqa.selenium.WebElement as WebElement
 import org.openqa.selenium.WebDriver as WebDriver
 
-WebUI.click(findTestObject('Object Repository/Sprint6/li_Permissions'), FailureHandling.STOP_ON_FAILURE)
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/li_Permissions'), FailureHandling.STOP_ON_FAILURE)
 
 'Click Edit Mode Toggle button'
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
-WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 WebUI.sendKeys(findTestObject('Sprint6/input_roleSearch'), roleName)
 
@@ -50,10 +50,10 @@ for(String permission : permissionValues)
 
 js.executeScript('arguments[0].click();', element)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/button_Save'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Save'))
 
-WebUI.click(findTestObject('Object Repository/Sprint6/button_Yes'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Yes'))
 
-WebUI.click(findTestObject('Common Objects/button_OK'))
+WebUI.enhancedClick(findTestObject('Common Objects/button_OK'))
 
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))

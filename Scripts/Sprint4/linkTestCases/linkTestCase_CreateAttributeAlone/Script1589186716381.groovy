@@ -20,10 +20,10 @@ WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem'
     FailureHandling.STOP_ON_FAILURE)
 
 'Expand Manage Types panel'
-WebUI.click(findTestObject('Sprint4/a_Manage Types'))
+WebUI.enhancedClick(findTestObject('Sprint4/a_Manage Types'))
 
 'Click Season sub menu'
-WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/a_Season'))
 
 WebUI.delay(5)
 
@@ -38,7 +38,7 @@ WebUI.delay(1)
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 'Click Edit Mode Toggle button'
-WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 'Check Page Performance'
 CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Manage Attributes - Season')
@@ -50,7 +50,7 @@ WebUI.enableSmartWait()
 WebUI.waitForPageLoad(0)
 
 'Click Add icon -Attributes'
-WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
+WebUI.enhancedClick(findTestObject('Sprint4/img_Attributes_add-icon'))
 
 'Select DataType\t'
 WebUI.selectOptionByLabel(findTestObject('Sprint4/select_DataType'), DataType, true)
@@ -73,7 +73,7 @@ WebUI.scrollToElement(findTestObject('Sprint4/img_Search_Symbol'), 0)
 WebUI.delay(1)
 
 'Click Search icon'
-WebUI.click(findTestObject('Sprint4/img_Search_Symbol'))
+WebUI.enhancedClick(findTestObject('Sprint4/img_Search_Symbol'))
 
 WebUI.delay(1)
 
@@ -81,13 +81,13 @@ WebUI.delay(1)
 WebUI.setText(findTestObject('Sprint4/input_SearchField'), MasterList)
 
 'Select the record'
-WebUI.click(findTestObject('Object Repository/Sprint4/label_CheckboxPopup -URef', [('Symbol') : MasterList]))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/label_CheckboxPopup -URef', [('Symbol') : MasterList]))
 
 'Click Save button'
-WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/button_Save'))
 
 'Click Create Button'
-WebUI.click(findTestObject('Object Repository/Sprint4/button_Create'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/button_Create'))
 
 WebUI.delay(2)
 
@@ -97,5 +97,5 @@ WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySucces
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 
 'Collapse Manage Types left panel'
-WebUI.click(findTestObject('Sprint4/a_Manage Types'))
+WebUI.enhancedClick(findTestObject('Sprint4/a_Manage Types'))
 

@@ -22,7 +22,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKe
 import org.openqa.selenium.WebElement as WebElement
 import org.openqa.selenium.WebDriver as WebDriver
 
-String roleName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA_AUT_Role', 'ddMMMHHmmss')
+String roleName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA_AUT_Role_', 'ddMMMHHmmss')
 
 String roleDescription = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QADescription', 'ss')
 
@@ -48,12 +48,12 @@ WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CreateRoleAl
 
 WebUI.verifyElementPresent(findTestObject('Sprint6/div_User and Role Management'), 0)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/li_Permissions'), FailureHandling.STOP_ON_FAILURE)
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/li_Permissions'), FailureHandling.STOP_ON_FAILURE)
 
 'Click Edit Mode Toggle button'
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
-WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 'Check Page Performance'
 CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Permissions Page - User Management')
@@ -86,9 +86,9 @@ WebElement createMenu = WebUiBuiltInKeywords.findWebElement(findTestObject('Obje
 
 js.executeScript('arguments[0].click();', createMenu)
 
-not_run:WebUI.click(findTestObject('Object Repository/Sprint6/label_delete'))
+not_run: WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/label_delete'))
 
-not_run:WebUI.click(findTestObject('Object Repository/Sprint6/label_create'))
+not_run: WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/label_create'))
 
 js.executeScript('arguments[0].click();', element)
 
@@ -107,31 +107,31 @@ if (!(accessMatched)) {
     throw new Exception('Access not inherited properly to subtypes')
 }
 
-WebUI.click(findTestObject('Object Repository/Sprint6/button_Save'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Save'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_Confirm to Save'), 0)
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/button_No'), 0)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/button_Yes'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Yes'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_Permission(s) has been modified successfully'), 
     0)
 
-WebUI.click(findTestObject('Common Objects/button_OK'))
+WebUI.enhancedClick(findTestObject('Common Objects/button_OK'))
 
 WebUI.delay(2)
 
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 
-WebUI.click(findTestObject('Object Repository/Sprint6/li_Permissions'), FailureHandling.STOP_ON_FAILURE)
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/li_Permissions'), FailureHandling.STOP_ON_FAILURE)
 
 'Click Edit Mode Toggle button'
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
-WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
-WebUI.click(findTestObject('Object Repository/Sprint6/label_Show Only Granted Role'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/label_Show Only Granted Role'))
 
 WebUI.sendKeys(findTestObject('Sprint6/input_roleSearch'), Keys.chord(Keys.CONTROL, Keys.chord('a')))
 
@@ -139,38 +139,42 @@ WebUI.setText(findTestObject('Sprint6/input_roleSearch'), roleName)
 
 WebUI.waitForElementPresent(findTestObject('Sprint6/th_VerticalHeader_param', [('headerText') : roleName]), 0)
 
-WebUI.clickOffset(findTestObject('Sprint6/img_FilterMenu'), 10, 4)
+WebUI.scrollToElement(findTestObject('Sprint6/img_FilterMenu'), 10, FailureHandling.STOP_ON_FAILURE)
+
+WebUI.enhancedClick(findTestObject('Sprint6/img_FilterMenu'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/label_Edit Filter'), 0)
 
 WebUI.setText(findTestObject('Sprint6/input_searchInputFilterMenu'), 'Season' + Keys.ENTER)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/span_permission_popover_parameterized', [('library') : 'Season']))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/span_permission_popover_parameterized', [('library') : 'Season']))
 
-WebUI.click(findTestObject('Object Repository/Sprint6/button_Apply'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Apply'))
 
 WebUI.verifyElementText(findTestObject('Object Repository/Sprint6/div_libraryNamedropdown_parameterized', [('libraryName') : 'Season']), 
     verifyCRUD)
 
-WebUI.clickOffset(findTestObject('Sprint6/img_FilterMenu'), 10, 4)
+WebUI.scrollToElement(findTestObject('Sprint6/img_FilterMenu'), 10, FailureHandling.STOP_ON_FAILURE)
+
+WebUI.enhancedClick(findTestObject('Sprint6/img_FilterMenu'))
 
 WebUI.setText(findTestObject('Sprint6/input_searchInputFilterMenu'), Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
 
 WebUI.setText(findTestObject('Sprint6/input_searchInputFilterMenu'), (('Season' + ' / ') + DisplaytypeName) + Keys.ENTER)
 
-WebUI.clickOffset(findTestObject('Object Repository/Sprint6/span_permission_popover_parameterized', [('library') : ('Season' + 
-            ' / ') + DisplaytypeName]), 1, 2)
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/span_permission_popover_parameterized', [('library') : ('Season' + 
+            ' / ') + DisplaytypeName]))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/button_Clear All'), 0)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/button_Apply'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Apply'))
 
 WebUI.verifyElementText(findTestObject('Object Repository/Sprint6/div_libraryNamedropdown_parameterized', [('libraryName') : ('Season' + 
             ' / ') + DisplaytypeName]), verifyCRUD)
 
-WebUI.click(findTestObject('Sprint6/button_Cancel'))
+WebUI.enhancedClick(findTestObject('Sprint6/button_Cancel'))
 
-WebUI.click(findTestObject('Sprint6/button_Yes'))
+WebUI.enhancedClick(findTestObject('Sprint6/button_Yes'))
 
 WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_DeleteRoleAlone'), [('roleName') : roleName, ('roleDescription') : roleDescription], 
     FailureHandling.STOP_ON_FAILURE)

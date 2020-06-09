@@ -3,6 +3,8 @@
    <description></description>
    <name>Season_CreateUpdateVerifyNewSubtype</name>
    <tag></tag>
-   <comment></comment>
+   <comment>Total No. of Attributes - &quot; + listOfAttributes.size() + &quot;
+Total No. of Attributes - &quot; + listOfInheritedAttributes.size() + &quot;
+Total No. of Attributes - &quot; + listOfInheritedAttributes.size() + &quot;</comment>
    <testCaseGuid>464414d9-95fa-4e8a-9c4a-e5cabb3c7763</testCaseGuid>
 </TestCaseEntity>

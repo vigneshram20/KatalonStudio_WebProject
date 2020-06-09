@@ -15,5 +15,11 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Sprint7/ManagePermissions_AttributeManagement</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>b475ace2-a3e0-45ea-b5c3-c358a3ec6bf3</variableId>
+      </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

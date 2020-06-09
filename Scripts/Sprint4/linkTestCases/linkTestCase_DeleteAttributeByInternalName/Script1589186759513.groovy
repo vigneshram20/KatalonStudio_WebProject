@@ -26,13 +26,13 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/button_Mana
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint6/button_Manage Attributes'), FailureHandling.STOP_ON_FAILURE)
 
 'Click Manage Attributes button'
-WebUI.click(findTestObject('Object Repository/Sprint6/button_Manage Attributes'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Manage Attributes'))
 
 'Click Edit Mode Toggle button'
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 'Click Edit Mode Toggle button'
-WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 'Check Page Performance'
 CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Manage Attributes - Season')
@@ -57,7 +57,7 @@ WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.P
 WebUI.delay(1)
 
 'Click Remove icon'
-WebUI.click(findTestObject('Sprint4/img_Attributes_remove-icon'))
+WebUI.enhancedClick(findTestObject('Sprint4/img_Attributes_remove-icon'))
 
 WebUI.delay(2)
 
@@ -77,7 +77,7 @@ for (String InternalName : InternalNames) {
 	WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 	
 	'Collapse Manage Types left panel'
-	WebUI.click(findTestObject('Sprint4/a_Manage Types'))
+	WebUI.enhancedClick(findTestObject('Sprint4/a_Manage Types'))
 
 
 

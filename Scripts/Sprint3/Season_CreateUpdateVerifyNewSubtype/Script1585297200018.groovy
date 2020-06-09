@@ -61,12 +61,16 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/span_Attrib
 'Verify Inherited Attributes heading '
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/span_Inherited Attributes'), 0)
 
+WebUI.waitForPageLoad(60)
+
 WebUI.delay(5)
 
 WebDriver driver = DriverFactory.getWebDriver()
 
-List<String> listOfAttributes = WebUI.findWebElements(findTestObject('Object Repository/Sprint3/td_Attributes_InternalNames'), 
+List<WebElement> listOfAttributes = WebUI.findWebElements(findTestObject('Object Repository/Sprint3/td_Attributes_InternalNames'), 
     0)
+
+WebUI.comment(('Total No. of Attributes - ' + listOfAttributes.size()) + '')
 
 attributeAsAdded = new ArrayList<LinkedHashMap>()
 
@@ -77,7 +81,7 @@ for (WebElement element : listOfAttributes) {
 }
 
 'Click Add Subtype button'
-WebUI.click(findTestObject('Sprint3/button_Add Subtype'))
+WebUI.enhancedClick(findTestObject('Sprint3/button_Add Subtype'))
 
 'Verify Type - subType presence'
 WebUI.verifyElementPresent(findTestObject('Sprint3/label_Type_subType'), 0)
@@ -105,10 +109,10 @@ WebUI.setText(findTestObject('Sprint3/input_InternalName'), InternaltypeName)
 WebUI.setText(findTestObject('Object Repository/Sprint4/input_DisplayName'), DisplaytypeName)
 
 'Select Instantiable radio butotn'
-WebUI.click(findTestObject('Object Repository/Sprint3/radio_Instantiable', [('YesOrNo') : 'Yes']))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/radio_Instantiable', [('YesOrNo') : 'Yes']))
 
 'Select SubType allowed radio button'
-WebUI.click(findTestObject('Object Repository/Sprint3/radio_SubTypeAllowed', [('YesOrNo') : 'Yes']))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/radio_SubTypeAllowed', [('YesOrNo') : 'Yes']))
 
 'Verify popup header text'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/h5_Create New Sub Type'), 0)
@@ -120,7 +124,7 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Common Objects/img_
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/a_Cancel'), 0)
 
 'Click Create button'
-WebUI.click(findTestObject('Object Repository/Sprint3/button_Create'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/button_Create'))
 
 WebUI.delay(2)
 
@@ -134,13 +138,13 @@ WebUI.scrollToElement(findTestObject('Sprint4/button_Cancel'), 0)
 WebUI.verifyElementClickable(findTestObject('Sprint4/button_Cancel'))
 
 'Click Cancel button'
-WebUI.click(findTestObject('Sprint4/button_Cancel'))
+WebUI.enhancedClick(findTestObject('Sprint4/button_Cancel'))
 
 'Verify Cancel popup header text'
 WebUI.verifyElementPresent(findTestObject('Sprint3/h5_Confirm to Cancel without saving'), 0)
 
 'Click Yes button'
-WebUI.click(findTestObject('Common Objects/button_Yes'))
+WebUI.enhancedClick(findTestObject('Common Objects/button_Yes'))
 
 WebUI.delay(2)
 
@@ -170,17 +174,28 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/input_Displ
     0)
 
 'Verify the Instantiabe radio button selected'
-WebUI.verifyElementPresent(findTestObject('Sprint3/radio_Instantiable_Verify', [('YesOrNo') : 'Yes']), 
-    0)
+WebUI.verifyElementPresent(findTestObject('Sprint3/radio_Instantiable_Verify', [('YesOrNo') : 'Yes']), 0)
 
 'Verify the Instantiabe radio button selected'
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/radio_SubtypeAllowed_Verify', [('YesOrNo') : 'Yes']),
-	0)
-
-List<String> listOfInheritedAttributes = WebUI.findWebElements(findTestObject('Object Repository/Sprint3/td_InheritedAttributes_InternalNames'), 
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/radio_SubtypeAllowed_Verify', [('YesOrNo') : 'Yes']), 
     0)
 
-attributeavailable = new ArrayList<LinkedHashMap>()
+List<WebElement> listOfInheritedAttributes = WebUI.findWebElements(findTestObject('Object Repository/Sprint3/td_InheritedAttributes_InternalNames'), 
+    0)
+
+WebUI.comment(('Total No. of Attributes - ' + listOfInheritedAttributes.size()) + '')
+
+Iterator iterator = attributeAsAdded.iterator()
+
+Iterator iterator2 = listOfInheritedAttributes.iterator()
+
+while (iterator.hasNext()) {
+    if (!(iterator.next().equals(iterator2.next().getText()))) {
+        throw new Exception('Not Matched')
+    }
+}
+
+/*attributeavailable = new ArrayList<LinkedHashMap>()
 
 for (WebElement element : listOfInheritedAttributes) {
     Thread.sleep(250)
@@ -192,13 +207,12 @@ if (attributeavailable.equals(attributeAsAdded)) {
     System.out.println('Attributes are displayed properly in Inherited Attributes')
 } else {
     throw new Exception('Attributes available in the Type are not matched with the attributes in the Inherited attributes')
-}
-
+}*/
 'Click Edit Mode Toggle button'
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 'Click Edit Mode Toggle button'
-WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 displayNameEdited = (DisplaytypeName + ' Edited')
 
@@ -215,10 +229,10 @@ WebUI.sendKeys(findTestObject('Object Repository/Sprint3/input_Display Name_form
 WebUI.sendKeys(findTestObject('Object Repository/Sprint3/input_Description'), Description)
 
 'Click Save button'
-WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/button_Save'))
 
 'Click Yes Button'
-WebUI.click(findTestObject('Common Objects/button_Yes'))
+WebUI.enhancedClick(findTestObject('Common Objects/button_Yes'))
 
 WebUI.delay(2)
 
@@ -244,10 +258,10 @@ WebUI.verifyElementText(findTestObject('Object Repository/Sprint3/input_Descript
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 'Click Edit Mode Toggle button'
-WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 'Click Add Subtype button'
-WebUI.click(findTestObject('Sprint3/button_Add Subtype'))
+WebUI.enhancedClick(findTestObject('Sprint3/button_Add Subtype'))
 
 'Verify Type - subType presence'
 WebUI.verifyElementPresent(findTestObject('Sprint3/label_Type_subType'), 0)
@@ -271,10 +285,10 @@ WebUI.setText(findTestObject('Sprint3/input_InternalName'), InternalSubtypeName)
 WebUI.setText(findTestObject('Object Repository/Sprint4/input_DisplayName'), DisplaySubtypeName)
 
 'Select Instantiable radio butotn'
-WebUI.click(findTestObject('Object Repository/Sprint3/radio_Instantiable', [('YesOrNo') : 'No']))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/radio_Instantiable', [('YesOrNo') : 'No']))
 
 'Select SubType allowed radio button'
-WebUI.click(findTestObject('Object Repository/Sprint3/radio_SubTypeAllowed', [('YesOrNo') : 'No']))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/radio_SubTypeAllowed', [('YesOrNo') : 'No']))
 
 'Verify popup header text'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/h5_Create New Sub Type'), 0)
@@ -286,11 +300,14 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Common Objects/img_
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/a_Cancel'), 0)
 
 'Click Create button'
-WebUI.click(findTestObject('Object Repository/Sprint3/button_Create'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/button_Create'))
 
 WebUI.delay(2)
 
 ChildLabel = 'Child'
+
+'Provide Child Label'
+WebUI.scrollToElement(findTestObject('Object Repository/Sprint3/input_ChildLabel'), 0)
 
 'Provide Child Label'
 WebUI.sendKeys(findTestObject('Object Repository/Sprint3/input_ChildLabel'), ChildLabel)
@@ -299,10 +316,10 @@ WebUI.sendKeys(findTestObject('Object Repository/Sprint3/input_ChildLabel'), Chi
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.END))
 
 'Click Save button'
-WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/button_Save'))
 
 'Click Yes Button'
-WebUI.click(findTestObject('Common Objects/button_Yes'))
+WebUI.enhancedClick(findTestObject('Common Objects/button_Yes'))
 
 WebUI.delay(2)
 
@@ -311,9 +328,13 @@ WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOM
 
 WebUI.delay(1)
 
-WebUI.refresh();
+WebUI.waitForPageLoad(60)
+
+WebUI.refresh()
 
 WebUI.delay(2)
+
+WebUI.waitForPageLoad(60)
 
 'Select the parent dropdown'
 WebUI.verifyOptionPresentByLabel(findTestObject('Sprint3/select_parentDropDown'), displayNameEdited, true, 0)
@@ -321,54 +342,51 @@ WebUI.verifyOptionPresentByLabel(findTestObject('Sprint3/select_parentDropDown')
 'Select the parent dropdown'
 WebUI.selectOptionByLabel(findTestObject('Sprint3/select_parentDropDown'), displayNameEdited, true)
 
-WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/Sprint3/select_ChildDropdown'), 'Select '+ChildLabel, false, 0)
+WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/Sprint3/select_ChildDropdown'), 'Select ' + ChildLabel, 
+    false, 0)
 
 WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Sprint3/input_ChildLabel'), 'value', ChildLabel, 0)
 
 'Select the Subtype dropdown'
-WebUI.verifyOptionPresentByLabel(findTestObject('Object Repository/Sprint3/select_ChildDropdown'), DisplaySubtypeName, true, 0)
+WebUI.verifyOptionPresentByLabel(findTestObject('Object Repository/Sprint3/select_ChildDropdown'), DisplaySubtypeName, true, 
+    0)
 
 'Select the subtype dropdown'
 WebUI.selectOptionByLabel(findTestObject('Object Repository/Sprint3/select_ChildDropdown'), DisplaySubtypeName, true)
 
-headerTextfull = 'Season \\ ' + displayNameEdited +' \\ '+DisplaySubtypeName
+headerTextfull = ((('Season \\ ' + displayNameEdited) + ' \\ ') + DisplaySubtypeName)
 
 'Verify Season header'
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/h2_Season_subtype', [('header') : headerTextfull]),
-	0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/h2_Season_subtype', [('header') : headerTextfull]), 
+    0)
 
 'Verify the Internal Name'
-WebUI.verifyElementPresent(findTestObject('Sprint3/input_Internal Name_form-control_1', [('textContains') : InternalSubtypeName]),
-	0)
+WebUI.verifyElementPresent(findTestObject('Sprint3/input_Internal Name_form-control_1', [('textContains') : InternalSubtypeName]), 
+    0)
 
 'Verify the Display Name'
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/input_Display Name_form-control', [('textContains') : DisplaySubtypeName]),
-	0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/input_Display Name_form-control', [('textContains') : DisplaySubtypeName]), 
+    0)
 
 'Verify the Instantiabe radio button selected'
-WebUI.verifyElementPresent(findTestObject('Sprint3/radio_Instantiable_Verify', [('YesOrNo') : 'Yes']),
-	0)
+WebUI.verifyElementPresent(findTestObject('Sprint3/radio_Instantiable_Verify', [('YesOrNo') : 'Yes']), 0)
 
 'Verify the Instantiabe radio button selected'
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/radio_SubtypeAllowed_Verify', [('YesOrNo') : 'No']),
-	0)
-
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/radio_SubtypeAllowed_Verify', [('YesOrNo') : 'No']), 
+    0)
 
 listOfInheritedAttributes = new ArrayList<LinkedHashMap>()
 
-listOfInheritedAttributes = WebUI.findWebElements(findTestObject('Object Repository/Sprint3/td_InheritedAttributes_InternalNames'),
-	0)
+listOfInheritedAttributes = WebUI.findWebElements(findTestObject('Object Repository/Sprint3/td_InheritedAttributes_InternalNames'), 
+    0)
 
-attributeavailable = new ArrayList<LinkedHashMap>()
+WebUI.comment(('Total No. of Attributes - ' + listOfInheritedAttributes.size()) + '')
 
-for (WebElement element : listOfInheritedAttributes) {
-	Thread.sleep(250)
+Iterator iterator3 = listOfInheritedAttributes.iterator()
 
-	attributeavailable.add(element.getText())
+while (iterator.hasNext()) {
+    if (!(iterator.next().equals(iterator3.next().getText()))) {
+        throw new Exception('Not Matched')
+    }
 }
 
-if (attributeavailable.equals(attributeAsAdded)) {
-	System.out.println('Attributes are displayed properly in Inherited Attributes')
-} else {
-	throw new Exception('Attributes available in the Type are not matched with the attributes in the Inherited attributes')
-}

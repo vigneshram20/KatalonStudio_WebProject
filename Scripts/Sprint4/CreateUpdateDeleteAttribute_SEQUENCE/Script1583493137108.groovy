@@ -20,7 +20,6 @@ import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
-import org.openqa.selenium.WebElement as WebElement
 import org.openqa.selenium.WebDriver as WebDriver
 
 if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {
@@ -40,10 +39,10 @@ WebUI.callTestCase(findTestCase('Common/NavigateToTypeAndAttributeManagement'), 
 WebUI.delay(1)
 
 'CLick Attribute Management menu'
-WebUI.click(findTestObject('Sprint4/a_Manage Types'))
+WebUI.enhancedClick(findTestObject('Sprint4/a_Manage Types'))
 
 'Click Season sub menu'
-WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/a_Season'))
 
 WebUI.delay(1)
 
@@ -55,7 +54,7 @@ WebUI.delay(5)
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 'Click Edit Mode Toggle button'
-WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 'Check Page Performance'
 CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Manage Attributes - Season')
@@ -70,7 +69,7 @@ WebUI.callTestCase(findTestCase('Sprint4/linkTestCases/linkTestCase_DeleteAlread
 WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
 
 'Click Add icon -Attributes'
-WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
+WebUI.enhancedClick(findTestObject('Sprint4/img_Attributes_add-icon'))
 
 'Verify Page Header'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/h2_Season - Create New Attribute'), 0)
@@ -103,37 +102,37 @@ if (AttributeType.equals('Sequence Name')) {
     WebUI.setText(findTestObject('Sprint4/input_Description'), Description)
 
     'Enabled Radio Button'
-    WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : Enabled, ('AttributeLabel') : 'enabled']))
+    WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : Enabled, ('AttributeLabel') : 'enabled']))
 
     'Use ToolTip radio button'
-    WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : UseTooltip, ('AttributeLabel') : 'useTooltip']))
+    WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : UseTooltip, ('AttributeLabel') : 'useTooltip']))
 
     'Provide ToolTip Info'
     WebUI.setText(findTestObject('Sprint4/input_Tooltip'), Tooltip)
 
     'Table Wrappable radio button'
-    WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : TableWrappable, ('AttributeLabel') : 'tableWrappable']))
+    WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : TableWrappable, ('AttributeLabel') : 'tableWrappable']))
 
     'Enter Table Min Wrap Width'
     WebUI.setText(findTestObject('Object Repository/Sprint4/input_Table Min Wrap Width_tableMinWrapWidth'), TableMinWrapWidth)
 
     'Click Search icon'
-    WebUI.click(findTestObject('Sprint4/img_Search_Symbol'))
+    WebUI.enhancedClick(findTestObject('Sprint4/img_Search_Symbol'))
 
     'Provide Currency Symbol text'
     WebUI.setText(findTestObject('Sprint4/input_SearchField'), DBSequences)
 
     'Select Checkbox'
-    WebUI.click(findTestObject('Sprint4/label_CheckboxPopup', [('Symbol') : DBSequences]))
+    WebUI.enhancedClick(findTestObject('Sprint4/label_CheckboxPopup', [('Symbol') : DBSequences]))
 
     'Click Save button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
+    WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/button_Save'))
 
     'Verify Selected Currency Symbol'
-    WebUI.click(findTestObject('Sprint4/li_ItemSelected', [('Symbol') : DBSequences]))
+    WebUI.enhancedClick(findTestObject('Sprint4/li_ItemSelected', [('Symbol') : DBSequences]))
 
     'Click Create Button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Create'))
+    WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/button_Create'))
 
     'Click Save and Verify Success Popup'
     WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
@@ -150,7 +149,7 @@ if (AttributeType.equals('Sequence Name')) {
     WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
     'Click Edit Mode Toggle button'
-    WebUI.clickOffset(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 2, 4)
+    WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
     td23Text = ''
 
@@ -176,7 +175,7 @@ if (AttributeType.equals('Sequence Name')) {
     ActionsObject = WebUI.modifyObjectProperty(findTestObject('Object Repository/Sprint4/td_CreatedAttributeDynamicCheck'), 
         'xpath', 'equals', columnXpath, true)
 
-   /* WebUI.delay(2)
+    /* WebUI.delay(2)
 
 	WebDriver driver = DriverFactory.getWebDriver()
 	
@@ -187,9 +186,8 @@ if (AttributeType.equals('Sequence Name')) {
 	js.executeScript('arguments[0].scrollIntoView(true);', element)
 	
 	js.executeScript('arguments[0].click();', element)*/
-
     'Click Attributes Checkbox'
-    WebUI.click(ActionsObject)
+    WebUI.enhancedClick(ActionsObject)
 
     WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 
@@ -197,7 +195,7 @@ if (AttributeType.equals('Sequence Name')) {
     WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
 
     'Click Attributes Add icon'
-    WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
+    WebUI.enhancedClick(findTestObject('Sprint4/img_Attributes_add-icon'))
 
     //Verify the data
     'Verify Data Type'
@@ -242,7 +240,7 @@ if (AttributeType.equals('Sequence Name')) {
         'value', TableMinWrapWidth, 0)
 
     'Verify Selected Currency Symbol'
-    WebUI.click(findTestObject('Sprint4/li_ItemSelected', [('Symbol') : DBSequences]))
+    WebUI.enhancedClick(findTestObject('Sprint4/li_ItemSelected', [('Symbol') : DBSequences]))
 
     'Verify Label Database Column'
     System.out.println('The Database Column is ' + WebUI.getAttribute(findTestObject('Sprint4/input_Database Column'), 'value'))
@@ -257,16 +255,16 @@ if (AttributeType.equals('Sequence Name')) {
         TableWrappable = 'No'
 
         'Table Wrappable radio button'
-        WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : TableWrappable, ('AttributeLabel') : 'tableWrappable']))
+        WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : TableWrappable, ('AttributeLabel') : 'tableWrappable']))
     } else {
         TableWrappable = 'Yes'
 
         'Table Wrappable radio button'
-        WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : TableWrappable, ('AttributeLabel') : 'tableWrappable']))
+        WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : TableWrappable, ('AttributeLabel') : 'tableWrappable']))
     }
     
     'Click Save button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
+    WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/button_Save'))
 
     'Click Save and Verify Success Popup'
     WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
@@ -283,7 +281,7 @@ if (AttributeType.equals('Sequence Name')) {
     WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
     'Click Edit Mode Toggle button'
-    WebUI.clickOffset(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'), 2, 4)
+    WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
     columnXpath1 = (((((((((((((('//td[2][text()="' + InternalName) + '"]/..//td[3][text()="') + DisplayName) + '"]/..//td[4][text()="') + 
     Description) + '"]/..//td[5][text()="') + Enabled) + '"]/..//td[6][text()="') + UseTooltip) + '"]/..//td[7][text()=\'\']/..//td[8][text()="') + 
@@ -310,7 +308,7 @@ if (AttributeType.equals('Sequence Name')) {
     WebUI.delay(2)
 
     'Select the Attribute from the grid'
-    WebUI.click(ActionsObject)
+    WebUI.enhancedClick(ActionsObject)
 
     WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 
@@ -318,7 +316,7 @@ if (AttributeType.equals('Sequence Name')) {
     WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
 
     'Click Remove icon'
-    WebUI.click(findTestObject('Sprint4/img_Attributes_remove-icon'))
+    WebUI.enhancedClick(findTestObject('Sprint4/img_Attributes_remove-icon'))
 
     WebUI.delay(2)
 
@@ -335,6 +333,6 @@ if (AttributeType.equals('Sequence Name')) {
     WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 
     'Collapse Manage Types left panel'
-    WebUI.click(findTestObject('Sprint4/a_Manage Types'))
+    WebUI.enhancedClick(findTestObject('Sprint4/a_Manage Types'))
 }
 

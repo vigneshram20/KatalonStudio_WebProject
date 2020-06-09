@@ -6,12 +6,12 @@
    <elementGuidId>e89174ab-ab01-4e79-b561-81bdb499e24a</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//span[text()='Inherited Attributes']/../..//td[2]</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>//*[(text() = 'BRAND' or . = 'BRAND')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[contains(@class,'entityForm_attribute')][2]//td[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

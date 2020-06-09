@@ -17,15 +17,32 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.WebElement as WebElement
 import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
+import org.openqa.selenium.WebElement as WebElement
 
 List<WebElement> listOfExistingElements = WebUI.findWebElements(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized',[('internalName'):InternalName]),
 	1)
 
+if(listOfExistingElements.size()!=0)
+{
+	'Search for the record'
+	WebUI.sendKeys(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), InternalName)
+	
+	listOfExistingElements = WebUI.findWebElements(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized',[('internalName'):InternalName]),1)
+}
+WebDriver driver = DriverFactory.getWebDriver()
+
+JavascriptExecutor js = ((driver) as JavascriptExecutor)
+
 for (WebElement checkbox : listOfExistingElements) {
 	Thread.sleep(100)
-
+	
 	'Select the Checkbox'
 	checkbox.click()
+	//js.executeScript("window.scrollTo(0, "+checkbox.getLocation().y+")");
+	//js.executeScript('arguments[0].click();', checkbox)
 
 	 'Scroll To Manage Layout button'
 	WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
@@ -36,7 +53,10 @@ for (WebElement checkbox : listOfExistingElements) {
 	WebUI.delay(1)
 
 	'Click Remove icon'
-	WebUI.click(findTestObject('Sprint4/img_Attributes_remove-icon'))
+	WebUI.enhancedClick(findTestObject('Sprint4/img_Attributes_remove-icon'))
+	
+	'Search for the record'
+	WebUI.sendKeys(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), Keys.chord(Keys.CONTROL, "a",Keys.BACK_SPACE))
 
 	WebUI.delay(2)
 
@@ -55,6 +75,6 @@ WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOM
 		WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 		
 		'Click Edit Mode Toggle button'
-		WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+		WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 		
 }

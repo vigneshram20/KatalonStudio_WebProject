@@ -42,10 +42,10 @@ WebUI.callTestCase(findTestCase('Common/NavigateToTypeAndAttributeManagement'), 
 WebUI.delay(1)
 
 'CLick Attribute Management menu'
-WebUI.click(findTestObject('Sprint4/a_Manage Types'))
+WebUI.enhancedClick(findTestObject('Sprint4/a_Manage Types'))
 
 'Click Season sub menu'
-WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/a_Season'))
 
 WebUI.delay(1)
 
@@ -57,7 +57,7 @@ WebUI.delay(1)
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 'Click Edit Mode Toggle button'
-WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 'Check Page Performance'
 CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Manage Attributes - Season')
@@ -72,7 +72,7 @@ WebUI.callTestCase(findTestCase('Sprint4/linkTestCases/linkTestCase_DeleteAlread
 WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
 
 'Click Add icon -Attributes'
-WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
+WebUI.enhancedClick(findTestObject('Sprint4/img_Attributes_add-icon'))
 
 'Verify Page Header'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/h2_Season - Create New Attribute'), 0)
@@ -178,28 +178,28 @@ if (DataType.equals('String')) {
     WebUI.setText(findTestObject('Sprint4/input_Description'), Description)
 
     'Enabled Radio Button'
-    WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : Enabled, ('AttributeLabel') : 'enabled']))
+    WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : Enabled, ('AttributeLabel') : 'enabled']))
 
     'Use ToolTip radio button'
-    WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : UseTooltip, ('AttributeLabel') : 'useTooltip']))
+    WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : UseTooltip, ('AttributeLabel') : 'useTooltip']))
 
     'Provide ToolTip Info'
     WebUI.setText(findTestObject('Sprint4/input_Tooltip'), Tooltip)
 
     'Editable on Create radio button'
-    WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : EditableOnCreate, ('AttributeLabel') : 'editableOnCreate']))
+    WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : EditableOnCreate, ('AttributeLabel') : 'editableOnCreate']))
 
     'Editable on Update radio button'
-    WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : EditableOnUpdate, ('AttributeLabel') : 'editableOnUpdate']))
+    WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : EditableOnUpdate, ('AttributeLabel') : 'editableOnUpdate']))
 
     'Mass Changeable radio button'
-    WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : MassChangeable, ('AttributeLabel') : 'massChangeable']))
+    WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : MassChangeable, ('AttributeLabel') : 'massChangeable']))
 
     'Table Editable radio button'
-    WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : TableEditable, ('AttributeLabel') : 'tableEditable']))
+    WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : TableEditable, ('AttributeLabel') : 'tableEditable']))
 
     'Table Wrappable radio button'
-    WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : TableWrappable, ('AttributeLabel') : 'tableWrappable']))
+    WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : TableWrappable, ('AttributeLabel') : 'tableWrappable']))
 
     'Enter Table Min Wrap Width'
     WebUI.setText(findTestObject('Object Repository/Sprint4/input_Table Min Wrap Width_tableMinWrapWidth'), TableMinWrapWidth)
@@ -208,13 +208,13 @@ if (DataType.equals('String')) {
     WebUI.setText(findTestObject('Object Repository/Sprint4/input_Formula_formula'), Formula)
 
     'Required radio button'
-    WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : Required, ('AttributeLabel') : 'required']))
+    WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : Required, ('AttributeLabel') : 'required']))
 
     'Provide Default Value '
     WebUI.setText(findTestObject('Sprint4/input_Default Value'), DefaultValue)
 
     'Unique radio button'
-    WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : Unique, ('AttributeLabel') : 'unique']))
+    WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : Unique, ('AttributeLabel') : 'unique']))
 
     'Provide Text Box Width'
     WebUI.setText(findTestObject('Object Repository/Sprint4/input_Text Box Width_elementWidth'), ElementWidth)
@@ -230,21 +230,21 @@ if (DataType.equals('String')) {
 
     if (AttributeType.equals('Text Area')) {
         'Input field Type radio button'
-        WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : InputFieldType, ('AttributeLabel') : 'inputFieldType']))
+        WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : InputFieldType, ('AttributeLabel') : 'inputFieldType']))
     }
     
     if ((AttributeType.equals('Multi List') || AttributeType.equals('Single List')) || AttributeType.equals('Driven')) {
         'Click Search icon'
-        WebUI.click(findTestObject('Sprint4/img_Search_Symbol'))
+        WebUI.enhancedClick(findTestObject('Sprint4/img_Search_Symbol'))
 
         'Enter Search Text'
         WebUI.setText(findTestObject('Sprint4/input_SearchField'), MasterList)
 
         'Select the record'
-        WebUI.click(findTestObject('Object Repository/Sprint4/label_CheckboxPopup -URef', [('Symbol') : MasterList]))
+        WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/label_CheckboxPopup -URef', [('Symbol') : MasterList]))
 
         'Click Save button'
-        WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
+        WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/button_Save'))
 
         'Verify Selected Currency Symbol'
         WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/li_ItemSelected - URef', [('Symbol') : MasterList]), 
@@ -252,7 +252,7 @@ if (DataType.equals('String')) {
     }
     
     'Click Create Button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Create'))
+    WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/button_Create'))
 
     WebUI.delay(2)
 
@@ -306,7 +306,7 @@ if (DataType.equals('String')) {
     WebUI.delay(2)
 
     'Select the record from the grid'
-    WebUI.click(ActionsObject)
+    WebUI.enhancedClick(ActionsObject)
 
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
@@ -317,7 +317,7 @@ if (DataType.equals('String')) {
     WebUI.delay(1)
 
     'Click Add icon -Attributes'
-    WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
+    WebUI.enhancedClick(findTestObject('Sprint4/img_Attributes_add-icon'))
 
     'Verify Data Type disabled'
     WebUI.verifyElementHasAttribute(findTestObject('Sprint4/select_DataType'), 'disabled', 0)
@@ -432,16 +432,16 @@ if (DataType.equals('String')) {
         MassChangeable = 'No'
 
         'Mass Changeable radio button'
-        WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : MassChangeable, ('AttributeLabel') : 'massChangeable']))
+        WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : MassChangeable, ('AttributeLabel') : 'massChangeable']))
     } else {
         MassChangeable = 'Yes'
 
         'Mass Changeable radio button'
-        WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : MassChangeable, ('AttributeLabel') : 'massChangeable']))
+        WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : MassChangeable, ('AttributeLabel') : 'massChangeable']))
     }
     
     'Click Save button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
+    WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/button_Save'))
 
     WebUI.delay(2)
 
@@ -485,7 +485,7 @@ if (DataType.equals('String')) {
     WebUI.delay(2)
 
     'Select the Attribute from the grid'
-    WebUI.click(ActionsObject)
+    WebUI.enhancedClick(ActionsObject)
 
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
@@ -495,7 +495,7 @@ if (DataType.equals('String')) {
     WebUI.delay(1)
 
     'Click Remove icon'
-    WebUI.click(findTestObject('Sprint4/img_Attributes_remove-icon'))
+    WebUI.enhancedClick(findTestObject('Sprint4/img_Attributes_remove-icon'))
 
     WebUI.delay(2)
 
@@ -512,6 +512,6 @@ if (DataType.equals('String')) {
 	WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 	
 	'Collapse Manage Types left panel'
-	WebUI.click(findTestObject('Sprint4/a_Manage Types'))
+	WebUI.enhancedClick(findTestObject('Sprint4/a_Manage Types'))
 }
 

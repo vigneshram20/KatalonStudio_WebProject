@@ -41,10 +41,10 @@ WebUI.callTestCase(findTestCase('Common/NavigateToTypeAndAttributeManagement'), 
 WebUI.delay(1)
 
 'CLick Attribute Management menu'
-WebUI.click(findTestObject('Sprint4/a_Manage Types'))
+WebUI.enhancedClick(findTestObject('Sprint4/a_Manage Types'))
 
 'Click Season sub menu'
-WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/a_Season'))
 
 WebUI.delay(1)
 
@@ -58,7 +58,7 @@ WebUI.delay(1)
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 'Click Edit Mode Toggle button'
-WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 'Check Page Performance'
 CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Manage Attributes - Season')
@@ -73,7 +73,7 @@ WebUI.callTestCase(findTestCase('Sprint4/linkTestCases/linkTestCase_DeleteAlread
 WebUI.sendKeys(findTestObject('Sprint3/button_Manage Layout'), Keys.chord(Keys.PAGE_DOWN))
 
 'Click Add icon -Attributes'
-WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
+WebUI.enhancedClick(findTestObject('Sprint4/img_Attributes_add-icon'))
 
 WebUI.delay(1)
 
@@ -121,34 +121,34 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
     WebUI.setText(findTestObject('Sprint4/input_Description'), Description)
 
     'Enabled Radio Button'
-    WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : Enabled, ('AttributeLabel') : 'enabled']))
+    WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : Enabled, ('AttributeLabel') : 'enabled']))
 
     'Use ToolTip radio button'
-    WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : UseTooltip, ('AttributeLabel') : 'useTooltip']))
+    WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : UseTooltip, ('AttributeLabel') : 'useTooltip']))
 
     'Provide ToolTip Info'
     WebUI.setText(findTestObject('Sprint4/input_Tooltip'), Tooltip)
 
     'Editable on Create radio button'
-    WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : EditableOnCreate, ('AttributeLabel') : 'editableOnCreate']))
+    WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : EditableOnCreate, ('AttributeLabel') : 'editableOnCreate']))
 
     'Editable on Update radio button'
-    WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : EditableOnUpdate, ('AttributeLabel') : 'editableOnUpdate']))
+    WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : EditableOnUpdate, ('AttributeLabel') : 'editableOnUpdate']))
 
     'Mass Changeable radio button'
-    WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : MassChangeable, ('AttributeLabel') : 'massChangeable']))
+    WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : MassChangeable, ('AttributeLabel') : 'massChangeable']))
 
     'Table Editable radio button'
-    WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : TableEditable, ('AttributeLabel') : 'tableEditable']))
+    WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : TableEditable, ('AttributeLabel') : 'tableEditable']))
 
     'Table Wrappable radio button'
-    WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : TableWrappable, ('AttributeLabel') : 'tableWrappable']))
+    WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : TableWrappable, ('AttributeLabel') : 'tableWrappable']))
 
     'Enter Table Min Wrap Width'
     WebUI.setText(findTestObject('Object Repository/Sprint4/input_Table Min Wrap Width_tableMinWrapWidth'), TableMinWrapWidth)
 
     'Required radio button'
-    WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : Required, ('AttributeLabel') : 'required']))
+    WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : Required, ('AttributeLabel') : 'required']))
 
     if (!(AttributeType.equals('Image'))) {
         'Provide Default Value '
@@ -162,7 +162,7 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
     
     if (AttributeType.equals('User Ref')) {
         'Click Search icon'
-        WebUI.click(findTestObject('Sprint4/img_Search_Symbol'))
+        WebUI.enhancedClick(findTestObject('Sprint4/img_Search_Symbol'))
 
         WebUI.delay(2)
 
@@ -170,10 +170,10 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
         WebUI.sendKeys(findTestObject('Sprint4/input_SearchField'), UserRoles)
 		
         'Select Checkbox'
-        WebUI.click(findTestObject('Object Repository/Sprint4/label_CheckboxPopup -URef', [('Symbol') : UserRoles]))
+        WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/label_CheckboxPopup -URef', [('Symbol') : UserRoles]))
 
         'Click Save button'
-        WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
+        WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/button_Save'))
 
         'Verify Selected Currency Symbol'
         WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/li_ItemSelected - URef', [('Symbol') : UserRoles]), 
@@ -188,7 +188,7 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
         WebUI.setText(findTestObject('Object Repository/Sprint4/input_Text Box Height_elementHeight'), ElementHeight)
 
         'Provide Fit To Size'
-        WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : FitToSize, ('AttributeLabel') : 'fitToSize']))
+        WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : FitToSize, ('AttributeLabel') : 'fitToSize']))
 
         'Provide Max File Size'
         WebUI.setText(findTestObject('Object Repository/Sprint4/input_MaxFileSize'), MaxFileSize)
@@ -196,23 +196,23 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
         'Provide Supported Type'
 
         'Click Search icon'
-        WebUI.click(findTestObject('Sprint4/img_Search_Symbol'))
+        WebUI.enhancedClick(findTestObject('Sprint4/img_Search_Symbol'))
 
         'Provide Currency Symbol text'
         WebUI.setText(findTestObject('Sprint4/input_SearchField'), SupportedType)
 
         'Select Checkbox'
-        WebUI.click(findTestObject('Sprint4/label_CheckboxPopup', [('Symbol') : SupportedType]))
+        WebUI.enhancedClick(findTestObject('Sprint4/label_CheckboxPopup', [('Symbol') : SupportedType]))
 
         'Click Save button'
-        WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
+        WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/button_Save'))
 
         'Verify Supported Type Symbol'
         WebUI.verifyElementPresent(findTestObject('Sprint4/li_ItemSelected', [('Symbol') : SupportedType]), 0)
     }
     
     'Click Create Button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Create'))
+    WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/button_Create'))
 
     'Click Save and Verify Success Popup'
     WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
@@ -258,7 +258,7 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
 
     WebUI.delay(2)
 
-    WebUI.click(ActionsObject)
+    WebUI.enhancedClick(ActionsObject)
 
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
@@ -267,7 +267,7 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
 
     WebUI.delay(1)
 
-    WebUI.click(findTestObject('Sprint4/img_Attributes_add-icon'))
+    WebUI.enhancedClick(findTestObject('Sprint4/img_Attributes_add-icon'))
 
     'Verify Data Type'
     WebUI.verifyElementHasAttribute(findTestObject('Sprint4/select_DataType'), 'disabled', 0)
@@ -382,16 +382,16 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
         MassChangeable = 'No'
 
         'Mass Changeable radio button'
-        WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : MassChangeable, ('AttributeLabel') : 'massChangeable']))
+        WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : MassChangeable, ('AttributeLabel') : 'massChangeable']))
     } else {
         MassChangeable = 'Yes'
 
         'Mass Changeable radio button'
-        WebUI.click(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : MassChangeable, ('AttributeLabel') : 'massChangeable']))
+        WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : MassChangeable, ('AttributeLabel') : 'massChangeable']))
     }
     
     'Click Save button'
-    WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
+    WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/button_Save'))
 
     'Click Save and Verify Success Popup'
     WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySuccessPopup'), [:], FailureHandling.STOP_ON_FAILURE)
@@ -437,7 +437,7 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
     WebUI.delay(2)
 
     'Select the Attribute from the grid'
-    WebUI.click(ActionsObject)
+    WebUI.enhancedClick(ActionsObject)
 
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
@@ -447,7 +447,7 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
     WebUI.delay(1)
 
     'Click Remove icon'
-    WebUI.click(findTestObject('Sprint4/img_Attributes_remove-icon'))
+    WebUI.enhancedClick(findTestObject('Sprint4/img_Attributes_remove-icon'))
 
     WebUI.delay(2)
 
@@ -464,6 +464,6 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
 	WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 	
 	'Collapse Manage Types left panel'
-	WebUI.click(findTestObject('Sprint4/a_Manage Types'))
+	WebUI.enhancedClick(findTestObject('Sprint4/a_Manage Types'))
 }
 

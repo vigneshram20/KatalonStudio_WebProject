@@ -22,10 +22,10 @@ WebUI.callTestCase(findTestCase('Common/NavigateToTypeAndAttributeManagement'), 
 WebUI.delay(1)
 
 'CLick Attribute Management menu'
-WebUI.click(findTestObject('Sprint4/a_Manage Types'))
+WebUI.enhancedClick(findTestObject('Sprint4/a_Manage Types'))
 
 'Click Season sub menu'
-WebUI.click(findTestObject('Object Repository/Sprint3/a_Season'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/a_Season'))
 
 'Verify Season hamburger menu heading'
 WebUI.verifyElementPresent(findTestObject('Sprint3/h2_Season'), 10)
@@ -34,13 +34,13 @@ WebUI.verifyElementPresent(findTestObject('Sprint3/h2_Season'), 10)
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 'Click Edit Mode Toggle button'
-WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 'Check Page Performance'
 CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Manage Type - Season')
 
 'Click Add Subtype button'
-WebUI.click(findTestObject('Sprint3/button_Add Subtype'))
+WebUI.enhancedClick(findTestObject('Sprint3/button_Add Subtype'))
 
 'Provide Internal Name'
 WebUI.setText(findTestObject('Sprint3/input_InternalName'), InternaltypeName)
@@ -49,13 +49,13 @@ WebUI.setText(findTestObject('Sprint3/input_InternalName'), InternaltypeName)
 WebUI.setText(findTestObject('Object Repository/Sprint4/input_DisplayName'), DisplaytypeName)
 
 'Select Instantiable radio butotn'
-WebUI.click(findTestObject('Object Repository/Sprint3/radio_Instantiable', [('YesOrNo') : 'Yes']))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/radio_Instantiable', [('YesOrNo') : 'Yes']))
 
 'Select SubType allowed radio button'
-WebUI.click(findTestObject('Object Repository/Sprint3/radio_SubTypeAllowed', [('YesOrNo') : 'Yes']))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/radio_SubTypeAllowed', [('YesOrNo') : 'Yes']))
 
 'Click Create button'
-WebUI.click(findTestObject('Object Repository/Sprint3/button_Create'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/button_Create'))
 
 WebUI.delay(2)
 
@@ -66,9 +66,9 @@ WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.END
 WebUI.scrollToElement(findTestObject('Sprint4/button_Cancel'), 0)
 
 'Click Cancel button'
-WebUI.click(findTestObject('Sprint4/button_Cancel'))
+WebUI.enhancedClick(findTestObject('Sprint4/button_Cancel'))
 
 'Click Yes button'
-WebUI.click(findTestObject('Common Objects/button_Yes'))
+WebUI.enhancedClick(findTestObject('Common Objects/button_Yes'))
 
 WebUI.delay(2)

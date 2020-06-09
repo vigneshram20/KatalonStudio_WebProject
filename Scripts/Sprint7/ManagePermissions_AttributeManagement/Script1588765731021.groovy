@@ -31,6 +31,10 @@ String roleDescription = CustomKeywords.'myKeywords.customKeywords.timeStampWith
 WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CreateRoleAlone'), [('roleDescription') : roleDescription, ('roleName') : roleName], 
     FailureHandling.STOP_ON_FAILURE)
 
+'Assign Permission To Role'
+WebUI.callTestCase(findTestCase('Sprint7/linkTestCases/linkTestCase_AssignPermissionToRoleForLibraryAlone'), [('roleName') : roleName
+		, ('libraryName') : 'Season', ('permissionValues') : permissionValues], FailureHandling.STOP_ON_FAILURE)
+
 'Navigate to Type and Attribute Management'
 WebUI.callTestCase(findTestCase('Common/NavigateToTypeAndAttributeManagement'), [:], FailureHandling.STOP_ON_FAILURE)
 

@@ -16,9 +16,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.click(findTestObject('Object Repository/Sprint6/button_Manage Driven Rules'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Manage Driven Rules'))
 
-WebUI.click(findTestObject('Sprint3/span_Edit Mode_toggle_btn-handle'))
+WebUI.enhancedClick(findTestObject('Sprint3/span_Edit Mode_toggle_btn-handle'))
 
 'Check Page Performance'
 CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Manage Driven Rules - Season')
@@ -37,7 +37,7 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/th_Level 5'
 
 WebUI.verifyElementPresent(findTestObject('Sprint6/input_Manage Driven Rules'), 0)
 
-WebUI.click(findTestObject('Sprint6/img_Manage Driven Rules_Add_icon'))
+WebUI.enhancedClick(findTestObject('Sprint6/img_Manage Driven Rules_Add_icon'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_Manage Driven Rules'), 0)
 
@@ -63,9 +63,9 @@ catch(Exception ex)
 	WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Attributes_FirstLevel'), (level1Attribute), true)
 }
 
-WebUI.click(findTestObject('Sprint6/label_parameterized', [('param') : level1ListValue]))
+WebUI.enhancedClick(findTestObject('Sprint6/label_parameterized', [('param') : level1ListValue]))
 
-WebUI.click(findTestObject('Sprint6/button_moveToRightAttributes'))
+WebUI.enhancedClick(findTestObject('Sprint6/button_moveToRightAttributes'))
 
 try
 {
@@ -77,19 +77,19 @@ catch(Exception ex)
 }
 
 
-WebUI.click(findTestObject('Sprint6/label_parameterized', [('param') : level2ListValue]))
+WebUI.enhancedClick(findTestObject('Sprint6/label_parameterized', [('param') : level2ListValue]))
 
-WebUI.click(findTestObject('Sprint6/button_moveToRightRoles'))
+WebUI.enhancedClick(findTestObject('Sprint6/button_moveToRightRoles'))
 
-WebUI.click(findTestObject('Sprint5/button_Popup_Save'))
+WebUI.enhancedClick(findTestObject('Sprint5/button_Popup_Save'))
 
 WebUI.verifyElementPresent(findTestObject('Sprint6/h5_Confirm to Save'), 0)
 
-WebUI.click(findTestObject('Sprint6/button_Yes'))
+WebUI.enhancedClick(findTestObject('Sprint6/button_Yes'))
 
-WebUI.click(findTestObject('Sprint6/button_Save'))
+WebUI.enhancedClick(findTestObject('Sprint6/button_Save'))
 
-WebUI.click(findTestObject('Sprint6/button_Yes'))
+WebUI.enhancedClick(findTestObject('Sprint6/button_Yes'))
 
 WebUI.delay(5)
 
@@ -97,22 +97,22 @@ WebUI.verifyElementNotPresent(findTestObject('Sprint6/button_Save'), 30)
 
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 
-WebUI.click(findTestObject('Sprint3/span_Edit Mode_toggle_btn-handle'))
+WebUI.enhancedClick(findTestObject('Sprint3/span_Edit Mode_toggle_btn-handle'))
 
-WebUI.click(findTestObject('Sprint6/td_drivenRules_parameterized', [('param1') : level1Attribute, ('param2') : level2Attribute
+WebUI.enhancedClick(findTestObject('Sprint6/td_drivenRules_parameterized', [('param1') : level1Attribute, ('param2') : level2Attribute
             , ('value1') : level1ListValue, ('value2') : level2ListValue]))
 
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 
-WebUI.click(findTestObject('Sprint6/img_Manage Driven Rules_remove icon'))
+WebUI.enhancedClick(findTestObject('Sprint6/img_Manage Driven Rules_remove icon'))
 
 WebUI.verifyElementPresent(findTestObject('Sprint6/div_One or more Driven Rule(s) have been marked for deletion'), 0)
 
-WebUI.click(findTestObject('Sprint6/button_Save'))
+WebUI.enhancedClick(findTestObject('Sprint6/button_Save'))
 
 WebUI.verifyElementPresent(findTestObject('Sprint6/h5_Confirm to Save'), 0)
 
-WebUI.click(findTestObject('Sprint6/button_Yes'))
+WebUI.enhancedClick(findTestObject('Sprint6/button_Yes'))
 
 not_run:WebUI.verifyElementNotPresent(findTestObject('Sprint6/button_Save'), 30)
 
