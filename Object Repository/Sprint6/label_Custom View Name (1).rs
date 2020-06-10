@@ -1,103 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>td_drivenRules_parameterized</name>
+   <name>label_Custom View Name (1)</name>
    <tag></tag>
-   <elementGuidId>06e237c0-9042-4bde-bee0-1e50e883b3b6</elementGuidId>
-   <selectorCollection>
-      <entry>
-         <key>XPATH</key>
-         <value>//td[2][.='${param1}']/../td[3]/../td[4][.='${param2}']/../td[5]/../td[1]/div</value>
-      </entry>
-      <entry>
-         <key>BASIC</key>
-         <value>//*[(text() = 'QADrivenLevel02037' or . = 'QADrivenLevel02037')]</value>
-      </entry>
-   </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <elementGuidId>99dd07d0-2d3d-4347-9322-9fa0dd0bf3b6</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>td</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>role</name>
-      <type>Main</type>
-      <value>cell</value>
+      <value>label</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>text-center</value>
+      <value>control-label mr-3 mb-2 pt-1</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>for</name>
+      <type>Main</type>
+      <value>viewName</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>QADrivenLevel02037</value>
+      <value>Custom View Name *</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;root&quot;)/div[1]/div[@class=&quot;manageLibrary_manage_library_container__RdgCO mt-50&quot;]/div[@class=&quot;manageLibrary_content_section__3u3ow&quot;]/div[@class=&quot;row driven_rules_wrapper driven_driven_rules__1Ritu&quot;]/div[@class=&quot;col-12&quot;]/div[@class=&quot;table_body_scroll&quot;]/table[@class=&quot;tableFixed&quot;]/tbody[1]/tr[2]/td[@class=&quot;text-center&quot;]</value>
+      <value>id(&quot;createNewSeason&quot;)/div[@class=&quot;modal-dialog&quot;]/div[@class=&quot;modal-content&quot;]/div[@class=&quot;modal-body pb-0&quot;]/div[@class=&quot;form-group dflex mt-3 addl-padding&quot;]/label[@class=&quot;control-label mr-3 mb-2 pt-1&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='root']/div/div/div[4]/div/div[2]/div/table/tbody/tr[2]/td[2]</value>
+      <value>//div[@id='createNewSeason']/div/div/div[2]/div/label</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Furniture, Lighting'])[1]/following::td[8]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Manage Views : Create new Custom View'])[1]/following::label[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Division'])[1]/following::td[9]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Go'])[1]/following::label[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='qa_test_l1'])[1]/preceding::td[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Save views at Highest Type Level'])[1]/preceding::label[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='QADrivenLevel12037'])[1]/preceding::td[2]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>//*/text()[normalize-space(.)='QADrivenLevel02037']/parent::*</value>
+      <value>//*/text()[normalize-space(.)='Custom View Name']/parent::*</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//tr[2]/td[2]</value>
+      <value>//label</value>
    </webElementXpaths>
 </WebElementEntity>

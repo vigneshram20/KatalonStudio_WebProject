@@ -23,6 +23,8 @@ import org.openqa.selenium.WebDriver as WebDriver
 
 WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/li_Permissions'), FailureHandling.STOP_ON_FAILURE)
 
+WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Library'), libraryName, false)
+
 'Click Edit Mode Toggle button'
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 

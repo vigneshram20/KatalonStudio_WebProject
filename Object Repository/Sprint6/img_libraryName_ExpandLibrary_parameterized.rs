@@ -6,12 +6,12 @@
    <elementGuidId>ba9bd1d3-d9e6-42d5-8eca-695b6be5d748</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//img[@title = 'open']</value>
+         <key>XPATH</key>
+         <value>//td[3][.='${libraryName}']/../td[2]//img</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//tr//td[.='${libraryName}'][@role]/preceding-sibling::td//img</value>
+         <key>BASIC</key>
+         <value>//img[@title = 'open']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

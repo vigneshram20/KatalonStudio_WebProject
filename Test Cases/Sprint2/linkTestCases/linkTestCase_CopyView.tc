@@ -19,4 +19,11 @@
       <masked>false</masked>
       <name>viewType</name>
    </variable>
+   <variable>
+      <defaultValue>false</defaultValue>
+      <description></description>
+      <id>9674e325-2931-4f04-9d7a-cc1fc626c800</id>
+      <masked>false</masked>
+      <name>SharedView</name>
+   </variable>
 </TestCaseEntity>

@@ -50,6 +50,8 @@ WebUI.verifyElementPresent(findTestObject('Sprint6/div_User and Role Management'
 
 WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/li_Permissions'), FailureHandling.STOP_ON_FAILURE)
 
+WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Library'), 'Season', false)
+
 'Click Edit Mode Toggle button'
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
@@ -125,6 +127,8 @@ WebUI.delay(2)
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 
 WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/li_Permissions'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Library'), 'Season', false)
 
 'Click Edit Mode Toggle button'
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))

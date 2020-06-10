@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>img_libraryName_Dropdown_param</name>
+   <name>img_View_remove_list</name>
    <tag></tag>
-   <elementGuidId>65c124ea-f555-4a14-a8c3-8655cda3ce31</elementGuidId>
+   <elementGuidId>3812030f-5048-4acb-8298-682ee77c5dc5</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//td[3][.='${library}']/..//td[4]//img</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
-         <value>//img[@title = 'open']</value>
+         <value>//img[@alt = 'Close']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -26,43 +22,50 @@
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>remove_list</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
       <name>src</name>
       <type>Main</type>
-      <value>/static/media/arrow_down.9967c09b.svg</value>
+      <value>/static/media/small-close.a053b605.svg</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>title</name>
+      <name>alt</name>
       <type>Main</type>
-      <value>open</value>
+      <value>Close</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;react-tabs-3&quot;)/div[@class=&quot;userRole_permission_list_wrapper__b6xvz&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;userRole_table_Scroll__nYmSj col-12 table-responsive&quot;]/table[@class=&quot;userRole_expend_table__20HeJ&quot;]/tbody[1]/tr[2]/td[4]/div[@class=&quot;checkbox&quot;]/div[@class=&quot;userRole_dropdown__3ATxD&quot;]/img[1]</value>
+      <value>id(&quot;root&quot;)/div[1]/main[@class=&quot;manage_season&quot;]/div[@class=&quot;wrapper_collapse&quot;]/div[@class=&quot;notificationList_notification_list__BBgnx&quot;]/div[@class=&quot;notificationList_sharing_People__1Kdtf&quot;]/div[@class=&quot;float-right&quot;]/img[@class=&quot;remove_list&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='react-tabs-3']/div/div/div[2]/table/tbody/tr[2]/td[4]/div/div/img</value>
+      <value>//div[@id='root']/div/main/div[2]/div/div/div/img</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:img</name>
       <type>Main</type>
-      <value>//img[@title='open']</value>
+      <value>//img[@alt='Close']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//td[4]/div/div/img</value>
+      <value>//div/div/img</value>
    </webElementXpaths>
 </WebElementEntity>

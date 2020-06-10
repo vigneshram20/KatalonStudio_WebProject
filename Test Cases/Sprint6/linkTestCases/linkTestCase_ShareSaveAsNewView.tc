@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>linkTestCase_ShareSaveAsNewView</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>96b976ae-ef08-4a0e-99af-b585d7bb65fe</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>f56f8d14-8a14-40d5-ac15-0697b5f023b2</id>
+      <masked>false</masked>
+      <name>viewName</name>
+   </variable>
+</TestCaseEntity>

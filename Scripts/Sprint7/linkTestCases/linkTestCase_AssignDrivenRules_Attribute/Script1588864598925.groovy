@@ -124,6 +124,8 @@ WebUI.delay(3)
 
 WebUI.waitForPageLoad(0)
 
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Manage Driven Rules'))
+
 WebUI.enableSmartWait()
 
 WebUI.verifyElementNotPresent(findTestObject('Sprint6/td_drivenRules_parameterized', [('param1') : level1Attribute, ('param2') : level2Attribute

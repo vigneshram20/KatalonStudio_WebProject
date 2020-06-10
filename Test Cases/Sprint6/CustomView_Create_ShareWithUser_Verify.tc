@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CustomView_Create_ShareWithUser_Verify</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c9e7340e-e866-47da-a78b-2a459814231e</testCaseGuid>
+   <variable>
+      <defaultValue>'Custom'</defaultValue>
+      <description></description>
+      <id>14f54b7f-c7d9-45e0-8af2-4cf913d5c498</id>
+      <masked>false</masked>
+      <name>viewType</name>
+   </variable>
+   <variable>
+      <defaultValue>'TSTVCA PTGUEST'</defaultValue>
+      <description></description>
+      <id>33534d4e-0cb9-4731-bbe2-3f467fea1f45</id>
+      <masked>false</masked>
+      <name>userToAssign</name>
+   </variable>
+   <variable>
+      <defaultValue>'tstvcaptguest'</defaultValue>
+      <description></description>
+      <id>721babb9-818f-441c-9aa6-6362779cc983</id>
+      <masked>false</masked>
+      <name>testUserName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Untitled1'</defaultValue>
+      <description></description>
+      <id>0286d296-0032-4aff-a351-a80a5810f699</id>
+      <masked>false</masked>
+      <name>testUserPassword</name>
+   </variable>
+</TestCaseEntity>

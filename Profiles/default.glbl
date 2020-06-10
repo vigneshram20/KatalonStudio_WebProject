@@ -11,6 +11,11 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
+      <initValue>'Vigneshram S'</initValue>
+      <name>FullName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
       <initValue>'vs1'</initValue>
       <name>USERNAME</name>
    </GlobalVariableEntity>
