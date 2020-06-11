@@ -5,4 +5,25 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>d9f09c63-d5ed-4788-9d7c-eab744c751ad</testCaseGuid>
+   <variable>
+      <defaultValue>'QA'</defaultValue>
+      <description></description>
+      <id>e18e2fe7-e35b-4472-95b4-20ec615cc942</id>
+      <masked>false</masked>
+      <name>firstName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Automation'</defaultValue>
+      <description></description>
+      <id>d1655eec-8306-4f35-ae89-7605d5b25396</id>
+      <masked>false</masked>
+      <name>lastName</name>
+   </variable>
+   <variable>
+      <defaultValue>'(555) 555-1234'</defaultValue>
+      <description></description>
+      <id>2a3e5d99-5d00-4ed0-b731-6bc67ca7a695</id>
+      <masked>false</masked>
+      <name>contactNo</name>
+   </variable>
 </TestCaseEntity>

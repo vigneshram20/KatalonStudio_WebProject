@@ -40,7 +40,7 @@ WebUI.callTestCase(findTestCase('Sprint7/linkTestCases/linkTestCase_AssignPermis
         , ('libraryName') : 'Season', ('permissionValues') : permissionValues], FailureHandling.STOP_ON_FAILURE)
 
 'Create User and assign to Role'
-String userID = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA', 'ss')
+String userID = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('qa', 'mmss')
 
 String emailIDRNo = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('', 'HHss')
 

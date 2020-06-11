@@ -13,13 +13,6 @@
       <name>viewType</name>
    </variable>
    <variable>
-      <defaultValue>'TSTVCA PTGUEST'</defaultValue>
-      <description></description>
-      <id>394111e7-8256-4db9-964a-569feec48645</id>
-      <masked>false</masked>
-      <name>userToAssign</name>
-   </variable>
-   <variable>
       <defaultValue>'tstvcaptguest'</defaultValue>
       <description></description>
       <id>13e39e29-c3c2-479f-a4ec-c971b02fbc4f</id>
@@ -32,5 +25,12 @@
       <id>fe586aae-ffcc-47d9-b2ad-63c3e08f4652</id>
       <masked>false</masked>
       <name>testUserPassword</name>
+   </variable>
+   <variable>
+      <defaultValue>['create']</defaultValue>
+      <description></description>
+      <id>5e0768ab-5250-4c0c-8025-e8a9c3744935</id>
+      <masked>false</masked>
+      <name>permissionValues</name>
    </variable>
 </TestCaseEntity>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>span_AddRoles_param</name>
+   <name>span_RemoveAllRoles_param</name>
    <tag></tag>
-   <elementGuidId>e9416f91-0f0c-4988-9dcc-ab6a7acdd65e</elementGuidId>
+   <elementGuidId>22feeb7e-e024-4184-b079-b2d46c67acde</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//td[2][text()='${userID}']/..//td[8]/div/span[contains(@class,'add_Roles')]</value>
+         <value>//td[2][text()='${userID}']/..//td[8]/div/span/img[contains(@src,'close')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

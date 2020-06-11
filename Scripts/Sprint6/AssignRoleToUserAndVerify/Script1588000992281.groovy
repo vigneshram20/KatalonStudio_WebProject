@@ -17,24 +17,17 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.configuration.RunConfiguration
 
-String userID = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA', 'ss')
+String userID = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('qa', 'mmss')
 
 String emailIDRNo = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('', 'HHss')
 String emailID = 'qatest'+ emailIDRNo +"@photoninfotech.net"
 
-String userIDEdited = userID + 'Edited'
+String userIDEdited = userID + 'edited'
 
 String displayName = 'QA Automation' + userID
 
 String displayNameEdited = displayName + 'Edited'
 
-String firstName = 'QA'
-
-String lastName = 'Automation'
-
-String contactNo = '987'
-
-String RoleName = 'SYSTEM ADMINISTRATOR'
 
 if(!RunConfiguration.getExecutionSource().contains("Test Suites"))
 {
@@ -50,7 +43,7 @@ if(!RunConfiguration.getExecutionSource().contains("Test Suites"))
 WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CreateIndependantUser'), [('userID') : userID, ('firstName') : firstName
         , ('lastName') : lastName, ('emailID') : emailID, ('contactNo') : contactNo], FailureHandling.STOP_ON_FAILURE)
 
-'Click Save button'
+/*'Click Save button'
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Save'))
 
 'Verify the confirmation popup'
@@ -62,15 +55,15 @@ WebUI.click(findTestObject('Object Repository/Sprint6/button_Yes'))
 ''
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_User has been modified successfully'), 0)
 
-WebUI.click(findTestObject('Common Objects/button_OK'))
+WebUI.click(findTestObject('Common Objects/button_OK'))*/
 
-WebUI.refresh()
+/*WebUI.refresh()
 
-WebUI.delay(2)
+WebUI.delay(2)*/
 
-WebUI.click(findTestObject('Object Repository/Sprint6/li_Users'))
+/*WebUI.click(findTestObject('Object Repository/Sprint6/li_Users'))
 
-WebUI.click(findTestObject('Sprint3/span_Edit Mode_toggle_btn-handle'))
+WebUI.click(findTestObject('Sprint3/span_Edit Mode_toggle_btn-handle'))*/
 
 'Scroll to the user'
 WebUI.scrollToElement(findTestObject('Sprint6/span_AddRoles_param', [('userID') : userID]), 0)
@@ -108,11 +101,11 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_User has
 
 WebUI.click(findTestObject('Common Objects/button_OK'))
 
-WebUI.refresh()
+/*WebUI.refresh()
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/li_Users'))
+WebUI.click(findTestObject('Object Repository/Sprint6/li_Users'))*/
 
 WebUI.click(findTestObject('Sprint3/span_Edit Mode_toggle_btn-handle'))
 

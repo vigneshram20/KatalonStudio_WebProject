@@ -17,22 +17,16 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.configuration.RunConfiguration
 
-String userID = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA', 'HHmm')
+String userID = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('qa', 'HHmm')
 
-String userIDEdited = userID + 'Edited'
+String userIDEdited = userID + 'edited'
 
 String displayName = 'QA Automation' + userID
 
 String displayNameEdited = displayName + 'Edited'
 
-String firstName = 'QA'
-
-String lastName = 'Automation'
-
 String emailIDRNo = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('', 'HHmm')
 String emailID = 'qatest'+ emailIDRNo +"@photoninfotech.net"
-
-String contactNo = '987'
 
 if(!RunConfiguration.getExecutionSource().contains("Test Suites"))
 {
@@ -70,10 +64,10 @@ WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit
 
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-handle'))
 
-WebUI.setText(findTestObject('Sprint6/input_USERS_searchInput'), userID)
+WebUI.setText(findTestObject('Sprint6/input_USERS_searchInput'), userID.toLowerCase())
 
 //td[2][.='vs1']/..//td[3][.='Vigneshram S']/..//td[4][.='Vigneshram']/..//td[5][.='S']/..//td[6][.='vs1@wsgc.com']/..//td[7][.='']/..//td[8][.]/..//td[9][.='Active']/..//td[1]
-WebUI.click(findTestObject('Object Repository/Sprint6/div_td_user_table_verification', [('userID') : userID, ('fullName') : (firstName + 
+WebUI.click(findTestObject('Object Repository/Sprint6/div_td_user_table_verification', [('userID') : userID.toLowerCase(), ('fullName') : (firstName + 
             ' ') + lastName, ('firstName') : firstName, ('lastName') : lastName, ('emailID') : emailID, ('contactNo') : contactNo
             , ('status') : 'Active']))
 

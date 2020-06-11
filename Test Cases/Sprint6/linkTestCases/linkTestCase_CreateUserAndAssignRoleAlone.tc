@@ -54,4 +54,11 @@
       <masked>false</masked>
       <name>contactNo</name>
    </variable>
+   <variable>
+      <defaultValue>'No'</defaultValue>
+      <description></description>
+      <id>3853bbf7-8e5f-4695-854a-8dd6dcf22b2b</id>
+      <masked>false</masked>
+      <name>removeAllRoles</name>
+   </variable>
 </TestCaseEntity>

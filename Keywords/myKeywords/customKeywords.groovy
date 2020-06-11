@@ -56,29 +56,29 @@ class customKeywords {
 	 */
 	@Keyword
 	def String timeStampWithStringGen(String inputName, String dateFormat ) {
+		
+		'Current Date Java Code'
 		SimpleDateFormat formatter = new SimpleDateFormat(dateFormat)
-
+		TimeZone timeZone = TimeZone.getTimeZone("US/Pacific");
+		formatter.setTimeZone(timeZone);
 		Date date = new Date()
-
 		String dateFormatted = formatter.format(date)
-
 		return inputName+dateFormatted
 	}
-/**
- * 
- */
+	/**
+	 * 
+	 */
 	@Keyword
-	def checkPagePerformanceNow(String pageName)
-	{
+	def checkPagePerformanceNow(String pageName) {
 		WebDriver driver = DriverFactory.getWebDriver()
-		
+
 		JavascriptExecutor js = ((driver) as JavascriptExecutor)
-		
+
 		long navigationStart = js.executeScript('return window.performance.timing.navigationStart');
 		long responseStart = js.executeScript('return window.performance.timing.responseStart');
 		long domComplete = js.executeScript('return window.performance.timing.domComplete');
 		long loadEventEnd  = js.executeScript('return window.performance.timing.loadEventEnd');
-		
+
 		float backEndPerf = ((float)(responseStart - navigationStart)) / 1000;
 		float frontEndPerf = ((float)(domComplete - responseStart)) / 1000;
 		float loadingTime = ((float)(loadEventEnd-navigationStart))/1000;

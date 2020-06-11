@@ -23,7 +23,7 @@ WebUI.delay(3)
 def gridHeaderA = WebUI.removeObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 'xpath')
 
 gridHeaderA = WebUI.modifyObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 'xpath',
-	'equals', '//table/thead/tr/th', true)
+	'equals', "//div[@class='rTableHead freeze actions']", true)
 
 WebUI.waitForPageLoad(60)
 

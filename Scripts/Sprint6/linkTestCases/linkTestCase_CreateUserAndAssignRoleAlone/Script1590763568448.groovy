@@ -16,7 +16,12 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.configuration.RunConfiguration
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
+import org.openqa.selenium.WebElement as WebElement
 
+if(!emailID.equals(""))
+{
+	
 'Create User'
 WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CreateIndependantUser'), [('userID') : userID, ('firstName') : firstName
 		, ('lastName') : lastName, ('emailID') : emailID, ('contactNo') : contactNo], FailureHandling.STOP_ON_FAILURE)
@@ -29,6 +34,7 @@ WebUI.click(findTestObject('Object Repository/Sprint6/button_Yes'))
 
 WebUI.click(findTestObject('Common Objects/button_OK'))
 
+}
 'Scroll to Top'
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 
@@ -42,6 +48,18 @@ WebUI.setText(findTestObject('Sprint6/input_USERS_searchInput'), userID)
 
 'Scroll to the user'
 WebUI.scrollToElement(findTestObject('Sprint6/span_AddRoles_param', [('userID') : userID]), 0)
+
+if(removeAllRoles.equals("Yes"))
+{
+	List<WebElement> listOfExistingElements = WebUI.findWebElements(findTestObject('Object Repository/Sprint6/span_RemoveAllRoles_param', [('userID') : userID]),1)
+	
+	for(WebElement element : listOfExistingElements)
+	{
+		listOfExistingElements = WebUI.findWebElements(findTestObject('Object Repository/Sprint6/span_RemoveAllRoles_param', [('userID') : userID]),1)
+		Thread.sleep(100)
+		listOfExistingElements.get(0).click();
+	}
+}
 
 'Click Add roles button'
 WebUI.click(findTestObject('Sprint6/span_AddRoles_param', [('userID') : userID]))

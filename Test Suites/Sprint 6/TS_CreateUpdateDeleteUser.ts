@@ -15,5 +15,23 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Sprint6/CreateUpdateDeleteUser</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>e18e2fe7-e35b-4472-95b4-20ec615cc942</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>d1655eec-8306-4f35-ae89-7605d5b25396</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>2a3e5d99-5d00-4ed0-b731-6bc67ca7a695</variableId>
+      </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

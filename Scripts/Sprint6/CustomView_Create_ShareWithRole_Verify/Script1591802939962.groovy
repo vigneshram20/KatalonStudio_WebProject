@@ -28,16 +28,37 @@ if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {
     WebUI.navigateToUrl(GlobalVariable.URL)
 }
 
-String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'(('QA_AUT_' + viewType) + '_'+"Share_", 'ddMMMHHmmss')
+String roleName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA_AUT_Role_', 'ddMMMHHmmss')
 
-WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_CreateView'), [('viewName') : viewName, ('viewType') : viewType], 
-    FailureHandling.STOP_ON_FAILURE)
+roleName=roleName.toLowerCase();
+
+String roleDescription = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QADescription', 'ss')
+
+'Create Role'
+WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CreateRoleAlone'), [('roleDescription') : roleDescription
+		, ('roleName') : roleName], FailureHandling.STOP_ON_FAILURE)
+
+'Assign Permission To Role'
+WebUI.callTestCase(findTestCase('Sprint7/linkTestCases/linkTestCase_AssignPermissionToRoleForLibraryAlone'), [('roleName') : roleName
+		, ('libraryName') : 'Season', ('permissionValues') : permissionValues], FailureHandling.STOP_ON_FAILURE)
+
+
+WebUI.click(findTestObject('Object Repository/Sprint6/li_Users'))
+
+WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CreateUserAndAssignRoleAlone'), [('RoleName') : roleName, ('userID') : testUserName
+		, ('displayName') : '', ('firstName') : '', ('lastName') : '', ('emailID') : '', ('contactNo') : '',('removeAllRoles'):'Yes'], FailureHandling.STOP_ON_FAILURE)
+
 
 String currentYear = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('', 'yyyy')
 String currentMonth = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('', 'MM')
 String currentDate = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('', 'dd')
 
-WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CustomViewShareAndVerify'), [('viewName') : viewName, ('roleToAssign') : ''
-        , ('userToAssign') : userToAssign, ('testUserName') : testUserName, ('testUserPassword') : testUserPassword, ('fullName') : GlobalVariable.FullName, ('year') : currentYear, ('month') : currentMonth
+String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'(('QA_AUT_' + viewType) + '_'+"Share_", 'ddMMMHHmmss')
+
+WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_CreateView'), [('viewName') : viewName, ('viewType') : viewType],
+	FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CustomViewShareAndVerify'), [('viewName') : viewName, ('roleToAssign') : roleName
+        , ('userToAssign') : '', ('testUserName') : testUserName, ('testUserPassword') : testUserPassword, ('fullName') : GlobalVariable.FullName, ('year') : currentYear, ('month') : currentMonth
         , ('date') : currentDate], FailureHandling.STOP_ON_FAILURE)
 
