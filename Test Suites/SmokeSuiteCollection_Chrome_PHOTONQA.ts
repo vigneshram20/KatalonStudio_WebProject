@@ -121,7 +121,7 @@
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
-         <testSuiteEntity>Test Suites/Sprint 8/TS_ViewManagement_HideUnHideColumn</testSuiteEntity>
+         <testSuiteEntity>Test Suites/Sprint 8/TS_CustomView_HideUnHideColumn</testSuiteEntity>
       </TestSuiteRunConfiguration>
    </testSuiteRunConfigurations>
 </TestSuiteCollectionEntity>

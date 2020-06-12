@@ -324,11 +324,13 @@ WebUI.enhancedClick(findTestObject('Common Objects/button_Yes'))
 WebUI.delay(2)
 
 'Scroll to Top'
-WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+not_run:WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 
-WebUI.delay(1)
+WebUI.delay(2)
 
 WebUI.waitForPageLoad(60)
+
+WebUI.refresh()
 
 WebUI.refresh()
 

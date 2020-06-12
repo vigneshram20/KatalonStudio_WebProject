@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>linkTestCase_LDAP Integration Verification</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>3261eebd-a4e3-435b-8f4b-d1df94780b72</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>b64e9826-a099-474f-8fcd-63cb73e8e1ab</id>
+      <masked>false</masked>
+      <name>UserID</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>4588ad75-fc08-4be8-8984-dfbad0795115</id>
+      <masked>false</masked>
+      <name>Displayname</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>79904ac1-0ab4-4b90-9462-3ce70b120180</id>
+      <masked>false</masked>
+      <name>FirstName</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>84324714-96c7-4430-8ade-42ebbd7d145a</id>
+      <masked>false</masked>
+      <name>LastName</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>29e54e1b-6c9d-4bac-9e44-8807158c5af7</id>
+      <masked>false</masked>
+      <name>Email</name>
+   </variable>
+</TestCaseEntity>

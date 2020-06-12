@@ -66,6 +66,8 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/label_Descr
 
 String roleName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA_AUT_Role', 'ddMMMyyHHmmss')
 
+roleName = roleName.toLowerCase();
+
 String roleDescription = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QADescription', 'ss')
 
 WebUI.setText(findTestObject('Object Repository/Sprint6/input__name'), roleName)
@@ -106,6 +108,8 @@ WebUI.click(findTestObject('Sprint6/img_ROLES_img-add'))
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_Edit Role'), 0)
 
 roleName = roleName + 'Edited'
+
+roleName = roleName.toLowerCase();
 
 roleDescription = roleDescription + 'Edited'
 
