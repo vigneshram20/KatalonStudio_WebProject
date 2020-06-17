@@ -1,29 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>td_ExisingAttributeParameterized</name>
+   <name>button_Yes</name>
    <tag></tag>
-   <elementGuidId>ca3f90d2-8811-4758-9fa3-33890f1cd4d1</elementGuidId>
-   <selectorCollection>
-      <entry>
-         <key>BASIC</key>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//td[2][.='${internalName}']/..//td[1]</value>
-      </entry>
-   </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <elementGuidId>25a9f2de-f96e-436c-a06e-b16c39c091e4</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>td</value>
+      <value>button</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>to</name>
+      <type>Main</type>
+      <value>#</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-dismiss</name>
+      <type>Main</type>
+      <value>modal</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>btn btn-primary confirm</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
@@ -34,48 +46,48 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;root&quot;)/div[1]/div[@class=&quot;manageLibrary_manage_library_container__wTwBZ mt-50&quot;]/div[@class=&quot;manageLibrary_content_section__3Wmoy&quot;]/div[@class=&quot;entityForm_season_type_container__1QNRR&quot;]/div[@class=&quot;table-responsive mt-5 table_generic&quot;]/div[@class=&quot;entityForm_tableScroll_container__2C4Cj&quot;]/table[@class=&quot;table table-bordered&quot;]/tbody[1]/tr[1]/td[5]</value>
+      <value>id(&quot;modalWindow&quot;)/div[@class=&quot;modal confirmation_ws_modal_xl__2govG confirmation_delete_conf__1TYwf&quot;]/div[@class=&quot;modal-dialog&quot;]/div[@class=&quot;modal-content&quot;]/div[@class=&quot;modal-footer confirmation_ws_modal_footer__c1HMd&quot;]/button[@class=&quot;btn btn-primary confirm&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='root']/div/div/div[4]/div/div/div/table/tbody/tr/td[5]</value>
+      <value>//div[@id='modalWindow']/div/div/div/div[3]/button</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Automation_String_TextArea'])[3]/following::td[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Confirm Brand Change'])[1]/following::button[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Automation_String_TextArea'])[2]/following::td[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Go'])[1]/following::button[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Yes'])[4]/preceding::td[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='No'])[1]/preceding::button[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Automation_String_TextArea'])[4]/preceding::td[3]</value>
+      <value>//*/text()[normalize-space(.)='Yes']/parent::*</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//td[5]</value>
+      <value>//div[3]/button</value>
    </webElementXpaths>
 </WebElementEntity>

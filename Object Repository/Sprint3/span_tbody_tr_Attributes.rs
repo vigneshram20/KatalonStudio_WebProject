@@ -1,81 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>td_ExisingAttributeParameterized</name>
+   <name>span_tbody_tr_Attributes</name>
    <tag></tag>
-   <elementGuidId>ca3f90d2-8811-4758-9fa3-33890f1cd4d1</elementGuidId>
+   <elementGuidId>2ea0ac9a-ec45-451e-9fab-387aed375767</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//tbody[@class='fixed_table']/tr</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//td[2][.='${internalName}']/..//td[1]</value>
+         <key>BASIC</key>
+         <value>//span[(text() = 'Attributes' or . = 'Attributes')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>td</value>
+      <value>span</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Yes</value>
+      <value>Attributes</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;root&quot;)/div[1]/div[@class=&quot;manageLibrary_manage_library_container__wTwBZ mt-50&quot;]/div[@class=&quot;manageLibrary_content_section__3Wmoy&quot;]/div[@class=&quot;entityForm_season_type_container__1QNRR&quot;]/div[@class=&quot;table-responsive mt-5 table_generic&quot;]/div[@class=&quot;entityForm_tableScroll_container__2C4Cj&quot;]/table[@class=&quot;table table-bordered&quot;]/tbody[1]/tr[1]/td[5]</value>
+      <value>id(&quot;root&quot;)/div[1]/div[@class=&quot;manageLibrary_manage_library_container__wTwBZ mt-50&quot;]/div[@class=&quot;manageLibrary_content_section__3Wmoy&quot;]/div[@class=&quot;entityForm_season_type_container__1QNRR&quot;]/div[@class=&quot;table-responsive mt-5 table_generic&quot;]/caption[@class=&quot;table-responsive&quot;]/span[1]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='root']/div/div/div[4]/div/div/div/table/tbody/tr/td[5]</value>
+      <value>//div[@id='root']/div/div/div[4]/div/div/caption/span</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Automation_String_TextArea'])[3]/following::td[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Add Subtype'])[1]/following::span[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Automation_String_TextArea'])[2]/following::td[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Description'])[1]/following::span[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Yes'])[4]/preceding::td[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Internal Name'])[2]/preceding::span[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Automation_String_TextArea'])[4]/preceding::td[3]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Display Name'])[2]/preceding::span[2]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Attributes']/parent::*</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//td[5]</value>
+      <value>//caption/span</value>
    </webElementXpaths>
 </WebElementEntity>

@@ -64,4 +64,19 @@
       <initValue>'Merch Collaboration Platform'</initValue>
       <name>PageTITLE</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>null</initValue>
+      <name>startTime</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>null</initValue>
+      <name>stopTime</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>null</initValue>
+      <name>totalTime</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

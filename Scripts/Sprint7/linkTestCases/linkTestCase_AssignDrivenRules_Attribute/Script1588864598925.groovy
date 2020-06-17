@@ -114,17 +114,11 @@ WebUI.verifyElementPresent(findTestObject('Sprint6/h5_Confirm to Save'), 0)
 
 WebUI.enhancedClick(findTestObject('Sprint6/button_Yes'))
 
-not_run:WebUI.verifyElementNotPresent(findTestObject('Sprint6/button_Save'), 30)
-
-WebUI.delay(3)
-
-WebUI.refresh();
+WebUI.verifyElementNotPresent(findTestObject('Sprint6/button_Save'), 30)
 
 WebUI.delay(3)
 
 WebUI.waitForPageLoad(0)
-
-WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Manage Driven Rules'))
 
 WebUI.enableSmartWait()
 

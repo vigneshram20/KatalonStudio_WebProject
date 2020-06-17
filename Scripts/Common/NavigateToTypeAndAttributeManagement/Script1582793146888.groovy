@@ -20,5 +20,5 @@ WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem'
     FailureHandling.STOP_ON_FAILURE)
 
 'Verify Page Header Administration'
-WebUI.click(findTestObject('Object Repository/Sprint3/div_Administration'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/div_Administration'), 0)
 

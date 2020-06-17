@@ -1,81 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>td_ExisingAttributeParameterized</name>
+   <name>span_AttributeSelection</name>
    <tag></tag>
-   <elementGuidId>ca3f90d2-8811-4758-9fa3-33890f1cd4d1</elementGuidId>
+   <elementGuidId>a33f78e3-cd63-4896-ba7e-fd828258e8b0</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//td[2][.='${internalName}']/..//td[1]</value>
+         <value>//span[(text() = '${attributeName}' or . = '${attributeName}')]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>td</value>
+      <value>span</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Yes</value>
+      <value>${attributeName}</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;root&quot;)/div[1]/div[@class=&quot;manageLibrary_manage_library_container__wTwBZ mt-50&quot;]/div[@class=&quot;manageLibrary_content_section__3Wmoy&quot;]/div[@class=&quot;entityForm_season_type_container__1QNRR&quot;]/div[@class=&quot;table-responsive mt-5 table_generic&quot;]/div[@class=&quot;entityForm_tableScroll_container__2C4Cj&quot;]/table[@class=&quot;table table-bordered&quot;]/tbody[1]/tr[1]/td[5]</value>
+      <value>id(&quot;popupDialog&quot;)/div[1]/ul[@class=&quot;custom_filter_wrapper&quot;]/li[@class=&quot;dflex mt-3 mb-0&quot;]/div[@class=&quot;dflex&quot;]/div[@class=&quot;typeahead_search&quot;]/ul[1]/li[9]/span[1]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='root']/div/div/div[4]/div/div/div/table/tbody/tr/td[5]</value>
+      <value>//div[@id='popupDialog']/div/ul/li/div/div/ul/li[9]/span</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Automation_String_TextArea'])[3]/following::td[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Type'])[1]/following::span[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Automation_String_TextArea'])[2]/following::td[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Season'])[1]/following::span[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Yes'])[4]/preceding::td[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Apply Filter'])[1]/preceding::span[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Automation_String_TextArea'])[4]/preceding::td[3]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Cancel'])[1]/preceding::span[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Year']/parent::*</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//td[5]</value>
+      <value>//li[9]/span</value>
    </webElementXpaths>
 </WebElementEntity>

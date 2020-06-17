@@ -56,7 +56,7 @@ class customKeywords {
 	 */
 	@Keyword
 	def String timeStampWithStringGen(String inputName, String dateFormat ) {
-		
+
 		'Current Date Java Code'
 		SimpleDateFormat formatter = new SimpleDateFormat(dateFormat)
 		TimeZone timeZone = TimeZone.getTimeZone("US/Pacific");

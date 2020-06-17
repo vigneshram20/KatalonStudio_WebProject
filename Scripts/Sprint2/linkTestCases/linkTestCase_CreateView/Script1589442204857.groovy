@@ -15,7 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import com.kms.katalon.core.configuration.RunConfiguration
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 'Navigate through Hamburger menu'
 WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : 'Season'], 
@@ -25,8 +25,8 @@ WebUI.delay(3)
 
 def gridHeaderA = WebUI.removeObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 'xpath')
 
-gridHeaderA = WebUI.modifyObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 'xpath',
-	'equals', "//div[@class='rTableHead freeze actions']", true)
+gridHeaderA = WebUI.modifyObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 'xpath', 
+    'equals', '//div[@class=\'rTableHead freeze actions\']', true)
 
 WebUI.waitForPageLoad(60)
 
@@ -219,18 +219,16 @@ if (viewType.equals('System')) {
     WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint2/Seasons/Page_Merch Collaboration Platform/div_ROLES'), 
         0)
 
-	if(!roleToAssign.equals(""))
-	{
-    'Click System Administrator label'
-    WebUI.click(findTestObject('Object Repository/Sprint6/label_parameterized',[('param'):roleToAssign]))
+    if (!(roleToAssign.equals(''))) {
+        'Click System Administrator label'
+        WebUI.click(findTestObject('Object Repository/Sprint6/label_parameterized', [('param') : roleToAssign]))
 
-    'Click Move to Right button'
-    WebUI.click(findTestObject('Object Repository/Sprint6/button_moveToRightRoles'))
+        'Click Move to Right button'
+        WebUI.click(findTestObject('Object Repository/Sprint6/button_moveToRightRoles'))
 
-    'Verify Element Present'
-    WebUI.verifyElementPresent(findTestObject('Sprint6/label_Verify_AssignedGroups', [('label') : roleToAssign]), 
-        0)
-	}
+        'Verify Element Present'
+        WebUI.verifyElementPresent(findTestObject('Sprint6/label_Verify_AssignedGroups', [('label') : roleToAssign]), 0)
+    }
 }
 
 'Verify the Lock Columns text'
@@ -305,6 +303,19 @@ WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 
 'Click the respective View'
 WebUI.click(findTestObject('Sprint6/button_paremeterized_ViewName', [('viewName') : viewName]))
+
+GlobalVariable.startTime = System.currentTimeMillis()
+
+WebUI.waitForPageLoad(60)
+
+'Verify table header - ACTIONS '
+WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint6/div_ACTIONS'), FailureHandling.STOP_ON_FAILURE)
+
+GlobalVariable.stopTime  = System.currentTimeMillis();
+
+long totalTime = GlobalVariable.stopTime - GlobalVariable.startTime;
+
+WebUI.comment("Manage Season - Total Time for page load - "+totalTime)
 
 WebUI.delay(2)
 

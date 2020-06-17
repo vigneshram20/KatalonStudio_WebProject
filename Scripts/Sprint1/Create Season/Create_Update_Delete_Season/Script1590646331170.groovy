@@ -32,13 +32,13 @@ if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {
     WebUI.navigateToUrl(GlobalVariable.URL)
 }
 
-WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : 'Season'], 
-    FailureHandling.STOP_ON_FAILURE)
-
 def gridHeaderA = WebUI.removeObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 'xpath')
 
-gridHeaderA = WebUI.modifyObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 'xpath', 
-    'equals', "//div[@class='rTableHead freeze actions']", true)
+gridHeaderA = WebUI.modifyObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 'xpath',
+	'equals', "//div[@class='rTableHead freeze actions']", true)
+
+WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : 'Season'], 
+    FailureHandling.STOP_ON_FAILURE)
 
 WebUI.waitForPageLoad(60)
 

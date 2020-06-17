@@ -52,12 +52,22 @@ WebUI.verifyElementPresent(findTestObject('Sprint6/div_User and Role Management'
 
 WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/li_Permissions'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Library'), 'Season', false)
+GlobalVariable.startTime= System.currentTimeMillis();
 
 'Click Edit Mode Toggle button'
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
 WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+
+WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Library'), 'Season', false)
+
+WebUI.waitForPageLoad(0);
+
+GlobalVariable.stopTime  = System.currentTimeMillis();
+
+long totalTime = GlobalVariable.stopTime - GlobalVariable.startTime;
+
+WebUI.comment("Permissions Tab - Total Time for page load - "+totalTime)
 
 'Check Page Performance'
 CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Permissions Page - User Management')

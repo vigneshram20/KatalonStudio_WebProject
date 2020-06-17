@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Looking for a search - Attributes Tab</name>
+   <name>Select_Division</name>
    <tag></tag>
-   <elementGuidId>e9563b4e-77bd-45d2-b6a4-e7954eded0e2</elementGuidId>
+   <elementGuidId>f1b9693e-d4b6-4651-9c02-bc62e8dfb19f</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//input[@type = 'text' and @placeholder = 'Search Fields']</value>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//input[@placeholder='Looking for an attribute'])[1]</value>
+         <value>(//select)[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,21 +21,7 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>input</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>type</name>
-      <type>Main</type>
-      <value>text</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>name</name>
-      <type>Main</type>
-      <value>currency_search</value>
+      <value>select</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -45,38 +31,38 @@
       <value>form-control</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>placeholder</name>
+      <name>text</name>
       <type>Main</type>
-      <value>Search Fields</value>
+      <value>Select DivisionDecaccTextilesFurnitureLighting</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;modalWindow&quot;)/div[@class=&quot;modal confirmation_ws_modal_xl__3TlbL confirmation_delete_conf__1sOXu&quot;]/div[@class=&quot;modal-dialog&quot;]/div[@class=&quot;modal-content&quot;]/div[@class=&quot;modal-body confirmation_ws_modal_body__3mQMe&quot;]/div[@class=&quot;search_box&quot;]/input[@class=&quot;form-control&quot;]</value>
+      <value>id(&quot;root&quot;)/div[1]/main[@class=&quot;manage_season&quot;]/div[@class=&quot;wrapper_collapse&quot;]/div[@class=&quot;workSpaceHeader_ms_header__Wa7aD&quot;]/div[@class=&quot;filterHeader_dropdown_container__1zWpv&quot;]/div[@class=&quot;select-wrapper secondary-select&quot;]/select[@class=&quot;form-control&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:attributes</name>
+      <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>(//input[@name='currency_search'])[2]</value>
+      <value>//div[@id='root']/div/main/div[2]/div/div[2]/div[2]/select</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:idRelative</name>
+      <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>//div[@id='modalWindow']/div/div/div/div[2]/div/input</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Create New Season'])[1]/preceding::select[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[2]/div/input</value>
+      <value>//div[2]/select</value>
    </webElementXpaths>
 </WebElementEntity>

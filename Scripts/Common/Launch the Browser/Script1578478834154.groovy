@@ -14,20 +14,15 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory
-import com.kms.katalon.core.webui.driver.DriverFactory
+import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory as MobileDriverFactory
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
 'Launch the Browser'
-WebUI.openBrowser(PageURL)
+WebUI.openBrowser('')
+
+GlobalVariable.startTime= System.currentTimeMillis();
+WebUI.navigateToUrl(PageURL)
 
 'Maximize the Browser'
 WebUI.maximizeWindow()
-/*if(MobileDriverFactory.devicePlatform == null)
-{
-	WebUI.maximizeWindow()
-if(!MobileDriverFactory.devicePlatform == "iOS") {
-	'Maximize the Browser'
-	WebUI.maximizeWindow()
-}
-}*/
 

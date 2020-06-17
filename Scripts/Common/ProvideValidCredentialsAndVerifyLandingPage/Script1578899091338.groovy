@@ -26,6 +26,12 @@ CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('LoginPage')
 'Set Username'
 WebUI.setText(findTestObject('Sprint1/LoginPage/input_Login_username'), Username)
 
+GlobalVariable.stopTime  = System.currentTimeMillis();
+
+long totalTime = GlobalVariable.stopTime - GlobalVariable.startTime;
+
+WebUI.comment("Login - Total Time for page load - "+totalTime)
+
 'Set Password'
 WebUI.setText(findTestObject('Sprint1/LoginPage/input_Login_password'), Password)
 

@@ -35,4 +35,6 @@ WebUI.delay(1)
 'Click sub menu'
 WebUI.click(findTestObject('Sprint1/LandingPage/a_Parameterized', [('menu') : SubMenuItem]))
 
-WebUI.delay(2)
+not_run:WebUI.delay(2)
+
+GlobalVariable.startTime= System.currentTimeMillis();

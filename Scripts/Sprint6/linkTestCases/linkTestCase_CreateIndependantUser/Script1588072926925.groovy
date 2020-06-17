@@ -14,12 +14,10 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
-import com.kms.katalon.core.configuration.RunConfiguration
-
-
-WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Administration', ('SubMenuItem') : 'User & Role Management'],
-	FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Administration', ('SubMenuItem') : 'User & Role Management'], 
+    FailureHandling.STOP_ON_FAILURE)
 
 WebUI.verifyElementPresent(findTestObject('Sprint6/div_User and Role Management'), 0)
 
@@ -89,7 +87,7 @@ WebUI.setText(findTestObject('Object Repository/Sprint6/input__email'), emailID)
 
 WebUI.setText(findTestObject('Object Repository/Sprint6/input_Contact Number_phone'), contactNo)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/span_Active'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/span_Active'))
 
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Create'))
 
