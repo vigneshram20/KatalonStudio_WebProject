@@ -40,6 +40,10 @@ WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOM
 
 WebUI.delay(1)
 
+WebUI.click(findTestObject('Object Repository/Sprint6/li_Users'))
+
+WebUI.delay(1)
+
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-handle'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-handle'))

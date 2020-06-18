@@ -28,6 +28,8 @@ WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint6/button_Ma
 'Click Manage Attributes button'
 WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Manage Attributes'))
 
+WebUI.verifyElementPresent(findTestObject('Sprint3/span_tbody_tr_Attributes'), 0)
+
 'Click Edit Mode Toggle button'
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 

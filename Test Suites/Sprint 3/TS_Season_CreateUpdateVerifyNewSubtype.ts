@@ -15,5 +15,11 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Sprint3/Season_CreateUpdateVerifyNewSubtype</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>ee3973e7-816e-43bb-b96b-81c7b5cfe874</variableId>
+      </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TS_SystemView_Create_AssignToRole_Verify</name>
+   <name>TS_SystemView_All_20200618_173845</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
-   <numberOfRerun>0</numberOfRerun>
+   <numberOfRerun>1</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
-   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <testSuiteGuid>75e0ab06-23ec-4700-9369-0f5e3ac70ef0</testSuiteGuid>
-   <testCaseLink>
-      <guid>5ae664de-c322-49f4-8a97-2207923ead55</guid>
+   <rerunFailedTestCasesOnly>true</rerunFailedTestCasesOnly>
+   <testSuiteGuid>82b47c86-a564-4743-bece-d5ac18ce127e</testSuiteGuid>
+   
+<testCaseLink>
+      <guid>dc8c0486-5d09-4098-9e40-0fa794d264ce</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Sprint2/SystemView_Create_AssignToRole_Verify</testCaseId>

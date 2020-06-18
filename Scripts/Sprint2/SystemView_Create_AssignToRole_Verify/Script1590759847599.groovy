@@ -29,6 +29,8 @@ if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {
 
 String roleName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA_AUT_Role_', 'ddMMMHHmmss')
 
+roleName=roleName.toLowerCase();
+
 String roleDescription = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QADescription', 'ss')
 
 'Create Role'
@@ -39,21 +41,8 @@ WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CreateRoleAl
 WebUI.callTestCase(findTestCase('Sprint7/linkTestCases/linkTestCase_AssignPermissionToRoleForLibraryAlone'), [('roleName') : roleName
         , ('libraryName') : 'Season', ('permissionValues') : permissionValues], FailureHandling.STOP_ON_FAILURE)
 
-'Create User and assign to Role'
-String userID = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('qa', 'mmss')
-
-String emailIDRNo = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('', 'HHss')
-
-String displayName = 'QA Automation' + userID
-
-String firstName = 'QA'
-
-String lastName = 'Automation' + userID
-
-String emailID = 'qatest'+ emailIDRNo +"@photoninfotech.net"
-
-WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CreateUserAndAssignRoleAlone'), [('RoleName') : roleName, ('userID') : userID
-        , ('displayName') : displayName, ('firstName') : firstName, ('lastName') : lastName, ('emailID') : emailID, ('contactNo') : ''], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CreateUserAndAssignRoleAlone'), [('RoleName') : roleName, ('userID') : testUserName
+	, ('displayName') : '', ('firstName') : '', ('lastName') : '', ('emailID') : '', ('contactNo') : '',('removeAllRoles'):'Yes'], FailureHandling.STOP_ON_FAILURE)
 
 'Generate System View Name'
 String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA_AUT_' + viewType+"_", 'ddMMMyyHHmmss')
@@ -62,3 +51,17 @@ String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringG
 WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_CreateView'), [('viewName') : viewName, ('viewType') : viewType
         , ('roleToAssign') : roleName], FailureHandling.STOP_ON_FAILURE)
 
+WebUI.callTestCase(findTestCase('Common/LogoutApplication'), [:], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('Common/ProvideValidCredentialsAndVerifyLandingPage'), [('Username') : testUserName, ('Password') : testUserPassword],
+	FailureHandling.STOP_ON_FAILURE)
+
+'Navigate through Hamburger menu'
+WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : 'Season'],
+	FailureHandling.STOP_ON_FAILURE)
+
+'Open View Selector'
+WebUI.click(findTestObject('Common Objects/button_viewSelector'))
+
+'Click the respective View'
+WebUI.click(findTestObject('Sprint6/button_paremeterized_ViewName', [('viewName') : viewName]))

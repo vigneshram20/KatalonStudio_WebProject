@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//p[(text() = 'view has been shared successfully.' or . = 'view has been shared successfully.')]</value>
+         <value>//p[(text() = '${viewName} has been shared successfully.' or . = '${viewName} has been shared successfully.')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -24,7 +24,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>view has been shared successfully.</value>
+      <value>${viewName} has been shared successfully.</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

@@ -21,6 +21,7 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 WebUI.openBrowser('')
 
 GlobalVariable.startTime= System.currentTimeMillis();
+
 WebUI.navigateToUrl(PageURL)
 
 'Maximize the Browser'

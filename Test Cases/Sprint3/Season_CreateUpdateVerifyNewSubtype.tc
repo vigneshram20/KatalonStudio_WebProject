@@ -7,4 +7,11 @@
 Total No. of Attributes - &quot; + listOfInheritedAttributes.size() + &quot;
 Total No. of Attributes - &quot; + listOfInheritedAttributes.size() + &quot;</comment>
    <testCaseGuid>464414d9-95fa-4e8a-9c4a-e5cabb3c7763</testCaseGuid>
+   <variable>
+      <defaultValue>'Child'</defaultValue>
+      <description></description>
+      <id>ee3973e7-816e-43bb-b96b-81c7b5cfe874</id>
+      <masked>false</masked>
+      <name>ChildLabel</name>
+   </variable>
 </TestCaseEntity>

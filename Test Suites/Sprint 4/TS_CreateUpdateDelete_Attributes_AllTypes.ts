@@ -463,8 +463,8 @@
          <combinationType>ONE</combinationType>
          <id>97467f88-bf70-4de4-a7ed-de2d96f57afb</id>
          <iterationEntity>
-            <iterationType>RANGE</iterationType>
-            <value>8-9</value>
+            <iterationType>SPECIFIC</iterationType>
+            <value>9</value>
          </iterationEntity>
          <testDataId>Data Files/CreateAttribute</testDataId>
       </testDataLink>

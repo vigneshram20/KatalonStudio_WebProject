@@ -22,6 +22,12 @@ import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import org.openqa.selenium.WebElement as WebElement
 
+WebUI.waitForPageLoad(60)
+
+WebUI.verifyElementPresent(findTestObject('Sprint3/span_tbody_tr_Attributes'), 0)
+
+WebUI.delay(2)
+
 List<WebElement> listOfExistingElements = WebUI.findWebElements(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized',[('internalName'):InternalName]),
 	1)
 

@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//td[2][text()='${userID}']/..//td[8]/div/span[contains(@class,'add_Roles')]</value>
+         <value>//td[2][.='${userID}']/..//td[8]/div/span[contains(@class,'add_Roles')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

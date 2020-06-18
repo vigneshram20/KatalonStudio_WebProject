@@ -13,21 +13,21 @@
       <name>viewType</name>
    </variable>
    <variable>
-      <defaultValue>'TSTVCA PTGUEST'</defaultValue>
+      <defaultValue>'Vignesh Thayanithi'</defaultValue>
       <description></description>
       <id>33534d4e-0cb9-4731-bbe2-3f467fea1f45</id>
       <masked>false</masked>
       <name>userToAssign</name>
    </variable>
    <variable>
-      <defaultValue>'tstvcaptguest'</defaultValue>
+      <defaultValue>'vthayanithi'</defaultValue>
       <description></description>
       <id>721babb9-818f-441c-9aa6-6362779cc983</id>
       <masked>false</masked>
       <name>testUserName</name>
    </variable>
    <variable>
-      <defaultValue>'Untitled1'</defaultValue>
+      <defaultValue>'p,U+l^0\''</defaultValue>
       <description></description>
       <id>0286d296-0032-4aff-a351-a80a5810f699</id>
       <masked>false</masked>

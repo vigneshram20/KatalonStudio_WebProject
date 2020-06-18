@@ -33,12 +33,6 @@ WebUI.waitForElementVisible(gridHeaderA, 60)
 
 WebUI.waitForElementClickable(gridHeaderA, 60)
 
-'Open View Selector'
-WebUI.click(findTestObject('Common Objects/button_viewSelector'))
-
-'Click the respective View'
-WebUI.click(findTestObject('Sprint6/button_paremeterized_ViewName', [('viewName') : viewName]))
-
 'Click the group by button'
 WebUI.click(findTestObject('Common Objects/button_Group By'))
 
@@ -187,7 +181,7 @@ WebUI.verifyElementNotPresent(findTestObject('Sprint6/label_Verify_SelectedField
 
 if (viewType.equals('System')) {
     'Verify Assigned groups'
-    WebUI.verifyElementPresent(findTestObject('Sprint6/label_Verify_AssignedGroups', [('label') : 'SYSTEM ADMINISTRATOR']), 
+    WebUI.verifyElementPresent(findTestObject('Sprint6/label_Verify_AssignedGroups', [('label') : 'system administrator']), 
         0)
 }
 

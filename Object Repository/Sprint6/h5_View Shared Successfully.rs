@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//h5[@class = 'modal-title' and (text() = 'View Shared Successfully;' or . = 'View Shared Successfully;')]</value>
+         <value>//h5[@class = 'modal-title' and (text() = 'View Shared Successfully' or . = 'View Shared Successfully')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -31,7 +31,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>View Shared Successfully;</value>
+      <value>View Shared Successfully</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

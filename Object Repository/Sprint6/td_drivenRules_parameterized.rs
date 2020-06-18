@@ -6,12 +6,12 @@
    <elementGuidId>06e237c0-9042-4bde-bee0-1e50e883b3b6</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//td[2][.='${param1}']/../td[3]/../td[4][.='${param2}']/../td[5]/../td[1]/div</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>//*[(text() = 'QADrivenLevel02037' or . = 'QADrivenLevel02037')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//td[2][.='${param1}']/../td[3][.='${value1}']/../td[4][.='${param2}']/../td[5][.='${value2}']/../td[1]/div</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

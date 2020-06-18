@@ -75,7 +75,7 @@ WebUI.click(findTestObject('Object Repository/Sprint6/button_Share'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_View Shared Successfully'), 0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/p_view has been shared successfully'), 0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/p_view has been shared successfully',[('viewName'):viewName]), 0)
 
 WebUI.click(findTestObject('Object Repository/Common Objects/button_OK'))
 

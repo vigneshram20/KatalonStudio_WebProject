@@ -304,8 +304,6 @@ WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/button_Create'))
 
 WebUI.delay(2)
 
-ChildLabel = 'Child'
-
 'Provide Child Label'
 WebUI.scrollToElement(findTestObject('Object Repository/Sprint3/input_ChildLabel'), 0)
 

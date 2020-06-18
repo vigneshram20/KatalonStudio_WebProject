@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//td[2][text()='${userID}']/..//td[8]/div/span/img[contains(@src,'close')]</value>
+         <value>//td[2][.='${userID}']/..//td[8]/div/span/img[contains(@src,'close')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

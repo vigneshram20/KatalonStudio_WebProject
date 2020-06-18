@@ -6,12 +6,12 @@
    <elementGuidId>21a20d15-4d02-400e-8cfc-f1b62d4a38a9</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//td[2][text()='${userID}']/..//td[8]/div/span[text()='${role}']</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>//*[(text() = 'PB MERCH OPS ' or . = 'PB MERCH OPS ')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//td[2][.='${userID}']/..//td[8]/div/span[text()='${role}']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
