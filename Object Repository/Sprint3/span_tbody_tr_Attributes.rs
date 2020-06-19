@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//tbody[@class='fixed_table']/tr</value>
+         <value>(//tbody[@role='rowgroup'])[1]/tr</value>
       </entry>
       <entry>
          <key>BASIC</key>

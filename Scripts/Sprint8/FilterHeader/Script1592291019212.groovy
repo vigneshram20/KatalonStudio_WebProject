@@ -25,7 +25,7 @@ import java.text.DateFormat as DateFormat
 import java.text.SimpleDateFormat as SimpleDateFormat
 import java.util.Date as Date
 
-if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {
+/*if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {
     'Launch the Browser'
     WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
 
@@ -43,7 +43,7 @@ WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Library'), Brand, true)
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint8/h5_Confirm Brand Change'), 0)
 
-WebUI.verifyElementPresent(findTestObject('Sprint8/p_BrandChange_Confirmation', [('brandName') : tempBrandName]), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint8/p_BrandChange_Confirmation', [('brandName') : Brand]), 0)
 
 WebUI.click(findTestObject('Object Repository/Common Objects/button_Yes'))
 
@@ -55,10 +55,11 @@ WebUI.selectOptionByLabel(findTestObject('Sprint8/Select_Division'), Division, t
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint8/h5_Confirm Division Change'), 0)
 
-WebUI.verifyElementPresent(findTestObject('Sprint8/p_DivisionChangeConfirmation', [('divisionName') : tempDivisionName]), 
+WebUI.verifyElementPresent(findTestObject('Sprint8/p_DivisionChangeConfirmation', [('divisionName') : Division]), 
     0)
 
-WebUI.click(findTestObject('Object Repository/Common Objects/button_Yes'))
+WebUI.click(findTestObject('Object Repository/Common Objects/button_Yes'))*/
+
 
 WebUI.click(findTestObject('Sprint8/img_PlusIcon'))
 
@@ -70,10 +71,17 @@ WebUI.click(findTestObject('Sprint8/span_AttributeSelection', [('attributeName')
 
 WebUI.selectOptionByLabel(findTestObject('Sprint8/select_Operator_CustomFilter'), Operator, false)
 
-if (!(Operator.equals('Is Empty'))) {
+if (!(Operator.equals('Is Empty') || !AttributeType.toString().equals("Text"))) {
     WebUI.click(findTestObject('Object Repository/Sprint8/select_Field_Value'))
 
     WebUI.click(findTestObject('Sprint8/span_AttributeSelection', [('attributeName') : Value]))
+}
+
+if(AttributeType.toString().equals("Text"))
+{
+	WebUI.click(findTestObject('Object Repository/Sprint8/input_EnterText_FilterHeader'))
+	
+	WebUI.sendKeys(findTestObject('Object Repository/Sprint8/input_EnterText_FilterHeader'), Value)
 }
 
 WebUI.click(findTestObject('Object Repository/Sprint8/button_Apply Filter'))
@@ -82,8 +90,14 @@ WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint6/select_Library'), Bran
 
 WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint8/Select_Division'), Division, true, 0)
 
+if(!(Operator.equals('Is Empty'))) {
 WebUI.verifyElementPresent(findTestObject('Sprint8/div_FilterApplied', [('filterApplied') : (attributeName + Operator) + 
             Value]), 0)
+}
+else
+{
+	WebUI.verifyElementPresent(findTestObject('Sprint8/div_FilterApplied', [('filterApplied') : (attributeName + Operator)]), 0)
+}
 
 List<String> listOfExistingElements = WebUI.findWebElements(findTestObject('Object Repository/Sprint8/div_ColumnIndexNo'), 
     1)
@@ -138,8 +152,10 @@ if (Operator.equals('Contains')) {
         }
     }
 } else if (Operator.equals('Is Empty')) {
-    if (!(listOfExistingCells.size()) == 0) {
-        throw new Exception('Is Empty Filter not working as expected')
+    for (WebElement element : listOfExistingCells) {
+        if (!(element.getText().equals(""))) {
+            throw new Exception('Ends with Filter not working as expected')
+        }
     }
 } else if (Operator.equals('Is Equal')) {
     for (WebElement element : listOfExistingCells) {

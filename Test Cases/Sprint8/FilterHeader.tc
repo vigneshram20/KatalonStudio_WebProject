@@ -13,13 +13,6 @@
       <name>Brand</name>
    </variable>
    <variable>
-      <defaultValue>'pk_season'</defaultValue>
-      <description></description>
-      <id>43df5548-3179-437d-a89f-447f8a4a0af9</id>
-      <masked>false</masked>
-      <name>tempBrandName</name>
-   </variable>
-   <variable>
       <defaultValue>'Furniture'</defaultValue>
       <description></description>
       <id>cc3ea8f9-1834-4c78-b368-f293885cef68</id>
@@ -27,28 +20,21 @@
       <name>Division</name>
    </variable>
    <variable>
-      <defaultValue>'furniture_pk_season'</defaultValue>
-      <description></description>
-      <id>836a8c71-c4d2-43e4-8038-cc275fb0e228</id>
-      <masked>false</masked>
-      <name>tempDivisionName</name>
-   </variable>
-   <variable>
-      <defaultValue>'Year'</defaultValue>
+      <defaultValue>'Season'</defaultValue>
       <description></description>
       <id>c917a196-1b5d-40ac-8280-b5ce6ce3b60c</id>
       <masked>false</masked>
       <name>attributeName</name>
    </variable>
    <variable>
-      <defaultValue>'Contains'</defaultValue>
+      <defaultValue>'Is'</defaultValue>
       <description></description>
       <id>bc919aa8-e011-43d4-a04f-10e5cad219c3</id>
       <masked>false</masked>
       <name>Operator</name>
    </variable>
    <variable>
-      <defaultValue>'2024'</defaultValue>
+      <defaultValue>'Holiday'</defaultValue>
       <description></description>
       <id>76c0797f-e662-4059-8e10-de0bc747b993</id>
       <masked>false</masked>
@@ -60,5 +46,12 @@
       <id>ce14ed34-4fae-4b7d-9f3c-68662b79a6e7</id>
       <masked>false</masked>
       <name>Value2</name>
+   </variable>
+   <variable>
+      <defaultValue>'Text'</defaultValue>
+      <description></description>
+      <id>a8486a7d-c7a8-4f58-bbbf-a36f5fa8d2a7</id>
+      <masked>false</masked>
+      <name>AttributeType</name>
    </variable>
 </TestCaseEntity>

@@ -67,7 +67,7 @@ WebUI.delay(5)
 
 WebDriver driver = DriverFactory.getWebDriver()
 
-List<WebElement> listOfAttributes = WebUI.findWebElements(findTestObject('Object Repository/Sprint3/td_Attributes_InternalNames'), 
+List<String> listOfAttributes = WebUI.findWebElements(findTestObject('Object Repository/Sprint3/td_Attributes_InternalNames'), 
     0)
 
 WebUI.comment(('Total No. of Attributes - ' + listOfAttributes.size()) + '')
@@ -180,7 +180,7 @@ WebUI.verifyElementPresent(findTestObject('Sprint3/radio_Instantiable_Verify', [
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/radio_SubtypeAllowed_Verify', [('YesOrNo') : 'Yes']), 
     0)
 
-List<WebElement> listOfInheritedAttributes = WebUI.findWebElements(findTestObject('Object Repository/Sprint3/td_InheritedAttributes_InternalNames'), 
+List<String> listOfInheritedAttributes = WebUI.findWebElements(findTestObject('Object Repository/Sprint3/td_InheritedAttributes_InternalNames'), 
     0)
 
 WebUI.comment(('Total No. of Attributes - ' + listOfInheritedAttributes.size()) + '')
@@ -322,15 +322,7 @@ WebUI.enhancedClick(findTestObject('Common Objects/button_Yes'))
 WebUI.delay(2)
 
 'Scroll to Top'
-not_run:WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
-
-WebUI.delay(2)
-
-WebUI.waitForPageLoad(60)
-
-WebUI.refresh()
-
-WebUI.refresh()
+WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 
 WebUI.delay(2)
 
@@ -390,3 +382,50 @@ while (iterator.hasNext()) {
     }
 }
 
+'Scroll to Top'
+WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+
+'Click Edit Mode Toggle button'
+WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+
+'Click Edit Mode Toggle button'
+WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+
+DisplaySubtypeName = DisplaySubtypeName+"Edited";
+
+'Clear already existing text'
+WebUI.sendKeys(findTestObject('Object Repository/Sprint3/input_Display Name_form-control - Copy'), Keys.chord(Keys.CONTROL,
+		Keys.chord('a')))
+
+'Modify Display Name'
+WebUI.sendKeys(findTestObject('Object Repository/Sprint3/input_Display Name_form-control - Copy'), DisplaySubtypeName)
+
+'Provide Description'
+WebUI.sendKeys(findTestObject('Object Repository/Sprint3/input_Description'), Description)
+
+'Click Save button'
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/button_Save'))
+
+'Click Yes Button'
+WebUI.enhancedClick(findTestObject('Common Objects/button_Yes'))
+
+WebUI.delay(2)
+
+'Scroll to Top'
+WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+
+'Verify the Display Name'
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/input_Display Name_form-control', [('textContains') : DisplaySubtypeName]),
+	0)
+
+'Verify the Description'
+WebUI.verifyElementText(findTestObject('Object Repository/Sprint3/input_Description'), Description)
+
+WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/Sprint3/select_ChildDropdown'), DisplaySubtypeName,
+	false, 0)
+
+headerTextfull = ((('Season \\ ' + displayNameEdited) + ' \\ ') + DisplaySubtypeName)
+
+'Verify Season header'
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/h2_Season_subtype', [('header') : headerTextfull]),
+	0)

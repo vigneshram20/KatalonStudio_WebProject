@@ -34,8 +34,8 @@ if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {
 
 def gridHeaderA = WebUI.removeObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 'xpath')
 
-gridHeaderA = WebUI.modifyObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 'xpath',
-	'equals', "//div[@class='rTableHead freeze actions']", true)
+gridHeaderA = WebUI.modifyObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 'xpath', 
+    'equals', '//div[@class=\'rTableHead freeze actions\']', true)
 
 WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : 'Season'], 
     FailureHandling.STOP_ON_FAILURE)
@@ -51,27 +51,71 @@ WebUI.waitForElementClickable(gridHeaderA, 60)
 'Check Page Performance'
 CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Manage Seasons')
 
-String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA_' +"AUT_"+ "Custom_", 'ddMMMHHmmss')
+String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'(('QA_' + 'AUT_') + 'Custom_', 'ddMMMHHmmss')
 
-WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_CreateView'), [('viewName') : viewName, ('viewType') : "Custom"],
-	FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_CreateView'), [('viewName') : viewName, ('viewType') : 'Custom'], 
+    FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_SetDefaultView'), [('viewName') : viewName], FailureHandling.STOP_ON_FAILURE)
 
-List<String> DivisionsList = Divisions
+String[] DivisionsArray = Divisions.toString().split('\\,')
 
-List<String> FullSeasonNameList = Full_Season_Names
+List<String> DivisionsList = new ArrayList<LinkedHashMap>(Arrays.asList(DivisionsArray))
+
+System.out.println(DivisionsList.size())
+
+List<String> FullSeasonNameList = new ArrayList<LinkedHashMap>()
+
+String[] coreSeasonsArray = Core_Seasons.toString().split('\\,')
+
+System.out.println(coreSeasonsArray.length)
+
+List<String> coreList = new ArrayList<LinkedHashMap>(Arrays.asList(coreSeasonsArray))
+
+System.out.println(coreList.size())
+
+String[] seasonalSeasonsArray = Seasonal_Seasons.toString().split('\\,')
+
+System.out.println(seasonalSeasonsArray.length)
+
+List<String> seasonalList = new ArrayList<LinkedHashMap>(Arrays.asList(seasonalSeasonsArray))
+
+System.out.println(seasonalList.size())
+
+Random r = new Random()
+
+int chance = r.nextInt(2)
+
+if (chance == 1) {
+    randomNo = r.nextInt(coreList.size())
+
+    Season = coreList.get(randomNo)
+
+    Type = 'Core'
+
+    System.out.println(Season)
+
+    System.out.println(Type)
+} else {
+    randomNo = r.nextInt(seasonalList.size())
+
+    Type = 'Seasonal'
+
+    Season = seasonalList.get(randomNo)
+
+    System.out.println(Season)
+
+    System.out.println(Type)
+}
 
 for (String currentDivision : DivisionsList) {
-	FullSeasonNameList.add((((((Brand + ' ') + currentDivision) + ' ') + Season) + ' ') + Year)
+    FullSeasonNameList.add((((((Brand + ' ') + currentDivision) + ' ') + Season) + ' ') + Year)
 }
 
 for (String currentSeasonName : FullSeasonNameList) {
-	
-	WebUI.callTestCase(findTestCase('Sprint1/Create Season/linkTestCases/Delete a Season'), [('Brand') : '', ('Division') : '', ('Store_End_Date') : '', ('Store_Start_Date') : '', ('Internet_Start_Date') : ''
-	, ('Internet_End_Date') : '', ('Name') : currentSeasonName, ('Season') : '', ('Type') : ''
-	, ('Year') : ''], FailureHandling.STOP_ON_FAILURE)
-	
+    WebUI.callTestCase(findTestCase('Sprint1/Create Season/linkTestCases/Delete a Season'), [('Brand') : '', ('Division') : ''
+            , ('Store_End_Date') : '', ('Store_Start_Date') : '', ('Internet_Start_Date') : '', ('Internet_End_Date') : ''
+            , ('Name') : currentSeasonName, ('Season') : '', ('Type') : '', ('Year') : ''], FailureHandling.STOP_ON_FAILURE)
 }
 
 WebUI.enableSmartWait()
@@ -91,23 +135,23 @@ WebUI.selectOptionByLabel(findTestObject('Sprint1/Create Season/Season Select dr
 WebUI.selectOptionByLabel(findTestObject('Sprint1/Create Season/Year Select dropdown'), Year, false)
 
 'Verify Type Value'
-WebUI.verifyElementPresent(findTestObject('Sprint1/Create Season/input_Type_type'), 0)
+WebUI.verifyElementAttributeValue(findTestObject('Sprint1/Create Season/input_Type_type'), 'value', Type, 0)
 
 'Type Internet Launch Start Date'
 WebUI.sendKeys(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch Start Date']), 
-        Internet_Start_Date + Keys.ENTER)
+    Internet_Start_Date + Keys.ENTER)
 
 WebUI.delay(1)
 
 'Type Internet Launch End Date'
 WebUI.setText(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'Internet Launch End Date']), 
-        Internet_End_Date + Keys.ENTER)
+    Internet_End_Date + Keys.ENTER)
 
 WebUI.delay(1)
 
 'Type In Store Launch Start Date'
 WebUI.setText(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch Start Date']), 
-        Store_Start_Date + Keys.ENTER)
+    Store_Start_Date + Keys.ENTER)
 
 WebUI.delay(1)
 
@@ -117,8 +161,8 @@ WebUI.click(findTestObject('Sprint1/Create Season/label_In Store Launch Start Da
 WebUI.delay(1)
 
 'Type In Store Launch End Date'
-    WebUI.setText(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch End Date']), 
-        Store_End_Date + Keys.ENTER)
+WebUI.setText(findTestObject('Object Repository/Sprint1/Create Season/input_datePicker_parameterized', [('labelName') : 'In Store Launch End Date']), 
+    Store_End_Date + Keys.ENTER)
 
 WebUI.delay(1)
 
@@ -130,10 +174,6 @@ WebUI.verifyElementPresent(findTestObject('Sprint1/Create Season/h5_Seasons Crea
 
 'Verify Seasons Created inpopup message'
 WebUI.verifyElementPresent(findTestObject('Sprint1/Create Season/p_The following new seasons have been created'), 0)
-
-
-'Add All Seasons to Global Variable'
-Full_Season_Name = FullSeasonNameList
 
 for (String currentSeasonName : FullSeasonNameList) {
     'Verify All Seasons in Success Popup'
