@@ -6,12 +6,12 @@
    <elementGuidId>2ea0ac9a-ec45-451e-9fab-387aed375767</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//tbody[@role='rowgroup'])[1]/tr</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>//span[(text() = 'Attributes' or . = 'Attributes')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//tbody[@role='rowgroup'])[1]/tr</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

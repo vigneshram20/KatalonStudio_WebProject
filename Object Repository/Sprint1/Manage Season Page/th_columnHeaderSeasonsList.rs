@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='table_header']/div/div[@title]</value>
+         <value>//div[@class=\'rTableHead freeze actions\']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

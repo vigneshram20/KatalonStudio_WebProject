@@ -304,9 +304,15 @@ if (DataType.equals('String')) {
         'xpath', 'equals', columnXpath, true)
 
     WebUI.delay(2)
-
-    'Select the record from the grid'
+	
+	'Search for the record'
+	WebUI.sendKeys(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), InternalName)
+	
+    'Click Attributes Checkbox'
     WebUI.enhancedClick(ActionsObject)
+	
+	'Search for the record'
+	WebUI.sendKeys(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), Keys.chord(Keys.CONTROL,'a',Keys.BACK_SPACE))
 
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
@@ -483,9 +489,15 @@ if (DataType.equals('String')) {
         'xpath', 'equals', columnXpath, true)
 
     WebUI.delay(2)
-
-    'Select the Attribute from the grid'
+	
+	'Search for the record'
+	WebUI.sendKeys(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), InternalName)
+	
+    'Click Attributes Checkbox'
     WebUI.enhancedClick(ActionsObject)
+	
+	'Search for the record'
+	WebUI.sendKeys(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), Keys.chord(Keys.CONTROL,'a',Keys.BACK_SPACE))
 
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)

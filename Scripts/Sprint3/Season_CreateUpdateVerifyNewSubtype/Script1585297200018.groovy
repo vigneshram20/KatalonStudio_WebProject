@@ -83,6 +83,9 @@ for (WebElement element : listOfAttributes) {
 'Click Add Subtype button'
 WebUI.enhancedClick(findTestObject('Sprint3/button_Add Subtype'))
 
+'Click Yes Button'
+WebUI.click(findTestObject('Common Objects/button_Yes'))
+
 'Verify Type - subType presence'
 WebUI.verifyElementPresent(findTestObject('Sprint3/label_Type_subType'), 0)
 
@@ -262,6 +265,9 @@ WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/span_Edit Mode_tog
 
 'Click Add Subtype button'
 WebUI.enhancedClick(findTestObject('Sprint3/button_Add Subtype'))
+
+'Click Yes Button'
+WebUI.click(findTestObject('Common Objects/button_Yes'))
 
 'Verify Type - subType presence'
 WebUI.verifyElementPresent(findTestObject('Sprint3/label_Type_subType'), 0)

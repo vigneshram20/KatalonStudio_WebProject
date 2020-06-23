@@ -20,17 +20,18 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKe
 import org.openqa.selenium.WebElement as WebElement
 import org.openqa.selenium.WebDriver as WebDriver
 
+'Click Login'
+WebUI.verifyElementClickable(findTestObject('Sprint1/LoginPage/button_Login'))
+
 'Check Page Performance'
-CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('LoginPage')
+	long pageLoad=CustomKeywords.'myKeywords.customKeywords.pageLoadTimingSelenium'('Login Page',0)
+	
+	long domLoad=CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Login Page')
+	
+	CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, 'Login Page', domLoad, pageLoad)
 
 'Set Username'
 WebUI.setText(findTestObject('Sprint1/LoginPage/input_Login_username'), Username)
-
-GlobalVariable.stopTime  = System.currentTimeMillis();
-
-long totalTime = GlobalVariable.stopTime - GlobalVariable.startTime;
-
-WebUI.comment("Login - Total Time for page load - "+totalTime)
 
 'Set Password'
 WebUI.setText(findTestObject('Sprint1/LoginPage/input_Login_password'), Password)

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>TS_Libraries_PageLoadPerformance</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>0</numberOfRerun>
+   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <testSuiteGuid>b7fbf48a-14ec-41be-a06f-e5df0e8934b6</testSuiteGuid>
+   <testCaseLink>
+      <guid>37ff82d8-b8d2-4e44-8df4-baade105a945</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/PageLoadPerformance/Libraries</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>3d05f488-2f6e-420f-8a46-bcf4f23325cf</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/Libraries</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>3d05f488-2f6e-420f-8a46-bcf4f23325cf</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>SubMenu</value>
+         <variableId>8e455d14-50bf-402c-8b16-a058113ba8a9</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>2d259351-319e-46dc-bd31-6f6366546006</variableId>
+      </variableLink>
+   </testCaseLink>
+</TestSuiteEntity>

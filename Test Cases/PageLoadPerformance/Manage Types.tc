@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Manage Types</name>
+   <tag></tag>
+   <comment>currentURL</comment>
+   <testCaseGuid>c47a81aa-a2c3-4d51-88ff-cdab774d0fa1</testCaseGuid>
+   <variable>
+      <defaultValue>'Merch List'</defaultValue>
+      <description></description>
+      <id>748be911-f7b4-4a7f-8ee0-b24dc15cd9ac</id>
+      <masked>false</masked>
+      <name>SubMenu</name>
+   </variable>
+   <variable>
+      <defaultValue>GlobalVariable.ExcelSheetName</defaultValue>
+      <description></description>
+      <id>8731daaf-f2fe-49c0-af68-21a046d42b23</id>
+      <masked>false</masked>
+      <name>sheetName</name>
+   </variable>
+</TestCaseEntity>

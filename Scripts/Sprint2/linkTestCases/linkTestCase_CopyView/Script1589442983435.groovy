@@ -17,8 +17,8 @@ import internal.GlobalVariable as GlobalVariable
 
 def gridHeaderA = WebUI.removeObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 'xpath')
 
-gridHeaderA = WebUI.modifyObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 'xpath',
-	'equals', "//div[@class='rTableHead freeze actions']", true)
+gridHeaderA = WebUI.modifyObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 'xpath', 
+    'equals', '//div[@class=\'rTableHead freeze actions\']', true)
 
 WebUI.waitForPageLoad(60)
 
@@ -97,7 +97,7 @@ WebUI.verifyElementNotPresent(findTestObject('Sprint6/label_Verify_SelectedField
 WebUI.selectOptionByLabel(findTestObject('Sprint6/select_LockColumnDropDown'), 'Column 1', true)
 
 'Click Save View button'
-WebUI.click(findTestObject('Object Repository/Sprint6/button_Save View'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Save View'))
 
 'Verify popup header'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_View Successfully Created'), 0)
@@ -139,3 +139,4 @@ WebUI.verifyElementNotPresent(findTestObject('Object Repository/Sprint6/div_Name
 
 'Verify Element Not Present'
 WebUI.verifyElementNotPresent(findTestObject('Object Repository/Sprint6/div_Season'), 0)
+

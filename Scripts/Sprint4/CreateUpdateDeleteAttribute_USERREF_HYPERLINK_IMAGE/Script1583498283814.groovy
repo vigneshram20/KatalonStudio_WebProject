@@ -258,8 +258,15 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
 
     WebUI.delay(2)
 
+   'Search for the record'
+	WebUI.sendKeys(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), DisplayName)
+	
+    'Click Attributes Checkbox'
     WebUI.enhancedClick(ActionsObject)
-
+	
+	'Search for the record'
+	WebUI.sendKeys(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), Keys.chord(Keys.CONTROL,'a',Keys.BACK_SPACE))
+	
     'Verify Manage Layout button'
     WebUI.scrollToElement(findTestObject('Sprint3/button_Manage Layout'), 0)
 
@@ -435,7 +442,16 @@ if ((DataType.equals('User Ref') || DataType.equals('Hyperlink')) || DataType.eq
         'xpath', 'equals', columnXpath, true)
 
     WebUI.delay(2)
-
+	
+	'Search for the record'
+	WebUI.sendKeys(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), DisplayName)
+	
+	'Click Attributes Checkbox'
+	WebUI.enhancedClick(ActionsObject)
+	
+	'Search for the record'
+	WebUI.sendKeys(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), Keys.chord(Keys.CONTROL,'a',Keys.BACK_SPACE))
+	
     'Select the Attribute from the grid'
     WebUI.enhancedClick(ActionsObject)
 

@@ -42,13 +42,27 @@ CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Manage Attri
 for (String InternalName : InternalNames) {
     WebUI.delay(1)
 
-    not_run: WebUI.scrollToElement(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized', [('internalName') : InternalName]), 
-        0)
+    'Search for the record'
+    WebUI.scrollToElement(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), 0)
 
-	'Select the attribute from the grid'
+    'Search for the record'
+    WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), FailureHandling.STOP_ON_FAILURE)
+
+    'Search for the record'
+    WebUI.sendKeys(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), Keys.chord(Keys.CONTROL, 
+            'a'))
+
+    'Search for the record'
+    WebUI.sendKeys(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), InternalName)
+
+    'Select the attribute from the grid'
     WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized', [('internalName') : InternalName]))
 
     WebUI.delay(1)
+
+    'Search for the record'
+    WebUI.sendKeys(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), Keys.chord(Keys.CONTROL, 
+            'a', Keys.BACK_SPACE))
 }
 
 'Scroll To Manage Layout button'
@@ -69,17 +83,15 @@ WebUI.callTestCase(findTestCase('Test Cases/Common/Attribute_SaveAndVerifySucces
 for (String InternalName : InternalNames) {
     WebUI.delay(1)
 
-	'Verify deleted attributes not present in the grid'
+    'Verify deleted attributes not present in the grid'
     WebUI.verifyElementNotPresent(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized', [('internalName') : InternalName]), 
         0)
 }
 
-	WebUI.delay(1)
+WebUI.delay(1)
 
-	WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
-	
-	'Collapse Manage Types left panel'
-	WebUI.enhancedClick(findTestObject('Sprint4/a_Manage Types'))
+WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 
-
+'Collapse Manage Types left panel'
+WebUI.enhancedClick(findTestObject('Sprint4/a_Manage Types'))
 

@@ -56,7 +56,7 @@ WebUI.verifyElementNotPresent(findTestObject('Sprint6/label_Verify_SelectedField
 WebUI.selectOptionByLabel(findTestObject('Sprint6/select_LockColumnDropDown'), 'Column 1', true)
 
 'Click Save View button'
-WebUI.click(findTestObject('Object Repository/Sprint6/button_Save View'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Save View'))
 
 'Verify popup header'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_View Successfully Created'), 0)

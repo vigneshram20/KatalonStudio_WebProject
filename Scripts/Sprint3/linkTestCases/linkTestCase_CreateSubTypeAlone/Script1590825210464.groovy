@@ -42,6 +42,9 @@ CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Manage Type 
 'Click Add Subtype button'
 WebUI.enhancedClick(findTestObject('Sprint3/button_Add Subtype'))
 
+'Click Yes Button'
+WebUI.click(findTestObject('Common Objects/button_Yes'))
+
 'Provide Internal Name'
 WebUI.setText(findTestObject('Sprint3/input_InternalName'), InternaltypeName)
 

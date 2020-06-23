@@ -79,4 +79,9 @@
       <initValue>null</initValue>
       <name>totalTime</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>ExcelSheetName</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

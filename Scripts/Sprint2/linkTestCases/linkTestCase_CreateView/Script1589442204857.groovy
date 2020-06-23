@@ -278,7 +278,7 @@ WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint6/select_SortByDropDown'
 WebUI.click(findTestObject('Object Repository/Sprint6/button_SortBySortOrderClick', [('order') : 'DESC']))
 
 'Click Save View button'
-WebUI.click(findTestObject('Object Repository/Sprint6/button_Save View'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Save View'))
 
 'Verify the popup header '
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_View Successfully Created'), 0)

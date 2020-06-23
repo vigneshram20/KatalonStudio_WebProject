@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>TS_AllPages_PageLoadPerformance</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>0</numberOfRerun>
+   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <testSuiteGuid>bfd5eb26-81ea-4802-92be-d4f9b6695b59</testSuiteGuid>
+   <testCaseLink>
+      <guid>e3a3e8d4-a80d-428d-8251-3ec8ddc46b2c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/PageLoadPerformance/Libraries</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>690e1c55-7693-43f2-81e6-df8b06050111</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/Libraries</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>690e1c55-7693-43f2-81e6-df8b06050111</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>SubMenu</value>
+         <variableId>8e455d14-50bf-402c-8b16-a058113ba8a9</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>2d259351-319e-46dc-bd31-6f6366546006</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>dff8dd8d-f708-4845-903a-2e94f5f9abee</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/PageLoadPerformance/Manage Types</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>bce6b9e4-3b1f-43d3-aa69-6729e512f55d</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/Manage Types</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>bce6b9e4-3b1f-43d3-aa69-6729e512f55d</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>SubMenu</value>
+         <variableId>748be911-f7b4-4a7f-8ee0-b24dc15cd9ac</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>8731daaf-f2fe-49c0-af68-21a046d42b23</variableId>
+      </variableLink>
+   </testCaseLink>
+</TestSuiteEntity>

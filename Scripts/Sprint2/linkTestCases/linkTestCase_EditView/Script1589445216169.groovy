@@ -78,8 +78,8 @@ WebUI.selectOptionByLabel(findTestObject('Sprint6/select_LockColumnDropDown'), '
 'Click Desc button'
 WebUI.click(findTestObject('Object Repository/Sprint6/button_DESC'))
 
-'Click Save View'
-WebUI.click(findTestObject('Object Repository/Sprint6/button_Save View'))
+'Click Save View button'
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Save View'))
 
 'Verify popup header'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_View Successfully Modified'), 0)

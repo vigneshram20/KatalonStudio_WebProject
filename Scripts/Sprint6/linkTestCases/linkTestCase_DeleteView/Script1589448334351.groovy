@@ -25,6 +25,21 @@ WebUI.click(findTestObject('Sprint6/span_ViewName_parameterized', [('viewName') 
 
 WebUI.click(findTestObject('Sprint6/img_DeleteViewIcon'))
 
+if (viewType.equals('System')) {
+    WebUI.verifyElementPresent(findTestObject('Sprint6/h5_Confirm Delete System View'), 0)
+
+    WebUI.verifyElementPresent(findTestObject('Sprint6/p_SystemView_Delete_UserGroups', [('viewName') : viewName, ('userGroupsCount') : userGroupsCount]), 
+        0)
+
+    WebUI.verifyElementPresent(findTestObject('Sprint6/p_If you delete this view it will be removed from the View controls of all users currently assigned'), 
+        0)
+
+    WebUI.verifyElementPresent(findTestObject('Sprint6/p_Please confirm you want to delete this system view and remove it from all assigned users controls'), 
+        0)
+
+    WebUI.click(findTestObject('Sprint6/button_Delete System View'), FailureHandling.STOP_ON_FAILURE)
+}
+
 WebUI.verifyElementPresent(findTestObject('Sprint6/div_One or more views have been marked for deletion'), 0)
 
 'Click Save Changes'

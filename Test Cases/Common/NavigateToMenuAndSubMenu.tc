@@ -19,4 +19,11 @@
       <masked>false</masked>
       <name>SubMenuItem</name>
    </variable>
+   <variable>
+      <defaultValue>false</defaultValue>
+      <description></description>
+      <id>79fa2dcc-fa0b-43f9-acfd-bf80cee6da41</id>
+      <masked>false</masked>
+      <name>testPageLoadPerf</name>
+   </variable>
 </TestCaseEntity>

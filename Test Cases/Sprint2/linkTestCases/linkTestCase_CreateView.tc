@@ -3,7 +3,7 @@
    <description></description>
    <name>linkTestCase_CreateView</name>
    <tag></tag>
-   <comment></comment>
+   <comment>Manage Season - Total Time for page load - &quot; + totalTime</comment>
    <testCaseGuid>dff0eb8d-2a52-4f03-9be4-1608b5a408d5</testCaseGuid>
    <variable>
       <defaultValue>''</defaultValue>

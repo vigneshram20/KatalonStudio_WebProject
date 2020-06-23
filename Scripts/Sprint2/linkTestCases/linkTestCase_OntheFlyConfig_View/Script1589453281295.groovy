@@ -197,8 +197,8 @@ WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint6/select_SortByDropDown'
 'Verify Sort By sort applied'
 WebUI.verifyElementText(findTestObject('Object Repository/Sprint6/button_SortBySortAppliedVerify'), 'ASC')
 
-'Click Save view button'
-WebUI.click(findTestObject('Object Repository/Sprint6/button_Save View'))
+'Click Save View button'
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Save View'))
 
 'Verify popup header '
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_View Successfully Modified'), 0)
@@ -279,8 +279,8 @@ junit.framework.Assert.assertEquals(viewName, actualViewName)
 'Verify Sort By not present'
 WebUI.verifyElementNotPresent(findTestObject('Sprint6/select_SortByDropDown'), 0)
 
-'Click Save View'
-WebUI.click(findTestObject('Object Repository/Sprint6/button_Save View'))
+'Click Save View button'
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Save View'))
 
 'Verify the popup text'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_View Successfully Created'), 0)

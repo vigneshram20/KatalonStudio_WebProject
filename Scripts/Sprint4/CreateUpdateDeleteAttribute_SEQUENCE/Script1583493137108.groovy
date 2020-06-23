@@ -185,19 +185,14 @@ if (AttributeType.equals('Sequence Name')) {
     ActionsObject = WebUI.modifyObjectProperty(findTestObject('Object Repository/Sprint4/td_CreatedAttributeDynamicCheck'), 
         'xpath', 'equals', columnXpath, true)
 
-    /* WebUI.delay(2)
-
-	WebDriver driver = DriverFactory.getWebDriver()
+	'Search for the record'
+	WebUI.sendKeys(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), InternalName)
 	
-	WebElement element = WebUiBuiltInKeywords.findWebElement(ActionsObject)
-	
-	JavascriptExecutor js = ((driver) as JavascriptExecutor)
-	
-	js.executeScript('arguments[0].scrollIntoView(true);', element)
-	
-	js.executeScript('arguments[0].click();', element)*/
     'Click Attributes Checkbox'
     WebUI.enhancedClick(ActionsObject)
+	
+	'Search for the record'
+	WebUI.sendKeys(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), Keys.chord(Keys.CONTROL,'a',Keys.BACK_SPACE))
 
     WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 
@@ -316,9 +311,15 @@ if (AttributeType.equals('Sequence Name')) {
         'xpath', 'equals', columnXpath, true)
 
     WebUI.delay(2)
-
-    'Select the Attribute from the grid'
+	
+	'Search for the record'
+	WebUI.sendKeys(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), InternalName)
+	
+    'Click Attributes Checkbox'
     WebUI.enhancedClick(ActionsObject)
+	
+	'Search for the record'
+	WebUI.sendKeys(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), Keys.chord(Keys.CONTROL,'a',Keys.BACK_SPACE))
 
     WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 

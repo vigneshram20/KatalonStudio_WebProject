@@ -45,12 +45,72 @@ import java.text.DateFormat as DateFormat
 import java.text.SimpleDateFormat as SimpleDateFormat
 import java.util.Date as Date
 import org.openqa.selenium.JavascriptExecutor;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFCell
+import org.apache.poi.xssf.usermodel.XSSFCellStyle
+import org.apache.poi.xssf.usermodel.XSSFRow
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 
 class customKeywords {
 	public static String actionsXpathSuffix ='//div[1]//span';
 	public static HashMap<String, String> seasonEntitiesMap;
 
+	/*
+	 * 
+	 */
+	@Keyword
+	def createSheetAndColumn(String sheetName)throws IOException {
+		if(!sheetName.equals("")) {
+			File myFile = new File("./abc.xlsx");
+			FileInputStream inputStream = new FileInputStream(myFile);
+			XSSFWorkbook workbook = new XSSFWorkbook(inputStream);
+			XSSFSheet sheet = workbook.createSheet(sheetName);
+			XSSFRow row = sheet.createRow(0);
+			XSSFCell cell = row.createCell(0);
+			cell.setCellValue("Page Name");
+			XSSFCell cell1 = row.createCell(1);
+			cell1.setCellValue("Dom Load Time");
+			XSSFCell cell2 = row.createCell(2);
+			cell2.setCellValue("Page Load Time");
+			FileOutputStream fileOut = new FileOutputStream("./abc.xlsx");
+			workbook.write(fileOut);
+			workbook.close();
+			fileOut.flush();
+			fileOut.close();
+		}
+	}
+	/*
+	 * 
+	 */
+	@Keyword
+	def writeExcel(String sheetName, String pageName,Long domLoad, Long pageLoad) throws IOException {
+		if(!sheetName.equals("")) {
+			File myFile = new File("./abc.xlsx");
+			FileInputStream inputStream = new FileInputStream(myFile);
+			XSSFWorkbook workbook = new XSSFWorkbook(inputStream);
+			XSSFSheet sheet = workbook.getSheet(sheetName);
+			int rowCount = sheet.getLastRowNum()-sheet.getFirstRowNum();
+			XSSFRow row = sheet.createRow(rowCount+1);
+			XSSFCell cell = row.createCell(0);
+			cell.setCellValue(pageName);
+			XSSFCell cell1 = row.createCell(1);
+			cell1.setCellValue(domLoad);
+			XSSFCell cell2 = row.createCell(2);
+			cell2.setCellValue(pageLoad);
+			FileOutputStream fileOut = new FileOutputStream(myFile);
+			workbook.write(fileOut);
+			workbook.close();
+			fileOut.flush();
+			fileOut.close();
+		}
+	}
 	/**
 	 * 
 	 */
@@ -69,24 +129,31 @@ class customKeywords {
 	 * 
 	 */
 	@Keyword
-	def checkPagePerformanceNow(String pageName) {
+	def long checkPagePerformanceNow(String pageName) {
 		WebDriver driver = DriverFactory.getWebDriver()
 
 		JavascriptExecutor js = ((driver) as JavascriptExecutor)
 
-		long navigationStart = js.executeScript('return window.performance.timing.navigationStart');
-		long responseStart = js.executeScript('return window.performance.timing.responseStart');
-		long domComplete = js.executeScript('return window.performance.timing.domComplete');
-		long loadEventEnd  = js.executeScript('return window.performance.timing.loadEventEnd');
+		long loadingTime  = js.executeScript('return performance.timing.loadEventEnd - performance.timing.navigationStart');
 
-		float backEndPerf = ((float)(responseStart - navigationStart)) / 1000;
-		float frontEndPerf = ((float)(domComplete - responseStart)) / 1000;
-		float loadingTime = ((float)(loadEventEnd-navigationStart))/1000;
 		WebUI.comment("**************"+pageName+"***************")
-		WebUI.comment("Page Load Time - "+loadingTime+" in seconds");
-		WebUI.comment("Back End Performance - "+backEndPerf+" in seconds");
-		WebUI.comment("Front End Performance - "+frontEndPerf+" in seconds");
+		WebUI.comment("Page Load Time - "+loadingTime+" in ms");
 		WebUI.comment("*******************End********************")
+		driver =null;
+		return loadingTime;
+	}
+	@Keyword
+	def long pageLoadTimingSelenium(String pageName, long exceptionTime) {
+		GlobalVariable.stopTime = System.currentTimeMillis()
+
+		long totalTime = GlobalVariable.stopTime - GlobalVariable.startTime
+		if(exceptionTime>0) {
+			totalTime = totalTime - exceptionTime
+		}
+		WebUI.comment("**************"+pageName+"***************")
+		WebUI.comment('***Total Time taken to first interaction in the page (ms) - ' + totalTime)
+		WebUI.comment("*******************End********************")
+		return totalTime;
 	}
 	/**
 	 * Refresh browser

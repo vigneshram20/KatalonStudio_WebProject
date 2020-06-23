@@ -7,14 +7,14 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//input[@type = 'text' and @placeholder = 'Search Fields']</value>
+         <value>//input[@type = 'text' and @placeholder = 'Search attribute']</value>
       </entry>
       <entry>
          <key>XPATH</key>
          <value>(//input[@placeholder='Looking for an attribute'])[1]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -49,7 +49,7 @@
       <matchCondition>equals</matchCondition>
       <name>placeholder</name>
       <type>Main</type>
-      <value>Search Fields</value>
+      <value>Search attribute</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
