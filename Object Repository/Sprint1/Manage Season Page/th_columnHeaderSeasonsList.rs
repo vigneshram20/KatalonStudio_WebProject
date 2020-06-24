@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class=\'rTableHead freeze actions\']</value>
+         <value>//div[@class='rTableRow cloned_header']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

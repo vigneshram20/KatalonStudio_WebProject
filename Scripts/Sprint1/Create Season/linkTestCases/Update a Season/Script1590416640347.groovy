@@ -16,18 +16,10 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-def gridHeaderA = WebUI.removeObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 'xpath')
-
-gridHeaderA = WebUI.modifyObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 'xpath', 
-    'equals', "//div[@class='rTableHead freeze actions']", true)
 
 WebUI.waitForPageLoad(60)
 
-WebUI.waitForElementPresent(gridHeaderA, 60)
-
-WebUI.waitForElementVisible(gridHeaderA, 60)
-
-WebUI.waitForElementClickable(gridHeaderA, 60)
+WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
 
 'Search for the record'
 WebUI.click(findTestObject('Sprint1/Create Season/input_SearchField'), FailureHandling.STOP_ON_FAILURE)
@@ -40,11 +32,11 @@ WebUI.sendKeys(findTestObject('Sprint1/Create Season/input_SearchField'), Name +
 
 WebUI.waitForPageLoad(60)
 
-WebUI.waitForElementPresent(gridHeaderA, 60)
+WebUI.waitForElementPresent(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
 
-WebUI.waitForElementVisible(gridHeaderA, 60)
+WebUI.waitForElementVisible(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
 
-WebUI.waitForElementClickable(gridHeaderA, 60)
+WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
 
 xpath1 = (((((((((('//div[2][normalize-space(.)=\'' + Brand) + '\'][not(contains(@id,\'clone\'))]/../div[3][normalize-space()=\'') + 
 Division) + '\']/../div[4][normalize-space()=\'') + Store_End_Date) + '\']/../div[5][normalize-space()=\'') + Store_Start_Date) + 
@@ -197,9 +189,9 @@ WebUI.enableSmartWait()
 
 WebUI.waitForPageLoad(60)
 
-WebUI.waitForElementPresent(gridHeaderA, 60)
+WebUI.waitForElementPresent(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
 
-WebUI.waitForElementVisible(gridHeaderA, 60)
+WebUI.waitForElementVisible(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
 
-WebUI.waitForElementClickable(gridHeaderA, 60)
+WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
 

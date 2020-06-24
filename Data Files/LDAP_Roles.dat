@@ -6,11 +6,11 @@
    <containsHeaders>true</containsHeaders>
    <csvSeperator></csvSeperator>
    <dataFileGUID>972e6e6d-410a-4006-8ea8-762ceba68913</dataFileGUID>
-   <dataSourceUrl>MCP-Roles-2.xlsx</dataSourceUrl>
+   <dataSourceUrl>WSI_MCP_TestData.xlsx</dataSourceUrl>
    <driver>ExcelFile</driver>
    <isInternalPath>true</isInternalPath>
    <query></query>
    <secureUserAccount>false</secureUserAccount>
-   <sheetName>Roles</sheetName>
+   <sheetName>LDAPUsers</sheetName>
    <usingGlobalDBSetting>false</usingGlobalDBSetting>
 </DataFileEntity>

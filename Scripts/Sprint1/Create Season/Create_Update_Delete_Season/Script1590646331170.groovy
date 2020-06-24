@@ -32,21 +32,12 @@ if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {
     WebUI.navigateToUrl(GlobalVariable.URL)
 }
 
-def gridHeaderA = WebUI.removeObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 'xpath')
-
-gridHeaderA = WebUI.modifyObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 'xpath', 
-    'equals', '//div[@class=\'rTableHead freeze actions\']', true)
-
 WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : 'Season'], 
     FailureHandling.STOP_ON_FAILURE)
 
 WebUI.waitForPageLoad(60)
 
-WebUI.waitForElementPresent(gridHeaderA, 60)
-
-WebUI.waitForElementVisible(gridHeaderA, 60)
-
-WebUI.waitForElementClickable(gridHeaderA, 60)
+WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
 
 'Check Page Performance'
 CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Manage Seasons')
@@ -191,13 +182,6 @@ WebUI.enableSmartWait()
 
 WebUI.waitForPageLoad(60)
 
-WebUI.waitForPageLoad(60)
-
-'Verify Seasonslist Column'
-WebUI.waitForElementPresent(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
-
-WebUI.waitForElementVisible(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
-
 WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
 
 WebUI.callTestCase(findTestCase('Sprint1/Create Season/linkTestCases/Update a Season'), [('Brand') : Brand, ('Division') : DivisionsList.get(
@@ -230,3 +214,4 @@ for (String currentSeasonName : FullSeasonNameList) {
 viewName = (viewName + ' – Default')
 
 WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_DeleteView'), [('viewName') : viewName], FailureHandling.STOP_ON_FAILURE)
+

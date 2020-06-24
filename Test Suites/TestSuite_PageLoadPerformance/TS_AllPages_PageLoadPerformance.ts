@@ -64,4 +64,58 @@
          <variableId>8731daaf-f2fe-49c0-af68-21a046d42b23</variableId>
       </variableLink>
    </testCaseLink>
+   <testCaseLink>
+      <guid>aafb7a65-1850-4507-ab1c-52e56582bd9e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/PageLoadPerformance/UserRoleManagement</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>SCRIPT_VARIABLE</type>
+         <value>&quot;Roles&quot;</value>
+         <variableId>0982aab6-6d3c-4c5b-8a4c-457cec4da3da</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>82e62723-b5c7-4c19-9cc3-7e11e4bff23e</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>be25c186-b866-4ea5-a1d1-0f7ee19d979a</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/PageLoadPerformance/UserRoleManagement</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>SCRIPT_VARIABLE</type>
+         <value>&quot;Permissions&quot;</value>
+         <variableId>0982aab6-6d3c-4c5b-8a4c-457cec4da3da</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>82e62723-b5c7-4c19-9cc3-7e11e4bff23e</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>9176779a-3851-4b2b-80cd-d2da33cbf1d1</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/PageLoadPerformance/UserRoleManagement</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>SCRIPT_VARIABLE</type>
+         <value>&quot;Users&quot;</value>
+         <variableId>0982aab6-6d3c-4c5b-8a4c-457cec4da3da</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>82e62723-b5c7-4c19-9cc3-7e11e4bff23e</variableId>
+      </variableLink>
+   </testCaseLink>
 </TestSuiteEntity>

@@ -46,8 +46,8 @@ String currentURL = WebUI.getUrl();
 	WebUI.comment(currentURL)
 	WebDriver driver = DriverFactory.getWebDriver()
 	JavascriptExecutor js = ((driver) as JavascriptExecutor)
-	js.executeScript('location.reload(true);');
 	GlobalVariable.startTime = System.currentTimeMillis()
+	js.executeScript('location.reload(true);');
 	WebUI.waitForPageLoad(60)
 	
 long tempTimerStart =0;

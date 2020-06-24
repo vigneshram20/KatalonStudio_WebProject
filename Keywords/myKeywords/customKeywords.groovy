@@ -76,10 +76,10 @@ class customKeywords {
 			XSSFCell cell = row.createCell(0);
 			cell.setCellValue("Page Name");
 			XSSFCell cell1 = row.createCell(1);
-			cell1.setCellValue("Dom Load Time");
+			cell1.setCellValue("DOM Load Finish Time");
 			XSSFCell cell2 = row.createCell(2);
-			cell2.setCellValue("Page Load Time");
-			FileOutputStream fileOut = new FileOutputStream("./abc.xlsx");
+			cell2.setCellValue("Page Interaction Time");
+			FileOutputStream fileOut = new FileOutputStream("./WSI-PageLoadPerformance.xlsx");
 			workbook.write(fileOut);
 			workbook.close();
 			fileOut.flush();
@@ -92,7 +92,7 @@ class customKeywords {
 	@Keyword
 	def writeExcel(String sheetName, String pageName,Long domLoad, Long pageLoad) throws IOException {
 		if(!sheetName.equals("")) {
-			File myFile = new File("./abc.xlsx");
+			File myFile = new File("./WSI-PageLoadPerformance.xlsx");
 			FileInputStream inputStream = new FileInputStream(myFile);
 			XSSFWorkbook workbook = new XSSFWorkbook(inputStream);
 			XSSFSheet sheet = workbook.getSheet(sheetName);
@@ -129,6 +129,17 @@ class customKeywords {
 	 * 
 	 */
 	@Keyword
+	def String currentZonetimeStampStringGen(String inputName,String dateFormat) {
+		'Current Date Java Code'
+		SimpleDateFormat formatter = new SimpleDateFormat(dateFormat)
+		Date date = new Date()
+		String dateFormatted = formatter.format(date)
+		return inputName+dateFormatted
+	}
+	/**
+	 * 
+	 */
+	@Keyword
 	def long checkPagePerformanceNow(String pageName) {
 		WebDriver driver = DriverFactory.getWebDriver()
 
@@ -137,7 +148,7 @@ class customKeywords {
 		long loadingTime  = js.executeScript('return performance.timing.loadEventEnd - performance.timing.navigationStart');
 
 		WebUI.comment("**************"+pageName+"***************")
-		WebUI.comment("Page Load Time - "+loadingTime+" in ms");
+		WebUI.comment("DOM Load Finish Time (ms) - "+loadingTime);
 		WebUI.comment("*******************End********************")
 		driver =null;
 		return loadingTime;

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Manage Types</name>
+   <name>UserRoleManagement</name>
    <tag></tag>
-   <comment>currentURL</comment>
-   <testCaseGuid>c47a81aa-a2c3-4d51-88ff-cdab774d0fa1</testCaseGuid>
+   <comment></comment>
+   <testCaseGuid>2390d91a-7b8a-40a1-af02-b00bc64160ba</testCaseGuid>
    <variable>
-      <defaultValue>'Season'</defaultValue>
+      <defaultValue>'Permissions'</defaultValue>
       <description></description>
-      <id>748be911-f7b4-4a7f-8ee0-b24dc15cd9ac</id>
+      <id>0982aab6-6d3c-4c5b-8a4c-457cec4da3da</id>
       <masked>false</masked>
       <name>SubMenu</name>
    </variable>
    <variable>
       <defaultValue>GlobalVariable.ExcelSheetName</defaultValue>
       <description></description>
-      <id>8731daaf-f2fe-49c0-af68-21a046d42b23</id>
+      <id>82e62723-b5c7-4c19-9cc3-7e11e4bff23e</id>
       <masked>false</masked>
       <name>sheetName</name>
    </variable>

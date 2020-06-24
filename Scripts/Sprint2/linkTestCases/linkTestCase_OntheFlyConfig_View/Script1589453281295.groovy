@@ -20,18 +20,10 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.delay(3)
 
-def gridHeaderA = WebUI.removeObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 'xpath')
-
-gridHeaderA = WebUI.modifyObjectProperty(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 'xpath',
-	'equals', "//div[@class='rTableHead freeze actions']", true)
 
 WebUI.waitForPageLoad(60)
 
-WebUI.waitForElementPresent(gridHeaderA, 60)
-
-WebUI.waitForElementVisible(gridHeaderA, 60)
-
-WebUI.waitForElementClickable(gridHeaderA, 60)
+WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
 
 'Click the group by button'
 WebUI.click(findTestObject('Common Objects/button_Group By'))
@@ -50,11 +42,11 @@ WebUI.click(findTestObject('Sprint6/button_Apply Group'))
 
 WebUI.waitForPageLoad(60)
 
-WebUI.waitForElementPresent(gridHeaderA, 60)
+WebUI.waitForElementPresent(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
 
-WebUI.waitForElementVisible(gridHeaderA, 60)
+WebUI.waitForElementVisible(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
 
-WebUI.waitForElementClickable(gridHeaderA, 60)
+WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
 
 String modifiedViewName = (viewName + ' ') + '(Modified)'
 

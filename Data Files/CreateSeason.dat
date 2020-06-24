@@ -6,11 +6,11 @@
    <containsHeaders>true</containsHeaders>
    <csvSeperator></csvSeperator>
    <dataFileGUID>d51dbb62-96af-4fd7-a5da-9f5643d9f3c6</dataFileGUID>
-   <dataSourceUrl>../../Katalon Studio/WSI_MerchTool/WSI_MCP_TestData.xlsx</dataSourceUrl>
+   <dataSourceUrl>WSI_MCP_TestData.xlsx</dataSourceUrl>
    <driver>ExcelFile</driver>
    <isInternalPath>true</isInternalPath>
    <query></query>
    <secureUserAccount>false</secureUserAccount>
-   <sheetName>Sheet1</sheetName>
+   <sheetName>ManageSeason</sheetName>
    <usingGlobalDBSetting>false</usingGlobalDBSetting>
 </DataFileEntity>
