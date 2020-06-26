@@ -6,7 +6,7 @@
    <comment></comment>
    <testCaseGuid>d7ba5b36-73da-445f-91f4-e89cdc170b82</testCaseGuid>
    <variable>
-      <defaultValue>'Season'</defaultValue>
+      <defaultValue>'Merch List'</defaultValue>
       <description></description>
       <id>8e455d14-50bf-402c-8b16-a058113ba8a9</id>
       <masked>false</masked>

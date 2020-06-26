@@ -20,7 +20,7 @@
          <id>690e1c55-7693-43f2-81e6-df8b06050111</id>
          <iterationEntity>
             <iterationType>ALL</iterationType>
-            <value></value>
+            <value>1-18</value>
          </iterationEntity>
          <testDataId>Data Files/Libraries</testDataId>
       </testDataLink>
@@ -44,15 +44,15 @@
       <testCaseId>Test Cases/PageLoadPerformance/Manage Types</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
-         <id>bce6b9e4-3b1f-43d3-aa69-6729e512f55d</id>
+         <id>65e6096a-23d1-4cd8-8ea1-706b70f4161a</id>
          <iterationEntity>
             <iterationType>ALL</iterationType>
-            <value></value>
+            <value>1-18</value>
          </iterationEntity>
-         <testDataId>Data Files/Manage Types</testDataId>
+         <testDataId>Data Files/Libraries</testDataId>
       </testDataLink>
       <variableLink>
-         <testDataLinkId>bce6b9e4-3b1f-43d3-aa69-6729e512f55d</testDataLinkId>
+         <testDataLinkId>65e6096a-23d1-4cd8-8ea1-706b70f4161a</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>SubMenu</value>
          <variableId>748be911-f7b4-4a7f-8ee0-b24dc15cd9ac</variableId>

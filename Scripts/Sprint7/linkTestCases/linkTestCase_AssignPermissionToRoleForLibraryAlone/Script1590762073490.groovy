@@ -32,7 +32,9 @@ WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/span_Edit Mode_tog
 
 WebUI.sendKeys(findTestObject('Sprint6/input_roleSearch'), roleName)
 
-WebUI.verifyElementPresent(findTestObject('Sprint6/th_parameterized', [('param') : roleName]), 0)
+roleNameUpperCase = roleName.toUpperCase();
+
+WebUI.verifyElementPresent(findTestObject('Sprint6/th_parameterized', [('param') : roleNameUpperCase]), 0)
 
 WebDriver driver = DriverFactory.getWebDriver()
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>select_Field_Value</name>
+   <name>select_Field_SearchValue1</name>
    <tag></tag>
    <elementGuidId>f1099dfa-0fde-4514-aa3e-38c4fa0f0ba9</elementGuidId>
    <selectorCollection>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='typeahead_search with_checkbox  mulitiSelect']//input[@placeholder='select']</value>
+         <value>//div[@class='typeahead_search with_checkbox  mulitiSelect ']//input[@placeholder='select']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

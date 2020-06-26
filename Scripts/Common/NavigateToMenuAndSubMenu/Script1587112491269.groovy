@@ -14,9 +14,9 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.WebDriver
-import com.kms.katalon.core.webui.driver.DriverFactory
-import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver as WebDriver
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 
 WebUI.enableSmartWait()
 
@@ -29,7 +29,13 @@ WebUI.verifyElementClickable(findTestObject('Common Objects/img_HamburgerMenu'))
 WebUI.click(findTestObject('Common Objects/img_HamburgerMenu'))
 
 'Click menu'
+WebUI.verifyElementClickable(findTestObject('Sprint1/LandingPage/a_Parameterized', [('menu') : MenuItem]))
+
+'Click menu'
 WebUI.click(findTestObject('Sprint1/LandingPage/a_Parameterized', [('menu') : MenuItem]))
+
+'Click sub menu'
+WebUI.verifyElementClickable(findTestObject('Sprint1/LandingPage/a_Parameterized', [('menu') : SubMenuItem]))
 
 'Click sub menu'
 WebUI.click(findTestObject('Sprint1/LandingPage/a_Parameterized', [('menu') : SubMenuItem]))
@@ -38,13 +44,19 @@ GlobalVariable.startTime = System.currentTimeMillis()
 
 WebUI.waitForPageLoad(60)
 
-if(testPageLoadPerf)
-{
-	String currentURL = WebUI.getUrl();
-	WebUI.comment(currentURL)
-	WebDriver driver = DriverFactory.getWebDriver()
-	JavascriptExecutor js = ((driver) as JavascriptExecutor)
-	GlobalVariable.startTime = System.currentTimeMillis()
-	js.executeScript('location.reload(true);');
-	WebUI.waitForPageLoad(60)
+if (testPageLoadPerf) {
+    String currentURL = WebUI.getUrl()
+
+    WebUI.comment(currentURL)
+
+    WebDriver driver = DriverFactory.getWebDriver()
+
+    JavascriptExecutor js = ((driver) as JavascriptExecutor)
+
+    GlobalVariable.startTime = System.currentTimeMillis()
+
+    js.executeScript('location.reload(true);')
+
+    WebUI.waitForPageLoad(60)
 }
+

@@ -31,6 +31,8 @@ if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {
 } else {
     'Navigate to Homepage'
     WebUI.navigateToUrl(GlobalVariable.URL)
+	
+	WebUI.verifyElementClickable(findTestObject('Sprint1/LandingPage/div_Manage List'), FailureHandling.STOP_ON_FAILURE)
 }
 
 'Navigate to Type and Attribute Management'

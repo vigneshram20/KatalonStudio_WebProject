@@ -25,7 +25,7 @@ import java.text.DateFormat as DateFormat
 import java.text.SimpleDateFormat as SimpleDateFormat
 import java.util.Date as Date
 
-/*if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {
+if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {
     'Launch the Browser'
     WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
 
@@ -34,6 +34,7 @@ import java.util.Date as Date
 } else {
     'Navigate to Homepage'
     WebUI.navigateToUrl(GlobalVariable.URL)
+    WebUI.verifyElementClickable(findTestObject('Sprint1/LandingPage/div_Manage List'), FailureHandling.STOP_ON_FAILURE)
 }
 
 WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : 'Season'], 
@@ -58,8 +59,7 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint8/h5_Confirm 
 WebUI.verifyElementPresent(findTestObject('Sprint8/p_DivisionChangeConfirmation', [('divisionName') : Division]), 
     0)
 
-WebUI.click(findTestObject('Object Repository/Common Objects/button_Yes'))*/
-
+WebUI.click(findTestObject('Object Repository/Common Objects/button_Yes'))
 
 WebUI.click(findTestObject('Sprint8/img_PlusIcon'))
 
@@ -67,22 +67,75 @@ WebUI.click(findTestObject('Object Repository/Sprint8/span_Add additional field 
 
 WebUI.click(findTestObject('Sprint8/select_Field_CustomFilter'))
 
-WebUI.click(findTestObject('Sprint8/span_AttributeSelection', [('attributeName') : attributeName]))
+WebUI.click(findTestObject('Sprint8/span_AttributeSelection', [('AttributeName') : AttributeName]))
 
 WebUI.selectOptionByLabel(findTestObject('Sprint8/select_Operator_CustomFilter'), Operator, false)
 
-if (!(Operator.equals('Is Empty') || !AttributeType.toString().equals("Text"))) {
-    WebUI.click(findTestObject('Object Repository/Sprint8/select_Field_Value'))
+String[] Values1 = SearchValue.toString().split("\\,");
 
-    WebUI.click(findTestObject('Sprint8/span_AttributeSelection', [('attributeName') : Value]))
+List<String> Values1List = new ArrayList<String>();
+
+if(Values1.length>0)
+{
+	Values1List = Arrays.asList(Values1);
+}
+else
+{
+	SearchValue = Values1[0]
 }
 
-if(AttributeType.toString().equals("Text"))
+String matchedRecord =""
+
+if(SearchValue.contains(","))
 {
+	StringBuilder sb = new StringBuilder();
+        for (Iterator<String> it = Values1List.iterator(); it.hasNext();) {
+            String element = it.next();
+            sb.append(element);
+            if(it.hasNext()){
+                sb.append(", ");
+            }
+        }
+		matchedRecord = sb.toString()
+}
+else
+{
+	matchedRecord = SearchValue;
+}
+
+if (AttributeType.equals("Single List")) {
+	
+	if(!Operator.equals('Is Empty') )
+	{
+	
+	WebUI.click(findTestObject('Object Repository/Sprint8/select_Field_SearchValue1'))
+	
+	for(String currentValue : Values1List)
+	{
+		WebUI.click(findTestObject('Sprint8/span_AttributeSelection', [('AttributeName') : currentValue]))
+	}
+	}
+}
+
+if(AttributeType.toString().equals("Text") || AttributeType.toString().equals("Date"))
+{
+	if(!Operator.equals('Is Empty') )
+	{
 	WebUI.click(findTestObject('Object Repository/Sprint8/input_EnterText_FilterHeader'))
 	
-	WebUI.sendKeys(findTestObject('Object Repository/Sprint8/input_EnterText_FilterHeader'), Value)
+	WebUI.sendKeys(findTestObject('Object Repository/Sprint8/input_EnterText_FilterHeader'), SearchValue)
+	}
+	
+	if(Operator.equals('Range'))
+	{
+		WebUI.enhancedClick(findTestObject('Object Repository/Sprint8/input_EnterText_SearchValue2'))
+		
+		WebUI.sendKeys(findTestObject('Object Repository/Sprint8/input_EnterText_SearchValue2'), Values1List.get(1))
+	}
+	
 }
+
+WebUI.delay(2)
 
 WebUI.click(findTestObject('Object Repository/Sprint8/button_Apply Filter'))
 
@@ -91,12 +144,12 @@ WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint6/select_Library'), Bran
 WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint8/Select_Division'), Division, true, 0)
 
 if(!(Operator.equals('Is Empty'))) {
-WebUI.verifyElementPresent(findTestObject('Sprint8/div_FilterApplied', [('filterApplied') : (attributeName + Operator) + 
-            Value]), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint8/div_FilterApplied', [('filterApplied') : (AttributeName + Operator) + 
+            matchedRecord]), 0)
 }
 else
 {
-	WebUI.verifyElementPresent(findTestObject('Sprint8/div_FilterApplied', [('filterApplied') : (attributeName + Operator)]), 0)
+	WebUI.verifyElementPresent(findTestObject('Sprint8/div_FilterApplied', [('filterApplied') : (AttributeName + Operator)]), 0)
 }
 
 List<String> listOfExistingElements = WebUI.findWebElements(findTestObject('Object Repository/Sprint8/div_ColumnIndexNo'), 
@@ -107,7 +160,7 @@ int columnNo = 0
 for (WebElement element : listOfExistingElements) {
     columnNo++
 
-    if (element.getAttribute('title').equals(attributeName)) {
+    if (element.getAttribute('title').equals(AttributeName)) {
         break
     }
 }
@@ -117,37 +170,41 @@ List<String> listOfExistingCells = WebUI.findWebElements(findTestObject('Object 
 
 if (Operator.equals('Contains')) {
     for (WebElement element : listOfExistingCells) {
-        if (!(element.getAttribute('title').contains(Value))) {
+		
+        if (!(element.getAttribute('title').contains(SearchValue))) {
             throw new Exception('Contains Filter not working as expected')
         }
     }
 } else if (Operator.equals('Does Not Contain')) {
     for (WebElement element : listOfExistingCells) {
-        if (element.getAttribute('title').contains(Value)) {
+        if (element.getAttribute('title').contains(SearchValue)) {
             throw new Exception('Is Not Filter not working as expected')
         }
     }
 } else if (Operator.equals('Is') || Operator.equals('Is Equal')) {
     for (WebElement element : listOfExistingCells) {
-        if (!(element.getAttribute('title').equals(Value))) {
-            throw new Exception('Is /Is Equal Filter not working as expected')
-        }
+		
+		if(!Values1List.contains(element.getAttribute('title')))
+		{
+			throw new Exception('Is /Is Equal Filter not working as expected')
+		}
+		
     }
 } else if (Operator.equals('Is Not')) {
     for (WebElement element : listOfExistingCells) {
-        if (element.getAttribute('title').contains(Value)) {
+        if (Values1List.contains(element.getAttribute('title'))) {
             throw new Exception('Is Not Filter not working as expected')
         }
     }
 } else if (Operator.equals('Starts with')) {
     for (WebElement element : listOfExistingCells) {
-        if (!(element.getAttribute('title').startsWith(Value))) {
+        if (!(element.getAttribute('title').startsWith(SearchValue))) {
             throw new Exception('Starts with Filter not working as expected')
         }
     }
 } else if (Operator.equals('Ends with')) {
     for (WebElement element : listOfExistingCells) {
-        if (!(element.getAttribute('title').endsWith(Value))) {
+        if (!(element.getAttribute('title').endsWith(SearchValue))) {
             throw new Exception('Ends with Filter not working as expected')
         }
     }
@@ -159,9 +216,9 @@ if (Operator.equals('Contains')) {
     }
 } else if (Operator.equals('Is Equal')) {
     for (WebElement element : listOfExistingCells) {
-        SimpleDateFormat sdformat = new SimpleDateFormat('MM-dd-yyyy')
+        SimpleDateFormat sdformat = new SimpleDateFormat('MM/dd/yyyy')
 
-        Date d1 = sdformat.parse(Value)
+        Date d1 = sdformat.parse(SearchValue)
 
         Date d2 = sdformat.parse(element.getAttribute('title'))
 
@@ -171,25 +228,25 @@ if (Operator.equals('Contains')) {
     }
 } else if (Operator.equals('Is After')) {
     for (WebElement element : listOfExistingCells) {
-        SimpleDateFormat sdformat = new SimpleDateFormat('MM-dd-yyyy')
+        SimpleDateFormat sdformat = new SimpleDateFormat('MM/dd/yyyy')
 
-        Date d1 = sdformat.parse(Value)
+        Date d1 = sdformat.parse(SearchValue)
 
         Date d2 = sdformat.parse(element.getAttribute('title'))
 
-        if (!(d1.compareTo(d2) > 0)) {
+        if (d1.compareTo(d2) > 0) {
             throw new Exception('Is After with Filter not working as expected')
         }
     }
 } else if (Operator.equals('Is Before')) {
     for (WebElement element : listOfExistingCells) {
-        SimpleDateFormat sdformat = new SimpleDateFormat('MM-dd-yyyy')
+        SimpleDateFormat sdformat = new SimpleDateFormat('MM/dd/yyyy')
 
-        Date d1 = sdformat.parse(Value)
+        Date d1 = sdformat.parse(SearchValue)
 
         Date d2 = sdformat.parse(element.getAttribute('title'))
 
-        if (!(d1.compareTo(d2) < 0)) {
+        if (d1.compareTo(d2) < 0) {
             throw new Exception('Is Before with Filter not working as expected')
         }
     }
@@ -197,11 +254,11 @@ if (Operator.equals('Contains')) {
 else if (Operator.equals('Range'))
 {
 	for (WebElement element : listOfExistingCells) {
-		SimpleDateFormat sdformat = new SimpleDateFormat('MM-dd-yyyy')
+		SimpleDateFormat sdformat = new SimpleDateFormat('MM/dd/yyyy')
 
-		Date d = sdformat.parse(Value)
+		Date d = sdformat.parse(Values1List.get(0))
 		
-		Date d1 = sdformat.parse(Value1)
+		Date d1 = sdformat.parse(Values1List.get(1))
 
 		Date d2 = sdformat.parse(element.getAttribute('title'))
 

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DataFileEntity>
    <description></description>
-   <name>LDAP_Roles</name>
+   <name>FilterHeader</name>
    <tag></tag>
    <containsHeaders>true</containsHeaders>
    <csvSeperator></csvSeperator>
-   <dataFileGUID>972e6e6d-410a-4006-8ea8-762ceba68913</dataFileGUID>
-   <dataSourceUrl>WSI_MCP_TestData.xlsx</dataSourceUrl>
+   <dataFileGUID>9ebb071c-d3f3-4123-9085-e1932c7c860a</dataFileGUID>
+   <dataSourceUrl>C:\Users\vigneshram_s\git\WSI_MerchTool\WSI_MCP_TestData.xlsx</dataSourceUrl>
    <driver>ExcelFile</driver>
-   <isInternalPath>true</isInternalPath>
+   <isInternalPath>false</isInternalPath>
    <query></query>
    <secureUserAccount>false</secureUserAccount>
-   <sheetName>LDAPRoles</sheetName>
+   <sheetName>FilterHeader</sheetName>
    <usingGlobalDBSetting>false</usingGlobalDBSetting>
 </DataFileEntity>

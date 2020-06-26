@@ -3,6 +3,6 @@
    <description></description>
    <name>AssignCRUDPermissionsToSeasonAndItsType</name>
    <tag></tag>
-   <comment></comment>
+   <comment>Permissions Tab - Total Time for page load - &quot; + totalTime</comment>
    <testCaseGuid>acd4430a-2a0e-4a90-9af3-93656838244d</testCaseGuid>
 </TestCaseEntity>

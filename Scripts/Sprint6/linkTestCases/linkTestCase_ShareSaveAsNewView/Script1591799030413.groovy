@@ -15,6 +15,9 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
+'Click Save View button'
+WebUI.click(findTestObject('Object Repository/Sprint6/button_Save View -dropdown'))
+
 WebUI.click(findTestObject('Sprint6/button_Save as New View'))
 
 'Verify popup header'

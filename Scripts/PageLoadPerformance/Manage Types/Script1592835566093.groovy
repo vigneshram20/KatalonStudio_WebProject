@@ -21,14 +21,13 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKe
 import org.openqa.selenium.WebDriver as WebDriver
 
 /*if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {*/
-    'Launch the Browser'
-    WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
+'Launch the Browser'
+WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
 
-    'Verify Login Successfully'
-    WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
-	
+'Verify Login Successfully'
+WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
+
 //}
-
 /*'Navigate to Homepage'
 WebUI.navigateToUrl(GlobalVariable.URL)
 */
@@ -37,53 +36,63 @@ WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem'
     FailureHandling.STOP_ON_FAILURE)
 
 'CLick Attribute Management menu'
+WebUI.verifyElementClickable(findTestObject('Sprint4/a_Manage Types'))
+
+'CLick Attribute Management menu'
 WebUI.click(findTestObject('Sprint4/a_Manage Types'))
+
+'Click Submenu'
+WebUI.verifyElementClickable(findTestObject('Sprint1/LandingPage/a_Parameterized', [('menu') : SubMenu]))
 
 'Click Submenu'
 WebUI.click(findTestObject('Sprint1/LandingPage/a_Parameterized', [('menu') : SubMenu]))
 
-String currentURL = WebUI.getUrl();
-	WebUI.comment(currentURL)
-	WebDriver driver = DriverFactory.getWebDriver()
-	JavascriptExecutor js = ((driver) as JavascriptExecutor)
-	GlobalVariable.startTime = System.currentTimeMillis()
-	js.executeScript('location.reload(true);');
-	WebUI.waitForPageLoad(60)
-	
-long tempTimerStart =0;
-long tempTimerStop =0;
+String currentURL = WebUI.getUrl()
 
-try
-{
-	tempTimerStart = System.currentTimeMillis()
-	
-	WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_tbody_tr_Attributes'), FailureHandling.STOP_ON_FAILURE)
-	
-	'Check Page Performance'
-	long pageLoad=CustomKeywords.'myKeywords.customKeywords.pageLoadTimingSelenium'('Type & Attribute Management > Manage Types > ' + SubMenu,0)
-	
-	long domLoad=CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Type & Attribute Management > Manage Types > ' + SubMenu)
-	
-	CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, 'Type & Attribute Management > Manage Types > ' + SubMenu, domLoad, pageLoad)
-	
-	'CLick Attribute Management menu'
-	WebUI.click(findTestObject('Sprint4/a_Manage Types'))
+WebUI.comment(currentURL)
+
+WebDriver driver = DriverFactory.getWebDriver()
+
+JavascriptExecutor js = ((driver) as JavascriptExecutor)
+
+GlobalVariable.startTime = System.currentTimeMillis()
+
+js.executeScript('location.reload(true);')
+
+WebUI.waitForPageLoad(60)
+
+long tempTimerStart = 0
+
+long tempTimerStop = 0
+
+try {
+    tempTimerStart = System.currentTimeMillis()
+
+    WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_tbody_tr_Attributes'), FailureHandling.STOP_ON_FAILURE)
+
+    'Check Page Performance'
+    long pageLoad = CustomKeywords.'myKeywords.customKeywords.pageLoadTimingSelenium'('Type & Attribute Management > Manage Types > ' + 
+        SubMenu, 0)
+
+    long domLoad = CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Type & Attribute Management > Manage Types > ' + 
+        SubMenu)
+
+    CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, 'Type & Attribute Management > Manage Types > ' + SubMenu, 
+        domLoad, pageLoad)
 }
-catch(com.kms.katalon.core.exception.StepFailedException ex)
-{
-	tempTimerStop = System.currentTimeMillis()
-	long ExceptionTime = tempTimerStop-tempTimerStart
-	
-	'Check Page Performance'
-	long pageLoad=CustomKeywords.'myKeywords.customKeywords.pageLoadTimingSelenium'('Type & Attribute Management > Manage Types > ' + SubMenu,ExceptionTime)
-	
-	long domLoad=CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Type & Attribute Management > Manage Types > ' + SubMenu)
-	
-	CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, 'Type & Attribute Management > Manage Types > ' + SubMenu, domLoad, pageLoad)
-	
-	'CLick Attribute Management menu'
-	WebUI.click(findTestObject('Sprint4/a_Manage Types'))
-}
+catch (com.kms.katalon.core.exception.StepFailedException ex) {
+    tempTimerStop = System.currentTimeMillis()
 
+    long ExceptionTime = tempTimerStop - tempTimerStart
 
+    'Check Page Performance'
+    long pageLoad = CustomKeywords.'myKeywords.customKeywords.pageLoadTimingSelenium'('Type & Attribute Management > Manage Types > ' + 
+        SubMenu, ExceptionTime)
+
+    long domLoad = CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Type & Attribute Management > Manage Types > ' + 
+        SubMenu)
+
+    CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, 'Type & Attribute Management > Manage Types > ' + SubMenu, 
+        domLoad, pageLoad)
+} 
 

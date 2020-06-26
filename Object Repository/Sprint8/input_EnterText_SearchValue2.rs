@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_FilterApplied</name>
+   <name>input_EnterText_SearchValue2</name>
    <tag></tag>
-   <elementGuidId>d2e239a8-7468-4b08-a916-40b1c1db3b7b</elementGuidId>
+   <elementGuidId>6d97eec6-eed0-42e4-9553-174f94db0500</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//div[contains(@class, 'filterHeader_custom_filter') and (text() = '${filterApplied}' or . = '${filterApplied}')]</value>
+         <value>//input[@placeholder = 'Select field']</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[contains(@class, 'filterHeader_custom_filter') and (. = '${filterApplied}' or text() = '${filterApplied}')]</value>
+         <value>(//ul//input[@type='text'])[3]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,55 +21,48 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>div</value>
+      <value>input</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>contains</matchCondition>
-      <name>class</name>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
       <type>Main</type>
-      <value>filterHeader_custom_filter</value>
+      <value>text</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>text</name>
+      <name>placeholder</name>
       <type>Main</type>
-      <value>${filterApplied}</value>
+      <value>Select field</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;root&quot;)/div[1]/main[@class=&quot;manage_season&quot;]/div[@class=&quot;wrapper_collapse&quot;]/div[@class=&quot;workSpaceHeader_ms_header__Wa7aD&quot;]/div[@class=&quot;filterHeader_dropdown_container__1zWpv&quot;]/div[@class=&quot;filterHeader_custom_filter__10wo1&quot;]</value>
+      <value>id(&quot;popupDialog&quot;)/div[1]/ul[@class=&quot;custom_filter_wrapper&quot;]/li[@class=&quot;dflex mt-3 mb-0&quot;]/div[@class=&quot;dflex&quot;]/div[@class=&quot;typeahead_search&quot;]/input[1]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//input[@value='']</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='root']/div/main/div[2]/div/div[2]/div[3]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Create New Season'])[1]/preceding::div[10]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>//*/text()[normalize-space(.)='Year']/parent::*</value>
+      <value>//div[@id='popupDialog']/div/ul/li/div/div/input</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div/div[2]/div[3]</value>
+      <value>//input</value>
    </webElementXpaths>
 </WebElementEntity>

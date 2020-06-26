@@ -20,38 +20,31 @@
       <name>Division</name>
    </variable>
    <variable>
-      <defaultValue>'Season'</defaultValue>
+      <defaultValue>'Text'</defaultValue>
+      <description></description>
+      <id>a8486a7d-c7a8-4f58-bbbf-a36f5fa8d2a7</id>
+      <masked>false</masked>
+      <name>AttributeType</name>
+   </variable>
+   <variable>
+      <defaultValue>'In Store Launch End Date'</defaultValue>
       <description></description>
       <id>c917a196-1b5d-40ac-8280-b5ce6ce3b60c</id>
       <masked>false</masked>
-      <name>attributeName</name>
+      <name>AttributeName</name>
    </variable>
    <variable>
-      <defaultValue>'Is'</defaultValue>
+      <defaultValue>'Range'</defaultValue>
       <description></description>
       <id>bc919aa8-e011-43d4-a04f-10e5cad219c3</id>
       <masked>false</masked>
       <name>Operator</name>
    </variable>
    <variable>
-      <defaultValue>'Holiday'</defaultValue>
+      <defaultValue>'01/01/2023,12/12/2024'</defaultValue>
       <description></description>
       <id>76c0797f-e662-4059-8e10-de0bc747b993</id>
       <masked>false</masked>
-      <name>Value</name>
-   </variable>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>ce14ed34-4fae-4b7d-9f3c-68662b79a6e7</id>
-      <masked>false</masked>
-      <name>Value2</name>
-   </variable>
-   <variable>
-      <defaultValue>'Text'</defaultValue>
-      <description></description>
-      <id>a8486a7d-c7a8-4f58-bbbf-a36f5fa8d2a7</id>
-      <masked>false</masked>
-      <name>AttributeType</name>
+      <name>SearchValue</name>
    </variable>
 </TestCaseEntity>

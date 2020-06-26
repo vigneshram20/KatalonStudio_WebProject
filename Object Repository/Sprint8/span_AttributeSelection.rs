@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//span[(text() = '${attributeName}' or . = '${attributeName}')]</value>
+         <value>//span[(text() = '${AttributeName}' or . = '${AttributeName}')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -24,7 +24,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>${attributeName}</value>
+      <value>${AttributeName}</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

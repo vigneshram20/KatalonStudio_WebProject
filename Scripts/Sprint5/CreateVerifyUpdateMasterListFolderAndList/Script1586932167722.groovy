@@ -257,8 +257,11 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/th_Availabl
 'Verify table header - Removed from selection list'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/th_Removed from selection list'), 0)
 
+'Scroll to Top'
+WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.PAGE_DOWN))
+
 'Click Add to Selection'
-WebUI.click(findTestObject('Object Repository/Sprint5/div_Add to Selection'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint5/div_Add to Selection'))
 
 'Provide List Entry'
 WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input'), list1)
@@ -269,8 +272,11 @@ WebUI.clickOffset(findTestObject('Sprint5/checkbox_selection list_checkbox_label
 'Move To Right'
 WebUI.click(findTestObject('Sprint5/button_MoveToRight'))
 
+'Scroll to Top'
+WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.PAGE_DOWN))
+
 'Click Add to Selection'
-WebUI.click(findTestObject('Object Repository/Sprint5/div_Add to Selection'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint5/div_Add to Selection'))
 
 'Provide List Entry'
 WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input'), list2)

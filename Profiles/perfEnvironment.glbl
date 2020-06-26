@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalVariableEntities>
    <description></description>
-   <name>MCPQA</name>
+   <name>perfEnvironment</name>
    <tag></tag>
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://supchainplanmerch-mcp-user-interface-mcpqa.services.west.nonprod.wsgc.com/'</initValue>
+      <initValue>'http://10.180.6.163/'</initValue>
       <name>URL</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Vigneshram S'</initValue>
+      <initValue>'Rajasekar T'</initValue>
       <name>FullName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'vs1'</initValue>
+      <initValue>'rt'</initValue>
       <name>USERNAME</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Welcome20'</initValue>
+      <initValue>'Photon@123'</initValue>
       <name>PASSWORD</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

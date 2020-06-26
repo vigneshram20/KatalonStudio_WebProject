@@ -24,11 +24,11 @@ import org.openqa.selenium.WebDriver as WebDriver
 WebUI.verifyElementClickable(findTestObject('Sprint1/LoginPage/button_Login'))
 
 'Check Page Performance'
-	long pageLoad=CustomKeywords.'myKeywords.customKeywords.pageLoadTimingSelenium'('Login Page',0)
-	
-	long domLoad=CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Login Page')
-	
-	CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, 'Login Page', domLoad, pageLoad)
+long pageLoad = CustomKeywords.'myKeywords.customKeywords.pageLoadTimingSelenium'('Login Page', 0)
+
+long domLoad = CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Login Page')
+
+CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, 'Login Page', domLoad, pageLoad)
 
 'Set Username'
 WebUI.setText(findTestObject('Sprint1/LoginPage/input_Login_username'), Username)
@@ -43,4 +43,6 @@ WebUI.enableSmartWait()
 
 'Verify Hamburger menu displayed'
 WebUI.verifyElementPresent(findTestObject('Common Objects/img_HamburgerMenu'), 0)
+
+WebUI.verifyElementClickable(findTestObject('Sprint1/LandingPage/div_Manage List'), FailureHandling.STOP_ON_FAILURE)
 

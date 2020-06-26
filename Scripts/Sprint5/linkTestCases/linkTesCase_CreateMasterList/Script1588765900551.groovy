@@ -75,6 +75,9 @@ WebUI.click(findTestObject('Sprint5/a_folder_MasterList', [('folderName') : Disp
 'Click Edit toggle'
 WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-handle'))
 
+'Scroll to Top'
+WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.PAGE_DOWN))
+
 'Scroll to Add to Selection button'
 WebUI.scrollToElement(findTestObject('Object Repository/Sprint5/div_Add to Selection'), 0)
 
@@ -84,8 +87,11 @@ WebUI.enableSmartWait()
 
 WebUI.waitForPageLoad(0)
 
-'Click Add to Selection button'
-WebUI.click(findTestObject('Object Repository/Sprint5/div_Add to Selection'))
+'Scroll to Top'
+WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.PAGE_DOWN))
+
+'Click Add to Selection'
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint5/div_Add to Selection'))
 
 WebUI.delay(1)
 

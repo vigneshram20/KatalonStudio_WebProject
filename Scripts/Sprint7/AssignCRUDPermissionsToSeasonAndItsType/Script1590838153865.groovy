@@ -24,8 +24,6 @@ import org.openqa.selenium.WebDriver as WebDriver
 
 String roleName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA_AUT_Role_', 'ddMMMHHmmss')
 
-roleName = roleName.toLowerCase();
-
 String roleDescription = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QADescription', 'ss')
 
 String dateFormat = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('', 'ddMMMHHmmss')
@@ -52,7 +50,7 @@ WebUI.verifyElementPresent(findTestObject('Sprint6/div_User and Role Management'
 
 WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/li_Permissions'), FailureHandling.STOP_ON_FAILURE)
 
-GlobalVariable.startTime= System.currentTimeMillis();
+GlobalVariable.startTime = System.currentTimeMillis()
 
 'Click Edit Mode Toggle button'
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
@@ -61,13 +59,13 @@ WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/span_Edit Mode_tog
 
 WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Library'), 'Season', false)
 
-WebUI.waitForPageLoad(0);
+WebUI.waitForPageLoad(0)
 
-GlobalVariable.stopTime  = System.currentTimeMillis();
+GlobalVariable.stopTime = System.currentTimeMillis()
 
-long totalTime = GlobalVariable.stopTime - GlobalVariable.startTime;
+long totalTime = GlobalVariable.stopTime - GlobalVariable.startTime
 
-WebUI.comment("Permissions Tab - Total Time for page load - "+totalTime)
+WebUI.comment('Permissions Tab - Total Time for page load - ' + totalTime)
 
 'Check Page Performance'
 CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Permissions Page - User Management')
@@ -78,7 +76,9 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/span_Show O
 
 WebUI.sendKeys(findTestObject('Sprint6/input_roleSearch'), roleName)
 
-WebUI.verifyElementPresent(findTestObject('Sprint6/th_parameterized', [('param') : roleName]), 0)
+roleNameUpperCase = roleName.toUpperCase()
+
+WebUI.verifyElementPresent(findTestObject('Sprint6/th_parameterized', [('param') : roleNameUpperCase]), 0)
 
 WebUI.scrollToElement(findTestObject('Object Repository/Sprint6/img_libraryName_Dropdown_param', [('library') : 'Season']), 
     0)
@@ -100,10 +100,6 @@ WebElement createMenu = WebUiBuiltInKeywords.findWebElement(findTestObject('Obje
 
 js.executeScript('arguments[0].click();', createMenu)
 
-not_run: WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/label_delete'))
-
-not_run: WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/label_create'))
-
 js.executeScript('arguments[0].click();', element)
 
 String verifyCRUD = WebUI.getText(findTestObject('Object Repository/Sprint6/div_libraryNamedropdown_parameterized', [('libraryName') : 'Season']), 
@@ -111,6 +107,8 @@ String verifyCRUD = WebUI.getText(findTestObject('Object Repository/Sprint6/div_
 
 WebElement elementInherit = WebUiBuiltInKeywords.findWebElement(findTestObject('Object Repository/Sprint6/div_SubType_InheritAttributes_parameterized', 
         [('subType') : ('Season' + ' / ') + DisplaytypeName]))
+
+js.executeScript('arguments[0].scrollIntoView(true);', elementInherit)
 
 js.executeScript('arguments[0].click();', elementInherit)
 

@@ -94,11 +94,7 @@ WebUI.click(findTestObject('Sprint6/button_Apply Sort'))
 
 WebUI.waitForPageLoad(60)
 
-WebUI.waitForElementPresent(gridHeaderA, 60)
-
-WebUI.waitForElementVisible(gridHeaderA, 60)
-
-WebUI.waitForElementClickable(gridHeaderA, 60)
+WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
 
 'Verify the Modified text displayed in the view selector or not'
 WebUI.verifyElementPresent(findTestObject('Sprint6/button_paremeterized_ViewName', [('viewName') : modifiedViewName]), 0)
@@ -154,6 +150,9 @@ WebUI.verifyElementPresent(findTestObject('Sprint6/div_ACTIONS'), 0)
 'Verify the table header - Name'
 WebUI.verifyElementNotPresent(findTestObject('Sprint6/div_Name'), 0)
 
+'Click Save View button'
+WebUI.click(findTestObject('Object Repository/Sprint6/button_Save View -dropdown'))
+
 'Click Save Changes to View button'
 WebUI.click(findTestObject('Sprint6/button_Save Changes to View'))
 
@@ -204,11 +203,7 @@ WebUI.click(findTestObject('Common Objects/button_OK'))
 
 WebUI.waitForPageLoad(60)
 
-WebUI.waitForElementPresent(gridHeaderA, 60)
-
-WebUI.waitForElementVisible(gridHeaderA, 60)
-
-WebUI.waitForElementClickable(gridHeaderA, 60)
+WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
 
 'Open View Selector'
 WebUI.click(findTestObject('Common Objects/button_viewSelector'))
@@ -224,6 +219,9 @@ WebUI.click(findTestObject('Common Objects/img_Close'))
 
 'Click Apply Sort'
 WebUI.click(findTestObject('Sprint6/button_Apply Sort'))
+
+'Click Save View button'
+WebUI.click(findTestObject('Object Repository/Sprint6/button_Save View -dropdown'))
 
 'Click Save as new view'
 WebUI.click(findTestObject('Sprint6/button_Save as New View'))
@@ -286,11 +284,7 @@ WebUI.click(findTestObject('Common Objects/button_OK'))
 
 WebUI.waitForPageLoad(60)
 
-WebUI.waitForElementPresent(gridHeaderA, 60)
-
-WebUI.waitForElementVisible(gridHeaderA, 60)
-
-WebUI.waitForElementClickable(gridHeaderA, 60)
+WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
 
 'Open View Selector'
 WebUI.click(findTestObject('Common Objects/button_viewSelector'))
