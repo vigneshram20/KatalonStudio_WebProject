@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input__name</name>
+   <name>input__SearchInput</name>
    <tag></tag>
-   <elementGuidId>be6b07e9-badb-4d22-800a-d8e08de9ec0b</elementGuidId>
+   <elementGuidId>78f99524-7307-457a-9571-eaba1bfdde56</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>

@@ -25,8 +25,8 @@
          <combinationType>ONE</combinationType>
          <id>943a23bd-a784-4c48-a784-3263fca024b2</id>
          <iterationEntity>
-            <iterationType>ALL</iterationType>
-            <value></value>
+            <iterationType>SPECIFIC</iterationType>
+            <value>15</value>
          </iterationEntity>
          <testDataId>Data Files/LDAP_Roles</testDataId>
       </testDataLink>

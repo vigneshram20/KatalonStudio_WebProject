@@ -52,7 +52,7 @@ try {
 
     long domLoad = CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('User & Role Management > ' + SubMenu)
 
-    CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, 'User & Role Management ' + SubMenu, domLoad, pageLoad)
+    CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, 'User & Role Management > ' + SubMenu, domLoad, pageLoad)
 }
 catch (com.kms.katalon.core.exception.StepFailedException ex) {
     throw new Exception('No data found in the grid > '+SubMenu)

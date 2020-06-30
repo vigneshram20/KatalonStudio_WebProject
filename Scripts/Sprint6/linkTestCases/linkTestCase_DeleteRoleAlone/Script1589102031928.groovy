@@ -22,7 +22,7 @@ WebUI.click(findTestObject('Object Repository/Sprint6/li_Roles'), FailureHandlin
 
 WebUI.click(findTestObject('Sprint3/span_Edit Mode_toggle_btn-handle'))
 
-WebUI.sendKeys(findTestObject('Object Repository/Sprint6/input__name'), roleName)
+WebUI.sendKeys(findTestObject('Object Repository/Sprint6/input'), roleName)
 
 WebUI.scrollToElement(findTestObject('Sprint6/div_td_role_table_verification', [('roleName') : roleName, ('roleDescription') : roleDescription]), 
     0)

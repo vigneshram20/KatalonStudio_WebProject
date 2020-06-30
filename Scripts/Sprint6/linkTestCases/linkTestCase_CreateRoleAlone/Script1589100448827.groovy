@@ -16,7 +16,6 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-
 WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Administration', ('SubMenuItem') : 'User & Role Management'], 
     FailureHandling.STOP_ON_FAILURE)
 
@@ -28,7 +27,9 @@ WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-
 'Check Page Performance'
 CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Roles Page')
 
-WebUI.click(findTestObject('Sprint6/img_ROLES_img-add'))
+WebUI.verifyElementClickable(findTestObject('Sprint6/img_ROLES_img-add'))
+
+WebUI.enhancedClick(findTestObject('Sprint6/img_ROLES_img-add'))
 
 WebUI.sendKeys(findTestObject('Object Repository/Sprint6/input__name'), roleName)
 

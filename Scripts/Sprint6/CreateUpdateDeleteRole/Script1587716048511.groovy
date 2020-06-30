@@ -50,7 +50,9 @@ WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-
 'Check Page Performance'
 CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Roles Page')
 
-WebUI.click(findTestObject('Sprint6/img_ROLES_img-add'))
+WebUI.verifyElementClickable(findTestObject('Sprint6/img_ROLES_img-add'))
+
+WebUI.enhancedClick(findTestObject('Sprint6/img_ROLES_img-add'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_Add Role'), 0)
 
@@ -105,9 +107,9 @@ WebUI.click(findTestObject('Sprint6/img_ROLES_img-add'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_Edit Role'), 0)
 
-roleName = roleName + ' Edited'
+roleName = (roleName + ' Edited')
 
-roleDescription = roleDescription + ' Edited'
+roleDescription = (roleDescription + ' Edited')
 
 WebUI.sendKeys(findTestObject('Object Repository/Sprint6/input__name'), Keys.chord(Keys.CONTROL, Keys.chord('a')))
 

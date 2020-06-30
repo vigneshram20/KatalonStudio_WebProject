@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//input[@value='Enter the Name']</value>
+         <value>//input[@placeholder='Enter the Name']</value>
       </entry>
       <entry>
          <key>BASIC</key>

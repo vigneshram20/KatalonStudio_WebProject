@@ -25,12 +25,14 @@ WebUI.click(findTestObject('Common Objects/button_Yes'))
 'Click Ok Button'
 WebUI.clickOffset(findTestObject('Common Objects/button_OK'), 5, 0)
 
+WebUI.delay(3)
+
 'Click Ok Button'
 Boolean okbutton0 = WebUI.waitForElementNotPresent(findTestObject('Common Objects/button_OK'), 5, FailureHandling.STOP_ON_FAILURE)
 
 if (!(okbutton0)) {
     'Click Ok Button'
-    WebUI.clickOffset(findTestObject('Common Objects/button_OK'), 5, 0)
+    WebUI.enhancedClick(findTestObject('Common Objects/button_OK'))
 }
 
 WebUI.delay(1)

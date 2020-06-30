@@ -1,0 +1,1 @@
+katalon -noSplash  -runMode=console -projectPath="C:\Users\vigneshram_s\git\WSI_MerchTool\WSI_MerchTool.prj" -retry=0 -testSuitePath="Test Suites/Sprint 8/SMOKE_TEST_TS_LDAP_Integration_Verification_20200629_195620" -executionProfile="default" -browserType="Chrome"
