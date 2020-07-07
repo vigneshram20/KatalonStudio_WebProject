@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_ColumnIndexNo</name>
+   <name>div_ColumnHeaderByName-SortButton</name>
    <tag></tag>
-   <elementGuidId>1ca3db08-b4b7-448e-8f76-52b3997678fd</elementGuidId>
+   <elementGuidId>86f0c8cc-1a95-4922-9ba8-cc25b55d0bb1</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='rTableRow normal_header']//div[contains(@class,'rTableHead') and not(contains(@id,'clone')) and not(contains(@class,'Resizer'))]</value>
+         <value>//div[contains(@class,'rTableHead') and not(contains(@id,'clone'))][@title='${columnName}']//span[contains(@class,'filter')]//img</value>
       </entry>
       <entry>
          <key>BASIC</key>

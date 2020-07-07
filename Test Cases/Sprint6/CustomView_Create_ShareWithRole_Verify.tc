@@ -27,7 +27,7 @@
       <name>testUserPassword</name>
    </variable>
    <variable>
-      <defaultValue>['create']</defaultValue>
+      <defaultValue>['create', 'read']</defaultValue>
       <description></description>
       <id>5e0768ab-5250-4c0c-8025-e8a9c3744935</id>
       <masked>false</masked>

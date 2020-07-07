@@ -302,7 +302,7 @@ GlobalVariable.startTime = System.currentTimeMillis()
 WebUI.waitForPageLoad(60)
 
 'Verify table header - ACTIONS '
-WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint6/div_ACTIONS'), FailureHandling.STOP_ON_FAILURE)
+not_run:WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint6/div_ACTIONS'), FailureHandling.STOP_ON_FAILURE)
 
 GlobalVariable.stopTime  = System.currentTimeMillis();
 
@@ -316,7 +316,7 @@ WebUI.delay(2)
 WebUI.verifyElementPresent(findTestObject('Sprint6/button_paremeterized_ViewName', [('viewName') : viewName]), 0)
 
 'Verify table header - ACTIONS '
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_ACTIONS'), 0)
+not_run:WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_ACTIONS'), 0)
 
 'Verify table header - Brand'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_Brand'), 0)

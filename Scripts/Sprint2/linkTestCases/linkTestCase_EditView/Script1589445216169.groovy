@@ -16,7 +16,6 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-
 WebUI.waitForPageLoad(60)
 
 WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
@@ -54,9 +53,8 @@ WebUI.click(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : '
 'Select Label - Year'
 WebUI.click(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : 'Year']), FailureHandling.STOP_ON_FAILURE)
 
-    'Click Move to Left button'
-    WebUI.click(findTestObject('Object Repository/Sprint6/button_MoveToLeft'))
-
+'Click Move to Left button'
+WebUI.click(findTestObject('Object Repository/Sprint6/button_MoveToLeft'))
 
 'Verify Element not present - Type'
 WebUI.verifyElementNotPresent(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : 'Type']), 0)
@@ -103,7 +101,7 @@ WebUI.delay(2)
 WebUI.verifyElementPresent(findTestObject('Sprint6/button_paremeterized_ViewName', [('viewName') : viewName]), 0)
 
 'Verify table header - ACTIONS'
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_ACTIONS'), 0)
+not_run: WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_ACTIONS'), 0)
 
 'Verify table header - Brand'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_Brand'), 0)
@@ -116,3 +114,4 @@ WebUI.verifyElementNotPresent(findTestObject('Object Repository/Sprint6/div_Type
 
 'Verify table header - Year'
 WebUI.verifyElementNotPresent(findTestObject('Object Repository/Sprint6/div_Year'), 0)
+

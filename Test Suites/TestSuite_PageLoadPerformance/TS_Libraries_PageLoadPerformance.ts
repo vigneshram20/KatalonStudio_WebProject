@@ -36,5 +36,23 @@
          <value></value>
          <variableId>2d259351-319e-46dc-bd31-6f6366546006</variableId>
       </variableLink>
+      <variableLink>
+         <testDataLinkId>3d05f488-2f6e-420f-8a46-bcf4f23325cf</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>Brand</value>
+         <variableId>78a941e1-11d3-4931-8ada-4c0a388502b9</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>3d05f488-2f6e-420f-8a46-bcf4f23325cf</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>Division</value>
+         <variableId>f1bd8e8c-ba62-4609-8d6f-d1a0dfee15ef</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>3d05f488-2f6e-420f-8a46-bcf4f23325cf</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>Season</value>
+         <variableId>29aedef0-e9eb-415a-ba8c-6066980d37c0</variableId>
+      </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

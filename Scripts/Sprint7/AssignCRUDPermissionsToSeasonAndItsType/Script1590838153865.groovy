@@ -1,4 +1,3 @@
-import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
@@ -74,6 +73,29 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_PERMISS
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/span_Show Only Granted Role'), 0)
 
+WebUI.scrollToElement(findTestObject('Sprint6/img_FilterMenu'), 10, FailureHandling.STOP_ON_FAILURE)
+
+WebUI.enhancedClick(findTestObject('Sprint6/img_FilterMenu'))
+
+WebUI.setText(findTestObject('Sprint6/input_searchInputFilterMenu'), 'Season' + Keys.ENTER)
+
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/span_permission_popover_parameterized', [('library') : 'Season']))
+
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Apply'))
+
+WebUI.scrollToElement(findTestObject('Sprint6/img_FilterMenu'), 10, FailureHandling.STOP_ON_FAILURE)
+
+WebUI.enhancedClick(findTestObject('Sprint6/img_FilterMenu'))
+
+WebUI.setText(findTestObject('Sprint6/input_searchInputFilterMenu'), Keys.chord(Keys.CONTROL, Keys.chord('a'), Keys.BACK_SPACE))
+
+WebUI.setText(findTestObject('Sprint6/input_searchInputFilterMenu'), (('Season' + ' / ') + DisplaytypeName) + Keys.ENTER)
+
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/span_permission_popover_parameterized', [('library') : ('Season' + 
+            ' / ') + DisplaytypeName]))
+
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Apply'))
+
 WebUI.sendKeys(findTestObject('Sprint6/input_roleSearch'), roleName)
 
 roleNameUpperCase = roleName.toUpperCase()
@@ -118,6 +140,14 @@ boolean accessMatched = WebUI.verifyElementText(findTestObject('Object Repositor
 if (!(accessMatched)) {
     throw new Exception('Access not inherited properly to subtypes')
 }
+
+WebUI.scrollToElement(findTestObject('Sprint6/img_FilterMenu'), 10, FailureHandling.STOP_ON_FAILURE)
+
+WebUI.enhancedClick(findTestObject('Sprint6/img_FilterMenu'))
+
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Clear All'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Apply'))
 
 WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Save'))
 
@@ -186,9 +216,9 @@ WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Apply'))
 WebUI.verifyElementText(findTestObject('Object Repository/Sprint6/div_libraryNamedropdown_parameterized', [('libraryName') : ('Season' + 
             ' / ') + DisplaytypeName]), verifyCRUD)
 
-WebUI.enhancedClick(findTestObject('Sprint6/button_Cancel'))
+WebUI.click(findTestObject('Sprint6/button_Cancel'))
 
-WebUI.enhancedClick(findTestObject('Sprint6/button_Yes'))
+WebUI.click(findTestObject('Sprint6/button_Yes'))
 
 WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_DeleteRoleAlone'), [('roleName') : roleName, ('roleDescription') : roleDescription], 
     FailureHandling.STOP_ON_FAILURE)

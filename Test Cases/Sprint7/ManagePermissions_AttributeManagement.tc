@@ -6,7 +6,7 @@
    <comment></comment>
    <testCaseGuid>782a923d-c115-4fcc-bb22-9d624956fa8e</testCaseGuid>
    <variable>
-      <defaultValue>['create', 'delete']</defaultValue>
+      <defaultValue>['create', 'delete', 'read']</defaultValue>
       <description></description>
       <id>b475ace2-a3e0-45ea-b5c3-c358a3ec6bf3</id>
       <masked>false</masked>

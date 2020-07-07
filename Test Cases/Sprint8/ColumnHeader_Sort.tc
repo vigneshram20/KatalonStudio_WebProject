@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>ColumnHeader_Sort</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>93f45a94-cc36-4aa2-8cb5-b1ddc0c164bd</testCaseGuid>
+   <variable>
+      <defaultValue>'Division'</defaultValue>
+      <description></description>
+      <id>f9f28613-bf74-4eeb-9665-1585a0af7fb4</id>
+      <masked>false</masked>
+      <name>columnName</name>
+   </variable>
+   <variable>
+      <defaultValue>'ASC'</defaultValue>
+      <description></description>
+      <id>1543e5ab-1790-49a8-94ee-35bbd1c5f181</id>
+      <masked>false</masked>
+      <name>sortOrder</name>
+   </variable>
+</TestCaseEntity>

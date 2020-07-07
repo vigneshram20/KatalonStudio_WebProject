@@ -30,6 +30,16 @@ WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit
 
 WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
+WebUI.scrollToElement(findTestObject('Sprint6/img_FilterMenu'), 10, FailureHandling.STOP_ON_FAILURE)
+
+WebUI.enhancedClick(findTestObject('Sprint6/img_FilterMenu'))
+
+WebUI.setText(findTestObject('Sprint6/input_searchInputFilterMenu'), libraryName + Keys.ENTER)
+
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/span_permission_popover_parameterized', [('library') : libraryName]))
+
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Apply'))
+
 WebUI.sendKeys(findTestObject('Sprint6/input_roleSearch'), roleName)
 
 roleNameUpperCase = roleName.toUpperCase();

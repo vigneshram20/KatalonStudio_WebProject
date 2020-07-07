@@ -7,7 +7,11 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//div[contains(@class, 'notificationList_sharing') and (text() = '${fullName} has shared a view &quot;${viewName}&quot; with you on ${year}-${month}-${date} 00:00:00.View' or . = '${fullName} has shared a view &quot;${viewName}&quot; with you on ${year}-${month}-${date} 00:00:00.View')]</value>
+         <value>//div[contains(@class, 'notificationList_sharing') and (text() = '${fullName} has shared a view &quot;${viewName}&quot; with you on ${month}/${date}/${year}.View' or . = '${fullName} has shared a view &quot;${viewName}&quot; with you on ${month}/${date}/${year}.View')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>${fullName} has shared a view &quot;${viewName}&quot; with you on ${month}/${date}/${year}.View</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -31,7 +35,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>${fullName} has shared a view &quot;${viewName}&quot; with you on ${year}-${month}-${date} 00:00:00.View</value>
+      <value>${fullName} has shared a view &quot;${viewName}&quot; with you on ${month}/${date}/${year}.View</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

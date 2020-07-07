@@ -120,7 +120,7 @@ WebUI.delay(2)
 WebUI.verifyElementPresent(findTestObject('Sprint6/button_paremeterized_ViewName', [('viewName') : viewName]), 0)
 
 'Verify Element Present'
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_ACTIONS'), 0)
+not_run:WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_ACTIONS'), 0)
 
 'Verify Element Present'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_Brand'), 0)

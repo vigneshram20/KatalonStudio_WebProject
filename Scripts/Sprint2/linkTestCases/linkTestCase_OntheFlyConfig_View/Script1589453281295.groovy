@@ -60,11 +60,14 @@ List<String> groupByElementsBeforeSort = new ArrayList<LinkedHashMap>()
 List<String> groupByElementsAfterSort = new ArrayList<LinkedHashMap>()
 
 for (WebElement element : listOfExistingElements) {
+	if(!element.getAttribute('title').equals(""))
+	{
     groupByElementsBeforeSort.add(element.getText().trim())
 
     groupByElementsAfterSort.add(element.getText().trim())
 
     println(element.getText().trim())
+	}
 }
 
 Comparator c = Collections.reverseOrder()

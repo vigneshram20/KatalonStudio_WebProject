@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//input[@placeholder = 'Select field']</value>
+         <value>//input[@placeholder = 'Search Fields']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -31,7 +31,7 @@
       <matchCondition>equals</matchCondition>
       <name>placeholder</name>
       <type>Main</type>
-      <value>Select field</value>
+      <value>Search Fields</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

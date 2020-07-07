@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='rTableCell   ' and not(contains(@id,'clone'))][${indexNo}]</value>
+         <value>//div[contains(@class,'rTableCell') and not(contains(@id,'clone'))][${indexNo}]</value>
       </entry>
       <entry>
          <key>BASIC</key>

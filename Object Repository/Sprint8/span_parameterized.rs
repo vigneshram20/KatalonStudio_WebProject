@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_ColumnIndexNo</name>
+   <name>span_parameterized</name>
    <tag></tag>
-   <elementGuidId>1ca3db08-b4b7-448e-8f76-52b3997678fd</elementGuidId>
+   <elementGuidId>e814ce97-653d-4724-a1c2-c420bd4180bf</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@class='rTableRow normal_header']//div[contains(@class,'rTableHead') and not(contains(@id,'clone')) and not(contains(@class,'Resizer'))]</value>
+         <key>BASIC</key>
+         <value>//span[(text() = '${param}' or . = '${param}')]</value>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value>id(&quot;managelist&quot;)/div[@class=&quot;paginationWithGoTo_pagination_wrapper__1-Ag-&quot;]/ul[@class=&quot;pagination&quot;]/li[@class=&quot;paginationWithGoTo_page_number__3Y96h paginationWithGoTo_arrow_right__23o9C&quot;]/a[1]/span[1]</value>
+         <key>XPATH</key>
+         <value>//span[(text() = 'WE Lighting Fall 2020' or . = 'WE Lighting Fall 2020')]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
@@ -26,9 +26,9 @@
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath</name>
+      <name>text</name>
       <type>Main</type>
-      <value>id(&quot;managelist&quot;)/div[@class=&quot;paginationWithGoTo_pagination_wrapper__1-Ag-&quot;]/ul[@class=&quot;pagination&quot;]/li[@class=&quot;paginationWithGoTo_page_number__3Y96h paginationWithGoTo_arrow_right__23o9C&quot;]/a[1]/span[1]</value>
+      <value>${param}</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
