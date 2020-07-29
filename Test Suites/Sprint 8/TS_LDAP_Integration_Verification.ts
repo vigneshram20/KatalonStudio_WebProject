@@ -45,13 +45,13 @@
       <variableLink>
          <testDataLinkId>a09370f5-62c3-40f0-a81a-06d01bf211ee</testDataLinkId>
          <type>DATA_COLUMN</type>
-         <value>First Name</value>
+         <value>FirstName</value>
          <variableId>79904ac1-0ab4-4b90-9462-3ce70b120180</variableId>
       </variableLink>
       <variableLink>
          <testDataLinkId>a09370f5-62c3-40f0-a81a-06d01bf211ee</testDataLinkId>
          <type>DATA_COLUMN</type>
-         <value>Last Name</value>
+         <value>LastName</value>
          <variableId>84324714-96c7-4430-8ade-42ebbd7d145a</variableId>
       </variableLink>
       <variableLink>

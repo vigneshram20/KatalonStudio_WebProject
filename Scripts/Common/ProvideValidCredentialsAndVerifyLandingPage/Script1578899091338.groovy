@@ -44,5 +44,7 @@ WebUI.enableSmartWait()
 'Verify Hamburger menu displayed'
 WebUI.verifyElementPresent(findTestObject('Common Objects/img_HamburgerMenu'), 0)
 
+if(verifyManageList.equals('true')){
 WebUI.verifyElementClickable(findTestObject('Sprint1/LandingPage/div_Manage List'), FailureHandling.STOP_ON_FAILURE)
+}
 

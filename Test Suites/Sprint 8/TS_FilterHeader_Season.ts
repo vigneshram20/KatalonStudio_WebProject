@@ -14,7 +14,7 @@
       <guid>93e567e2-c86a-4a7c-b2af-b6d0e618dc89</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Sprint8/FilterHeader</testCaseId>
+      <testCaseId>Test Cases/Sprint8/FilterHeader_Season</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
          <id>c80f4021-9c61-4bc0-9c69-1ce63c850e67</id>

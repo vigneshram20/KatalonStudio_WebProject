@@ -40,6 +40,8 @@ if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {
 WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : 'Season'], 
     FailureHandling.STOP_ON_FAILURE)
 
+WebUI.waitForElementClickable(findTestObject('Sprint6/select_Library'), 0, FailureHandling.STOP_ON_FAILURE)
+
 WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Library'), Brand, true)
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint8/h5_Confirm Brand Change'), 0)

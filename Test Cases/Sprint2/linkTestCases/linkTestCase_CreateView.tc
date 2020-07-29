@@ -26,4 +26,46 @@
       <masked>false</masked>
       <name>roleToAssign</name>
    </variable>
+   <variable>
+      <defaultValue>'true'</defaultValue>
+      <description></description>
+      <id>1a9efe45-05c3-4171-bb46-5da489dab887</id>
+      <masked>false</masked>
+      <name>fromHamburger</name>
+   </variable>
+   <variable>
+      <defaultValue>'Season'</defaultValue>
+      <description></description>
+      <id>6ae660c8-f4cc-4454-b055-32586db14282</id>
+      <masked>false</masked>
+      <name>libraryName</name>
+   </variable>
+   <variable>
+      <defaultValue>['Brand', 'Division', 'In Store Launch End Date', 'In Store Launch Start Date', 'Internet Launch Start Date', 'Internet Launch End Date', 'Name', 'Season', 'Year', 'Type']</defaultValue>
+      <description></description>
+      <id>e48e81e0-9764-4621-80e5-dc5ef30936b0</id>
+      <masked>false</masked>
+      <name>attributesList</name>
+   </variable>
+   <variable>
+      <defaultValue>'Column 3'</defaultValue>
+      <description></description>
+      <id>dea0915c-d16b-4a5e-8974-0ee5e40dc8ff</id>
+      <masked>false</masked>
+      <name>lockColumn</name>
+   </variable>
+   <variable>
+      <defaultValue>'Brand'</defaultValue>
+      <description></description>
+      <id>71c788e3-9c53-49da-a923-7a3625ce23be</id>
+      <masked>false</masked>
+      <name>groupBy</name>
+   </variable>
+   <variable>
+      <defaultValue>'Division'</defaultValue>
+      <description></description>
+      <id>f5af69ce-32f7-470a-81d3-5682ad245450</id>
+      <masked>false</masked>
+      <name>sortBy</name>
+   </variable>
 </TestCaseEntity>

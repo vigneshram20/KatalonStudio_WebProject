@@ -17,6 +17,8 @@ import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory as MobileDriverFactory
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
+Runtime.getRuntime().exec("wscript ./Selenium.vbs");
+
 'Launch the Browser'
 WebUI.openBrowser('')
 

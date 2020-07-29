@@ -29,6 +29,27 @@ if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {
 	WebUI.verifyElementClickable(findTestObject('Sprint1/LandingPage/div_Manage List'), FailureHandling.STOP_ON_FAILURE)
 }
 
+String roleName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA_AUT_Role_', 'ddMMMHHmmss')
+
+roleName=roleName.toLowerCase();
+
+String roleDescription = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QADescription', 'ss')
+
+'Create Role'
+WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CreateRoleAlone'), [('roleDescription') : roleDescription
+		, ('roleName') : roleName], FailureHandling.STOP_ON_FAILURE)
+
+'Assign Permission To Role'
+WebUI.callTestCase(findTestCase('Sprint7/linkTestCases/linkTestCase_AssignPermissionToRoleForLibraryAlone'), [('roleName') : roleName
+		, ('libraryName') : 'Season', ('permissionValues') : permissionValues], FailureHandling.STOP_ON_FAILURE)
+
+
+WebUI.click(findTestObject('Object Repository/Sprint6/li_Users'))
+
+WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_CreateUserAndAssignRoleAlone'), [('RoleName') : roleName, ('userID') : testUserName
+		, ('displayName') : '', ('firstName') : '', ('lastName') : '', ('emailID') : '', ('contactNo') : '',('removeAllRoles'):'Yes'], FailureHandling.STOP_ON_FAILURE)
+
+
 String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'(('QA_AUT_' + viewType) + '_'+"Share_", 'ddMMMHHmmss')
 
 WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_CreateView'), [('viewName') : viewName, ('viewType') : viewType], 

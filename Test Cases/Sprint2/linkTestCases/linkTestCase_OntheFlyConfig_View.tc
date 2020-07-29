@@ -19,4 +19,11 @@
       <masked>false</masked>
       <name>viewType</name>
    </variable>
+   <variable>
+      <defaultValue>'Division'</defaultValue>
+      <description></description>
+      <id>98952154-3271-4c7d-9c05-0f579c090deb</id>
+      <masked>false</masked>
+      <name>columnToHide</name>
+   </variable>
 </TestCaseEntity>

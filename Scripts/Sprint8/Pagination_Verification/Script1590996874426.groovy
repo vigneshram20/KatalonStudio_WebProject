@@ -24,7 +24,7 @@ if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {
     WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
 }
 
-WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : 'Country'], 
+WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : LibraryName], 
     FailureHandling.STOP_ON_FAILURE)
 
 

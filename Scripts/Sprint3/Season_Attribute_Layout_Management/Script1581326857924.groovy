@@ -318,6 +318,31 @@ not_run: WebUI.verifyElementPresent(findTestObject('Sprint1/Manage Season Page/d
 
 WebUI.enableSmartWait()
 
+WebUI.waitForPageLoad(60)
+
+WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
+
+WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Library'), Brand, true)
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint8/h5_Confirm Brand Change'), 0)
+
+WebUI.verifyElementPresent(findTestObject('Sprint8/p_BrandChange_Confirmation', [('brandName') : Brand]), 0)
+
+WebUI.click(findTestObject('Object Repository/Common Objects/button_Yes'))
+
+WebUI.waitForPageLoad(0)
+
+WebUI.verifyOptionPresentByLabel(findTestObject('Sprint8/Select_Division'), Division, true, 0)
+
+WebUI.selectOptionByLabel(findTestObject('Sprint8/Select_Division'), Division, true)
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint8/h5_Confirm Division Change'), 0)
+
+WebUI.verifyElementPresent(findTestObject('Sprint8/p_DivisionChangeConfirmation', [('divisionName') : Division]), 0)
+
+WebUI.click(findTestObject('Object Repository/Common Objects/button_Yes'))
+
+
 'Wait for Detailed View side panel to be clickable'
 WebUI.waitForElementClickable(findTestObject('Sprint3/p_DetailedView'), 0)
 

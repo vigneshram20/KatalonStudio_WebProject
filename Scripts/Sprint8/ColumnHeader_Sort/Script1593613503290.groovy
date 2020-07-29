@@ -47,26 +47,59 @@ WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_colu
 'Check Page Performance'
 CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Manage Seasons')
 
+WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Library'), Brand, true)
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint8/h5_Confirm Brand Change'), 0)
+
+WebUI.verifyElementPresent(findTestObject('Sprint8/p_BrandChange_Confirmation', [('brandName') : Brand]), 0)
+
+WebUI.click(findTestObject('Object Repository/Common Objects/button_Yes'))
+
+WebUI.waitForPageLoad(0)
+
+WebUI.verifyOptionPresentByLabel(findTestObject('Sprint8/Select_Division'), Division, true, 0)
+
+WebUI.selectOptionByLabel(findTestObject('Sprint8/Select_Division'), Division, true)
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint8/h5_Confirm Division Change'), 0)
+
+WebUI.verifyElementPresent(findTestObject('Sprint8/p_DivisionChangeConfirmation', [('divisionName') : Division]), 0)
+
+WebUI.click(findTestObject('Object Repository/Common Objects/button_Yes'))
+
 /*String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'(('QA_' + 'AUT_') + 'Custom_', 'ddMMMHHmmss')
 
-WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_CreateView'), [('viewName') : viewName, ('viewType') : 'Custom'], 
-    FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_CreateView'), [('viewName') : viewName, ('viewType') : 'Custom'
+        , ('fromHamburger') : 'false', ('libraryName') : Division], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_SetDefaultView'), [('viewName') : viewName], FailureHandling.STOP_ON_FAILURE)
 */
-WebUI.enhancedClick(findTestObject('Sprint8/div_ColumnHeaderByName-SortButton', [('columnName') : columnName]))
+not_run: WebUI.scrollToElement(findTestObject('Sprint8/div_ColumnHeaderByName-SortButton', [('columnName') : columnName]), 
+    0)
 
-WebUI.click(findTestObject('Sprint8/h3_FILTER AND SORT'))
+WebDriver driver = DriverFactory.getWebDriver()
 
-if(sortOrder.equals("DESC"))
-{
-	'Click Asc button'
-	WebUI.click(findTestObject('Object Repository/Sprint6/button_DESC'))
-}
-else
-{
-	'Click Asc button'
-	WebUI.click(findTestObject('Object Repository/Sprint6/button_ASC'))
+JavascriptExecutor js = ((driver) as JavascriptExecutor)
+
+WebElement elementInherit = WebUiBuiltInKeywords.findWebElement(findTestObject('Sprint8/div_ColumnHeaderByName-SortButton', 
+        [('columnName') : columnName]))
+
+//js.executeScript('arguments[0].scrollIntoView(true);', elementInherit)
+
+js.executeScript("arguments[0].click();", elementInherit);
+
+//js.executeScript('window.scrollBy(-2000,0)')
+
+//WebUI.click(findTestObject('Sprint8/div_ColumnHeaderByName-SortButton', [('columnName') : columnName]))
+
+WebUI.enhancedClick(findTestObject('Sprint8/h3_FILTER AND SORT'))
+
+if (sortOrder.equals('DESC')) {
+    'Click Asc button'
+    WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_DESC'))
+} else {
+    'Click Asc button'
+    WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_ASC'))
 }
 
 WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Apply'))
@@ -86,9 +119,11 @@ for (WebElement element : listOfExistingElements) {
     columnNo++
 
     if (element.getAttribute('title').equals(columnName)) {
-		println(element.getAttribute('title'))
-		println(columnNo)
-        break;
+        println(element.getAttribute('title'))
+
+        println(columnNo)
+
+        break
     }
 }
 
@@ -104,31 +139,26 @@ List<String> groupByElementsBeforeSort = new ArrayList<String>()
 List<String> groupByElementsAfterSort = new ArrayList<String>()
 
 for (WebElement element : listOfExistingCells) {
-	if(!element.getAttribute('title').equals(""))
-	{
-    groupByElementsBeforeSort.add(element.getAttribute('title').trim())
+    if (!(element.getAttribute('title').equals(''))) {
+        groupByElementsBeforeSort.add(element.getAttribute('title').trim())
 
-    groupByElementsAfterSort.add(element.getAttribute('title').trim())
+        groupByElementsAfterSort.add(element.getAttribute('title').trim())
 
-    println(element.getAttribute('title').trim())
-		}
+        println(element.getAttribute('title').trim())
+    }
 }
 
-if(sortOrder.equals("DESC"))
-{
-	Comparator c = Collections.reverseOrder()
-	
-	Collections.sort(groupByElementsAfterSort, c)
-}
+if (sortOrder.equals('DESC')) {
+    Comparator c = Collections.reverseOrder()
 
-else
-{
-	Collections.sort(groupByElementsAfterSort)
+    Collections.sort(groupByElementsAfterSort, c)
+} else {
+    Collections.sort(groupByElementsAfterSort)
 }
 
 if (groupByElementsBeforeSort.equals(groupByElementsAfterSort)) {
-    System.out.println('Values are sorted in '+sortOrder+' order order')
+    System.out.println(('Values are sorted in ' + sortOrder) + ' order order')
 } else {
-    throw new Exception('Values are not sorted in '+sortOrder+' order')
+    throw new Exception(('Values are not sorted in ' + sortOrder) + ' order')
 }
 

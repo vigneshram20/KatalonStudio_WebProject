@@ -15,5 +15,23 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Sprint5/CreateUpdateDeleteCountry</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>3ffb3ca1-c7ca-4f59-a113-033f5ab6c948</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>51daf909-1171-40d3-93b1-cd81a7d12eb6</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>dc6e485d-f655-4cc3-9a25-bf734ca61f23</variableId>
+      </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

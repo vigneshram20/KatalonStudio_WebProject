@@ -19,18 +19,18 @@ import internal.GlobalVariable as GlobalVariable
 WebUI.click(findTestObject('Sprint6/button_Hide  Unhide'))
 
 'Enter field to be Hidden'
-WebUI.setText(findTestObject('Sprint6/input_Hide  Unhide_search-flelds'), 'Name')
+WebUI.setText(findTestObject('Sprint6/input_Hide  Unhide_search-flelds'), columnToHide)
 
 'Wait for the element to be displayed'
-WebUI.waitForElementVisible(findTestObject('Sprint6/img_viewControl_eye_icon_viewColumn', [('attribute') : 'Name']), 0)
+WebUI.waitForElementVisible(findTestObject('Sprint6/img_viewControl_eye_icon_viewColumn', [('attribute') : columnToHide]), 0)
 
 'Wait for the element to be clicked'
-WebUI.waitForElementClickable(findTestObject('Sprint6/img_viewControl_eye_icon_viewColumn', [('attribute') : 'Name']), 0)
+WebUI.waitForElementClickable(findTestObject('Sprint6/img_viewControl_eye_icon_viewColumn', [('attribute') : columnToHide]), 0)
 
 WebUI.delay(2)
 
 'Click the respective column'
-WebUI.click(findTestObject('Sprint6/img_viewControl_eye_icon_viewColumn', [('attribute') : 'Name']))
+WebUI.click(findTestObject('Sprint6/img_viewControl_eye_icon_viewColumn', [('attribute') : columnToHide]))
 
 WebUI.delay(5)
 
@@ -40,29 +40,29 @@ String modifiedViewName = (viewName + ' ') + '(Modified)'
 WebUI.verifyElementPresent(findTestObject('Sprint6/button_paremeterized_ViewName', [('viewName') : modifiedViewName]), 0)
 
 'Verify the table header - ACTIONS'
-WebUI.verifyElementPresent(findTestObject('Sprint6/div_ACTIONS'), 0)
+not_run:WebUI.verifyElementPresent(findTestObject('Sprint6/div_ACTIONS'), 0)
 
 'Verify the table header - Name'
-WebUI.verifyElementNotPresent(findTestObject('Sprint6/div_Name'), 0)
+WebUI.verifyElementNotPresent(findTestObject('Sprint6/div_param',[('columnName'):columnToHide]), 0)
 
 'Click Hide/UnHide button'
 WebUI.click(findTestObject('Sprint6/button_Hide  Unhide'))
 
 'Enter field to be Hidden'
-WebUI.setText(findTestObject('Sprint6/input_Hide  Unhide_search-flelds'), 'Name')
+WebUI.setText(findTestObject('Sprint6/input_Hide  Unhide_search-flelds'), columnToHide)
 
 'Wait for the element to be displayed'
-WebUI.waitForElementVisible(findTestObject('Object Repository/Sprint6/img_viewControl_eye_icon_hiddenColumn', [('attribute') : 'Name']), 
+WebUI.waitForElementVisible(findTestObject('Object Repository/Sprint6/img_viewControl_eye_icon_hiddenColumn', [('attribute') : columnToHide]), 
     0)
 
 'Wait for the element to be clicked'
-WebUI.waitForElementClickable(findTestObject('Object Repository/Sprint6/img_viewControl_eye_icon_hiddenColumn', [('attribute') : 'Name']), 
+WebUI.waitForElementClickable(findTestObject('Object Repository/Sprint6/img_viewControl_eye_icon_hiddenColumn', [('attribute') : columnToHide]), 
     0)
 
 WebUI.delay(2)
 
 'Click the respective column'
-WebUI.click(findTestObject('Object Repository/Sprint6/img_viewControl_eye_icon_hiddenColumn', [('attribute') : 'Name']))
+WebUI.click(findTestObject('Object Repository/Sprint6/img_viewControl_eye_icon_hiddenColumn', [('attribute') : columnToHide]))
 
 WebUI.delay(5)
 
@@ -70,8 +70,8 @@ WebUI.delay(5)
 WebUI.verifyElementPresent(findTestObject('Sprint6/button_paremeterized_ViewName', [('viewName') : modifiedViewName]), 0)
 
 'Verify the table header - ACTIONS'
-WebUI.verifyElementPresent(findTestObject('Sprint6/div_ACTIONS'), 0)
+not_run:WebUI.verifyElementPresent(findTestObject('Sprint6/div_ACTIONS'), 0)
 
 'Verify the table header - Name'
-WebUI.verifyElementPresent(findTestObject('Sprint6/div_Name'), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint6/div_param',[('columnName'):columnToHide]), 0)
 

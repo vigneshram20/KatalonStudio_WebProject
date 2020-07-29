@@ -3,7 +3,7 @@
    <description></description>
    <name>SmokeSuiteCollection_Chrome_PHOTONQA</name>
    <tag></tag>
-   <executionMode>PARALLEL</executionMode>
+   <executionMode>SEQUENTIAL</executionMode>
    <maxConcurrentInstances>4</maxConcurrentInstances>
    <testSuiteRunConfigurations>
       <TestSuiteRunConfiguration>

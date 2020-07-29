@@ -15,5 +15,11 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Sprint8/Pagination_Verification</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>db1773ea-7ee1-4ea9-843b-1ed1e112e4e6</variableId>
+      </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

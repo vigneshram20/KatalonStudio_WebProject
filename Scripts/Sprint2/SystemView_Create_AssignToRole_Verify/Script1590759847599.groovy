@@ -55,7 +55,7 @@ WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_CreateView')
 
 WebUI.callTestCase(findTestCase('Common/LogoutApplication'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Common/ProvideValidCredentialsAndVerifyLandingPage'), [('Username') : testUserName, ('Password') : testUserPassword],
+WebUI.callTestCase(findTestCase('Common/ProvideValidCredentialsAndVerifyLandingPage'), [('Username') : testUserName, ('Password') : testUserPassword,('verifyManageList'):'false'],
 	FailureHandling.STOP_ON_FAILURE)
 
 'Navigate through Hamburger menu'

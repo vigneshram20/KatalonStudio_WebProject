@@ -5,4 +5,11 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>f08ca069-fa3c-4746-98e6-99147281046c</testCaseGuid>
+   <variable>
+      <defaultValue>'Country'</defaultValue>
+      <description></description>
+      <id>db1773ea-7ee1-4ea9-843b-1ed1e112e4e6</id>
+      <masked>false</masked>
+      <name>LibraryName</name>
+   </variable>
 </TestCaseEntity>

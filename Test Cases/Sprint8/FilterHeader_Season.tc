@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>FilterHeader</name>
+   <name>FilterHeader_Season</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>9412b948-21f7-4e3c-8605-b35000328132</testCaseGuid>
    <variable>
-      <defaultValue>'PK'</defaultValue>
+      <defaultValue>'WE'</defaultValue>
       <description></description>
       <id>8690718c-5818-4b00-848e-67769ddb160a</id>
       <masked>false</masked>
       <name>Brand</name>
    </variable>
    <variable>
-      <defaultValue>'Furniture'</defaultValue>
+      <defaultValue>'Lighting'</defaultValue>
       <description></description>
       <id>cc3ea8f9-1834-4c78-b368-f293885cef68</id>
       <masked>false</masked>

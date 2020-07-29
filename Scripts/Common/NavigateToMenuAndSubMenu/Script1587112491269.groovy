@@ -26,19 +26,19 @@ WebUI.verifyElementVisible(findTestObject('Common Objects/img_LogoMain'))
 WebUI.verifyElementClickable(findTestObject('Common Objects/img_HamburgerMenu'))
 
 'Click Hamburger menu'
-WebUI.click(findTestObject('Common Objects/img_HamburgerMenu'))
+WebUI.enhancedClick(findTestObject('Common Objects/img_HamburgerMenu'))
 
 'Click menu'
 WebUI.verifyElementClickable(findTestObject('Sprint1/LandingPage/a_Parameterized', [('menu') : MenuItem]))
 
 'Click menu'
-WebUI.click(findTestObject('Sprint1/LandingPage/a_Parameterized', [('menu') : MenuItem]))
+WebUI.enhancedClick(findTestObject('Sprint1/LandingPage/a_Parameterized', [('menu') : MenuItem]))
 
 'Click sub menu'
 WebUI.verifyElementClickable(findTestObject('Sprint1/LandingPage/a_Parameterized', [('menu') : SubMenuItem]))
 
 'Click sub menu'
-WebUI.click(findTestObject('Sprint1/LandingPage/a_Parameterized', [('menu') : SubMenuItem]))
+WebUI.enhancedClick(findTestObject('Sprint1/LandingPage/a_Parameterized', [('menu') : SubMenuItem]))
 
 GlobalVariable.startTime = System.currentTimeMillis()
 

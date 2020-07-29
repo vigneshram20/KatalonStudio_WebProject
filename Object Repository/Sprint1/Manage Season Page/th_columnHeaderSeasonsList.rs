@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='rTableRow cloned_header']</value>
+         <value>//div[@id='table_header']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

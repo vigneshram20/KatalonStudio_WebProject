@@ -68,13 +68,33 @@ SubMenu.equals('Item-Source-Season')) {
 }
 
 if (SubMenu.equals('Merch List')) {
+    WebUI.waitForElementPresent(findTestObject('Sprint6/select_Library'), 0, FailureHandling.STOP_ON_FAILURE)
+
+    WebUI.waitForElementVisible(findTestObject('Sprint6/select_Library'), 0, FailureHandling.STOP_ON_FAILURE)
+
+    WebUI.waitForElementPresent(findTestObject('Object Repository/Sprint6/select_Library_optionParameterized',[('option'):Brand]), 0)
+
     WebUI.waitForElementClickable(findTestObject('Sprint6/select_Library'), 0, FailureHandling.STOP_ON_FAILURE)
+
+    WebUI.delay(5)
 
     WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Library'), Brand, true)
 
     WebUI.waitForElementClickable(findTestObject('Object Repository/Sprint8/span_Select Department'), 0)
 
+    WebUI.delay(5)
+
+    WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
+
+    WebUI.waitForPageLoad(0)
+
+    WebUI.click(findTestObject('Sprint1/Create Season/input_SearchField'), FailureHandling.STOP_ON_FAILURE)
+
     WebUI.click(findTestObject('Object Repository/Sprint8/span_Select Department'))
+
+    WebUI.waitForPageLoad(0)
+
+    WebUI.delay(5)
 
     WebUI.click(findTestObject('Object Repository/Sprint6/label_parameterized', [('param') : Division]))
 
@@ -98,7 +118,9 @@ long tempTimerStop = 0
 try {
     tempTimerStart = System.currentTimeMillis()
 
-    WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_tbody_tr_Libraries'), FailureHandling.STOP_ON_FAILURE)
+    not_run: WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_tbody_tr_Libraries'), FailureHandling.STOP_ON_FAILURE)
+
+    WebUI.verifyElementVisible(findTestObject('Sprint8/span_Total_Records'), FailureHandling.STOP_ON_FAILURE)
 
     'Check Page Performance'
     long pageLoad = CustomKeywords.'myKeywords.customKeywords.pageLoadTimingSelenium'('Libraries > ' + SubMenu, 0)
@@ -118,4 +140,5 @@ catch (com.kms.katalon.core.exception.StepFailedException ex) {
     long domLoad = CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Libraries > ' + SubMenu)
 
     CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, 'Libraries > ' + SubMenu, domLoad, pageLoad)
-}
+} 
+

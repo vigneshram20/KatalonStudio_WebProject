@@ -6,7 +6,7 @@
    <comment></comment>
    <testCaseGuid>d7ba5b36-73da-445f-91f4-e89cdc170b82</testCaseGuid>
    <variable>
-      <defaultValue>'Business Objects'</defaultValue>
+      <defaultValue>'Merch List'</defaultValue>
       <description></description>
       <id>8e455d14-50bf-402c-8b16-a058113ba8a9</id>
       <masked>false</masked>
@@ -20,7 +20,7 @@
       <name>sheetName</name>
    </variable>
    <variable>
-      <defaultValue>'Royalty\r\n'</defaultValue>
+      <defaultValue>'WE'</defaultValue>
       <description></description>
       <id>78a941e1-11d3-4931-8ada-4c0a388502b9</id>
       <masked>false</masked>
@@ -34,7 +34,7 @@
       <name>Division</name>
    </variable>
    <variable>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'WE Lighting Fall 2020'</defaultValue>
       <description></description>
       <id>29aedef0-e9eb-415a-ba8c-6066980d37c0</id>
       <masked>false</masked>

@@ -15,5 +15,23 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Sprint5/CreateUpdateDeleteLadingPort</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>ed07ebcb-65df-4ed4-a85e-92ee9df1a44b</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>e6e45cc9-df16-4a46-9d0d-5a6d6de5566a</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>74e9bf31-cc13-46be-b8e6-100dbe20563d</variableId>
+      </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

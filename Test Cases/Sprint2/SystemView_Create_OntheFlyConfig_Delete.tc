@@ -12,4 +12,18 @@
       <masked>false</masked>
       <name>viewType</name>
    </variable>
+   <variable>
+      <defaultValue>'PB'</defaultValue>
+      <description></description>
+      <id>873abfaf-a337-4b1c-99a7-b9841a4d1335</id>
+      <masked>false</masked>
+      <name>Brand</name>
+   </variable>
+   <variable>
+      <defaultValue>'Tabletop'</defaultValue>
+      <description></description>
+      <id>a68ad22c-4bc2-4855-82ab-5b5221569397</id>
+      <masked>false</masked>
+      <name>Division</name>
+   </variable>
 </TestCaseEntity>

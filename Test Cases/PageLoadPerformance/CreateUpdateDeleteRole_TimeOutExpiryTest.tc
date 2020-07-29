@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CreateUpdateDeleteRole_TimeOutExpiryTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b3bc8403-7b6b-4a9f-8294-acdefb6e9020</testCaseGuid>
+   <variable>
+      <defaultValue>120</defaultValue>
+      <description></description>
+      <id>fdc6ada6-65a6-4540-81b9-1efcef9770b4</id>
+      <masked>false</masked>
+      <name>Minutes</name>
+   </variable>
+</TestCaseEntity>

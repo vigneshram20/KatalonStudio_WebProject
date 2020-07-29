@@ -81,7 +81,7 @@ WebUI.click(findTestObject('Object Repository/Common Objects/button_OK'))
 
 WebUI.callTestCase(findTestCase('Common/LogoutApplication'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Common/ProvideValidCredentialsAndVerifyLandingPage'), [('Username') : testUserName, ('Password') : testUserPassword], 
+WebUI.callTestCase(findTestCase('Common/ProvideValidCredentialsAndVerifyLandingPage'), [('Username') : testUserName, ('Password') : testUserPassword,('verifyManageList'):'false'], 
     FailureHandling.STOP_ON_FAILURE)
 
 'Navigate through Hamburger menu'

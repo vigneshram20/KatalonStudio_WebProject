@@ -12,4 +12,18 @@
       <masked>false</masked>
       <name>viewType</name>
    </variable>
+   <variable>
+      <defaultValue>'WE'</defaultValue>
+      <description></description>
+      <id>0bcd9acd-f6cc-4c2c-8dbf-0c8bdf66c4e1</id>
+      <masked>false</masked>
+      <name>Brand</name>
+   </variable>
+   <variable>
+      <defaultValue>'Lighting'</defaultValue>
+      <description></description>
+      <id>bb1bc45a-af34-4af9-9695-7ac65fbbe591</id>
+      <masked>false</masked>
+      <name>Division</name>
+   </variable>
 </TestCaseEntity>

@@ -54,6 +54,9 @@ WebUI.verifyElementPresent(findTestObject('Sprint6/input_Manage Driven Rules'), 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/label_Level 2 Attribute'), 0)
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_Add Next LevelRemove Last Level'), 0)
+
+WebUI.delay(5)
+
 try
 {
 	WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Attributes_FirstLevel'), (' ' + level1Attribute) + ' ', true)

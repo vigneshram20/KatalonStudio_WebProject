@@ -13,24 +13,31 @@
       <name>viewType</name>
    </variable>
    <variable>
-      <defaultValue>'Vignesh Thayanithi'</defaultValue>
+      <defaultValue>'TSTVCA PTSM'</defaultValue>
       <description></description>
       <id>33534d4e-0cb9-4731-bbe2-3f467fea1f45</id>
       <masked>false</masked>
       <name>userToAssign</name>
    </variable>
    <variable>
-      <defaultValue>'vthayanithi'</defaultValue>
+      <defaultValue>'tstvcaptsm'</defaultValue>
       <description></description>
       <id>721babb9-818f-441c-9aa6-6362779cc983</id>
       <masked>false</masked>
       <name>testUserName</name>
    </variable>
    <variable>
-      <defaultValue>'p,U+l^0\''</defaultValue>
+      <defaultValue>'McpTest793!'</defaultValue>
       <description></description>
       <id>0286d296-0032-4aff-a351-a80a5810f699</id>
       <masked>false</masked>
       <name>testUserPassword</name>
+   </variable>
+   <variable>
+      <defaultValue>['read', 'create']</defaultValue>
+      <description></description>
+      <id>ab79abfe-d967-432f-974c-9f1d9e4047df</id>
+      <masked>false</masked>
+      <name>permissionValues</name>
    </variable>
 </TestCaseEntity>

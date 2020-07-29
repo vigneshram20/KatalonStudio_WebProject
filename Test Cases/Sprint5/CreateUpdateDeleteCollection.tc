@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CreateUpdateDeleteCollection</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>1851c4e8-be78-467d-a803-2fd91e1bf787</testCaseGuid>
+   <variable>
+      <defaultValue>'Custom'</defaultValue>
+      <description></description>
+      <id>bfc533ae-4867-48d5-9358-2cefda8c9316</id>
+      <masked>false</masked>
+      <name>viewType</name>
+   </variable>
+   <variable>
+      <defaultValue>'Collection'</defaultValue>
+      <description></description>
+      <id>5ed89baf-8ad9-40d3-bb29-3b80d27f2a51</id>
+      <masked>false</masked>
+      <name>libraryName</name>
+   </variable>
+   <variable>
+      <defaultValue>['Collection', 'Collection Description', 'Collection ID']</defaultValue>
+      <description></description>
+      <id>398eadda-cf2d-4108-be2a-e440bf7e9521</id>
+      <masked>false</masked>
+      <name>attributesList</name>
+   </variable>
+</TestCaseEntity>

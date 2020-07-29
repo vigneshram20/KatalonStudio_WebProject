@@ -6,12 +6,12 @@
    <elementGuidId>f36b92f3-027c-4bde-adeb-69e2930b341e</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//span[contains(@class,'viewControl_page')]/span[2]</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>//*[(text() = '258' or . = '258')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//span[contains(@class,'viewControl_page_info')]/span[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

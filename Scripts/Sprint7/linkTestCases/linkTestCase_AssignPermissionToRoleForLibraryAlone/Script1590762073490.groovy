@@ -42,27 +42,42 @@ WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Apply'))
 
 WebUI.sendKeys(findTestObject('Sprint6/input_roleSearch'), roleName)
 
-roleNameUpperCase = roleName.toUpperCase();
+roleNameUpperCase = roleName.toUpperCase()
 
 WebUI.verifyElementPresent(findTestObject('Sprint6/th_parameterized', [('param') : roleNameUpperCase]), 0)
 
 WebDriver driver = DriverFactory.getWebDriver()
 
-WebElement element = WebUiBuiltInKeywords.findWebElement(findTestObject('Object Repository/Sprint6/img_libraryName_Dropdown_param',
-		[('library') : libraryName]))
+WebElement element = WebUiBuiltInKeywords.findWebElement(findTestObject('Object Repository/Sprint6/img_libraryName_Dropdown_param', 
+        [('library') : libraryName]))
 
 JavascriptExecutor js = ((driver) as JavascriptExecutor)
 
 js.executeScript('arguments[0].click();', element)
 
-for(String permission : permissionValues)
-{
+for (String permission : permissionValues) {
+    WebElement Menu = WebUiBuiltInKeywords.findWebElement(findTestObject('Object Repository/Sprint6/label_parameterized', 
+            [('param') : permission]))
 
-	WebElement Menu = WebUiBuiltInKeywords.findWebElement(findTestObject('Object Repository/Sprint6/label_parameterized',[('param'):permission]))
-	js.executeScript('arguments[0].click();', Menu)
+    js.executeScript('arguments[0].click();', Menu)
 }
 
 js.executeScript('arguments[0].click();', element)
+
+WebUI.click(findTestObject('Sprint6/img_DownArrowCarat'))
+
+List<WebElement> listOfAttrGroups = WebUI.findWebElements(findTestObject('Object Repository/Sprint6/img_AttributeGroups_InheritButton'),0)
+
+for (WebElement ele : listOfAttrGroups) {
+
+	js.executeScript("arguments[0].scrollIntoView()",
+			ele);
+		js.executeScript('arguments[0].click();', ele);
+		WebUI.delay(1);
+			
+	}
+
+WebUI.click(findTestObject('Sprint6/img_DownArrowCarat'))
 
 WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Save'))
 
@@ -71,3 +86,4 @@ WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Yes'))
 WebUI.enhancedClick(findTestObject('Common Objects/button_OK'))
 
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+

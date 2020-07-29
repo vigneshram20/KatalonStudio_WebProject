@@ -20,7 +20,6 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.delay(3)
 
-
 WebUI.waitForPageLoad(60)
 
 WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
@@ -55,19 +54,18 @@ WebUI.verifyElementPresent(findTestObject('Sprint6/button_paremeterized_ViewName
 
 List<String> listOfExistingElements = WebUI.findWebElements(findTestObject('Sprint6/tbody_GroupByFirstLevel'), 1)
 
-List<String> groupByElementsBeforeSort = new ArrayList<LinkedHashMap>()
+List<String> groupByElementsBeforeSort = new ArrayList<String>()
 
-List<String> groupByElementsAfterSort = new ArrayList<LinkedHashMap>()
+List<String> groupByElementsAfterSort = new ArrayList<String>()
 
 for (WebElement element : listOfExistingElements) {
-	if(!element.getAttribute('title').equals(""))
-	{
-    groupByElementsBeforeSort.add(element.getText().trim())
+    if (!(element.getAttribute('title').equals(''))) {
+        groupByElementsBeforeSort.add(element.getText().trim())
 
-    groupByElementsAfterSort.add(element.getText().trim())
+        groupByElementsAfterSort.add(element.getText().trim())
 
-    println(element.getText().trim())
-	}
+        println(element.getText().trim())
+    }
 }
 
 Comparator c = Collections.reverseOrder()
@@ -89,6 +87,8 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/span_Add ad
 'Verify the selected Sort By'
 WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint6/select_dropdown_popover'), 'Division', true, 0)
 
+WebUI.selectOptionByLabel(findTestObject('Sprint6/select_dropdown_popover'), 'Season', true, FailureHandling.STOP_ON_FAILURE)
+
 'Click Asc button'
 WebUI.click(findTestObject('Sprint6/button_ASC'))
 
@@ -102,12 +102,25 @@ WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_colu
 'Verify the Modified text displayed in the view selector or not'
 WebUI.verifyElementPresent(findTestObject('Sprint6/button_paremeterized_ViewName', [('viewName') : modifiedViewName]), 0)
 
-List<String> listOfExistingElementsSort = WebUI.findWebElements(findTestObject('Sprint6/td_SortByFirstLevelFirstGroupBy'), 
+List<String> listOfExistingElements1 = WebUI.findWebElements(findTestObject('Object Repository/Sprint8/div_ColumnIndexNo'), 
     1)
 
-List<String> sortByElementsBeforeSort = new ArrayList<LinkedHashMap>()
+int columnNo = 0
 
-List<String> sortByElementsAfterSort = new ArrayList<LinkedHashMap>()
+for (WebElement element : listOfExistingElements1) {
+    columnNo++
+
+    if (element.getAttribute('title').equals('Season')) {
+        break
+    }
+}
+
+List<String> listOfExistingElementsSort = WebUI.findWebElements(findTestObject('Object Repository/Sprint8/div_CellsByIndex', 
+        [('indexNo') : columnNo]), 1)
+
+List<String> sortByElementsBeforeSort = new ArrayList<String>()
+
+List<String> sortByElementsAfterSort = new ArrayList<String>()
 
 for (WebElement element : listOfExistingElementsSort) {
     sortByElementsBeforeSort.add(element.getText().trim())
@@ -129,18 +142,18 @@ if (sortByElementsAfterSort.equals(sortByElementsBeforeSort)) {
 WebUI.click(findTestObject('Sprint6/button_Hide  Unhide'))
 
 'Enter field to be Hidden'
-WebUI.setText(findTestObject('Sprint6/input_Hide  Unhide_search-flelds'), 'Name')
+WebUI.setText(findTestObject('Sprint6/input_Hide  Unhide_search-flelds'), columnToHide)
 
 'Wait for the element to be displayed'
-WebUI.waitForElementVisible(findTestObject('Sprint6/img_viewControl_eye_icon_viewColumn', [('attribute') : 'Name']), 0)
+WebUI.waitForElementVisible(findTestObject('Sprint6/img_viewControl_eye_icon_viewColumn', [('attribute') : columnToHide]), 0)
 
 'Wait for the element to be clicked'
-WebUI.waitForElementClickable(findTestObject('Sprint6/img_viewControl_eye_icon_viewColumn', [('attribute') : 'Name']), 0)
+WebUI.waitForElementClickable(findTestObject('Sprint6/img_viewControl_eye_icon_viewColumn', [('attribute') : columnToHide]), 0)
 
 WebUI.delay(2)
 
 'Click the respective column'
-WebUI.click(findTestObject('Sprint6/img_viewControl_eye_icon_viewColumn', [('attribute') : 'Name']))
+WebUI.click(findTestObject('Sprint6/img_viewControl_eye_icon_viewColumn', [('attribute') : columnToHide]))
 
 WebUI.delay(5)
 
@@ -148,10 +161,10 @@ WebUI.delay(5)
 WebUI.verifyElementPresent(findTestObject('Sprint6/button_paremeterized_ViewName', [('viewName') : modifiedViewName]), 0)
 
 'Verify the table header - ACTIONS'
-WebUI.verifyElementPresent(findTestObject('Sprint6/div_ACTIONS'), 0)
+not_run:WebUI.verifyElementPresent(findTestObject('Sprint6/div_ACTIONS'), 0)
 
 'Verify the table header - Name'
-WebUI.verifyElementNotPresent(findTestObject('Sprint6/div_Name'), 0)
+WebUI.verifyElementNotPresent(findTestObject('Sprint6/div_param',[('columnName'):columnToHide]), 0)
 
 'Click Save View button'
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Save View -dropdown'))
@@ -171,7 +184,7 @@ if (viewType.equals('System')) {
 WebUI.verifyElementAttributeValue(findTestObject('Sprint6/input__ViewName'), 'value', viewName, 0)
 
 'Verify Selected Field'
-WebUI.verifyElementNotPresent(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : 'Name']), 0)
+WebUI.verifyElementNotPresent(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : columnToHide]), 0)
 
 if (viewType.equals('System')) {
     'Verify Assigned groups'
@@ -186,7 +199,7 @@ WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint6/select_GroupByDropDown
 WebUI.verifyElementText(findTestObject('Sprint6/button_GroupBySortAppliedVerify'), 'DESC')
 
 'Verify Sort By dropdown'
-WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint6/select_SortByDropDown'), 'Division', true, 0)
+WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint6/select_SortByDropDown'), 'Season', true, 0)
 
 'Verify Sort By sort applied'
 WebUI.verifyElementText(findTestObject('Object Repository/Sprint6/button_SortBySortAppliedVerify'), 'ASC')
@@ -302,4 +315,5 @@ WebUI.click(findTestObject('Sprint6/button_Sort By'))
 
 'Verify the Sort By is not present'
 WebUI.verifyElementNotPresent(findTestObject('Common Objects/img_Close'), 0)
+
 

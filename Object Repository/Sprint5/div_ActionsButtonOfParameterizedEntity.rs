@@ -6,12 +6,12 @@
    <elementGuidId>042b5fdf-2808-433d-a81e-a19d739a6adf</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//*[@title = 'Q123' and (text() = 'Q123' or . = 'Q123')]</value>
+         <key>XPATH</key>
+         <value>//div[@class='table-body']//div[contains(@class,'rTableRow')]//span[text()='${column1}']/../../..//span[text()='${column2}']/../../../div[1]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@class='table-body']//div[contains(@class,'rTableRow')]//div[2][text()='${column1}']/../div[3][text()='${column2}']/../div[1]</value>
+         <key>BASIC</key>
+         <value>//*[@title = 'Q123' and (text() = 'Q123' or . = 'Q123')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

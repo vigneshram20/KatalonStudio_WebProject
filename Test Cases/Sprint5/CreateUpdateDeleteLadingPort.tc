@@ -5,4 +5,25 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>dc1f2aa3-1b44-48ce-a6ef-45278b8f03db</testCaseGuid>
+   <variable>
+      <defaultValue>'Custom'</defaultValue>
+      <description></description>
+      <id>ed07ebcb-65df-4ed4-a85e-92ee9df1a44b</id>
+      <masked>false</masked>
+      <name>viewType</name>
+   </variable>
+   <variable>
+      <defaultValue>'Lading Port'</defaultValue>
+      <description></description>
+      <id>e6e45cc9-df16-4a46-9d0d-5a6d6de5566a</id>
+      <masked>false</masked>
+      <name>libraryName</name>
+   </variable>
+   <variable>
+      <defaultValue>['Country ID ', 'Lading Port Description ', 'Lading Port ID', 'Name', 'Transit Time ']</defaultValue>
+      <description></description>
+      <id>74e9bf31-cc13-46be-b8e6-100dbe20563d</id>
+      <masked>false</masked>
+      <name>attributesList</name>
+   </variable>
 </TestCaseEntity>

@@ -6,35 +6,35 @@
    <comment>Manage Type > Season - Total Time for page load - &quot; + totalTime</comment>
    <testCaseGuid>9250bc25-9639-4749-ace1-53d011b47f55</testCaseGuid>
    <variable>
-      <defaultValue>'STRING'</defaultValue>
+      <defaultValue>'Sequence'</defaultValue>
       <description></description>
       <id>dead799e-6744-4994-aff2-eecc28de7f42</id>
       <masked>false</masked>
       <name>DataType</name>
    </variable>
    <variable>
-      <defaultValue>'TEXT_AREA'</defaultValue>
+      <defaultValue>'Sequence Name'</defaultValue>
       <description></description>
       <id>33f1ec1c-673e-4cd1-8b15-b10a218aad06</id>
       <masked>false</masked>
       <name>AttributeType</name>
    </variable>
    <variable>
-      <defaultValue>'Automation_String_TextArea_InternalName'</defaultValue>
+      <defaultValue>'QA_AUT_SEQ_IN'</defaultValue>
       <description></description>
       <id>360a112e-bba2-44e3-8686-bae267e4501c</id>
       <masked>false</masked>
       <name>InternalName</name>
    </variable>
    <variable>
-      <defaultValue>'Automation_String_TextArea_DisplayName'</defaultValue>
+      <defaultValue>'QA_AUT_SEQ_IN'</defaultValue>
       <description></description>
       <id>4a47371d-bb4f-444e-94d9-ff5866495ec6</id>
       <masked>false</masked>
       <name>DisplayName</name>
    </variable>
    <variable>
-      <defaultValue>'Automation_String_TextArea_Description'</defaultValue>
+      <defaultValue>'QA_AUT_SEQ_IN'</defaultValue>
       <description></description>
       <id>fef41734-1786-43a3-8720-e3d8dd9c40fd</id>
       <masked>false</masked>
@@ -223,7 +223,7 @@
       <name>ValidRangeTo</name>
    </variable>
    <variable>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'ATTR_INFO_SEQ'</defaultValue>
       <description></description>
       <id>c48f4cfb-768f-4349-b906-ad877a1a90a2</id>
       <masked>false</masked>

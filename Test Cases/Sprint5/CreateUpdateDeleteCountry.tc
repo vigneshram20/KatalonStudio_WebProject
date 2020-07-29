@@ -5,4 +5,25 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>80efc3e8-357e-485e-81c3-44bcbd4fd4ce</testCaseGuid>
+   <variable>
+      <defaultValue>'Custom'</defaultValue>
+      <description></description>
+      <id>3ffb3ca1-c7ca-4f59-a113-033f5ab6c948</id>
+      <masked>false</masked>
+      <name>viewType</name>
+   </variable>
+   <variable>
+      <defaultValue>['Country ID ', 'Country']</defaultValue>
+      <description></description>
+      <id>51daf909-1171-40d3-93b1-cd81a7d12eb6</id>
+      <masked>false</masked>
+      <name>attributesList</name>
+   </variable>
+   <variable>
+      <defaultValue>'Country'</defaultValue>
+      <description></description>
+      <id>dc6e485d-f655-4cc3-9a25-bf734ca61f23</id>
+      <masked>false</masked>
+      <name>libraryName</name>
+   </variable>
 </TestCaseEntity>

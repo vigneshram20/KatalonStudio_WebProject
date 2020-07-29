@@ -17,9 +17,13 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
-'Navigate through Hamburger menu'
-WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : 'Season'], 
-    FailureHandling.STOP_ON_FAILURE)
+if(fromHamburger.equals('true'))
+{
+	'Navigate through Hamburger menu'
+	WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : libraryName],
+		FailureHandling.STOP_ON_FAILURE)
+}
+
 
 WebUI.delay(3)
 
@@ -113,7 +117,7 @@ if (viewType.equals('System')) {
 WebUI.setText(findTestObject('Sprint6/input__ViewName'), viewName)
 
 'Verify library : Season Visible'
-WebUI.verifyElementVisible(findTestObject('Object Repository/Sprint6/div_Type  season'))
+WebUI.verifyElementVisible(findTestObject('Sprint6/div_Type_parameterized',[('libraryName'):libraryName]))
 
 'Click Save Views at Highest level label'
 WebUI.click(findTestObject('Object Repository/Sprint6/label_Save views at Highest Type Level'))
@@ -124,7 +128,12 @@ WebUI.verifyElementVisible(findTestObject('Object Repository/Sprint6/strong_Conf
 'Verify Available fields section'
 WebUI.verifyElementVisible(findTestObject('Object Repository/Sprint6/strong_Available Fields'))
 
-'Click Brand Label'
+for(String attr : attributesList)
+{
+	WebUI.click(findTestObject('Object Repository/Sprint6/label_parameterized', [('param') : attr]))
+}
+
+/*'Click Brand Label'
 WebUI.click(findTestObject('Object Repository/Sprint6/label_Brand'))
 
 'Click Division label'
@@ -153,11 +162,16 @@ WebUI.click(findTestObject('Object Repository/Sprint6/label_Type'))
 
 'Click Year'
 WebUI.click(findTestObject('Object Repository/Sprint6/label_Year'))
-
+*/
 'Click Move to Right button'
 WebUI.click(findTestObject('Sprint6/button_moveToRightAttributes'))
 
-'Verify the Seleted Label - Brand'
+for(String attr : attributesList)
+{
+	WebUI.verifyElementPresent(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : attr]), 0)
+}
+
+/*'Verify the Seleted Label - Brand'
 WebUI.verifyElementPresent(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : 'Brand']), 0)
 
 'Verify the Seleted Label - Division'
@@ -190,7 +204,7 @@ WebUI.verifyElementPresent(findTestObject('Sprint6/label_Verify_SelectedFields',
 
 'Verify the Seleted Label - Year'
 WebUI.verifyElementPresent(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : 'Year']), 0)
-
+*/
 if (viewType.equals('System')) {
     'Verify Assign User Groups section'
     WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint2/Seasons/Page_Merch Collaboration Platform/strong_Assign User Groups'), 
@@ -234,41 +248,52 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/p_Locking c
 'Verify Lock Column Label'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/label_Lock Column(s)'), 0)
 
-'Verify Lock Column Label'
-WebUI.click(findTestObject('Object Repository/Sprint6/label_Lock Column(s)'), FailureHandling.STOP_ON_FAILURE)
-
-'Select the Lock Column  - 3'
-WebUI.selectOptionByLabel(findTestObject('Sprint6/select_LockColumnDropDown'), 'Column 3', true)
+if(!lockColumn.equals(""))
+{
+	'Verify Lock Column Label'
+	WebUI.click(findTestObject('Object Repository/Sprint6/label_Lock Column(s)'), FailureHandling.STOP_ON_FAILURE)
+	
+	'Select the Lock Column  - 3'
+	WebUI.selectOptionByLabel(findTestObject('Sprint6/select_LockColumnDropDown'), lockColumn, true)
+}
 
 'Verify the Group By heading'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/strong_Group By'), 0)
 
-'Verify the Add additional field to group by span'
-WebUI.click(findTestObject('Object Repository/Sprint6/span_Add additional field to group by'))
-
-'Select the Group By'
-WebUI.selectOptionByLabel(findTestObject('Sprint6/select_GroupByDropDown'), 'Brand', true)
-
-'Verify the selected Group By'
-WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint6/select_GroupByDropDown'), 'Brand', true, 0)
-
-'Click Asc button'
-WebUI.click(findTestObject('Object Repository/Sprint6/button_ASC'))
+if(!groupBy.equals(""))
+{
+	'Verify the Add additional field to group by span'
+	WebUI.click(findTestObject('Object Repository/Sprint6/span_Add additional field to group by'))
+	
+	'Select the Group By'
+	WebUI.selectOptionByLabel(findTestObject('Sprint6/select_GroupByDropDown'), groupBy, true)
+	
+	'Verify the selected Group By'
+	WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint6/select_GroupByDropDown'), groupBy, true, 0)
+	
+	'Click Asc button'
+	WebUI.click(findTestObject('Object Repository/Sprint6/button_ASC'))
+}
 
 'Verify Sort By heading'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/strong_Sort By'), 0)
 
-'Click Add additional field to sort by'
-WebUI.click(findTestObject('Object Repository/Sprint6/span_Add additional field to sort by'))
+if(!sortBy.equals(""))
+{
+	'Click Add additional field to sort by'
+	WebUI.click(findTestObject('Object Repository/Sprint6/span_Add additional field to sort by'))
+	
+	'Select Sort By'
+	WebUI.selectOptionByLabel(findTestObject('Sprint6/select_SortByDropDown'), sortBy, true)
+	
+	'Verify the selected Sort By'
+	WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint6/select_SortByDropDown'), sortBy, true, 0)
+	
+	'Click Desc button'
+	WebUI.click(findTestObject('Object Repository/Sprint6/button_SortBySortOrderClick', [('order') : 'DESC']))
+	
+}
 
-'Select Sort By'
-WebUI.selectOptionByLabel(findTestObject('Sprint6/select_SortByDropDown'), 'Division', true)
-
-'Verify the selected Sort By'
-WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint6/select_SortByDropDown'), 'Division', true, 0)
-
-'Click Desc button'
-WebUI.click(findTestObject('Object Repository/Sprint6/button_SortBySortOrderClick', [('order') : 'DESC']))
 
 'Click Save View button'
 WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Save View'))
@@ -318,7 +343,34 @@ WebUI.verifyElementPresent(findTestObject('Sprint6/button_paremeterized_ViewName
 'Verify table header - ACTIONS '
 not_run:WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_ACTIONS'), 0)
 
-'Verify table header - Brand'
+if(lockColumn.equals("Column 1"))
+{
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_columnFreezed_param', [('param') : attributesList.get(0)]), 0)
+	for (int i = 1; i < attributesList.size(); i++) {
+		WebUI.verifyElementPresent(findTestObject('Sprint6/div_param',[('columnName'):attributesList.get(i)]), 0)
+	}
+}
+
+if(lockColumn.equals("Column 2"))
+{
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_columnFreezed_param', [('param') : attributesList.get(0)]), 0)
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_columnFreezed_param', [('param') : attributesList.get(1)]), 0)
+	for (int i = 2; i < attributesList.size(); i++) {
+		WebUI.verifyElementPresent(findTestObject('Sprint6/div_param',[('columnName'):attributesList.get(i)]), 0)
+	}
+}
+
+if(lockColumn.equals("Column 3"))
+{
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_columnFreezed_param', [('param') : attributesList.get(0)]), 0)
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_columnFreezed_param', [('param') : attributesList.get(1)]), 0)
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_columnFreezed_param', [('param') : attributesList.get(2)]), 0)
+	for (int i =3; i < attributesList.size(); i++) {
+		WebUI.verifyElementPresent(findTestObject('Sprint6/div_param',[('columnName'):attributesList.get(i)]), 0)
+	}
+}
+
+/*'Verify table header - Brand'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_Brand'), 0)
 
 'Verify table header - Division'
@@ -337,7 +389,7 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_Interne
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_Internet Launch End Date'), 0)
 
 'Verify table header - Name'
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_Name'), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint6/div_param',[('columnName'):'Name']), 0)
 
 'Verify table header - Season'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_Season'), 0)
@@ -346,5 +398,5 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_Season'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_Type'), 0)
 
 'Verify table header - Year'
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_Year'), 0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_Year'), 0)*/
 

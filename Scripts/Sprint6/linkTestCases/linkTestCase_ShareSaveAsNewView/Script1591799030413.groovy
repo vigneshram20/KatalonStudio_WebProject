@@ -16,7 +16,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 'Click Save View button'
-WebUI.click(findTestObject('Object Repository/Sprint6/button_Save View -dropdown'))
+not_run:WebUI.click(findTestObject('Object Repository/Sprint6/button_Save View -dropdown'))
 
 WebUI.click(findTestObject('Sprint6/button_Save as New View'))
 
@@ -27,7 +27,7 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_Manage V
 WebUI.verifyElementVisible(findTestObject('Object Repository/Sprint6/h6_Which type of view are you copying'))
 
 'Verify System View radio is disabled'
-WebUI.verifyElementHasAttribute(findTestObject('Sprint6/span_System View_disabled'), 'disabled', 0)
+not_run:WebUI.verifyElementHasAttribute(findTestObject('Sprint6/span_System View_disabled'), 'disabled', 0)
 
 'Click Continue button'
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Continue'))
@@ -87,13 +87,13 @@ WebUI.delay(2)
 WebUI.verifyElementPresent(findTestObject('Sprint6/button_paremeterized_ViewName', [('viewName') : viewName]), 0)
 
 'Verify Element Not Present'
-WebUI.verifyElementNotPresent(findTestObject('Object Repository/Sprint6/div_Name'), 0)
+WebUI.verifyElementNotPresent(findTestObject('Sprint6/div_param',[('columnName'):'Name']), 0)
 
 'Verify Element Not Present'
 WebUI.verifyElementNotPresent(findTestObject('Object Repository/Sprint6/div_Season'), 0)
 
 'Verify Element Present'
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_ACTIONS'), 0)
+not_run:WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_ACTIONS'), 0)
 
 'Verify Element Present'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_Brand'), 0)

@@ -34,9 +34,39 @@ else
 	WebUI.verifyElementClickable(findTestObject('Sprint1/LandingPage/div_Manage List'), FailureHandling.STOP_ON_FAILURE)
 }
 
-String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA_AUT_' + viewType+"_", 'ddMMMHHmmss')
+WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : 'Season'],
+	FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_CreateView'), [('viewName') : viewName, ('viewType') : viewType], 
+WebUI.waitForPageLoad(60)
+
+WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
+
+WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Library'), Brand, true)
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint8/h5_Confirm Brand Change'), 0)
+
+WebUI.verifyElementPresent(findTestObject('Sprint8/p_BrandChange_Confirmation', [('brandName') : Brand]), 0)
+
+WebUI.click(findTestObject('Object Repository/Common Objects/button_Yes'))
+
+WebUI.waitForPageLoad(0)
+
+WebUI.verifyOptionPresentByLabel(findTestObject('Sprint8/Select_Division'), Division, true, 0)
+
+WebUI.selectOptionByLabel(findTestObject('Sprint8/Select_Division'), Division, true)
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint8/h5_Confirm Division Change'), 0)
+
+WebUI.verifyElementPresent(findTestObject('Sprint8/p_DivisionChangeConfirmation', [('divisionName') : Division]), 0)
+
+WebUI.click(findTestObject('Object Repository/Common Objects/button_Yes'))
+
+
+'Generate random System View Name'
+String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA_AUT_' + viewType+"_", 'ddMMMyyHHmmss')
+
+'Create New System View'
+WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_CreateView'), [('viewName') : viewName, ('viewType') : viewType,('fromHamburger') : 'false', ('libraryName') : Division], 
     FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_OntheFlyConfig_View'), [('viewName') : viewName, ('viewType') : viewType], 

@@ -126,7 +126,7 @@ not_run:WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_Brand'), 0)
 
 'Verify Element Not Present'
-WebUI.verifyElementNotPresent(findTestObject('Object Repository/Sprint6/div_Name'), 0)
+WebUI.verifyElementNotPresent(findTestObject('Sprint6/div_param',[('columnName'):'Name']), 0)
 
 'Verify Element Not Present'
 WebUI.verifyElementNotPresent(findTestObject('Object Repository/Sprint6/div_Season'), 0)

@@ -1,1 +1,1 @@
-katalon -noSplash  -runMode=console -projectPath="C:\Users\vigneshram_s\git\WSI_MerchTool\WSI_MerchTool.prj" -retry=0 -testSuitePath="Test Suites/Sprint 8/TS_FilterHeader_Season_20200706_144600" -executionProfile="default" -browserType="Chrome"
+katalon -noSplash  -runMode=console -projectPath="C:\Users\vigneshram_s\git\WSI_MerchTool\WSI_MerchTool.prj" -retry=0 -testSuitePath="Test Suites/Sprint 8/TS_FilterHeader_Season_20200728_164038" -executionProfile="default" -browserType="Chrome"

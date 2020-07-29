@@ -72,7 +72,8 @@ class customKeywords {
 			FileInputStream inputStream = new FileInputStream(myFile);
 			XSSFWorkbook workbook = new XSSFWorkbook(inputStream);
 			XSSFSheet sheet = workbook.createSheet(sheetName);
-			XSSFRow row = sheet.createRow(0);
+			sheet.createRow(0).createCell(0).setCellValue(GlobalVariable.URL);
+			XSSFRow row = sheet.createRow(1);
 			XSSFCell cell = row.createCell(0);
 			cell.setCellValue("Page Name");
 			XSSFCell cell1 = row.createCell(1);
