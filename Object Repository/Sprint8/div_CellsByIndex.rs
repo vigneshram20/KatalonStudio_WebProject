@@ -6,12 +6,12 @@
    <elementGuidId>92d30c41-f291-499c-82a0-3fa7a614b0f4</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[contains(@class,'rTableCell') and not(contains(@id,'clone'))][${indexNo}]</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>id(&quot;managelist&quot;)/div[@class=&quot;paginationWithGoTo_pagination_wrapper__1-Ag-&quot;]/ul[@class=&quot;pagination&quot;]/li[@class=&quot;paginationWithGoTo_page_number__3Y96h paginationWithGoTo_arrow_right__23o9C&quot;]/a[1]/span[1]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[contains(@class,'rTableCell') and not(contains(@id,'clone')) and @title][${indexNo}]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

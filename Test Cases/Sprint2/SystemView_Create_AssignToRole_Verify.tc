@@ -13,14 +13,14 @@
       <name>viewType</name>
    </variable>
    <variable>
-      <defaultValue>'vthayanithi'</defaultValue>
+      <defaultValue>'tstvcaptsm'</defaultValue>
       <description></description>
       <id>849ccf64-b040-4365-9219-8c7b3ef03416</id>
       <masked>false</masked>
       <name>testUserName</name>
    </variable>
    <variable>
-      <defaultValue>'p,U+l^0\''</defaultValue>
+      <defaultValue>'McpTest793!'</defaultValue>
       <description></description>
       <id>5ffaed37-fbb8-4993-9ee7-a3225a28f909</id>
       <masked>false</masked>

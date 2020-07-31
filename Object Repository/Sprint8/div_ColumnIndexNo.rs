@@ -6,12 +6,12 @@
    <elementGuidId>1ca3db08-b4b7-448e-8f76-52b3997678fd</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@class='rTableRow normal_header']//div[contains(@class,'rTableHead') and not(contains(@id,'clone')) and not(contains(@class,'Resizer'))]</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>id(&quot;managelist&quot;)/div[@class=&quot;paginationWithGoTo_pagination_wrapper__1-Ag-&quot;]/ul[@class=&quot;pagination&quot;]/li[@class=&quot;paginationWithGoTo_page_number__3Y96h paginationWithGoTo_arrow_right__23o9C&quot;]/a[1]/span[1]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@class='rTableRow normal_header']//div[contains(@class,'rTableHead') and not(contains(@id,'clone')) and not(contains(.,'ACTIONS')) and not(contains(@class,'Resizer'))]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

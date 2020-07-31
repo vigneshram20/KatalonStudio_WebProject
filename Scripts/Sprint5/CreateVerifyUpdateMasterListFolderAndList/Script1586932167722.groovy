@@ -128,11 +128,15 @@ WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input__displayNameVerif
     Keys.chord(Keys.CONTROL, Keys.chord('a')))
 
 'Provide Display Name'
-WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input__displayNameVerification', [('text') : DisplayNameFolder]), 
+WebUI.setText(findTestObject('Object Repository/Sprint5/input__displayNameVerification', [('text') : DisplayNameFolder]), 
     displayNameFolderEdited)
 
+WebUI.delay(1)
+
 'Provide Description'
-WebUI.sendKeys(findTestObject('Sprint5/textarea_Description'), description)
+WebUI.setText(findTestObject('Sprint5/textarea_Description'), description+Keys.TAB)
+
+WebUI.delay(1)
 
 'Click Save button'
 WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
@@ -242,11 +246,15 @@ WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input__displayNameVerif
     Keys.chord(Keys.CONTROL, Keys.chord('a')))
 
 'Provide DisplayNameList'
-WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input__displayNameVerification', [('text') : DisplayNameList]), 
-    displayNameListEdited)
+WebUI.setText(findTestObject('Object Repository/Sprint5/input__displayNameVerification', [('text') : DisplayNameList]), 
+    displayNameListEdited+Keys.ENTER)
+
+WebUI.delay(1)
 
 'Provide Description'
-WebUI.sendKeys(findTestObject('Sprint5/textarea_Description'), description)
+WebUI.setText(findTestObject('Sprint5/textarea_Description'), description+Keys.TAB)
+
+WebUI.delay(1)
 
 'Verify Entries header'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/p_Entries'), 0)
@@ -259,6 +267,8 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/th_Removed 
 
 'Scroll to Top'
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.PAGE_DOWN))
+
+WebUI.delay(2)
 
 'Click Add to Selection'
 WebUI.enhancedClick(findTestObject('Object Repository/Sprint5/div_Add to Selection'))
@@ -274,6 +284,8 @@ WebUI.click(findTestObject('Sprint5/button_MoveToRight'))
 
 'Scroll to Top'
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.PAGE_DOWN))
+
+WebUI.delay(2)
 
 'Click Add to Selection'
 WebUI.enhancedClick(findTestObject('Object Repository/Sprint5/div_Add to Selection'))

@@ -67,13 +67,13 @@ WebUI.verifyElementPresent(findTestObject('Sprint8/p_DivisionChangeConfirmation'
 
 WebUI.click(findTestObject('Object Repository/Common Objects/button_Yes'))
 
-/*String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'(('QA_' + 'AUT_') + 'Custom_', 'ddMMMHHmmss')
+String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'(('QA_' + 'AUT_') + 'Custom_', 'ddMMMHHmmss')
 
 WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_CreateView'), [('viewName') : viewName, ('viewType') : 'Custom'
         , ('fromHamburger') : 'false', ('libraryName') : Division], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_SetDefaultView'), [('viewName') : viewName], FailureHandling.STOP_ON_FAILURE)
-*/
+
 not_run: WebUI.scrollToElement(findTestObject('Sprint8/div_ColumnHeaderByName-SortButton', [('columnName') : columnName]), 
     0)
 
@@ -161,4 +161,5 @@ if (groupByElementsBeforeSort.equals(groupByElementsAfterSort)) {
 } else {
     throw new Exception(('Values are not sorted in ' + sortOrder) + ' order')
 }
-
+viewName = (viewName + ' – Default')
+WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_DeleteView'), [('viewName') : viewName], FailureHandling.STOP_ON_FAILURE)

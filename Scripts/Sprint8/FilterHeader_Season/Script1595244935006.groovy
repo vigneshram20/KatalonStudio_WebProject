@@ -63,6 +63,13 @@ WebUI.verifyElementPresent(findTestObject('Sprint8/p_DivisionChangeConfirmation'
 
 WebUI.click(findTestObject('Object Repository/Common Objects/button_Yes'))
 
+String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'(('QA_' + 'AUT_') + 'Custom_', 'ddMMMHHmmss')
+
+WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_CreateView'), [('viewName') : viewName, ('viewType') : 'Custom'
+		, ('fromHamburger') : 'false', ('libraryName') : Division], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_SetDefaultView'), [('viewName') : viewName], FailureHandling.STOP_ON_FAILURE)
+
 WebUI.click(findTestObject('Sprint8/img_PlusIcon'))
 
 WebUI.click(findTestObject('Object Repository/Sprint8/span_Add additional field to filter by'))
@@ -84,6 +91,7 @@ if(Values1.length>0)
 else
 {
 	SearchValue = Values1[0]
+	System.out.println(SearchValue)
 }
 
 String matchedRecord =""
@@ -102,7 +110,7 @@ if(SearchValue.contains(","))
 }
 else
 {
-	matchedRecord = SearchValue;
+	matchedRecord=SearchValue;
 }
 
 if (AttributeType.equals("Single List")) {
@@ -125,7 +133,7 @@ if(AttributeType.toString().equals("Text") || AttributeType.toString().equals("D
 	{
 	WebUI.click(findTestObject('Object Repository/Sprint8/input_EnterText_FilterHeader'))
 	
-	WebUI.sendKeys(findTestObject('Object Repository/Sprint8/input_EnterText_FilterHeader'), SearchValue)
+	WebUI.sendKeys(findTestObject('Object Repository/Sprint8/input_EnterText_FilterHeader'), Values1[0])
 	}
 	
 	if(Operator.equals('Range'))
@@ -166,7 +174,7 @@ for (WebElement element : listOfExistingElements) {
         break
     }
 }
-
+System.out.println(columnNo)
 List<String> listOfExistingCells = WebUI.findWebElements(findTestObject('Object Repository/Sprint8/div_CellsByIndex', [('indexNo') : columnNo]), 
     1)
 
@@ -269,3 +277,6 @@ else if (Operator.equals('Range'))
 		}
 	}
 }
+viewName = (viewName + ' – Default')
+
+WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_DeleteView'), [('viewName') : viewName], FailureHandling.STOP_ON_FAILURE)

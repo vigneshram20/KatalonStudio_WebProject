@@ -20,28 +20,28 @@
       <name>Division</name>
    </variable>
    <variable>
-      <defaultValue>'Text'</defaultValue>
+      <defaultValue>'Single List'</defaultValue>
       <description></description>
       <id>a8486a7d-c7a8-4f58-bbbf-a36f5fa8d2a7</id>
       <masked>false</masked>
       <name>AttributeType</name>
    </variable>
    <variable>
-      <defaultValue>'In Store Launch End Date'</defaultValue>
+      <defaultValue>'Year'</defaultValue>
       <description></description>
       <id>c917a196-1b5d-40ac-8280-b5ce6ce3b60c</id>
       <masked>false</masked>
       <name>AttributeName</name>
    </variable>
    <variable>
-      <defaultValue>'Range'</defaultValue>
+      <defaultValue>'Contains'</defaultValue>
       <description></description>
       <id>bc919aa8-e011-43d4-a04f-10e5cad219c3</id>
       <masked>false</masked>
       <name>Operator</name>
    </variable>
    <variable>
-      <defaultValue>'01/01/2023,12/12/2024'</defaultValue>
+      <defaultValue>'2020'</defaultValue>
       <description></description>
       <id>76c0797f-e662-4059-8e10-de0bc747b993</id>
       <masked>false</masked>
