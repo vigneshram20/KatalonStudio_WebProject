@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TS_MerchList_PageLoadPerformance</name>
+   <name>TS_MerchList_PageLoadPerformance_20200803_233308</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,8 +9,9 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <testSuiteGuid>55b74923-04bd-4d36-ace5-da827b42a662</testSuiteGuid>
-   <testCaseLink>
+   <testSuiteGuid>893d601b-ca15-48e1-a11a-893563b58f8e</testSuiteGuid>
+   
+<testCaseLink>
       <guid>e3a3e8d4-a80d-428d-8251-3ec8ddc46b2c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -19,8 +20,8 @@
          <combinationType>ONE</combinationType>
          <id>75bd6240-edda-40b7-b3dd-cfec8ee63a46</id>
          <iterationEntity>
-            <iterationType>ALL</iterationType>
-            <value></value>
+            <iterationType>SPECIFIC</iterationType>
+            <value>10</value>
          </iterationEntity>
          <testDataId>Data Files/MerchList_Counter</testDataId>
       </testDataLink>

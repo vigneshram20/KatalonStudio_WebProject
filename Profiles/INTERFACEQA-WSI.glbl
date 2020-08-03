@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>INTERFACEQA-WSI</name>
+   <tag></tag>
+   <defaultProfile>false</defaultProfile>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://supplychain-mcp-user-interface-qa.services.west.nonprod.wsgc.com/'</initValue>
+      <name>URL</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'bv'</initValue>
+      <name>USERNAME</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Photon#123'</initValue>
+      <name>PASSWORD</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>null</initValue>
+      <name>CURRENT_DATE</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'This field is required.'</initValue>
+      <name>Field_Required_Error</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Create New Season'</initValue>
+      <name>CREATE_SEASON_MODAL_TITLE</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Season will be created for each Division associated with the selected Brand.'</initValue>
+      <name>CREATE_SEASON_TITLE_NOTE</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Please enter a valid username / password.'</initValue>
+      <name>LOGIN_ERROR_TOP_NOTE</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>['ACTIONS', 'Name', 'Brand', 'Created By', 'Created On', 'Division', 'In Store Launch End Date', 'In Store Launch Start Date', 'Internet Launch End Date', 'Internet Launch Start Date', 'Season', 'Type', 'Updated By', 'Updated On', 'Year']</initValue>
+      <name>ColumnsList</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Please enter a valid username.'</initValue>
+      <name>Username_Invalid_Error</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Merch Collaboration Platform'</initValue>
+      <name>PageTITLE</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>
