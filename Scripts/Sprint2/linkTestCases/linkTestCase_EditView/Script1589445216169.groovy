@@ -47,26 +47,37 @@ WebUI.sendKeys(findTestObject('Sprint6/input__ViewName'), Keys.chord(Keys.CONTRO
 'Enter View Name'
 WebUI.sendKeys(findTestObject('Sprint6/input__ViewName'), viewName)
 
-'Select Label - Type'
-WebUI.click(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : 'Type']), FailureHandling.STOP_ON_FAILURE)
+for(String attr : editedAttributes)
+{
 
-'Select Label - Year'
+'Select Label'
+WebUI.click(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : attr]), FailureHandling.STOP_ON_FAILURE)
+}
+
+/*'Select Label - Year'
 WebUI.click(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : 'Year']), FailureHandling.STOP_ON_FAILURE)
-
+*/
 'Click Move to Left button'
 WebUI.click(findTestObject('Object Repository/Sprint6/button_MoveToLeft'))
 
-'Verify Element not present - Type'
-WebUI.verifyElementNotPresent(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : 'Type']), 0)
+for(String attr : editedAttributes)
+{
+'Verify Element not present'
+WebUI.verifyElementNotPresent(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : attr]), 0)
+}
 
-'Verify Element not present - Year'
+/*'Verify Element not present - Year'
 WebUI.verifyElementNotPresent(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : 'Year']), 0)
+*/
 
+if(sortByGroupBy.equals("Yes"))
+{
 'Select Lock Column - 2'
 WebUI.selectOptionByLabel(findTestObject('Sprint6/select_LockColumnDropDown'), 'Column 2', true)
 
 'Click Desc button'
 WebUI.click(findTestObject('Object Repository/Sprint6/button_DESC'))
+}
 
 'Click Save View button'
 WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Save View'))
@@ -103,15 +114,10 @@ WebUI.verifyElementPresent(findTestObject('Sprint6/button_paremeterized_ViewName
 'Verify table header - ACTIONS'
 not_run: WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_ACTIONS'), 0)
 
-'Verify table header - Brand'
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_Brand'), 0)
+for(String attr : editedAttributes)
+{
+	'Verify table header - Type'
+	WebUI.verifyElementNotPresent(findTestObject('Sprint6/div_param',[('columnName'):attr]), 0)
+}
 
-'Verify table header - Division'
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_Division'), 0)
-
-'Verify table header - Type'
-WebUI.verifyElementNotPresent(findTestObject('Object Repository/Sprint6/div_Type'), 0)
-
-'Verify table header - Year'
-WebUI.verifyElementNotPresent(findTestObject('Object Repository/Sprint6/div_Year'), 0)
 

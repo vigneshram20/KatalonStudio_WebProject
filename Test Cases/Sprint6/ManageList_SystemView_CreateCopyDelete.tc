@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>ManageList_SystemView_CreateCopyDelete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>86b4ebbf-6ba0-4b4d-83b0-75e26245f87b</testCaseGuid>
+   <variable>
+      <defaultValue>'System'</defaultValue>
+      <description></description>
+      <id>bee53d18-072e-4c59-aae7-43a8799cbd22</id>
+      <masked>false</masked>
+      <name>viewType</name>
+   </variable>
+   <variable>
+      <defaultValue>'Merch List'</defaultValue>
+      <description></description>
+      <id>4b490094-17a8-42cc-a04a-49547af0e11e</id>
+      <masked>false</masked>
+      <name>libraryName</name>
+   </variable>
+   <variable>
+      <defaultValue>['MCP ID #', 'Item Type', 'PLM SKU #', 'SKU #', 'Product Description', 'DTC Assortment Status', 'Retail Assortment Status', 'Assortment Type', 'DTC Assorted Seasons']</defaultValue>
+      <description></description>
+      <id>ae142c02-7e9b-4b8b-8c86-edd57bb5582a</id>
+      <masked>false</masked>
+      <name>attributesList</name>
+   </variable>
+   <variable>
+      <defaultValue>[]</defaultValue>
+      <description></description>
+      <id>d6dd3e08-a714-43e4-8cff-ef8ce70bd91e</id>
+      <masked>false</masked>
+      <name>editedAttributes</name>
+   </variable>
+</TestCaseEntity>

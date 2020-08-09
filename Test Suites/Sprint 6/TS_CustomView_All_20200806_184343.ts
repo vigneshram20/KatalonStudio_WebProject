@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TS_CustomView_All_20200730_194141</name>
+   <name>TS_CustomView_All_20200806_184343</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,7 +9,7 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>true</rerunFailedTestCasesOnly>
-   <testSuiteGuid>3c747498-a51d-4924-9601-6688f1be8d87</testSuiteGuid>
+   <testSuiteGuid>83a5c517-b027-4c65-8e37-7c83c0ced0ea</testSuiteGuid>
    
 <testCaseLink>
       <guid>e122c49c-42b3-4177-87de-167aaf6a4c2c</guid>
@@ -33,6 +33,42 @@
          <type>DEFAULT</type>
          <value></value>
          <variableId>bb1bc45a-af34-4af9-9695-7ac65fbbe591</variableId>
+      </variableLink>
+   </testCaseLink>
+<testCaseLink>
+      <guid>0c89f1ee-a88b-4a31-b905-e213ef731d0a</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Sprint6/CustomView_Create_SetDefault_Delete</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>53e300b9-27df-42f7-9ec7-a384886d20df</variableId>
+      </variableLink>
+   </testCaseLink>
+<testCaseLink>
+      <guid>f67f8729-5d30-4983-9d26-24b65aab9248</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Sprint6/CustomView_CreateCopyDelete</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>724694ef-fe35-4c14-b108-fd1e171cac80</variableId>
+      </variableLink>
+   </testCaseLink>
+<testCaseLink>
+      <guid>3074977a-ac50-45ab-a015-7d1af7454cb9</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Sprint6/CustomView_CreateEditDelete</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>bcb01c25-49cb-4906-a56b-8129fe156c5d</variableId>
       </variableLink>
    </testCaseLink>
 <testCaseLink>

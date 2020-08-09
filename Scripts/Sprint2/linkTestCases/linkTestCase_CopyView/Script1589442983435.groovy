@@ -69,23 +69,41 @@ viewName = (viewName + ' - Copy')
 'Assert the Actual View name'
 junit.framework.Assert.assertEquals(viewName, actualViewName)
 
-'Select the Field'
+for(String attr : editedAttributes)
+{
+
+'Select Label'
+WebUI.click(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : attr]), FailureHandling.STOP_ON_FAILURE)
+}
+
+/*'Select the Field'
 WebUI.click(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : 'Name']), FailureHandling.STOP_ON_FAILURE)
 
 'Select the Field'
 WebUI.click(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : 'Season']), FailureHandling.STOP_ON_FAILURE)
-
+*/
 'Click Move to Left button'
 WebUI.click(findTestObject('Object Repository/Sprint6/button_MoveToLeft'))
 
-'Verify element not present'
+for(String attr : editedAttributes)
+{
+'Verify Element not present'
+WebUI.verifyElementNotPresent(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : attr]), 0)
+}
+
+/*'Verify element not present'
 WebUI.verifyElementNotPresent(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : 'Name']), 0)
 
 'Verify element not present'
-WebUI.verifyElementNotPresent(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : 'Season']), 0)
+WebUI.verifyElementNotPresent(findTestObject('Sprint6/label_Verify_SelectedFields', [('label') : 'Season']), 0)*/
+
+if(lockColumn.equals("Yes"))
+{
 
 'Select the Lock Column'
 WebUI.selectOptionByLabel(findTestObject('Sprint6/select_LockColumnDropDown'), 'Column 1', true)
+
+}
 
 'Click Save View button'
 WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Save View'))

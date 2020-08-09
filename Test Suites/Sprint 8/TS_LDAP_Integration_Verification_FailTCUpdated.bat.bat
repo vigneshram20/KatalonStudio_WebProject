@@ -1,1 +1,1 @@
-katalon -noSplash  -runMode=console -projectPath="C:\Users\vigneshram_s\git\WSI_MerchTool\WSI_MerchTool.prj" -retry=0 -testSuitePath="Test Suites/Sprint 8/TS_LDAP_Integration_Verification_20200723_144643" -executionProfile="default" -browserType="Firefox"
+katalon -noSplash  -runMode=console -projectPath="C:\Users\vigneshram_s\git\WSI_MerchTool\WSI_MerchTool.prj" -retry=0 -testSuitePath="Test Suites/Sprint 8/TS_LDAP_Integration_Verification_20200805_210030" -executionProfile="default" -browserType="Chrome"

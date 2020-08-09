@@ -24,6 +24,75 @@ if(fromHamburger.equals('true'))
 		FailureHandling.STOP_ON_FAILURE)
 }
 
+if(libraryName.equals('Season'))
+{
+	WebUI.waitForElementClickable(findTestObject('Sprint6/select_Library'), 0, FailureHandling.STOP_ON_FAILURE)
+	
+		WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Library'), Brand, true)
+	
+		WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint8/h5_Confirm Brand Change'), 0)
+	
+		WebUI.verifyElementPresent(findTestObject('Sprint8/p_BrandChange_Confirmation', [('brandName') : Brand]), 0)
+	
+		WebUI.click(findTestObject('Object Repository/Common Objects/button_Yes'))
+	
+		WebUI.waitForPageLoad(0)
+	
+		WebUI.verifyOptionPresentByLabel(findTestObject('Sprint8/Select_Division'), Division, true, 0)
+	
+		WebUI.selectOptionByLabel(findTestObject('Sprint8/Select_Division'), Division, true)
+	
+		WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint8/h5_Confirm Division Change'), 0)
+	
+		WebUI.verifyElementPresent(findTestObject('Sprint8/p_DivisionChangeConfirmation', [('divisionName') : Division]), 0)
+	
+		WebUI.click(findTestObject('Object Repository/Common Objects/button_Yes'))
+	
+}
+
+if(libraryName.equals('Merch List'))
+{
+	WebUI.waitForElementPresent(findTestObject('Sprint6/select_Library'), 0, FailureHandling.STOP_ON_FAILURE)
+	
+		WebUI.waitForElementVisible(findTestObject('Sprint6/select_Library'), 0, FailureHandling.STOP_ON_FAILURE)
+	
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Sprint6/select_Library_optionParameterized',[('option'):Brand]), 0)
+	
+		WebUI.waitForElementClickable(findTestObject('Sprint6/select_Library'), 0, FailureHandling.STOP_ON_FAILURE)
+	
+		WebUI.delay(5)
+	
+		WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Library'), Brand, true)
+	
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Sprint8/span_Select Department'), 0)
+	
+		WebUI.delay(5)
+	
+		WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
+	
+		WebUI.waitForPageLoad(0)
+	
+		WebUI.click(findTestObject('Sprint1/Create Season/input_SearchField'), FailureHandling.STOP_ON_FAILURE)
+	
+		WebUI.click(findTestObject('Object Repository/Sprint8/span_Select Department'))
+	
+		WebUI.waitForPageLoad(0)
+	
+		WebUI.delay(5)
+	
+		WebUI.click(findTestObject('Object Repository/Sprint6/label_parameterized', [('param') : Division]))
+	
+		WebUI.click(findTestObject('Sprint8/img_Select_Department_dropdown'))
+	
+		WebUI.waitForElementClickable(findTestObject('Sprint8/Select_Season_dropdown'), 0)
+	
+		WebUI.click(findTestObject('Sprint8/Select_Season_dropdown'))
+	
+		WebUI.click(findTestObject('Object Repository/Sprint8/span_parameterized', [('param') : Season]))
+	
+		WebUI.click(findTestObject('Sprint1/LandingPage/div_Manage List'))
+	
+}
 
 WebUI.delay(3)
 
@@ -296,7 +365,7 @@ if(!sortBy.equals(""))
 
 
 'Click Save View button'
-WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Save View'))
+WebUI.click(findTestObject('Object Repository/Sprint6/button_Save View'))
 
 'Verify the popup header '
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/h5_View Successfully Created'), 0)
