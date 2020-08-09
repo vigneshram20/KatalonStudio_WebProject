@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MerchList_Library</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>9ec2e3ac-5366-49e8-aa38-919bef53926a</testCaseGuid>
+   <variable>
+      <defaultValue>'Merch List'</defaultValue>
+      <description></description>
+      <id>812822c0-6c29-47cb-bf68-393db1bc72d3</id>
+      <masked>false</masked>
+      <name>SubMenu</name>
+   </variable>
+   <variable>
+      <defaultValue>GlobalVariable.ExcelSheetName</defaultValue>
+      <description></description>
+      <id>de49bf9c-f80d-4830-a344-7fbb938c1a74</id>
+      <masked>false</masked>
+      <name>sheetName</name>
+   </variable>
+   <variable>
+      <defaultValue>'WE'</defaultValue>
+      <description></description>
+      <id>e1288d3e-e271-473e-9847-3a8ab261ba63</id>
+      <masked>false</masked>
+      <name>Brand</name>
+   </variable>
+   <variable>
+      <defaultValue>'Lighting'</defaultValue>
+      <description></description>
+      <id>177efeab-aec7-4a46-aa15-d1810cf432db</id>
+      <masked>false</masked>
+      <name>Division</name>
+   </variable>
+   <variable>
+      <defaultValue>'WE Lighting Fall 2020'</defaultValue>
+      <description></description>
+      <id>4c5fa0e9-7abc-4f4c-9591-ca4a46168724</id>
+      <masked>false</masked>
+      <name>Season</name>
+   </variable>
+</TestCaseEntity>

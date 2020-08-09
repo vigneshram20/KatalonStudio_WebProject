@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>ManageList_CustomView_CreateEditDelete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>4b66f977-5fbf-4b67-9d0c-7d4e8fa0d04e</testCaseGuid>
+   <variable>
+      <defaultValue>'Custom'</defaultValue>
+      <description></description>
+      <id>28784031-11e4-43b7-a20b-cf7b532663d1</id>
+      <masked>false</masked>
+      <name>viewType</name>
+   </variable>
+   <variable>
+      <defaultValue>'Merch List'</defaultValue>
+      <description></description>
+      <id>446a9569-9950-4774-ba2f-344c78f1faa3</id>
+      <masked>false</masked>
+      <name>libraryName</name>
+   </variable>
+   <variable>
+      <defaultValue>['MCP ID #', 'Item Type', 'PLM SKU #', 'SKU #', 'Product Description', 'DTC Assortment Status', 'Retail Assortment Status', 'Assortment Type', 'DTC Assorted Seasons']</defaultValue>
+      <description></description>
+      <id>ddea0f74-f419-469d-8e25-4cfa2e48b563</id>
+      <masked>false</masked>
+      <name>attributesList</name>
+   </variable>
+   <variable>
+      <defaultValue>[]</defaultValue>
+      <description></description>
+      <id>1a2ca428-4e5e-4959-95a2-485d5977db6d</id>
+      <masked>false</masked>
+      <name>editedAttributes</name>
+   </variable>
+</TestCaseEntity>

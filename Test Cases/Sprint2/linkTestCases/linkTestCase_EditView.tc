@@ -19,4 +19,18 @@
       <masked>false</masked>
       <name>viewType</name>
    </variable>
+   <variable>
+      <defaultValue>['Type', 'Year']</defaultValue>
+      <description></description>
+      <id>eef3424c-1473-4721-9096-2b5edc79ef70</id>
+      <masked>false</masked>
+      <name>editedAttributes</name>
+   </variable>
+   <variable>
+      <defaultValue>'Yes'</defaultValue>
+      <description></description>
+      <id>363b5b95-ebb3-48cf-8616-baa139094b86</id>
+      <masked>false</masked>
+      <name>sortByGroupBy</name>
+   </variable>
 </TestCaseEntity>

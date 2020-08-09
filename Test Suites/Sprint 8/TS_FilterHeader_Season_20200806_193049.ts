@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TS_FilterHeader_Season_20200729_230000</name>
+   <name>TS_FilterHeader_Season_20200806_193049</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,7 +9,7 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <testSuiteGuid>3f9d4f9c-4025-4e65-868d-f4b6e46f51dd</testSuiteGuid>
+   <testSuiteGuid>a0d3d3ca-9288-4a96-a353-4658ee7880ab</testSuiteGuid>
    
 <testCaseLink>
       <guid>93e567e2-c86a-4a7c-b2af-b6d0e618dc89</guid>
@@ -21,7 +21,7 @@
          <id>c80f4021-9c61-4bc0-9c69-1ce63c850e67</id>
          <iterationEntity>
             <iterationType>SPECIFIC</iterationType>
-            <value>1,6,9</value>
+            <value>2,4</value>
          </iterationEntity>
          <testDataId>Data Files/FilterHeader</testDataId>
       </testDataLink>

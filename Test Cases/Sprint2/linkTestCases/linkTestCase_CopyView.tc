@@ -26,4 +26,18 @@
       <masked>false</masked>
       <name>SharedView</name>
    </variable>
+   <variable>
+      <defaultValue>'Yes'</defaultValue>
+      <description></description>
+      <id>0fa9eb56-df24-4f64-a050-c2694849778b</id>
+      <masked>false</masked>
+      <name>lockColumn</name>
+   </variable>
+   <variable>
+      <defaultValue>['Name', 'Season']</defaultValue>
+      <description></description>
+      <id>5b628bb3-c4b3-4c6c-b7d8-f4c0388e59a0</id>
+      <masked>false</masked>
+      <name>editedAttributes</name>
+   </variable>
 </TestCaseEntity>

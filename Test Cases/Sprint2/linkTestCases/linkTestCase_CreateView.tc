@@ -68,4 +68,25 @@
       <masked>false</masked>
       <name>sortBy</name>
    </variable>
+   <variable>
+      <defaultValue>'WE'</defaultValue>
+      <description></description>
+      <id>4ac5ac3e-3a0e-4c01-a756-06d18e2d98f4</id>
+      <masked>false</masked>
+      <name>Brand</name>
+   </variable>
+   <variable>
+      <defaultValue>'Lighting'</defaultValue>
+      <description></description>
+      <id>5f6f5007-6ef7-46f2-bc6a-f267112be98d</id>
+      <masked>false</masked>
+      <name>Division</name>
+   </variable>
+   <variable>
+      <defaultValue>'WE Lighting Fall 2020'</defaultValue>
+      <description></description>
+      <id>df310fbd-91f5-463c-b8c8-81ec155c361a</id>
+      <masked>false</masked>
+      <name>Season</name>
+   </variable>
 </TestCaseEntity>
