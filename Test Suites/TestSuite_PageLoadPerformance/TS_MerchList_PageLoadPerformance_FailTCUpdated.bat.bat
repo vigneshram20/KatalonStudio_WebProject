@@ -1,1 +1,1 @@
-katalon -noSplash  -runMode=console -projectPath="C:\Users\vs1\git\WSI_MerchTool\WSI_MerchTool.prj" -retry=0 -testSuitePath="Test Suites/TestSuite_PageLoadPerformance/TS_MerchList_PageLoadPerformance_20200803_233308" -executionProfile="INTERFACEQA-WSI" -browserType="Firefox"
+katalon -noSplash  -runMode=console -projectPath="C:\Users\vs1\git\WSI_MerchTool\WSI_MerchTool.prj" -retry=0 -testSuitePath="Test Suites/TestSuite_PageLoadPerformance/TS_MerchList_PageLoadPerformance_20200807_202144" -executionProfile="INTERFACEQA-WSI" -browserType="Chrome"
