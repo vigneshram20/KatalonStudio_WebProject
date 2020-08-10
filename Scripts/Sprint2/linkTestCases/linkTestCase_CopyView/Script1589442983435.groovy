@@ -140,12 +140,10 @@ WebUI.verifyElementPresent(findTestObject('Sprint6/button_paremeterized_ViewName
 'Verify Element Present'
 not_run:WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_ACTIONS'), 0)
 
-'Verify Element Present'
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_Brand'), 0)
+for(String attr : editedAttributes)
+{
+	'Verify table header - Type'
+	WebUI.verifyElementNotPresent(findTestObject('Sprint6/div_param',[('columnName'):attr]), 0)
+}
 
-'Verify Element Not Present'
-WebUI.verifyElementNotPresent(findTestObject('Sprint6/div_param',[('columnName'):'Name']), 0)
-
-'Verify Element Not Present'
-WebUI.verifyElementNotPresent(findTestObject('Object Repository/Sprint6/div_Season'), 0)
-
+WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)

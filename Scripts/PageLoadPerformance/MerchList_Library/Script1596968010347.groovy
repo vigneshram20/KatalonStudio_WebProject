@@ -133,7 +133,7 @@ WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem'
 		
 		try {
 			tempTimerStart = System.currentTimeMillis()
-		
+			
 			WebUI.verifyElementVisible(findTestObject('Sprint8/span_Total_Records'), FailureHandling.STOP_ON_FAILURE)
 		
 			'Check Page Performance'

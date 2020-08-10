@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>ManageList_CustomView_Create_OntheFlyConfig_Delete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>bab87c81-483a-4226-b822-86787d07eaf9</testCaseGuid>
+   <variable>
+      <defaultValue>'Custom'</defaultValue>
+      <description></description>
+      <id>e80bf8d3-f650-4287-826e-53eeae9a5412</id>
+      <masked>false</masked>
+      <name>viewType</name>
+   </variable>
+   <variable>
+      <defaultValue>'Merch List'</defaultValue>
+      <description></description>
+      <id>c63eee19-5625-4d57-aed0-8948bf4b08ad</id>
+      <masked>false</masked>
+      <name>libraryName</name>
+   </variable>
+   <variable>
+      <defaultValue>['MCP ID #', 'Item Type', 'PLM SKU #', 'SKU #', 'Product Description', 'DTC Assortment Status', 'Retail Assortment Status', 'Assortment Type', 'DTC Assorted Seasons']</defaultValue>
+      <description></description>
+      <id>2ba2ad65-f176-4caa-88de-60fbc7045c61</id>
+      <masked>false</masked>
+      <name>attributesList</name>
+   </variable>
+   <variable>
+      <defaultValue>[]</defaultValue>
+      <description></description>
+      <id>4cc31550-ba5e-4fbc-8ac8-4e80cee06543</id>
+      <masked>false</masked>
+      <name>editedAttributes</name>
+   </variable>
+</TestCaseEntity>

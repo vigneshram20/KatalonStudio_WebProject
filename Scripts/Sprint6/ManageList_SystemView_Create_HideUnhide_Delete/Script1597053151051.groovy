@@ -36,19 +36,6 @@ WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_CreateView')
         , ('fromHamburger') : 'false', ('libraryName') : libraryName, ('attributesList') : attributesList, ('lockColumn') : ''
         , ('groupBy') : '', ('sortBy') : ''], FailureHandling.STOP_ON_FAILURE)
 
-editedAttributes = new ArrayList<String>()
-
-editedAttributes.add(attributesList.get(attributesList.size() - 1))
-
-editedAttributes.add(attributesList.get(attributesList.size() - 2))
-
-/*WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_EditView'), [('viewName') : viewName, ('viewType') : viewType
-        , ('editedAttributes') : editedAttributes, ('sortByGroupBy') : 'No'], FailureHandling.STOP_ON_FAILURE)*/
-
-WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_CopyView'), [('viewName') : viewName, ('viewType') : viewType, ('SharedView') : false
-        , ('lockColumn') : 'No', ('editedAttributes') : editedAttributes], FailureHandling.STOP_ON_FAILURE)
-
-viewName = (viewName + ' - Copy')
+WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_HideUnHideView'), [('viewName') : viewName], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_DeleteView'), [('viewName') : viewName], FailureHandling.STOP_ON_FAILURE)
-

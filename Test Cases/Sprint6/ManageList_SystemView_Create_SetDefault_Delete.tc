@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>ManageList_SystemView_Create_SetDefault_Delete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>06a34c0b-aa46-4e50-bb4e-bc0a9bef5024</testCaseGuid>
+   <variable>
+      <defaultValue>'System'</defaultValue>
+      <description></description>
+      <id>98204212-9746-40bf-8f4f-bf97048ed5c6</id>
+      <masked>false</masked>
+      <name>viewType</name>
+   </variable>
+   <variable>
+      <defaultValue>'Merch List'</defaultValue>
+      <description></description>
+      <id>59b9f41a-2464-40ff-a6c8-f62caf02735e</id>
+      <masked>false</masked>
+      <name>libraryName</name>
+   </variable>
+   <variable>
+      <defaultValue>['MCP ID #', 'Item Type', 'PLM SKU #', 'SKU #', 'Product Description', 'DTC Assortment Status', 'Retail Assortment Status', 'Assortment Type', 'DTC Assorted Seasons']</defaultValue>
+      <description></description>
+      <id>831a7247-639a-4f50-99d2-00632a70d142</id>
+      <masked>false</masked>
+      <name>attributesList</name>
+   </variable>
+</TestCaseEntity>
