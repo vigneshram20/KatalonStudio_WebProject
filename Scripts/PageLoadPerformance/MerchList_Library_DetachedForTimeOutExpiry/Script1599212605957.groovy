@@ -20,30 +20,10 @@ import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import org.openqa.selenium.WebDriver as WebDriver
 
-String sheetName = CustomKeywords.'myKeywords.customKeywords.currentZonetimeStampStringGen'('', 'ddMMMyyyy HH.mm.ss')
-
-CustomKeywords.'myKeywords.customKeywords.createSheetAndColumn'(sheetName)
-
-GlobalVariable.ExcelSheetName=sheetName;
-
-'Launch the Browser'
-WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.takeScreenshot()
-
-'Verify Login Successfully'
-WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.takeScreenshot()
-
 'Verify Logo'
 WebUI.verifyElementVisible(findTestObject('Common Objects/img_LogoMain'))
 
-WebUI.takeScreenshot()
-
 WebUI.verifyElementClickable(findTestObject('Common Objects/img_HamburgerMenu'))
-
-WebUI.takeScreenshot()
 
 for(int outerIteration=0;outerIteration<2;outerIteration++)
 {
@@ -100,7 +80,7 @@ WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem'
 
     WebUI.waitForPageLoad(0)
 
-    WebUI.click(findTestObject('Sprint1/Create Season/input_SearchField'), FailureHandling.STOP_ON_FAILURE)
+    WebUI.enhancedClick(findTestObject('Sprint1/Create Season/input_SearchField'), FailureHandling.STOP_ON_FAILURE)
 
     WebUI.click(findTestObject('Object Repository/Sprint8/span_Select Department'))
 
@@ -166,8 +146,5 @@ WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem'
 		
 		
 	}
-
-    
-
 
 }
