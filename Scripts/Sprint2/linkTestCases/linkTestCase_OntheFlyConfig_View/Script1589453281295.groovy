@@ -24,59 +24,64 @@ WebUI.waitForPageLoad(60)
 
 WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
 
-'Click the group by button'
-WebUI.click(findTestObject('Common Objects/button_Group By'))
+modifiedViewName = (viewName + ' ') + '(Modified)'
 
-'Verify the Add additional field to group by span'
-WebUI.verifyElementPresent(findTestObject('Sprint6/span_Add additional field to group by'), 0)
-
-'Verify the selected Group By'
-WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint6/select_dropdown_popover'), 'Brand', true, 0)
-
-'Click Desc button'
-WebUI.click(findTestObject('Sprint6/button_DESC'))
-
-'Click Apply Group'
-WebUI.click(findTestObject('Sprint6/button_Apply Group'))
-
-WebUI.waitForPageLoad(60)
-
-WebUI.waitForElementPresent(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
-
-WebUI.waitForElementVisible(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
-
-WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
-
-String modifiedViewName = (viewName + ' ') + '(Modified)'
-
-'Verify the Modified text displayed in the view selector or not'
-WebUI.verifyElementPresent(findTestObject('Sprint6/button_paremeterized_ViewName', [('viewName') : modifiedViewName]), 0)
-
-List<String> listOfExistingElements = WebUI.findWebElements(findTestObject('Sprint6/tbody_GroupByFirstLevel'), 1)
-
-List<String> groupByElementsBeforeSort = new ArrayList<String>()
-
-List<String> groupByElementsAfterSort = new ArrayList<String>()
-
-for (WebElement element : listOfExistingElements) {
-    if (!(element.getAttribute('title').equals(''))) {
-        groupByElementsBeforeSort.add(element.getText().trim())
-
-        groupByElementsAfterSort.add(element.getText().trim())
-
-        println(element.getText().trim())
-    }
+if(!ExistingGroupBy.equals(''))
+{
+	'Click the group by button'
+	WebUI.click(findTestObject('Common Objects/button_Group By'))
+	
+	'Verify the Add additional field to group by span'
+	WebUI.verifyElementPresent(findTestObject('Sprint6/span_Add additional field to group by'), 0)
+	
+	'Verify the selected Group By'
+	WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint6/select_dropdown_popover'), ExistingGroupBy, true, 0)
+	
+	'Click Desc button'
+	WebUI.click(findTestObject('Sprint6/button_DESC'))
+	
+	'Click Apply Group'
+	WebUI.click(findTestObject('Sprint6/button_Apply Group'))
+	
+	WebUI.waitForPageLoad(60)
+	
+	WebUI.waitForElementPresent(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
+	
+	WebUI.waitForElementVisible(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
+	
+	WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
+	
+	'Verify the Modified text displayed in the view selector or not'
+	WebUI.verifyElementPresent(findTestObject('Sprint6/button_paremeterized_ViewName', [('viewName') : modifiedViewName]), 0)
+	
+	List<String> listOfExistingElements = WebUI.findWebElements(findTestObject('Sprint6/tbody_GroupByFirstLevel'), 1)
+	
+	List<String> groupByElementsBeforeSort = new ArrayList<String>()
+	
+	List<String> groupByElementsAfterSort = new ArrayList<String>()
+	
+	for (WebElement element : listOfExistingElements) {
+		if (!(element.getAttribute('title').equals(''))) {
+			groupByElementsBeforeSort.add(element.getText().trim())
+	
+			groupByElementsAfterSort.add(element.getText().trim())
+	
+			println(element.getText().trim())
+		}
+	}
+	
+	Comparator c = Collections.reverseOrder()
+	
+	Collections.sort(groupByElementsAfterSort, c)
+	
+	if (groupByElementsBeforeSort.equals(groupByElementsAfterSort)) {
+		System.out.println('Values are sorted in Descending order')
+	} else {
+		throw new Exception('Values are not sorted in Descending order')
+	}
+	
 }
 
-Comparator c = Collections.reverseOrder()
-
-Collections.sort(groupByElementsAfterSort, c)
-
-if (groupByElementsBeforeSort.equals(groupByElementsAfterSort)) {
-    System.out.println('Values are sorted in Descending order')
-} else {
-    throw new Exception('Values are not sorted in Descending order')
-}
 
 'Click Sort By button'
 WebUI.click(findTestObject('Sprint6/button_Sort By'))
@@ -84,10 +89,17 @@ WebUI.click(findTestObject('Sprint6/button_Sort By'))
 'Verify Add additional field to sort by'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/span_Add additional field to sort by'), 0)
 
-'Verify the selected Sort By'
-WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint6/select_dropdown_popover'), 'Division', true, 0)
+if(!ExistingSortBy.equals(''))
+{
+	'Verify the selected Sort By'
+	WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint6/select_dropdown_popover'), ExistingSortBy, true, 0)
+}
+else
+{
+	WebUI.click(findTestObject('Object Repository/Sprint6/span_Add additional field to sort by'))
+}
 
-WebUI.selectOptionByLabel(findTestObject('Sprint6/select_dropdown_popover'), 'Season', true, FailureHandling.STOP_ON_FAILURE)
+WebUI.selectOptionByLabel(findTestObject('Sprint6/select_dropdown_popover'), NewSortBy, true, FailureHandling.STOP_ON_FAILURE)
 
 'Click Asc button'
 WebUI.click(findTestObject('Sprint6/button_ASC'))
@@ -110,10 +122,12 @@ int columnNo = 0
 for (WebElement element : listOfExistingElements1) {
     columnNo++
 
-    if (element.getAttribute('title').equals('Season')) {
+    if (element.getAttribute('title').equals(NewSortBy)) {
         break
     }
 }
+
+println(columnNo) 
 
 List<String> listOfExistingElementsSort = WebUI.findWebElements(findTestObject('Object Repository/Sprint8/div_CellsByIndex', 
         [('indexNo') : columnNo]), 1)
@@ -135,7 +149,7 @@ Collections.sort(sortByElementsAfterSort)
 if (sortByElementsAfterSort.equals(sortByElementsBeforeSort)) {
     System.out.println('Values are sorted in Ascending order')
 } else {
-    throw new Exception('Values are not sorted in Ascending order')
+   throw new Exception('Values are not sorted in Ascending order')
 }
 
 'Click Hide/UnHide button'
@@ -192,14 +206,17 @@ if (viewType.equals('System')) {
         0)
 }
 
+if(!ExistingGroupBy.equals(''))
+{
 'Verify group by selected'
-WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint6/select_GroupByDropDown'), 'Brand', true, 0)
+WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint6/select_GroupByDropDown'), ExistingGroupBy, true, 0)
 
 'Verify group By sort applied'
 WebUI.verifyElementText(findTestObject('Sprint6/button_GroupBySortAppliedVerify'), 'DESC')
+}
 
 'Verify Sort By dropdown'
-WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint6/select_SortByDropDown'), 'Season', true, 0)
+WebUI.verifyOptionSelectedByLabel(findTestObject('Sprint6/select_SortByDropDown'), NewSortBy, true, 0)
 
 'Verify Sort By sort applied'
 WebUI.verifyElementText(findTestObject('Object Repository/Sprint6/button_SortBySortAppliedVerify'), 'ASC')
@@ -235,6 +252,10 @@ WebUI.click(findTestObject('Common Objects/img_Close'))
 
 'Click Apply Sort'
 WebUI.click(findTestObject('Sprint6/button_Apply Sort'))
+
+WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
+
+WebUI.waitForElementClickable(findTestObject('Object Repository/Sprint6/button_Save View -dropdown'), 60)
 
 'Click Save View button'
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Save View -dropdown'))
@@ -310,10 +331,10 @@ WebUI.click(findTestObject('Sprint6/button_paremeterized_ViewName', [('viewName'
 
 WebUI.delay(3)
 
+WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
+
 'Click Sort By button'
 WebUI.click(findTestObject('Sprint6/button_Sort By'))
 
 'Verify the Sort By is not present'
 WebUI.verifyElementNotPresent(findTestObject('Common Objects/img_Close'), 0)
-
-

@@ -6,12 +6,12 @@
    <elementGuidId>634c2488-40c9-4b86-9e1c-92d579548ac4</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//*[@type = 'submit' and (text() = 'Save View' or . = 'Save View')]</value>
+         <key>XPATH</key>
+         <value>//label[.='Sort By']//following::div//button[contains(@class,'active')]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//div//button[@class='btn_az active'])[2]</value>
+         <key>BASIC</key>
+         <value>//*[@type = 'submit' and (text() = 'Save View' or . = 'Save View')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

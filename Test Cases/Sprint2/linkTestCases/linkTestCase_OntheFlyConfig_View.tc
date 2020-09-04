@@ -26,4 +26,25 @@
       <masked>false</masked>
       <name>columnToHide</name>
    </variable>
+   <variable>
+      <defaultValue>'Brand'</defaultValue>
+      <description></description>
+      <id>5ad9098a-e30c-4bd8-8967-0730cab623ac</id>
+      <masked>false</masked>
+      <name>ExistingGroupBy</name>
+   </variable>
+   <variable>
+      <defaultValue>'Division'</defaultValue>
+      <description></description>
+      <id>3514cf0b-bf10-4a1d-958e-00703b392220</id>
+      <masked>false</masked>
+      <name>ExistingSortBy</name>
+   </variable>
+   <variable>
+      <defaultValue>'Season'</defaultValue>
+      <description></description>
+      <id>0963276e-e8f0-4cc0-a76a-702ac072289c</id>
+      <masked>false</masked>
+      <name>NewSortBy</name>
+   </variable>
 </TestCaseEntity>

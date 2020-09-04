@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>ManageList_SystemView_Create_HideUnhide_Delete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>2c3756e2-0657-496e-8f6b-45ee2031e48b</testCaseGuid>
+   <variable>
+      <defaultValue>'System'</defaultValue>
+      <description></description>
+      <id>fd4cf81f-56fa-47a2-b62b-615afa202e7c</id>
+      <masked>false</masked>
+      <name>viewType</name>
+   </variable>
+   <variable>
+      <defaultValue>'Merch List'</defaultValue>
+      <description></description>
+      <id>741eff12-2480-4024-a132-458ee62969d4</id>
+      <masked>false</masked>
+      <name>libraryName</name>
+   </variable>
+   <variable>
+      <defaultValue>['MCP ID #', 'Item Type', 'PLM SKU #', 'SKU #', 'Product Description', 'DTC Assortment Status', 'Retail Assortment Status', 'Assortment Type', 'DTC Assorted Seasons']</defaultValue>
+      <description></description>
+      <id>778cca92-c1f0-42d1-b70b-d0d0d31dd4d5</id>
+      <masked>false</masked>
+      <name>attributesList</name>
+   </variable>
+</TestCaseEntity>

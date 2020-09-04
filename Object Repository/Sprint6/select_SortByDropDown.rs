@@ -6,12 +6,12 @@
    <elementGuidId>c152529a-aaba-405b-abb6-e08f2106e40c</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//select[(text() = 'BrandDivisionIn Store Launch End DateIn Store Launch Start DateInternet Launch End DateInternet Launch Start DateNameSeasonTypeYear' or . = 'BrandDivisionIn Store Launch End DateIn Store Launch Start DateInternet Launch End DateInternet Launch Start DateNameSeasonTypeYear')]</value>
+         <key>XPATH</key>
+         <value>//label[.='Sort By']//following::div/select</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//div[contains(@class,'modal')]//select)[3]</value>
+         <key>BASIC</key>
+         <value>//select[(text() = 'BrandDivisionIn Store Launch End DateIn Store Launch Start DateInternet Launch End DateInternet Launch Start DateNameSeasonTypeYear' or . = 'BrandDivisionIn Store Launch End DateIn Store Launch Start DateInternet Launch End DateInternet Launch Start DateNameSeasonTypeYear')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

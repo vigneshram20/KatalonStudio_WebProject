@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>ManageList_CustomView_Create_HideUnhide_Delete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>3ff0c909-be78-47f3-96d5-875cf7891b0e</testCaseGuid>
+   <variable>
+      <defaultValue>'Custom'</defaultValue>
+      <description></description>
+      <id>6aae603f-e1e9-453a-a429-947bd0f81d9f</id>
+      <masked>false</masked>
+      <name>viewType</name>
+   </variable>
+   <variable>
+      <defaultValue>'Merch List'</defaultValue>
+      <description></description>
+      <id>94419032-25c4-4192-94c3-c4b62031cfb3</id>
+      <masked>false</masked>
+      <name>libraryName</name>
+   </variable>
+   <variable>
+      <defaultValue>['MCP ID #', 'Item Type', 'PLM SKU #', 'SKU #', 'Product Description', 'DTC Assortment Status', 'Retail Assortment Status', 'Assortment Type', 'DTC Assorted Seasons']</defaultValue>
+      <description></description>
+      <id>d735130e-11aa-413a-8c1e-f615290e3e1d</id>
+      <masked>false</masked>
+      <name>attributesList</name>
+   </variable>
+</TestCaseEntity>

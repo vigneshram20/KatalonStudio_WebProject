@@ -6,12 +6,12 @@
    <elementGuidId>95eba928-2197-4c08-97ff-4ee3768418a0</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//*[@title = ' Lighting' and (text() = ' Lighting' or . = ' Lighting')]</value>
+         <key>XPATH</key>
+         <value>//div[@id='table_body_clone']//div[@class='rTableRow class']/div[not(contains(@class,'count'))]/span</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='table_body_clone']/div[contains(@data-key,'class') and not(@data-classkey)]/div/span</value>
+         <key>BASIC</key>
+         <value>//*[@title = ' Lighting' and (text() = ' Lighting' or . = ' Lighting')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

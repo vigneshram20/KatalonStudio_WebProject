@@ -42,11 +42,9 @@ editedAttributes.add(attributesList.get(attributesList.size() - 1))
 
 editedAttributes.add(attributesList.get(attributesList.size() - 2))
 
-/*WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_EditView'), [('viewName') : viewName, ('viewType') : viewType
-        , ('editedAttributes') : editedAttributes, ('sortByGroupBy') : 'No'], FailureHandling.STOP_ON_FAILURE)*/
-
-WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_CopyView'), [('viewName') : viewName, ('viewType') : viewType, ('SharedView') : false
-        , ('lockColumn') : 'No', ('editedAttributes') : editedAttributes], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_OntheFlyConfig_View'), [('viewName') : viewName, ('viewType') : viewType
+        , ('columnToHide') : attributesList.get(attributesList.size() - 1), ('ExistingGroupBy') : '', ('ExistingSortBy') : '', ('NewSortBy') : attributesList.get(attributesList.size() - 2)], 
+    FailureHandling.STOP_ON_FAILURE)
 
 viewName = (viewName + ' - Copy')
 

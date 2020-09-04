@@ -15,6 +15,10 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
+
+WebUI.verifyElementClickable(findTestObject('Common Objects/button_viewSelector'))
+
 'Open View Selector'
 WebUI.click(findTestObject('Common Objects/button_viewSelector'))
 
@@ -27,12 +31,11 @@ WebUI.click(findTestObject('Sprint6/img_DeleteViewIcon'))
 
 if (viewType.equals('System')) {
     WebUI.verifyElementPresent(findTestObject('Sprint6/h5_Confirm Delete System View'), 0)
-	
-	if(viewName.contains(" – Default"))
-	{
-		viewName = viewName.replace(" – Default","");
-	}
 
+    if (viewName.contains(' – Default')) {
+        viewName = viewName.replace(' – Default', '')
+    }
+    
     WebUI.verifyElementPresent(findTestObject('Sprint6/p_SystemView_Delete_UserGroups', [('viewName') : viewName, ('userGroupsCount') : userGroupsCount]), 
         0)
 
