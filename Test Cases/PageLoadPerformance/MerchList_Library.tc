@@ -27,14 +27,14 @@
       <name>Brand</name>
    </variable>
    <variable>
-      <defaultValue>'Lighting'</defaultValue>
+      <defaultValue>'Furniture>806 - WE CASUAL SEATING'</defaultValue>
       <description></description>
       <id>177efeab-aec7-4a46-aa15-d1810cf432db</id>
       <masked>false</masked>
       <name>Division</name>
    </variable>
    <variable>
-      <defaultValue>'WE Lighting Fall 2020'</defaultValue>
+      <defaultValue>'WE Furniture Fall 2020'</defaultValue>
       <description></description>
       <id>4c5fa0e9-7abc-4f4c-9591-ca4a46168724</id>
       <masked>false</masked>
