@@ -24,7 +24,9 @@ String sheetName = CustomKeywords.'myKeywords.customKeywords.currentZonetimeStam
 
 CustomKeywords.'myKeywords.customKeywords.createSheetAndColumn'(sheetName)
 
-GlobalVariable.ExcelSheetName=sheetName;
+GlobalVariable.ExcelSheetName = sheetName
+
+String[] Department = Division.toString().split('>')
 
 'Launch the Browser'
 WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
@@ -45,46 +47,41 @@ WebUI.verifyElementClickable(findTestObject('Common Objects/img_HamburgerMenu'))
 
 WebUI.takeScreenshot()
 
-for(int outerIteration=0;outerIteration<2;outerIteration++)
-{
+for (int outerIteration = 0; outerIteration < 2; outerIteration++) {
+    'Click Hamburger menu'
+    WebUI.enhancedClick(findTestObject('Common Objects/img_HamburgerMenu'))
 
-'Click Hamburger menu'
-WebUI.enhancedClick(findTestObject('Common Objects/img_HamburgerMenu'))
+    'Click menu'
+    WebUI.verifyElementClickable(findTestObject('Sprint1/LandingPage/a_Parameterized', [('menu') : 'User Profile']))
 
-'Click menu'
-WebUI.verifyElementClickable(findTestObject('Sprint1/LandingPage/a_Parameterized', [('menu') : 'User Profile']))
+    'Click menu'
+    WebUI.enhancedClick(findTestObject('Sprint1/LandingPage/a_Parameterized', [('menu') : 'User Profile']))
 
-'Click menu'
-WebUI.enhancedClick(findTestObject('Sprint1/LandingPage/a_Parameterized', [('menu') : 'User Profile']))
+    GlobalVariable.startTime = System.currentTimeMillis()
 
-GlobalVariable.startTime = System.currentTimeMillis()
+    try {
+        WebUI.verifyElementVisible(findTestObject('Object Repository/Common Objects/textarea_roles_userProfilePage'), FailureHandling.STOP_ON_FAILURE)
 
-try
-{
-	WebUI.verifyElementVisible(findTestObject('Object Repository/Common Objects/textarea_roles_userProfilePage'), FailureHandling.STOP_ON_FAILURE)
-	
-	'Check Page Performance'
-	long pageLoad = CustomKeywords.'myKeywords.customKeywords.pageLoadTimingSelenium'('User Profile', 0)
-	
-	long domLoad = CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('User Profile')
-	
-	CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, 'User Profile', domLoad, pageLoad)
-	
-}
+        'Check Page Performance'
+        long pageLoad = CustomKeywords.'myKeywords.customKeywords.pageLoadTimingSelenium'('User Profile', 0)
 
-catch(Exception ex)
-{
-	throw new Exception('User Profile Exception-___Check Code')
-}
+        long domLoad = CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('User Profile')
 
-WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : SubMenu
-        , ('testPageLoadPerf') : true], FailureHandling.STOP_ON_FAILURE)
+        CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, 'User Profile', domLoad, pageLoad)
+    }
+    catch (Exception ex) {
+        throw new Exception('User Profile Exception-___Check Code')
+    } 
+    
+    WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : SubMenu
+            , ('testPageLoadPerf') : true], FailureHandling.STOP_ON_FAILURE)
 
     WebUI.waitForElementPresent(findTestObject('Sprint6/select_Library'), 0, FailureHandling.STOP_ON_FAILURE)
 
     WebUI.waitForElementVisible(findTestObject('Sprint6/select_Library'), 0, FailureHandling.STOP_ON_FAILURE)
 
-    WebUI.waitForElementPresent(findTestObject('Object Repository/Sprint6/select_Library_optionParameterized',[('option'):Brand]), 0)
+    WebUI.waitForElementPresent(findTestObject('Object Repository/Sprint6/select_Library_optionParameterized', [('option') : Brand]), 
+        0)
 
     WebUI.waitForElementClickable(findTestObject('Sprint6/select_Library'), 0, FailureHandling.STOP_ON_FAILURE)
 
@@ -108,8 +105,14 @@ WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem'
 
     WebUI.delay(5)
 
-    WebUI.click(findTestObject('Object Repository/Sprint6/label_parameterized', [('param') : Division]))
+    if (Department.length > 1) {
+        WebUI.click(findTestObject('Object Repository/Sprint6/li_OpenDeparmentdropdown_param', [('param') : Department[0]]))
 
+        WebUI.click(findTestObject('Object Repository/Sprint6/label_parameterized', [('param') : Department[1]]))
+    } else {
+        WebUI.click(findTestObject('Object Repository/Sprint6/label_parameterized', [('param') : Division]))
+    }
+    
     WebUI.click(findTestObject('Sprint8/img_Select_Department_dropdown'))
 
     WebUI.waitForElementClickable(findTestObject('Sprint8/Select_Season_dropdown'), 0)
@@ -117,57 +120,81 @@ WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem'
     WebUI.click(findTestObject('Sprint8/Select_Season_dropdown'))
 
     WebUI.click(findTestObject('Object Repository/Sprint8/span_parameterized', [('param') : Season]))
-	
-	for(int innerIteration=1;innerIteration<=5;innerIteration++)
-	{
-		if(innerIteration==1)
-		{
-			WebUI.click(findTestObject('Sprint1/LandingPage/div_Manage List'))
-			
-			GlobalVariable.startTime = System.currentTimeMillis()
-		}
-		else
-		{
-			WebUI.click(findTestObject('Sprint1/LandingPage/div_Manage List'))
-			
-			WebUI.click(findTestObject('Object Repository/Sprint8/a_Go To next Page'))
-			
-			GlobalVariable.startTime = System.currentTimeMillis()
-		}
-		
-		long tempTimerStart = 0
-		
-		long tempTimerStop = 0
-		
-		try {
-			tempTimerStart = System.currentTimeMillis()
-		
-			WebUI.verifyElementPresent(findTestObject('Sprint8/span_Total_Records'), 60, FailureHandling.STOP_ON_FAILURE)
-		
-			'Check Page Performance'
-			long pageLoad = CustomKeywords.'myKeywords.customKeywords.pageLoadTimingSelenium'('Libraries > ' + SubMenu+'- Page '+innerIteration, 0)
-		
-			long domLoad = CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Libraries > ' + SubMenu+'- Page '+innerIteration)
-		
-			CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, 'Libraries > ' + SubMenu+'- Page '+innerIteration, domLoad, pageLoad)
-		}
-		catch (com.kms.katalon.core.exception.StepFailedException ex) {
-			tempTimerStop = System.currentTimeMillis()
-		
-			long ExceptionTime = tempTimerStop - tempTimerStart
-		
-			'Check Page Performance'
-			long pageLoad = CustomKeywords.'myKeywords.customKeywords.pageLoadTimingSelenium'('Libraries > ' + SubMenu+'- Page '+innerIteration, ExceptionTime)
-		
-			long domLoad = CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Libraries > ' + SubMenu+'- Page '+innerIteration)
-		
-			CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, 'Libraries > ' + SubMenu+'- Page '+innerIteration, domLoad, pageLoad)
-		}
-		
-		
-	}
 
-    
+    int innerIterationCount = 5
+	int totalRecords;
 
+    for (int innerIteration = 1; innerIteration <= innerIterationCount; innerIteration++) {
+        if (innerIteration == 1) {
+            WebUI.click(findTestObject('Sprint1/LandingPage/div_Manage List'))
 
+            GlobalVariable.startTime = System.currentTimeMillis()
+        } else {
+            WebUI.click(findTestObject('Sprint1/LandingPage/div_Manage List'))
+
+            WebUI.click(findTestObject('Object Repository/Sprint8/a_Go To next Page'))
+
+            GlobalVariable.startTime = System.currentTimeMillis()
+        }
+        
+        long tempTimerStart = 0
+
+        long tempTimerStop = 0
+
+        try {
+            tempTimerStart = System.currentTimeMillis()
+
+            WebUI.verifyElementPresent(findTestObject('Sprint8/span_Total_Records'), 60, FailureHandling.STOP_ON_FAILURE)
+
+            'Check Page Performance'
+            long pageLoad = CustomKeywords.'myKeywords.customKeywords.pageLoadTimingSelenium'((('Libraries > ' + SubMenu) + 
+                '- Page ') + innerIteration, 0)
+
+            long domLoad = CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'((('Libraries > ' + SubMenu) + 
+                '- Page ') + innerIteration)
+
+            CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, (('Libraries > ' + SubMenu) + '- Page ') + 
+                innerIteration, domLoad, pageLoad)
+        }
+        catch (com.kms.katalon.core.exception.StepFailedException ex) {
+            tempTimerStop = System.currentTimeMillis()
+
+            long ExceptionTime = tempTimerStop - tempTimerStart
+
+            'Check Page Performance'
+            long pageLoad = CustomKeywords.'myKeywords.customKeywords.pageLoadTimingSelenium'((('Libraries > ' + SubMenu) + 
+                '- Page ') + innerIteration, ExceptionTime)
+
+            long domLoad = CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'((('Libraries > ' + SubMenu) + 
+                '- Page ') + innerIteration)
+
+            CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, (('Libraries > ' + SubMenu) + '- Page ') + 
+                innerIteration, domLoad, pageLoad)
+        } 
+        
+        if (innerIteration == 1) {
+			
+			totalRecords = Integer.parseInt(WebUI.getText(findTestObject('Sprint8/span_Total_Records')))
+            if (totalRecords > 50) {
+                System.out.println(totalRecords)
+
+                int RecordsPerPage = 50
+
+                boolean evenNo = (totalRecords % RecordsPerPage) == 0
+
+                System.out.println(evenNo)
+
+                int totalNoOfPagesAvailable = totalRecords / RecordsPerPage
+
+                if (totalNoOfPagesAvailable < 5) {
+                    innerIterationCount = totalNoOfPagesAvailable
+					println(innerIterationCount) 
+                }
+            }
+			else
+			{
+				break;
+			}
+        }
+    }
 }
