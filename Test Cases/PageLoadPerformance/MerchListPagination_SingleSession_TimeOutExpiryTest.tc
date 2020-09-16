@@ -12,4 +12,32 @@
       <masked>false</masked>
       <name>Minutes</name>
    </variable>
+   <variable>
+      <defaultValue>'Merch List'</defaultValue>
+      <description></description>
+      <id>cf4d9f4a-b983-4283-bcf2-f5332e900b32</id>
+      <masked>false</masked>
+      <name>SubMenu</name>
+   </variable>
+   <variable>
+      <defaultValue>'WE'</defaultValue>
+      <description></description>
+      <id>5243db39-0f14-4452-a5e7-dea7b59a0445</id>
+      <masked>false</masked>
+      <name>Brand</name>
+   </variable>
+   <variable>
+      <defaultValue>'Lighting'</defaultValue>
+      <description></description>
+      <id>efe1c594-7b81-4a4b-a171-859af1ea4ea1</id>
+      <masked>false</masked>
+      <name>Division</name>
+   </variable>
+   <variable>
+      <defaultValue>'WE Lighting Fall 2020'</defaultValue>
+      <description></description>
+      <id>21b3dceb-ca0d-4bf2-932a-afce3d4f62d8</id>
+      <masked>false</masked>
+      <name>Season</name>
+   </variable>
 </TestCaseEntity>

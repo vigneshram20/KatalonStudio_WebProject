@@ -18,10 +18,14 @@ import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import java.util.Date as Date
 import java.sql.Timestamp as Timestamp
+import com.kms.katalon.core.configuration.RunConfiguration as RC
+def executionProfile = RC.getExecutionProfile()
 
-String sheetName = CustomKeywords.'myKeywords.customKeywords.currentZonetimeStampStringGen'('', 'ddMMMyyyy HH.mm.ss')
+String sheetName = CustomKeywords.'myKeywords.customKeywords.currentZonetimeStampStringGen'('', 'ddMMMyyyy HH.mm.ss')+"(IST)-"//+executionProfile
 
 CustomKeywords.'myKeywords.customKeywords.createSheetAndColumn'(sheetName)
+
+CustomKeywords.'myKeywords.GoogleSheetsAPI.createSheetAndColumn'(sheetName+"(IST)-"+executionProfile)
 
 GlobalVariable.ExcelSheetName=sheetName;
 
@@ -43,8 +47,8 @@ try{
 
 while (System.currentTimeMillis() < endTime) {
 
-WebUI.callTestCase(findTestCase('PageLoadPerformance/MerchList_Library_DetachedForTimeOutExpiry'), [('SubMenu') : 'Merch List', ('sheetName') : GlobalVariable.ExcelSheetName
-        , ('Brand') : 'WE', ('Division') : 'Lighting', ('Season') : 'WE Lighting Fall 2020'], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('PageLoadPerformance/MerchList_Library_DetachedForTimeOutExpiry'), [('SubMenu') : SubMenu, ('sheetName') : GlobalVariable.ExcelSheetName
+        , ('Brand') : Brand, ('Division') : Division, ('Season') : Season], FailureHandling.STOP_ON_FAILURE)
 }
 }
 catch(Exception ex)

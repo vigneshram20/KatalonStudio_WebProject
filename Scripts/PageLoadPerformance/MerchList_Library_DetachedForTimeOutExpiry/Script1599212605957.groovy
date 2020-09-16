@@ -20,6 +20,8 @@ import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import org.openqa.selenium.WebDriver as WebDriver
 
+BrandConcat = Brand+" > "+Division+" > "+Season;
+
 'Verify Logo'
 WebUI.verifyElementVisible(findTestObject('Common Objects/img_LogoMain'))
 
@@ -49,6 +51,8 @@ try
 	long domLoad = CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('User Profile')
 	
 	CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, 'User Profile', domLoad, pageLoad)
+	
+	//CustomKeywords.'myKeywords.GoogleSheetsAPI.writeGoogleSheets'(sheetName,'User Profile', domLoad, pageLoad)
 	
 }
 
@@ -82,7 +86,9 @@ WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem'
 
     WebUI.enhancedClick(findTestObject('Sprint1/Create Season/input_SearchField'), FailureHandling.STOP_ON_FAILURE)
 
-    WebUI.click(findTestObject('Object Repository/Sprint8/span_Select Department'))
+	WebUI.delay(2)
+	
+    WebUI.enhancedClick(findTestObject('Object Repository/Sprint8/span_Select Department'))
 
     WebUI.waitForPageLoad(0)
 
@@ -123,13 +129,15 @@ WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem'
 			tempTimerStart = System.currentTimeMillis()
 			
 			WebUI.verifyElementVisible(findTestObject('Sprint8/span_Total_Records'), FailureHandling.STOP_ON_FAILURE)
-		
+			
 			'Check Page Performance'
-			long pageLoad = CustomKeywords.'myKeywords.customKeywords.pageLoadTimingSelenium'('Libraries > ' + SubMenu+'- Page '+innerIteration, 0)
+			long pageLoad = CustomKeywords.'myKeywords.customKeywords.pageLoadTimingSelenium'(SubMenu+" > "+BrandConcat+'- Page '+innerIteration, 0)
 		
-			long domLoad = CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Libraries > ' + SubMenu+'- Page '+innerIteration)
+			long domLoad = CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'(SubMenu+" > "+BrandConcat+'- Page '+innerIteration)
 		
-			CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, 'Libraries > ' + SubMenu+'- Page '+innerIteration, domLoad, pageLoad)
+			CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, SubMenu+" > "+BrandConcat+' - Page '+innerIteration, domLoad, pageLoad)
+			
+			//CustomKeywords.'myKeywords.GoogleSheetsAPI.writeGoogleSheets'(sheetName,SubMenu+" > "+BrandConcat+' - Page '+innerIteration, domLoad, pageLoad)
 		}
 		catch (com.kms.katalon.core.exception.StepFailedException ex) {
 			tempTimerStop = System.currentTimeMillis()
@@ -137,11 +145,13 @@ WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem'
 			long ExceptionTime = tempTimerStop - tempTimerStart
 		
 			'Check Page Performance'
-			long pageLoad = CustomKeywords.'myKeywords.customKeywords.pageLoadTimingSelenium'('Libraries > ' + SubMenu+'- Page '+innerIteration, ExceptionTime)
+			long pageLoad = CustomKeywords.'myKeywords.customKeywords.pageLoadTimingSelenium'(SubMenu+" > "+BrandConcat+'- Page '+innerIteration, ExceptionTime)
 		
-			long domLoad = CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('Libraries > ' + SubMenu+'- Page '+innerIteration)
+			long domLoad = CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'(SubMenu+" > "+BrandConcat+'- Page '+innerIteration)
 		
-			CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, 'Libraries > ' + SubMenu+'- Page '+innerIteration, domLoad, pageLoad)
+			CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, SubMenu+" > "+BrandConcat+' - Page '+innerIteration, domLoad, pageLoad)
+			
+			//CustomKeywords.'myKeywords.GoogleSheetsAPI.writeGoogleSheets'(sheetName,SubMenu+" > "+BrandConcat+' - Page '+innerIteration, domLoad, pageLoad)
 		}
 		
 		

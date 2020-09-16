@@ -19,10 +19,17 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import org.openqa.selenium.WebDriver as WebDriver
+import com.kms.katalon.core.configuration.RunConfiguration as RC
+def executionProfile = RC.getExecutionProfile()
 
-String sheetName = CustomKeywords.'myKeywords.customKeywords.currentZonetimeStampStringGen'('', 'ddMMMyyyy HH.mm.ss')
+
+BrandConcat = ((((Brand + ' > ') + Division) + ' > ') + Season)
+
+String sheetName = CustomKeywords.'myKeywords.customKeywords.currentZonetimeStampStringGen'('', 'ddMMMyyyy HH.mm.ss')+"(IST)-"//+executionProfile
 
 CustomKeywords.'myKeywords.customKeywords.createSheetAndColumn'(sheetName)
+
+CustomKeywords.'myKeywords.GoogleSheetsAPI.createSheetAndColumn'(sheetName)
 
 GlobalVariable.ExcelSheetName = sheetName
 
@@ -68,6 +75,8 @@ for (int outerIteration = 0; outerIteration < 2; outerIteration++) {
         long domLoad = CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'('User Profile')
 
         CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, 'User Profile', domLoad, pageLoad)
+
+        CustomKeywords.'myKeywords.GoogleSheetsAPI.writeGoogleSheets'(sheetName, 'User Profile', domLoad, pageLoad)
     }
     catch (Exception ex) {
         throw new Exception('User Profile Exception-___Check Code')
@@ -99,7 +108,9 @@ for (int outerIteration = 0; outerIteration < 2; outerIteration++) {
 
     WebUI.click(findTestObject('Sprint1/Create Season/input_SearchField'), FailureHandling.STOP_ON_FAILURE)
 
-    WebUI.click(findTestObject('Object Repository/Sprint8/span_Select Department'))
+    WebUI.delay(2)
+
+    WebUI.enhancedClick(findTestObject('Object Repository/Sprint8/span_Select Department'))
 
     WebUI.waitForPageLoad(0)
 
@@ -122,7 +133,8 @@ for (int outerIteration = 0; outerIteration < 2; outerIteration++) {
     WebUI.click(findTestObject('Object Repository/Sprint8/span_parameterized', [('param') : Season]))
 
     int innerIterationCount = 5
-	int totalRecords;
+
+    int totalRecords
 
     for (int innerIteration = 1; innerIteration <= innerIterationCount; innerIteration++) {
         if (innerIteration == 1) {
@@ -153,8 +165,11 @@ for (int outerIteration = 0; outerIteration < 2; outerIteration++) {
             long domLoad = CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'((('Libraries > ' + SubMenu) + 
                 '- Page ') + innerIteration)
 
-            CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, (('Libraries > ' + SubMenu) + '- Page ') + 
+            CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, (((SubMenu + ' > ') + BrandConcat) + ' - Page ') + 
                 innerIteration, domLoad, pageLoad)
+
+            CustomKeywords.'myKeywords.GoogleSheetsAPI.writeGoogleSheets'(sheetName, (((SubMenu + ' > ') + BrandConcat) + 
+                ' - Page ') + innerIteration, domLoad, pageLoad)
         }
         catch (com.kms.katalon.core.exception.StepFailedException ex) {
             tempTimerStop = System.currentTimeMillis()
@@ -168,13 +183,16 @@ for (int outerIteration = 0; outerIteration < 2; outerIteration++) {
             long domLoad = CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'((('Libraries > ' + SubMenu) + 
                 '- Page ') + innerIteration)
 
-            CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, (('Libraries > ' + SubMenu) + '- Page ') + 
+            CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, (((SubMenu + ' > ') + BrandConcat) + ' - Page ') + 
                 innerIteration, domLoad, pageLoad)
+
+            CustomKeywords.'myKeywords.GoogleSheetsAPI.writeGoogleSheets'(sheetName, (((SubMenu + ' > ') + BrandConcat) + 
+                ' - Page ') + innerIteration, domLoad, pageLoad)
         } 
         
         if (innerIteration == 1) {
-			
-			totalRecords = Integer.parseInt(WebUI.getText(findTestObject('Sprint8/span_Total_Records')))
+            totalRecords = Integer.parseInt(WebUI.getText(findTestObject('Sprint8/span_Total_Records')))
+
             if (totalRecords > 50) {
                 System.out.println(totalRecords)
 
@@ -188,13 +206,25 @@ for (int outerIteration = 0; outerIteration < 2; outerIteration++) {
 
                 if (totalNoOfPagesAvailable < 5) {
                     innerIterationCount = totalNoOfPagesAvailable
-					println(innerIterationCount) 
+
+                    println(innerIterationCount)
                 }
+            } else {
+                break
             }
-			else
-			{
-				break;
-			}
         }
     }
 }
+List<Object> innerList = new ArrayList<Object>();
+innerList.add("Actual Average Result");
+CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList,sheetName+"!E4")
+List<Object> innerList2 = new ArrayList<Object>();
+innerList2.add("=AVERAGE(C4:C8,C10:C14)");
+CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList2,sheetName+"!E5")
+List<Object> innerList3 = new ArrayList<Object>();
+innerList3.add("Normalized Average Result");
+CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList3,sheetName+"!E6")
+List<Object> innerList4 = new ArrayList<Object>();
+innerList4.add("=E5-3000");
+CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList4,sheetName+"!E7")
+

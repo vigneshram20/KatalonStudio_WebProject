@@ -90,7 +90,9 @@ if (SubMenu.equals('Merch List')) {
 
     WebUI.click(findTestObject('Sprint1/Create Season/input_SearchField'), FailureHandling.STOP_ON_FAILURE)
 
-    WebUI.click(findTestObject('Object Repository/Sprint8/span_Select Department'))
+	WebUI.delay(5)
+	
+    WebUI.enhancedClick(findTestObject('Object Repository/Sprint8/span_Select Department'))
 
     WebUI.waitForPageLoad(0)
 
