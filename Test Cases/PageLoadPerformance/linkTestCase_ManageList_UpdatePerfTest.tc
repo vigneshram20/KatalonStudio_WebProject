@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>linkTestCase_ManageList_UpdatePerfTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e0a54190-0d9f-459c-bc6f-843f52cc7b46</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>722fbddc-f8ed-4599-bf7b-9e49f3061db4</id>
+      <masked>false</masked>
+      <name>pageNo</name>
+   </variable>
+</TestCaseEntity>

@@ -20,12 +20,21 @@ import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import org.openqa.selenium.WebDriver as WebDriver
 import com.kms.katalon.core.configuration.RunConfiguration as RC
-def executionProfile = RC.getExecutionProfile()
 
+def hostName = RC.getHostName();
+
+if(hostName.contains("wsgc"))
+{
+	hostName = "CITRIX"
+}
+else
+{
+	hostName = "LOCAL"
+}
 
 BrandConcat = ((((Brand + ' > ') + Division) + ' > ') + Season)
 
-String sheetName = CustomKeywords.'myKeywords.customKeywords.currentZonetimeStampStringGen'('', 'ddMMMyyyy HH.mm.ss')+"(IST)-"//+executionProfile
+String sheetName = CustomKeywords.'myKeywords.customKeywords.currentZonetimeStampStringGen'('', 'ddMMMyyyy HH.mm.ss') + '(IST)-'+hostName //+executionProfile
 
 CustomKeywords.'myKeywords.customKeywords.createSheetAndColumn'(sheetName)
 
@@ -149,12 +158,7 @@ for (int outerIteration = 0; outerIteration < 2; outerIteration++) {
             GlobalVariable.startTime = System.currentTimeMillis()
         }
         
-        long tempTimerStart = 0
-
-        long tempTimerStop = 0
-
         try {
-            tempTimerStart = System.currentTimeMillis()
 
             WebUI.verifyElementPresent(findTestObject('Sprint8/span_Total_Records'), 60, FailureHandling.STOP_ON_FAILURE)
 
@@ -170,25 +174,12 @@ for (int outerIteration = 0; outerIteration < 2; outerIteration++) {
 
             CustomKeywords.'myKeywords.GoogleSheetsAPI.writeGoogleSheets'(sheetName, (((SubMenu + ' > ') + BrandConcat) + 
                 ' - Page ') + innerIteration, domLoad, pageLoad)
+			
+			WebUI.callTestCase(findTestCase('PageLoadPerformance/linkTestCase_ManageList_UpdatePerfTest'), [('pageNo') : innerIteration], FailureHandling.STOP_ON_FAILURE)
         }
         catch (com.kms.katalon.core.exception.StepFailedException ex) {
-            tempTimerStop = System.currentTimeMillis()
-
-            long ExceptionTime = tempTimerStop - tempTimerStart
-
-            'Check Page Performance'
-            long pageLoad = CustomKeywords.'myKeywords.customKeywords.pageLoadTimingSelenium'((('Libraries > ' + SubMenu) + 
-                '- Page ') + innerIteration, ExceptionTime)
-
-            long domLoad = CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'((('Libraries > ' + SubMenu) + 
-                '- Page ') + innerIteration)
-
-            CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, (((SubMenu + ' > ') + BrandConcat) + ' - Page ') + 
-                innerIteration, domLoad, pageLoad)
-
-            CustomKeywords.'myKeywords.GoogleSheetsAPI.writeGoogleSheets'(sheetName, (((SubMenu + ' > ') + BrandConcat) + 
-                ' - Page ') + innerIteration, domLoad, pageLoad)
-        } 
+			throw new Exception("Test Failed")
+                   } 
         
         if (innerIteration == 1) {
             totalRecords = Integer.parseInt(WebUI.getText(findTestObject('Sprint8/span_Total_Records')))
@@ -215,16 +206,52 @@ for (int outerIteration = 0; outerIteration < 2; outerIteration++) {
         }
     }
 }
-List<Object> innerList = new ArrayList<Object>();
-innerList.add("Actual Average Result");
-CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList,sheetName+"!E4")
-List<Object> innerList2 = new ArrayList<Object>();
-innerList2.add("=AVERAGE(C4:C8,C10:C14)");
-CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList2,sheetName+"!E5")
-List<Object> innerList3 = new ArrayList<Object>();
-innerList3.add("Normalized Average Result");
-CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList3,sheetName+"!E6")
-List<Object> innerList4 = new ArrayList<Object>();
-innerList4.add("=E5-3000");
-CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList4,sheetName+"!E7")
+
+List<Object> innerList = new ArrayList<Object>()
+
+innerList.add('Actual Average Result')
+
+CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList, sheetName + '!E4')
+
+List<Object> innerList2 = new ArrayList<Object>()
+
+innerList2.add('=AVERAGE(C4,C6,C8,C10,C12,C15,C17,C19,C21,C23)')
+
+CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList2, sheetName + '!E5')
+
+List<Object> innerList3 = new ArrayList<Object>()
+
+innerList3.add('Normalized Average Result')
+
+CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList3, sheetName + '!E6')
+
+List<Object> innerList4 = new ArrayList<Object>()
+
+innerList4.add('=E5-3000')
+
+CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList4, sheetName + '!E7')
+
+List<Object> innerList5 = new ArrayList<Object>()
+
+innerList5.add('Update - Average Result')
+
+CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList5, sheetName + '!E9')
+
+List<Object> innerList6 = new ArrayList<Object>()
+
+innerList6.add('=AVERAGE(C5,C7,C9,C11,C13,C16,C18,C20,C22,C24)')
+
+CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList6, sheetName + '!E10')
+
+List<Object> innerList7 = new ArrayList<Object>()
+
+innerList7.add('Normalized Average Result')
+
+CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList7, sheetName + '!E11')
+
+List<Object> innerList8 = new ArrayList<Object>()
+
+innerList8.add('=E10-3000')
+
+CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList8, sheetName + '!E12')
 

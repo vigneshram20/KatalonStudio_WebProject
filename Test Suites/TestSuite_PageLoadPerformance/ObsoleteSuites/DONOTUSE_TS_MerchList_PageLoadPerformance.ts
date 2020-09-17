@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TS_Libraries_PageLoadPerformance</name>
+   <name>DONOTUSE_TS_MerchList_PageLoadPerformance</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,23 +9,23 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <testSuiteGuid>b7fbf48a-14ec-41be-a06f-e5df0e8934b6</testSuiteGuid>
+   <testSuiteGuid>55b74923-04bd-4d36-ace5-da827b42a662</testSuiteGuid>
    <testCaseLink>
-      <guid>37ff82d8-b8d2-4e44-8df4-baade105a945</guid>
+      <guid>e3a3e8d4-a80d-428d-8251-3ec8ddc46b2c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/PageLoadPerformance/Libraries</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
-         <id>3d05f488-2f6e-420f-8a46-bcf4f23325cf</id>
+         <id>75bd6240-edda-40b7-b3dd-cfec8ee63a46</id>
          <iterationEntity>
             <iterationType>ALL</iterationType>
             <value></value>
          </iterationEntity>
-         <testDataId>Data Files/Libraries</testDataId>
+         <testDataId>Data Files/MerchList_Counter</testDataId>
       </testDataLink>
       <variableLink>
-         <testDataLinkId>3d05f488-2f6e-420f-8a46-bcf4f23325cf</testDataLinkId>
+         <testDataLinkId>75bd6240-edda-40b7-b3dd-cfec8ee63a46</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>SubMenu</value>
          <variableId>8e455d14-50bf-402c-8b16-a058113ba8a9</variableId>
@@ -37,19 +37,19 @@
          <variableId>2d259351-319e-46dc-bd31-6f6366546006</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>3d05f488-2f6e-420f-8a46-bcf4f23325cf</testDataLinkId>
+         <testDataLinkId>75bd6240-edda-40b7-b3dd-cfec8ee63a46</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>Brand</value>
          <variableId>78a941e1-11d3-4931-8ada-4c0a388502b9</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>3d05f488-2f6e-420f-8a46-bcf4f23325cf</testDataLinkId>
+         <testDataLinkId>75bd6240-edda-40b7-b3dd-cfec8ee63a46</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>Division</value>
          <variableId>f1bd8e8c-ba62-4609-8d6f-d1a0dfee15ef</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>3d05f488-2f6e-420f-8a46-bcf4f23325cf</testDataLinkId>
+         <testDataLinkId>75bd6240-edda-40b7-b3dd-cfec8ee63a46</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>Season</value>
          <variableId>29aedef0-e9eb-415a-ba8c-6066980d37c0</variableId>
