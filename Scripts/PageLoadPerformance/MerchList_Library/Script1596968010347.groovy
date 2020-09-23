@@ -44,6 +44,8 @@ GlobalVariable.ExcelSheetName = sheetName
 
 String[] Department = Division.toString().split('>')
 
+int innerIterationCount = 5
+
 'Launch the Browser'
 WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : GlobalVariable.URL], FailureHandling.STOP_ON_FAILURE)
 
@@ -141,8 +143,6 @@ for (int outerIteration = 0; outerIteration < 2; outerIteration++) {
 
     WebUI.click(findTestObject('Object Repository/Sprint8/span_parameterized', [('param') : Season]))
 
-    int innerIterationCount = 5
-
     int totalRecords
 
     for (int innerIteration = 1; innerIteration <= innerIterationCount; innerIteration++) {
@@ -205,11 +205,46 @@ for (int outerIteration = 0; outerIteration < 2; outerIteration++) {
             }
         }
     }
+	
+	for (int innerIteration = 1; innerIteration <= innerIterationCount; innerIteration++) {
+		if(innerIteration==1)
+		{
+			WebUI.click(findTestObject('Object Repository/PageLoadPerObjects/button_switchToVLL'))
+			WebUI.waitForElementClickable(findTestObject('Object Repository/Sprint8/a_First'), 0)
+			WebUI.click(findTestObject('Object Repository/Sprint8/a_First'))
+			GlobalVariable.startTime = System.currentTimeMillis()
+		}
+		else
+		{
+			WebUI.click(findTestObject('Object Repository/Sprint8/a_Go To next Page'))
+			GlobalVariable.startTime = System.currentTimeMillis()
+			
+		}
+		
+		WebUI.verifyElementPresent(findTestObject('Sprint8/span_Total_Records'), 60, FailureHandling.STOP_ON_FAILURE)
+		
+		'Check Page Performance'
+		long pageLoad = CustomKeywords.'myKeywords.customKeywords.pageLoadTimingSelenium'((('VLL > ' + SubMenu) +
+			'- Page ') + innerIteration, 0)
+	
+		long domLoad = CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow'((('VLL > ' + SubMenu) +
+			'- Page ') + innerIteration)
+	
+		CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, ((("VLL" + ' > ') + BrandConcat) + ' - Page ') +
+			innerIteration, domLoad, pageLoad)
+	
+		CustomKeywords.'myKeywords.GoogleSheetsAPI.writeGoogleSheets'(sheetName, ((("VLL" + ' > ') + BrandConcat) +
+			' - Page ') + innerIteration, domLoad, pageLoad)
+	
+	}
+	
 }
+
+
 
 List<Object> innerList = new ArrayList<Object>()
 
-innerList.add('Actual Average Result')
+innerList.add('Pagination - Average Result')
 
 CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList, sheetName + '!E4')
 
@@ -221,7 +256,7 @@ CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList2, sheetName + '
 
 List<Object> innerList3 = new ArrayList<Object>()
 
-innerList3.add('Normalized Average Result')
+innerList3.add('Pagination - Normalized Result')
 
 CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList3, sheetName + '!E6')
 
@@ -245,7 +280,7 @@ CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList6, sheetName + '
 
 List<Object> innerList7 = new ArrayList<Object>()
 
-innerList7.add('Normalized Average Result')
+innerList7.add('Update - Normalized Result')
 
 CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList7, sheetName + '!E11')
 
