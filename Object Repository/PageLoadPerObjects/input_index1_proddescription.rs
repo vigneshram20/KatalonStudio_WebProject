@@ -6,12 +6,12 @@
    <elementGuidId>f7e48058-1b57-4a63-80ed-9b81b32fb00e</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//input[@name = 'proddescription']</value>
+         <key>XPATH</key>
+         <value>//div[@id=&quot;group-0_then-0_item_${row}_0&quot;]//input[@name = 'proddescription']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='group-0_then-0_item_0_0']//input[@name = 'proddescription']</value>
+         <key>BASIC</key>
+         <value>//input[@name = 'proddescription']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

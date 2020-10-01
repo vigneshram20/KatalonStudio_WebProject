@@ -22,46 +22,53 @@ import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 
 WebUI.click(findTestObject('Object Repository/PageLoadPerObjects/span_Edit Mode_toggle_btn-label'))
 
-WebUI.doubleClick(findTestObject('PageLoadPerObjects/div_index1_ProductDescription'))
-
-WebUI.clearText(findTestObject('PageLoadPerObjects/input_index1_proddescription'))
-
-WebUI.doubleClick(findTestObject('PageLoadPerObjects/div_index1_ProductDescription'))
-
-WebUI.sendKeys(findTestObject('PageLoadPerObjects/input_index1_proddescription'), 'Prod Test Page Load')
-
-String itemType = WebUI.getAttribute(findTestObject('PageLoadPerObjects/div_index2_ItemType'), 'title')
-
-WebUI.click(findTestObject('PageLoadPerObjects/div_index2_ItemType'))
-
-WebUI.delay(2)
-
-if (itemType.equals('Bill of Material')) {
-    WebUI.enhancedClick(findTestObject('PageLoadPerObjects/span_Partial'))
-} else if (itemType.equals('Partial')) {
-    WebUI.enhancedClick(findTestObject('Object Repository/PageLoadPerObjects/span_BillOfMaterial'))
-} else {
-    WebUI.enhancedClick(findTestObject('PageLoadPerObjects/span_Partial'))
-}
-
-WebUI.doubleClick(findTestObject('PageLoadPerObjects/div_index3_PLMSKU'))
-
-WebUI.clearText(findTestObject('PageLoadPerObjects/input_index3_PLMSKU'))
-
-WebUI.doubleClick(findTestObject('PageLoadPerObjects/div_index3_PLMSKU'))
-
-WebUI.sendKeys(findTestObject('PageLoadPerObjects/input_index3_PLMSKU'), '7200322')
-
-String fairTradeFlag = WebUI.getText(findTestObject('PageLoadPerObjects/div_index2_ItemType'))
-
-WebUI.click(findTestObject('PageLoadPerObjects/div_index3_FairTradeFlag'))
-
-WebUI.delay(2)
-
-if (fairTradeFlag.equals('Yes')) {
-    WebUI.click(findTestObject('PageLoadPerObjects/span_No'))
-} else {
-    WebUI.click(findTestObject('PageLoadPerObjects/span_Yes'))
+for (int row=0;row<=9;row++)
+{
+	String currentTime = CustomKeywords.'myKeywords.customKeywords.currentZonetimeStampStringGen'('', 'HHmmss')
+	
+	WebUI.click(findTestObject('PageLoadPerObjects/div_index1_ProductDescription',[('row'):row]))
+	
+	WebUI.clearText(findTestObject('PageLoadPerObjects/input_index1_proddescription',[('row'):row]))
+	
+	WebUI.doubleClick(findTestObject('PageLoadPerObjects/div_index1_ProductDescription',[('row'):row]))
+	
+	WebUI.sendKeys(findTestObject('PageLoadPerObjects/input_index1_proddescription',[('row'):row]), 'Prod Test Page Load '+currentTime)
+	
+	String itemType = WebUI.getAttribute(findTestObject('PageLoadPerObjects/div_index2_ItemType',[('row'):row]), 'title')
+	
+	WebUI.click(findTestObject('PageLoadPerObjects/div_index2_ItemType',[('row'):row]))
+	
+	WebUI.delay(2)
+	
+	if (itemType.equals('Bill of Material')) {
+		WebUI.enhancedClick(findTestObject('PageLoadPerObjects/span_Partial'))
+	} else if (itemType.equals('Partial')) {
+		WebUI.enhancedClick(findTestObject('Object Repository/PageLoadPerObjects/span_BillOfMaterial'))
+	} else {
+		WebUI.enhancedClick(findTestObject('PageLoadPerObjects/span_Partial'))
+	}
+	
+	WebUI.doubleClick(findTestObject('PageLoadPerObjects/div_index3_PLMSKU',[('row'):row]))
+	
+	WebUI.clearText(findTestObject('PageLoadPerObjects/input_index3_PLMSKU',[('row'):row]))
+	
+	WebUI.doubleClick(findTestObject('PageLoadPerObjects/div_index3_PLMSKU',[('row'):row]))
+		
+	WebUI.sendKeys(findTestObject('PageLoadPerObjects/input_index3_PLMSKU',[('row'):row]), currentTime)
+	
+	String fairTradeFlag = WebUI.getText(findTestObject('PageLoadPerObjects/div_index2_ItemType',[('row'):row]))
+	
+	WebUI.click(findTestObject('PageLoadPerObjects/div_index3_FairTradeFlag',[('row'):row]))
+	
+	WebUI.delay(2)
+	
+	if (fairTradeFlag.equals('Yes')) {
+		WebUI.enhancedClick(findTestObject('PageLoadPerObjects/span_No'))
+	} else {
+		WebUI.enhancedClick(findTestObject('PageLoadPerObjects/span_Yes'))
+	}
+	
+	WebUI.delay(2)
 }
 
 WebUI.click(findTestObject('Object Repository/PageLoadPerObjects/button_Save'))
@@ -71,6 +78,8 @@ WebUI.click(findTestObject('Object Repository/Common Objects/button_Yes'))
 GlobalVariable.startTime = System.currentTimeMillis()
 
 WebUI.verifyElementVisible(findTestObject('Common Objects/div_PageLoader'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.waitForElementVisible(findTestObject('Sprint8/span_Total_Records'),120)
 
 WebUI.verifyElementVisible(findTestObject('Sprint8/span_Total_Records'), FailureHandling.STOP_ON_FAILURE)
 
