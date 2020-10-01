@@ -6,12 +6,12 @@
    <elementGuidId>eca2de7d-33fd-4c95-9bb7-9519b23def46</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//input[@name = 'plmskunum']</value>
+         <key>XPATH</key>
+         <value>//div[@id='group-0_then-0_item_${row}_2']//input[@name='plmskunum']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='group-0_then-0_item_0_2']//input[@name='plmskunum']</value>
+         <key>BASIC</key>
+         <value>//input[@name = 'plmskunum']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

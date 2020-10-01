@@ -9,8 +9,12 @@
          <key>BASIC</key>
          <value>//div[@id = 'group-0_then-0_item_0_0']</value>
       </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id=&quot;group-0_then-0_item_${row}_0&quot;]</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
