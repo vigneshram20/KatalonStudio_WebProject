@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TS_MerchList_PageLoadPerformance_PaginationApproach_SingleSession</name>
+   <name>TS_MerchList_PageLoadPerformance_Lighting</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -35,14 +35,14 @@
       </variableLink>
       <variableLink>
          <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
+         <type>SCRIPT_VARIABLE</type>
+         <value>&quot;Lighting>805 - WE LIGHTING&quot;</value>
          <variableId>177efeab-aec7-4a46-aa15-d1810cf432db</variableId>
       </variableLink>
       <variableLink>
          <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
+         <type>SCRIPT_VARIABLE</type>
+         <value>&quot;WE Lighting Fall 2020&quot;</value>
          <variableId>4c5fa0e9-7abc-4f4c-9591-ca4a46168724</variableId>
       </variableLink>
    </testCaseLink>
