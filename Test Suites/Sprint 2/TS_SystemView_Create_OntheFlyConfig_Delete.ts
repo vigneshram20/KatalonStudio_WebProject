@@ -9,17 +9,29 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>true</rerunFailedTestCasesOnly>
-   <testSuiteGuid>177adf58-9d7e-4f51-ae31-0d8709d38b61</testSuiteGuid>
+   <testSuiteGuid>b8740261-0d60-48a9-8379-f9c391e841a6</testSuiteGuid>
    <testCaseLink>
-      <guid>7b75871a-62c2-4be4-987a-c6f5fa9e38c0</guid>
+      <guid>a8ee8d2a-4b79-4644-a411-48246a0ac7e1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/PageLoadPerformance/linkTestCase_ManageList_UpdatePerfTest</testCaseId>
+      <testCaseId>Test Cases/Sprint6/CustomView_Create_OntheFlyConfig_Delete</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>SCRIPT_VARIABLE</type>
+         <value>&quot;System&quot;</value>
+         <variableId>39c6c3d4-bfda-4b9f-9a5c-5ce738b1236d</variableId>
+      </variableLink>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>722fbddc-f8ed-4599-bf7b-9e49f3061db4</variableId>
+         <variableId>0bcd9acd-f6cc-4c2c-8dbf-0c8bdf66c4e1</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>bb1bc45a-af34-4af9-9695-7ac65fbbe591</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

@@ -6,12 +6,12 @@
    <elementGuidId>e451e6aa-ee06-4ee6-aae7-64aaa40b30f4</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//label[@for = 'TYPE6']</value>
+         <key>XPATH</key>
+         <value>//div[text()='${input}']/../..//label</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[text()='${input}']/..//label</value>
+         <key>BASIC</key>
+         <value>//label[@for = 'TYPE6']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

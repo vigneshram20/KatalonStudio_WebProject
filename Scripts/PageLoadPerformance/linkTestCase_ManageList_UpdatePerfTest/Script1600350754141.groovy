@@ -23,7 +23,7 @@ import org.openqa.selenium.WebElement as WebElement
 
 WebUI.click(findTestObject('Object Repository/PageLoadPerObjects/span_Edit Mode_toggle_btn-label'))
 
-for (int row = 0; row <= 9; row++) {
+for (int row = 0; row <= 3; row++) {
     String currentTime = CustomKeywords.'myKeywords.customKeywords.currentZonetimeStampStringGen'('', 'HHmmss')
 	
 	if(row==0)

@@ -41,7 +41,7 @@
       <name>libraryName</name>
    </variable>
    <variable>
-      <defaultValue>['Brand', 'Division', 'In Store Launch End Date', 'In Store Launch Start Date', 'Internet Launch Start Date', 'Internet Launch End Date', 'Name', 'Season', 'Year', 'Type']</defaultValue>
+      <defaultValue>['Brand', 'Division', 'In_Store_Launch_End_Date', 'In_Store_Launch_Start_Date', 'Internet_Launch_Start_Date', 'Internet_Launch_End_Date', 'Name', 'Season', 'Year', 'Type']</defaultValue>
       <description></description>
       <id>e48e81e0-9764-4621-80e5-dc5ef30936b0</id>
       <masked>false</masked>

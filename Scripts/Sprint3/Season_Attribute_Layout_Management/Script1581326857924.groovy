@@ -233,26 +233,26 @@ WebUI.delay(1)
 WebUI.sendKeys(findTestObject('Sprint3/input'), SecondGroup)
 
 'Select In Store Launch End Date checkbox'
-WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'In Store Launch Start Date']))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'In_Store_Launch_Start_Date']))
 
 'Select In Store Launch Start Date checkbox'
-WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'In Store Launch End Date']))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'In_Store_Launch_End_Date']))
 
 'Select Internet Launch End Date checkbox'
-WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Internet Launch Start Date']))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Internet_Launch_Start_Date']))
 
 'Select Internet Launch Start Date'
-WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Internet Launch End Date']))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint3/label_GlobalParameterized', [('labelName') : 'Internet_Launch_End_Date']))
 
 'Click Add button'
 WebUI.enhancedClick(findTestObject('Sprint3/img_parameterized_Group_img-Add', [('groupName') : SecondGroup]))
 
 'Select Instore Launch checkbox'
-WebUI.clickOffset(findTestObject('Sprint3/label_GlobalParameterized_checkbox_label', [('input') : 'In Store Launch Start Date']), 
+WebUI.clickOffset(findTestObject('Sprint3/label_GlobalParameterized_checkbox_label', [('input') : 'In_Store_Launch_Start_Date']), 
     0, 2)
 
 'Select InStore Launch End Checkbox'
-WebUI.clickOffset(findTestObject('Sprint3/label_GlobalParameterized_checkbox_label', [('input') : 'In Store Launch End Date']), 
+WebUI.clickOffset(findTestObject('Sprint3/label_GlobalParameterized_checkbox_label', [('input') : 'In_Store_Launch_End_Date']), 
     0, 2)
 
 'Click Copy Attributes button'
@@ -383,16 +383,16 @@ WebUI.click(findTestObject('Object Repository/Sprint3/li_DetailedView_param', [(
 WebUI.verifyElementText(findTestObject('Sprint3/h6_parameterized'), SecondGroup)
 
 'Verify Available Label - Internet Launch End Date'
-WebUI.verifyElementPresent(findTestObject('Sprint3/td_Parameterized', [('labelName') : 'Internet Launch End Date']), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint3/td_Parameterized', [('labelName') : 'Internet_Launch_End_Date']), 0)
 
 'Verify Available Label - In Store Launch End Date'
-WebUI.verifyElementPresent(findTestObject('Sprint3/td_Parameterized', [('labelName') : 'In Store Launch End Date']), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint3/td_Parameterized', [('labelName') : 'In_Store_Launch_End_Date']), 0)
 
 'Verify Available Label - Internet Launch Start Date'
-WebUI.verifyElementPresent(findTestObject('Sprint3/td_Parameterized', [('labelName') : 'Internet Launch Start Date']), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint3/td_Parameterized', [('labelName') : 'Internet_Launch_Start_Date']), 0)
 
 'Verify Available Label - In Store Launch Start Date'
-WebUI.verifyElementPresent(findTestObject('Sprint3/td_Parameterized', [('labelName') : 'In Store Launch Start Date']), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint3/td_Parameterized', [('labelName') : 'In_Store_Launch_Start_Date']), 0)
 
 'Click Close Detailed View panel'
 WebUI.click(findTestObject('Object Repository/Common Objects/img_Close'))

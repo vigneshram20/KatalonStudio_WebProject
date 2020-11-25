@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>New Test Case</name>
+   <name>Create New Placeholder</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>ccdf5f5e-34c6-4b2e-b853-cf0e64338656</testCaseGuid>
+   <testCaseGuid>3610a096-3fbc-4250-a86a-1298a4aea5c9</testCaseGuid>
 </TestCaseEntity>
