@@ -82,4 +82,82 @@
          <variableId>4c5fa0e9-7abc-4f4c-9591-ca4a46168724</variableId>
       </variableLink>
    </testCaseLink>
+   <testCaseLink>
+      <guid>1e7619f8-b234-4295-a950-e38d1db02529</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/PageLoadPerformance/Create New Placeholder_OnlyPerformance</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>10aaf780-f69b-431f-82e3-e53cc191cdd2</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>125a7b8a-840c-4b94-84ad-da48c8917507</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>a10d5476-dc57-4607-9da8-ca78bb1ec265</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>1fc03bc5-eea4-4718-a1f9-942cd3d7d5af</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>SCRIPT_VARIABLE</type>
+         <value>&quot;Furniture&quot;</value>
+         <variableId>69f223bc-1d8b-4c99-87cd-6cfe54dbcbdc</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>SCRIPT_VARIABLE</type>
+         <value>&quot;WE Furniture Fall 2020&quot;</value>
+         <variableId>0b519d97-c398-42f2-b43b-9c5efacfdeec</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>SCRIPT_VARIABLE</type>
+         <value>&quot;806 - WE CASUAL SEATING&quot;</value>
+         <variableId>baccaeb5-738c-4c6e-865e-a0210cfa7d02</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>SCRIPT_VARIABLE</type>
+         <value>&quot;1 - UPHOLSTERY&quot;</value>
+         <variableId>ea01cef2-58e7-4d6c-a689-20b8fb8381ac</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>SCRIPT_VARIABLE</type>
+         <value>&quot;1 - SOFAS&quot;</value>
+         <variableId>4b5c8792-a318-420c-8dee-2cb961fa135f</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>63a531cb-ee95-47c0-9a7e-b77e88af5efd</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>2d660d67-4ffa-4d9a-9bbd-cc52b2cbfdb2</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>8589954c-3c47-4c49-8318-9f6309cc7e22</variableId>
+      </variableLink>
+   </testCaseLink>
 </TestSuiteEntity>
