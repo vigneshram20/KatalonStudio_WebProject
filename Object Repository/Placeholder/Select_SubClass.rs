@@ -4,7 +4,17 @@
    <name>Select_SubClass</name>
    <tag></tag>
    <elementGuidId>5bba8efd-7ebb-4481-8947-ee2dcb2cd8e4</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@name = 'subclass' and (text() = '${subclass}' or . = '${subclass}')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@name='subclass']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +49,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>-- Select --1 - WOOD2 - ACRYLIC3 - CAPIZ/NATRUAL4 - GLASS5 - METAL6 - FABRIC7 - CERAMIC8 - UNASSIGNED98 - OTHER</value>
+      <value>${subclass}</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

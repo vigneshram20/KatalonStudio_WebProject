@@ -28,6 +28,8 @@ else
 	hostName = "LOCAL"
 }
 
+String[] DepartmentFull = Division.toString().split('>')
+
 String sheetName = CustomKeywords.'myKeywords.customKeywords.currentZonetimeStampStringGen'('', 'ddMMMyyyy HH.mm.ss') + '(IST)-'+ hostName //+executionProfile
 
 CustomKeywords.'myKeywords.customKeywords.createSheetAndColumn'(sheetName)
@@ -77,7 +79,10 @@ WebUI.waitForPageLoad(0)
 
 WebUI.delay(5)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/label_parameterized', [('param') : Division]))
+
+		WebUI.click(findTestObject('Object Repository/Sprint6/li_OpenDeparmentdropdown_param', [('param') : DepartmentFull[0]]))
+
+		WebUI.click(findTestObject('Object Repository/Sprint6/label_parameterized', [('param') : DepartmentFull[1]]))
 
 WebUI.click(findTestObject('Sprint8/img_Select_Department_dropdown'))
 
@@ -97,7 +102,7 @@ WebUI.mouseOver(findTestObject('Placeholder/button_Create Placeholder'))
 
 WebUI.click(findTestObject('Object Repository/Placeholder/button_New'))
 
-WebUI.selectOptionByLabel(findTestObject('Placeholder/Select_Department'), Department, true)
+WebUI.selectOptionByLabel(findTestObject('Placeholder/Select_Department'), DepartmentFull[1], true)
 
 WebUI.selectOptionByLabel(findTestObject('Placeholder/Select_ClassDropdown'), ClassDropdown, true)
 

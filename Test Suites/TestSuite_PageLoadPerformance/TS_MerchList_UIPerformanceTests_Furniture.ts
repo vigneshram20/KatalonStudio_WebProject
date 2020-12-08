@@ -13,7 +13,7 @@
    <testCaseLink>
       <guid>25248cfd-0fa0-4d31-90b3-a0ae57c00ceb</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/PageLoadPerformance/MerchList_Library</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -49,7 +49,7 @@
    <testCaseLink>
       <guid>e90dae37-dc70-43cc-8ed8-216bb201b031</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/PageLoadPerformance/MassEditPerformance</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -114,7 +114,7 @@
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>SCRIPT_VARIABLE</type>
-         <value>&quot;Furniture&quot;</value>
+         <value>&quot;Furniture>806 - WE CASUAL SEATING&quot;</value>
          <variableId>69f223bc-1d8b-4c99-87cd-6cfe54dbcbdc</variableId>
       </variableLink>
       <variableLink>
@@ -122,12 +122,6 @@
          <type>SCRIPT_VARIABLE</type>
          <value>&quot;WE Furniture Fall 2020&quot;</value>
          <variableId>0b519d97-c398-42f2-b43b-9c5efacfdeec</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>SCRIPT_VARIABLE</type>
-         <value>&quot;806 - WE CASUAL SEATING&quot;</value>
-         <variableId>baccaeb5-738c-4c6e-865e-a0210cfa7d02</variableId>
       </variableLink>
       <variableLink>
          <testDataLinkId></testDataLinkId>

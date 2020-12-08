@@ -34,7 +34,7 @@
       <name>Brand</name>
    </variable>
    <variable>
-      <defaultValue>'Lighting'</defaultValue>
+      <defaultValue>'Lighting>805 - WE LIGHTING'</defaultValue>
       <description></description>
       <id>69f223bc-1d8b-4c99-87cd-6cfe54dbcbdc</id>
       <masked>false</masked>
@@ -46,13 +46,6 @@
       <id>0b519d97-c398-42f2-b43b-9c5efacfdeec</id>
       <masked>false</masked>
       <name>Season</name>
-   </variable>
-   <variable>
-      <defaultValue>'805 - WE LIGHTING'</defaultValue>
-      <description></description>
-      <id>baccaeb5-738c-4c6e-865e-a0210cfa7d02</id>
-      <masked>false</masked>
-      <name>Department</name>
    </variable>
    <variable>
       <defaultValue>'1 - TABLE LAMPS'</defaultValue>
