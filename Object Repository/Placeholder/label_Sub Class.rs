@@ -4,10 +4,16 @@
    <name>label_Sub Class</name>
    <tag></tag>
    <elementGuidId>f1c77050-7359-4bb5-9e91-383656a1858d</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//label[(text() = 'Sub Class *' or . = 'Sub Class *')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>

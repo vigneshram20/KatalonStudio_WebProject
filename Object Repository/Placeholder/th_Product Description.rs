@@ -4,10 +4,16 @@
    <name>th_Product Description</name>
    <tag></tag>
    <elementGuidId>a439cf9f-bb50-4b6c-ba32-8acbf230ad6a</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//th[(text() = 'Product Description' or . = 'Product Description')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>

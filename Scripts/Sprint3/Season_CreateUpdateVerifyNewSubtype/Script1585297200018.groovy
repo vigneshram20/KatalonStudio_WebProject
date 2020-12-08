@@ -325,6 +325,12 @@ WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/button_Save'))
 'Click Yes Button'
 WebUI.enhancedClick(findTestObject('Common Objects/button_Yes'))
 
+'Verify Success Popup'
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/h5_Type has been modified successfully'), 60)
+
+'Click OK Button'
+WebUI.enhancedClick(findTestObject('Object Repository/Common Objects/button_OK'))
+
 WebUI.delay(2)
 
 'Scroll to Top'
@@ -415,6 +421,12 @@ WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/button_Save'))
 'Click Yes Button'
 WebUI.enhancedClick(findTestObject('Common Objects/button_Yes'))
 
+'Verify Success Popup'
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/h5_Type has been modified successfully'), 60)
+
+'Click OK Button'
+WebUI.enhancedClick(findTestObject('Object Repository/Common Objects/button_OK'))
+
 WebUI.delay(2)
 
 'Scroll to Top'
@@ -435,3 +447,4 @@ headerTextfull = ((('Season \\ ' + displayNameEdited) + ' \\ ') + DisplaySubtype
 'Verify Season header'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/h2_Season_subtype', [('header') : headerTextfull]),
 	0)
+

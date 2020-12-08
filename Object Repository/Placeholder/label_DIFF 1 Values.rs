@@ -4,10 +4,16 @@
    <name>label_DIFF 1 Values</name>
    <tag></tag>
    <elementGuidId>0e378e94-d98a-4e3e-a648-f659a9875753</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//label[(text() = 'DIFF 1 Values *' or . = 'DIFF 1 Values *')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>

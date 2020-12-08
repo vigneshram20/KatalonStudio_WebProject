@@ -1,91 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Create New Placeholder</name>
+   <name>Create New Placeholder_OnlyPerformance</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>3610a096-3fbc-4250-a86a-1298a4aea5c9</testCaseGuid>
+   <testCaseGuid>365edb38-c162-412d-9696-8e3f2d373307</testCaseGuid>
    <variable>
       <defaultValue>'Custom'</defaultValue>
       <description></description>
-      <id>6aae603f-e1e9-453a-a429-947bd0f81d9f</id>
+      <id>10aaf780-f69b-431f-82e3-e53cc191cdd2</id>
       <masked>false</masked>
       <name>viewType</name>
    </variable>
    <variable>
       <defaultValue>'Merch List'</defaultValue>
       <description></description>
-      <id>94419032-25c4-4192-94c3-c4b62031cfb3</id>
+      <id>125a7b8a-840c-4b94-84ad-da48c8917507</id>
       <masked>false</masked>
       <name>libraryName</name>
    </variable>
    <variable>
       <defaultValue>['Department', 'Class', 'Sub Class', 'Collection', 'Product Description', 'Item Type', 'Assortment Type', 'Item Description (RMS)', 'Diff Type 1 ', 'Diff 1 Value', 'Diff 1 Values']</defaultValue>
       <description></description>
-      <id>d735130e-11aa-413a-8c1e-f615290e3e1d</id>
+      <id>a10d5476-dc57-4607-9da8-ca78bb1ec265</id>
       <masked>false</masked>
       <name>attributesList</name>
    </variable>
    <variable>
       <defaultValue>'WE'</defaultValue>
       <description></description>
-      <id>adbb3544-ca5f-405b-821e-e168d07c01f8</id>
+      <id>1fc03bc5-eea4-4718-a1f9-942cd3d7d5af</id>
       <masked>false</masked>
       <name>Brand</name>
    </variable>
    <variable>
       <defaultValue>'Lighting'</defaultValue>
       <description></description>
-      <id>8601a7bd-a7eb-47b3-bcfc-fb1f509c4987</id>
+      <id>69f223bc-1d8b-4c99-87cd-6cfe54dbcbdc</id>
       <masked>false</masked>
       <name>Division</name>
    </variable>
    <variable>
-      <defaultValue>'Fall 2020'</defaultValue>
+      <defaultValue>'WE Lighting Fall 2020'</defaultValue>
       <description></description>
-      <id>a19de0c2-df0d-4dd1-8006-3f67bdce77d4</id>
+      <id>0b519d97-c398-42f2-b43b-9c5efacfdeec</id>
       <masked>false</masked>
       <name>Season</name>
    </variable>
    <variable>
       <defaultValue>'805 - WE LIGHTING'</defaultValue>
       <description></description>
-      <id>16851d97-e11d-40db-8292-39272c5eb268</id>
+      <id>baccaeb5-738c-4c6e-865e-a0210cfa7d02</id>
       <masked>false</masked>
       <name>Department</name>
    </variable>
    <variable>
       <defaultValue>'1 - TABLE LAMPS'</defaultValue>
       <description></description>
-      <id>09d0b8a8-bf4c-4de4-8cf2-8e3c89e59f4d</id>
+      <id>ea01cef2-58e7-4d6c-a689-20b8fb8381ac</id>
       <masked>false</masked>
       <name>ClassDropdown</name>
    </variable>
    <variable>
       <defaultValue>'1 - WOOD'</defaultValue>
       <description></description>
-      <id>c92d07ab-7ef6-432a-a8f4-924980b22d40</id>
+      <id>4b5c8792-a318-420c-8dee-2cb961fa135f</id>
       <masked>false</masked>
       <name>SubClass</name>
    </variable>
    <variable>
       <defaultValue>'WE932J - WE BELLA COLLECTION'</defaultValue>
       <description></description>
-      <id>c6a71be8-a3c2-4a6f-a60e-764b40b29e6e</id>
+      <id>63a531cb-ee95-47c0-9a7e-b77e88af5efd</id>
       <masked>false</masked>
       <name>CollectionValue</name>
    </variable>
    <variable>
       <defaultValue>'Color'</defaultValue>
       <description></description>
-      <id>b9b25063-7e40-4716-aedf-172505d5be6d</id>
+      <id>2d660d67-4ffa-4d9a-9bbd-cc52b2cbfdb2</id>
       <masked>false</masked>
       <name>DIFF1</name>
    </variable>
    <variable>
       <defaultValue>'Black ( BLACK )'</defaultValue>
       <description></description>
-      <id>599f445e-d1d7-49c4-9acc-2404c3f5e3b8</id>
+      <id>8589954c-3c47-4c49-8318-9f6309cc7e22</id>
       <masked>false</masked>
       <name>DIFF1Value</name>
    </variable>

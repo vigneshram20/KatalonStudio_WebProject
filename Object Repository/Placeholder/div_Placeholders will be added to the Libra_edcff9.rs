@@ -4,10 +4,16 @@
    <name>div_Placeholders will be added to the Libra_edcff9</name>
    <tag></tag>
    <elementGuidId>42a67d01-1923-44cb-a79f-0e01dcc3e59c</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//div[(text() = 'Placeholders will be added to the Library and assigned to , ${season} as NEW Items' or . = 'Placeholders will be added to the Library and assigned to , ${season} as NEW Items')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
@@ -25,7 +31,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Placeholders will be added to the Library and assigned to , WE Lighting Fall 2020 as NEW Items</value>
+      <value>Placeholders will be added to the Library and assigned to , ${season} as NEW Items</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

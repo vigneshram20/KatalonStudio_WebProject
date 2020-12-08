@@ -4,6 +4,12 @@
    <name>div_Internet Launch Start Date</name>
    <tag></tag>
    <elementGuidId>cc5f7a05-1ac0-4a50-b231-89d315b2c84f</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[(text() = 'Internet_Launch_Start_Date' or . = 'Internet_Launch_Start_Date')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -21,18 +27,18 @@
       <value>rTableHead </value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>title</name>
       <type>Main</type>
-      <value>Internet Launch Start Date</value>
+      <value>Internet_Launch_Start_Date</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Internet Launch Start Date</value>
+      <value>Internet_Launch_Start_Date</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

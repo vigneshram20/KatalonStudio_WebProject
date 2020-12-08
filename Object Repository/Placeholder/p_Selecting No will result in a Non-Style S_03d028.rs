@@ -4,10 +4,16 @@
    <name>p_Selecting No will result in a Non-Style S_03d028</name>
    <tag></tag>
    <elementGuidId>48e2a4d7-886f-4d88-a346-d448d595187d</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//p[(text() = 'Selecting &quot;No&quot; will result in a Non-Style SKU, which can never have DIFFs added to it and is not recommended.' or . = 'Selecting &quot;No&quot; will result in a Non-Style SKU, which can never have DIFFs added to it and is not recommended.')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>

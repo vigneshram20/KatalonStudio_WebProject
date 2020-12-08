@@ -4,6 +4,12 @@
    <name>div_In Store Launch Start Date</name>
    <tag></tag>
    <elementGuidId>13e85fdb-cc61-4c51-b952-c5a4b855782e</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@title = 'In_Store_Launch_Start_Date' and (text() = 'In_Store_Launch_Start_Date' or . = 'In_Store_Launch_Start_Date')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -25,14 +31,14 @@
       <matchCondition>equals</matchCondition>
       <name>title</name>
       <type>Main</type>
-      <value>In Store Launch Start Date</value>
+      <value>In_Store_Launch_Start_Date</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>In Store Launch Start Date</value>
+      <value>In_Store_Launch_Start_Date</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input</name>
+   <name>CollectionWidget</name>
    <tag></tag>
-   <elementGuidId>51b92350-ef71-4463-bf0d-d8a5983e6740</elementGuidId>
+   <elementGuidId>d4dbb965-ef90-48bc-8ee6-4fc6971761f8</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//input[@type = 'text']</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//ul//input[@type = 'text' and @value ='']</value>
+         <value>//input[@placeholder = 'Start typing or select...']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -24,38 +20,45 @@
       <value>input</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>type</name>
       <type>Main</type>
       <value>text</value>
    </webElementProperties>
    <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>placeholder</name>
+      <type>Main</type>
+      <value>Start typing or select...</value>
+   </webElementProperties>
+   <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;listContainer&quot;)/li[1]/div[@class=&quot;label_name_clone columnLayout_label_name__Mwim2&quot;]/input[1]</value>
+      <value>id(&quot;modalWindow&quot;)/div[@class=&quot;modal confirmation_ws_modal_xl__2govG confirmation_delete_conf__1TYwf&quot;]/div[@class=&quot;modal-dialog&quot;]/div[@class=&quot;modal-content&quot;]/div[@class=&quot;modal-body confirmation_ws_modal_body__2GNFW&quot;]/div[@class=&quot;addPlaceholder_addplaceholder__1AY0q&quot;]/div[@class=&quot;form-group row false fields&quot;]/div[@class=&quot;col-sm-7&quot;]/div[@class=&quot;fieldContainer_inherit_element__3tUwM&quot;]/div[@class=&quot;typeahead_search searchSelect_select_search_form__3mcuC&quot;]/input[1]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//input[@value='']</value>
+      <value>(//input[@value=''])[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//ul[@id='listContainer']/li/div[2]/input</value>
+      <value>//div[@id='modalWindow']/div/div/div/div[2]/div/div[5]/div/div/div/input</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[2]/input</value>
+      <value>//div[5]/div/div/div/input</value>
    </webElementXpaths>
 </WebElementEntity>

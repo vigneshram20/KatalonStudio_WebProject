@@ -4,10 +4,16 @@
    <name>button_Next  DIFF Setup</name>
    <tag></tag>
    <elementGuidId>804f1b1d-64bc-4660-ad4b-3e4907d0dcfb</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//button[(text() = 'Next » DIFF Setup' or . = 'Next » DIFF Setup')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>

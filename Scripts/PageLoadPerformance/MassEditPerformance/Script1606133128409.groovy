@@ -192,7 +192,6 @@ js.executeScript("arguments[0].click();", elementInherit1);
 	
 	WebUI.click(findTestObject('Object Repository/MassEdit/div_MASS EDIT'))
 	
-	
 	WebUI.click(findTestObject('Object Repository/MassEdit/input (1)'))
 	
 	WebUI.click(findTestObject('Object Repository/MassEdit/label_Partial'))

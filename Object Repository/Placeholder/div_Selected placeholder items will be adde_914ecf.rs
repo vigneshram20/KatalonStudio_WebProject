@@ -4,10 +4,16 @@
    <name>div_Selected placeholder items will be adde_914ecf</name>
    <tag></tag>
    <elementGuidId>22b55de5-0bab-40bd-b0b8-676dfd0170c5</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//div[(text() = 'Selected placeholder items will be added to the Library and assigned to [805 - WE LIGHTING], [WE Lighting Fall 2020] as NEW' or . = 'Selected placeholder items will be added to the Library and assigned to [805 - WE LIGHTING], [WE Lighting Fall 2020] as NEW')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>

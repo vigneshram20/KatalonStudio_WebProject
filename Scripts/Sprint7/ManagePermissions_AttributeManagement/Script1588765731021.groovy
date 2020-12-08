@@ -48,7 +48,7 @@ String listNameInternal = 'QAML' + dateFormat
 
 String listNameDisplay = 'QA AUT ML ' + dateFormat
 
-String listValue = 'QA Test'
+String listValue = 'QATest'
 
 String RoleAccess = 'Create'
 
@@ -77,6 +77,10 @@ attrValues.add(singleListInternalName)
 
 WebUI.callTestCase(findTestCase('Sprint4/linkTestCases/linkTestCase_DeleteAttributeByInternalName'), [('InternalNames') : attrValues], 
     FailureHandling.STOP_ON_FAILURE)
+
+WebUI.refresh()
+
+WebUI.delay(5)
 
 WebUI.click(findTestObject('Object Repository/Sprint6/button_Manage Permissions'))
 

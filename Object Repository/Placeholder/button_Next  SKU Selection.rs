@@ -4,10 +4,16 @@
    <name>button_Next  SKU Selection</name>
    <tag></tag>
    <elementGuidId>5d016ef1-6e3c-4ba1-8a75-d8bb14d54845</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//button[(text() = 'Next » SKU Selection' or . = 'Next » SKU Selection')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>

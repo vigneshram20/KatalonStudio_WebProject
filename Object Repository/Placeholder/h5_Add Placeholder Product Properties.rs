@@ -4,10 +4,16 @@
    <name>h5_Add Placeholder Product Properties</name>
    <tag></tag>
    <elementGuidId>2c44da1e-f6d2-4a97-91dc-7d7944daeb90</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//h5[(text() = 'Add Placeholder: Product Properties' or . = 'Add Placeholder: Product Properties')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>

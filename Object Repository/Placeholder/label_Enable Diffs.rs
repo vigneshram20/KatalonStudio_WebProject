@@ -4,10 +4,16 @@
    <name>label_Enable Diffs</name>
    <tag></tag>
    <elementGuidId>2a441a14-e506-4d4e-ab9d-50000bd9f512</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//label[(text() = 'Enable Diffs? ' or . = 'Enable Diffs? ')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>

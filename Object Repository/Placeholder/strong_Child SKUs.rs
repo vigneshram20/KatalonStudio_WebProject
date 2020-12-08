@@ -4,10 +4,16 @@
    <name>strong_Child SKUs</name>
    <tag></tag>
    <elementGuidId>6a758c87-2c99-4927-9c3d-010c96b321b6</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//strong[(text() = 'Child SKUs' or . = 'Child SKUs')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>

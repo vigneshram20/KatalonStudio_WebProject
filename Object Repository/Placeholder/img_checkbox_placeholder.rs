@@ -1,58 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input</name>
+   <name>img_checkbox_placeholder</name>
    <tag></tag>
-   <elementGuidId>d4dbb965-ef90-48bc-8ee6-4fc6971761f8</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <elementGuidId>2e224371-3eb8-477c-a177-6ccac0765c23</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@src = '/static/media/close.cfb08aa2.svg' and @alt = 'Close']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//td[contains(@class,'searchResultTable')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>input</value>
+      <value>img</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>type</name>
+      <name>src</name>
       <type>Main</type>
-      <value>text</value>
+      <value>/static/media/close.cfb08aa2.svg</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>placeholder</name>
+      <name>alt</name>
       <type>Main</type>
-      <value>Start typing or select...</value>
+      <value>Close</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;modalWindow&quot;)/div[@class=&quot;modal confirmation_ws_modal_xl__2govG confirmation_delete_conf__1TYwf&quot;]/div[@class=&quot;modal-dialog&quot;]/div[@class=&quot;modal-content&quot;]/div[@class=&quot;modal-body confirmation_ws_modal_body__2GNFW&quot;]/div[@class=&quot;addPlaceholder_addplaceholder__1AY0q&quot;]/div[@class=&quot;form-group row false fields&quot;]/div[@class=&quot;col-sm-7&quot;]/div[@class=&quot;fieldContainer_inherit_element__3tUwM&quot;]/div[@class=&quot;typeahead_search searchSelect_select_search_form__3mcuC&quot;]/input[1]</value>
+      <value>id(&quot;modalWindow&quot;)/div[@class=&quot;modal confirmation_ws_modal_xl__2govG confirmation_delete_conf__1TYwf&quot;]/div[@class=&quot;modal-dialog&quot;]/div[@class=&quot;modal-content&quot;]/div[@class=&quot;modal-header&quot;]/button[@class=&quot;close&quot;]/img[1]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:attributes</name>
+      <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>(//input[@value=''])[2]</value>
+      <value>//div[@id='modalWindow']/div/div/div/div/button/img</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:idRelative</name>
+      <name>xpath:img</name>
       <type>Main</type>
-      <value>//div[@id='modalWindow']/div/div/div/div[2]/div/div[5]/div/div/div/input</value>
+      <value>//img[@alt='Close']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[5]/div/div/div/input</value>
+      <value>//div[3]/div/div/div/div/button/img</value>
    </webElementXpaths>
 </WebElementEntity>

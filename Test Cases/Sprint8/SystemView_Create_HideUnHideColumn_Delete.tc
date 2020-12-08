@@ -13,14 +13,14 @@
       <name>viewType</name>
    </variable>
    <variable>
-      <defaultValue>'PB'</defaultValue>
+      <defaultValue>'WE'</defaultValue>
       <description></description>
       <id>8fd58249-40d3-4725-91ed-2f3c2eba0360</id>
       <masked>false</masked>
       <name>Brand</name>
    </variable>
    <variable>
-      <defaultValue>'Tabletop'</defaultValue>
+      <defaultValue>'Lighting'</defaultValue>
       <description></description>
       <id>2a523eec-c238-4b52-bc12-754fb334b3e9</id>
       <masked>false</masked>

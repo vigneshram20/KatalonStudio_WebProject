@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//tr//td[1]//div[.='${param1}']//ancestor::tr//td[3]//div[.='${param2}']</value>
+         <value>//tr//td[1]//div[1][.='${param1}']/..//div[2][.='${param2}']//ancestor::tr//td[3]//div[1][.='${param3}']/..//div[2][.='${param4}']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

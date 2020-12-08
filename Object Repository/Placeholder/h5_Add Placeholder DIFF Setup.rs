@@ -4,10 +4,16 @@
    <name>h5_Add Placeholder DIFF Setup</name>
    <tag></tag>
    <elementGuidId>9fa5fe1f-66a3-4ef3-9351-277d3f39a519</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//h5[(text() = 'Add Placeholder: DIFF Setup' or . = 'Add Placeholder: DIFF Setup')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>

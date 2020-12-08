@@ -6,11 +6,11 @@
    <elementGuidId>e7c3b08f-53ef-4d27-adec-0d48c974c350</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//table//td[2][.='${attributeName}']/../td[3][.='${paramName}']/../td[4][.='${permission}']/../td[6][.='${roleName}']/../td[1]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//table//td[2][.='${attributeName}']/../td[3][.='${paramName}']/../td[4][.='${permission}']/../td[5][.='${roleName}']/../td[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

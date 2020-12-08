@@ -4,10 +4,16 @@
    <name>label_Assortment Type</name>
    <tag></tag>
    <elementGuidId>a3921c04-bdfd-4ad9-9418-6aab29cb37ea</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//label[(text() = 'Assortment Type *' or . = 'Assortment Type *')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>

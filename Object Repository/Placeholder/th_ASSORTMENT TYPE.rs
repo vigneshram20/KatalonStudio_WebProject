@@ -4,10 +4,16 @@
    <name>th_ASSORTMENT TYPE</name>
    <tag></tag>
    <elementGuidId>d2151d88-d5d3-4f91-a9fb-8aec6160c264</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//th[(text() = 'ASSORTMENT TYPE' or . = 'ASSORTMENT TYPE')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>

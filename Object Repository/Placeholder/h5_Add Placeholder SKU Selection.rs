@@ -4,10 +4,16 @@
    <name>h5_Add Placeholder SKU Selection</name>
    <tag></tag>
    <elementGuidId>7da0eaf9-c543-40f1-a15a-4a6a6d6f375c</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//h5[(text() = 'Add Placeholder: SKU Selection' or . = 'Add Placeholder: SKU Selection')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>

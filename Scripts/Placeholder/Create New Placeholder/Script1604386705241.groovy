@@ -22,17 +22,31 @@ WebUI.callTestCase(findTestCase('Common/Launch the Browser'), [('PageURL') : Glo
 'Verify Login Successfully'
 WebUI.callTestCase(findTestCase('Sprint1/Login/VerifyLoginSuccessfully'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : SubMenu
+WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Libraries', ('SubMenuItem') : 'Manage List'
         , ('testPageLoadPerf') : true], FailureHandling.STOP_ON_FAILURE)
 
+String viewName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'(('QA_AUT_' + viewType) + '_', 'ddMMMyyHHmmss')
+
+String placeholderName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA Automation Placeholder ', 
+    'ddMMMyyHHmmss')
+
+String FullSeasonName = (((Brand + ' ') + Division) + ' ') + Season
+
+WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_CreateView'), [('viewName') : viewName, ('viewType') : viewType
+        , ('roleToAssign') : '', ('fromHamburger') : 'false', ('libraryName') : libraryName, ('attributesList') : attributesList
+        , ('lockColumn') : '', ('groupBy') : '', ('sortBy') : '', ('Brand') : Brand, ('Division') : Division, ('Season') : FullSeasonName], 
+    FailureHandling.STOP_ON_FAILURE)
+
 WebUI.click(findTestObject('Object Repository/Placeholder/button_Add'))
+
+WebUI.mouseOver(findTestObject('Placeholder/button_Create Placeholder'))
 
 WebUI.click(findTestObject('Object Repository/Placeholder/button_New'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/h5_Add Placeholder Product Properties'), 0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/div_Placeholders will be added to the Libra_edcff9'), 
-    0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/div_Placeholders will be added to the Libra_edcff9', 
+        [('season') : FullSeasonName]), 0)
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/label_Department'), 0)
 
@@ -56,68 +70,63 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/p_This 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/p_Selecting No will result in a Non-Style S_03d028'), 
     0)
 
-WebUI.selectOptionByValue(findTestObject('Object Repository/Placeholder/select_-- Select --805 - WE LIGHTING'), '805', true)
+WebUI.selectOptionByLabel(findTestObject('Placeholder/Select_Department'), Department, true)
 
-WebUI.selectOptionByValue(findTestObject('Object Repository/Placeholder/select_-- Select --1 - TABLE LAMPS2 - FLOOR_b7454a'), 
-    '805-1', true)
+WebUI.selectOptionByLabel(findTestObject('Placeholder/Select_ClassDropdown'), ClassDropdown, true)
 
-WebUI.selectOptionByValue(findTestObject('Object Repository/Placeholder/select_-- Select --1 - WOOD2 - ACRYLIC3 - C_ff3df7'), 
-    '805-1-1', true)
+WebUI.selectOptionByLabel(findTestObject('Placeholder/Select_SubClass'), SubClass, true)
 
-WebUI.setText(findTestObject('Object Repository/Placeholder/input'), 'we932j')
+WebUI.sendKeys(findTestObject('Placeholder/CollectionWidget'), CollectionValue)
 
-WebUI.click(findTestObject('Object Repository/Placeholder/li_WE932J - WE BELLA COLLECTION'))
+WebUI.click(findTestObject('Placeholder/li_CollectionListDisplay', [('collection') : CollectionValue]))
 
-WebUI.setText(findTestObject('Object Repository/Placeholder/input__proddescription'), 'Automation New Placeholder 123')
+WebUI.sendKeys(findTestObject('Object Repository/Placeholder/input__proddescription'), placeholderName)
 
 WebUI.click(findTestObject('Object Repository/Placeholder/button_Next  DIFF Setup'))
 
-WebUI.rightClick(findTestObject('Object Repository/Placeholder/h5_Add Placeholder DIFF Setup'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/h5_Add Placeholder DIFF Setup'), 0)
 
-WebUI.rightClick(findTestObject('Object Repository/Placeholder/p_Product 805 - WE LIGHTING  1 - TABLE LAMP_ea690d'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/label_DIFF 1'), 0)
 
-WebUI.rightClick(findTestObject('Object Repository/Placeholder/label_DIFF 1'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/label_DIFF 1 Values'), 0)
 
-WebUI.rightClick(findTestObject('Object Repository/Placeholder/label_DIFF 1 Values'))
+WebUI.selectOptionByLabel(findTestObject('Placeholder/select_DIFF 1'), DIFF1, true)
 
-WebUI.selectOptionByValue(findTestObject('Object Repository/Placeholder/select_Start typing or selectColorDateFabri_582178'), 
-    'color', true)
+WebUI.sendKeys(findTestObject('Placeholder/Diff1ValueInput'), DIFF1Value)
 
-WebUI.setText(findTestObject('Object Repository/Placeholder/input_1'), 'black')
-
-WebUI.click(findTestObject('Object Repository/Placeholder/li_Black ( BLACK )'))
-
+WebUI.click(findTestObject('Placeholder/Diff1ValueListItems',[('diffvalue'):DIFF1Value]))
+/*
 WebUI.setText(findTestObject('Object Repository/Placeholder/input_1_2'), 'blue')
 
-WebUI.click(findTestObject('Object Repository/Placeholder/li_Blue ( BLUE )'))
+WebUI.click(findTestObject('Object Repository/Placeholder/li_Blue ( BLUE )'))*/
 
 WebUI.click(findTestObject('Object Repository/Placeholder/button_Next  SKU Selection'))
 
-WebUI.rightClick(findTestObject('Object Repository/Placeholder/h5_Add Placeholder SKU Selection'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/h5_Add Placeholder SKU Selection'), 0)
 
-WebUI.rightClick(findTestObject('Object Repository/Placeholder/div_Selected placeholder items will be adde_914ecf'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/div_Selected placeholder items will be adde_914ecf'), 0)
 
-WebUI.rightClick(findTestObject('Object Repository/Placeholder/strong_Product  Parent SKU'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/strong_Product  Parent SKU'), 0)
 
-WebUI.rightClick(findTestObject('Object Repository/Placeholder/th_Product Description'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/th_Product Description'), 0)
 
-WebUI.rightClick(findTestObject('Object Repository/Placeholder/th_Item Type'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/th_Item Type'), 0)
 
-WebUI.rightClick(findTestObject('Object Repository/Placeholder/td_Automation New Placeholder 123'))
+WebUI.verifyElementPresent(findTestObject('Placeholder/td_ItemDescriptionRowValue',[('placeholdervalue'):placeholderName]), 0)
 
-WebUI.rightClick(findTestObject('Object Repository/Placeholder/td_Regular'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/td_Regular'), 0)
 
-WebUI.rightClick(findTestObject('Object Repository/Placeholder/strong_Child SKUs'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/strong_Child SKUs'), 0)
 
-WebUI.rightClick(findTestObject('Object Repository/Placeholder/p_2 Child SKUs - 0 selected'))
+WebUI.verifyElementPresent(findTestObject('Placeholder/p_Child SKUs_Selected'), 0)
 
-WebUI.rightClick(findTestObject('Object Repository/Placeholder/th_ITEM DESCRIPTION'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/th_ITEM DESCRIPTION'), 0)
 
-WebUI.rightClick(findTestObject('Object Repository/Placeholder/th_ITEM TYPE (1)'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/th_ITEM TYPE (1)'), 0)
 
-WebUI.rightClick(findTestObject('Object Repository/Placeholder/th_ASSORTMENT TYPE'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/th_ASSORTMENT TYPE'), 0)
 
-WebUI.rightClick(findTestObject('Object Repository/Placeholder/td_Automation New Placeholder 123 Black ( BLACK )'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/td_Automation New Placeholder 123 Black ( BLACK )'), 0)
 
 WebUI.rightClick(findTestObject('Object Repository/Placeholder/span_Regular'))
 
@@ -135,7 +144,7 @@ WebUI.rightClick(findTestObject('Object Repository/Placeholder/button_Back'))
 
 WebUI.rightClick(findTestObject('Object Repository/Placeholder/button_Cancel'))
 
-WebUI.rightClick(findTestObject('Object Repository/Placeholder/img'))
+WebUI.rightClick(findTestObject('Placeholder/img_checkbox_placeholder'))
 
 WebUI.click(findTestObject('Object Repository/Placeholder/button_Next  Add SKUs to Season'))
 

@@ -4,10 +4,16 @@
    <name>p_Product 805 - WE LIGHTING  1 - TABLE LAMP_ea690d</name>
    <tag></tag>
    <elementGuidId>332e685b-bb1b-49e2-a0e3-e843567fab69</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//p[(text() = 'Product: 805 - WE LIGHTING / 1 - TABLE LAMPS / 1 - WOOD / Automation New Placeholder 123' or . = 'Product: 805 - WE LIGHTING / 1 - TABLE LAMPS / 1 - WOOD / Automation New Placeholder 123')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>

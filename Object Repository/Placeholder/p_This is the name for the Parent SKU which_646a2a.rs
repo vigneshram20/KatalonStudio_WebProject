@@ -4,10 +4,16 @@
    <name>p_This is the name for the Parent SKU which_646a2a</name>
    <tag></tag>
    <elementGuidId>59b8b50e-ba10-42ad-9d5a-38bbad16805b</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//p[(text() = 'This is the name for the Parent SKU which all Child SKUs will inherit' or . = 'This is the name for the Parent SKU which all Child SKUs will inherit')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>

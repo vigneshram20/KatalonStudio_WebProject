@@ -31,10 +31,10 @@ long domLoad = CustomKeywords.'myKeywords.customKeywords.checkPagePerformanceNow
 CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, 'Login Page', domLoad, pageLoad)
 
 'Set Username'
-WebUI.setText(findTestObject('Sprint1/LoginPage/input_Login_username'), Username)
+WebUI.sendKeys(findTestObject('Sprint1/LoginPage/input_Login_username'), Username)
 
 'Set Password'
-WebUI.setText(findTestObject('Sprint1/LoginPage/input_Login_password'), Password)
+WebUI.sendKeys(findTestObject('Sprint1/LoginPage/input_Login_password'), Password)
 
 'Click Login'
 WebUI.click(findTestObject('Sprint1/LoginPage/button_Login'))
@@ -44,7 +44,7 @@ WebUI.enableSmartWait()
 'Verify Hamburger menu displayed'
 WebUI.verifyElementPresent(findTestObject('Common Objects/img_HamburgerMenu'), 0)
 
-if(verifyManageList.equals('true')){
-WebUI.verifyElementClickable(findTestObject('Sprint1/LandingPage/div_Manage List'), FailureHandling.STOP_ON_FAILURE)
+if (verifyManageList.equals('true')) {
+    WebUI.verifyElementClickable(findTestObject('Sprint1/LandingPage/div_Manage List'), FailureHandling.STOP_ON_FAILURE)
 }
 

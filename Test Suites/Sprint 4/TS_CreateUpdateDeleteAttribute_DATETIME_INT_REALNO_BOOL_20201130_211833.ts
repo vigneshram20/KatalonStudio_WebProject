@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TS_CreateUpdateDeleteAttribute_DATETIME_INT_REALNO_BOOL_20201118_171219</name>
+   <name>TS_CreateUpdateDeleteAttribute_DATETIME_INT_REALNO_BOOL_20201130_211833</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,7 +9,7 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <testSuiteGuid>95f9296b-53bf-48dc-a757-7fa6b7d2b873</testSuiteGuid>
+   <testSuiteGuid>52d653ab-aca2-4df9-a392-01b3fd556250</testSuiteGuid>
    
 <testCaseLink>
       <guid>286fdd60-f76a-4443-8b7a-3dfdc6e33332</guid>

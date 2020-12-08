@@ -4,10 +4,16 @@
    <name>th_ITEM TYPE (1)</name>
    <tag></tag>
    <elementGuidId>2d10ad11-d482-482b-9f6a-e149abea1007</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//th[(text() = 'ITEM TYPE' or . = 'ITEM TYPE')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>

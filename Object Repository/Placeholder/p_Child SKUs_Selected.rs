@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>p_2 Child SKUs - 0 selected</name>
+   <name>p_Child SKUs_Selected</name>
    <tag></tag>
    <elementGuidId>54ed0ccd-98f2-43f2-b8c1-df7b9c0b2899</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//p[(text() = '2 Child SKUs - 0 selected' or . = '2 Child SKUs - 0 selected')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
