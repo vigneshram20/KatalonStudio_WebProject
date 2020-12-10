@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//p[(text() = '2 Child SKUs - 0 selected' or . = '2 Child SKUs - 0 selected')]</value>
+         <value>//p[(text() = '${prodCount} Child SKUs - 0 selected' or . = '${prodCount} Child SKUs - 0 selected')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -31,7 +31,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>2 Child SKUs - 0 selected</value>
+      <value>${prodCount} Child SKUs - 0 selected</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

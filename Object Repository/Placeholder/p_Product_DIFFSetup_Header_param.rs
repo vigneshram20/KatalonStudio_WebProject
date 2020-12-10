@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>p_Product 805 - WE LIGHTING  1 - TABLE LAMP_ea690d</name>
+   <name>p_Product_DIFFSetup_Header_param</name>
    <tag></tag>
    <elementGuidId>332e685b-bb1b-49e2-a0e3-e843567fab69</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//p[(text() = 'Product: 805 - WE LIGHTING / 1 - TABLE LAMPS / 1 - WOOD / Automation New Placeholder 123' or . = 'Product: 805 - WE LIGHTING / 1 - TABLE LAMPS / 1 - WOOD / Automation New Placeholder 123')]</value>
+         <value>//p[(text() = 'Product: ${department} / ${class} / ${subclass} / ${productdesc}' or . = 'Product: ${department} / ${class} / ${subclass} / ${productdesc}')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -31,7 +31,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Product: 805 - WE LIGHTING / 1 - TABLE LAMPS / 1 - WOOD / Automation New Placeholder 123</value>
+      <value>Product: ${department} / ${class} / ${subclass} / ${productdesc}</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

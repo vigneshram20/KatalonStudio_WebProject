@@ -86,6 +86,8 @@ WebUI.click(findTestObject('Object Repository/Placeholder/button_Next  DIFF Setu
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/h5_Add Placeholder DIFF Setup'), 0)
 
+WebUI.verifyElementPresent(findTestObject('Placeholder/p_Product_DIFFSetup_Header_param',[('department'):Department,('class'):ClassDropdown,('subclass'):SubClass,('productdesc'):placeholderName]), 0)
+
 WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/label_DIFF 1'), 0)
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/label_DIFF 1 Values'), 0)
@@ -94,17 +96,18 @@ WebUI.selectOptionByLabel(findTestObject('Placeholder/select_DIFF 1'), DIFF1, tr
 
 WebUI.sendKeys(findTestObject('Placeholder/Diff1ValueInput'), DIFF1Value)
 
-WebUI.click(findTestObject('Placeholder/Diff1ValueListItems',[('diffvalue'):DIFF1Value]))
+WebUI.click(findTestObject('Placeholder/Diff1ValueListItems', [('diffvalue') : DIFF1Value]))
+
 /*
 WebUI.setText(findTestObject('Object Repository/Placeholder/input_1_2'), 'blue')
 
 WebUI.click(findTestObject('Object Repository/Placeholder/li_Blue ( BLUE )'))*/
-
 WebUI.click(findTestObject('Object Repository/Placeholder/button_Next  SKU Selection'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/h5_Add Placeholder SKU Selection'), 0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/div_Selected placeholder items will be adde_914ecf'), 0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/div_Selected placeholder items will be adde_914ecf',[('department'):Department,('season'):FullSeasonName]), 
+    0)
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/strong_Product  Parent SKU'), 0)
 
@@ -112,13 +115,14 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/th_Prod
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/th_Item Type'), 0)
 
-WebUI.verifyElementPresent(findTestObject('Placeholder/td_ItemDescriptionRowValue',[('placeholdervalue'):placeholderName]), 0)
+WebUI.verifyElementPresent(findTestObject('Placeholder/td_ItemDescriptionRowValue', [('placeholdername') : placeholderName]), 
+    0)
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/td_Regular'), 0)
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/strong_Child SKUs'), 0)
 
-WebUI.verifyElementPresent(findTestObject('Placeholder/p_Child SKUs_Selected'), 0)
+WebUI.verifyElementPresent(findTestObject('Placeholder/p_Child SKUs_Selected',[('prodCount'):"1"]), 0)
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/th_ITEM DESCRIPTION'), 0)
 
@@ -126,7 +130,8 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/th_ITEM
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/th_ASSORTMENT TYPE'), 0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/td_Automation New Placeholder 123 Black ( BLACK )'), 0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Placeholder/td_Automation New Placeholder 123 Black ( BLACK )'), 
+    0)
 
 WebUI.rightClick(findTestObject('Object Repository/Placeholder/span_Regular'))
 

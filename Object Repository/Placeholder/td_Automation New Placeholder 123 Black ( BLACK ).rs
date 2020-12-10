@@ -4,10 +4,16 @@
    <name>td_Automation New Placeholder 123 Black ( BLACK )</name>
    <tag></tag>
    <elementGuidId>de07e88d-e014-4fd6-b9e5-3e44e9f1ee8d</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//td[(text() = 'Automation New Placeholder 123: Black ( BLACK )' or . = 'Automation New Placeholder 123: Black ( BLACK )')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>

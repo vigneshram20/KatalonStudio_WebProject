@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//div[(text() = 'Selected placeholder items will be added to the Library and assigned to [805 - WE LIGHTING], [WE Lighting Fall 2020] as NEW' or . = 'Selected placeholder items will be added to the Library and assigned to [805 - WE LIGHTING], [WE Lighting Fall 2020] as NEW')]</value>
+         <value>//div[(text() = 'Selected placeholder items will be added to the Library and assigned to [${}], [WE Lighting Fall 2020] as NEW' or . = 'Selected placeholder items will be added to the Library and assigned to [${}], [WE Lighting Fall 2020] as NEW')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -31,7 +31,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Selected placeholder items will be added to the Library and assigned to [805 - WE LIGHTING], [WE Lighting Fall 2020] as NEW</value>
+      <value>Selected placeholder items will be added to the Library and assigned to [${department}], [${season}] as NEW</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
