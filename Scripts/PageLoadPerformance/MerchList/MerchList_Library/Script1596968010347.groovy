@@ -38,8 +38,6 @@ String sheetName = CustomKeywords.'myKeywords.customKeywords.currentZonetimeStam
 
 CustomKeywords.'myKeywords.customKeywords.createSheetAndColumn'(sheetName)
 
-CustomKeywords.'myKeywords.GoogleSheetsAPI.createSheetAndColumn'(sheetName)
-
 GlobalVariable.ExcelSheetName = sheetName
 
 String[] Department = Division.toString().split('>')
@@ -87,7 +85,7 @@ for (int outerIteration = 0; outerIteration < 2; outerIteration++) {
 
         CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, 'User Profile', domLoad, pageLoad)
 
-        CustomKeywords.'myKeywords.GoogleSheetsAPI.writeGoogleSheets'(sheetName, 'User Profile', domLoad, pageLoad)
+      
     }
     catch (Exception ex) {
         throw new Exception('User Profile Exception-___Check Code')
@@ -171,11 +169,8 @@ for (int outerIteration = 0; outerIteration < 2; outerIteration++) {
 
             CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, (((SubMenu + ' > ') + BrandConcat) + ' - Page ') + 
                 innerIteration, domLoad, pageLoad)
-
-            CustomKeywords.'myKeywords.GoogleSheetsAPI.writeGoogleSheets'(sheetName, (((SubMenu + ' > ') + BrandConcat) + 
-                ' - Page ') + innerIteration, domLoad, pageLoad)
 			
-			WebUI.callTestCase(findTestCase('PageLoadPerformance/linkTestCase_ManageList_UpdatePerfTest'), [('pageNo') : innerIteration], FailureHandling.STOP_ON_FAILURE)
+			//WebUI.callTestCase(findTestCase('PageLoadPerformance/linkTestCases/linkTestCase_ManageList_UpdatePerfTest'), [('pageNo') : innerIteration], FailureHandling.STOP_ON_FAILURE)
         }
         catch (com.kms.katalon.core.exception.StepFailedException ex) {
 			throw new Exception("Test Failed")
@@ -233,84 +228,6 @@ for (int outerIteration = 0; outerIteration < 2; outerIteration++) {
 		CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, ((("VLL" + ' > ') + BrandConcat) + ' - Page ') +
 			innerIteration, domLoad, pageLoad)
 	
-		CustomKeywords.'myKeywords.GoogleSheetsAPI.writeGoogleSheets'(sheetName, ((("VLL" + ' > ') + BrandConcat) +
-			' - Page ') + innerIteration, domLoad, pageLoad)
-	
 	}
 	
 }
-
-
-
-List<Object> innerList = new ArrayList<Object>()
-
-innerList.add('Pagination - Average Result')
-
-CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList, sheetName + '!E4')
-
-List<Object> innerList2 = new ArrayList<Object>()
-
-innerList2.add('=AVERAGE(C4,C6,C8,C10,C12,C20,C22,C24,C26,C28)')
-
-CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList2, sheetName + '!E5')
-
-List<Object> innerList3 = new ArrayList<Object>()
-
-innerList3.add('Pagination - Normalized Result')
-
-CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList3, sheetName + '!E6')
-
-List<Object> innerList4 = new ArrayList<Object>()
-
-innerList4.add('=E5-3000')
-
-CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList4, sheetName + '!E7')
-
-List<Object> innerList5 = new ArrayList<Object>()
-
-innerList5.add('Update - Average Result')
-
-CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList5, sheetName + '!E9')
-
-List<Object> innerList6 = new ArrayList<Object>()
-
-innerList6.add('=AVERAGE(C5,C7,C9,C11,C13,C21,C23,C25,C27,C29)')
-
-CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList6, sheetName + '!E10')
-
-List<Object> innerList7 = new ArrayList<Object>()
-
-innerList7.add('Update - Normalized Result')
-
-CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList7, sheetName + '!E11')
-
-List<Object> innerList8 = new ArrayList<Object>()
-
-innerList8.add('=E10-3000')
-
-CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList8, sheetName + '!E12')
-
-List<Object> innerList9 = new ArrayList<Object>()
-
-innerList9.add('VLL - Average Result')
-
-CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList9, sheetName + '!E14')
-
-List<Object> innerList10 = new ArrayList<Object>()
-
-innerList10.add('=average(C14:C18,C30:C34)')
-
-CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList10, sheetName + '!E15')
-
-List<Object> innerList11 = new ArrayList<Object>()
-
-innerList11.add('VLL - Normalized Result')
-
-CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList11, sheetName + '!E16')
-
-List<Object> innerList12 = new ArrayList<Object>()
-
-innerList12.add('=E15-3000')
-
-CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList12, sheetName + '!E17')
-

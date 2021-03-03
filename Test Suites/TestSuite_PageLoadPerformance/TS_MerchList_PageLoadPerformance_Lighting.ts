@@ -14,7 +14,7 @@
       <guid>25248cfd-0fa0-4d31-90b3-a0ae57c00ceb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/PageLoadPerformance/MerchList_Library</testCaseId>
+      <testCaseId>Test Cases/PageLoadPerformance/MerchList/MerchList_Library</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>

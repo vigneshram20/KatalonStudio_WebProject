@@ -90,7 +90,7 @@ WebUI.waitForElementVisible(findTestObject('Sprint1/Manage Season Page/th_column
 
 WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_columnHeaderSeasonsList'), 60)
 
-WebUI.click(findTestObject('Sprint5/div_ActionsButtonOfParameterizedEntity', [('column1') : countryID, ('column2') : countryName]))
+/*WebUI.click(findTestObject('Sprint5/div_ActionsButtonOfParameterizedEntity', [('column1') : countryID, ('column2') : countryName]))
 
 WebUI.click(findTestObject('Object Repository/Sprint5/a_Update'))
 
@@ -179,5 +179,5 @@ WebUI.waitForElementClickable(findTestObject('Sprint1/Manage Season Page/th_colu
 WebUI.verifyElementNotPresent(findTestObject('Sprint5/div_ActionsButtonOfParameterizedEntity', [('column1') : countryIDEdited
             , ('column2') : countryNameEdited]), 0)
 
-WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_DeleteView'), [('viewName') : viewName], FailureHandling.STOP_ON_FAILURE)
+*/WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_DeleteView'), [('viewName') : viewName], FailureHandling.STOP_ON_FAILURE)
 

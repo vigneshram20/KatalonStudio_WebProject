@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TS_CreateUpdateDeleteLadingPort</name>
+   <name>TS_Season_CustomView_Create_OntheFlyConfig_Delete</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>1</numberOfRerun>
-   <pageLoadTimeout>10</pageLoadTimeout>
+   <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>true</rerunFailedTestCasesOnly>
-   <testSuiteGuid>ff08bf13-33a9-46b1-9bc2-967a8ca1a883</testSuiteGuid>
+   <testSuiteGuid>0bcb7726-a1c1-48a4-b3aa-9d7ab411a5da</testSuiteGuid>
    <testCaseLink>
-      <guid>ce020871-18b9-433e-904b-021de6bf7a54</guid>
+      <guid>a8ee8d2a-4b79-4644-a411-48246a0ac7e1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Sprint5/CreateUpdateDeleteLadingPort</testCaseId>
+      <testCaseId>Test Cases/Sprint6/CustomView_Create_OntheFlyConfig_Delete</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>ed07ebcb-65df-4ed4-a85e-92ee9df1a44b</variableId>
+         <variableId>39c6c3d4-bfda-4b9f-9a5c-5ce738b1236d</variableId>
       </variableLink>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>e6e45cc9-df16-4a46-9d0d-5a6d6de5566a</variableId>
+         <variableId>0bcd9acd-f6cc-4c2c-8dbf-0c8bdf66c4e1</variableId>
       </variableLink>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>74e9bf31-cc13-46be-b8e6-100dbe20563d</variableId>
+         <variableId>bb1bc45a-af34-4af9-9695-7ac65fbbe591</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

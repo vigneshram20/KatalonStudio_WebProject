@@ -14,7 +14,7 @@
       <guid>5692bec0-66c4-488a-ae31-e27751168d18</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/PageLoadPerformance/MerchListPagination_SingleSession_TimeOutExpiryTest</testCaseId>
+      <testCaseId>Test Cases/PageLoadPerformance/MerchList/MerchListPagination_SingleSession_TimeOutExpiryTest</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>

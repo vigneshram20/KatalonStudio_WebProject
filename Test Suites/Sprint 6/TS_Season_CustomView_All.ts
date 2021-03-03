@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TS_CustomView_All_20200805_200524</name>
+   <name>TS_Season_CustomView_All</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,9 +9,20 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>true</rerunFailedTestCasesOnly>
-   <testSuiteGuid>67327955-d360-4766-b8ea-0a3f9b07bf70</testSuiteGuid>
-   
-<testCaseLink>
+   <testSuiteGuid>00ce9c10-9603-46f6-963f-f8ef4151b906</testSuiteGuid>
+   <testCaseLink>
+      <guid>3272ff9e-53d7-41e1-8d98-60ccee2e9551</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Sprint6/CustomView_Create_HideUnHide_Delete</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>079eafcc-9887-4297-ae39-212d3d1f86c5</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
       <guid>e122c49c-42b3-4177-87de-167aaf6a4c2c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -35,7 +46,7 @@
          <variableId>bb1bc45a-af34-4af9-9695-7ac65fbbe591</variableId>
       </variableLink>
    </testCaseLink>
-<testCaseLink>
+   <testCaseLink>
       <guid>0c89f1ee-a88b-4a31-b905-e213ef731d0a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -47,7 +58,19 @@
          <variableId>53e300b9-27df-42f7-9ec7-a384886d20df</variableId>
       </variableLink>
    </testCaseLink>
-<testCaseLink>
+   <testCaseLink>
+      <guid>f67f8729-5d30-4983-9d26-24b65aab9248</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Sprint6/CustomView_CreateCopyDelete</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>724694ef-fe35-4c14-b108-fd1e171cac80</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
       <guid>3074977a-ac50-45ab-a015-7d1af7454cb9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -59,7 +82,7 @@
          <variableId>bcb01c25-49cb-4906-a56b-8129fe156c5d</variableId>
       </variableLink>
    </testCaseLink>
-<testCaseLink>
+   <testCaseLink>
       <guid>c085d287-a190-4755-8053-3849329fb2c4</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -89,7 +112,7 @@
          <variableId>5e0768ab-5250-4c0c-8025-e8a9c3744935</variableId>
       </variableLink>
    </testCaseLink>
-<testCaseLink>
+   <testCaseLink>
       <guid>fdaf8452-291b-49e1-a4c9-a714d51a16d4</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

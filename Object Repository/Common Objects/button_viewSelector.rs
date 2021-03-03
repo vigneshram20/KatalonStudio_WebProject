@@ -6,12 +6,12 @@
    <elementGuidId>0108b225-7222-4ddf-953f-853ace95bbcc</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//button[contains(@class, 'viewControl_dropbtn') and not(contains(@title,'SKU'))]</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>//button[contains(@class, 'viewControl_dropbtn')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//button[contains(@class, 'viewControl_dropbtn') and not(contains(@title,'SKU Count -'))]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

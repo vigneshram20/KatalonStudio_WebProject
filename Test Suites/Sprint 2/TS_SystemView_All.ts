@@ -62,7 +62,7 @@
       <guid>2e57224d-a4d3-4192-927e-31492cc5a1b6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/PageLoadPerformance/linkTestCase_ManageList_UpdatePerfTest</testCaseId>
+      <testCaseId>Test Cases/PageLoadPerformance/linkTestCases/linkTestCase_ManageList_UpdatePerfTest</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>

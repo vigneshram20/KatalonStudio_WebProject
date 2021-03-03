@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TS_CreateUpdateDeleteAttribute_USERREF_HYPERLINK_IMAGE</name>
+   <name>TS_CreateUpdateDeleteAttribute_USERREF_HYPERLINK_IMAGE_20210303_231117</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,8 +9,9 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <testSuiteGuid>b38a6eed-e4dd-4100-b164-384dfea37484</testSuiteGuid>
-   <testCaseLink>
+   <testSuiteGuid>841e1b03-e9ae-4f41-870e-cd41dcb3135c</testSuiteGuid>
+   
+<testCaseLink>
       <guid>211d9c59-0a5f-4d07-b6eb-f4776259bbee</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -19,8 +20,8 @@
          <combinationType>ONE</combinationType>
          <id>cf244733-2fd4-4c32-89b0-75699a6f7e18</id>
          <iterationEntity>
-            <iterationType>RANGE</iterationType>
-            <value>16-17</value>
+            <iterationType>SPECIFIC</iterationType>
+            <value>18</value>
          </iterationEntity>
          <testDataId>Data Files/CreateAttribute</testDataId>
       </testDataLink>

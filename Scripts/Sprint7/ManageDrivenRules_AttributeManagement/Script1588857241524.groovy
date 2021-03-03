@@ -38,13 +38,13 @@ String Level1AttributeInternalName = 'QAL1' + dateFormat
 
 String Level1AttributeDisplayName = 'QA L1 ' + dateFormat
 
-String Level1ListValue = 'QA Test L1'
+String Level1ListValue = 'QATestL1'
 
 String Level2AttributeInternalName = 'QAL2' + dateFormat
 
 String Level2AttributeDisplayName = 'QA L2 ' + dateFormat
 
-String Level2ListValue = 'QA Test L2'
+String Level2ListValue = 'QATestL2'
 
 ArrayList<LinkedHashMap<String,String>> masterListArray = new ArrayList<LinkedHashMap<String,String>>()
 

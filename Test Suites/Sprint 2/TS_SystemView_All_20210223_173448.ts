@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TS_CustomView_Create_OntheFlyConfig_Delete</name>
+   <name>TS_SystemView_All_20210223_173448</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,29 +9,29 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>true</rerunFailedTestCasesOnly>
-   <testSuiteGuid>0bcb7726-a1c1-48a4-b3aa-9d7ab411a5da</testSuiteGuid>
+   <testSuiteGuid>7792ee5a-8eb9-4480-a0d3-901dc8f8ed81</testSuiteGuid>
    <testCaseLink>
-      <guid>a8ee8d2a-4b79-4644-a411-48246a0ac7e1</guid>
+      <guid>44f4d1d6-024f-4cb9-842b-b4c4831f1ecd</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Sprint6/CustomView_Create_OntheFlyConfig_Delete</testCaseId>
+      <testCaseId>Test Cases/Sprint2/SystemView_CreateEditDelete</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>39c6c3d4-bfda-4b9f-9a5c-5ce738b1236d</variableId>
+         <variableId>c3518911-dc2d-4f1a-88f8-a1d750d26a91</variableId>
       </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>2e57224d-a4d3-4192-927e-31492cc5a1b6</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/PageLoadPerformance/linkTestCases/linkTestCase_ManageList_UpdatePerfTest</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>0bcd9acd-f6cc-4c2c-8dbf-0c8bdf66c4e1</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>bb1bc45a-af34-4af9-9695-7ac65fbbe591</variableId>
+         <variableId>722fbddc-f8ed-4599-bf7b-9e49f3061db4</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

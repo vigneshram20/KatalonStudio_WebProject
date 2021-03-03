@@ -145,10 +145,10 @@ if (DataType.equals('String')) {
     WebUI.verifyElementPresent(findTestObject('Sprint4/label_Element Width'), 10)
 
     'Verify Label Element Height'
-    WebUI.verifyElementPresent(findTestObject('Sprint4/label_Element Height'), 10)
+   // WebUI.verifyElementPresent(findTestObject('Sprint4/label_Element Height'), 10)
 
     'Verify Label String Length'
-    WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_String Length'), 10)
+    //WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/label_String Length'), 10)
 
     if (AttributeType.equals('Text Area')) {
         'Verify Label Input Field Type'
@@ -221,18 +221,19 @@ if (DataType.equals('String')) {
     'Provide Text Box Width'
     WebUI.setText(findTestObject('Object Repository/Sprint4/input_Text Box Width_elementWidth'), ElementWidth)
 
-    'Provide Text Box Height'
-    WebUI.setText(findTestObject('Object Repository/Sprint4/input_Text Box Height_elementHeight'), ElementHeight)
-
-    'Provide String Length From'
-    WebUI.setText(findTestObject('Object Repository/Sprint4/input_String Length_rangeLength_from'), StringLengthFrom)
-
-    'Provide String Length To'
-    WebUI.setText(findTestObject('Object Repository/Sprint4/input_String Length_rangeLength_to'), StringLengthTo)
 
     if (AttributeType.equals('Text Area')) {
         'Input field Type radio button'
         WebUI.enhancedClick(findTestObject('Sprint4/radio_GlobalParameterized', [('YesOrNo') : InputFieldType, ('AttributeLabel') : 'inputFieldType']))
+		
+		'Provide Text Box Height'
+		WebUI.setText(findTestObject('Object Repository/Sprint4/input_Text Box Height_elementHeight'), ElementHeight)
+	
+		'Provide String Length From'
+		WebUI.setText(findTestObject('Object Repository/Sprint4/input_String Length_rangeLength_from'), StringLengthFrom)
+	
+		'Provide String Length To'
+		WebUI.setText(findTestObject('Object Repository/Sprint4/input_String Length_rangeLength_to'), StringLengthTo)
     }
     
     if ((AttributeType.equals('Multi List') || AttributeType.equals('Single List')) || AttributeType.equals('Driven')) {
@@ -311,7 +312,7 @@ if (DataType.equals('String')) {
 	WebUI.sendKeys(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), InternalName)
 	
     'Click Attributes Checkbox'
-    WebUI.enhancedClick(ActionsObject)
+    WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized',[('internalName'):InternalName]))
 	
 	'Search for the record'
 	WebUI.sendKeys(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), Keys.chord(Keys.CONTROL,'a',Keys.BACK_SPACE))
@@ -403,7 +404,7 @@ if (DataType.equals('String')) {
     WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Sprint4/input_Text Box Width_elementWidth'), 'value', 
         ElementWidth, 0)
 
-    'Verify Text Box Height'
+    /*'Verify Text Box Height'
     WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Sprint4/input_Text Box Height_elementHeight'), 'value', 
         ElementHeight, 0)
 
@@ -413,7 +414,7 @@ if (DataType.equals('String')) {
 
     'Verify String Length To'
     WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Sprint4/input_String Length_rangeLength_to'), 'value', 
-        StringLengthTo, 0)
+        StringLengthTo, 0)*/
 
     if (AttributeType.equals('Text Area')) {
         'Verify Input Field Type radio'
@@ -496,7 +497,7 @@ if (DataType.equals('String')) {
 	WebUI.sendKeys(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), InternalName)
 	
     'Click Attributes Checkbox'
-    WebUI.enhancedClick(ActionsObject)
+    WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/td_ExisingAttributeParameterized',[('internalName'):InternalName]))
 	
 	'Search for the record'
 	WebUI.sendKeys(findTestObject('Object Repository/Sprint4/input_Looking for a search - Attributes Tab'), Keys.chord(Keys.CONTROL,'a',Keys.BACK_SPACE))

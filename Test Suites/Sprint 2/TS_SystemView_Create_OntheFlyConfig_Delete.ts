@@ -14,7 +14,7 @@
       <guid>7b75871a-62c2-4be4-987a-c6f5fa9e38c0</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/PageLoadPerformance/linkTestCase_ManageList_UpdatePerfTest</testCaseId>
+      <testCaseId>Test Cases/PageLoadPerformance/linkTestCases/linkTestCase_ManageList_UpdatePerfTest</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>

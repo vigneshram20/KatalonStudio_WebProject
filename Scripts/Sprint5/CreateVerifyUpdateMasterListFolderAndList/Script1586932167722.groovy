@@ -270,7 +270,7 @@ WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.PAGE_DOWN))
 
 WebUI.delay(2)
 
-'Click Add to Selection'
+/*'Click Add to Selection'
 WebUI.enhancedClick(findTestObject('Object Repository/Sprint5/div_Add to Selection'))
 
 'Provide List Entry'
@@ -331,3 +331,4 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/textarea_De
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/div_td_parameterized_table_verification', [('param1') : list2
             , ('param2') : list1]), 0)
 
+*/

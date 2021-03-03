@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>UIPagePerf_ForMultipleViews</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>73bfdc1a-5348-450f-b48b-ddf764ed5747</testCaseGuid>
+   <variable>
+      <defaultValue>'Merch List'</defaultValue>
+      <description></description>
+      <id>ed5c0332-4d20-49d0-9482-738bdb20af62</id>
+      <masked>false</masked>
+      <name>SubMenu</name>
+   </variable>
+   <variable>
+      <defaultValue>GlobalVariable.ExcelSheetName</defaultValue>
+      <description></description>
+      <id>353ae235-b566-4097-889d-182822bf7869</id>
+      <masked>false</masked>
+      <name>sheetName</name>
+   </variable>
+   <variable>
+      <defaultValue>'WE'</defaultValue>
+      <description></description>
+      <id>fa617676-a8d7-4a40-8b72-2e41a86bf84b</id>
+      <masked>false</masked>
+      <name>Brand</name>
+   </variable>
+   <variable>
+      <defaultValue>'Furniture>806 - WE CASUAL SEATING'</defaultValue>
+      <description></description>
+      <id>61420bab-1b24-4777-ae23-fc1566960b3c</id>
+      <masked>false</masked>
+      <name>Division</name>
+   </variable>
+   <variable>
+      <defaultValue>'WE Furniture Fall 2020'</defaultValue>
+      <description></description>
+      <id>7b72451d-bfe8-4b91-9d3d-0b7955105097</id>
+      <masked>false</masked>
+      <name>Season</name>
+   </variable>
+   <variable>
+      <defaultValue>'FE - Image Perf Test View - Collection Image'</defaultValue>
+      <description></description>
+      <id>a778a7f6-1fbf-48ea-a5a4-3c23c15ef61d</id>
+      <masked>false</masked>
+      <name>viewName</name>
+   </variable>
+</TestCaseEntity>
