@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TS_CustomView_Create_ShareWithRole_Verify</name>
+   <name>TS_Season_CustomView_Create_ShareWithUser_Verify</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,35 +9,41 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <testSuiteGuid>e521ec95-e066-482b-b418-fff018a548c7</testSuiteGuid>
+   <testSuiteGuid>8ab329f6-48d4-4f54-9551-a8544a8acf6c</testSuiteGuid>
    <testCaseLink>
-      <guid>7442e1a6-1ca3-4b90-8e2d-bb6499ee35c3</guid>
+      <guid>0c8ed7dd-5cca-4322-b447-336ba3b4cf85</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Sprint6/CustomView_Create_ShareWithRole_Verify</testCaseId>
+      <testCaseId>Test Cases/Sprint6/CustomView_Create_ShareWithUser_Verify</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>b1add4da-c16f-4213-b85c-37225955aba5</variableId>
+         <variableId>14f54b7f-c7d9-45e0-8af2-4cf913d5c498</variableId>
       </variableLink>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>13e39e29-c3c2-479f-a4ec-c971b02fbc4f</variableId>
+         <variableId>33534d4e-0cb9-4731-bbe2-3f467fea1f45</variableId>
       </variableLink>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>fe586aae-ffcc-47d9-b2ad-63c3e08f4652</variableId>
+         <variableId>721babb9-818f-441c-9aa6-6362779cc983</variableId>
       </variableLink>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>5e0768ab-5250-4c0c-8025-e8a9c3744935</variableId>
+         <variableId>0286d296-0032-4aff-a351-a80a5810f699</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>ab79abfe-d967-432f-974c-9f1d9e4047df</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

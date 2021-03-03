@@ -58,7 +58,7 @@
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
-         <testSuiteEntity>Test Suites/Sprint 6/TS_CustomView_All</testSuiteEntity>
+         <testSuiteEntity>Test Suites/Sprint 6/TS_Season_CustomView_All</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>

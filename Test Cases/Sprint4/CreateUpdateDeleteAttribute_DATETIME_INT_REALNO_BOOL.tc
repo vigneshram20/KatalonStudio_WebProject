@@ -6,14 +6,14 @@
    <comment></comment>
    <testCaseGuid>85ace438-90d5-4091-9c21-edc4c5ad8e33</testCaseGuid>
    <variable>
-      <defaultValue>'STRING'</defaultValue>
+      <defaultValue>'String'</defaultValue>
       <description></description>
       <id>76a8899f-999b-4775-9e24-008acfa08ba4</id>
       <masked>false</masked>
       <name>DataType</name>
    </variable>
    <variable>
-      <defaultValue>'TEXT_AREA'</defaultValue>
+      <defaultValue>'Text Area'</defaultValue>
       <description></description>
       <id>c6ff7fb8-ace6-4e3b-a2c7-2a0d2f257b8a</id>
       <masked>false</masked>

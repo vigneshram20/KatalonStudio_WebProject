@@ -47,7 +47,7 @@ try{
 
 while (System.currentTimeMillis() < endTime) {
 
-WebUI.callTestCase(findTestCase('PageLoadPerformance/MerchList_Library_DetachedForTimeOutExpiry'), [('SubMenu') : SubMenu, ('sheetName') : GlobalVariable.ExcelSheetName
+WebUI.callTestCase(findTestCase('PageLoadPerformance/linkTestCases/MerchList_Library_DetachedForTimeOutExpiry'), [('SubMenu') : SubMenu, ('sheetName') : GlobalVariable.ExcelSheetName
         , ('Brand') : Brand, ('Division') : Division, ('Season') : Season], FailureHandling.STOP_ON_FAILURE)
 }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TS_CustomView_Create_ShareWithUser_Verify</name>
+   <name>TS_MerchList_PageLoadPerformance_Lighting</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,41 +9,41 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <testSuiteGuid>8ab329f6-48d4-4f54-9551-a8544a8acf6c</testSuiteGuid>
+   <testSuiteGuid>19ad32e7-f56c-4ecf-bd9e-6a3eedfe5a55</testSuiteGuid>
    <testCaseLink>
-      <guid>0c8ed7dd-5cca-4322-b447-336ba3b4cf85</guid>
+      <guid>25248cfd-0fa0-4d31-90b3-a0ae57c00ceb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Sprint6/CustomView_Create_ShareWithUser_Verify</testCaseId>
+      <testCaseId>Test Cases/PageLoadPerformance/MerchList/MerchList_Library</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>14f54b7f-c7d9-45e0-8af2-4cf913d5c498</variableId>
+         <variableId>812822c0-6c29-47cb-bf68-393db1bc72d3</variableId>
       </variableLink>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>33534d4e-0cb9-4731-bbe2-3f467fea1f45</variableId>
+         <variableId>de49bf9c-f80d-4830-a344-7fbb938c1a74</variableId>
       </variableLink>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>721babb9-818f-441c-9aa6-6362779cc983</variableId>
+         <variableId>e1288d3e-e271-473e-9847-3a8ab261ba63</variableId>
       </variableLink>
       <variableLink>
          <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>0286d296-0032-4aff-a351-a80a5810f699</variableId>
+         <type>SCRIPT_VARIABLE</type>
+         <value>&quot;Lighting>805 - WE LIGHTING&quot;</value>
+         <variableId>177efeab-aec7-4a46-aa15-d1810cf432db</variableId>
       </variableLink>
       <variableLink>
          <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>ab79abfe-d967-432f-974c-9f1d9e4047df</variableId>
+         <type>SCRIPT_VARIABLE</type>
+         <value>&quot;WE Lighting Fall 2020&quot;</value>
+         <variableId>4c5fa0e9-7abc-4f4c-9591-ca4a46168724</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

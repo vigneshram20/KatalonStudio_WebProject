@@ -14,6 +14,9 @@
       <guid>a8ee8d2a-4b79-4644-a411-48246a0ac7e1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
+<<<<<<< HEAD
+      <testCaseId>Test Cases/PageLoadPerformance/linkTestCases/linkTestCase_ManageList_UpdatePerfTest</testCaseId>
+=======
       <testCaseId>Test Cases/Sprint6/CustomView_Create_OntheFlyConfig_Delete</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -21,6 +24,7 @@
          <value>&quot;System&quot;</value>
          <variableId>39c6c3d4-bfda-4b9f-9a5c-5ce738b1236d</variableId>
       </variableLink>
+>>>>>>> branch 'master' of https://github.com/vigneshram20/KatalonStudio_WebProject
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>

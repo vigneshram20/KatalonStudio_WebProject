@@ -67,7 +67,7 @@ WebUI.delay(5)
 
 WebDriver driver = DriverFactory.getWebDriver()
 
-List<String> listOfAttributes = WebUI.findWebElements(findTestObject('Object Repository/Sprint3/td_Attributes_InternalNames'), 
+/*List<String> listOfAttributes = WebUI.findWebElements(findTestObject('Object Repository/Sprint3/td_Attributes_InternalNames'), 
     0)
 
 WebUI.comment(('Total No. of Attributes - ' + listOfAttributes.size()) + '')
@@ -78,7 +78,7 @@ for (WebElement element : listOfAttributes) {
     Thread.sleep(250)
 
     attributeAsAdded.add(element.getText())
-}
+}*/
 
 'Click Add Subtype button'
 WebUI.enhancedClick(findTestObject('Sprint3/button_Add Subtype'))
@@ -183,34 +183,6 @@ WebUI.verifyElementPresent(findTestObject('Sprint3/radio_Instantiable_Verify', [
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/radio_SubtypeAllowed_Verify', [('YesOrNo') : 'Yes']), 
     0)
 
-List<String> listOfInheritedAttributes = WebUI.findWebElements(findTestObject('Object Repository/Sprint3/td_InheritedAttributes_InternalNames'), 
-    0)
-
-WebUI.comment(('Total No. of Attributes - ' + listOfInheritedAttributes.size()) + '')
-
-Iterator iterator = attributeAsAdded.iterator()
-
-Iterator iterator2 = listOfInheritedAttributes.iterator()
-
-while (iterator.hasNext()) {
-    if (!(iterator.next().equals(iterator2.next().getText()))) {
-        throw new Exception('Not Matched')
-    }
-}
-
-/*attributeavailable = new ArrayList<LinkedHashMap>()
-
-for (WebElement element : listOfInheritedAttributes) {
-    Thread.sleep(250)
-
-    attributeavailable.add(element.getText())
-}
-
-if (attributeavailable.equals(attributeAsAdded)) {
-    System.out.println('Attributes are displayed properly in Inherited Attributes')
-} else {
-    throw new Exception('Attributes available in the Type are not matched with the attributes in the Inherited attributes')
-}*/
 'Click Edit Mode Toggle button'
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
 
@@ -379,23 +351,10 @@ WebUI.verifyElementPresent(findTestObject('Sprint3/radio_Instantiable_Verify', [
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/radio_SubtypeAllowed_Verify', [('YesOrNo') : 'No']), 
     0)
 
-listOfInheritedAttributes = new ArrayList<LinkedHashMap>()
-
-listOfInheritedAttributes = WebUI.findWebElements(findTestObject('Object Repository/Sprint3/td_InheritedAttributes_InternalNames'), 
-    0)
-
-WebUI.comment(('Total No. of Attributes - ' + listOfInheritedAttributes.size()) + '')
-
-Iterator iterator3 = listOfInheritedAttributes.iterator()
-
-while (iterator.hasNext()) {
-    if (!(iterator.next().equals(iterator3.next().getText()))) {
-        throw new Exception('Not Matched')
-    }
-}
-
 'Scroll to Top'
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+<<<<<<< HEAD
+=======
 
 'Click Edit Mode Toggle button'
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
@@ -448,3 +407,4 @@ headerTextfull = ((('Season \\ ' + displayNameEdited) + ' \\ ') + DisplaySubtype
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/h2_Season_subtype', [('header') : headerTextfull]),
 	0)
 
+>>>>>>> branch 'master' of https://github.com/vigneshram20/KatalonStudio_WebProject

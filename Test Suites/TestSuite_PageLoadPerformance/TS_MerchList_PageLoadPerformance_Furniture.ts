@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TS_MerchListPagination_SingleSession_TimeOutExpiryTest</name>
+   <name>TS_MerchList_PageLoadPerformance_Furniture</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,41 +9,41 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <testSuiteGuid>d83d22f6-2794-4a5c-99c3-3d59d1ca4122</testSuiteGuid>
+   <testSuiteGuid>b546ebcc-c08f-4036-afc9-ba9a7319413a</testSuiteGuid>
    <testCaseLink>
-      <guid>5692bec0-66c4-488a-ae31-e27751168d18</guid>
+      <guid>25248cfd-0fa0-4d31-90b3-a0ae57c00ceb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/PageLoadPerformance/MerchList/MerchListPagination_SingleSession_TimeOutExpiryTest</testCaseId>
+      <testCaseId>Test Cases/PageLoadPerformance/MerchList/MerchList_Library</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>ce6f19c5-f2d2-467a-8d0a-efb254d29315</variableId>
+         <variableId>812822c0-6c29-47cb-bf68-393db1bc72d3</variableId>
       </variableLink>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>cf4d9f4a-b983-4283-bcf2-f5332e900b32</variableId>
+         <variableId>de49bf9c-f80d-4830-a344-7fbb938c1a74</variableId>
       </variableLink>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>5243db39-0f14-4452-a5e7-dea7b59a0445</variableId>
+         <variableId>e1288d3e-e271-473e-9847-3a8ab261ba63</variableId>
       </variableLink>
       <variableLink>
          <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>efe1c594-7b81-4a4b-a171-859af1ea4ea1</variableId>
+         <type>SCRIPT_VARIABLE</type>
+         <value>&quot;Furniture>806 - WE CASUAL SEATING&quot;</value>
+         <variableId>177efeab-aec7-4a46-aa15-d1810cf432db</variableId>
       </variableLink>
       <variableLink>
          <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>21b3dceb-ca0d-4bf2-932a-afce3d4f62d8</variableId>
+         <type>SCRIPT_VARIABLE</type>
+         <value>&quot;WE Furniture Fall 2020&quot;</value>
+         <variableId>4c5fa0e9-7abc-4f4c-9591-ca4a46168724</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

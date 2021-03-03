@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TS_CustomView_Create_HideUnHide_Delete</name>
+   <name>TS_Season_CustomView_Create_Copy_Delete</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,17 +9,17 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>true</rerunFailedTestCasesOnly>
-   <testSuiteGuid>39ba62c7-9580-48ad-aa7c-f907c0ee0487</testSuiteGuid>
+   <testSuiteGuid>ecd54b68-85ad-4c0c-a48c-c4436025776e</testSuiteGuid>
    <testCaseLink>
-      <guid>3990cfc5-9220-440d-829a-e670eb2c5b09</guid>
+      <guid>4b1cff4c-ccb8-4416-adf9-53aa63a6f66a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Sprint6/CustomView_Create_HideUnHide_Delete</testCaseId>
+      <testCaseId>Test Cases/Sprint6/CustomView_CreateCopyDelete</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>079eafcc-9887-4297-ae39-212d3d1f86c5</variableId>
+         <variableId>724694ef-fe35-4c14-b108-fd1e171cac80</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

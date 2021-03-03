@@ -85,7 +85,7 @@
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
-         <testSuiteEntity>Test Suites/Sprint 6/TS_CustomView_Create_Edit_Delete</testSuiteEntity>
+         <testSuiteEntity>Test Suites/Sprint 6/TS_Season_CustomView_Create_Edit_Delete</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
