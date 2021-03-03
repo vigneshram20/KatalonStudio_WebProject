@@ -27,9 +27,9 @@ if (!(RunConfiguration.getExecutionSource().contains('Test Suites'))) {
 WebUI.callTestCase(findTestCase('Common/NavigateToMenuAndSubMenu'), [('MenuItem') : 'Administration', ('SubMenuItem') : 'User & Role Management'],
 	FailureHandling.STOP_ON_FAILURE)
 
-WebUI.verifyElementPresent(findTestObject('Sprint6/div_User and Role Management'), 0)
+WebUI.verifyElementPresent(findTestObject('Sprint6/div_User and Role Management'), 60)
 
-WebUI.click(findTestObject('Object Repository/Sprint6/li_Users'))
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/li_Users'))
 
 'Click Edit Mode Toggle button'
 WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))

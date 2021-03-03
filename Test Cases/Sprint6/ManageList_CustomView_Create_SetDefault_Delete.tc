@@ -20,7 +20,7 @@
       <name>libraryName</name>
    </variable>
    <variable>
-      <defaultValue>['MCP ID #', 'Item Type', 'PLM SKU #', 'SKU #', 'Product Description', 'DTC Assortment Status', 'Retail Assortment Status', 'Assortment Type', 'DTC Assorted Seasons']</defaultValue>
+      <defaultValue>['Item Type', 'PLM SKU #', 'SKU #', 'Product Description', 'DTC Assortment Status', 'Retail Assortment Status', 'Assortment Type', 'DTC Assorted Seasons']</defaultValue>
       <description></description>
       <id>a4ac66b2-3377-4110-8719-e8b8d5e50bd7</id>
       <masked>false</masked>

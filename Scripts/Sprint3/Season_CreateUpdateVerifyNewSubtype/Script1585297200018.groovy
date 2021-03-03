@@ -297,6 +297,12 @@ WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/button_Save'))
 'Click Yes Button'
 WebUI.enhancedClick(findTestObject('Common Objects/button_Yes'))
 
+'Verify Success Popup'
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/h5_Type has been modified successfully'), 60)
+
+'Click OK Button'
+WebUI.enhancedClick(findTestObject('Object Repository/Common Objects/button_OK'))
+
 WebUI.delay(2)
 
 'Scroll to Top'
@@ -347,3 +353,58 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/radio_Subty
 
 'Scroll to Top'
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+<<<<<<< HEAD
+=======
+
+'Click Edit Mode Toggle button'
+WebUI.verifyElementClickable(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+
+'Click Edit Mode Toggle button'
+WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-label'))
+
+DisplaySubtypeName = DisplaySubtypeName+"Edited";
+
+'Clear already existing text'
+WebUI.sendKeys(findTestObject('Object Repository/Sprint3/input_Display Name_form-control - Copy'), Keys.chord(Keys.CONTROL,
+		Keys.chord('a')))
+
+'Modify Display Name'
+WebUI.sendKeys(findTestObject('Object Repository/Sprint3/input_Display Name_form-control - Copy'), DisplaySubtypeName)
+
+'Provide Description'
+WebUI.sendKeys(findTestObject('Object Repository/Sprint3/input_Description'), Description)
+
+'Click Save button'
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint4/button_Save'))
+
+'Click Yes Button'
+WebUI.enhancedClick(findTestObject('Common Objects/button_Yes'))
+
+'Verify Success Popup'
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint4/h5_Type has been modified successfully'), 60)
+
+'Click OK Button'
+WebUI.enhancedClick(findTestObject('Object Repository/Common Objects/button_OK'))
+
+WebUI.delay(2)
+
+'Scroll to Top'
+WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+
+'Verify the Display Name'
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/input_Display Name_form-control', [('textContains') : DisplaySubtypeName]),
+	0)
+
+'Verify the Description'
+WebUI.verifyElementText(findTestObject('Object Repository/Sprint3/input_Description'), Description)
+
+WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/Sprint3/select_ChildDropdown'), DisplaySubtypeName,
+	false, 0)
+
+headerTextfull = ((('Season \\ ' + displayNameEdited) + ' \\ ') + DisplaySubtypeName)
+
+'Verify Season header'
+WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint3/h2_Season_subtype', [('header') : headerTextfull]),
+	0)
+
+>>>>>>> branch 'master' of https://github.com/vigneshram20/KatalonStudio_WebProject

@@ -20,6 +20,7 @@ import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import org.openqa.selenium.WebElement as WebElement
 import org.openqa.selenium.WebDriver as WebDriver
+import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 
 String roleName = CustomKeywords.'myKeywords.customKeywords.timeStampWithStringGen'('QA_AUT_Role_', 'ddMMMHHmmss')
 
@@ -164,9 +165,15 @@ WebUI.enhancedClick(findTestObject('Common Objects/button_OK'))
 
 WebUI.delay(2)
 
+WebUI.refresh()
+
+WebUI.delay(2)
+
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 
 WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/li_Permissions'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.waitForElementPresent(findTestObject('Sprint6/select_Library'), 60)
 
 WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Library'), 'Season', false)
 
@@ -181,7 +188,7 @@ WebUI.sendKeys(findTestObject('Sprint6/input_roleSearch'), Keys.chord(Keys.CONTR
 
 WebUI.setText(findTestObject('Sprint6/input_roleSearch'), roleName)
 
-WebUI.waitForElementPresent(findTestObject('Sprint6/th_VerticalHeader_param', [('headerText') : roleName]), 0)
+WebUI.waitForElementPresent(findTestObject('Sprint6/th_VerticalHeader_param', [('headerText') : roleName.toUpperCase()]), 0)
 
 WebUI.scrollToElement(findTestObject('Sprint6/img_FilterMenu'), 10, FailureHandling.STOP_ON_FAILURE)
 
@@ -222,4 +229,6 @@ WebUI.click(findTestObject('Sprint6/button_Yes'))
 
 WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_DeleteRoleAlone'), [('roleName') : roleName, ('roleDescription') : roleDescription], 
     FailureHandling.STOP_ON_FAILURE)
+
+
 

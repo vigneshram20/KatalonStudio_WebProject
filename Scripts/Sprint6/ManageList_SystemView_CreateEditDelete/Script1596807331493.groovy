@@ -49,5 +49,5 @@ WebUI.callTestCase(findTestCase('Sprint2/linkTestCases/linkTestCase_EditView'), 
 
 viewName = (viewName + 'Edited')
 
-WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_DeleteView'), [('viewName') : viewName], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Sprint6/linkTestCases/linkTestCase_DeleteView'), [('viewName') : viewName,('viewType') : viewType], FailureHandling.STOP_ON_FAILURE)
 

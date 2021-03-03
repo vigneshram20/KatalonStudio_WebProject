@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@title = 'In Store Launch End Date' and (text() = 'In Store Launch End Date' or . = 'In Store Launch End Date')]</value>
+         <value>//*[@title = 'In_Store_Launch_End_Date' and (text() = 'In_Store_Launch_End_Date' or . = 'In_Store_Launch_End_Date')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -31,14 +31,14 @@
       <matchCondition>equals</matchCondition>
       <name>title</name>
       <type>Main</type>
-      <value>In Store Launch End Date</value>
+      <value>In_Store_Launch_End_Date</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>In Store Launch End Date</value>
+      <value>In_Store_Launch_End_Date</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

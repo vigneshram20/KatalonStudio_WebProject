@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[contains(@class,'entityForm_attribute')][2]//td[2]</value>
+         <value>(//div/table)[2]//tr//td[2]/span[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

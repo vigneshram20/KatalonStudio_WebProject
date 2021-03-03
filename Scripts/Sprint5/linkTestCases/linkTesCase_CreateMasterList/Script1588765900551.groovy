@@ -95,7 +95,7 @@ WebUI.enhancedClick(findTestObject('Object Repository/Sprint5/div_Add to Selecti
 
 WebUI.delay(1)
 
-Boolean inputField = WebUI.waitForElementClickable(findTestObject('Object Repository/Sprint5/input'), 0)
+Boolean inputField = WebUI.waitForElementClickable(findTestObject('Sprint5/input_Key'), 0)
 
 if (!(inputField)) {
     WebUI.delay(1)
@@ -106,11 +106,13 @@ if (!(inputField)) {
     WebUI.delay(1)
 }
 
-'Click Input field'
-WebUI.click(findTestObject('Object Repository/Sprint5/input'), FailureHandling.STOP_ON_FAILURE)
+'Provide List Entry'
+WebUI.sendKeys(findTestObject('Sprint5/input_Key'), listItem)
 
-'Enter List Item Name'
-WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input'), listItem)
+'Provide List Value'
+WebUI.sendKeys(findTestObject('Sprint5/input_Value'), listItem)
+
+WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
 
 'Click Save button'
 WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
@@ -125,8 +127,8 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/h5_Master L
 WebUI.click(findTestObject('Common Objects/button_OK'))
 
 'Verify Added List from the table'
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/div_td_parameterized_table_verification', [('param1') : listItem
-            , ('param2') : '']), 0)
+not_run: WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/div_td_parameterized_table_verification', 
+        [('param1') : listItem, ('param2') : listItem, ('param3') : '', ('param4') : '']), 0)
 
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 

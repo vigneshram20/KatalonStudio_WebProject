@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Create New Placeholder_OnlyPerformance</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>365edb38-c162-412d-9696-8e3f2d373307</testCaseGuid>
+   <variable>
+      <defaultValue>'Custom'</defaultValue>
+      <description></description>
+      <id>10aaf780-f69b-431f-82e3-e53cc191cdd2</id>
+      <masked>false</masked>
+      <name>viewType</name>
+   </variable>
+   <variable>
+      <defaultValue>'Merch List'</defaultValue>
+      <description></description>
+      <id>125a7b8a-840c-4b94-84ad-da48c8917507</id>
+      <masked>false</masked>
+      <name>libraryName</name>
+   </variable>
+   <variable>
+      <defaultValue>['Department', 'Class', 'Sub Class', 'Collection', 'Product Description', 'Item Type', 'Assortment Type', 'Item Description (RMS)', 'Diff Type 1 ', 'Diff 1 Value', 'Diff 1 Values']</defaultValue>
+      <description></description>
+      <id>a10d5476-dc57-4607-9da8-ca78bb1ec265</id>
+      <masked>false</masked>
+      <name>attributesList</name>
+   </variable>
+   <variable>
+      <defaultValue>'WE'</defaultValue>
+      <description></description>
+      <id>1fc03bc5-eea4-4718-a1f9-942cd3d7d5af</id>
+      <masked>false</masked>
+      <name>Brand</name>
+   </variable>
+   <variable>
+      <defaultValue>'Lighting>805 - WE LIGHTING'</defaultValue>
+      <description></description>
+      <id>69f223bc-1d8b-4c99-87cd-6cfe54dbcbdc</id>
+      <masked>false</masked>
+      <name>Division</name>
+   </variable>
+   <variable>
+      <defaultValue>'WE Lighting Fall 2020'</defaultValue>
+      <description></description>
+      <id>0b519d97-c398-42f2-b43b-9c5efacfdeec</id>
+      <masked>false</masked>
+      <name>Season</name>
+   </variable>
+   <variable>
+      <defaultValue>'1 - TABLE LAMPS'</defaultValue>
+      <description></description>
+      <id>ea01cef2-58e7-4d6c-a689-20b8fb8381ac</id>
+      <masked>false</masked>
+      <name>ClassDropdown</name>
+   </variable>
+   <variable>
+      <defaultValue>'1 - WOOD'</defaultValue>
+      <description></description>
+      <id>4b5c8792-a318-420c-8dee-2cb961fa135f</id>
+      <masked>false</masked>
+      <name>SubClass</name>
+   </variable>
+   <variable>
+      <defaultValue>'WE932J - WE BELLA COLLECTION'</defaultValue>
+      <description></description>
+      <id>63a531cb-ee95-47c0-9a7e-b77e88af5efd</id>
+      <masked>false</masked>
+      <name>CollectionValue</name>
+   </variable>
+   <variable>
+      <defaultValue>'Color'</defaultValue>
+      <description></description>
+      <id>2d660d67-4ffa-4d9a-9bbd-cc52b2cbfdb2</id>
+      <masked>false</masked>
+      <name>DIFF1</name>
+   </variable>
+   <variable>
+      <defaultValue>'Black ( BLACK )'</defaultValue>
+      <description></description>
+      <id>8589954c-3c47-4c49-8318-9f6309cc7e22</id>
+      <masked>false</masked>
+      <name>DIFF1Value</name>
+   </variable>
+</TestCaseEntity>

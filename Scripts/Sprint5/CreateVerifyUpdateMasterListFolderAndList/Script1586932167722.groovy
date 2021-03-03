@@ -123,9 +123,13 @@ displayNameFolderEdited = (DisplayNameFolder + 'Edited')
 
 description = 'QA'
 
+WebUI.delay(5)
+
 'Select All text'
 WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input__displayNameVerification', [('text') : DisplayNameFolder]), 
     Keys.chord(Keys.CONTROL, Keys.chord('a')))
+
+WebUI.clearText(findTestObject('Object Repository/Sprint5/input__displayNameVerification', [('text') : DisplayNameFolder]))
 
 'Provide Display Name'
 WebUI.setText(findTestObject('Object Repository/Sprint5/input__displayNameVerification', [('text') : DisplayNameFolder]), 
@@ -237,9 +241,9 @@ WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-
 
 displayNameListEdited = (DisplayNameList + 'Edited')
 
-list1 = 'Test 1'
+list1 = 'Test1'
 
-list2 = 'Test 2'
+list2 = 'Test2'
 
 'Select the text'
 WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input__displayNameVerification', [('text') : DisplayNameList]), 
@@ -255,6 +259,24 @@ WebUI.delay(1)
 WebUI.setText(findTestObject('Sprint5/textarea_Description'), description+Keys.TAB)
 
 WebUI.delay(1)
+
+'Click Save button'
+WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
+
+'Click Yes Button'
+WebUI.click(findTestObject('Common Objects/button_Yes'))
+
+'Verify popup header'
+WebUI.click(findTestObject('Object Repository/Sprint5/h5_Master List Has Been Updated Successfully'))
+
+'Verify Success popup text'
+WebUI.verifyElementPresent(findTestObject('Sprint5/p_VerifySuccessPopupText', [('text') : displayNameListEdited]), 0)
+
+'Click OK button'
+WebUI.click(findTestObject('Common Objects/button_OK'))
+
+'Click Edit Mode toggle'
+WebUI.click(findTestObject('Object Repository/Sprint3/span_Edit Mode_toggle_btn-handle'))
 
 'Verify Entries header'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/p_Entries'), 0)
@@ -274,7 +296,12 @@ WebUI.delay(2)
 WebUI.enhancedClick(findTestObject('Object Repository/Sprint5/div_Add to Selection'))
 
 'Provide List Entry'
-WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input'), list1)
+WebUI.sendKeys(findTestObject('Sprint5/input_Key'), list1)
+
+'Provide List Value'
+WebUI.sendKeys(findTestObject('Sprint5/input_Value'), list1)
+
+WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
 
 'Select the checkbox'
 WebUI.clickOffset(findTestObject('Sprint5/checkbox_selection list_checkbox_label'), 0, 4)
@@ -291,7 +318,12 @@ WebUI.delay(2)
 WebUI.enhancedClick(findTestObject('Object Repository/Sprint5/div_Add to Selection'))
 
 'Provide List Entry'
-WebUI.sendKeys(findTestObject('Object Repository/Sprint5/input'), list2)
+WebUI.sendKeys(findTestObject('Sprint5/input_Key'), list2)
+
+'Provide List Value'
+WebUI.sendKeys(findTestObject('Sprint5/input_Value'), list2)
+
+WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
 
 'Click Save button'
 WebUI.click(findTestObject('Object Repository/Sprint4/button_Save'))
@@ -329,6 +361,6 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/textarea_De
 
 'Verify Added List from the table'
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint5/div_td_parameterized_table_verification', [('param1') : list2
-            , ('param2') : list1]), 0)
+            , ('param2') : list2,('param3'):list1,('param4'):list1]), 0)
 
 */

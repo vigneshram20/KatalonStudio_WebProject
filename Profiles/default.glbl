@@ -21,7 +21,11 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
+<<<<<<< HEAD
       <initValue>'Photon!1234'</initValue>
+=======
+      <initValue>'TestAuto2020'</initValue>
+>>>>>>> branch 'master' of https://github.com/vigneshram20/KatalonStudio_WebProject
       <name>PASSWORD</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

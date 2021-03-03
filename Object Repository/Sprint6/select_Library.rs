@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//select[1]</value>
+         <value>//select[1][contains(@class,'form-control')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

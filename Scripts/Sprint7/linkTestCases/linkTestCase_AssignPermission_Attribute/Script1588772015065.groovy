@@ -30,8 +30,6 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/th_Values')
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/th_Permission'), 0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/th_Access Granted'), 0)
-
 WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/th_Access Not Granted'), 0)
 
 WebUI.enhancedClick(findTestObject('Sprint3/span_Edit Mode_toggle_btn-handle'))

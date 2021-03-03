@@ -17,7 +17,7 @@ import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory as MobileDriverFactory
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
-Runtime.getRuntime().exec("wscript ./Selenium.vbs");
+Runtime.getRuntime().exec('wscript ./Selenium.vbs')
 
 'Launch the Browser'
 WebUI.openBrowser('')
@@ -25,8 +25,7 @@ WebUI.openBrowser('')
 'Maximize the Browser'
 WebUI.maximizeWindow()
 
-GlobalVariable.startTime= System.currentTimeMillis();
+GlobalVariable.startTime = System.currentTimeMillis()
 
 WebUI.navigateToUrl(PageURL)
-
 
