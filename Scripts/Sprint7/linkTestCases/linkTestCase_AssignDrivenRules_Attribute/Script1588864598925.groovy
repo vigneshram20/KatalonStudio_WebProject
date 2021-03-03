@@ -15,6 +15,9 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.WebDriver as WebDriver
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 
 WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Manage Driven Rules'))
 
@@ -57,28 +60,23 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Sprint6/div_Add Nex
 
 WebUI.delay(5)
 
-try
-{
-	WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Attributes_FirstLevel'), (' ' + level1Attribute) + ' ', true)
+try {
+    WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Attributes_FirstLevel'), (' ' + level1Attribute) + ' ', true)
 }
-catch(Exception ex)
-{
-	WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Attributes_FirstLevel'), (level1Attribute), true)
-}
+catch (Exception ex) {
+    WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Attributes_FirstLevel'), level1Attribute, true)
+} 
 
 WebUI.enhancedClick(findTestObject('Sprint6/label_parameterized', [('param') : level1ListValue]))
 
 WebUI.enhancedClick(findTestObject('Sprint6/button_moveToRightAttributes'))
 
-try
-{
-	WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Attributes_SecondLevel'), (' ' + level2Attribute) + ' ', true)
+try {
+    WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Attributes_SecondLevel'), (' ' + level2Attribute) + ' ', true)
 }
-catch(Exception ex)
-{
-	WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Attributes_SecondLevel'), (level2Attribute), true)
-}
-
+catch (Exception ex) {
+    WebUI.selectOptionByLabel(findTestObject('Sprint6/select_Attributes_SecondLevel'), level2Attribute, true)
+} 
 
 WebUI.enhancedClick(findTestObject('Sprint6/label_parameterized', [('param') : level2ListValue]))
 
@@ -100,7 +98,40 @@ WebUI.verifyElementNotPresent(findTestObject('Sprint6/button_Save'), 30)
 
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
 
+WebDriver driver = DriverFactory.getWebDriver()
+
+    JavascriptExecutor js = ((driver) as JavascriptExecutor)
+
+    GlobalVariable.startTime = System.currentTimeMillis()
+
+    js.executeScript('location.reload(true);')
+
+    WebUI.waitForPageLoad(60)
+
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Manage Driven Rules'))
+
+WebUI.delay(3)
+
+Boolean elementPresent = WebUI.waitForElementPresent(findTestObject('Sprint6/td_drivenRules_parameterized', [('param1') : level1Attribute, ('param2') : level2Attribute
+            , ('value1') : level1ListValue, ('value2') : level2ListValue]), 30)
+
+if(elementPresent==false)
+{
+	WebUI.refresh()
+	
+	WebUI.delay(5)
+	
+	WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Manage Driven Rules'))
+	
+	WebUI.delay(3)
+}
+
+WebUI.verifyElementPresent(findTestObject('Sprint6/td_drivenRules_parameterized', [('param1') : level1Attribute, ('param2') : level2Attribute
+            , ('value1') : level1ListValue, ('value2') : level2ListValue]), 30)
+
 WebUI.enhancedClick(findTestObject('Sprint3/span_Edit Mode_toggle_btn-handle'))
+
+WebUI.sendKeys(findTestObject('Object Repository/Sprint1/Create Season/input_SearchField'), level1Attribute + Keys.ENTER)
 
 WebUI.enhancedClick(findTestObject('Sprint6/td_drivenRules_parameterized', [('param1') : level1Attribute, ('param2') : level2Attribute
             , ('value1') : level1ListValue, ('value2') : level2ListValue]))
@@ -125,7 +156,20 @@ WebUI.waitForPageLoad(0)
 
 WebUI.enableSmartWait()
 
+WebUI.refresh()
+
+WebUI.delay(5)
+
+WebUI.enhancedClick(findTestObject('Object Repository/Sprint6/button_Manage Driven Rules'))
+
+WebUI.waitForPageLoad(60)
+
+WebUI.delay(5)
+
 WebUI.verifyElementNotPresent(findTestObject('Sprint6/td_drivenRules_parameterized', [('param1') : level1Attribute, ('param2') : level2Attribute
             , ('value1') : level1ListValue, ('value2') : level2ListValue]), 0)
 
 WebUI.sendKeys(findTestObject('Sprint6/html'), Keys.chord(Keys.CONTROL, Keys.HOME))
+
+
+
