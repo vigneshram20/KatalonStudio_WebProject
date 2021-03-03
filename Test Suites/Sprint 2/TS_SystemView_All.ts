@@ -59,18 +59,6 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>2e57224d-a4d3-4192-927e-31492cc5a1b6</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/PageLoadPerformance/linkTestCase_ManageList_UpdatePerfTest</testCaseId>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>722fbddc-f8ed-4599-bf7b-9e49f3061db4</variableId>
-      </variableLink>
-   </testCaseLink>
-   <testCaseLink>
       <guid>dc8c0486-5d09-4098-9e40-0fa794d264ce</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

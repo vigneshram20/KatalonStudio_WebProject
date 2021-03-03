@@ -38,7 +38,7 @@ String sheetName = CustomKeywords.'myKeywords.customKeywords.currentZonetimeStam
 
 CustomKeywords.'myKeywords.customKeywords.createSheetAndColumn'(sheetName)
 
-CustomKeywords.'myKeywords.GoogleSheetsAPI.createSheetAndColumn'(sheetName)
+//CustomKeywords.'myKeywords.GoogleSheetsAPI.createSheetAndColumn'(sheetName)
 
 GlobalVariable.ExcelSheetName = sheetName
 
@@ -87,7 +87,7 @@ for (int outerIteration = 0; outerIteration < 2; outerIteration++) {
 
         CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, 'User Profile', domLoad, pageLoad)
 
-        CustomKeywords.'myKeywords.GoogleSheetsAPI.writeGoogleSheets'(sheetName, 'User Profile', domLoad, pageLoad)
+        //CustomKeywords.'myKeywords.GoogleSheetsAPI.writeGoogleSheets'(sheetName, 'User Profile', domLoad, pageLoad)
     }
     catch (Exception ex) {
         throw new Exception('User Profile Exception-___Check Code')
@@ -172,10 +172,10 @@ for (int outerIteration = 0; outerIteration < 2; outerIteration++) {
             CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, (((SubMenu + ' > ') + BrandConcat) + ' - Page ') + 
                 innerIteration, domLoad, pageLoad)
 
-            CustomKeywords.'myKeywords.GoogleSheetsAPI.writeGoogleSheets'(sheetName, (((SubMenu + ' > ') + BrandConcat) + 
-                ' - Page ') + innerIteration, domLoad, pageLoad)
+            //CustomKeywords.'myKeywords.GoogleSheetsAPI.writeGoogleSheets'(sheetName, (((SubMenu + ' > ') + BrandConcat) + 
+               // ' - Page ') + innerIteration, domLoad, pageLoad)
 			
-			WebUI.callTestCase(findTestCase('PageLoadPerformance/linkTestCase_ManageList_UpdatePerfTest'), [('pageNo') : innerIteration], FailureHandling.STOP_ON_FAILURE)
+			//WebUI.callTestCase(findTestCase('PageLoadPerformance/linkTestCase_ManageList_UpdatePerfTest'), [('pageNo') : innerIteration], FailureHandling.STOP_ON_FAILURE)
         }
         catch (com.kms.katalon.core.exception.StepFailedException ex) {
 			throw new Exception("Test Failed")
@@ -233,8 +233,8 @@ for (int outerIteration = 0; outerIteration < 2; outerIteration++) {
 		CustomKeywords.'myKeywords.customKeywords.writeExcel'(sheetName, ((("VLL" + ' > ') + BrandConcat) + ' - Page ') +
 			innerIteration, domLoad, pageLoad)
 	
-		CustomKeywords.'myKeywords.GoogleSheetsAPI.writeGoogleSheets'(sheetName, ((("VLL" + ' > ') + BrandConcat) +
-			' - Page ') + innerIteration, domLoad, pageLoad)
+		//CustomKeywords.'myKeywords.GoogleSheetsAPI.writeGoogleSheets'(sheetName, ((("VLL" + ' > ') + BrandConcat) +
+			//' - Page ') + innerIteration, domLoad, pageLoad)
 	
 	}
 	
@@ -242,7 +242,7 @@ for (int outerIteration = 0; outerIteration < 2; outerIteration++) {
 
 
 
-List<Object> innerList = new ArrayList<Object>()
+/*List<Object> innerList = new ArrayList<Object>()
 
 innerList.add('Pagination - Average Result')
 
@@ -314,3 +314,4 @@ innerList12.add('=E15-3000')
 
 CustomKeywords.'myKeywords.GoogleSheetsAPI.writeSheet'(innerList12, sheetName + '!E17')
 
+*/

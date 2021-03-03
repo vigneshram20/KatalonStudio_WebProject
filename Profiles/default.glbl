@@ -11,17 +11,17 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Vigneshram S'</initValue>
+      <initValue>'Balamurugan V'</initValue>
       <name>FullName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'vs1'</initValue>
+      <initValue>'bv'</initValue>
       <name>USERNAME</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'TestAuto2020'</initValue>
+      <initValue>'Photon!1234'</initValue>
       <name>PASSWORD</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

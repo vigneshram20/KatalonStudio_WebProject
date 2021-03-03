@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//button[contains(@class, 'viewControl_dropbtn') and not(contains(@title,'SKU'))]</value>
+         <value>//button[contains(@class, 'viewControl_dropbtn') and not(contains(@title,'SKU Count - '))]</value>
       </entry>
       <entry>
          <key>BASIC</key>
