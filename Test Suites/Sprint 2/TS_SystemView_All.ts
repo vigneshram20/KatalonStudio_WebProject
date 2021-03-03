@@ -59,6 +59,8 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
+<<<<<<< HEAD
+=======
       <guid>2e57224d-a4d3-4192-927e-31492cc5a1b6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -71,6 +73,7 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
+>>>>>>> branch 'master' of https://github.com/vigneshram20/WSI_MerchTool.git
       <guid>dc8c0486-5d09-4098-9e40-0fa794d264ce</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
